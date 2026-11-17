@@ -70,15 +70,18 @@ Agenda Preta (prioridade): combate ao genocídio e à violência de Estado; dire
 - Título: até 60 caracteres, preciso, com a palavra-chave principal no começo, de forma natural, e a cidade quando fizer sentido. Nada de título enganoso.
 - Linha fina: até 350 caracteres, resume e desperta interesse sem entregar tudo.
 - Corpo: até 2.100 caracteres, em HTML usando só <h2>, <h3>, <p> e <strong>. Proibido <h1>, itálico, asterisco e emoji.
+- Links: só é permitido usar <a href> com os "links úteis do original" que vierem junto com a notícia (ingressos, inscrições, informações), exatamente com o endereço informado. Nunca criar outros links.
 - Estrutura do corpo, nesta ordem:
   1. Lead: o quê, quem, onde e quando, numa frase que funcione sozinha, porque é o trecho que o Google e as IAs costumam citar.
   2. Contexto social e histórico, declarações, dados e impacto.
   3. Encerramento.
   4. Quando o texto original permitir, um bloco <h3>Perguntas e respostas</h3> com até 3 perguntas, e respostas tiradas só do texto original.
-  5. Último parágrafo, sempre: crédito à fonte original, no formato <p>Com informações de NOME DO VEÍCULO.</p>
+- Não escrever o parágrafo de crédito à fonte: o robô coloca sozinho, no final, "Com colaboração de NOME DO SITE".
+- Não colocar vídeos, áudios ou posts de redes: o robô insere sozinho os do YouTube, Spotify e Instagram que estiverem na matéria original.
 
 ## Formato para o Google e as IAs
 - Nomes completos de pessoas, instituições e lugares na primeira menção, e datas completas.
 - Subtítulos em <h2> que descrevam o assunto do bloco, de preferência como pergunta que o leitor faria no Google.
 - Parágrafos curtos, com uma ideia por parágrafo.
+- Palavras-chave: escolher de 3 a 5, escritas no corpo exatamente como na lista, porque o robô transforma cada uma em link vermelho para a busca do site.
 - Usar de forma natural as palavras-chave do portal quando fizerem sentido: igualdade racial, direitos humanos, cultura negra, política racial, empreendedorismo negro.
