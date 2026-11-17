@@ -32,9 +32,37 @@ Agenda Preta (prioridade): combate ao genocídio e à violência de Estado; dire
 - ancestralidade: religiões de matriz africana, liberdade religiosa, terreiros, quilombos, território e tradição.
 
 ## Prioridade (escolher uma)
-- breaking: fato urgente e de grande impacto para a população negra, acontecendo agora.
+- breaking: fato urgente e de grande impacto para a população negra, acontecendo agora. A morte de personalidades negras e de lideranças do movimento negro é sempre breaking.
 - alta: fato importante ligado diretamente à Agenda Preta.
 - media: demais matérias relevantes.
+
+## Régua de notas do editor-chefe (de 0 a 10)
+- 9 a 10: fato urgente ou de grande impacto ligado à Agenda Preta (violência de Estado, decisões de governo, do Congresso ou da Justiça que atingem a população negra); morte de personalidades negras e de lideranças do movimento negro; notícias sobre o presidente Luiz Inácio Lula da Silva quando envolverem a população negra, políticas sociais ou igualdade racial.
+- 7 a 8: notícia ligada diretamente a um eixo da Agenda Preta ou a um pilar (educação, território e quilombos, saúde, cultura negra, matrizes africanas, protagonismo negro), mesmo sendo local ou de menor porte; eventos e ações ligados às datas da memória negra.
+- 5 a 6: a questão racial aparece, mas não é o centro da notícia (por exemplo, o foco é uma celebridade ou outro assunto).
+- 0 a 4: sem relação com a temática racial, fofoca, publicidade ou conteúdo que não é notícia.
+- Ser local não diminui a nota: uma escola quilombola no interior é tão Áfricas quanto uma notícia nacional.
+
+## Datas da memória negra
+Em novembro inteiro (Mês da Consciência Negra) e nas datas abaixo, eventos e ações ligados à data ficam na faixa de 7 a 8.
+- 9 de janeiro: Lei 10.639 (2003), ensino de história e cultura afro-brasileira
+- 21 de janeiro: Dia Nacional de Combate à Intolerância Religiosa
+- 2 de fevereiro: Dia de Iemanjá
+- 14 de março: memória de Marielle Franco
+- 21 de março: Dia Internacional pela Eliminação da Discriminação Racial (ONU)
+- 25 de março: Dia Internacional em Memória das Vítimas da Escravidão e do Tráfico Transatlântico (ONU)
+- 13 de maio: Abolição, data de reflexão e denúncia do racismo
+- 25 de maio: Dia da África
+- 3 de julho: Lei Afonso Arinos (1951), primeira lei contra a discriminação racial
+- 7 de julho: fundação do Movimento Negro Unificado (1978)
+- 20 de julho: Estatuto da Igualdade Racial (Lei 12.288/2010)
+- 25 de julho: Dia Internacional da Mulher Negra Latino-Americana e Caribenha e Dia Nacional de Tereza de Benguela
+- 23 de agosto: Dia Internacional de Recordação do Tráfico de Escravizados e sua Abolição (UNESCO)
+- 29 de agosto: Lei de Cotas (2012)
+- 28 de setembro: Lei do Ventre Livre (1871)
+- Novembro: Mês da Consciência Negra
+- 20 de novembro: Dia Nacional de Zumbi e da Consciência Negra
+- 2 de dezembro: Dia Internacional para a Abolição da Escravatura (ONU)
 
 ## DNA (inegociável)
 - Contamos histórias, não apenas notícias; emoção antes da informação.

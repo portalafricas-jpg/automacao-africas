@@ -244,7 +244,8 @@ class ErroAPI(Exception):
     """Problema para falar com o Claude (chave, internet, crédito). Nada é descartado."""
 
 
-def enviar_claude(sistema, pedido, max_tokens=4000):
+def enviar_claude(sistema, pedido, ferramenta, max_tokens=8000):
+    """Manda o pedido ao Claude e recebe a resposta já organizada em campos (sem risco de JSON quebrado)."""
     chave = (os.environ.get("ANTHROPIC_API_KEY") or "").strip()
     if not chave:
         raise ErroAPI("Chave ANTHROPIC_API_KEY não encontrada no cofre.")
@@ -253,6 +254,8 @@ def enviar_claude(sistema, pedido, max_tokens=4000):
         "max_tokens": max_tokens,
         "system": sistema,
         "messages": [{"role": "user", "content": pedido}],
+        "tools": [ferramenta],
+        "tool_choice": {"type": "tool", "name": ferramenta["name"]},
     }).encode("utf-8")
     req = urllib.request.Request(
         "https://api.anthropic.com/v1/messages",
@@ -260,51 +263,85 @@ def enviar_claude(sistema, pedido, max_tokens=4000):
         headers={"x-api-key": chave, "anthropic-version": "2023-06-01", "content-type": "application/json"},
     )
     try:
-        with urllib.request.urlopen(req, timeout=120) as r:
+        with urllib.request.urlopen(req, timeout=180) as r:
             resposta = json.loads(r.read().decode("utf-8"))
     except urllib.error.HTTPError as e:
         detalhe = e.read().decode("utf-8", errors="replace")[:300]
         raise ErroAPI(f"HTTP {e.code}: {detalhe}")
     except Exception as e:
         raise ErroAPI(str(e))
+    for bloco in resposta.get("content", []):
+        if bloco.get("type") == "tool_use" and isinstance(bloco.get("input"), dict):
+            return bloco["input"]
     texto = "".join(b.get("text", "") for b in resposta.get("content", []))
-    texto = re.sub(r"^```(?:json)?\s*", "", texto.strip(), flags=re.I)
-    texto = re.sub(r"\s*```$", "", texto)
-    inicio, fim = texto.find("{"), texto.rfind("}")
-    if inicio < 0 or fim < 0:
-        raise ValueError("O Claude não devolveu JSON.")
-    texto = re.sub(r",\s*([}\]])", r"\1", texto[inicio:fim + 1])
-    return json.loads(texto)
+    raise ValueError(f"resposta sem os campos (motivo de parada: {resposta.get('stop_reason')}; início: {texto[:150]!r})")
+
+
+FERRAMENTA_EDITOR = {
+    "name": "avaliar_noticias",
+    "description": "Registra a avaliação do editor-chefe para cada notícia nova.",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "avaliacoes": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "id": {"type": "integer"},
+                        "nota": {"type": "integer", "minimum": 0, "maximum": 10},
+                        "categoria": {"type": "string", "enum": CATEGORIAS},
+                        "prioridade": {"type": "string", "enum": PRIORIDADES},
+                        "repetida": {"type": "boolean"},
+                        "motivo": {"type": "string"},
+                    },
+                    "required": ["id", "nota", "categoria", "prioridade", "repetida", "motivo"],
+                },
+            }
+        },
+        "required": ["avaliacoes"],
+    },
+}
+
+FERRAMENTA_REDATOR = {
+    "name": "entregar_materia",
+    "description": "Entrega a matéria reescrita (ou a recusa) seguindo a linha editorial.",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "aprovada": {"type": "boolean"},
+            "motivo": {"type": "string"},
+            "titulo": {"type": "string", "description": "até 60 caracteres"},
+            "linha_fina": {"type": "string", "description": "até 350 caracteres"},
+            "corpo_html": {"type": "string", "description": "HTML só com h2, h3, p, strong e, se houver, a href dos links úteis; sem o parágrafo de crédito"},
+            "palavras_chave": {"type": "array", "items": {"type": "string"}, "description": "3 a 5, escritas exatamente como aparecem no corpo"},
+            "hashtags": {"type": "array", "items": {"type": "string"}, "description": "3 a 6, sem espaços, começando com #"},
+        },
+        "required": ["aprovada", "motivo"],
+    },
+}
 
 
 INSTRUCAO_EDITOR = """
 
 ## Sua função agora: EDITOR-CHEFE (decide, não escreve)
-Você recebe uma lista de notícias novas (só título e resumo) e uma lista de matérias recentes do portal.
-Para cada notícia nova, avalie pela linha editorial acima e dê:
-- nota de 0 a 10 (relevância para a população negra, ligação com os pilares e a Agenda Preta, interesse público). Fofoca, celebridade sem relação com a temática racial, publicidade e assuntos fora da linha recebem nota baixa.
+Você recebe uma lista de notícias novas (só título e resumo), a data de hoje e uma lista de matérias recentes do portal.
+Para cada notícia nova, dê:
+- nota de 0 a 10, seguindo exatamente a "Régua de notas do editor-chefe" e as "Datas da memória negra" da linha editorial acima. Ser local não diminui a nota.
 - categoria: mundo, cotidiano, protagonista, cultura, politica ou ancestralidade.
-- prioridade: breaking, alta ou media. Use breaking só para fato urgente, de grande impacto e acontecendo agora.
+- prioridade: breaking, alta ou media, conforme a seção "Prioridade" da linha editorial.
 - repetida: true se for o mesmo fato de outra notícia da lista nova (fique só com a primeira) ou de uma matéria recente do portal.
-Responda SOMENTE com JSON válido, neste formato:
-{"avaliacoes": [{"id": 1, "nota": 8, "categoria": "cultura", "prioridade": "media", "repetida": false, "motivo": "frase curta"}]}
+- motivo: frase curta explicando a nota com base na régua.
+Registre a avaliação de todas as notícias usando a ferramenta avaliar_noticias.
 """
+
 
 INSTRUCAO_REDATOR = """
 
 ## Sua função agora: REDATOR (escreve)
 Você recebe uma notícia original já aprovada pelo editor-chefe. Reescreva seguindo a linha editorial acima à risca.
 Se, lendo o texto completo, perceber que não há informação suficiente para uma matéria honesta, recuse.
-Responda SOMENTE com um objeto JSON válido, sem nenhum texto antes ou depois, com estes campos:
-{
- "aprovada": true ou false,
- "motivo": "frase curta explicando a decisão",
- "titulo": "título com até 60 caracteres",
- "linha_fina": "linha fina com até 350 caracteres",
- "corpo_html": "corpo em HTML só com <h2>, <h3>, <p>, <strong> e, se houver, <a href> dos links úteis informados; sem o parágrafo de crédito, que é colocado automaticamente",
- "palavras_chave": ["de 3 a 5 palavras-chave que aparecem escritas exatamente assim no corpo_html"],
- "hashtags": ["de 3 a 6 hashtags para redes sociais, sem espaços, começando com #"]
-}
+Entregue o resultado usando a ferramenta entregar_materia. O corpo_html não leva o parágrafo de crédito, que é colocado automaticamente.
 Se "aprovada" for false, os demais campos podem ficar vazios.
 """
 
@@ -315,8 +352,10 @@ def editor_chefe(linha_editorial, noticias, recentes):
         f"{n['id']}. {n['titulo']} | {n.get('descricao', '')[:300]}" for n in noticias
     )
     portal = "\n".join(f"- {r.get('titulo_original') or r.get('titulo')}" for r in recentes[-80:]) or "nenhuma"
-    pedido = f"NOTÍCIAS NOVAS:\n{lista}\n\nMATÉRIAS RECENTES DO PORTAL (para achar repetidas):\n{portal}"
-    resultado = enviar_claude(linha_editorial + INSTRUCAO_EDITOR, pedido, max_tokens=4000)
+    hoje = datetime.now(FUSO_SP).strftime("%d/%m/%Y")
+    pedido = (f"DATA DE HOJE: {hoje}\n\nNOTÍCIAS NOVAS:\n{lista}\n\n"
+              f"MATÉRIAS RECENTES DO PORTAL (para achar repetidas):\n{portal}")
+    resultado = enviar_claude(linha_editorial + INSTRUCAO_EDITOR, pedido, FERRAMENTA_EDITOR)
     return {a.get("id"): a for a in resultado.get("avaliacoes", []) if isinstance(a, dict)}
 
 
@@ -330,7 +369,7 @@ def redator(linha_editorial, noticia):
         f"{json.dumps(noticia.get('links_uteis', []), ensure_ascii=False)}\n\n"
         f"Texto original:\n{noticia['texto'][:12000]}"
     )
-    return enviar_claude(linha_editorial + INSTRUCAO_REDATOR, pedido)
+    return enviar_claude(linha_editorial + INSTRUCAO_REDATOR, pedido, FERRAMENTA_REDATOR)
 
 
 def limpar_html(corpo, links_permitidos=()):
@@ -495,7 +534,7 @@ def publicar(materia_fila, linha_editorial, agora):
         raise
     except Exception as e:
         log(f"  Resposta inválida do redator: {e}")
-        return None
+        return "tentar_de_novo"
     if not resultado.get("aprovada"):
         log(f"  Recusada pelo redator: {resultado.get('motivo', '')}")
         return None
@@ -645,6 +684,12 @@ def main():
                 log(f"  Não conseguiu falar com o Claude: {e}. A matéria continua na fila.")
                 parar = True
                 break
+            if pronta == "tentar_de_novo":
+                materia_fila["tentativas"] = materia_fila.get("tentativas", 0) + 1
+                if materia_fila["tentativas"] >= 2:
+                    log("  Duas falhas seguidas: matéria retirada da fila.")
+                    fila.remove(materia_fila)
+                continue
             fila.remove(materia_fila)
             if not pronta:
                 continue
