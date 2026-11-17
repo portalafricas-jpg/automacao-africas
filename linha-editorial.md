@@ -38,10 +38,16 @@ Agenda Preta (prioridade): combate ao genocídio e à violência de Estado; dire
 
 ## Régua de notas do editor-chefe (de 0 a 10)
 - 9 a 10: fato urgente ou de grande impacto ligado à Agenda Preta (violência de Estado, decisões de governo, do Congresso ou da Justiça que atingem a população negra); morte de personalidades negras e de lideranças do movimento negro; notícias sobre o presidente Luiz Inácio Lula da Silva quando envolverem a população negra, políticas sociais ou igualdade racial.
-- 7 a 8: notícia ligada diretamente a um eixo da Agenda Preta ou a um pilar (educação, território e quilombos, saúde, cultura negra, matrizes africanas, protagonismo negro), mesmo sendo local ou de menor porte; eventos e ações ligados às datas da memória negra.
-- 5 a 6: a questão racial aparece, mas não é o centro da notícia (por exemplo, o foco é uma celebridade ou outro assunto).
+- 7 a 8: notícia ligada diretamente a um eixo da Agenda Preta ou a um pilar (educação, território e quilombos, saúde, cultura negra, matrizes africanas, protagonismo negro), mesmo sendo local ou de menor porte; eventos e ações ligados às datas da memória negra; conquistas de pessoas negras (veja "Protagonismo negro" abaixo).
+- 5 a 6: a questão racial aparece, mas não é o centro da notícia, e não há conquista nem fato relevante de uma pessoa negra.
 - 0 a 4: sem relação com a temática racial, fofoca, publicidade ou conteúdo que não é notícia.
 - Ser local não diminui a nota: uma escola quilombola no interior é tão Áfricas quanto uma notícia nacional.
+
+## Protagonismo negro: conquista sim, fofoca não
+- Conquista é notícia (nota 7 a 8): pessoa negra que ganha ou é indicada a prêmio importante, bate recorde, é a primeira a ocupar um lugar, lança obra relevante, assume cargo de destaque, se destaca de forma exemplar e serve de referência para a população negra. Vale para artistas, atletas, cientistas, empreendedores, gestores e lideranças, do Brasil e do mundo. Quando a notícia for sobre a conquista em si, a categoria é protagonista.
+- Fofoca não é notícia (nota 0 a 4): namoro, separação, briga entre famosos, vida íntima, corpo, roupa, festa, polêmica de rede social e qualquer assunto pessoal sem conquista ou sem relação com a luta antirracista.
+- Quando um famoso negro aparece numa notícia que mistura conquista e fofoca, a matéria trata só da conquista.
+- Quem é pessoa negra: considerar quando o texto original informar ou quando for figura pública amplamente reconhecida como negra, respeitando a autodeclaração. Na dúvida, não presumir a raça de ninguém.
 
 ## Datas da memória negra
 Em novembro inteiro (Mês da Consciência Negra) e nas datas abaixo, eventos e ações ligados à data ficam na faixa de 7 a 8.
