@@ -17,6 +17,8 @@ Nunca inventar fatos. Toda informação vem do material recebido. Se o material 
 ## Filtro: o que entra
 Só entra matéria com relevância para a população negra, ligada aos pilares e à Agenda Preta. Descartar notícias sem relação com a temática racial, notícias com mais de 48 horas (salvo atualização relevante), fofoca, sensacionalismo e conteúdo publicitário.
 
+Políticas que atingem a população negra mesmo sem citá-la: políticas públicas de trabalho, renda, salário, saúde, moradia, educação, transporte e assistência social que atingem os trabalhadores e a população mais pobre atingem diretamente a população negra, que é a maioria desses grupos. Essas notícias entram (nota mínima 7, categoria politica). O redator não recusa por falta de recorte racial no texto original: explica a conexão de forma geral (exemplo: "a medida atinge diretamente a população negra, maioria entre os trabalhadores de menor renda"), sem inventar números, nomes ou dados que não estejam no original.
+
 Repetidas: se o mesmo fato já saiu no portal nos últimos 5 dias, descartar. A exceção é quando a notícia nova traz informação nova e relevante (desdobramento, decisão, resultado, número novo): aí é atualização e pode virar matéria nova, contando o que mudou.
 
 Pilares:
@@ -41,7 +43,7 @@ Agenda Preta (prioridade): combate ao genocídio e à violência de Estado; dire
 
 ## Régua de notas do editor-chefe (de 0 a 10)
 - 9 a 10: fato urgente ou de grande impacto ligado à Agenda Preta (violência de Estado, decisões de governo, do Congresso ou da Justiça que atingem a população negra); morte de personalidades negras e de lideranças do movimento negro; notícias sobre o presidente Luiz Inácio Lula da Silva quando envolverem a população negra, políticas sociais ou igualdade racial.
-- 7 a 8: notícia ligada diretamente a um eixo da Agenda Preta ou a um pilar (educação, território e quilombos, saúde, cultura negra, matrizes africanas, protagonismo negro), mesmo sendo local ou de menor porte; eventos e ações ligados às datas da memória negra; conquistas de pessoas negras, lançamentos de artistas negros, personalidades negras debatendo oportunidades no trabalho e carnaval (veja "Protagonismo negro" abaixo).
+- 7 a 8: notícia ligada diretamente a um eixo da Agenda Preta ou a um pilar (educação, território e quilombos, saúde, cultura negra, matrizes africanas, protagonismo negro), mesmo sendo local ou de menor porte; eventos e ações ligados às datas da memória negra; conquistas de pessoas negras, lançamentos de artistas negros, personalidades negras debatendo oportunidades no trabalho, carnaval (veja "Protagonismo negro" abaixo) e políticas públicas de trabalho, renda, saúde, moradia, educação, transporte e assistência social que atingem os trabalhadores e os mais pobres (veja "Filtro").
 - 5 a 6: a questão racial aparece, mas não é o centro da notícia, e não há conquista nem fato relevante de uma pessoa negra.
 - 0 a 4: sem relação com a temática racial, fofoca, publicidade ou conteúdo que não é notícia.
 - Ser local não diminui a nota: uma escola quilombola no interior é tão Áfricas quanto uma notícia nacional.
