@@ -7,12 +7,14 @@ import html
 import json
 import os
 import re
+import unicodedata
 import urllib.error
+import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
-from urllib.parse import urlparse
+from urllib.parse import urljoin, urlparse
 
 try:
     import trafilatura
@@ -29,9 +31,17 @@ LIMITE_DIA = 20                 # matérias publicadas por dia (breaking não co
 HORA_INICIO = 8                 # das 8h à meia-noite publica normal; de madrugada, só breaking
 MAX_TRIAGEM_POR_RODADA = 40     # quantos títulos o editor-chefe avalia por rodada
 TEXTO_MINIMO = 600              # menos que isso de texto original = descarta (evita inventar)
-SEMELHANCA_MESMO_FATO = 0.62    # títulos parecidos acima disso = mesmo fato
+SEMELHANCA_MESMO_FATO = 0.62    # títulos parecidos acima disso = mesmo fato (entre fontes da mesma rodada)
+SEMELHANCA_JA_PUBLICADA = 0.85  # quase idêntico a matéria do portal = repetida sem precisar do editor-chefe
+DIAS_REPETIDAS = 5              # o editor-chefe compara com as matérias dos últimos 5 dias
+GRUPOS_BUSCA = 4                # as buscas são divididas em 4 grupos: cada termo é buscado uma vez por hora
+INSTAGRAM = "https://www.instagram.com/africasplay"
+ROBO_WIKI = "RoboAfricas/1.0 (https://www.africas.com.br; robo do portal)"
 FUSO_SP = timezone(timedelta(hours=-3))
-NAVEGADOR = "Mozilla/5.0 (compatible; RoboAfricas/1.0; +https://www.africas.com.br)"
+NAVEGADORES = [
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15",
+]
 
 PASTA = os.path.dirname(os.path.abspath(__file__))
 ARQ_FONTES = os.path.join(PASTA, "fontes.json")
@@ -40,6 +50,7 @@ PASTA_ESTADO = os.path.join(PASTA, "estado")
 ARQ_FILA = os.path.join(PASTA_ESTADO, "fila.json")
 ARQ_VISTOS = os.path.join(PASTA_ESTADO, "vistos-processados.json")
 ARQ_PUBLICADAS = os.path.join(PASTA_ESTADO, "publicadas.json")
+ARQ_PRIMEIRA_VEZ = os.path.join(PASTA_ESTADO, "primeira-vez.json")
 PASTA_FEEDS = os.path.join(PASTA, "feeds")
 
 
@@ -62,9 +73,22 @@ def salvar_json(caminho, dados):
 
 
 def baixar(url, tempo=30):
-    req = urllib.request.Request(url, headers={"User-Agent": NAVEGADOR})
-    with urllib.request.urlopen(req, timeout=tempo) as r:
-        return r.read().decode("utf-8", errors="replace")
+    """Abre a página como um navegador comum; se o site recusar, tenta com outro navegador."""
+    erro = None
+    for nav in NAVEGADORES:
+        req = urllib.request.Request(url, headers={
+            "User-Agent": nav,
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.5",
+        })
+        try:
+            with urllib.request.urlopen(req, timeout=tempo) as r:
+                return r.read().decode("utf-8", errors="replace")
+        except urllib.error.HTTPError as e:
+            erro = e
+            if e.code not in (403, 406):
+                raise
+    raise erro
 
 
 def normalizar(texto):
@@ -102,7 +126,80 @@ def ler_rss(url):
         if titulo and link:
             itens.append({"titulo": decodificar(titulo), "link": link, "data": data, "imagem": imagem,
                           "descricao": decodificar(re.sub(r"<[^>]+>", " ", descricao))})
+    if not itens:  # alguns sites usam o formato Atom em vez de RSS
+        ns = "{http://www.w3.org/2005/Atom}"
+        for e in raiz.iter(ns + "entry"):
+            titulo = (e.findtext(ns + "title") or "").strip()
+            link = ""
+            for l in e.findall(ns + "link"):
+                if l.get("rel", "alternate") == "alternate":
+                    link = l.get("href", "")
+            data = None
+            try:
+                data = datetime.fromisoformat((e.findtext(ns + "published") or e.findtext(ns + "updated") or "").replace("Z", "+00:00"))
+            except Exception:
+                pass
+            resumo = e.findtext(ns + "summary") or ""
+            if titulo and link:
+                itens.append({"titulo": decodificar(titulo), "link": link, "data": data, "imagem": "",
+                              "descricao": decodificar(re.sub(r"<[^>]+>", " ", resumo))})
     return itens
+
+
+def bing_url(busca):
+    return "https://www.bing.com/news/search?" + urllib.parse.urlencode(
+        {"q": busca, "format": "rss", "mkt": "pt-BR", "setlang": "pt-BR", "cc": "BR"})
+
+
+def link_real_bing(link):
+    """O Bing esconde o endereço da matéria no pedaço url= do link."""
+    q = urllib.parse.parse_qs(urlparse(link).query)
+    if "url" in q:
+        return q["url"][0]
+    return link if "bing.com" not in link else ""
+
+
+def ler_pagina_de_noticias(url):
+    """Site sem RSS: pega da página de notícias os links que parecem matérias do mesmo site."""
+    try:
+        pagina = baixar(url)
+    except Exception as e:
+        log(f"  Erro ao ler a página {url}: {e}")
+        return []
+    dominio = urlparse(url).netloc
+    itens, vistos = [], set()
+    for href, texto in re.findall(r'<a[^>]+href=["\']([^"\'#]+)["\'][^>]*>(.*?)</a>', pagina, flags=re.S | re.I):
+        link = urljoin(url, html.unescape(href))
+        p = urlparse(link)
+        titulo = decodificar(re.sub(r"<[^>]+>", " ", texto))
+        if p.netloc != dominio or link in vistos or len(titulo) < 35:
+            continue
+        caminho = p.path.strip("/")
+        if caminho.count("/") < 2 and not re.search(r"\d{4}", caminho):
+            continue
+        vistos.add(link)
+        itens.append({"titulo": titulo, "link": link, "data": None, "imagem": "", "descricao": ""})
+    return itens[:20]
+
+
+def ler_fonte(fonte, rodada):
+    """Lê uma fonte da lista conforme o tipo: rss, pagina (site sem RSS) ou busca (Bing Notícias)."""
+    tipo = fonte.get("tipo")
+    if tipo == "rss":
+        return ler_rss(fonte["url"])
+    if tipo == "pagina":
+        return ler_pagina_de_noticias(fonte["url"])
+    if tipo == "busca":
+        if fonte.get("grupo", 0) % GRUPOS_BUSCA != rodada % GRUPOS_BUSCA:
+            return []
+        itens = []
+        for item in ler_rss(bing_url(fonte["busca"])):
+            item["link"] = link_real_bing(item["link"])
+            if item["link"]:
+                itens.append(item)
+        return itens
+    log(f"  Tipo de fonte desconhecido: {fonte.get('nome')}")
+    return []
 
 
 # ---------------- 2. Pegar o texto completo no site original ----------------
@@ -187,8 +284,9 @@ def extrair_materia(link, titulo="", descricao=""):
         c = re.sub(r"(?i)cr[ée]ditos?\s+da\s+(?:imagem|foto)\s*:", "Foto:", c or "")
         m = PADRAO_CREDITO.search(c + "\n")
         if m:
-            resultado["credito_foto"] = decodificar(m.group(1)).strip(" .-–")
-            break
+            resultado["credito_foto"] = limpar_credito(m.group(1))
+            if resultado["credito_foto"]:
+                break
 
     resultado["embeds"] = achar_embeds(pagina)
     resultado["links_uteis"] = achar_links_uteis(pagina)
@@ -197,6 +295,18 @@ def extrair_materia(link, titulo="", descricao=""):
     resultado["autor"] = decodificar(resultado["autor"])
     return resultado
 
+
+
+def limpar_credito(texto):
+    """Tira parênteses, colchetes e sinais soltos do crédito da foto."""
+    c = decodificar(texto)
+    c = re.sub(r"\(\s*\)|\[\s*\]", "", c)
+    if c.count("(") != c.count(")"):
+        c = c.replace("(", "").replace(")", "")
+    if c.count("[") != c.count("]"):
+        c = c.replace("[", "").replace("]", "")
+    c = re.sub(r"\s+", " ", c)
+    return c.strip(" .,;:-–—/|")
 
 
 def trecho_da_materia(pagina):
@@ -314,11 +424,14 @@ FERRAMENTA_REDATOR = {
         "properties": {
             "aprovada": {"type": "boolean"},
             "motivo": {"type": "string"},
-            "titulo": {"type": "string", "description": "até 60 caracteres"},
+            "titulo": {"type": "string", "description": "até 60 caracteres, contando espaços"},
             "linha_fina": {"type": "string", "description": "até 350 caracteres"},
             "corpo_html": {"type": "string", "description": "HTML só com h2, h3, p, strong e, se houver, a href dos links úteis; sem o parágrafo de crédito"},
-            "palavras_chave": {"type": "array", "items": {"type": "string"}, "description": "3 a 5 assuntos curtos (1 a 3 palavras, até 4 se for nome próprio), do tipo que vira tag, escritos exatamente como aparecem no corpo"},
+            "palavras_chave": {"type": "array", "items": {"type": "string"}, "description": "3 a 5 assuntos curtos (1 a 3 palavras, até 4 se for nome próprio), do tipo que vira tag, tirados do próprio corpo e escritos exatamente como aparecem nele"},
             "hashtags": {"type": "array", "items": {"type": "string"}, "description": "3 a 6, sem espaços, começando com #"},
+            "pessoa_principal": {"type": "string", "description": "nome completo da pessoa de quem a matéria trata, se for sobre uma pessoa específica; senão, vazio"},
+            "busca_foto": {"type": "string", "description": "2 a 4 palavras em inglês que descrevem a cena do tema, para buscar foto ilustrativa (ex.: black woman entrepreneur)"},
+            "busca_foto_sem_rosto": {"type": "string", "description": "2 a 4 palavras em inglês com objetos ou lugar do tema, sem pessoas (ex.: african drums, books library, stage microphone)"},
         },
         "required": ["aprovada", "motivo"],
     },
@@ -333,7 +446,7 @@ Para cada notícia nova, dê:
 - nota de 0 a 10, seguindo exatamente a "Régua de notas do editor-chefe" e as "Datas da memória negra" da linha editorial acima. Ser local não diminui a nota.
 - categoria: mundo, cotidiano, protagonista, cultura, politica ou ancestralidade.
 - prioridade: breaking, alta ou media, conforme a seção "Prioridade" da linha editorial.
-- repetida: true se for o mesmo fato de outra notícia da lista nova (fique só com a primeira) ou de uma matéria recente do portal.
+- repetida: true se for o mesmo fato de outra notícia da lista nova (fique só com a primeira) ou de uma matéria do portal dos últimos 5 dias. Se for o mesmo assunto, mas trouxer informação nova e relevante (desdobramento, decisão, resultado, número novo), marque false: é uma atualização e pode virar matéria nova.
 - motivo: frase curta explicando a nota com base na régua.
 Registre a avaliação de todas as notícias usando a ferramenta avaliar_noticias.
 """
@@ -344,6 +457,8 @@ INSTRUCAO_REDATOR = """
 ## Sua função agora: REDATOR (escreve)
 Você recebe uma notícia original já aprovada pelo editor-chefe. Reescreva seguindo a linha editorial acima à risca.
 Se, lendo o texto completo, perceber que não há informação suficiente para uma matéria honesta, recuse.
+Antes de entregar, confira os limites: título até 60 caracteres, linha fina até 350 e corpo principal até 3.500 caracteres (o bloco de perguntas e respostas vem além disso). Se passar, encurte.
+As palavras-chave precisam estar escritas no corpo exatamente como na lista.
 Entregue o resultado usando a ferramenta entregar_materia. O corpo_html não leva o parágrafo de crédito, que é colocado automaticamente.
 Se "aprovada" for false, os demais campos podem ficar vazios.
 """
@@ -354,10 +469,10 @@ def editor_chefe(linha_editorial, noticias, recentes):
     lista = "\n".join(
         f"{n['id']}. {n['titulo']} | {n.get('descricao', '')[:300]}" for n in noticias
     )
-    portal = "\n".join(f"- {r.get('titulo_original') or r.get('titulo')}" for r in recentes[-80:]) or "nenhuma"
+    portal = "\n".join(f"- {r.get('titulo_original') or r.get('titulo')}" for r in recentes[-150:]) or "nenhuma"
     hoje = datetime.now(FUSO_SP).strftime("%d/%m/%Y")
     pedido = (f"DATA DE HOJE: {hoje}\n\nNOTÍCIAS NOVAS:\n{lista}\n\n"
-              f"MATÉRIAS RECENTES DO PORTAL (para achar repetidas):\n{portal}")
+              f"MATÉRIAS DO PORTAL NOS ÚLTIMOS {DIAS_REPETIDAS} DIAS (para achar repetidas):\n{portal}")
     resultado = enviar_claude(linha_editorial + INSTRUCAO_EDITOR, pedido, FERRAMENTA_EDITOR)
     return {a.get("id"): a for a in resultado.get("avaliacoes", []) if isinstance(a, dict)}
 
@@ -409,16 +524,21 @@ MAX_LINKS = 5
 
 
 def slug(texto):
-    import unicodedata
     t = unicodedata.normalize("NFD", texto or "")
     t = "".join(c for c in t if unicodedata.category(c) != "Mn").lower()
     t = re.sub(r"[^a-z0-9\s-]", "", t).strip()
     return re.sub(r"-+", "-", re.sub(r"\s+", "-", t))
 
 
+def sem_acento(texto):
+    """Mesmo tamanho do texto original, só que sem acentos e em minúsculas (para comparar)."""
+    return "".join(unicodedata.normalize("NFD", c)[0].lower() if c else c for c in texto)
+
+
 def links_internos(corpo, palavras):
-    """Liga de 3 a 5 assuntos à busca do site: cada assunto uma vez e no máximo um link por parágrafo."""
-    palavras = [p.strip() for p in palavras if p and p.strip() and len(p.split()) <= 4]
+    """Liga de 3 a 5 assuntos à busca do site: cada assunto uma vez e no máximo um link por parágrafo.
+    Acha a palavra no texto mesmo com diferença de acento ou de maiúscula."""
+    palavras = [decodificar(p) for p in palavras if p and p.strip() and len(p.split()) <= 4]
     palavras = sorted(dict.fromkeys(palavras), key=len, reverse=True)
     paragrafos = re.findall(r"<p>.*?</p>", corpo, flags=re.S)
     usados = set()
@@ -426,7 +546,7 @@ def links_internos(corpo, palavras):
     for palavra in palavras:
         if total >= MAX_LINKS:
             break
-        padrao = re.compile(r"(?<![\w])" + re.escape(palavra) + r"(?![\w])", re.I)
+        padrao = re.compile(r"(?<![\w])" + re.escape(sem_acento(palavra)) + r"(?![\w])")
         for i, par in enumerate(paragrafos):
             if i in usados or "<a " in par:
                 continue
@@ -435,9 +555,12 @@ def links_internos(corpo, palavras):
             for k, parte in enumerate(partes):
                 if parte.startswith("<"):
                     continue
-                nova, n = padrao.subn(lambda x: f'<a href="{URL_BUSCA}{slug(palavra)}/p/1" style="color:{COR_LINK};text-decoration:none;">{x.group(0)}</a>', parte, count=1)
-                if n:
-                    partes[k] = nova
+                m = padrao.search(sem_acento(parte))
+                if m:
+                    achado = parte[m.start():m.end()]
+                    partes[k] = (parte[:m.start()]
+                                 + f'<a href="{URL_BUSCA}{slug(palavra)}/p/1" style="color:{COR_LINK};text-decoration:none;">{achado}</a>'
+                                 + parte[m.end():])
                     feito = True
                     break
             if feito:
@@ -448,6 +571,119 @@ def links_internos(corpo, palavras):
                 total += 1
                 break
     return corpo
+
+
+# ---------------- Foto substituta (quando a foto original não pode ser usada: foto livre da pessoa ou foto do Unsplash) ----------------
+def baixar_json(url, cabecalho):
+    req = urllib.request.Request(url, headers=cabecalho)
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return json.loads(r.read().decode("utf-8"))
+
+
+def foto_da_pessoa(nome):
+    """Foto livre da própria pessoa: a foto principal dela na Wikipédia, se a licença for livre."""
+    try:
+        q = urllib.parse.urlencode({"action": "query", "titles": nome, "prop": "pageimages",
+                                    "piprop": "name", "redirects": 1, "format": "json"})
+        dados = baixar_json("https://pt.wikipedia.org/w/api.php?" + q, {"User-Agent": ROBO_WIKI})
+        arquivo = ""
+        for pagina in dados.get("query", {}).get("pages", {}).values():
+            arquivo = pagina.get("pageimage", "")
+        if not arquivo:
+            return None
+        q = urllib.parse.urlencode({"action": "query", "titles": "File:" + arquivo, "prop": "imageinfo",
+                                    "iiprop": "url|extmetadata", "iiurlwidth": 1200, "format": "json"})
+        dados = baixar_json("https://commons.wikimedia.org/w/api.php?" + q, {"User-Agent": ROBO_WIKI})
+        for pagina in dados.get("query", {}).get("pages", {}).values():
+            info = (pagina.get("imageinfo") or [{}])[0]
+            meta = info.get("extmetadata", {})
+            licenca = (meta.get("LicenseShortName", {}).get("value") or "")
+            if not re.search(r"CC|domínio público|public domain|PD", licenca, re.I):
+                return None
+            autor = decodificar(re.sub(r"<[^>]+>", "", meta.get("Artist", {}).get("value") or "")) or "Autor desconhecido"
+            url = info.get("thumburl") or info.get("url")
+            if url:
+                return url, limpar_credito(f"{autor}/Wikimedia Commons ({licenca})")
+    except Exception as e:
+        log(f"  Wikimedia sem foto: {e}")
+    return None
+
+
+def foto_banco(busca, usadas):
+    """Foto ilustrativa gratuita do Unsplash, evitando repetir foto já usada."""
+    chave = (os.environ.get("UNSPLASH_ACCESS_KEY") or "").strip()
+    if not chave or not busca:
+        return None
+    cabecalho = {"Authorization": f"Client-ID {chave}", "Accept-Version": "v1", "User-Agent": ROBO_WIKI}
+    try:
+        q = urllib.parse.urlencode({"query": busca, "per_page": 15, "orientation": "landscape"})
+        dados = baixar_json("https://api.unsplash.com/search/photos?" + q, cabecalho)
+        for foto in dados.get("results", []):
+            url = foto.get("urls", {}).get("regular")
+            if url and url not in usadas:
+                # regra do Unsplash: avisar quando uma foto é usada
+                aviso = foto.get("links", {}).get("download_location")
+                if aviso:
+                    try:
+                        baixar_json(aviso, cabecalho)
+                    except Exception:
+                        pass
+                nome = foto.get("user", {}).get("name") or "Unsplash"
+                return url, f"Foto ilustrativa: {nome}/Unsplash"
+    except Exception as e:
+        log(f"  Unsplash sem foto: {e}")
+    return None
+
+
+COMUNS_DOMINIO = {"www", "com", "br", "org", "net", "gov", "ao", "inf", "pt", "fr", "uol", "abril", "blog", "news", "noticias"}
+PALAVRAS_IA = re.compile(r"gerad[ao] (?:por|com) (?:ia|intelig[eê]ncia artificial)|intelig[eê]ncia artificial|\bia\b|midjourney|dall-?e|ai generated|\bai\b", re.I)
+
+
+def foto_nao_pode(credito, veiculo, link, exigir_credito, imagem):
+    """Diz se a foto original não pode ser usada (e por quê). Vazio = pode usar."""
+    if not imagem:
+        return "a matéria original não tem foto"
+    dominio = urlparse(link).netloc.lower()
+    if dominio.endswith("gov.br") or dominio.endswith("ebc.com.br"):
+        return ""  # fotos de governo e da Agência Brasil são de uso livre com crédito
+    c = credito or ""
+    if not c.strip():
+        return "foto sem crédito" if exigir_credito else ""
+    if PALAVRAS_IA.search(c):
+        return "imagem gerada por IA"
+    c_norm = normalizar(sem_acento(c))
+    c_junto = c_norm.replace(" ", "")
+    nomes = [normalizar(sem_acento(veiculo or ""))]
+    nomes += [p for p in dominio.split(".") if p not in COMUNS_DOMINIO]
+    for nome in nomes:
+        junto = nome.replace(" ", "")
+        if not junto:
+            continue
+        if len(junto) >= 5 and junto in c_junto:
+            return f"crédito do próprio site ({credito})"
+        if len(junto) < 5 and re.search(r"(?<!\w)" + re.escape(nome) + r"(?!\w)", c_norm):
+            return f"crédito do próprio site ({credito})"
+    return ""
+
+
+FOTOS_USADAS = set()
+
+
+def foto_substituta(resultado):
+    """Pessoa específica: foto livre dela; senão, foto do tema sem rosto. Tema geral: foto ilustrativa."""
+    pessoa = (resultado.get("pessoa_principal") or "").strip()
+    achou = None
+    if pessoa:
+        achou = foto_da_pessoa(pessoa) or foto_banco(resultado.get("busca_foto_sem_rosto"), FOTOS_USADAS)
+    else:
+        achou = foto_banco(resultado.get("busca_foto"), FOTOS_USADAS) or \
+            foto_banco(resultado.get("busca_foto_sem_rosto"), FOTOS_USADAS)
+    achou = achou or foto_banco("african art pattern", FOTOS_USADAS)
+    if not achou:
+        log("  Aviso: não achou foto substituta; a matéria sai sem imagem.")
+        return "", "Divulgação"
+    FOTOS_USADAS.add(achou[0])
+    return achou
 
 
 # ---------------- 4. Montar o RSS no formato do site ----------------
@@ -501,20 +737,20 @@ def montar_corpo(resultado, original):
         return ""
     corpo = links_internos(corpo, resultado.get("palavras_chave") or [])
     corpo = inserir_embeds(corpo, original["embeds"])
+    corpo += f'<p><strong>Siga o Áfricas no Instagram: <a href="{INSTAGRAM}" target="_blank" rel="noopener">@africasplay</a></strong></p>'
     corpo += f"<p>Com colaboração de {html.escape(original['veiculo'], quote=False)}.</p>"
     return corpo
 
 
 # ---------------- Rodada principal ----------------
-def mesmo_fato(titulo, fato, recentes):
-    a, b = normalizar(titulo), normalizar(fato)
-    for r in recentes:
-        for x in (a, b):
-            if not x:
-                continue
-            for y in (normalizar(r.get("titulo_original")), normalizar(r.get("fato"))):
-                if y and difflib.SequenceMatcher(None, x, y).ratio() >= SEMELHANCA_MESMO_FATO:
-                    return True
+def mesmo_fato(titulo, lista, limite):
+    x = normalizar(titulo)
+    if not x:
+        return False
+    for r in lista:
+        for y in (normalizar(r.get("titulo_original")), normalizar(r.get("titulo"))):
+            if y and difflib.SequenceMatcher(None, x, y).ratio() >= limite:
+                return True
     return False
 
 
@@ -522,6 +758,17 @@ def fim_do_dia_seguinte(momento):
     sp = momento.astimezone(FUSO_SP)
     amanha = (sp + timedelta(days=1)).replace(hour=23, minute=59, second=59, microsecond=0)
     return amanha.astimezone(timezone.utc).isoformat()
+
+
+def cortar_linha_fina(texto, limite=350):
+    """Se a linha fina passar de 350 caracteres, corta na última frase completa."""
+    if len(texto) <= limite:
+        return texto
+    corte = texto[:limite]
+    fim = max(corte.rfind(". "), corte.rfind("! "), corte.rfind("? "))
+    if fim > 100:
+        return corte[:fim + 1]
+    return corte[:corte.rfind(" ")].rstrip(",;:") + "."
 
 
 def publicar(materia_fila, linha_editorial, agora):
@@ -547,16 +794,26 @@ def publicar(materia_fila, linha_editorial, agora):
         log(f"  Recusada pelo redator: {resultado.get('motivo', '')}")
         return None
     corpo = montar_corpo(resultado, original)
+    imagem = original["imagem"] or materia_fila.get("imagem_rss", "")
+    credito = original["credito_foto"]
+    motivo_troca = foto_nao_pode(credito, original["veiculo"], materia_fila["link"],
+                                 materia_fila.get("imagem_banco", False), imagem)
+    if motivo_troca:
+        log(f"  Foto trocada: {motivo_troca}.")
+        imagem, credito = foto_substituta(resultado)
+    credito = credito or "Divulgação"
     titulo = decodificar(resultado.get("titulo"))
     if not titulo or not corpo:
         log("  Descartada: o redator não devolveu título ou texto.")
         return None
+    if len(titulo) > 60:
+        log(f"  Aviso: título com {len(titulo)} caracteres (limite 60).")
     return dict(materia_fila, **{
         "titulo": titulo,
-        "linha_fina": decodificar(resultado.get("linha_fina")),
+        "linha_fina": cortar_linha_fina(decodificar(resultado.get("linha_fina"))),
         "corpo_html": corpo,
-        "imagem": original["imagem"] or materia_fila.get("imagem_rss", ""),
-        "credito_imagem": original["credito_foto"] or "Divulgação",
+        "imagem": imagem,
+        "credito_imagem": credito,
         "veiculo": original["veiculo"],
         "autor": original["autor"],
         "palavras_chave": resultado.get("palavras_chave") or [],
@@ -568,12 +825,15 @@ def publicar(materia_fila, linha_editorial, agora):
 def main():
     agora = datetime.now(timezone.utc)
     agora_sp = agora.astimezone(FUSO_SP)
-    fontes = ler_json(ARQ_FONTES, {})
+    fontes = ler_json(ARQ_FONTES, [])
+    primeira_vez = ler_json(ARQ_PRIMEIRA_VEZ, {"fontes_iniciadas": [], "links": {}})
+    rodada = int(agora.timestamp() // 900)  # número da rodada de 15 minutos (define o grupo de buscas)
     with open(ARQ_LINHA, encoding="utf-8") as f:
         linha_editorial = f.read()
     fila = ler_json(ARQ_FILA, [])
     vistos = ler_json(ARQ_VISTOS, [])
     publicadas = ler_json(ARQ_PUBLICADAS, [])
+    FOTOS_USADAS.update(m.get("imagem", "") for m in publicadas[-200:])
     vistos_set = set(vistos)
 
     def marcar_visto(link):
@@ -588,24 +848,39 @@ def main():
         log(f"Saíram da fila por tempo: {antes - len(fila)}")
 
     recentes = [m for m in fila + publicadas
-                if m.get("data_original", m.get("criado_em", "")) >= (agora - timedelta(days=2)).isoformat()]
+                if m.get("data_original", m.get("criado_em", "")) >= (agora - timedelta(days=DIAS_REPETIDAS)).isoformat()]
 
     # Etapa A: buscar notícias novas (janela de 2 horas)
     candidatas = []
-    for categoria, urls in fontes.items():
-        for url in urls:
-            for item in ler_rss(url):
-                if item["link"] in vistos_set or item["link"] in [c["link"] for c in candidatas]:
-                    continue
-                if item["data"] and agora - item["data"] > timedelta(hours=JANELA_HORAS):
-                    marcar_visto(item["link"])
-                    continue
-                if mesmo_fato(item["titulo"], "", recentes + candidatas):
-                    log(f"Repetida (mesmo fato): {item['titulo'][:80]}")
-                    marcar_visto(item["link"])
-                    continue
-                item["categoria_fonte"] = categoria
-                candidatas.append(dict(item, titulo_original=item["titulo"]))
+    for fonte in fontes:
+        itens = ler_fonte(fonte, rodada)
+        nome = fonte.get("nome", "")
+        sem_data = [i for i in itens if not i["data"]]
+        if sem_data and nome not in primeira_vez["fontes_iniciadas"]:
+            # primeira vez que o robô lê esta fonte sem data: só anota o que já existe, não publica
+            for i in sem_data:
+                marcar_visto(i["link"])
+            primeira_vez["fontes_iniciadas"].append(nome)
+            log(f"Fonte nova sem data ({nome}): {len(sem_data)} matérias antigas anotadas, nada publicado.")
+            itens = [i for i in itens if i["data"]]
+        for item in itens:
+            if item["link"] in vistos_set or item["link"] in [c["link"] for c in candidatas]:
+                continue
+            if not item["data"]:
+                # sem data: vale o momento em que o robô viu a matéria pela primeira vez
+                visto_em = primeira_vez["links"].setdefault(item["link"], agora.isoformat())
+                item["data"] = datetime.fromisoformat(visto_em)
+            if agora - item["data"] > timedelta(hours=JANELA_HORAS):
+                marcar_visto(item["link"])
+                continue
+            if mesmo_fato(item["titulo"], recentes, SEMELHANCA_JA_PUBLICADA) or \
+                    mesmo_fato(item["titulo"], candidatas, SEMELHANCA_MESMO_FATO):
+                log(f"Repetida (mesmo fato): {item['titulo'][:80]}")
+                marcar_visto(item["link"])
+                continue
+            item["categoria_fonte"] = fonte.get("categoria", "")
+            item["imagem_banco"] = fonte.get("imagem") == "exigir_credito"
+            candidatas.append(dict(item, titulo_original=item["titulo"]))
     candidatas.sort(key=lambda i: i["data"] or agora)
     candidatas = candidatas[:MAX_TRIAGEM_POR_RODADA]
     log(f"Notícias novas na janela de {JANELA_HORAS}h: {len(candidatas)}")
@@ -642,7 +917,8 @@ def main():
                 prioridade = a.get("prioridade") if a.get("prioridade") in PRIORIDADES else "media"
                 fila.append({
                     "link": c["link"], "titulo_original": c["titulo"], "descricao": c.get("descricao", ""),
-                    "imagem_rss": c.get("imagem", ""), "categoria": categoria, "prioridade": prioridade,
+                    "imagem_rss": c.get("imagem", ""), "imagem_banco": c.get("imagem_banco", False),
+                    "categoria": categoria, "prioridade": prioridade,
                     "nota": nota, "motivo_nota": a.get("motivo", ""),
                     "data_original": (c["data"] or agora).astimezone(timezone.utc).isoformat(),
                     "criado_em": agora.isoformat(), "expira_em": fim_do_dia_seguinte(agora),
@@ -712,6 +988,9 @@ def main():
     salvar_json(ARQ_FILA, fila)
     salvar_json(ARQ_VISTOS, vistos[-5000:])
     salvar_json(ARQ_PUBLICADAS, publicadas[-500:])
+    limite_links = (agora - timedelta(days=3)).isoformat()
+    primeira_vez["links"] = {l: d for l, d in primeira_vez["links"].items() if d >= limite_links}
+    salvar_json(ARQ_PRIMEIRA_VEZ, primeira_vez)
     log(f"Fim. Na fila de espera: {len(fila)} | Publicadas hoje: {publicadas_hoje}")
 
 

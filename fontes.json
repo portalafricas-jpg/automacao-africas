@@ -1,8 +1,427 @@
-{
-  "ancestralidade": ["https://rss.app/feeds/_QL46fLxFEzcg39SW.xml"],
-  "mundo": ["https://rss.app/feeds/_247iW8K1jYkMQwiL.xml"],
-  "cotidiano": ["https://rss.app/feeds/_uqcjBsIDCw87u1eU.xml"],
-  "protagonista": ["https://rss.app/feeds/_VR1PhI4qXuZCPocf.xml"],
-  "cultura": ["https://rss.app/feeds/_6IrkYl8VKcdpnAze.xml"],
-  "politica": ["https://rss.app/feeds/_WFKpxFI4OtGORH8X.xml"]
-}
+[
+ {
+  "nome": "CONAQ - Notícias",
+  "categoria": "ancestralidade",
+  "tipo": "rss",
+  "url": "https://conaq.org.br/category/noticias/feed/"
+ },
+ {
+  "nome": "Mundo Negro",
+  "categoria": "cultura",
+  "tipo": "rss",
+  "url": "https://mundonegro.inf.br/feed/",
+  "imagem": "exigir_credito"
+ },
+ {
+  "nome": "Notícia Preta",
+  "categoria": "protagonista",
+  "tipo": "rss",
+  "url": "https://noticiapreta.com.br/feed/",
+  "imagem": "exigir_credito"
+ },
+ {
+  "nome": "Geledés",
+  "categoria": "cotidiano",
+  "tipo": "rss",
+  "url": "https://www.geledes.org.br/feed/"
+ },
+ {
+  "nome": "Virada da Consciência",
+  "categoria": "cultura",
+  "tipo": "rss",
+  "url": "https://viradadaconsciencia.com.br/feed/"
+ },
+ {
+  "nome": "O País (Angola)",
+  "categoria": "mundo",
+  "tipo": "rss",
+  "url": "https://www.opais.ao/feed/"
+ },
+ {
+  "nome": "DigiPress (Angola)",
+  "categoria": "mundo",
+  "tipo": "rss",
+  "url": "https://press.digi.ao/feed.xml"
+ },
+ {
+  "nome": "Giranotícias (Angola)",
+  "categoria": "mundo",
+  "tipo": "pagina",
+  "url": "https://www.giranoticias.com/"
+ },
+ {
+  "nome": "SRzd - Carnaval",
+  "categoria": "cultura",
+  "tipo": "rss",
+  "url": "https://srzd.com/category/carnaval/feed/"
+ },
+ {
+  "nome": "RFI - África lusófona",
+  "categoria": "mundo",
+  "tipo": "rss",
+  "url": "https://www.rfi.fr/pt/%C3%A1frica-lus%C3%B3fona/rss"
+ },
+ {
+  "nome": "RFI - África",
+  "categoria": "mundo",
+  "tipo": "rss",
+  "url": "https://www.rfi.fr/pt/tag/%C3%A1frica/rss"
+ },
+ {
+  "nome": "Portal do RAP Nacional",
+  "categoria": "cultura",
+  "tipo": "rss",
+  "url": "https://portaldorapnacional.com.br/feed/"
+ },
+ {
+  "nome": "Alma Preta",
+  "categoria": "cotidiano",
+  "tipo": "rss",
+  "url": "https://almapreta.com.br/feed/"
+ },
+ {
+  "nome": "Fundação Palmares",
+  "categoria": "politica",
+  "tipo": "pagina",
+  "url": "https://www.gov.br/palmares/pt-br/assuntos/noticias"
+ },
+ {
+  "nome": "Ministério da Cultura",
+  "categoria": "cultura",
+  "tipo": "pagina",
+  "url": "https://www.gov.br/cultura/pt-br/assuntos/noticias"
+ },
+ {
+  "nome": "Cultura Preta",
+  "categoria": "cultura",
+  "tipo": "rss",
+  "url": "https://culturapreta.com/feed/"
+ },
+ {
+  "nome": "Africanize",
+  "categoria": "cultura",
+  "tipo": "pagina",
+  "url": "https://africanizeoficial.com.br/"
+ },
+ {
+  "nome": "Baobá - Blog",
+  "categoria": "protagonista",
+  "tipo": "rss",
+  "url": "https://baoba.org.br/feed/"
+ },
+ {
+  "nome": "Busca - liberdade religiosa",
+  "categoria": "ancestralidade",
+  "tipo": "busca",
+  "busca": "\"liberdade religiosa\"",
+  "grupo": 0
+ },
+ {
+  "nome": "Busca - povos de terreiro",
+  "categoria": "ancestralidade",
+  "tipo": "busca",
+  "busca": "\"povos de terreiro\"",
+  "grupo": 1
+ },
+ {
+  "nome": "Busca - religião de matriz africana",
+  "categoria": "ancestralidade",
+  "tipo": "busca",
+  "busca": "\"religião de matriz africana\"",
+  "grupo": 2
+ },
+ {
+  "nome": "Busca - Quilombola",
+  "categoria": "ancestralidade",
+  "tipo": "busca",
+  "busca": "Quilombola",
+  "grupo": 3
+ },
+ {
+  "nome": "Busca - Intolerância religiosa",
+  "categoria": "ancestralidade",
+  "tipo": "busca",
+  "busca": "Intolerância religiosa",
+  "grupo": 0
+ },
+ {
+  "nome": "Busca - Pantera Negra 3",
+  "categoria": "cultura",
+  "tipo": "busca",
+  "busca": "Pantera Negra 3",
+  "grupo": 1
+ },
+ {
+  "nome": "Busca - Moda afro",
+  "categoria": "cultura",
+  "tipo": "busca",
+  "busca": "Moda afro",
+  "grupo": 2
+ },
+ {
+  "nome": "Busca - Teatro negro",
+  "categoria": "cultura",
+  "tipo": "busca",
+  "busca": "Teatro negro",
+  "grupo": 3
+ },
+ {
+  "nome": "Busca - Literatura negra",
+  "categoria": "cultura",
+  "tipo": "busca",
+  "busca": "Literatura negra",
+  "grupo": 0
+ },
+ {
+  "nome": "Busca - Cineasta negro",
+  "categoria": "cultura",
+  "tipo": "busca",
+  "busca": "Cineasta negro",
+  "grupo": 1
+ },
+ {
+  "nome": "Busca - Cultura negra",
+  "categoria": "cultura",
+  "tipo": "busca",
+  "busca": "Cultura negra",
+  "grupo": 2
+ },
+ {
+  "nome": "Busca - Damson Idris",
+  "categoria": "protagonista",
+  "tipo": "busca",
+  "busca": "Damson Idris",
+  "grupo": 3
+ },
+ {
+  "nome": "Busca - Paulo Vieira",
+  "categoria": "protagonista",
+  "tipo": "busca",
+  "busca": "Paulo Vieira",
+  "grupo": 0
+ },
+ {
+  "nome": "Busca - Jeferson Tenório",
+  "categoria": "protagonista",
+  "tipo": "busca",
+  "busca": "Jeferson Tenório",
+  "grupo": 1
+ },
+ {
+  "nome": "Busca - Djamila Ribeiro",
+  "categoria": "protagonista",
+  "tipo": "busca",
+  "busca": "Djamila Ribeiro",
+  "grupo": 2
+ },
+ {
+  "nome": "Busca - Conceição Evaristo",
+  "categoria": "protagonista",
+  "tipo": "busca",
+  "busca": "Conceição Evaristo",
+  "grupo": 3
+ },
+ {
+  "nome": "Busca - Sheron Menezzes",
+  "categoria": "protagonista",
+  "tipo": "busca",
+  "busca": "Sheron Menezzes",
+  "grupo": 0
+ },
+ {
+  "nome": "Busca - Thiaguinho",
+  "categoria": "protagonista",
+  "tipo": "busca",
+  "busca": "Thiaguinho",
+  "grupo": 1
+ },
+ {
+  "nome": "Busca - Samuel L. Jackson",
+  "categoria": "protagonista",
+  "tipo": "busca",
+  "busca": "Samuel L. Jackson",
+  "grupo": 2
+ },
+ {
+  "nome": "Busca - Criolo",
+  "categoria": "protagonista",
+  "tipo": "busca",
+  "busca": "Criolo",
+  "grupo": 3
+ },
+ {
+  "nome": "Busca - Seu Jorge",
+  "categoria": "protagonista",
+  "tipo": "busca",
+  "busca": "Seu Jorge",
+  "grupo": 0
+ },
+ {
+  "nome": "Busca - Lázaro Ramos",
+  "categoria": "protagonista",
+  "tipo": "busca",
+  "busca": "Lázaro Ramos",
+  "grupo": 1
+ },
+ {
+  "nome": "Busca - Liniker",
+  "categoria": "protagonista",
+  "tipo": "busca",
+  "busca": "Liniker",
+  "grupo": 2
+ },
+ {
+  "nome": "Busca - Emicida",
+  "categoria": "protagonista",
+  "tipo": "busca",
+  "busca": "Emicida",
+  "grupo": 3
+ },
+ {
+  "nome": "Busca - Ludmilla",
+  "categoria": "protagonista",
+  "tipo": "busca",
+  "busca": "Ludmilla",
+  "grupo": 0
+ },
+ {
+  "nome": "Busca - Tyla",
+  "categoria": "protagonista",
+  "tipo": "busca",
+  "busca": "Tyla",
+  "grupo": 1
+ },
+ {
+  "nome": "Busca - SZA",
+  "categoria": "protagonista",
+  "tipo": "busca",
+  "busca": "SZA",
+  "grupo": 2
+ },
+ {
+  "nome": "Busca - Ryan Coogler",
+  "categoria": "protagonista",
+  "tipo": "busca",
+  "busca": "Ryan Coogler",
+  "grupo": 3
+ },
+ {
+  "nome": "Busca - Viola Davis",
+  "categoria": "protagonista",
+  "tipo": "busca",
+  "busca": "Viola Davis",
+  "grupo": 0
+ },
+ {
+  "nome": "Busca - Michael B. Jordan",
+  "categoria": "protagonista",
+  "tipo": "busca",
+  "busca": "Michael B. Jordan",
+  "grupo": 1
+ },
+ {
+  "nome": "Busca - Kendrick Lamar",
+  "categoria": "protagonista",
+  "tipo": "busca",
+  "busca": "Kendrick Lamar",
+  "grupo": 2
+ },
+ {
+  "nome": "Busca - Beyoncé",
+  "categoria": "protagonista",
+  "tipo": "busca",
+  "busca": "Beyoncé",
+  "grupo": 3
+ },
+ {
+  "nome": "Busca - Empreendedora negra",
+  "categoria": "protagonista",
+  "tipo": "busca",
+  "busca": "Empreendedora negra",
+  "grupo": 0
+ },
+ {
+  "nome": "Busca - Black Money",
+  "categoria": "protagonista",
+  "tipo": "busca",
+  "busca": "Black Money",
+  "grupo": 1
+ },
+ {
+  "nome": "Busca - Empreendedor negro",
+  "categoria": "protagonista",
+  "tipo": "busca",
+  "busca": "Empreendedor negro",
+  "grupo": 2
+ },
+ {
+  "nome": "Busca - Afroempreendedorismo",
+  "categoria": "protagonista",
+  "tipo": "busca",
+  "busca": "Afroempreendedorismo",
+  "grupo": 3
+ },
+ {
+  "nome": "Busca - movimento negro",
+  "categoria": "politica",
+  "tipo": "busca",
+  "busca": "movimento negro",
+  "grupo": 0
+ },
+ {
+  "nome": "Busca - igualdade racial",
+  "categoria": "politica",
+  "tipo": "busca",
+  "busca": "igualdade racial",
+  "grupo": 1
+ },
+ {
+  "nome": "Busca - racismo estrutural",
+  "categoria": "cotidiano",
+  "tipo": "busca",
+  "busca": "racismo estrutural",
+  "grupo": 2
+ },
+ {
+  "nome": "Busca - injúria racial",
+  "categoria": "cotidiano",
+  "tipo": "busca",
+  "busca": "injúria racial",
+  "grupo": 3
+ },
+ {
+  "nome": "Busca - discriminação racial",
+  "categoria": "cotidiano",
+  "tipo": "busca",
+  "busca": "discriminação racial",
+  "grupo": 0
+ },
+ {
+  "nome": "Busca - mulheres negras",
+  "categoria": "cotidiano",
+  "tipo": "busca",
+  "busca": "mulheres negras",
+  "grupo": 1
+ },
+ {
+  "nome": "Busca - Saúde da população negra",
+  "categoria": "cotidiano",
+  "tipo": "busca",
+  "busca": "Saúde da população negra",
+  "grupo": 2
+ },
+ {
+  "nome": "Busca - Racismo",
+  "categoria": "cotidiano",
+  "tipo": "busca",
+  "busca": "Racismo",
+  "grupo": 3
+ },
+ {
+  "nome": "Busca - Antirracista",
+  "categoria": "cotidiano",
+  "tipo": "busca",
+  "busca": "Antirracista",
+  "grupo": 0
+ }
+]
