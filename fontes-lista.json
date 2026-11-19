@@ -1,0 +1,398 @@
+[
+ {
+  "nome": "CONAQ - Notícias",
+  "categoria": "ancestralidade",
+  "url": "https://conaq.org.br/category/noticias/feed/",
+  "tipo": "rss"
+ },
+ {
+  "nome": "Mundo Negro - Séries",
+  "categoria": "cultura",
+  "url": "https://mundonegro.inf.br/series/feed/",
+  "tipo": "rss"
+ },
+ {
+  "nome": "Mundo Negro - Música",
+  "categoria": "cultura",
+  "url": "https://mundonegro.inf.br/musica/feed/",
+  "tipo": "rss"
+ },
+ {
+  "nome": "Notícia Preta - Famosos",
+  "categoria": "protagonista",
+  "url": "https://noticiapreta.com.br/editoriais/famosos/feed/",
+  "tipo": "rss"
+ },
+ {
+  "nome": "Geledés",
+  "categoria": "cotidiano",
+  "url": "https://www.geledes.org.br/feed/",
+  "tipo": "rss"
+ },
+ {
+  "nome": "Virada da Consciência",
+  "categoria": "cultura",
+  "url": "https://viradadaconsciencia.com.br/noticias/",
+  "tipo": "site"
+ },
+ {
+  "nome": "Ministério da Cultura - Defeso Eleitoral",
+  "categoria": "cultura",
+  "url": "https://www.gov.br/cultura/pt-br/assuntos/noticias-defeso-eleitoral",
+  "tipo": "site"
+ },
+ {
+  "nome": "O País (Angola)",
+  "categoria": "mundo",
+  "url": "https://www.opais.ao/",
+  "tipo": "site"
+ },
+ {
+  "nome": "DigiPress (Angola)",
+  "categoria": "mundo",
+  "url": "https://press.digi.ao/",
+  "tipo": "site"
+ },
+ {
+  "nome": "Giranotícias (Angola)",
+  "categoria": "mundo",
+  "url": "https://www.giranoticias.com/",
+  "tipo": "site"
+ },
+ {
+  "nome": "SRzd - Carnaval",
+  "categoria": "cultura",
+  "url": "https://srzd.com/category/carnaval/",
+  "tipo": "site"
+ },
+ {
+  "nome": "RFI - África lusófona",
+  "categoria": "mundo",
+  "url": "https://www.rfi.fr/pt/%C3%A1frica-lus%C3%B3fona/",
+  "tipo": "site"
+ },
+ {
+  "nome": "RFI - África",
+  "categoria": "mundo",
+  "url": "https://www.rfi.fr/pt/tag/%C3%A1frica/",
+  "tipo": "site"
+ },
+ {
+  "nome": "Portal do RAP Nacional",
+  "categoria": "cultura",
+  "url": "https://portaldorapnacional.com.br/",
+  "tipo": "site"
+ },
+ {
+  "nome": "Alma Preta",
+  "categoria": "cotidiano",
+  "url": "https://almapreta.com.br/",
+  "tipo": "site"
+ },
+ {
+  "nome": "Fundação Palmares",
+  "categoria": "politica",
+  "url": "https://www.gov.br/palmares/pt-br/assuntos/noticias",
+  "tipo": "site"
+ },
+ {
+  "nome": "Ministério da Cultura",
+  "categoria": "cultura",
+  "url": "https://www.gov.br/cultura/pt-br/assuntos/noticias",
+  "tipo": "site"
+ },
+ {
+  "nome": "Ministério da Igualdade Racial",
+  "categoria": "politica",
+  "url": "https://www.gov.br/igualdaderacial/pt-br/assuntos/noticias",
+  "tipo": "site"
+ },
+ {
+  "nome": "Google Notícias - tópico 1",
+  "categoria": "cotidiano",
+  "url": "https://news.google.com/rss/topics/CAAqKAgKIiJDQkFTRXdvS0wyMHZNSEJqTjNod01CSUZjSFF0UWxJb0FBUAE?hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - IZA (tópico)",
+  "categoria": "protagonista",
+  "url": "https://news.google.com/rss/topics/CAAqLAgKIiZDQkFTRmdvTkwyY3ZNVEZuWXpsbk9HUnJaeElGY0hRdFFsSW9BQVAB?hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - tópico 2",
+  "categoria": "cotidiano",
+  "url": "https://news.google.com/rss/topics/CAAqKQgKIiNDQkFTRkFvTEwyMHZNREV3ZUdKZlgyd1NCWEIwTFVKU0tBQVAB?hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - liberdade religiosa",
+  "categoria": "ancestralidade",
+  "url": "https://news.google.com/rss/search?q=%22liberdade%20religiosa%22&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - povos de terreiro",
+  "categoria": "ancestralidade",
+  "url": "https://news.google.com/rss/search?q=%22povos%20de%20terreiro%22&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - religião de matriz africana",
+  "categoria": "ancestralidade",
+  "url": "https://news.google.com/rss/search?q=%22religi%C3%A3o%20de%20matriz%20africana%22&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Quilombola",
+  "categoria": "ancestralidade",
+  "url": "https://news.google.com/rss/search?q=Quilombola&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Intolerância religiosa",
+  "categoria": "ancestralidade",
+  "url": "https://news.google.com/rss/search?q=Intoler%C3%A2ncia%20religiosa&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Pantera Negra 3",
+  "categoria": "cultura",
+  "url": "https://news.google.com/rss/search?q=Pantera%20Negra%203&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Moda afro",
+  "categoria": "cultura",
+  "url": "https://news.google.com/rss/search?q=Moda%20afro&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Teatro negro",
+  "categoria": "cultura",
+  "url": "https://news.google.com/rss/search?q=Teatro%20negro&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Literatura negra",
+  "categoria": "cultura",
+  "url": "https://news.google.com/rss/search?q=Literatura%20negra&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Cineasta negro",
+  "categoria": "cultura",
+  "url": "https://news.google.com/rss/search?q=Cineasta%20negro&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Cultura negra",
+  "categoria": "cultura",
+  "url": "https://news.google.com/rss/search?q=Cultura%20negra&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Damson Idris",
+  "categoria": "protagonista",
+  "url": "https://news.google.com/rss/search?q=Damson%20Idris&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Paulo Vieira",
+  "categoria": "protagonista",
+  "url": "https://news.google.com/rss/search?q=Paulo%20Vieira&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Jeferson Tenório",
+  "categoria": "protagonista",
+  "url": "https://news.google.com/rss/search?q=Jeferson%20Ten%C3%B3rio&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Djamila Ribeiro",
+  "categoria": "protagonista",
+  "url": "https://news.google.com/rss/search?q=Djamila%20Ribeiro&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Conceição Evaristo",
+  "categoria": "protagonista",
+  "url": "https://news.google.com/rss/search?q=Concei%C3%A7%C3%A3o%20Evaristo&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Sheron Menezzes",
+  "categoria": "protagonista",
+  "url": "https://news.google.com/rss/search?q=Sheron%20Menezzes&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Thiaguinho",
+  "categoria": "protagonista",
+  "url": "https://news.google.com/rss/search?q=Thiaguinho&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Samuel L. Jackson",
+  "categoria": "protagonista",
+  "url": "https://news.google.com/rss/search?q=Samuel%20L.%20Jackson&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Criolo",
+  "categoria": "protagonista",
+  "url": "https://news.google.com/rss/search?q=Criolo&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Seu Jorge",
+  "categoria": "protagonista",
+  "url": "https://news.google.com/rss/search?q=Seu%20Jorge&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Lázaro Ramos",
+  "categoria": "protagonista",
+  "url": "https://news.google.com/rss/search?q=L%C3%A1zaro%20Ramos&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Liniker",
+  "categoria": "protagonista",
+  "url": "https://news.google.com/rss/search?q=Liniker&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Emicida",
+  "categoria": "protagonista",
+  "url": "https://news.google.com/rss/search?q=Emicida&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Ludmilla",
+  "categoria": "protagonista",
+  "url": "https://news.google.com/rss/search?q=Ludmilla&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Tyla",
+  "categoria": "protagonista",
+  "url": "https://news.google.com/rss/search?q=Tyla&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - SZA",
+  "categoria": "protagonista",
+  "url": "https://news.google.com/rss/search?q=SZA&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Ryan Coogler",
+  "categoria": "protagonista",
+  "url": "https://news.google.com/rss/search?q=Ryan%20Coogler&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Viola Davis",
+  "categoria": "protagonista",
+  "url": "https://news.google.com/rss/search?q=Viola%20Davis&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Michael B. Jordan",
+  "categoria": "protagonista",
+  "url": "https://news.google.com/rss/search?q=Michael%20B.%20Jordan&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Kendrick Lamar",
+  "categoria": "protagonista",
+  "url": "https://news.google.com/rss/search?q=Kendrick%20Lamar&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Beyoncé",
+  "categoria": "protagonista",
+  "url": "https://news.google.com/rss/search?q=Beyonc%C3%A9&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Empreendedora negra",
+  "categoria": "protagonista",
+  "url": "https://news.google.com/rss/search?q=Empreendedora%20negra&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Black Money",
+  "categoria": "protagonista",
+  "url": "https://news.google.com/rss/search?q=Black%20Money&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Empreendedor negro",
+  "categoria": "protagonista",
+  "url": "https://news.google.com/rss/search?q=Empreendedor%20negro&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Afroempreendedorismo",
+  "categoria": "protagonista",
+  "url": "https://news.google.com/rss/search?q=Afroempreendedorismo&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - movimento negro",
+  "categoria": "politica",
+  "url": "https://news.google.com/rss/search?q=movimento%20negro&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - igualdade racial",
+  "categoria": "politica",
+  "url": "https://news.google.com/rss/search?q=igualdade%20racial&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - racismo estrutural",
+  "categoria": "cotidiano",
+  "url": "https://news.google.com/rss/search?q=racismo%20estrutural&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - injúria racial",
+  "categoria": "cotidiano",
+  "url": "https://news.google.com/rss/search?q=inj%C3%BAria%20racial&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - discriminação racial",
+  "categoria": "cotidiano",
+  "url": "https://news.google.com/rss/search?q=discrimina%C3%A7%C3%A3o%20racial&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - mulheres negras",
+  "categoria": "cotidiano",
+  "url": "https://news.google.com/rss/search?q=mulheres%20negras&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Saúde da população negra",
+  "categoria": "cotidiano",
+  "url": "https://news.google.com/rss/search?q=Sa%C3%BAde%20da%20popula%C3%A7%C3%A3o%20negra&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Racismo",
+  "categoria": "cotidiano",
+  "url": "https://news.google.com/rss/search?q=Racismo&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ },
+ {
+  "nome": "Google Notícias - Antirracista",
+  "categoria": "cotidiano",
+  "url": "https://news.google.com/rss/search?q=Antirracista&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "tipo": "google"
+ }
+]
