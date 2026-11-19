@@ -1,0 +1,35 @@
+name: Testar fontes
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  testar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Pegar os arquivos da pasta
+        uses: actions/checkout@v4
+
+      - name: Preparar o Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar o leitor de matérias e o decodificador do Google Notícias
+        run: pip install trafilatura googlenewsdecoder
+
+      - name: Testar as fontes
+        run: python testar_fontes.py
+
+      - name: Salvar o relatório
+        run: |
+          git config user.name "robo-africas"
+          git config user.email "robo-africas@users.noreply.github.com"
+          git add relatorio-fontes.md
+          git diff --cached --quiet || git commit -m "Relatório do teste de fontes"
+          git pull --rebase
+          git push
