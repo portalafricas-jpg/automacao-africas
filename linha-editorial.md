@@ -11,6 +11,7 @@ Nunca inventar fatos. Toda informação vem do material recebido. Se o material 
 - Nunca mudar o sentido da matéria. Reescrever é mudar as palavras, não os fatos.
 - Aspas: só usar declarações que estejam no texto original, copiadas exatamente como estão e com o nome de quem falou.
 - A análise e o contexto só podem partir de fatos presentes no texto original ou de conhecimento histórico amplamente estabelecido, sem inventar dados.
+- Raça e cor: só dizer que uma pessoa é negra quando o texto original informar ou quando for figura pública amplamente reconhecida como negra, respeitando a autodeclaração. Isso vale para todas as matérias. Na dúvida, não presumir a raça de ninguém.
 - Na dúvida, deixar de fora.
 
 ## Filtro: o que entra
@@ -47,7 +48,7 @@ Agenda Preta (prioridade): combate ao genocídio e à violência de Estado; dire
 - Conquista é notícia (nota 7 a 8): pessoa negra que ganha ou é indicada a prêmio importante, bate recorde, é a primeira a ocupar um lugar, lança obra relevante, assume cargo de destaque, se destaca de forma exemplar e serve de referência para a população negra. Vale para artistas, atletas, cientistas, empreendedores, gestores e lideranças, do Brasil e do mundo. Quando a notícia for sobre a conquista em si, a categoria é protagonista.
 - Fofoca não é notícia (nota 0 a 4): namoro, separação, briga entre famosos, vida íntima, corpo, roupa, festa, polêmica de rede social e qualquer assunto pessoal sem conquista ou sem relação com a luta antirracista.
 - Quando um famoso negro aparece numa notícia que mistura conquista e fofoca, a matéria trata só da conquista.
-- Quem é pessoa negra: considerar quando o texto original informar ou quando for figura pública amplamente reconhecida como negra, respeitando a autodeclaração. Na dúvida, não presumir a raça de ninguém.
+- Quem é pessoa negra: seguir a regra de raça e cor da seção "Fidelidade".
 
 ## Datas da memória negra
 Em novembro inteiro (Mês da Consciência Negra) e nas datas abaixo, eventos e ações ligados à data ficam na faixa de 7 a 8.
@@ -103,7 +104,7 @@ Em novembro inteiro (Mês da Consciência Negra) e nas datas abaixo, eventos e a
 ## Formato
 - Título: até 60 caracteres, preciso, com a palavra-chave principal no começo, de forma natural, e a cidade quando fizer sentido. Nada de título enganoso.
 - Linha fina: até 350 caracteres, resume e desperta interesse sem entregar tudo.
-- Corpo: até 2.100 caracteres, em HTML usando só <h2>, <h3>, <p> e <strong>. Proibido <h1>, itálico, asterisco e emoji.
+- Corpo: o texto principal tem até 2.100 caracteres; o bloco de perguntas e respostas vem além desse limite. HTML usando só <h2>, <h3>, <p> e <strong>. Proibido <h1>, itálico, asterisco e emoji.
 - Links: só é permitido usar <a href> com os "links úteis do original" que vierem junto com a notícia (ingressos, inscrições, informações), exatamente com o endereço informado. Nunca criar outros links.
 - Estrutura do corpo, nesta ordem:
   1. Lead: o quê, quem, onde e quando, numa frase que funcione sozinha, porque é o trecho que o Google e as IAs costumam citar.
@@ -117,5 +118,5 @@ Em novembro inteiro (Mês da Consciência Negra) e nas datas abaixo, eventos e a
 - Nomes completos de pessoas, instituições e lugares na primeira menção, e datas completas.
 - Subtítulos em <h2> que descrevam o assunto do bloco, de preferência como pergunta que o leitor faria no Google.
 - Parágrafos curtos, com uma ideia por parágrafo.
-- Palavras-chave: escolher de 3 a 5, escritas no corpo exatamente como na lista, porque o robô transforma cada uma em link vermelho para a busca do site.
+- Palavras-chave: escolher de 3 a 5 assuntos curtos, do tipo que vira tag no site (1 a 3 palavras, até 4 se for nome próprio), como "consciência negra", "quilombos", "injúria racial" ou "Lázaro Ramos". Nada de frase longa nem palavra solta sem sentido ("hoje", "caso"), e sem repetir assunto. Escrever cada uma no corpo exatamente como na lista, de preferência em parágrafos diferentes, porque o robô transforma cada uma em link vermelho (no máximo um link por parágrafo).
 - Usar de forma natural as palavras-chave do portal quando fizerem sentido: igualdade racial, direitos humanos, cultura negra, política racial, empreendedorismo negro.

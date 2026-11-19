@@ -176,13 +176,16 @@ def extrair_materia(link, titulo="", descricao=""):
     if resultado["autor"].startswith("http"):
         resultado["autor"] = ""
 
-    # crédito da foto: legenda da imagem ou "Foto: ..." no texto
-    legenda = re.search(r"<figcaption[^>]*>(.*?)</figcaption>", pagina, flags=re.S | re.I)
-    candidatos = [resultado["texto"]]
-    if legenda:
-        candidatos.insert(0, decodificar(re.sub(r"<[^>]+>", " ", legenda.group(1))))
+    # crédito da foto: campo de crédito do site, legenda da imagem ou "Foto: ..." no texto
+    candidatos = []
+    for trecho in re.findall(r"<[^>]+class=[\"'][^\"']*(?:credit|credito|creditos|photo-credit|foto-credito)[^\"']*[\"'][^>]*>(.*?)</[a-z]+>", pagina, flags=re.S | re.I):
+        candidatos.append(decodificar(re.sub(r"<[^>]+>", " ", trecho)))
+    for legenda in re.findall(r"<figcaption[^>]*>(.*?)</figcaption>", pagina, flags=re.S | re.I):
+        candidatos.append(decodificar(re.sub(r"<[^>]+>", " ", legenda)))
+    candidatos.append(resultado["texto"])
     for c in candidatos:
-        m = PADRAO_CREDITO.search(c or "")
+        c = re.sub(r"(?i)cr[ée]ditos?\s+da\s+(?:imagem|foto)\s*:", "Foto:", c or "")
+        m = PADRAO_CREDITO.search(c + "\n")
         if m:
             resultado["credito_foto"] = decodificar(m.group(1)).strip(" .-–")
             break
@@ -314,7 +317,7 @@ FERRAMENTA_REDATOR = {
             "titulo": {"type": "string", "description": "até 60 caracteres"},
             "linha_fina": {"type": "string", "description": "até 350 caracteres"},
             "corpo_html": {"type": "string", "description": "HTML só com h2, h3, p, strong e, se houver, a href dos links úteis; sem o parágrafo de crédito"},
-            "palavras_chave": {"type": "array", "items": {"type": "string"}, "description": "3 a 5, escritas exatamente como aparecem no corpo"},
+            "palavras_chave": {"type": "array", "items": {"type": "string"}, "description": "3 a 5 assuntos curtos (1 a 3 palavras, até 4 se for nome próprio), do tipo que vira tag, escritos exatamente como aparecem no corpo"},
             "hashtags": {"type": "array", "items": {"type": "string"}, "description": "3 a 6, sem espaços, começando com #"},
         },
         "required": ["aprovada", "motivo"],
@@ -414,31 +417,36 @@ def slug(texto):
 
 
 def links_internos(corpo, palavras):
-    """Liga até 5 palavras-chave à busca do site (igual ao Finalizador HTML do n8n)."""
-    palavras = sorted({p.strip() for p in palavras if p and p.strip()}, key=len, reverse=True)
+    """Liga de 3 a 5 assuntos à busca do site: cada assunto uma vez e no máximo um link por parágrafo."""
+    palavras = [p.strip() for p in palavras if p and p.strip() and len(p.split()) <= 4]
+    palavras = sorted(dict.fromkeys(palavras), key=len, reverse=True)
+    paragrafos = re.findall(r"<p>.*?</p>", corpo, flags=re.S)
+    usados = set()
     total = 0
     for palavra in palavras:
         if total >= MAX_LINKS:
             break
-        padrao = re.compile(re.escape(palavra), re.I)
-
-        def trocar_paragrafo(m):
-            nonlocal total, feito
-            if feito:
-                return m.group(0)
-            partes = re.split(r"(<a\b.*?</a>|<[^>]+>)", m.group(0), flags=re.S)
-            for i, parte in enumerate(partes):
-                if parte.startswith("<") or feito:
+        padrao = re.compile(r"(?<![\w])" + re.escape(palavra) + r"(?![\w])", re.I)
+        for i, par in enumerate(paragrafos):
+            if i in usados or "<a " in par:
+                continue
+            partes = re.split(r"(<[^>]+>)", par)
+            feito = False
+            for k, parte in enumerate(partes):
+                if parte.startswith("<"):
                     continue
                 nova, n = padrao.subn(lambda x: f'<a href="{URL_BUSCA}{slug(palavra)}/p/1" style="color:{COR_LINK};text-decoration:none;">{x.group(0)}</a>', parte, count=1)
                 if n:
-                    partes[i] = nova
+                    partes[k] = nova
                     feito = True
-                    total += 1
-            return "".join(partes)
-
-        feito = False
-        corpo = re.sub(r"<p>.*?</p>", trocar_paragrafo, corpo, flags=re.S)
+                    break
+            if feito:
+                novo = "".join(partes)
+                corpo = corpo.replace(par, novo, 1)
+                paragrafos[i] = novo
+                usados.add(i)
+                total += 1
+                break
     return corpo
 
 
