@@ -25,9 +25,11 @@ except ImportError:
 CATEGORIAS = ["mundo", "cotidiano", "protagonista", "cultura", "politica", "ancestralidade"]
 PRIORIDADES = ["breaking", "alta", "media"]
 MODELO = "claude-haiku-5-5"
-JANELA_HORAS = 2                # só entra notícia publicada nas últimas 2 horas
+JANELA_HORAS = 1                # só entra notícia publicada na última hora
+VALIDADE_HORAS = 4              # notícia com mais de 4 horas não é publicada, nem saindo da fila
 NOTA_MINIMA = 7                 # nota do editor-chefe para ir para a fila
-LIMITE_DIA = 20                 # matérias publicadas por dia (breaking não conta e sai sempre)
+MINUTO_PARTIDA = 2              # o cron-job.org dá a partida em :02, :17, :32 e :47 (o site lê em :00, :15, :30, :45)
+MINUTOS_PARA_PUBLICAR = 7       # só publica até 7 minutos depois da partida, para o site ver a matéria com certeza
 HORA_INICIO = 8                 # das 8h à meia-noite publica normal; de madrugada, só breaking
 MAX_TRIAGEM_POR_RODADA = 40     # quantos títulos o editor-chefe avalia por rodada
 TEXTO_MINIMO = 600              # menos que isso de texto original = descarta (evita inventar)
@@ -98,12 +100,22 @@ def normalizar(texto):
 
 
 # ---------------- 1. Ler as fontes (RSS) ----------------
+def consertar_xml(texto):
+    """Conserta caracteres que às vezes vêm quebrados no RSS (principalmente do Bing)."""
+    texto = (texto or "").lstrip("\ufeff \r\n\t")
+    if "<" in texto and not texto.startswith("<"):
+        texto = texto[texto.index("<"):]
+    texto = re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f]", "", texto)
+    texto = re.sub(r"&(?!(?:[a-zA-Z][a-zA-Z0-9]*|#\d+|#x[0-9a-fA-F]+);)", "&amp;", texto)
+    return texto
+
+
 def ler_rss(url):
     itens = []
     try:
-        raiz = ET.fromstring(baixar(url).encode("utf-8"))
+        raiz = ET.fromstring(consertar_xml(baixar(url)).encode("utf-8"))
     except Exception as e:
-        log(f"  Erro ao ler fonte {url}: {e}")
+        log(f"  Erro ao ler fonte {url[:90]}: {e}")
         return itens
     for item in raiz.iter("item"):
         titulo = (item.findtext("title") or "").strip()
@@ -754,12 +766,6 @@ def mesmo_fato(titulo, lista, limite):
     return False
 
 
-def fim_do_dia_seguinte(momento):
-    sp = momento.astimezone(FUSO_SP)
-    amanha = (sp + timedelta(days=1)).replace(hour=23, minute=59, second=59, microsecond=0)
-    return amanha.astimezone(timezone.utc).isoformat()
-
-
 def cortar_linha_fina(texto, limite=350):
     """Se a linha fina passar de 350 caracteres, corta na última frase completa."""
     if len(texto) <= limite:
@@ -841,11 +847,12 @@ def main():
             vistos_set.add(link)
             vistos.append(link)
 
-    # Limpa da fila o que passou do fim do dia seguinte
+    # Limpa da fila o que passou da validade de 4 horas
     antes = len(fila)
-    fila = [m for m in fila if m.get("expira_em", "9") >= agora.isoformat()]
+    limite_validade = (agora - timedelta(hours=VALIDADE_HORAS)).isoformat()
+    fila = [m for m in fila if m.get("data_original", "") >= limite_validade]
     if antes != len(fila):
-        log(f"Saíram da fila por tempo: {antes - len(fila)}")
+        log(f"Saíram da fila por passar de {VALIDADE_HORAS} horas: {antes - len(fila)}")
 
     recentes = [m for m in fila + publicadas
                 if m.get("data_original", m.get("criado_em", "")) >= (agora - timedelta(days=DIAS_REPETIDAS)).isoformat()]
@@ -921,7 +928,7 @@ def main():
                     "categoria": categoria, "prioridade": prioridade,
                     "nota": nota, "motivo_nota": a.get("motivo", ""),
                     "data_original": (c["data"] or agora).astimezone(timezone.utc).isoformat(),
-                    "criado_em": agora.isoformat(), "expira_em": fim_do_dia_seguinte(agora),
+                    "criado_em": agora.isoformat(),
                 })
                 log(f"Nota {nota}, na fila: [{categoria} / {prioridade}] {c['titulo'][:70]}")
 
@@ -933,8 +940,12 @@ def main():
         and datetime.fromisoformat(m["publicado_em"]).astimezone(FUSO_SP).date().isoformat() == hoje
     )
     horario_normal = agora_sp.hour >= HORA_INICIO
-    log(f"Publicadas hoje (sem contar breaking): {publicadas_hoje} de {LIMITE_DIA} | "
+    minuto_no_ciclo = (agora_sp.minute - MINUTO_PARTIDA) % 15
+    pode_publicar = minuto_no_ciclo <= MINUTOS_PARA_PUBLICAR
+    log(f"Publicadas hoje (sem contar breaking): {publicadas_hoje} | "
         f"{'horário normal' if horario_normal else 'madrugada: só breaking'}")
+    if not pode_publicar:
+        log("Fora da janela de publicação (o site poderia não ver a matéria): publica na próxima rodada.")
 
     def ordem(m):
         return (PRIORIDADES.index(m["prioridade"]), m["data_original"])
@@ -955,12 +966,12 @@ def main():
     tops.sort(key=lambda lista: ordem(lista[0]))  # quem tem a mais urgente/antiga vai primeiro
 
     for da_categoria in tops:
-        if parar:
+        if parar or not pode_publicar:
             break
         for materia_fila in da_categoria[:3]:  # tenta até 3 da mesma categoria se alguma for recusada
             e_breaking = materia_fila["prioridade"] == "breaking"
-            if not e_breaking and (not horario_normal or publicadas_hoje >= LIMITE_DIA):
-                break  # espera: fora do horário ou limite do dia atingido
+            if not e_breaking and not horario_normal:
+                break  # madrugada: só breaking
             log(f"> Publicando [{materia_fila['categoria']} / {materia_fila['prioridade']}] {materia_fila['titulo_original'][:70]}")
             try:
                 pronta = publicar(materia_fila, linha_editorial, agora)
