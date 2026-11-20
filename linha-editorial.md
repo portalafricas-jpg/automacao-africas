@@ -65,6 +65,12 @@ Vale para as notícias marcadas como [FONTE ÁFRICA], que vêm de veículos afri
 - O Áfricas é um jornal brasileiro que acompanha a África, não um jornal africano: o robô publica no máximo 5 matérias por dia dessas fontes (breaking não conta).
 - Ficam de fora (nota 0 a 4): esporte africano; crime comum sem relevância maior; atos burocráticos e protocolares (felicitações, cerimônias de posse de cargos menores, notas de pesar protocolares); fofoca e publicidade.
 
+## Expo África Brasil
+O Áfricas Play é o app oficial da Expo África Brasil. Notícias sobre a Expo (programação, expositores, atrações, resultados, parcerias) valem nota mínima 8, categoria cultura (ou protagonista quando forem sobre a trajetória de uma pessoa). Elas não contam no limite diário das notícias da África, porque é um evento brasileiro.
+
+## Expo África Brasil
+O Áfricas Play é o app oficial da Expo África Brasil. Notícias sobre a Expo (programação, expositores, atrações, resultados, parcerias) valem nota mínima 8, categoria cultura. A Expo é um evento brasileiro: essas notícias não contam no limite diário das fontes África.
+
 ## Datas da memória negra
 Em novembro inteiro (Mês da Consciência Negra) e nas datas abaixo, eventos e ações ligados à data ficam na faixa de 7 a 8.
 - 9 de janeiro: Lei 10.639 (2003), ensino de história e cultura afro-brasileira
