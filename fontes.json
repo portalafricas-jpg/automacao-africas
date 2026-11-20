@@ -129,6 +129,18 @@
   "africa": true
  },
  {
+  "nome": "Expo África Brasil",
+  "categoria": "cultura",
+  "tipo": "pagina",
+  "url": "https://expoafricabrasil.com.br/"
+ },
+ {
+  "nome": "Expo África Brasil",
+  "categoria": "cultura",
+  "tipo": "pagina",
+  "url": "https://expoafricabrasil.com.br/"
+ },
+ {
   "nome": "Busca - liberdade religiosa",
   "categoria": "ancestralidade",
   "tipo": "busca",
@@ -542,6 +554,21 @@
   "tipo": "busca",
   "busca": "Burna Boy",
   "grupo": 1
+ },
+ {
+  "nome": "Busca - RTP África",
+  "categoria": "mundo",
+  "tipo": "busca",
+  "busca": "site:rtp.pt África",
+  "grupo": 2,
+  "africa": true
+ },
+ {
+  "nome": "Busca - Expo África Brasil",
+  "categoria": "cultura",
+  "tipo": "busca",
+  "busca": "\"Expo África Brasil\"",
+  "grupo": 3
  },
  {
   "nome": "Busca semanal - Gilberto Gil",
@@ -1046,5 +1073,20 @@
   "busca": "Wizkid",
   "grupo": 0,
   "dia_semana": 6
+ },
+ {
+  "nome": "Busca - site:rtp.pt África",
+  "categoria": "mundo",
+  "tipo": "busca",
+  "busca": "site:rtp.pt África",
+  "grupo": 0,
+  "africa": true
+ },
+ {
+  "nome": "Busca - Expo África Brasil",
+  "categoria": "cultura",
+  "tipo": "busca",
+  "busca": "\"Expo África Brasil\"",
+  "grupo": 1
  }
 ]
