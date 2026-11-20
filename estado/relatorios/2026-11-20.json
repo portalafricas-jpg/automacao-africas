@@ -321,5 +321,27 @@
   "destino": "publicada",
   "detalhe": "Iza lança álbum ZAZA, dedicado ao reggae",
   "foto": "Divulgação"
+ },
+ {
+  "hora": "10:17",
+  "fonte": "RFI - África",
+  "titulo": "Cabo Verde: José Maria Neves encara segundo mandato \"com imparcialidade, com autonomia\"",
+  "link": "https://www.rfi.fr/pt/programas/semana-em-%C3%A1frica/20261120-cabo-verde-jos%C3%A9-maria-neves-encara-segundo-mandato-com-imparcialidade-com-autonomia",
+  "categoria": "mundo",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Notícia de Cabo Verde e São Tomé e Príncipe (países de língua portuguesa): política e governo, interesse do leitor brasileiro que acompanha a África. Nota 7 por ser notícia interna sem ligação direta com o Brasil."
+ },
+ {
+  "hora": "10:17",
+  "fonte": "RFI - África",
+  "titulo": "Cabo Verde: José Maria Neves encara segundo mandato \"com imparcialidade, com autonomia\"",
+  "link": "https://www.rfi.fr/pt/programas/semana-em-%C3%A1frica/20261120-cabo-verde-jos%C3%A9-maria-neves-encara-segundo-mandato-com-imparcialidade-com-autonomia",
+  "categoria": "mundo",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "recusada pelo redator",
+  "detalhe": "Resumo semanal de vários países lusófonos e africanos, sem fato central com ligação clara à população negra brasileira ou à Agenda Preta. Os itens são notas curtas e fragmentadas (posse de primeiro-ministro, julgamento de Mondlane, pobreza infantil em Angola, caso de Victor Tchongo, apuramento para a CAN). O texto original não traz informação suficiente para uma matéria honesta e aprofundada sobre cada tema, e a menção à pobreza de 13 milhões de crianças em Angola é o único ponto com viés social, mas sem dados detalhados nem recorte. Para não criar matéria com informações incompletas, descarta-se. Itens isolados (como a pobreza infantil em Angola ou o caso de Victor Tchongo) poderiam render matérias futuras se houver material próprio sobre cada um."
  }
 ]
