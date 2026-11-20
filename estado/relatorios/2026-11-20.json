@@ -769,5 +769,16 @@
   "nota": 7,
   "destino": "recusada pelo redator",
   "detalhe": "Texto é artigo de opinião/coluna assinada por Karina Pereira, com análise pessoal (\"o que me chamou a atenção\", \"Acredito que\"). Não há fato jornalístico novo suficiente: a matéria é essencialmente resenha opinativa de um filme de Natal lançado na Netflix. Conteúdo opinativo de outro veículo não entra no portal."
+ },
+ {
+  "hora": "18:17",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "TAAG inaugura sala de simuladores para avaliação de pilotos em formação",
+  "link": "https://www.giranoticias.com/sociedade/2026/11/32710-taag-inaugura-sala-de-simuladores-para-avaliacao-de-pilotos-em-formacao.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Notícia sobre a companhia aérea angolana TAAG (inauguração de sala de simuladores para pilotos). É fato burocrático/institucional sem relação com a temática racial nem com a Agenda Preta; não se enquadra nos critérios de diáspora ou Brasil-África de interesse do leitor, e não atinge nota mínima."
  }
 ]
