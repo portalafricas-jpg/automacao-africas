@@ -647,5 +647,50 @@
   "nota": 8,
   "destino": "repetida",
   "detalhe": "Mesma Marcha da Consciência Negra e pedido de indicação de ministra negra ao STF já cobertos no portal nos últimos 5 dias (ato, pauta e posição de Marina Silva e advogadas). Sem fato novo, é repetida."
+ },
+ {
+  "hora": "17:02",
+  "fonte": "Notícia Preta",
+  "titulo": "Héloa lança os visuais de “ÁRIDA” na Semana da Consciência Negra e questiona os estereótipos sobre o Nordeste no manifesto audiovisual",
+  "link": "https://noticiapreta.com.br/heloa-lanca-os-visuais-de-arida-na-semana-da-consciencia-negra-e-questiona-os-estereotipos-sobre-o-nordeste-no-manifesto-audiovisual/?utm_source=rss&utm_medium=rss&utm_campaign=heloa-lanca-os-visuais-de-arida-na-semana-da-consciencia-negra-e-questiona-os-estereotipos-sobre-o-nordeste-no-manifesto-audiovisual",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Lançamento de visuais de álbum de artista negra (Héloa) na Semana da Consciência Negra; lançamento de artista negra é notícia nota mínima 7 e tem conexão com matrizes afro-indígenas. Não há matéria anterior sobre o mesmo lançamento no portal."
+ },
+ {
+  "hora": "17:02",
+  "fonte": "Mundo Negro",
+  "titulo": "Dermatite atópica em peles negras: os desafios entre o reconhecimento dos sinais e o diagnóstico",
+  "link": "https://mundonegro.inf.br/dermatite-atopica-peles-negras-sinais-diagnostico/",
+  "categoria": "cotidiano",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Saúde da população negra e desigualdade no acesso à dermatologia, com dado de pesquisa sobre pessoas negras; eixo de saúde da Agenda Preta. Não há matéria anterior sobre o tema no portal."
+ },
+ {
+  "hora": "17:03",
+  "fonte": "Notícia Preta",
+  "titulo": "Héloa lança os visuais de “ÁRIDA” na Semana da Consciência Negra e questiona os estereótipos sobre o Nordeste no manifesto audiovisual",
+  "link": "https://noticiapreta.com.br/heloa-lanca-os-visuais-de-arida-na-semana-da-consciencia-negra-e-questiona-os-estereotipos-sobre-o-nordeste-no-manifesto-audiovisual/?utm_source=rss&utm_medium=rss&utm_campaign=heloa-lanca-os-visuais-de-arida-na-semana-da-consciencia-negra-e-questiona-os-estereotipos-sobre-o-nordeste-no-manifesto-audiovisual",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "publicada",
+  "detalhe": "Héloa lança visuais de “ÁRIDA” em Consciência Negra",
+  "foto": "Foto ilustrativa: janilson furtado/Unsplash"
+ },
+ {
+  "hora": "17:03",
+  "fonte": "Mundo Negro",
+  "titulo": "Dermatite atópica em peles negras: os desafios entre o reconhecimento dos sinais e o diagnóstico",
+  "link": "https://mundonegro.inf.br/dermatite-atopica-peles-negras-sinais-diagnostico/",
+  "categoria": "cotidiano",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "recusada pelo redator",
+  "detalhe": "Recusada: o texto é conteúdo publicitário/publieditorial. Trata-se de material \"produzido em parceria com a Lilly\", empresa farmacêutica, com CMAT de material destinado ao público geral e direcionamento explícito para a iniciativa da empresa. Além disso, o texto é em grande parte um compilado de informações sobre a dermatite atópica sem um fato novo e urgente ligado diretamente à população negra; a questão racial aparece como pano de fundo de um conteúdo de marca. Pela linha editorial, conteúdo publicitário é descartado."
  }
 ]
