@@ -343,5 +343,28 @@
   "nota": 7,
   "destino": "recusada pelo redator",
   "detalhe": "Resumo semanal de vários países lusófonos e africanos, sem fato central com ligação clara à população negra brasileira ou à Agenda Preta. Os itens são notas curtas e fragmentadas (posse de primeiro-ministro, julgamento de Mondlane, pobreza infantil em Angola, caso de Victor Tchongo, apuramento para a CAN). O texto original não traz informação suficiente para uma matéria honesta e aprofundada sobre cada tema, e a menção à pobreza de 13 milhões de crianças em Angola é o único ponto com viés social, mas sem dados detalhados nem recorte. Para não criar matéria com informações incompletas, descarta-se. Itens isolados (como a pobreza infantil em Angola ou o caso de Victor Tchongo) poderiam render matérias futuras se houver material próprio sobre cada um."
+ },
+ {
+  "hora": "11:02",
+  "fonte": "Notícia Preta",
+  "titulo": "20 de novembro: população negra é maioria no Brasil, mas continua longe dos espaços de poder",
+  "link": "https://noticiapreta.com.br/20-de-novembro-populacao-negra-e-maioria-no-brasil-mas-continua-longe-dos-espacos-de-poder/?utm_source=rss&utm_medium=rss&utm_campaign=20-de-novembro-populacao-negra-e-maioria-no-brasil-mas-continua-longe-dos-espacos-de-poder",
+  "categoria": "politica",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Matéria de contexto sobre o Dia Nacional de Zumbi e da Consciência Negra (20/11), publicada no dia da data, com fatos sobre a população negra; nota mínima 7 para datas da memória negra. Não há outra matéria idêntica no portal nos últimos 5 dias."
+ },
+ {
+  "hora": "11:02",
+  "fonte": "Notícia Preta",
+  "titulo": "20 de novembro: população negra é maioria no Brasil, mas continua longe dos espaços de poder",
+  "link": "https://noticiapreta.com.br/20-de-novembro-populacao-negra-e-maioria-no-brasil-mas-continua-longe-dos-espacos-de-poder/?utm_source=rss&utm_medium=rss&utm_campaign=20-de-novembro-populacao-negra-e-maioria-no-brasil-mas-continua-longe-dos-espacos-de-poder",
+  "categoria": "politica",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "publicada",
+  "detalhe": "Consciência Negra: população negra segue fora do poder",
+  "foto": "Jorge Bastos divulgação"
  }
 ]
