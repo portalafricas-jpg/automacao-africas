@@ -108,5 +108,38 @@
   "nota": 6,
   "destino": "nota baixa",
   "detalhe": "Personalidade negra (Elaine Silva, à frente do Alma Preta) debatendo desigualdade e compromissos com a equidade racial no mercado; a questão racial é o centro, em novembro, mas a notícia é uma fala/opinião sem fato novo relevante, então fica na faixa inferior de conquista/debate."
+ },
+ {
+  "hora": "07:02",
+  "fonte": "RFI - África lusófona",
+  "titulo": "COP31: “Para implementar são necessários meios”, África exige cumprimento dos compromissos financeiros",
+  "link": "https://www.rfi.fr/pt/%C3%A1frica/20261120-cop31-para-implementar-s%C3%A3o-necess%C3%A1rios-meios-%C3%A1frica-exige-cumprimento-dos-compromissos-financeiros",
+  "categoria": "mundo",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Fonte África sobre COP31 e exigência de compromissos financeiros da África; tema climático com interesse para o leitor brasileiro e para a diáspora. Nota 8 por ser de interesse internacional do continente, sem conexão direta com o Brasil."
+ },
+ {
+  "hora": "07:02",
+  "fonte": "Notícia Preta",
+  "titulo": "Evento do Instituto 12 celebra Consciência Negra com show de Toni Garrido, exposição de Palmela Castro e performance Vozes de Nós no feriadão",
+  "link": "https://noticiapreta.com.br/evento-do-instituto-12-celebra-consciencia-negra-com-show-de-toni-garrido-exposicao-de-palmela-castro-e-performance-vozes-de-nos-no-feriadao/?utm_source=rss&utm_medium=rss&utm_campaign=evento-do-instituto-12-celebra-consciencia-negra-com-show-de-toni-garrido-exposicao-de-palmela-castro-e-performance-vozes-de-nos-no-feriadao",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Evento de Consciência Negra com show, exposição e performance de artistas, dentro do Mês da Consciência Negra (faixa 7 a 8). Não há matéria recente do mesmo evento no portal."
+ },
+ {
+  "hora": "07:02",
+  "fonte": "Mundo Negro",
+  "titulo": "IZA lança ZAZA e faz do reggae um caminho até os ancestrais",
+  "link": "https://mundonegro.inf.br/iza-lanca-zaza-e-faz-do-reggae-um-caminho-ate-os-ancestrais/",
+  "categoria": "cultura",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Lançamento de álbum de artista negra (IZA) com filme, lançado no Dia da Consciência Negra e com falas sobre ancestralidade. Lançamento de artista negra é nota mínima 7; sem repetição no portal."
  }
 ]
