@@ -185,5 +185,40 @@
   "nota": 7,
   "destino": "venceu na fila",
   "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "08:02",
+  "fonte": "RFI - África lusófona",
+  "titulo": "COP31: “Para implementar são necessários meios”, África exige cumprimento dos compromissos financeiros",
+  "link": "https://www.rfi.fr/pt/%C3%A1frica/20261120-cop31-para-implementar-s%C3%A3o-necess%C3%A1rios-meios-%C3%A1frica-exige-cumprimento-dos-compromissos-financeiros",
+  "categoria": "mundo",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "recusada pelo redator",
+  "detalhe": "Recusada na redação. A notícia é uma declaração de um ministro do Senegal na COP31 sobre responsabilidades e financiamento climático. Não há recorte racial no texto nem ligação direta com a Agenda Preta (violência de Estado, território, saúde, educação, soberania alimentar). O tema é climático e diplomático, sem ligação clara com a população negra no Brasil. Além disso, o material é só uma fala de autoridade, sem dados, fatos novos ou contexto suficiente para uma matéria honesta e completa além da declaração. Descartada por falta de informação suficiente e de vínculo com a temática racial."
+ },
+ {
+  "hora": "08:02",
+  "fonte": "Alma Preta",
+  "titulo": "Violência letal, medo e encarceramento: o retrato do racismo na segurança pública",
+  "link": "https://almapreta.com.br/sessao/cotidiano/violencia-letal-medo-encarceramento-racismo-seguranca-publica/",
+  "categoria": "cotidiano",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "publicada",
+  "detalhe": "Violência letal e encarceramento: racismo na segurança",
+  "foto": "Divulgação"
+ },
+ {
+  "hora": "08:03",
+  "fonte": "Mundo Negro",
+  "titulo": "IZA lança ZAZA e faz do reggae um caminho até os ancestrais",
+  "link": "https://mundonegro.inf.br/iza-lanca-zaza-e-faz-do-reggae-um-caminho-ate-os-ancestrais/",
+  "categoria": "cultura",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "publicada",
+  "detalhe": "IZA lança álbum ZAZA e filme no Dia da Consciência Negra",
+  "foto": "Kaio César/Divulgação"
  }
 ]
