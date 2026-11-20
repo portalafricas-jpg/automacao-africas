@@ -580,5 +580,28 @@
   "nota": 5,
   "destino": "nota baixa",
   "detalhe": "Encerramento de festival de cinema no Cairo: evento cultural africano, mas sem ligação com o Brasil nem com a diáspora e sem fato de impacto racial; fica abaixo da faixa de notícia da África de interesse direto."
+ },
+ {
+  "hora": "15:32",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Lusaka encerra Semana da Industrialização de África",
+  "link": "https://www.giranoticias.com/africa/2026/11/32704-lusaka-encerra-semana-da-industrializacao-de-africa.html",
+  "categoria": "mundo",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Notícia da África sobre industrialização de país africano; interna, sem ligação direta com o Brasil, nota 7 pela régua. Fonte África, conta no limite diário de 5."
+ },
+ {
+  "hora": "15:32",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Lusaka encerra Semana da Industrialização de África",
+  "link": "https://www.giranoticias.com/africa/2026/11/32704-lusaka-encerra-semana-da-industrializacao-de-africa.html",
+  "categoria": "mundo",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "publicada",
+  "detalhe": "Lusaka encerra Semana da Industrialização",
+  "foto": "Divulgação"
  }
 ]
