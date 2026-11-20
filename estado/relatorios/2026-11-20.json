@@ -1,1 +1,90 @@
-[]
+[
+ {
+  "hora": "03:47",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Adão de Almeida defende parlamentos mais fortes na protecção do Estado de Direito",
+  "link": "https://www.giranoticias.com/politica/2026/11/32696-adao-de-almeida-defende-parlamentos-mais-fortes-na-proteccao-do-estado-de-direito.html",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 5,
+  "destino": "nota baixa",
+  "detalhe": "Fonte África: discurso institucional sobre parlamentos e Estado de Direito, sem interesse claro ao leitor brasileiro e sem relação com a temática racial."
+ },
+ {
+  "hora": "03:47",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Ministro de Estado defende novas formas de geração de recursos cambiais",
+  "link": "https://www.giranoticias.com/economia/2026/11/32685-ministro-de-estado-defende-novas-formas-de-geracao-de-recursos-cambiais.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 5,
+  "destino": "nota baixa",
+  "detalhe": "Fonte África: tema econômico genérico (geração de recursos cambiais) sem ligação com o Brasil nem com a diáspora; abaixo do mínimo de 7 pela régua de fontes africanas."
+ },
+ {
+  "hora": "03:47",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Angola pede articulação dos serviços de inteligência militar da SADC",
+  "link": "https://www.giranoticias.com/politica/2026/11/32683-angola-pede-articulacao-dos-servicos-de-inteligencia-militar-da-sadc.html",
+  "categoria": "mundo",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Fonte África: segurança e inteligência regional na SADC, com Angola, país de língua portuguesa, em tema de interesse comum; nota mínima de política internacional."
+ },
+ {
+  "hora": "03:47",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Téte António aborda segurança energética no Fórum Nórdico-Africano",
+  "link": "https://www.giranoticias.com/politica/2026/11/32697-tete-antonio-aborda-seguranca-energetica-no-forum-nordico-africano.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 5,
+  "destino": "nota baixa",
+  "detalhe": "Fonte África: participação em fórum sobre segurança energética, sem ligação direta com o Brasil nem com a diáspora."
+ },
+ {
+  "hora": "03:47",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Ministra defende gestão sustentável dos recursos biológicos aquáticos",
+  "link": "https://www.giranoticias.com/economia/2026/11/32686-ministra-defende-gestao-sustentavel-dos-recursos-biologicos-aquaticos.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 4,
+  "destino": "nota baixa",
+  "detalhe": "Fonte África: pauta setorial de gestão de recursos aquáticos, sem interesse evidente ao leitor brasileiro."
+ },
+ {
+  "hora": "03:47",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Angola destaca paz e integração económica em reunião sobre Acordo para a RDC",
+  "link": "https://www.giranoticias.com/politica/2026/11/32694-angola-destaca-paz-e-integracao-economica-em-reuniao-sobre-acordo-para-a-rdc.html",
+  "categoria": "mundo",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Fonte África: política internacional de paz e integração econômica na região dos Grandes Lagos, com Angola como país de língua portuguesa; nota mínima de política."
+ },
+ {
+  "hora": "03:47",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Angola cria mais de 85 mil postos de trabalho no terceiro trimestre de 2026",
+  "link": "https://www.giranoticias.com/economia/2026/11/32688-angola-cria-mais-de-85-mil-postos-de-trabalho-no-terceiro-trimestre-de-2026.html",
+  "categoria": "mundo",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Fonte África: emprego e economia em Angola, país de língua portuguesa; entra como economia e emprego, nota mínima."
+ },
+ {
+  "hora": "03:47",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Avanços e desafios da aviação civil angolana abordados com a ICAO",
+  "link": "https://www.giranoticias.com/economia/2026/11/32684-avancos-e-desafios-da-aviacao-civil-angolana-abordados-com-a-icao.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 4,
+  "destino": "nota baixa",
+  "detalhe": "Fonte África: tema técnico de aviação civil com a ICAO, sem relação com o Brasil nem com a temática racial."
+ }
+]
