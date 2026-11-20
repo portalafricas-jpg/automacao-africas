@@ -389,5 +389,38 @@
   "destino": "publicada",
   "detalhe": "No Dia da Consciência Negra, CONAQ cobra direitos",
   "foto": "Divulgação"
+ },
+ {
+  "hora": "12:17",
+  "fonte": "Alma Preta",
+  "titulo": "Abaixo-assinado pressiona Lula a indicar 1ª mulher negra ao STF",
+  "link": "https://almapreta.com.br/sessao/politica/mobilizacao-indicacao-lula-ministra-negra-stf/",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 8,
+  "destino": "repetida",
+  "detalhe": "Mobilização pela indicação de mulher negra ao STF já publicada no portal nos últimos 5 dias (Marina Silva e advogadas; organizações fazem mobilização pela indicação da primeira ministra negra ao STF). Mesmo pedido, sem fato novo."
+ },
+ {
+  "hora": "12:17",
+  "fonte": "Geledés",
+  "titulo": "Moda afro-brasileira: mulheres negras transformam o vestir em ato político",
+  "link": "https://www.geledes.org.br/moda-afro-brasileira-mulheres-negras-transformam-o-vestir-em-ato-politico/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Moda afro-brasileira como ativismo e protagonismo de criadoras negras, em data da memória negra (20/11). Texto de Geledés com fatos sobre a iniciativa; nota 7 por data da memória negra e cultura negra."
+ },
+ {
+  "hora": "12:17",
+  "fonte": "Geledés",
+  "titulo": "Moda afro-brasileira: mulheres negras transformam o vestir em ato político",
+  "link": "https://www.geledes.org.br/moda-afro-brasileira-mulheres-negras-transformam-o-vestir-em-ato-politico/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "recusada pelo redator",
+  "detalhe": "Recusada: o texto original é uma reportagem de Geledés com entrevistas exclusivas (Hanayrá Negreiros, Tenka Dara e Suellen Ingrid) concedidas ao veículo, o que é conteúdo exclusivo de outro veículo e não pode ser reaproveitado pelo Áfricas. Além disso, é um texto de conteúdo especial/de opinião sobre moda, sem fato novo de notícia. O lançamento do livro de Hanayrá Negreiros não é fato novo para o portal, pois o material não traz outra informação de fonte oficial ou de vários veículos."
  }
 ]
