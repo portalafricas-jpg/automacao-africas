@@ -29,6 +29,8 @@ JANELA_HORAS = 1                # só entra notícia publicada na última hora (
 JANELA_HORAS_BUSCA = 3          # buscas do Bing: 3 horas, porque o Bing mostra a notícia com atraso
 VALIDADE_HORAS = 4              # notícia com mais de 4 horas não é publicada, nem saindo da fila
 NOTA_MINIMA = 7                 # nota do editor-chefe para ir para a fila
+LIMITE_AFRICA_DIA = 5           # no máximo 5 matérias por dia de fontes África (breaking não conta)
+INTERVALO_AFRICA_HORAS = 2      # e no mínimo 2 horas entre uma e outra
 MINUTO_PARTIDA = 2              # o cron-job.org dá a partida em :02, :17, :32 e :47 (o site lê em :00, :15, :30, :45)
 MINUTOS_PARA_PUBLICAR = 7       # só publica até 7 minutos depois da partida, para o site ver a matéria com certeza
 HORA_INICIO = 8                 # das 8h à meia-noite publica normal; de madrugada, só breaking
@@ -1066,6 +1068,10 @@ def main():
         if m.get("prioridade") != "breaking"
         and datetime.fromisoformat(m["publicado_em"]).astimezone(FUSO_SP).date().isoformat() == hoje
     )
+    africa_hoje = [m for m in publicadas
+                   if m.get("fonte_africa") and m.get("prioridade") != "breaking"
+                   and datetime.fromisoformat(m["publicado_em"]).astimezone(FUSO_SP).date().isoformat() == hoje]
+    ultima_africa = max((datetime.fromisoformat(m["publicado_em"]) for m in africa_hoje), default=None)
     horario_normal = agora_sp.hour >= HORA_INICIO
     minuto_no_ciclo = (agora_sp.minute - MINUTO_PARTIDA) % 15
     pode_publicar = minuto_no_ciclo <= MINUTOS_PARA_PUBLICAR
@@ -1075,7 +1081,9 @@ def main():
         log("Fora da janela de publicação (o site poderia não ver a matéria): publica na próxima rodada.")
 
     def ordem(m):
-        return (PRIORIDADES.index(m["prioridade"]), m["data_original"])
+        # fontes África: dentro da mesma prioridade, a de nota mais alta sai primeiro
+        return (PRIORIDADES.index(m["prioridade"]), -(m.get("nota") or 0) if m.get("fonte_africa") else 0,
+                m["data_original"])
 
     os.makedirs(PASTA_FEEDS, exist_ok=True)
     for categoria in CATEGORIAS:
@@ -1099,6 +1107,11 @@ def main():
             e_breaking = materia_fila["prioridade"] == "breaking"
             if not e_breaking and not horario_normal:
                 break  # madrugada: só breaking
+            if materia_fila.get("fonte_africa") and not e_breaking:
+                if len(africa_hoje) >= LIMITE_AFRICA_DIA:
+                    continue  # limite diário de matérias da África atingido
+                if ultima_africa and agora - ultima_africa < timedelta(hours=INTERVALO_AFRICA_HORAS):
+                    continue  # espera o intervalo entre matérias da África
             log(f"> Publicando [{materia_fila['categoria']} / {materia_fila['prioridade']}] {materia_fila['titulo_original'][:70]}")
             try:
                 pronta = publicar(materia_fila, linha_editorial, agora)
@@ -1119,6 +1132,9 @@ def main():
             with open(os.path.join(PASTA_FEEDS, f"{pronta['categoria']}.xml"), "w", encoding="utf-8") as f:
                 f.write(montar_rss(pronta, pronta["categoria"]))
             publicadas.append(pronta)
+            if pronta.get("fonte_africa") and not e_breaking:
+                africa_hoje.append(pronta)
+                ultima_africa = agora
             registrar(pronta, "publicada", pronta["titulo"], foto=pronta["credito_imagem"])
             if not e_breaking:
                 publicadas_hoje += 1
