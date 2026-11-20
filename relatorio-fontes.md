@@ -1,19 +1,22 @@
 # Relatório do teste de fontes (versão 2)
 
-Teste feito em 19/11/2026 22:30.
+Teste feito em 19/11/2026 22:40.
 
-Sites: 0 OK de 0.
-Buscas: Google Notícias 1 OK e Bing Notícias 1 OK, de 3.
+Sites: 1 OK de 3.
+Buscas: Google Notícias 3 OK e Bing Notícias 2 OK, de 3.
 
 ## Sites
 
 | # | Fonte | Categoria | Status | Notícias | Mais recente | Leitura do texto | Observação |
 |---|---|---|---|---|---|---|---|
+| 1 | VOA Português | mundo | SEM TEXTO | 20 (0 em 48h) | 31/03 11:02 | texto curto ou bloqueado (voaportugues.com)  | RSS: https://www.voaportugues.com/api/ |
+| 2 | RTP Notícias - África | mundo | ERRO | 0 | - | - | sem RSS e sem links de matérias na página |
+| 5 | Expo África Brasil | cultura | OK | 2 (0 em 48h) | sem data | leu 3757 caracteres (expoafricabrasil.com.br) | sem RSS: lendo a página de notícias |
 
 ## Buscas: Google Notícias x Bing Notícias
 
 | # | Busca | Categoria | Google | Notícias | Leitura | Bing | Notícias | Leitura |
 |---|---|---|---|---|---|---|---|---|
-| 1 | site:angop.ao | mundo | SEM TEXTO | 16 (2 em 48h) | texto curto ou bloqueado (angop.ao) não abriu (HTTP Error 503: Service Temporarily Unavailab) | SEM TEXTO | 12 (5 em 48h) | texto curto ou bloqueado (angop.ao) não abriu (HTTP Error 503: Service Temporarily Unavailab) |
-| 2 | site:estacaodocarnaval.com.br | cultura | SEM TEXTO | 54 (0 em 48h) | texto curto ou bloqueado (estacaodocarnaval.com.br) não abriu (<urlopen error timed out>) | ERRO | 0 | RSS sem notícias |
-| 3 | ANGOP Angola | mundo | OK | 32 (0 em 48h) | leu 1048 caracteres (voaportugues.com) | OK | 3 (0 em 48h) | leu 2878 caracteres (rtp.pt) |
+| 3 | site:voaportugues.com | mundo | OK | 59 (0 em 48h) | leu 1315 caracteres (voaportugues.com) | ERRO | 0 | RSS sem notícias |
+| 4 | site:rtp.pt África | mundo | OK | 100 (92 em 48h) | leu 1467 caracteres (rtp.pt) | OK | 12 (7 em 48h) | leu 1650 caracteres (rtp.pt) |
+| 6 | "Expo África Brasil" | cultura | OK | 10 (1 em 48h) | leu 882 caracteres (lnfoficial.com.br) | OK | 1 (0 em 48h) | leu 5377 caracteres (correio24horas.com.br) |
