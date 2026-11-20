@@ -1,5 +1,38 @@
 [
- {"nome": "Busca - ANGOP pelo Bing", "categoria": "mundo", "busca": "site:angop.ao", "tipo": "busca"},
- {"nome": "Busca - Estação do Carnaval pelo Bing", "categoria": "cultura", "busca": "site:estacaodocarnaval.com.br", "tipo": "busca"},
- {"nome": "Busca - ANGOP nome", "categoria": "mundo", "busca": "ANGOP Angola", "tipo": "busca"}
+ {
+  "nome": "VOA Português",
+  "categoria": "mundo",
+  "url": "https://www.voaportugues.com/",
+  "tipo": "site"
+ },
+ {
+  "nome": "RTP Notícias - África",
+  "categoria": "mundo",
+  "url": "https://www.rtp.pt/noticias/africa",
+  "tipo": "site"
+ },
+ {
+  "nome": "Busca - VOA Português pelo Bing",
+  "categoria": "mundo",
+  "busca": "site:voaportugues.com",
+  "tipo": "busca"
+ },
+ {
+  "nome": "Busca - RTP África pelo Bing",
+  "categoria": "mundo",
+  "busca": "site:rtp.pt África",
+  "tipo": "busca"
+ },
+ {
+  "nome": "Expo África Brasil",
+  "categoria": "cultura",
+  "url": "https://expoafricabrasil.com.br/",
+  "tipo": "site"
+ },
+ {
+  "nome": "Busca - Expo África Brasil",
+  "categoria": "cultura",
+  "busca": "\"Expo África Brasil\"",
+  "tipo": "busca"
+ }
 ]

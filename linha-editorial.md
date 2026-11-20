@@ -60,7 +60,9 @@ Agenda Preta (prioridade): combate ao genocídio e à violência de Estado; dire
 ## Notícias da África e do mundo
 Vale para as notícias marcadas como [FONTE ÁFRICA], que vêm de veículos africanos (como os de Angola) ou de buscas sobre o continente. Nesses países a maioria da população é negra, então os jornais quase nunca falam de raça: a pergunta não é "a questão racial é o centro?", e sim "isso interessa ao leitor brasileiro que acompanha a África e a diáspora?".
 - Entram (nota mínima 7, categoria mundo): política, governo e eleições; economia, emprego e investimentos; cultura, música, cinema, literatura e moda; educação, saúde e sociedade; direitos humanos; relações Brasil–África; países de língua portuguesa (Angola, Moçambique, Cabo Verde, Guiné-Bissau, São Tomé e Príncipe); União Africana; diáspora africana fora do Brasil.
-- Nota 8 a 9: decisões de governo e eleições de grande impacto, crises humanitárias, acordos com o Brasil e conquistas internacionais de africanos.
+- Nota 8: notícias que se conectam com o Brasil e com o leitor brasileiro: relações Brasil–África, países de língua portuguesa em temas de interesse comum, diáspora africana e personalidades africanas conhecidas no Brasil. Notícia interna de um país africano sem ligação com o Brasil fica com nota 7.
+- Nota 9: decisões de governo e eleições de grande impacto, crises humanitárias, acordos com o Brasil e conquistas internacionais de africanos.
+- O Áfricas é um jornal brasileiro que acompanha a África, não um jornal africano: o robô publica no máximo 5 matérias por dia dessas fontes (breaking não conta).
 - Ficam de fora (nota 0 a 4): esporte africano; crime comum sem relevância maior; atos burocráticos e protocolares (felicitações, cerimônias de posse de cargos menores, notas de pesar protocolares); fofoca e publicidade.
 
 ## Datas da memória negra
