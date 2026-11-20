@@ -25,7 +25,8 @@ except ImportError:
 CATEGORIAS = ["mundo", "cotidiano", "protagonista", "cultura", "politica", "ancestralidade"]
 PRIORIDADES = ["breaking", "alta", "media"]
 MODELO = "claude-haiku-5-5"
-JANELA_HORAS = 1                # só entra notícia publicada na última hora
+JANELA_HORAS = 1                # só entra notícia publicada na última hora (sites com RSS)
+JANELA_HORAS_BUSCA = 3          # buscas do Bing: 3 horas, porque o Bing mostra a notícia com atraso
 VALIDADE_HORAS = 4              # notícia com mais de 4 horas não é publicada, nem saindo da fila
 NOTA_MINIMA = 7                 # nota do editor-chefe para ir para a fila
 MINUTO_PARTIDA = 2              # o cron-job.org dá a partida em :02, :17, :32 e :47 (o site lê em :00, :15, :30, :45)
@@ -54,6 +55,9 @@ ARQ_VISTOS = os.path.join(PASTA_ESTADO, "vistos-processados.json")
 ARQ_PUBLICADAS = os.path.join(PASTA_ESTADO, "publicadas.json")
 ARQ_PRIMEIRA_VEZ = os.path.join(PASTA_ESTADO, "primeira-vez.json")
 PASTA_FEEDS = os.path.join(PASTA, "feeds")
+PASTA_RELATORIOS = os.path.join(PASTA_ESTADO, "relatorios")
+LIMITE_TITULO = 60
+LIMITE_CORPO = 3500
 
 
 def log(msg):
@@ -97,6 +101,58 @@ def normalizar(texto):
     texto = html.unescape(texto or "").lower()
     texto = re.sub(r"[^\w\s]", " ", texto)
     return re.sub(r"\s+", " ", texto).strip()
+
+
+# ---------------- Relatório diário ----------------
+RELATORIO = []
+
+
+def registrar(materia, destino, detalhe="", **extra):
+    """Anota no relatório do dia o que aconteceu com cada notícia."""
+    RELATORIO.append(dict({
+        "hora": datetime.now(FUSO_SP).strftime("%H:%M"),
+        "fonte": materia.get("fonte_nome") or materia.get("veiculo") or "",
+        "titulo": materia.get("titulo_original") or materia.get("titulo") or "",
+        "link": materia.get("link", ""),
+        "categoria": materia.get("categoria", ""),
+        "prioridade": materia.get("prioridade", ""),
+        "nota": materia.get("nota", ""),
+        "destino": destino,
+        "detalhe": detalhe,
+    }, **extra))
+
+
+def salvar_relatorio(agora):
+    """Junta o que aconteceu nesta rodada ao relatório do dia e reescreve o resumo."""
+    dia = agora.astimezone(FUSO_SP).date().isoformat()
+    arq_json = os.path.join(PASTA_RELATORIOS, f"{dia}.json")
+    eventos = ler_json(arq_json, []) + RELATORIO
+    salvar_json(arq_json, eventos)
+    from collections import Counter
+    por_destino = Counter(e["destino"] for e in eventos)
+    publicadas = [e for e in eventos if e["destino"] == "publicada"]
+    por_categoria = Counter(e["categoria"] for e in publicadas)
+    analisadas_fonte = Counter(e["fonte"] for e in eventos if e["destino"] in ("na fila", "nota baixa", "repetida"))
+    publicadas_fonte = Counter(e["fonte"] for e in publicadas)
+    linhas = [f"# Relatório do robô Áfricas — {dia}", "",
+              f"Atualizado em {agora.astimezone(FUSO_SP).strftime('%d/%m/%Y %H:%M')}.", "",
+              "## Resumo por destino", ""]
+    linhas += [f"- {d}: {n}" for d, n in por_destino.most_common()]
+    linhas += ["", "## Publicadas por categoria", ""]
+    linhas += [f"- {c}: {por_categoria.get(c, 0)}" for c in CATEGORIAS]
+    linhas += ["", "## Fontes (notícias analisadas / publicadas)", ""]
+    for f, n in analisadas_fonte.most_common():
+        linhas.append(f"- {f}: {n} / {publicadas_fonte.get(f, 0)}")
+    linhas += ["", "## Todas as notícias do dia", "",
+               "| Hora | Destino | Nota | Categoria | Prioridade | Fonte | Título | Detalhe |",
+               "|---|---|---|---|---|---|---|---|"]
+    for e in eventos:
+        titulo = e["titulo"].replace("|", "/")[:90]
+        detalhe = str(e.get("detalhe", "")).replace("|", "/").replace("\n", " ")[:160]
+        linhas.append(f"| {e['hora']} | {e['destino']} | {e['nota']} | {e['categoria']} | {e['prioridade']} | "
+                      f"{e['fonte'][:30]} | [{titulo}]({e['link']}) | {detalhe} |")
+    with open(os.path.join(PASTA_RELATORIOS, f"{dia}.md"), "w", encoding="utf-8") as f:
+        f.write("\n".join(linhas) + "\n")
 
 
 # ---------------- 1. Ler as fontes (RSS) ----------------
@@ -202,6 +258,8 @@ def ler_fonte(fonte, rodada):
     if tipo == "pagina":
         return ler_pagina_de_noticias(fonte["url"])
     if tipo == "busca":
+        if "dia_semana" in fonte and datetime.now(FUSO_SP).weekday() != fonte["dia_semana"]:
+            return []  # busca semanal: só roda no dia dela (0 = segunda ... 6 = domingo)
         if fonte.get("grupo", 0) % GRUPOS_BUSCA != rodada % GRUPOS_BUSCA:
             return []
         itens = []
@@ -438,7 +496,7 @@ FERRAMENTA_REDATOR = {
             "motivo": {"type": "string"},
             "titulo": {"type": "string", "description": "até 60 caracteres, contando espaços"},
             "linha_fina": {"type": "string", "description": "até 350 caracteres"},
-            "corpo_html": {"type": "string", "description": "HTML só com h2, h3, p, strong e, se houver, a href dos links úteis; sem o parágrafo de crédito"},
+            "corpo_html": {"type": "string", "description": "HTML só com h2, h3, p, strong e, se houver, a href dos links úteis; sem parágrafo de crédito ao site de origem"},
             "palavras_chave": {"type": "array", "items": {"type": "string"}, "description": "3 a 5 assuntos curtos (1 a 3 palavras, até 4 se for nome próprio), do tipo que vira tag, tirados do próprio corpo e escritos exatamente como aparecem nele"},
             "hashtags": {"type": "array", "items": {"type": "string"}, "description": "3 a 6, sem espaços, começando com #"},
             "pessoa_principal": {"type": "string", "description": "nome completo da pessoa de quem a matéria trata, se for sobre uma pessoa específica; senão, vazio"},
@@ -460,6 +518,7 @@ Para cada notícia nova, dê:
 - prioridade: breaking, alta ou media, conforme a seção "Prioridade" da linha editorial.
 - repetida: true se for o mesmo fato de outra notícia da lista nova (fique só com a primeira) ou de uma matéria do portal dos últimos 5 dias. Se for o mesmo assunto, mas trouxer informação nova e relevante (desdobramento, decisão, resultado, número novo), marque false: é uma atualização e pode virar matéria nova.
 - motivo: frase curta explicando a nota com base na régua.
+Notícias marcadas com [FONTE ÁFRICA] vêm de veículos africanos ou de buscas sobre o continente: avalie pela seção "Notícias da África e do mundo" da linha editorial, e não pela pergunta sobre a questão racial.
 Registre a avaliação de todas as notícias usando a ferramenta avaliar_noticias.
 """
 
@@ -471,7 +530,7 @@ Você recebe uma notícia original já aprovada pelo editor-chefe. Reescreva seg
 Se, lendo o texto completo, perceber que não há informação suficiente para uma matéria honesta, recuse.
 Antes de entregar, confira os limites: título até 60 caracteres, linha fina até 350 e corpo principal até 3.500 caracteres (o bloco de perguntas e respostas vem além disso). Se passar, encurte.
 As palavras-chave precisam estar escritas no corpo exatamente como na lista.
-Entregue o resultado usando a ferramenta entregar_materia. O corpo_html não leva o parágrafo de crédito, que é colocado automaticamente.
+Entregue o resultado usando a ferramenta entregar_materia. O corpo_html não leva parágrafo de crédito ao site de origem.
 Se "aprovada" for false, os demais campos podem ficar vazios.
 """
 
@@ -479,7 +538,7 @@ Se "aprovada" for false, os demais campos podem ficar vazios.
 def editor_chefe(linha_editorial, noticias, recentes):
     """Avalia vários títulos numa única consulta. Devolve {id: avaliação}."""
     lista = "\n".join(
-        f"{n['id']}. {n['titulo']} | {n.get('descricao', '')[:300]}" for n in noticias
+        f"{n['id']}. {'[FONTE ÁFRICA] ' if n.get('fonte_africa') else ''}{n['titulo']} | {n.get('descricao', '')[:300]}" for n in noticias
     )
     portal = "\n".join(f"- {r.get('titulo_original') or r.get('titulo')}" for r in recentes[-150:]) or "nenhuma"
     hoje = datetime.now(FUSO_SP).strftime("%d/%m/%Y")
@@ -500,6 +559,58 @@ def redator(linha_editorial, noticia):
         f"Texto original:\n{noticia['texto'][:12000]}"
     )
     return enviar_claude(linha_editorial + INSTRUCAO_REDATOR, pedido, FERRAMENTA_REDATOR)
+
+
+FERRAMENTA_REVISOR = {
+    "name": "entregar_revisao",
+    "description": "Entrega a matéria revisada.",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "titulo": {"type": "string"},
+            "linha_fina": {"type": "string"},
+            "corpo_html": {"type": "string"},
+        },
+        "required": ["titulo", "linha_fina", "corpo_html"],
+    },
+}
+
+INSTRUCAO_REVISOR = """Você é o revisor do portal Áfricas. Revise a matéria recebida:
+- corrija erros de digitação, ortografia, concordância e acentuação;
+- título com no máximo 60 caracteres contando espaços (encurte sem perder a informação principal);
+- linha fina com no máximo 350 caracteres;
+- texto principal (tudo antes do bloco "Perguntas e respostas") com no máximo 3.500 caracteres: se passar, encurte tirando repetições e detalhes menos importantes;
+- não acrescente fatos, nomes, números ou aspas; não mude o sentido; mantenha o HTML (h2, h3, p, strong, a), os links e o bloco de perguntas e respostas;
+- mantenha escritas exatamente iguais estas palavras-chave, que viram links: {palavras}.
+Se nada precisar mudar, devolva o texto igual. Entregue usando a ferramenta entregar_revisao."""
+
+
+def texto_principal(corpo):
+    principal = re.split(r"<h3>\s*Perguntas", corpo or "", maxsplit=1)[0]
+    return re.sub(r"<[^>]+>", "", principal)
+
+
+def revisor(resultado):
+    """Revisão final: ortografia e limites de tamanho. Se der problema, fica a versão do redator."""
+    palavras = ", ".join(resultado.get("palavras_chave") or []) or "nenhuma"
+    pedido = (f"TÍTULO: {resultado.get('titulo', '')}\n\nLINHA FINA: {resultado.get('linha_fina', '')}\n\n"
+              f"CORPO:\n{resultado.get('corpo_html', '')}")
+    try:
+        revisado = enviar_claude(INSTRUCAO_REVISOR.replace("{palavras}", palavras), pedido, FERRAMENTA_REVISOR)
+    except ErroAPI:
+        raise
+    except Exception as e:
+        log(f"  Revisor não respondeu direito ({e}); fica a versão do redator.")
+        return resultado
+    novo = dict(resultado)
+    for campo in ("titulo", "linha_fina", "corpo_html"):
+        valor = (revisado.get(campo) or "").strip()
+        if valor and (campo != "corpo_html" or len(valor) > len(resultado.get("corpo_html", "")) * 0.4):
+            novo[campo] = valor
+    mudou = [c for c in ("titulo", "linha_fina", "corpo_html") if novo[c] != resultado.get(c)]
+    if mudou:
+        log(f"  Revisor ajustou: {', '.join(mudou)}.")
+    return novo
 
 
 def limpar_html(corpo, links_permitidos=()):
@@ -750,7 +861,6 @@ def montar_corpo(resultado, original):
     corpo = links_internos(corpo, resultado.get("palavras_chave") or [])
     corpo = inserir_embeds(corpo, original["embeds"])
     corpo += f'<p><strong>Siga o Áfricas no Instagram: <a href="{INSTAGRAM}" target="_blank" rel="noopener">@africasplay</a></strong></p>'
-    corpo += f"<p>Com colaboração de {html.escape(original['veiculo'], quote=False)}.</p>"
     return corpo
 
 
@@ -782,6 +892,7 @@ def publicar(materia_fila, linha_editorial, agora):
     original = extrair_materia(materia_fila["link"], materia_fila["titulo_original"], materia_fila.get("descricao", ""))
     if len(original["texto"]) < TEXTO_MINIMO:
         log("  Descartada: não deu para ler o texto completo no site original.")
+        registrar(materia_fila, "não abriu o texto", "texto original curto ou bloqueado")
         return None
     data = datetime.fromisoformat(materia_fila["data_original"])
     noticia = {
@@ -798,7 +909,9 @@ def publicar(materia_fila, linha_editorial, agora):
         return "tentar_de_novo"
     if not resultado.get("aprovada"):
         log(f"  Recusada pelo redator: {resultado.get('motivo', '')}")
+        registrar(materia_fila, "recusada pelo redator", resultado.get("motivo", ""))
         return None
+    resultado = revisor(resultado)
     corpo = montar_corpo(resultado, original)
     imagem = original["imagem"] or materia_fila.get("imagem_rss", "")
     credito = original["credito_foto"]
@@ -811,9 +924,12 @@ def publicar(materia_fila, linha_editorial, agora):
     titulo = decodificar(resultado.get("titulo"))
     if not titulo or not corpo:
         log("  Descartada: o redator não devolveu título ou texto.")
+        registrar(materia_fila, "recusada pelo redator", "sem título ou texto")
         return None
-    if len(titulo) > 60:
-        log(f"  Aviso: título com {len(titulo)} caracteres (limite 60).")
+    if len(titulo) > LIMITE_TITULO:
+        log(f"  Aviso: título com {len(titulo)} caracteres (limite {LIMITE_TITULO}).")
+    if len(texto_principal(resultado.get("corpo_html"))) > LIMITE_CORPO + 300:
+        log("  Aviso: texto principal acima do limite mesmo depois da revisão.")
     return dict(materia_fila, **{
         "titulo": titulo,
         "linha_fina": cortar_linha_fina(decodificar(resultado.get("linha_fina"))),
@@ -850,6 +966,9 @@ def main():
     # Limpa da fila o que passou da validade de 4 horas
     antes = len(fila)
     limite_validade = (agora - timedelta(hours=VALIDADE_HORAS)).isoformat()
+    for m in fila:
+        if m.get("data_original", "") < limite_validade:
+            registrar(m, "venceu na fila", f"passou de {VALIDADE_HORAS} horas sem ser publicada")
     fila = [m for m in fila if m.get("data_original", "") >= limite_validade]
     if antes != len(fila):
         log(f"Saíram da fila por passar de {VALIDADE_HORAS} horas: {antes - len(fila)}")
@@ -877,16 +996,20 @@ def main():
                 # sem data: vale o momento em que o robô viu a matéria pela primeira vez
                 visto_em = primeira_vez["links"].setdefault(item["link"], agora.isoformat())
                 item["data"] = datetime.fromisoformat(visto_em)
-            if agora - item["data"] > timedelta(hours=JANELA_HORAS):
+            janela = JANELA_HORAS_BUSCA if fonte.get("tipo") == "busca" else JANELA_HORAS
+            if agora - item["data"] > timedelta(hours=janela):
                 marcar_visto(item["link"])
                 continue
             if mesmo_fato(item["titulo"], recentes, SEMELHANCA_JA_PUBLICADA) or \
                     mesmo_fato(item["titulo"], candidatas, SEMELHANCA_MESMO_FATO):
                 log(f"Repetida (mesmo fato): {item['titulo'][:80]}")
+                registrar(dict(item, fonte_nome=nome), "repetida", "título quase igual a outra notícia")
                 marcar_visto(item["link"])
                 continue
             item["categoria_fonte"] = fonte.get("categoria", "")
             item["imagem_banco"] = fonte.get("imagem") == "exigir_credito"
+            item["fonte_africa"] = bool(fonte.get("africa"))
+            item["fonte_nome"] = nome
             candidatas.append(dict(item, titulo_original=item["titulo"]))
     candidatas.sort(key=lambda i: i["data"] or agora)
     candidatas = candidatas[:MAX_TRIAGEM_POR_RODADA]
@@ -914,9 +1037,11 @@ def main():
                 nota = a.get("nota") or 0
                 if a.get("repetida"):
                     log(f"Repetida: {c['titulo'][:70]}")
+                    registrar(dict(c, nota=nota, categoria=a.get("categoria", "")), "repetida", a.get("motivo", ""))
                     continue
                 if nota < NOTA_MINIMA:
                     log(f"Nota {nota}, fora: {c['titulo'][:70]} ({a.get('motivo', '')})")
+                    registrar(dict(c, nota=nota, categoria=a.get("categoria", "")), "nota baixa", a.get("motivo", ""))
                     continue
                 categoria = a.get("categoria") if a.get("categoria") in CATEGORIAS else c["categoria_fonte"]
                 if categoria not in CATEGORIAS:
@@ -925,12 +1050,14 @@ def main():
                 fila.append({
                     "link": c["link"], "titulo_original": c["titulo"], "descricao": c.get("descricao", ""),
                     "imagem_rss": c.get("imagem", ""), "imagem_banco": c.get("imagem_banco", False),
+                    "fonte_nome": c.get("fonte_nome", ""), "fonte_africa": c.get("fonte_africa", False),
                     "categoria": categoria, "prioridade": prioridade,
                     "nota": nota, "motivo_nota": a.get("motivo", ""),
                     "data_original": (c["data"] or agora).astimezone(timezone.utc).isoformat(),
                     "criado_em": agora.isoformat(),
                 })
                 log(f"Nota {nota}, na fila: [{categoria} / {prioridade}] {c['titulo'][:70]}")
+                registrar(fila[-1], "na fila", a.get("motivo", ""))
 
     # Etapa C: publicar (uma por categoria por rodada)
     hoje = agora_sp.date().isoformat()
@@ -983,6 +1110,7 @@ def main():
                 materia_fila["tentativas"] = materia_fila.get("tentativas", 0) + 1
                 if materia_fila["tentativas"] >= 2:
                     log("  Duas falhas seguidas: matéria retirada da fila.")
+                    registrar(materia_fila, "recusada pelo redator", "duas respostas inválidas seguidas")
                     fila.remove(materia_fila)
                 continue
             fila.remove(materia_fila)
@@ -991,6 +1119,7 @@ def main():
             with open(os.path.join(PASTA_FEEDS, f"{pronta['categoria']}.xml"), "w", encoding="utf-8") as f:
                 f.write(montar_rss(pronta, pronta["categoria"]))
             publicadas.append(pronta)
+            registrar(pronta, "publicada", pronta["titulo"], foto=pronta["credito_imagem"])
             if not e_breaking:
                 publicadas_hoje += 1
             log(f"  RSS {pronta['categoria']} atualizado: {pronta['titulo']}")
@@ -1002,6 +1131,10 @@ def main():
     limite_links = (agora - timedelta(days=3)).isoformat()
     primeira_vez["links"] = {l: d for l, d in primeira_vez["links"].items() if d >= limite_links}
     salvar_json(ARQ_PRIMEIRA_VEZ, primeira_vez)
+    try:
+        salvar_relatorio(agora)
+    except Exception as e:
+        log(f"Não conseguiu salvar o relatório do dia: {e}")
     log(f"Fim. Na fila de espera: {len(fila)} | Publicadas hoje: {publicadas_hoje}")
 
 
