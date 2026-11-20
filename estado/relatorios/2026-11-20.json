@@ -636,5 +636,16 @@
   "nota": 2,
   "destino": "nota baixa",
   "detalhe": "Concurso de beleza sem conteúdo informativo sobre a temática racial no resumo; título ainda sem fato relevante, é conteúdo de entretenimento e a notícia é um post de agregador sem informação suficiente."
+ },
+ {
+  "hora": "16:48",
+  "fonte": "Alma Preta",
+  "titulo": "Marcha da Consciência Negra em SP pede indicação de ministra negra ao STF",
+  "link": "https://almapreta.com.br/sessao/cotidiano/marcha-consciencia-negra-ministra-stf-sp/",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 8,
+  "destino": "repetida",
+  "detalhe": "Mesma Marcha da Consciência Negra e pedido de indicação de ministra negra ao STF já cobertos no portal nos últimos 5 dias (ato, pauta e posição de Marina Silva e advogadas). Sem fato novo, é repetida."
  }
 ]
