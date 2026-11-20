@@ -603,5 +603,27 @@
   "destino": "publicada",
   "detalhe": "Lusaka encerra Semana da Industrialização",
   "foto": "Divulgação"
+ },
+ {
+  "hora": "16:02",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Inaugurada primeira Refinaria de Ouro de Angola",
+  "link": "https://www.giranoticias.com/economia/2026/11/32699-inaugurada-primeira-refinaria-de-ouro-de-angola.html",
+  "categoria": "mundo",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Fonte África: inauguração de refinaria de ouro em Angola, país de língua portuguesa com economia e investimentos de interesse do leitor brasileiro. Notícia interna, nota 7."
+ },
+ {
+  "hora": "16:02",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Itália enfrenta protestos de trabalhadores e estudantes em várias cidades",
+  "link": "https://www.giranoticias.com/mundo/2026/11/32705-italia-enfrenta-protestos-de-trabalhadores-e-estudantes-em-varias-cidades.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Protestos na Itália não têm relação com a temática racial nem com a África ou a diáspora; fora do filtro."
  }
 ]
