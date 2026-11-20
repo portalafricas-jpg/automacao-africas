@@ -1,26 +1,5 @@
 [
- {
-  "nome": "ANGOP",
-  "categoria": "mundo",
-  "url": "https://www.angop.ao/",
-  "tipo": "site"
- },
- {
-  "nome": "TV Zimbo - País",
-  "categoria": "mundo",
-  "url": "https://tvzimbo.ao/category/pais/",
-  "tipo": "site"
- },
- {
-  "nome": "TPA",
-  "categoria": "mundo",
-  "url": "https://tpa.tecla21.ao/",
-  "tipo": "site"
- },
- {
-  "nome": "Estação do Carnaval",
-  "categoria": "cultura",
-  "url": "https://estacaodocarnaval.com.br/",
-  "tipo": "site"
- }
+ {"nome": "Busca - ANGOP pelo Bing", "categoria": "mundo", "busca": "site:angop.ao", "tipo": "busca"},
+ {"nome": "Busca - Estação do Carnaval pelo Bing", "categoria": "cultura", "busca": "site:estacaodocarnaval.com.br", "tipo": "busca"},
+ {"nome": "Busca - ANGOP nome", "categoria": "mundo", "busca": "ANGOP Angola", "tipo": "busca"}
 ]

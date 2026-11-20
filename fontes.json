@@ -115,6 +115,20 @@
   "url": "https://baoba.org.br/feed/"
  },
  {
+  "nome": "TV Zimbo - País",
+  "categoria": "mundo",
+  "tipo": "pagina",
+  "url": "https://tvzimbo.ao/category/pais/",
+  "africa": true
+ },
+ {
+  "nome": "TPA",
+  "categoria": "mundo",
+  "tipo": "pagina",
+  "url": "https://tpa.tecla21.ao/",
+  "africa": true
+ },
+ {
   "nome": "Busca - liberdade religiosa",
   "categoria": "ancestralidade",
   "tipo": "busca",
