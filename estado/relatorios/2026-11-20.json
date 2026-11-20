@@ -725,5 +725,49 @@
   "nota": 3,
   "destino": "nota baixa",
   "detalhe": "Notícia sobre poluição química em Angola, sem conexão com a temática racial, com o Brasil ou com a diáspora; é notícia interna de país africano sem ligação com o leitor brasileiro e sem fato de impacto para a população negra."
+ },
+ {
+  "hora": "18:02",
+  "fonte": "Mundo Negro",
+  "titulo": "A herança ancestral de fé revive no Natal de Tyler Perry",
+  "link": "https://mundonegro.inf.br/ncestralidade-fe-musical-natal-tyler-perry/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Lançamento de produção com elenco negro (Tyler Perry, Durrell Arta), conteúdo religioso cristão, sem conexão direta com matriz africana. Lançamento de artista negro é notícia nota mínima 7; a notícia não é fofoca e trata de obra, não de vida pessoal."
+ },
+ {
+  "hora": "18:02",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Ministra Sílvia Lutucuta lidera encontros ministeriais sobre saúde em África",
+  "link": "https://www.giranoticias.com/sociedade/2026/11/32708-ministra-silvia-lutucuta-lidera-encontros-ministeriais-sobre-saude-em-africa.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 4,
+  "destino": "nota baixa",
+  "detalhe": "Fonte África sobre encontro ministerial de saúde interno a Angola, sem ligação com o Brasil nem interesse direto para o leitor brasileiro; é ato protocolar/burocrático de agenda ministerial, abaixo do limite de publicação."
+ },
+ {
+  "hora": "18:02",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Energia eléctrica chega a mais 44 mil cidadãos no Cuanza-Sul",
+  "link": "https://www.giranoticias.com/sociedade/2026/11/32709-energia-electrica-chega-a-mais-44-mil-cidadaos-no-cuanza-sul.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "Fonte África sobre expansão de energia elétrica em província angolana; notícia local e administrativa sem ligação com o Brasil nem com a temática racial, com pouco interesse ao leitor brasileiro."
+ },
+ {
+  "hora": "18:02",
+  "fonte": "Mundo Negro",
+  "titulo": "A herança ancestral de fé revive no Natal de Tyler Perry",
+  "link": "https://mundonegro.inf.br/ncestralidade-fe-musical-natal-tyler-perry/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "recusada pelo redator",
+  "detalhe": "Texto é artigo de opinião/coluna assinada por Karina Pereira, com análise pessoal (\"o que me chamou a atenção\", \"Acredito que\"). Não há fato jornalístico novo suficiente: a matéria é essencialmente resenha opinativa de um filme de Natal lançado na Netflix. Conteúdo opinativo de outro veículo não entra no portal."
  }
 ]
