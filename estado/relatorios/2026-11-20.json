@@ -152,5 +152,38 @@
   "nota": 8,
   "destino": "na fila",
   "detalhe": "Infográfico do Fórum Brasileiro de Segurança Pública sobre racismo na segurança pública: mortes violentas, ação policial e sistema prisional com população negra como principal vítima. Ligado à Agenda Preta (violência de Estado), mas é um infográfico de dados sem fato novo específico, por isso nota 8 e prioridade alta. Não há matéria igual nos últimos 5 dias."
+ },
+ {
+  "hora": "07:47",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Angola pede articulação dos serviços de inteligência militar da SADC",
+  "link": "https://www.giranoticias.com/politica/2026/11/32683-angola-pede-articulacao-dos-servicos-de-inteligencia-militar-da-sadc.html",
+  "categoria": "mundo",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "07:47",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Angola destaca paz e integração económica em reunião sobre Acordo para a RDC",
+  "link": "https://www.giranoticias.com/politica/2026/11/32694-angola-destaca-paz-e-integracao-economica-em-reuniao-sobre-acordo-para-a-rdc.html",
+  "categoria": "mundo",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "07:47",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Angola cria mais de 85 mil postos de trabalho no terceiro trimestre de 2026",
+  "link": "https://www.giranoticias.com/economia/2026/11/32688-angola-cria-mais-de-85-mil-postos-de-trabalho-no-terceiro-trimestre-de-2026.html",
+  "categoria": "mundo",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
  }
 ]
