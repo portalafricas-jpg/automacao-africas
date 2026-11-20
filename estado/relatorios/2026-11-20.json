@@ -445,5 +445,28 @@
   "destino": "publicada",
   "detalhe": "Pinah recebe Medalha Pedro Ernesto na Câmara do Rio",
   "foto": "Reprodução/TV Globo"
+ },
+ {
+  "hora": "13:17",
+  "fonte": "Notícia Preta",
+  "titulo": "Brasil gasta R$ 14,5 bilhões por ano com guerra às drogas",
+  "link": "https://noticiapreta.com.br/brasil-gasta-r-145-bilhoes-por-ano-com-guerra-as-drogas/?utm_source=rss&utm_medium=rss&utm_campaign=brasil-gasta-r-145-bilhoes-por-ano-com-guerra-as-drogas",
+  "categoria": "politica",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Pesquisa do Cesec sobre gasto com a guerra às drogas, que atinge diretamente a população negra, alvo principal da política de drogas e do encarceramento. Não repete matéria recente do portal; enquadra-se como estudo com dados sobre desigualdade e violência de Estado."
+ },
+ {
+  "hora": "13:17",
+  "fonte": "Notícia Preta",
+  "titulo": "Brasil gasta R$ 14,5 bilhões por ano com guerra às drogas",
+  "link": "https://noticiapreta.com.br/brasil-gasta-r-145-bilhoes-por-ano-com-guerra-as-drogas/?utm_source=rss&utm_medium=rss&utm_campaign=brasil-gasta-r-145-bilhoes-por-ano-com-guerra-as-drogas",
+  "categoria": "politica",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "publicada",
+  "detalhe": "Guerra às drogas custa R$ 14,5 bi em 2024",
+  "foto": "Paulo Pinto/Agência Brasil"
  }
 ]
