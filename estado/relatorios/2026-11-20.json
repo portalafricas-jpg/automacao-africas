@@ -422,5 +422,28 @@
   "nota": 7,
   "destino": "recusada pelo redator",
   "detalhe": "Recusada: o texto original é uma reportagem de Geledés com entrevistas exclusivas (Hanayrá Negreiros, Tenka Dara e Suellen Ingrid) concedidas ao veículo, o que é conteúdo exclusivo de outro veículo e não pode ser reaproveitado pelo Áfricas. Além disso, é um texto de conteúdo especial/de opinião sobre moda, sem fato novo de notícia. O lançamento do livro de Hanayrá Negreiros não é fato novo para o portal, pois o material não traz outra informação de fonte oficial ou de vários veículos."
+ },
+ {
+  "hora": "12:32",
+  "fonte": "SRzd - Carnaval",
+  "titulo": "Ícone do Carnaval, Pinah recebe honraria na Câmara do Rio",
+  "link": "https://srzd.com/blog/carnaval/rio-de-janeiro/icone-do-carnaval-pinah-recebe-honraria-na-camara-do-rio/",
+  "categoria": "protagonista",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Conquista de pessoa negra (Pinah Ayoub, ícone do Carnaval) com honraria importante da Câmara do Rio; nota 7 a 8 para protagonismo e carnaval."
+ },
+ {
+  "hora": "12:32",
+  "fonte": "SRzd - Carnaval",
+  "titulo": "Ícone do Carnaval, Pinah recebe honraria na Câmara do Rio",
+  "link": "https://srzd.com/blog/carnaval/rio-de-janeiro/icone-do-carnaval-pinah-recebe-honraria-na-camara-do-rio/",
+  "categoria": "protagonista",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "publicada",
+  "detalhe": "Pinah recebe Medalha Pedro Ernesto na Câmara do Rio",
+  "foto": "Reprodução/TV Globo"
  }
 ]
