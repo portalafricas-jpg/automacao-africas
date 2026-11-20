@@ -141,5 +141,16 @@
   "nota": 8,
   "destino": "na fila",
   "detalhe": "Lançamento de álbum de artista negra (IZA) com filme, lançado no Dia da Consciência Negra e com falas sobre ancestralidade. Lançamento de artista negra é nota mínima 7; sem repetição no portal."
+ },
+ {
+  "hora": "07:32",
+  "fonte": "Alma Preta",
+  "titulo": "Violência letal, medo e encarceramento: o retrato do racismo na segurança pública",
+  "link": "https://almapreta.com.br/sessao/cotidiano/violencia-letal-medo-encarceramento-racismo-seguranca-publica/",
+  "categoria": "cotidiano",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Infográfico do Fórum Brasileiro de Segurança Pública sobre racismo na segurança pública: mortes violentas, ação policial e sistema prisional com população negra como principal vítima. Ligado à Agenda Preta (violência de Estado), mas é um infográfico de dados sem fato novo específico, por isso nota 8 e prioridade alta. Não há matéria igual nos últimos 5 dias."
  }
 ]
