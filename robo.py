@@ -539,7 +539,7 @@ Para cada notícia nova, dê:
 - nota de 0 a 10, seguindo exatamente a "Régua de notas do editor-chefe" e as "Datas da memória negra" da linha editorial acima. Ser local não diminui a nota.
 - categoria: mundo, cotidiano, protagonista, cultura, politica ou ancestralidade.
 - prioridade: breaking, alta ou media, conforme a seção "Prioridade" da linha editorial.
-- repetida: true se for o mesmo fato de outra notícia da lista nova (fique só com a primeira) ou de uma matéria do portal dos últimos 5 dias. Se for o mesmo assunto, mas trouxer informação nova e relevante (desdobramento, decisão, resultado, número novo), marque false: é uma atualização e pode virar matéria nova.
+- repetida: true se for o mesmo fato de outra notícia da lista nova (fique só com a primeira) ou de uma matéria do portal dos últimos 5 dias. Um mesmo lançamento, evento ou anúncio já publicado é repetida, mesmo com entrevista, falas novas ou outro ângulo. Só marque false se trouxer fato novo de verdade (desdobramento, decisão, resultado, número novo).
 - motivo: frase curta explicando a nota com base na régua.
 Notícias marcadas com [FONTE ÁFRICA] vêm de veículos africanos ou de buscas sobre o continente: avalie pela seção "Notícias da África e do mundo" da linha editorial, e não pela pergunta sobre a questão racial.
 Registre a avaliação de todas as notícias usando a ferramenta avaliar_noticias.
@@ -551,6 +551,7 @@ INSTRUCAO_REDATOR = """
 ## Sua função agora: REDATOR (escreve)
 Você recebe uma notícia original já aprovada pelo editor-chefe. Reescreva seguindo a linha editorial acima à risca.
 Se, lendo o texto completo, perceber que não há informação suficiente para uma matéria honesta, recuse.
+Recuse também se o texto original for conteúdo exclusivo do veículo de origem (entrevista exclusiva concedida ao veículo, reportagem investigativa ou levantamento próprio, furo) ou artigo de opinião: o Áfricas não se apropria do trabalho de outros veículos. Não cite o veículo de origem no texto.
 Antes de entregar, confira os limites: título até 60 caracteres, linha fina até 350 e corpo até 3.500 caracteres. Se passar, encurte.
 Formato de jornal: pirâmide invertida, sem bloco de perguntas e respostas e sem intertítulo em forma de pergunta; intertítulos curtos e afirmativos só em matérias longas.
 Se o pedido vier marcado com [FONTE ÁFRICA], siga a seção "Notícias da África e do mundo" da linha editorial: não recuse por falta de recorte racial.
