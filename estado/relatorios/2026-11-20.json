@@ -513,5 +513,39 @@
   "nota": 5,
   "destino": "nota baixa",
   "detalhe": "Visita diplomática de embaixadora ao Geledés com promotoras legais populares; a questão racial aparece no contexto da organização, mas o fato é um encontro protocolar, sem conquista ou fato relevante de pessoa negra."
+ },
+ {
+  "hora": "15:02",
+  "fonte": "Notícia Preta",
+  "titulo": "Série “AYÔ“ criada e protagonizada por Lucas Oranmian estreia gratuitamente",
+  "link": "https://noticiapreta.com.br/serie-ayo-criada-e-protagonizada-por-lucas-oranmian-estreia-gratuitamente/?utm_source=rss&utm_medium=rss&utm_campaign=serie-ayo-criada-e-protagonizada-por-lucas-oranmian-estreia-gratuitamente",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Lançamento de série criada e protagonizada por Lucas Oranmian, com direção de Yasmin Thayná e elenco negro (Lázaro Ramos, Aretha Sadick, Gilda Nomacce, Tânia Tôko). Lançamento de obra de artista negro é notícia de nota mínima 7; sem fato repetido no portal."
+ },
+ {
+  "hora": "15:02",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Índia inaugura 57.º Festival Internacional de Cinema de Goa",
+  "link": "https://www.giranoticias.com/mundo/2026/11/32700-india-inaugura-57-festival-internacional-de-cinema-de-goa.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 4,
+  "destino": "nota baixa",
+  "detalhe": "Inauguração de festival de cinema na Índia, sem relação com a África, a diáspora ou a temática racial; fonte africana de tema fora da régua de interesse para o leitor brasileiro."
+ },
+ {
+  "hora": "15:02",
+  "fonte": "Notícia Preta",
+  "titulo": "Série “AYÔ“ criada e protagonizada por Lucas Oranmian estreia gratuitamente",
+  "link": "https://noticiapreta.com.br/serie-ayo-criada-e-protagonizada-por-lucas-oranmian-estreia-gratuitamente/?utm_source=rss&utm_medium=rss&utm_campaign=serie-ayo-criada-e-protagonizada-por-lucas-oranmian-estreia-gratuitamente",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "publicada",
+  "detalhe": "Série AYÔ, com Lucas Oranmian, estreia de graça",
+  "foto": "Alile Dara Onawale"
  }
 ]
