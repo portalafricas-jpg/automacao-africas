@@ -780,5 +780,16 @@
   "nota": 2,
   "destino": "nota baixa",
   "detalhe": "Notícia sobre a companhia aérea angolana TAAG (inauguração de sala de simuladores para pilotos). É fato burocrático/institucional sem relação com a temática racial nem com a Agenda Preta; não se enquadra nos critérios de diáspora ou Brasil-África de interesse do leitor, e não atinge nota mínima."
+ },
+ {
+  "hora": "18:32",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Bolsa Internacional de Turismo de Angola aberta na Baía de Luanda",
+  "link": "https://www.giranoticias.com/economia/2026/11/32711-bolsa-internacional-de-turismo-de-angola-aberta-na-baia-de-luanda.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 4,
+  "destino": "nota baixa",
+  "detalhe": "Feira de turismo em Angola sem relação com a temática racial, Brasil ou Agenda Preta; evento burocrático/comercial, fica abaixo do limite de 7 para notícias da África."
  }
 ]
