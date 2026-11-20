@@ -791,5 +791,16 @@
   "nota": 4,
   "destino": "nota baixa",
   "detalhe": "Feira de turismo em Angola sem relação com a temática racial, Brasil ou Agenda Preta; evento burocrático/comercial, fica abaixo do limite de 7 para notícias da África."
+ },
+ {
+  "hora": "18:47",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Angola conquista 27 medalhas no Abu Dhabi World Pro de Jiu-Jitsu",
+  "link": "https://www.giranoticias.com/desporto/2026/11/32712-angola-conquista-27-medalhas-no-abu-dhabi-world-pro-de-jiu-jitsu.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "Esporte africano fica de fora pela régua da África (nota 0 a 4). Não há conexão com a temática racial nem com Brasil."
  }
 ]
