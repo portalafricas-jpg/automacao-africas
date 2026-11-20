@@ -498,7 +498,7 @@ FERRAMENTA_REDATOR = {
             "motivo": {"type": "string"},
             "titulo": {"type": "string", "description": "até 60 caracteres, contando espaços"},
             "linha_fina": {"type": "string", "description": "até 350 caracteres"},
-            "corpo_html": {"type": "string", "description": "HTML só com h2, h3, p, strong e, se houver, a href dos links úteis; sem parágrafo de crédito ao site de origem"},
+            "corpo_html": {"type": "string", "description": "HTML só com h2, p, strong e, se houver, a href dos links úteis; formato de matéria jornalística, sem perguntas e respostas e sem intertítulo em forma de pergunta; sem parágrafo de crédito ao site de origem"},
             "palavras_chave": {"type": "array", "items": {"type": "string"}, "description": "3 a 5 assuntos curtos (1 a 3 palavras, até 4 se for nome próprio), do tipo que vira tag, tirados do próprio corpo e escritos exatamente como aparecem nele"},
             "hashtags": {"type": "array", "items": {"type": "string"}, "description": "3 a 6, sem espaços, começando com #"},
             "pessoa_principal": {"type": "string", "description": "nome completo da pessoa de quem a matéria trata, se for sobre uma pessoa específica; senão, vazio"},
@@ -530,7 +530,9 @@ INSTRUCAO_REDATOR = """
 ## Sua função agora: REDATOR (escreve)
 Você recebe uma notícia original já aprovada pelo editor-chefe. Reescreva seguindo a linha editorial acima à risca.
 Se, lendo o texto completo, perceber que não há informação suficiente para uma matéria honesta, recuse.
-Antes de entregar, confira os limites: título até 60 caracteres, linha fina até 350 e corpo principal até 3.500 caracteres (o bloco de perguntas e respostas vem além disso). Se passar, encurte.
+Antes de entregar, confira os limites: título até 60 caracteres, linha fina até 350 e corpo até 3.500 caracteres. Se passar, encurte.
+Formato de jornal: pirâmide invertida, sem bloco de perguntas e respostas e sem intertítulo em forma de pergunta; intertítulos curtos e afirmativos só em matérias longas.
+Se o pedido vier marcado com [FONTE ÁFRICA], siga a seção "Notícias da África e do mundo" da linha editorial: não recuse por falta de recorte racial.
 As palavras-chave precisam estar escritas no corpo exatamente como na lista.
 Entregue o resultado usando a ferramenta entregar_materia. O corpo_html não leva parágrafo de crédito ao site de origem.
 Se "aprovada" for false, os demais campos podem ficar vazios.
@@ -552,6 +554,7 @@ def editor_chefe(linha_editorial, noticias, recentes):
 
 def redator(linha_editorial, noticia):
     pedido = (
+        f"{'[FONTE ÁFRICA] ' if noticia.get('fonte_africa') else ''}"
         f"Veículo de origem: {noticia['veiculo']}\n"
         f"Link: {noticia['link']}\n"
         f"Data: {noticia['data_texto']}\n"
@@ -581,15 +584,15 @@ INSTRUCAO_REVISOR = """Você é o revisor do portal Áfricas. Revise a matéria 
 - corrija erros de digitação, ortografia, concordância e acentuação;
 - título com no máximo 60 caracteres contando espaços (encurte sem perder a informação principal);
 - linha fina com no máximo 350 caracteres;
-- texto principal (tudo antes do bloco "Perguntas e respostas") com no máximo 3.500 caracteres: se passar, encurte tirando repetições e detalhes menos importantes;
-- não acrescente fatos, nomes, números ou aspas; não mude o sentido; mantenha o HTML (h2, h3, p, strong, a), os links e o bloco de perguntas e respostas;
+- texto com no máximo 3.500 caracteres: se passar, encurte tirando repetições e detalhes menos importantes;
+- formato de jornal: se houver bloco de perguntas e respostas, transforme as informações em texto corrido ou retire o que já foi dito; se houver intertítulo em forma de pergunta, troque por intertítulo curto (2 a 4 palavras), afirmativo e concreto; matéria curta fica sem intertítulo;
+- não acrescente fatos, nomes, números ou aspas; não mude o sentido; mantenha o HTML (h2, p, strong, a) e os links;
 - mantenha escritas exatamente iguais estas palavras-chave, que viram links: {palavras}.
 Se nada precisar mudar, devolva o texto igual. Entregue usando a ferramenta entregar_revisao."""
 
 
 def texto_principal(corpo):
-    principal = re.split(r"<h3>\s*Perguntas", corpo or "", maxsplit=1)[0]
-    return re.sub(r"<[^>]+>", "", principal)
+    return re.sub(r"<[^>]+>", "", corpo or "")
 
 
 def revisor(resultado):
@@ -628,6 +631,8 @@ def limpar_html(corpo, links_permitidos=()):
     corpo = re.sub(r"<a\b[^>]*?href=\"([^\"]*)\"[^>]*>(.*?)</a>", tratar_link, corpo or "", flags=re.S | re.I)
     corpo = re.sub(r"</?(?!(?:h2|h3|p|strong|a)\b)[a-zA-Z0-9]+[^>]*>", "", corpo)
     corpo = re.sub(r"<(h2|h3|p|strong)\s[^>]*>", r"<\1>", corpo)
+    # segurança: tira bloco de perguntas e respostas, se ainda vier
+    corpo = re.split(r"<h[23]>\s*(?:Perguntas(?: e respostas| frequentes)?|FAQ)\b", corpo, maxsplit=1, flags=re.I)[0]
     return corpo.replace("*", "").strip()
 
 
@@ -900,6 +905,7 @@ def publicar(materia_fila, linha_editorial, agora):
     noticia = {
         "titulo": materia_fila["titulo_original"], "link": materia_fila["link"], "veiculo": original["veiculo"],
         "texto": original["texto"], "links_uteis": original["links_uteis"],
+        "fonte_africa": materia_fila.get("fonte_africa", False),
         "data_texto": data.astimezone(FUSO_SP).strftime("%d/%m/%Y %H:%M"),
     }
     try:
@@ -968,10 +974,14 @@ def main():
     # Limpa da fila o que passou da validade de 4 horas
     antes = len(fila)
     limite_validade = (agora - timedelta(hours=VALIDADE_HORAS)).isoformat()
+    def vencida(m):
+        if m.get("valido_ate") and m["valido_ate"] >= agora.isoformat():
+            return False  # notícia da África encontrada de madrugada: vale até as 12h
+        return m.get("data_original", "") < limite_validade
     for m in fila:
-        if m.get("data_original", "") < limite_validade:
+        if vencida(m):
             registrar(m, "venceu na fila", f"passou de {VALIDADE_HORAS} horas sem ser publicada")
-    fila = [m for m in fila if m.get("data_original", "") >= limite_validade]
+    fila = [m for m in fila if not vencida(m)]
     if antes != len(fila):
         log(f"Saíram da fila por passar de {VALIDADE_HORAS} horas: {antes - len(fila)}")
 
@@ -1057,6 +1067,8 @@ def main():
                     "nota": nota, "motivo_nota": a.get("motivo", ""),
                     "data_original": (c["data"] or agora).astimezone(timezone.utc).isoformat(),
                     "criado_em": agora.isoformat(),
+                    "valido_ate": (agora_sp.replace(hour=12, minute=0, second=0, microsecond=0).astimezone(timezone.utc).isoformat()
+                                   if c.get("fonte_africa") and agora_sp.hour < HORA_INICIO else ""),
                 })
                 log(f"Nota {nota}, na fila: [{categoria} / {prioridade}] {c['titulo'][:70]}")
                 registrar(fila[-1], "na fila", a.get("motivo", ""))
