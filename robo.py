@@ -429,32 +429,53 @@ class ErroAPI(Exception):
     """Problema para falar com o Claude (chave, internet, crédito). Nada é descartado."""
 
 
-def enviar_claude(sistema, pedido, ferramenta, max_tokens=8000):
-    """Manda o pedido ao Claude e recebe a resposta já organizada em campos (sem risco de JSON quebrado)."""
+USO = {"input_tokens": 0, "cache_creation_input_tokens": 0, "cache_read_input_tokens": 0, "output_tokens": 0}
+CACHE = {"ligado": True}
+
+
+def enviar_claude(sistema, pedido, ferramenta, max_tokens=8000, fixo=None):
+    """Manda o pedido ao Claude e recebe a resposta já organizada em campos (sem risco de JSON quebrado).
+    O texto 'fixo' (a linha editorial) vai com cache de prompt: o Claude guarda por 1 hora e cobra bem menos."""
     chave = (os.environ.get("ANTHROPIC_API_KEY") or "").strip()
     if not chave:
         raise ErroAPI("Chave ANTHROPIC_API_KEY não encontrada no cofre.")
-    corpo = json.dumps({
-        "model": MODELO,
-        "max_tokens": max_tokens,
-        "system": sistema,
-        "messages": [{"role": "user", "content": pedido}],
-        "tools": [ferramenta],
-        "tool_choice": {"type": "tool", "name": ferramenta["name"]},
-    }).encode("utf-8")
-    req = urllib.request.Request(
-        "https://api.anthropic.com/v1/messages",
-        data=corpo,
-        headers={"x-api-key": chave, "anthropic-version": "2023-06-01", "content-type": "application/json"},
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=180) as r:
-            resposta = json.loads(r.read().decode("utf-8"))
-    except urllib.error.HTTPError as e:
-        detalhe = e.read().decode("utf-8", errors="replace")[:300]
-        raise ErroAPI(f"HTTP {e.code}: {detalhe}")
-    except Exception as e:
-        raise ErroAPI(str(e))
+    for tentativa in (1, 2):
+        if fixo:
+            bloco_fixo = {"type": "text", "text": fixo}
+            if CACHE["ligado"]:
+                bloco_fixo["cache_control"] = {"type": "ephemeral", "ttl": "1h"}
+            system = [bloco_fixo, {"type": "text", "text": sistema}]
+        else:
+            system = sistema
+        corpo = json.dumps({
+            "model": MODELO,
+            "max_tokens": max_tokens,
+            "system": system,
+            "messages": [{"role": "user", "content": pedido}],
+            "tools": [ferramenta],
+            "tool_choice": {"type": "tool", "name": ferramenta["name"]},
+        }).encode("utf-8")
+        req = urllib.request.Request(
+            "https://api.anthropic.com/v1/messages",
+            data=corpo,
+            headers={"x-api-key": chave, "anthropic-version": "2023-06-01", "content-type": "application/json"},
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=180) as r:
+                resposta = json.loads(r.read().decode("utf-8"))
+            break
+        except urllib.error.HTTPError as e:
+            detalhe = e.read().decode("utf-8", errors="replace")[:300]
+            if e.code == 400 and fixo and CACHE["ligado"] and re.search(r"cache|ttl", detalhe, re.I):
+                log("  O cache de prompt não foi aceito; seguindo sem cache.")
+                CACHE["ligado"] = False
+                continue
+            raise ErroAPI(f"HTTP {e.code}: {detalhe}")
+        except Exception as e:
+            raise ErroAPI(str(e))
+    uso = resposta.get("usage", {}) or {}
+    for k in USO:
+        USO[k] += int(uso.get(k) or 0)
     for bloco in resposta.get("content", []):
         if bloco.get("type") == "tool_use" and isinstance(bloco.get("input"), dict):
             return bloco["input"]
@@ -548,7 +569,7 @@ def editor_chefe(linha_editorial, noticias, recentes):
     hoje = datetime.now(FUSO_SP).strftime("%d/%m/%Y")
     pedido = (f"DATA DE HOJE: {hoje}\n\nNOTÍCIAS NOVAS:\n{lista}\n\n"
               f"MATÉRIAS DO PORTAL NOS ÚLTIMOS {DIAS_REPETIDAS} DIAS (para achar repetidas):\n{portal}")
-    resultado = enviar_claude(linha_editorial + INSTRUCAO_EDITOR, pedido, FERRAMENTA_EDITOR)
+    resultado = enviar_claude(INSTRUCAO_EDITOR, pedido, FERRAMENTA_EDITOR, fixo=linha_editorial)
     return {a.get("id"): a for a in resultado.get("avaliacoes", []) if isinstance(a, dict)}
 
 
@@ -563,7 +584,7 @@ def redator(linha_editorial, noticia):
         f"{json.dumps(noticia.get('links_uteis', []), ensure_ascii=False)}\n\n"
         f"Texto original:\n{noticia['texto'][:12000]}"
     )
-    return enviar_claude(linha_editorial + INSTRUCAO_REDATOR, pedido, FERRAMENTA_REDATOR)
+    return enviar_claude(INSTRUCAO_REDATOR, pedido, FERRAMENTA_REDATOR, fixo=linha_editorial)
 
 
 FERRAMENTA_REVISOR = {
@@ -1164,6 +1185,10 @@ def main():
     except Exception as e:
         log(f"Não conseguiu salvar o relatório do dia: {e}")
     log(f"Fim. Na fila de espera: {len(fila)} | Publicadas hoje: {publicadas_hoje}")
+    if any(USO.values()):
+        log(f"Uso do Claude nesta rodada: {USO['input_tokens']} tokens novos, "
+            f"{USO['cache_read_input_tokens']} lidos do cache, {USO['cache_creation_input_tokens']} guardados no cache, "
+            f"{USO['output_tokens']} escritos.")
 
 
 if __name__ == "__main__":
