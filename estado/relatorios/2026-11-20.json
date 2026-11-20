@@ -264,5 +264,28 @@
   "nota": 6,
   "destino": "nota baixa",
   "detalhe": "Debate histórico sobre Zumbi dos Palmares em 20 de novembro (memória negra); a questão racial é o centro, mas é um texto de análise sem fato novo de impacto imediato. Não há matéria idêntica nos últimos 5 dias."
+ },
+ {
+  "hora": "09:17",
+  "fonte": "Notícia Preta",
+  "titulo": "Governo lança guia contra racismo em aeroportos e aviões",
+  "link": "https://noticiapreta.com.br/governo-lanca-guia-contra-racismo-em-aeroportos-e-avioes/?utm_source=rss&utm_medium=rss&utm_campaign=governo-lanca-guia-contra-racismo-em-aeroportos-e-avioes",
+  "categoria": "politica",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Política pública federal de combate ao racismo no transporte aéreo, lançada pelo governo; relevante para a população negra e dentro da memória de novembro, mas sem decisão de grande impacto."
+ },
+ {
+  "hora": "09:17",
+  "fonte": "Notícia Preta",
+  "titulo": "Governo lança guia contra racismo em aeroportos e aviões",
+  "link": "https://noticiapreta.com.br/governo-lanca-guia-contra-racismo-em-aeroportos-e-avioes/?utm_source=rss&utm_medium=rss&utm_campaign=governo-lanca-guia-contra-racismo-em-aeroportos-e-avioes",
+  "categoria": "politica",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "publicada",
+  "detalhe": "Governo lança guia contra racismo em aeroportos",
+  "foto": "Rafa Neddermeyer/Agência Brasil"
  }
 ]
