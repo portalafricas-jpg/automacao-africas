@@ -692,5 +692,27 @@
   "nota": 7,
   "destino": "recusada pelo redator",
   "detalhe": "Recusada: o texto é conteúdo publicitário/publieditorial. Trata-se de material \"produzido em parceria com a Lilly\", empresa farmacêutica, com CMAT de material destinado ao público geral e direcionamento explícito para a iniciativa da empresa. Além disso, o texto é em grande parte um compilado de informações sobre a dermatite atópica sem um fato novo e urgente ligado diretamente à população negra; a questão racial aparece como pano de fundo de um conteúdo de marca. Pela linha editorial, conteúdo publicitário é descartado."
+ },
+ {
+  "hora": "17:33",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Executivo reforça aposta na expansão do acesso à água potável",
+  "link": "https://www.giranoticias.com/sociedade/2026/11/32706-executivo-reforca-aposta-na-expansao-do-acesso-a-agua-potavel.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 6,
+  "destino": "nota baixa",
+  "detalhe": "Notícia de país africano sobre expansão do acesso à água potável, sem ligação direta com o Brasil nem com o recorte racial; interna de país africano sem ligação com o Brasil fica em nota 7 pela régua de fontes África, mas o texto é genérico e sem fato concreto. Nota 6 por falta de dados e de conexão com o leitor brasileiro."
+ },
+ {
+  "hora": "17:33",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Inaugurada primeira Refinaria de Ouro de Angola",
+  "link": "https://www.giranoticias.com/economia/2026/11/32699-inaugurada-primeira-refinaria-de-ouro-de-angola.html",
+  "categoria": "mundo",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "recusada pelo redator",
+  "detalhe": "Notícia de Angola sobre inauguração de refinaria de ouro (economia/mineração). Pela régua da seção \"Notícias da África e do mundo\", seria nota 7 (economia, investimentos, países de língua portuguesa). Porém o texto original não traz nenhuma ligação com a população negra, com o Brasil, com a diáspora ou com a Agenda Preta, e o fato é um ato de inauguração institucional com declarações protocolares do ministro (nota de cerimônia de posse/inauguração e apelos genéricos ao setor). Sem conexão com o leitor brasileiro que acompanha a África e sem fato de impacto relevante, fica abaixo do interesse editorial. Descartada."
  }
 ]
