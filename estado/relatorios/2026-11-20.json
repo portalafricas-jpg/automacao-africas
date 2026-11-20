@@ -86,5 +86,16 @@
   "nota": 4,
   "destino": "nota baixa",
   "detalhe": "Fonte África: tema técnico de aviação civil com a ICAO, sem relação com o Brasil nem com a temática racial."
+ },
+ {
+  "hora": "04:02",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Angola perde nos quartos-de-final do mundial de futebol para amputados",
+  "link": "https://www.giranoticias.com/desporto/2026/11/32698-angola-perde-nos-quartos-de-final-do-mundial-de-futebol-para-amputados.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Notícia de esporte africano (derrota de Angola em mundial de futebol para amputados), o que fica de fora pela régua de notas da África. Sem relação com a temática racial."
  }
 ]
