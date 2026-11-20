@@ -287,5 +287,39 @@
   "destino": "publicada",
   "detalhe": "Governo lança guia contra racismo em aeroportos",
   "foto": "Rafa Neddermeyer/Agência Brasil"
+ },
+ {
+  "hora": "10:02",
+  "fonte": "Alma Preta",
+  "titulo": "‘É uma rebeldia artística’, diz Iza sobre ‘ZAZA’, novo álbum dedicado ao reggae",
+  "link": "https://almapreta.com.br/sessao/cultura/iza-lanca-album-zaza-reggae/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Lançamento de artista negra (Iza) com novo álbum, entrevista com fato novo sobre o disco; é notícia pela regra de lançamento de artista negro (nota mínima 7). Não há matéria recente do portal sobre o álbum ZAZA."
+ },
+ {
+  "hora": "10:02",
+  "fonte": "Mundo Negro",
+  "titulo": "Nossas mais velhas: mulheres negras como referências de luta, sabedoria e protagonismo",
+  "link": "https://mundonegro.inf.br/mulheres-negras-maduras-luta-memoria-protagonismo/",
+  "categoria": "protagonista",
+  "prioridade": "",
+  "nota": 4,
+  "destino": "nota baixa",
+  "detalhe": "Editorial/texto opinativo de Ana Paula Fernandes, sem fato novo: conteúdo opinativo não entra."
+ },
+ {
+  "hora": "10:03",
+  "fonte": "Alma Preta",
+  "titulo": "‘É uma rebeldia artística’, diz Iza sobre ‘ZAZA’, novo álbum dedicado ao reggae",
+  "link": "https://almapreta.com.br/sessao/cultura/iza-lanca-album-zaza-reggae/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "publicada",
+  "detalhe": "Iza lança álbum ZAZA, dedicado ao reggae",
+  "foto": "Divulgação"
  }
 ]
