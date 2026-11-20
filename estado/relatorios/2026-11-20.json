@@ -468,5 +468,39 @@
   "destino": "publicada",
   "detalhe": "Guerra às drogas custa R$ 14,5 bi em 2024",
   "foto": "Paulo Pinto/Agência Brasil"
+ },
+ {
+  "hora": "13:32",
+  "fonte": "Mundo Negro",
+  "titulo": "Consciência Negra não é só em novembro",
+  "link": "https://mundonegro.inf.br/consciencia-negra-nao-e-so-em-novembro/",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "Texto opinativo/reflexivo sobre a Consciência Negra, sem fato novo noticiado; conteúdo de opinião não entra como notícia."
+ },
+ {
+  "hora": "13:32",
+  "fonte": "Cultura Preta",
+  "titulo": "Una Menino lança “Costura”, disco com produção de Malka Julieta, e participações de UANA e Amun Há",
+  "link": "https://culturapreta.com/2026/11/20/una-menino-lanca-costura-disco-com-producao-de-malka-julieta-e-participacoes-de-uana-e-amun-ha/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Lançamento de disco de artista negra (multiartista negra, nordestina e não-binárie), fonte oficial de lançamento; lançamento de artista negro é notícia com nota mínima 7. Não há matéria igual nos últimos 5 dias."
+ },
+ {
+  "hora": "13:33",
+  "fonte": "Cultura Preta",
+  "titulo": "Una Menino lança “Costura”, disco com produção de Malka Julieta, e participações de UANA e Amun Há",
+  "link": "https://culturapreta.com/2026/11/20/una-menino-lanca-costura-disco-com-producao-de-malka-julieta-e-participacoes-de-uana-e-amun-ha/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "publicada",
+  "detalhe": "Una Menino lança disco Costura com UANA e Amun Há",
+  "foto": "UHGO Desing Aurora Jamelo"
  }
 ]
