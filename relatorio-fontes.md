@@ -1,9 +1,9 @@
 # Relatório do teste de fontes (versão 2)
 
-Teste feito em 19/11/2026 22:40.
+Teste feito em 19/11/2026 22:45.
 
 Sites: 1 OK de 3.
-Buscas: Google Notícias 3 OK e Bing Notícias 2 OK, de 3.
+Buscas: Google Notícias 3 OK e Bing Notícias 1 OK, de 3.
 
 ## Sites
 
@@ -17,6 +17,6 @@ Buscas: Google Notícias 3 OK e Bing Notícias 2 OK, de 3.
 
 | # | Busca | Categoria | Google | Notícias | Leitura | Bing | Notícias | Leitura |
 |---|---|---|---|---|---|---|---|---|
-| 3 | site:voaportugues.com | mundo | OK | 59 (0 em 48h) | leu 1315 caracteres (voaportugues.com) | ERRO | 0 | RSS sem notícias |
-| 4 | site:rtp.pt África | mundo | OK | 100 (92 em 48h) | leu 1467 caracteres (rtp.pt) | OK | 12 (7 em 48h) | leu 1650 caracteres (rtp.pt) |
+| 3 | site:voaportugues.com | mundo | OK | 59 (0 em 48h) | leu 1315 caracteres (voaportugues.com) | ERRO | - | não abriu o RSS (not well-formed (invalid token): line 1,) |
+| 4 | site:rtp.pt África | mundo | OK | 100 (91 em 48h) | leu 1467 caracteres (rtp.pt) | ERRO | - | não abriu o RSS (not well-formed (invalid token): line 1,) |
 | 6 | "Expo África Brasil" | cultura | OK | 10 (1 em 48h) | leu 882 caracteres (lnfoficial.com.br) | OK | 1 (0 em 48h) | leu 5377 caracteres (correio24horas.com.br) |
