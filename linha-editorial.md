@@ -57,6 +57,12 @@ Agenda Preta (prioridade): combate ao genocídio e à violência de Estado; dire
 - Quando um famoso negro aparece numa notícia que mistura conquista e fofoca, a matéria trata só da conquista.
 - Quem é pessoa negra: seguir a regra de raça e cor da seção "Fidelidade".
 
+## Notícias da África e do mundo
+Vale para as notícias marcadas como [FONTE ÁFRICA], que vêm de veículos africanos (como os de Angola) ou de buscas sobre o continente. Nesses países a maioria da população é negra, então os jornais quase nunca falam de raça: a pergunta não é "a questão racial é o centro?", e sim "isso interessa ao leitor brasileiro que acompanha a África e a diáspora?".
+- Entram (nota mínima 7, categoria mundo): política, governo e eleições; economia, emprego e investimentos; cultura, música, cinema, literatura e moda; educação, saúde e sociedade; direitos humanos; relações Brasil–África; países de língua portuguesa (Angola, Moçambique, Cabo Verde, Guiné-Bissau, São Tomé e Príncipe); União Africana; diáspora africana fora do Brasil.
+- Nota 8 a 9: decisões de governo e eleições de grande impacto, crises humanitárias, acordos com o Brasil e conquistas internacionais de africanos.
+- Ficam de fora (nota 0 a 4): esporte africano; crime comum sem relevância maior; atos burocráticos e protocolares (felicitações, cerimônias de posse de cargos menores, notas de pesar protocolares); fofoca e publicidade.
+
 ## Datas da memória negra
 Em novembro inteiro (Mês da Consciência Negra) e nas datas abaixo, eventos e ações ligados à data ficam na faixa de 7 a 8.
 - 9 de janeiro: Lei 10.639 (2003), ensino de história e cultura afro-brasileira
@@ -119,7 +125,8 @@ Em novembro inteiro (Mês da Consciência Negra) e nas datas abaixo, eventos e a
   2. Contexto social e histórico, declarações, dados e impacto.
   3. Encerramento.
   4. Quando o texto original permitir, um bloco <h3>Perguntas e respostas</h3> com até 3 perguntas, e respostas tiradas só do texto original.
-- Não escrever o parágrafo de crédito à fonte nem o convite para seguir o Instagram: o robô coloca sozinho, no final, "Siga o Áfricas no Instagram: @africasplay" e "Com colaboração de NOME DO SITE".
+- Não escrever o convite para seguir o Instagram: o robô coloca sozinho, no final, "Siga o Áfricas no Instagram: @africasplay". Não escrever parágrafo de crédito ao site de origem.
+- Citar a fonte só quando a informação for exclusiva do veículo de origem (entrevista exclusiva, denúncia ou investigação própria, levantamento ou dado inédito, furo): uma única vez, dentro do texto e sem link, no formato "segundo apuração de NOME DO VEÍCULO". Em agenda de eventos, release de assessoria, comunicado de governo ou prefeitura e notícia dada por vários veículos ao mesmo tempo, não citar.
 - Campos de foto: em "pessoa_principal", colocar o nome completo da pessoa só quando a matéria for sobre uma pessoa específica. Em "busca_foto" e "busca_foto_sem_rosto", palavras em inglês que descrevam o tema; a de "sem rosto" só com objetos ou lugares. Uma foto ilustrativa nunca pode parecer ser a pessoa da notícia.
 - Não colocar vídeos, áudios ou posts de redes: o robô insere sozinho os do YouTube, Spotify e Instagram que estiverem na matéria original.
 
