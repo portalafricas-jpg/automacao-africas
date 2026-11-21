@@ -186,5 +186,27 @@
   "nota": 6,
   "destino": "nota baixa",
   "detalhe": "Lista de produções do cinema negro disponíveis em streaming; tema racial aparece, mas a notícia é uma recomendação de conteúdo, sem fato novo de destaque. Conteúdo com ligação à memória e à resistência negra, porém sem conquista de pessoa negra nem fato relevante. Origem AlmaPreta é de outro veículo, mas a informação é de divulgação de plataforma, não exclusiva de reportagem."
+ },
+ {
+  "hora": "10:17",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Angola e Finlândia abordam incremento da cooperação bilateral",
+  "link": "https://www.giranoticias.com/politica/2026/11/32719-angola-e-finlandia-abordam-incremento-da-cooperacao-bilateral.html",
+  "categoria": "mundo",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Notícia interna de cooperação entre Angola e Finlândia, sem ligação direta com o Brasil. Entra como notícia da África, nota 7, mas sem fato novo relevante e sem conexão com a população negra brasileira."
+ },
+ {
+  "hora": "10:17",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Angola e Finlândia abordam incremento da cooperação bilateral",
+  "link": "https://www.giranoticias.com/politica/2026/11/32719-angola-e-finlandia-abordam-incremento-da-cooperacao-bilateral.html",
+  "categoria": "mundo",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "recusada pelo redator",
+  "detalhe": "Notícia de diplomacia burocrática entre Angola e Finlândia (encontro protocolar à margem de fórum, nota de imprensa) sem ligação com a população negra, o Brasil ou a diáspora. O fórum Nórdicos-Africanos trata de temas gerais (multilateralismo, IA) sem recorte racial. Não atende ao critério de interesse para o leitor brasileiro que acompanha a África, e o conteúdo é de atos protocolares e cerimoniais, que ficam de fora (nota 0 a 4)."
  }
 ]
