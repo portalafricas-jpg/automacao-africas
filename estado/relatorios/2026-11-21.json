@@ -9,5 +9,16 @@
   "nota": 3,
   "destino": "nota baixa",
   "detalhe": "Texto opinativo/de contexto sem fato novo claro; material insuficiente para matéria honesta e a fonte (AlmaPreta) é veículo de outra imprensa negra, sem fato oficial que possa ser reaproveitado. Fica abaixo do mínimo para entrar."
+ },
+ {
+  "hora": "07:17",
+  "fonte": "Notícia Preta",
+  "titulo": "“É o maior projeto da minha vida“ diz Kbrum sobre novo álbum ‘Raagaleluia’",
+  "link": "https://noticiapreta.com.br/e-o-maior-projeto-da-minha-vida-diz-kbrum-sobre-novo-album-raagaleluia/?utm_source=rss&utm_medium=rss&utm_campaign=e-o-maior-projeto-da-minha-vida-diz-kbrum-sobre-novo-album-raagaleluia",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Entrevista exclusiva ao Notícia Preta (conteúdo exclusivo de outro veículo, nota 0 a 4). Não há fonte oficial nem release; o fato do lançamento do álbum é o lançamento de artista negro, mas a notícia vem de entrevista exclusiva, o que não entra."
  }
 ]
