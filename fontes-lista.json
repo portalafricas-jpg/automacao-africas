@@ -1,38 +1,7 @@
 [
- {
-  "nome": "VOA Português",
-  "categoria": "mundo",
-  "url": "https://www.voaportugues.com/",
-  "tipo": "site"
- },
- {
-  "nome": "RTP Notícias - África",
-  "categoria": "mundo",
-  "url": "https://www.rtp.pt/noticias/africa",
-  "tipo": "site"
- },
- {
-  "nome": "Busca - VOA Português pelo Bing",
-  "categoria": "mundo",
-  "busca": "site:voaportugues.com",
-  "tipo": "busca"
- },
- {
-  "nome": "Busca - RTP África pelo Bing",
-  "categoria": "mundo",
-  "busca": "site:rtp.pt África",
-  "tipo": "busca"
- },
- {
-  "nome": "Expo África Brasil",
-  "categoria": "cultura",
-  "url": "https://expoafricabrasil.com.br/",
-  "tipo": "site"
- },
- {
-  "nome": "Busca - Expo África Brasil",
-  "categoria": "cultura",
-  "busca": "\"Expo África Brasil\"",
-  "tipo": "busca"
- }
+ {"nome": "Busca - racismo", "categoria": "cotidiano", "busca": "racismo", "tipo": "busca"},
+ {"nome": "Busca - quilombola", "categoria": "ancestralidade", "busca": "Quilombola", "tipo": "busca"},
+ {"nome": "Busca - Angola", "categoria": "mundo", "busca": "Angola", "tipo": "busca"},
+ {"nome": "Busca - Emicida", "categoria": "protagonista", "busca": "Emicida", "tipo": "busca"},
+ {"nome": "Busca - igualdade racial", "categoria": "politica", "busca": "igualdade racial", "tipo": "busca"}
 ]
