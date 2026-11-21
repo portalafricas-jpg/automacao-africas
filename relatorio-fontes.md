@@ -1,22 +1,21 @@
 # Relatório do teste de fontes (versão 2)
 
-Teste feito em 21/11/2026 10:16.
+Teste feito em 21/11/2026 10:21.
 
-Sites: 1 OK de 3.
-Buscas: Google Notícias 3 OK e Bing Notícias 2 OK, de 3.
+Sites: 0 OK de 0.
+Buscas: Bing por data 5 OK e Bing normal 5 OK, de 5.
 
 ## Sites
 
 | # | Fonte | Categoria | Status | Notícias | Mais recente | Leitura do texto | Observação |
 |---|---|---|---|---|---|---|---|
-| 1 | VOA Português | mundo | SEM TEXTO | 20 (0 em 48h) | 31/03 11:02 | texto curto ou bloqueado (voaportugues.com)  | RSS: https://www.voaportugues.com/api/ |
-| 2 | RTP Notícias - África | mundo | ERRO | 0 | - | - | sem RSS e sem links de matérias na página |
-| 5 | Expo África Brasil | cultura | OK | 2 (0 em 48h) | sem data | leu 3757 caracteres (expoafricabrasil.com.br) | sem RSS: lendo a página de notícias |
 
-## Buscas: Google Notícias x Bing Notícias
+## Buscas: Bing por data x Bing normal
 
-| # | Busca | Categoria | Google | Notícias | Leitura | Bing | Notícias | Leitura |
+| # | Busca | Categoria | Bing por data | Notícias | Leitura | Bing normal | Notícias | Leitura |
 |---|---|---|---|---|---|---|---|---|
-| 3 | site:voaportugues.com | mundo | OK | 59 (0 em 48h) | leu 1315 caracteres (voaportugues.com) | ERRO | 0 | RSS sem notícias |
-| 4 | site:rtp.pt África | mundo | OK | 100 (86 em 48h) | leu 870 caracteres (rtp.pt) | OK | 12 (2 em 48h) | leu 3785 caracteres (rtp.pt) |
-| 6 | "Expo África Brasil" | cultura | OK | 10 (3 em 48h) | leu 882 caracteres (lnfoficial.com.br) | OK | 1 (0 em 48h) | leu 5377 caracteres (correio24horas.com.br) |
+| 1 | racismo | cotidiano | OK | 10 (10 em 48h) | leu 3932 caracteres (revistaforum.com.br) | OK | 12 (11 em 48h) | leu 6601 caracteres (oglobo.globo.com) |
+| 2 | Quilombola | ancestralidade | OK | 9 (9 em 48h) | leu 9685 caracteres (opovo.com.br) | OK | 10 (4 em 48h) | leu 11437 caracteres (g1.globo.com) |
+| 3 | Angola | mundo | OK | 9 (9 em 48h) | leu 5558 caracteres (noticiasaominuto.com) | OK | 10 (5 em 48h) | leu 3942 caracteres (noticiasaominuto.com) |
+| 4 | Emicida | protagonista | OK | 12 (6 em 48h) | leu 7484 caracteres (virgula.me) | OK | 12 (3 em 48h) | leu 2743 caracteres (100fronteiras.com) |
+| 5 | igualdade racial | politica | OK | 11 (11 em 48h) | leu 4276 caracteres (em.com.br) | OK | 12 (8 em 48h) | leu 2185 caracteres (brasil247.com) |
