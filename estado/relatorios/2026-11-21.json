@@ -342,5 +342,16 @@
   "destino": "publicada",
   "detalhe": "Black Pantera leva rock antirracista ao Tiny Desk",
   "foto": "Divulgação"
+ },
+ {
+  "hora": "12:47",
+  "fonte": "RFI - África",
+  "titulo": "Venâncio Mondlane disse que foi apresentada candidatura sua ao Nobel da Paz",
+  "link": "https://www.rfi.fr/pt/%C3%A1frica-lus%C3%B3fona/20261121-ven%C3%A2ncio-mondlane-disse-que-foi-apresentada-candidatura-sua-ao-nobel-da-paz",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "[FONTE ÁFRICA] Revelação de candidatura ao Nobel da Paz feita pelo próprio político, sem fato institucional confirmado nem ligação com a temática racial ou com o leitor brasileiro; fica abaixo do mínimo para a editoria mundo."
  }
 ]
