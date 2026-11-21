@@ -498,5 +498,28 @@
   "nota": 7,
   "destino": "repetida",
   "detalhe": "Lançamento de artista negra é notícia (nota mínima 7), mas o álbum ZAZA da IZA já foi publicado no portal nos últimos 5 dias (IZA lança ZAZA e faz do reggae um caminho até os ancestrais; ‘É uma rebeldia artística’, diz Iza sobre ‘ZAZA’). Mesmo lançamento, sem fato novo: repetida."
+ },
+ {
+  "hora": "18:32",
+  "fonte": "Cultura Preta",
+  "titulo": "Yung Peachie protagoniza estreia do “Brasil Grime Show Apresenta”",
+  "link": "https://culturapreta.com/2026/11/21/yung-peachie-protagoniza-estreia-do-brasil-grime-show-apresenta/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Lançamento/estreia de nova fase de programa de música urbana com protagonismo de artista negra (Yung Peachie); lançamento de artista negro é notícia (nota mínima 7). Não há matéria recente sobre o mesmo fato no portal."
+ },
+ {
+  "hora": "18:33",
+  "fonte": "Cultura Preta",
+  "titulo": "Yung Peachie protagoniza estreia do “Brasil Grime Show Apresenta”",
+  "link": "https://culturapreta.com/2026/11/21/yung-peachie-protagoniza-estreia-do-brasil-grime-show-apresenta/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "publicada",
+  "detalhe": "Yung Peachie estreia Brasil Grime Show Apresenta",
+  "foto": "@murabak_"
  }
 ]
