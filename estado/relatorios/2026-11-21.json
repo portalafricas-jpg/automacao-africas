@@ -375,5 +375,38 @@
   "nota": 3,
   "destino": "nota baixa",
   "detalhe": "Projeto sobre homicídio culposo de motorista sob álcool ou drogas, sem relação com a temática racial nem recorte que atinja a população negra de forma direta. Fica abaixo do limite para entrar."
+ },
+ {
+  "hora": "15:02",
+  "fonte": "Mundo Negro",
+  "titulo": "Movimento Black Money e MOVER oferecem cursos gratuitos de IA e e-commerce para empreendedores negros",
+  "link": "https://mundonegro.inf.br/afreektech-mover-cursos-gratuitos-pessoas-negras/",
+  "categoria": "protagonista",
+  "prioridade": "",
+  "nota": 6,
+  "destino": "nota baixa",
+  "detalhe": "Cursos gratuitos de IA e e-commerce para empreendedores negros: iniciativa ligada ao empreendedorismo negro e à desigualdade no acesso à tecnologia, mas é divulgação de programação de formação com foco menor na questão racial e sem fato de grande impacto."
+ },
+ {
+  "hora": "15:02",
+  "fonte": "Notícia Preta",
+  "titulo": "BNegão & Black Mantra celebram o legado de Gerson King Combo em show inédito",
+  "link": "https://noticiapreta.com.br/bnegao-black-mantra-celebram-o-legado-de-gerson-king-combo-em-show-inedito/?utm_source=rss&utm_medium=rss&utm_campaign=bnegao-black-mantra-celebram-o-legado-de-gerson-king-combo-em-show-inedito",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Show inédito de BNegão & Black Mantra dedicado à obra de Gerson King Combo, marco da cultura negra (funk e soul nacional), com evento na semana da Consciência Negra. Lançamento/espetáculo de artista negro."
+ },
+ {
+  "hora": "15:03",
+  "fonte": "Notícia Preta",
+  "titulo": "BNegão & Black Mantra celebram o legado de Gerson King Combo em show inédito",
+  "link": "https://noticiapreta.com.br/bnegao-black-mantra-celebram-o-legado-de-gerson-king-combo-em-show-inedito/?utm_source=rss&utm_medium=rss&utm_campaign=bnegao-black-mantra-celebram-o-legado-de-gerson-king-combo-em-show-inedito",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "recusada pelo redator",
+  "detalhe": "Recusa por ser conteúdo que não pode ser reescrito sem risco: o texto é a divulgação de um show (lançamento de evento com programação e artistas), o que se enquadra como release/divulgação. Além disso, a data de publicação (21/11/2026) e o show (sexta-feira, dia 27) não permitem confirmar com segurança o ano e o dia da semana, e o texto não traz links úteis nem informações de ingresso ou horário, o que deixa a matéria incompleta (falta horário e valor). Por essas razões, o material não tem informação suficiente para uma matéria honesta."
  }
 ]
