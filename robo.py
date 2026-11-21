@@ -217,8 +217,9 @@ def ler_rss(url):
 
 
 def bing_url(busca):
+    # qft=sortbydate="1": pede ao Bing as notícias mais novas primeiro (sem isso ele ordena por relevância)
     return "https://www.bing.com/news/search?" + urllib.parse.urlencode(
-        {"q": busca, "format": "rss", "mkt": "pt-BR", "setlang": "pt-BR", "cc": "BR"})
+        {"q": busca, "format": "rss", "mkt": "pt-BR", "setlang": "pt-BR", "cc": "BR", "qft": 'sortbydate="1"'})
 
 
 def link_real_bing(link):
@@ -1012,8 +1013,13 @@ def main():
 
     # Etapa A: buscar notícias novas (janela de 2 horas)
     candidatas = []
+    bing = {"buscas": 0, "recebidas": 0, "na_janela": 0}
     for fonte in fontes:
         itens = ler_fonte(fonte, rodada)
+        if fonte.get("tipo") == "busca" and itens:
+            bing["buscas"] += 1
+            bing["recebidas"] += len(itens)
+            bing["na_janela"] += sum(1 for i in itens if i["data"] and agora - i["data"] <= timedelta(hours=JANELA_HORAS_BUSCA))
         nome = fonte.get("nome", "")
         sem_data = [i for i in itens if not i["data"]]
         if sem_data and nome not in primeira_vez["fontes_iniciadas"]:
@@ -1047,7 +1053,9 @@ def main():
             candidatas.append(dict(item, titulo_original=item["titulo"]))
     candidatas.sort(key=lambda i: i["data"] or agora)
     candidatas = candidatas[:MAX_TRIAGEM_POR_RODADA]
-    log(f"Notícias novas na janela de {JANELA_HORAS}h: {len(candidatas)}")
+    log(f"Bing nesta rodada: {bing['buscas']} buscas com resultado, {bing['recebidas']} notícias recebidas, "
+        f"{bing['na_janela']} das últimas {JANELA_HORAS_BUSCA} horas")
+    log(f"Notícias novas para avaliar: {len(candidatas)}")
 
     # Etapa B: editor-chefe dá nota (uma consulta só para todas)
     if candidatas:
