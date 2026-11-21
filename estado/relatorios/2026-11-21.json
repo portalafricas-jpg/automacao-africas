@@ -453,5 +453,28 @@
   "destino": "publicada",
   "detalhe": "Emicida distribui comida com Júlio Ritta em Porto Alegre",
   "foto": "Reproduçãp"
+ },
+ {
+  "hora": "16:47",
+  "fonte": "Virada da Consciência",
+  "titulo": "9ª Corrida e Caminhada da Consciência Negra reúne mais de 2 mil participantes no Pacaembu, em São Paulo",
+  "link": "https://viradadaconsciencia.com.br/9a-corrida-e-caminhada-da-consciencia-negra-reune-mais-de-2-mil-participantes-no-pacaembu-em-sao-paulo/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Evento esportivo e de saúde ligado à data da Consciência Negra (20/11), com participação ampla; é evento local de memória negra, na faixa 7 a 8, mas sem recorte claro de protagonismo ou Agenda Preta direta."
+ },
+ {
+  "hora": "16:48",
+  "fonte": "Virada da Consciência",
+  "titulo": "9ª Corrida e Caminhada da Consciência Negra reúne mais de 2 mil participantes no Pacaembu, em São Paulo",
+  "link": "https://viradadaconsciencia.com.br/9a-corrida-e-caminhada-da-consciencia-negra-reune-mais-de-2-mil-participantes-no-pacaembu-em-sao-paulo/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "publicada",
+  "detalhe": "Corrida da Consciência Negra reúne 2 mil no Pacaembu",
+  "foto": "Divulgação"
  }
 ]
