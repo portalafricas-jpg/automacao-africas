@@ -230,5 +230,27 @@
   "nota": 7,
   "destino": "recusada pelo redator",
   "detalhe": "Recusada: o texto é um registro social de evento diplomático (presença de uma embaixada em bazar beneficente em Lisboa), sem fato de relevância para a população negra nem conexão com a Agenda Preta. Não há informação suficiente para matéria honesta sobre o tema racial ou de política pública; o conteúdo se limita a cerimônia protocolar e venda de artesanato. Além disso, a notícia tem data de 21/11/2026 e o texto não traz informação sobre o período do evento além de \"sexta-feira\", o que compromete a checagem de atualidade."
+ },
+ {
+  "hora": "11:18",
+  "fonte": "Notícia Preta",
+  "titulo": "Pinnah recebe Medalha Pedro Ernesto em reconhecimento à sua contribuição para a cultura brasileira",
+  "link": "https://noticiapreta.com.br/pinnah-recebe-medalha-pedro-ernesto-em-reconhecimento-a-sua-contribuicao-para-a-cultura-brasileira/?utm_source=rss&utm_medium=rss&utm_campaign=pinnah-recebe-medalha-pedro-ernesto-em-reconhecimento-a-sua-contribuicao-para-a-cultura-brasileira",
+  "categoria": "protagonista",
+  "prioridade": "",
+  "nota": 8,
+  "destino": "repetida",
+  "detalhe": "Conquista de figura negra do carnaval (honraria da Câmara do Rio), mas já publicada no portal: 'Ícone do Carnaval, Pinah recebe honraria na Câmara do Rio' sai nos últimos 5 dias. Mesmo evento, sem fato novo."
+ },
+ {
+  "hora": "11:18",
+  "fonte": "Alma Preta",
+  "titulo": "Conexão precária atinge 59% dos internautas e governo discute recursos para inclusão digital",
+  "link": "https://almapreta.com.br/sessao/politica/conexao-precaria-recursos-inclusao-digital/",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 6,
+  "destino": "nota baixa",
+  "detalhe": "Política de conectividade e inclusão digital que atinge a população mais pobre, que inclui a população negra, mas o texto é curto e trata de reunião para discutir linha de fomento, sem decisão. Tema social amplo com conexão racial fraca; nota no limite. Fonte é AlmaPreta, com informação de conselho gestor, sem indicação de exclusividade."
  }
 ]
