@@ -430,5 +430,28 @@
   "nota": 7,
   "destino": "recusada pelo redator",
   "detalhe": "Recusa: o texto original é conteúdo exclusivo de outro veículo. A entrevista citada foi concedida exclusivamente ao Portal do Rap Nacional (jornalista Pablo Felipe), e a matéria também traz entrevista exclusiva ao próprio veículo sobre a turnê. Além disso, a notícia é uma matéria de agenda e divulgação de show com o material do veículo de origem, sem fonte oficial ou múltiplos veículos confirmando o fato. Pelas regras do Áfricas, não há como reescrever sem se apropriar do trabalho exclusivo de outro veículo."
+ },
+ {
+  "hora": "16:18",
+  "fonte": "Portal do RAP Nacional",
+  "titulo": "Emicida distribui pizzas, hambúrgueres e refrigerantes com Júlio Ritta nas ruas de Porto Alegre",
+  "link": "https://portaldorapnacional.com.br/emicida-distribui-pizzas-hamburgueres-e-refrigerantes-com-julio-ritta-nas-ruas-de-porto-alegre/",
+  "categoria": "protagonista",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Trajetória e ação solidária de Emicida, artista negro, no Dia da Consciência Negra; notícia sobre pessoa negra com ação exemplar, sem repetição no portal nos últimos 5 dias."
+ },
+ {
+  "hora": "16:18",
+  "fonte": "Portal do RAP Nacional",
+  "titulo": "Emicida distribui pizzas, hambúrgueres e refrigerantes com Júlio Ritta nas ruas de Porto Alegre",
+  "link": "https://portaldorapnacional.com.br/emicida-distribui-pizzas-hamburgueres-e-refrigerantes-com-julio-ritta-nas-ruas-de-porto-alegre/",
+  "categoria": "protagonista",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "publicada",
+  "detalhe": "Emicida distribui comida com Júlio Ritta em Porto Alegre",
+  "foto": "Reproduçãp"
  }
 ]
