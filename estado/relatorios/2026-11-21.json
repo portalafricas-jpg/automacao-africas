@@ -252,5 +252,27 @@
   "nota": 6,
   "destino": "nota baixa",
   "detalhe": "Política de conectividade e inclusão digital que atinge a população mais pobre, que inclui a população negra, mas o texto é curto e trata de reunião para discutir linha de fomento, sem decisão. Tema social amplo com conexão racial fraca; nota no limite. Fonte é AlmaPreta, com informação de conselho gestor, sem indicação de exclusividade."
+ },
+ {
+  "hora": "11:32",
+  "fonte": "RFI - África",
+  "titulo": "Cabo Verde: CNE publicou resultados finais da reeleição de José Maria Neves",
+  "link": "https://www.rfi.fr/pt/%C3%A1frica-lus%C3%B3fona/20261121-cabo-verde-cne-publicou-resultados-finais-da-reelei%C3%A7%C3%A3o-de-jos%C3%A9-maria-neves",
+  "categoria": "mundo",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Fonte África: eleição presidencial em país de língua portuguesa (Cabo Verde). Resultado final publicado, com desdobramento novo. Nota 7 por ser interna sem ligação direta com o Brasil."
+ },
+ {
+  "hora": "11:32",
+  "fonte": "RFI - África",
+  "titulo": "Cabo Verde: CNE publicou resultados finais da reeleição de José Maria Neves",
+  "link": "https://www.rfi.fr/pt/%C3%A1frica-lus%C3%B3fona/20261121-cabo-verde-cne-publicou-resultados-finais-da-reelei%C3%A7%C3%A3o-de-jos%C3%A9-maria-neves",
+  "categoria": "mundo",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "recusada pelo redator",
+  "detalhe": "Notícia sobre resultados eleitorais de Cabo Verde sem informação suficiente para matéria honesta com recorte racial ou ligação clara com a Agenda Preta, e o texto original (RFI) apresenta apenas dados gerais de eleição; além disso, a conexão com o leitor brasileiro e com a temática da população negra não está presente no material. Descartada para não inventar contexto racial."
  }
 ]
