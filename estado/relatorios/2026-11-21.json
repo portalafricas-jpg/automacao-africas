@@ -120,5 +120,38 @@
   "nota": 2,
   "destino": "nota baixa",
   "detalhe": "Informação de saúde geral sobre hipertensão e AVC, sem recorte racial, sem ligação com Brasil e sem fato urgente. Não é notícia para o portal."
+ },
+ {
+  "hora": "09:32",
+  "fonte": "Alma Preta",
+  "titulo": "‘É gostoso, mas desafiador’: casal mostra força do amor e do empreendedorismo preto",
+  "link": "https://almapreta.com.br/sessao/cotidiano/casal-amor-empreendedorismo-preto/",
+  "categoria": "protagonista",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Trajetória de casal negro empreendedor que debate a ampliação da presença negra em espaços de liderança; conquista e debate sobre oportunidades. Não há no portal matéria sobre o mesmo fato nos últimos 5 dias."
+ },
+ {
+  "hora": "09:32",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Inaugurada instalações da Provedoria de Justiça no Moxico",
+  "link": "https://www.giranoticias.com/politica/2026/11/32717-inaugurada-instalacoes-da-provedoria-de-justica-no-moxico.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "Inauguração de instalações da Provedoria de Justiça no Moxico (Angola) é ato burocrático/institucional local, sem ligação com o Brasil nem com temática racial; fica de fora."
+ },
+ {
+  "hora": "09:32",
+  "fonte": "Alma Preta",
+  "titulo": "‘É gostoso, mas desafiador’: casal mostra força do amor e do empreendedorismo preto",
+  "link": "https://almapreta.com.br/sessao/cotidiano/casal-amor-empreendedorismo-preto/",
+  "categoria": "protagonista",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "recusada pelo redator",
+  "detalhe": "Matéria é uma entrevista/perfil sobre a vida pessoal e a relação afetiva de um casal de empresários, sem fato novo ou notícia concreta (sem lançamento, conquista, decisão ou dado). Trata-se de conteúdo de entrevista exclusiva do veículo de origem, com falas opinativas sobre amor e rotina, sem fato jornalístico que justifique a matéria. Não há informação suficiente para uma matéria honesta e relevante, então a pauta é descartada."
  }
 ]
