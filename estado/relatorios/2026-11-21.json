@@ -153,5 +153,27 @@
   "nota": 7,
   "destino": "recusada pelo redator",
   "detalhe": "Matéria é uma entrevista/perfil sobre a vida pessoal e a relação afetiva de um casal de empresários, sem fato novo ou notícia concreta (sem lançamento, conquista, decisão ou dado). Trata-se de conteúdo de entrevista exclusiva do veículo de origem, com falas opinativas sobre amor e rotina, sem fato jornalístico que justifique a matéria. Não há informação suficiente para uma matéria honesta e relevante, então a pauta é descartada."
+ },
+ {
+  "hora": "09:47",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Angola reforça parcerias económicas em Budapeste",
+  "link": "https://www.giranoticias.com/politica/2026/11/32718-angola-reforca-parcerias-economicas-em-budapeste.html",
+  "categoria": "mundo",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Notícia de fonte africana sobre parcerias económicas de Angola, país de língua portuguesa, em Budapeste. Interessa ao leitor que acompanha a África e os países de língua portuguesa, mas não tem ligação direta com o Brasil nem com a população negra brasileira, então fica na faixa 7 e sem prioridade alta. Não há matéria recente sobre o mesmo fato no portal."
+ },
+ {
+  "hora": "09:47",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Angola reforça parcerias económicas em Budapeste",
+  "link": "https://www.giranoticias.com/politica/2026/11/32718-angola-reforca-parcerias-economicas-em-budapeste.html",
+  "categoria": "mundo",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "recusada pelo redator",
+  "detalhe": "Notícia de diplomacia econômica entre Angola e Hungria (encontro empresarial em Budapeste) sem relação com a população negra, sem recorte racial, direitos, território, cultura ou protagonismo negro. Não atende ao critério de interesse para o leitor brasileiro que acompanha a África e a diáspora: é um evento protocolar de promoção de investimentos, sem impacto direto em políticas públicas de trabalho, renda ou igualdade racial. Nota abaixo de 7."
  }
 ]
