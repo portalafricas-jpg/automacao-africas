@@ -53,5 +53,50 @@
   "nota": 8,
   "destino": "recusada pelo redator",
   "detalhe": "Matéria de agenda de concurso de Carnaval com informações pouco claras (data do texto é 21/11/2026 e fala em \"Carnaval 2027\"), sem relação direta com a temática racial no texto original, sem falas de pessoas negras, conquistas identificadas ou fatos que tragam conexão com a Agenda Preta. Além disso, o texto original é inconsistente (repete parágrafos e diz \"dez candidatos e dez candidatos\"), o que impede uma matéria honesta e fiel. Recusada por falta de informação suficiente e de relevância racial clara."
+ },
+ {
+  "hora": "09:02",
+  "fonte": "Notícia Preta",
+  "titulo": "Taxa de desemprego no Brasil cai em 8 estados no 3º trimestre",
+  "link": "https://noticiapreta.com.br/taxa-de-desemprego-no-brasil-cai-em-8-estados-no-3o-trimestre/?utm_source=rss&utm_medium=rss&utm_campaign=taxa-de-desemprego-no-brasil-cai-em-8-estados-no-3o-trimestre",
+  "categoria": "politica",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Dado oficial do IBGE sobre desemprego; é política pública de trabalho e renda que atinge diretamente a população negra, maioria entre os trabalhadores de menor renda. Não há matéria recente sobre o mesmo fato."
+ },
+ {
+  "hora": "09:02",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Comunidade hispânica na Austrália saúda adesão de Angola à Organização Ibero-Americana",
+  "link": "https://www.giranoticias.com/politica/2026/11/32713-comunidade-hispanica-na-australia-sauda-adesao-de-angola-a-organizacao-ibero-americana.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Notícia de baixo conteúdo sobre adesão de Angola a organização ibero-americana, sem fato relevante para a temática racial; título protocolar e sem informação suficiente para matéria."
+ },
+ {
+  "hora": "09:02",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Novos estúdios da TPA reforçam capacidade de produção audiovisual",
+  "link": "https://www.giranoticias.com/sociedade/2026/11/32714-novos-estudios-da-tpa-reforcam-capacidade-de-producao-audiovisual.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "Inauguração de estúdios de TV em Angola é fato de interesse limitado ao leitor brasileiro, sem ligação com Brasil, cultura negra ou temática racial e sem material suficiente para matéria honesta."
+ },
+ {
+  "hora": "09:03",
+  "fonte": "Notícia Preta",
+  "titulo": "Taxa de desemprego no Brasil cai em 8 estados no 3º trimestre",
+  "link": "https://noticiapreta.com.br/taxa-de-desemprego-no-brasil-cai-em-8-estados-no-3o-trimestre/?utm_source=rss&utm_medium=rss&utm_campaign=taxa-de-desemprego-no-brasil-cai-em-8-estados-no-3o-trimestre",
+  "categoria": "politica",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "publicada",
+  "detalhe": "Desemprego cai em 8 estados no 3º trimestre",
+  "foto": "Marcelo Camargo/Agência Brasil"
  }
 ]
