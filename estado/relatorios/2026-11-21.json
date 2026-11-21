@@ -364,5 +364,16 @@
   "nota": 3,
   "destino": "nota baixa",
   "detalhe": "Iniciativa de vitrine de criadores do próprio portal, com texto promocional e sem fato jornalístico novo sobre a temática racial; é conteúdo institucional/publicitário e não notícia."
+ },
+ {
+  "hora": "13:17",
+  "fonte": "Notícia Preta",
+  "titulo": "CCJ do Senado eleva pena para motorista que mata sob álcool ou drogas",
+  "link": "https://noticiapreta.com.br/ccj-do-senado-eleva-pena-para-motorista-que-mata-sob-alcool-ou-drogas/?utm_source=rss&utm_medium=rss&utm_campaign=ccj-do-senado-eleva-pena-para-motorista-que-mata-sob-alcool-ou-drogas",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "Projeto sobre homicídio culposo de motorista sob álcool ou drogas, sem relação com a temática racial nem recorte que atinja a população negra de forma direta. Fica abaixo do limite para entrar."
  }
 ]
