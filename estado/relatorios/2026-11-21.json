@@ -20,5 +20,16 @@
   "nota": 2,
   "destino": "nota baixa",
   "detalhe": "Entrevista exclusiva ao Notícia Preta (conteúdo exclusivo de outro veículo, nota 0 a 4). Não há fonte oficial nem release; o fato do lançamento do álbum é o lançamento de artista negro, mas a notícia vem de entrevista exclusiva, o que não entra."
+ },
+ {
+  "hora": "08:17",
+  "fonte": "Alma Preta",
+  "titulo": "Ataques contra candidatas no Brasil, Colômbia e Bolívia repetem padrões de violência de gênero em períodos eleitorais",
+  "link": "https://almapreta.com.br/sessao/politica/candidatas-brasil-colombia-bolivia-padroes-violencia-genero/",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 6,
+  "destino": "nota baixa",
+  "detalhe": "Pesquisa MonitorA com dados sobre violência de gênero contra candidatas, incluindo racismo nas ofensas; a questão racial aparece mas não é o centro e não há conquista de pessoa negra. Não é repetida do portal."
  }
 ]
