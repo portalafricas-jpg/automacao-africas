@@ -487,5 +487,16 @@
   "nota": 0,
   "destino": "nota baixa",
   "detalhe": "Notícia sobre escolha de show do intervalo do Super Bowl 2027 de 23/10/2026, mais de 48 horas antes de hoje (21/11/2026), e sem relação com a temática racial nem fato relevante para a Agenda Preta; trata-se de especulação ('teria escolhido', 'diz site') sem fato concreto."
+ },
+ {
+  "hora": "17:17",
+  "fonte": "Notícia Preta",
+  "titulo": "Novo álbum da IZA celebra reggae e ancestralidade",
+  "link": "https://noticiapreta.com.br/novo-album-da-iza-celebra-reggae-e-ancestralidade/?utm_source=rss&utm_medium=rss&utm_campaign=novo-album-da-iza-celebra-reggae-e-ancestralidade",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "repetida",
+  "detalhe": "Lançamento de artista negra é notícia (nota mínima 7), mas o álbum ZAZA da IZA já foi publicado no portal nos últimos 5 dias (IZA lança ZAZA e faz do reggae um caminho até os ancestrais; ‘É uma rebeldia artística’, diz Iza sobre ‘ZAZA’). Mesmo lançamento, sem fato novo: repetida."
  }
 ]
