@@ -226,7 +226,7 @@ def main():
         if f["tipo"] == "busca":
             res = {}
             for nome, url, dec in [
-                ("Google", "https://news.google.com/rss/search?q=" + urllib.parse.quote(f["busca"]) + "&hl=pt-BR&gl=BR&ceid=BR:pt-419", decodificar_google),
+                ("Google", bing_url(f["busca"]) + "&qft=" + urllib.parse.quote('sortbydate="1"'), decodificar_bing),
                 ("Bing", bing_url(f["busca"]), decodificar_bing),
             ]:
                 try:
@@ -279,7 +279,7 @@ def main():
         f"Teste feito em {datetime.now(FUSO_SP).strftime('%d/%m/%Y %H:%M')}.",
         "",
         f"Sites: {placar['fonte_ok']} OK de {len(linhas_fontes)}.",
-        f"Buscas: Google Notícias {placar['google_ok']} OK e Bing Notícias {placar['bing_ok']} OK, de {total_buscas}.",
+        f"Buscas: Bing por data {placar['google_ok']} OK e Bing normal {placar['bing_ok']} OK, de {total_buscas}.",
         "",
         "## Sites",
         "",
@@ -287,9 +287,9 @@ def main():
         "|---|---|---|---|---|---|---|---|",
     ] + linhas_fontes + [
         "",
-        "## Buscas: Google Notícias x Bing Notícias",
+        "## Buscas: Bing por data x Bing normal",
         "",
-        "| # | Busca | Categoria | Google | Notícias | Leitura | Bing | Notícias | Leitura |",
+        "| # | Busca | Categoria | Bing por data | Notícias | Leitura | Bing normal | Notícias | Leitura |",
         "|---|---|---|---|---|---|---|---|---|",
     ] + linhas_buscas
     with open("relatorio-fontes.md", "w", encoding="utf-8") as arq:
