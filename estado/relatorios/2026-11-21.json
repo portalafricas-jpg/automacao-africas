@@ -274,5 +274,73 @@
   "nota": 7,
   "destino": "recusada pelo redator",
   "detalhe": "Notícia sobre resultados eleitorais de Cabo Verde sem informação suficiente para matéria honesta com recorte racial ou ligação clara com a Agenda Preta, e o texto original (RFI) apresenta apenas dados gerais de eleição; além disso, a conexão com o leitor brasileiro e com a temática da população negra não está presente no material. Descartada para não inventar contexto racial."
+ },
+ {
+  "hora": "12:33",
+  "fonte": "Alma Preta",
+  "titulo": "Black Pantera leva rock antirracista ao Tiny Desk Brasil em apresentação especial",
+  "link": "https://almapreta.com.br/sessao/cultura/black-pantera-tiny-desk-brasil/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Lançamento/apresentação de banda negra (Black Pantera) com rock antirracista e ancestralidade; cultura negra em destaque. Não consta no portal nos últimos 5 dias."
+ },
+ {
+  "hora": "12:33",
+  "fonte": "Geledés",
+  "titulo": "23ª Marcha da Consciência Negra de São Paulo ocupa a Avenida Paulista",
+  "link": "https://www.geledes.org.br/23a-marcha-da-consciencia-negra-de-sao-paulo-ocupa-a-avenida-paulista/",
+  "categoria": "politica",
+  "prioridade": "alta",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Marcha da Consciência Negra em São Paulo, evento ligado ao Mês da Consciência Negra, com pautas sobre representação no STF e políticas de Estado. Não há matéria igual nos últimos 5 dias (a marcha paulista do portal foi 'Marcha da Consciência Africana', fato distinto), mas o evento já aparece em outras matérias de outras cidades; trata-se de cobertura do ato."
+ },
+ {
+  "hora": "12:33",
+  "fonte": "RFI - África",
+  "titulo": "Cabo Verde: MpD promete “oposição firme e séria” ao Orçamento de Estado",
+  "link": "https://www.rfi.fr/pt/%C3%A1frica-lus%C3%B3fona/20261121-cabo-verde-mpd-promete-oposi%C3%A7%C3%A3o-firme-e-s%C3%A9ria-ao-or%C3%A7amento-de-estado",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "Fonte África: disputa orçamentária partidária em Cabo Verde, sem ligação com o Brasil nem com temas de interesse da diáspora; é política interna sem relevância maior, e a declaração é de posição partidária."
+ },
+ {
+  "hora": "12:33",
+  "fonte": "Africanize",
+  "titulo": "Educação Prêmio Jabuti 2026: autores negros estão entre os finalistas em diferentes categorias 22/10/2026",
+  "link": "https://africanizeoficial.com.br/premio-jabuti-2026-autores-negros-estao-entre-os-finalistas-em-diferentes-categorias",
+  "categoria": "protagonista",
+  "prioridade": "",
+  "nota": 4,
+  "destino": "nota baixa",
+  "detalhe": "Prêmio Jabuti com finalistas negros é notícia de 22/10/2026, fora do limite de 48 horas, sem atualização relevante; o material também não traz informação suficiente para matéria honesta."
+ },
+ {
+  "hora": "12:33",
+  "fonte": "Geledés",
+  "titulo": "23ª Marcha da Consciência Negra de São Paulo ocupa a Avenida Paulista",
+  "link": "https://www.geledes.org.br/23a-marcha-da-consciencia-negra-de-sao-paulo-ocupa-a-avenida-paulista/",
+  "categoria": "politica",
+  "prioridade": "alta",
+  "nota": 7,
+  "destino": "publicada",
+  "detalhe": "Marcha da Consciência Negra ocupa a Paulista",
+  "foto": "Beatriz de Oliveira"
+ },
+ {
+  "hora": "12:33",
+  "fonte": "Alma Preta",
+  "titulo": "Black Pantera leva rock antirracista ao Tiny Desk Brasil em apresentação especial",
+  "link": "https://almapreta.com.br/sessao/cultura/black-pantera-tiny-desk-brasil/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "publicada",
+  "detalhe": "Black Pantera leva rock antirracista ao Tiny Desk",
+  "foto": "Divulgação"
  }
 ]
