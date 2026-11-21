@@ -408,5 +408,27 @@
   "nota": 7,
   "destino": "recusada pelo redator",
   "detalhe": "Recusa por ser conteúdo que não pode ser reescrito sem risco: o texto é a divulgação de um show (lançamento de evento com programação e artistas), o que se enquadra como release/divulgação. Além disso, a data de publicação (21/11/2026) e o show (sexta-feira, dia 27) não permitem confirmar com segurança o ano e o dia da semana, e o texto não traz links úteis nem informações de ingresso ou horário, o que deixa a matéria incompleta (falta horário e valor). Por essas razões, o material não tem informação suficiente para uma matéria honesta."
+ },
+ {
+  "hora": "15:47",
+  "fonte": "Portal do RAP Nacional",
+  "titulo": "Emicida homenageia cinco figuras da história negra catarinense em cartaz da Racional MCMV Tour",
+  "link": "https://portaldorapnacional.com.br/emicida-homenageia-cinco-figuras-da-historia-negra-catarinense-em-cartaz-da-racional-mcmv-tour/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Lançamento de cartaz de Emicida (artista negro) com homenagem a figuras negras catarinenses; conecta cultura negra e memória negra. Não há outra matéria igual nos últimos 5 dias, mas o portal já tem várias matérias sobre Emicida e a turnê, então verificar se o mesmo cartaz não saiu antes."
+ },
+ {
+  "hora": "15:47",
+  "fonte": "Portal do RAP Nacional",
+  "titulo": "Emicida homenageia cinco figuras da história negra catarinense em cartaz da Racional MCMV Tour",
+  "link": "https://portaldorapnacional.com.br/emicida-homenageia-cinco-figuras-da-historia-negra-catarinense-em-cartaz-da-racional-mcmv-tour/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "recusada pelo redator",
+  "detalhe": "Recusa: o texto original é conteúdo exclusivo de outro veículo. A entrevista citada foi concedida exclusivamente ao Portal do Rap Nacional (jornalista Pablo Felipe), e a matéria também traz entrevista exclusiva ao próprio veículo sobre a turnê. Além disso, a notícia é uma matéria de agenda e divulgação de show com o material do veículo de origem, sem fonte oficial ou múltiplos veículos confirmando o fato. Pelas regras do Áfricas, não há como reescrever sem se apropriar do trabalho exclusivo de outro veículo."
  }
 ]
