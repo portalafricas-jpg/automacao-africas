@@ -163,5 +163,16 @@
   "nota": 2,
   "destino": "nota baixa",
   "detalhe": "Explosão em base militar na Líbia, sem relação com a temática racial nem com o Brasil."
+ },
+ {
+  "hora": "06:32",
+  "fonte": "SRzd - Carnaval",
+  "titulo": "Eleita a Corte do Carnaval de São Paulo 2027",
+  "link": "https://srzd.com/blog/carnaval/sao-paulo/eleita-a-corte-do-carnaval-de-sao-paulo-2027/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
  }
 ]
