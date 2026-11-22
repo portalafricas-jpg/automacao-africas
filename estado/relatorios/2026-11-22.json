@@ -332,5 +332,16 @@
   "destino": "publicada",
   "detalhe": "Guiné-Bissau segue sem data para eleições",
   "foto": "Divulgação"
+ },
+ {
+  "hora": "12:02",
+  "fonte": "RFI - África",
+  "titulo": "Feira de Artesanato e Design de Cabo Verde lembra 50 anos da Cooperativa Resistência",
+  "link": "https://www.rfi.fr/pt/%C3%A1frica-lus%C3%B3fona/20261122-feira-de-artesanato-e-design-de-cabo-verde-lembra-50-anos-da-cooperativa-resist%C3%AAncia",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 6,
+  "destino": "nota baixa",
+  "detalhe": "Feira de artesanato em Cabo Verde (país de língua portuguesa) com 150 expositores e 50 anos de cooperativa; interesse cultural para o leitor brasileiro, mas sem conexão racial direta e de menor porte. Nota 6 por ser fonte África com tema cultural, abaixo do mínimo de 7 para notícia de país lusófono interna."
  }
 ]
