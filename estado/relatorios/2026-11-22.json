@@ -264,5 +264,28 @@
   "destino": "publicada",
   "detalhe": "Busto de Dandara dos Palmares é inaugurado no Rio",
   "foto": "Tomaz Silva/Agência Brasil"
+ },
+ {
+  "hora": "10:03",
+  "fonte": "Alma Preta",
+  "titulo": "Sexta edição do Festival Ubuntu celebra produção cultural periférica em São Paulo",
+  "link": "https://almapreta.com.br/sessao/cultura/sexta-edicao-festival-ubuntu-sp/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Festival de produção cultural periférica com 21 atrações premiadas via edital, em São Paulo, com oficinas e debates; evento cultural de interesse da população negra e periférica, sem vínculo claro com a temática racial no resumo. Nota 7 por ser evento cultural de menor porte, sem repetição no portal nos últimos 5 dias."
+ },
+ {
+  "hora": "10:03",
+  "fonte": "Alma Preta",
+  "titulo": "Sexta edição do Festival Ubuntu celebra produção cultural periférica em São Paulo",
+  "link": "https://almapreta.com.br/sessao/cultura/sexta-edicao-festival-ubuntu-sp/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "publicada",
+  "detalhe": "Festival Ubuntu chega à 6ª edição em São Paulo",
+  "foto": "Divulgação"
  }
 ]
