@@ -467,5 +467,17 @@
   "destino": "publicada",
   "detalhe": "Coletivo Prot{agô}nistas estreia {FÉ}STA no Rio",
   "foto": "Sergio Fernandes"
+ },
+ {
+  "hora": "17:33",
+  "fonte": "Portal do RAP Nacional",
+  "titulo": "Afrodite BXD apresenta O Começo de Algo Novo, seu primeiro álbum",
+  "link": "https://portaldorapnacional.com.br/afrodite-bxd-o-comeco-de-algo-novo-album-estreia/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "publicada",
+  "detalhe": "Afrodite BXD lança primeiro álbum, O Começo de Algo Novo",
+  "foto": "Foto ilustrativa: Markus Spiske/Unsplash"
  }
 ]
