@@ -298,5 +298,16 @@
   "nota": 2,
   "destino": "nota baixa",
   "detalhe": "Campanha publicitária de marca de luxo envolvendo criança e irmão de jogador: conteúdo publicitário e assunto pessoal, sem relação com a temática racial. Fica de fora."
+ },
+ {
+  "hora": "11:17",
+  "fonte": "Alma Preta",
+  "titulo": "Cortes de financiamento expõem refugiados a maior risco de tráfico e exploração infantil",
+  "link": "https://almapreta.com.br/sessao/cotidiano/cortes-financiamento-refugiados-trafico-exploracao-infantil/",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 5,
+  "destino": "nota baixa",
+  "detalhe": "Estudos sobre refugiados em Bangladesh e Etiópia tratam de tráfico e exploração infantil, sem recorte racial central e sem ligação direta com a população negra brasileira. É tema de direitos humanos com alcance limitado ao Áfricas. Vem de AlmaPreta, então é conteúdo exclusivo de outro veículo baseado em estudo próprio, o que reduz a nota."
  }
 ]
