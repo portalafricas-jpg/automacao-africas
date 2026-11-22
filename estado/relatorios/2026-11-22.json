@@ -354,5 +354,39 @@
   "nota": 3,
   "destino": "nota baixa",
   "detalhe": "Estudo sobre leitura de e-books e audiolivros por gênero, sem recorte racial no texto original; não é tema da temática racial e não entra no filtro."
+ },
+ {
+  "hora": "13:03",
+  "fonte": "Notícia Preta",
+  "titulo": "Brasileiros percebem racismo estrutural e defendem ações de combate",
+  "link": "https://noticiapreta.com.br/brasileiros-percebem-racismo-estrutural-e-defendem-acoes-de-combate/?utm_source=rss&utm_medium=rss&utm_campaign=brasileiros-percebem-racismo-estrutural-e-defendem-acoes-de-combate",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 6,
+  "destino": "nota baixa",
+  "detalhe": "Estudo de percepção sobre racismo estrutural e apoio a políticas de combate; tem dados sobre desigualdade racial, mas não há no resumo fato urgente nem registro de repetida no portal nos últimos 5 dias. Pesquisa com dados sobre racismo tem nota mínima 7 pelas regras do estudo, portanto nota 7."
+ },
+ {
+  "hora": "13:03",
+  "fonte": "Mundo Negro",
+  "titulo": "Exposição no Rio resgata o lado humano e sensível de João Cândido",
+  "link": "https://mundonegro.inf.br/exposicao-joao-candido-almirante-negro-rio-de-janeiro/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Exposição sobre João Cândido, líder da Revolta da Chibata, no Instituto Pretos Novos, no Rio; evento cultural e memória negra ligado a pilar de cultura e protagonismo negro, sem registro de repetida no portal nos últimos 5 dias."
+ },
+ {
+  "hora": "13:03",
+  "fonte": "Mundo Negro",
+  "titulo": "Exposição no Rio resgata o lado humano e sensível de João Cândido",
+  "link": "https://mundonegro.inf.br/exposicao-joao-candido-almirante-negro-rio-de-janeiro/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "publicada",
+  "detalhe": "Exposição no Rio resgata o lado humano de João Cândido",
+  "foto": "Guilherme Vendrame/Divulgação"
  }
 ]
