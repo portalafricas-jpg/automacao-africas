@@ -196,5 +196,28 @@
   "nota": 8,
   "destino": "recusada pelo redator",
   "detalhe": "Recusada: o texto original é uma entrevista exclusiva concedida ao Notícia Preta (fala \"em entrevista ao Notícia Preta\", com declarações colhidas pelo veículo). Conteúdo exclusivo de outro veículo não pode ser reescrito pelo Áfricas. Além disso, o material é majoritariamente sobre reflexões da atriz sobre o filme, sem fato novo de interesse da Agenda Preta."
+ },
+ {
+  "hora": "08:32",
+  "fonte": "RFI - África",
+  "titulo": "Mindelact coloca Cabo Verde em rede mundial de teatro",
+  "link": "https://www.rfi.fr/pt/%C3%A1frica-lus%C3%B3fona/20261122-mindelact-coloca-cabo-verde-em-rede-mundial-de-teatro",
+  "categoria": "mundo",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Notícia de país de língua portuguesa (Cabo Verde) sobre teatro, ligada à UNESCO. Interesse para o leitor brasileiro que acompanha a diáspora e os PALOP, mas sem conexão direta com o Brasil nem com a temática racial."
+ },
+ {
+  "hora": "08:33",
+  "fonte": "RFI - África",
+  "titulo": "Mindelact coloca Cabo Verde em rede mundial de teatro",
+  "link": "https://www.rfi.fr/pt/%C3%A1frica-lus%C3%B3fona/20261122-mindelact-coloca-cabo-verde-em-rede-mundial-de-teatro",
+  "categoria": "mundo",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "publicada",
+  "detalhe": "Mindelact entra em rede mundial de teatro",
+  "foto": "Divulgação"
  }
 ]
