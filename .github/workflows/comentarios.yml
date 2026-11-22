@@ -1,0 +1,31 @@
+name: Comente APP
+
+# Responde quem comentou "APP": link da matéria no direct e resposta no comentário.
+# Acionado pelo cron-job.org a cada 2 minutos. Não grava nada no repositório.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: comente-app
+  cancel-in-progress: false
+
+jobs:
+  responder:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Pegar os arquivos da pasta
+        uses: actions/checkout@v4
+
+      - name: Instalar o conector
+        run: pip install requests
+
+      - name: Responder os comentários
+        env:
+          META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+        run: python comentarios.py
