@@ -219,5 +219,27 @@
   "destino": "publicada",
   "detalhe": "Mindelact entra em rede mundial de teatro",
   "foto": "Divulgação"
+ },
+ {
+  "hora": "09:02",
+  "fonte": "Alma Preta",
+  "titulo": "Guia orienta passageiros e trabalhadores a identificar e denunciar racismo nos aeroportos",
+  "link": "https://almapreta.com.br/sessao/cotidiano/racismo-nao-decola-guia-denuncia-aeroportos/",
+  "categoria": "politica",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Guia oficial do governo (Anac, Ministérios de Portos e Aeroportos e da Igualdade Racial) contra racismo nos aeroportos. Fato novo e ligado ao combate ao racismo. Porém, o portal já publicou matéria 'Governo lança guia contra racismo em aeroportos e aviões' nos últimos 5 dias, então o mesmo lançamento não deveria sair de novo. Revisar a repetição."
+ },
+ {
+  "hora": "09:02",
+  "fonte": "Alma Preta",
+  "titulo": "Guia orienta passageiros e trabalhadores a identificar e denunciar racismo nos aeroportos",
+  "link": "https://almapreta.com.br/sessao/cotidiano/racismo-nao-decola-guia-denuncia-aeroportos/",
+  "categoria": "politica",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "recusada pelo redator",
+  "detalhe": "Recusa: o texto original informa que o lançamento da campanha foi em 5 de novembro, mas a matéria é de 22/11/2026, ou seja, a notícia tem mais de 48 horas e o fato não tem atualização relevante. Além disso, o lançamento da campanha e do guia é um anúncio oficial já divulgado, sem fato novo que justifique nova publicação. Pelo filtro, notícias com mais de 48 horas são descartadas."
  }
 ]
