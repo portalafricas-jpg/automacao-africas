@@ -53,7 +53,7 @@ COR_CINZA = (200, 200, 200)
 
 # Chamada da Fase 1. Quando o "comente APP" estiver ligado (Fase 2), troca aqui.
 CHAMADA_INSTAGRAM = "👉🏿 Quer ler a matéria completa? Comente APP que a gente te manda o link no direct."
-CHAMADA_FACEBOOK = "👉🏿 Leia a matéria completa no link do primeiro comentário ou no app Áfricas Play."
+CHAMADA_FACEBOOK = "👉🏿 Leia a matéria completa: {link}"
 LIMITE_LEGENDA = 700           # trava de segurança: o corpo da legenda nunca passa disso
 VERSAO_ENSAIO = 3              # mudou a versão: o ensaio refaz as matérias das últimas 24 horas
 
@@ -498,7 +498,8 @@ def montar_legendas(item, textos):
     corpo = cortar_legenda(textos["legenda"].strip())
     creditos = "\n".join(c for c in [credito_texto(item), f"📸 Foto: {item['credito']}" if item["credito"] else ""] if c)
     instagram = "\n\n".join(p for p in [corpo, CHAMADA_INSTAGRAM, creditos, " ".join(tags)] if p)
-    facebook = "\n\n".join(p for p in [corpo, CHAMADA_FACEBOOK, creditos, " ".join(tags[:3])] if p)
+    facebook = "\n\n".join(p for p in [corpo, CHAMADA_FACEBOOK.format(link=item["link"]), creditos,
+                                         " ".join(tags[:3])] if p)
     return instagram, facebook
 
 
@@ -660,11 +661,7 @@ def publicar_facebook(imagens, legenda, link, token, pagina):
     dados = {"message": legenda}
     for i, foto in enumerate(ids):
         dados[f"attached_media[{i}]"] = json.dumps({"media_fbid": foto})
-    post = meta("POST", f"{pagina}/feed", token, dados)["id"]
-    try:
-        meta("POST", f"{post}/comments", token, {"message": f"Matéria completa: {link}"})
-    except ErroMeta as e:
-        log(f"Aviso: post do Facebook saiu, mas o 1º comentário falhou ({e}).")
+    post = meta("POST", f"{pagina}/feed", token, dados)["id"]  # o link da matéria vai no próprio texto
     for foto in ids:
         info = meta("GET", foto, token, {"fields": "images"})
         imgs = sorted(info.get("images", []), key=lambda x: x.get("width", 0), reverse=True)
