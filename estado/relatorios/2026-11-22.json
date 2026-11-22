@@ -9,5 +9,159 @@
   "nota": 7,
   "destino": "na fila",
   "detalhe": "Carnaval e escolas de samba são cultura negra (nota mínima 7). Notícia sobre a definição da Corte do Carnaval de SP 2027, fato novo, sem repetição no portal."
+ },
+ {
+  "hora": "05:32",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Ministra de Estado destaca importância do Dia do Educador em Angola",
+  "link": "https://www.giranoticias.com/sociedade/2026/11/32727-ministra-de-estado-destaca-importancia-do-dia-do-educador-em-angola.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 4,
+  "destino": "nota baixa",
+  "detalhe": "Ato protocolar de celebração de dia do educador em Angola, sem relação com a temática racial nem interesse direto ao leitor brasileiro."
+ },
+ {
+  "hora": "05:32",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Angola quer investimento nos quadros de inteligência da SADC",
+  "link": "https://www.giranoticias.com/politica/2026/11/32729-angola-quer-investimento-nos-quadros-de-inteligencia-da-sadc.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "Assunto interno de cooperação regional sobre inteligência, sem ligação com a temática racial ou com o Brasil."
+ },
+ {
+  "hora": "05:32",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Ministra de Estado defende condições para o ensino das línguas nacionais",
+  "link": "https://www.giranoticias.com/sociedade/2026/11/32726-ministra-de-estado-defende-condicoes-para-o-ensino-das-linguas-nacionais.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 6,
+  "destino": "nota baixa",
+  "detalhe": "Ensino de línguas nacionais em Angola interessa à diáspora e aos países de língua portuguesa, mas é tema interno e sem conexão direta com o Brasil."
+ },
+ {
+  "hora": "05:32",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Aumento da produção interna reduz importação de bens alimentares em Angola",
+  "link": "https://www.giranoticias.com/politica/2026/11/32725-aumento-da-producao-interna-reduz-importacao-de-bens-alimentares-em-angola.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 6,
+  "destino": "nota baixa",
+  "detalhe": "Produção interna e redução de importação de alimentos em Angola se conecta à soberania alimentar, mas o fato é de economia interna sem ligação com o Brasil."
+ },
+ {
+  "hora": "05:32",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Sílvia Lutucuta destaca avanços no Sistema Nacional de Saúde",
+  "link": "https://www.giranoticias.com/sociedade/2026/11/32730-silvia-lutucuta-destaca-avancos-no-sistema-nacional-de-saude.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 5,
+  "destino": "nota baixa",
+  "detalhe": "Avanços no sistema de saúde angolano são política interna, sem ligação com o Brasil nem com a Agenda Preta."
+ },
+ {
+  "hora": "05:32",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Ministra quer reforço de cooperação para responder aos desafios da era digital",
+  "link": "https://www.giranoticias.com/sociedade/2026/11/32728-ministra-quer-reforco-de-cooperacao-para-responder-aos-desafios-da-era-digital.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 4,
+  "destino": "nota baixa",
+  "detalhe": "Declaração genérica sobre cooperação digital, sem fato concreto nem relevância para a população negra."
+ },
+ {
+  "hora": "05:32",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Angola participa na Conferência Mundial de Transporte Aéreo",
+  "link": "https://www.giranoticias.com/economia/2026/11/32722-angola-participa-na-conferencia-mundial-de-transporte-aereo.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "Conferência de transporte aéreo é evento técnico-protocolar sem relação com a temática racial."
+ },
+ {
+  "hora": "05:32",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Angola disputa quinta posição no mundial de futebol para amputados",
+  "link": "https://www.giranoticias.com/desporto/2026/11/32724-angola-disputa-quinta-posicao-no-mundial-de-futebol-para-amputados.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Esporte africano, que fica de fora pela régua editorial."
+ },
+ {
+  "hora": "05:32",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Novo Governo de São Tomé e Príncipe toma posse",
+  "link": "https://www.giranoticias.com/africa/2026/11/32723-novo-governo-de-sao-tome-e-principe-toma-posse.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 6,
+  "destino": "nota baixa",
+  "detalhe": "Posse de novo governo em São Tomé e Príncipe, país de língua portuguesa, mas a posse é ato protocolar de pouco impacto sem detalhes do material."
+ },
+ {
+  "hora": "05:32",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Empresários propõem criação de corredor verde para facilitar exportações",
+  "link": "https://www.giranoticias.com/economia/2026/11/32721-empresarios-propoem-criacao-de-corredor-verde-para-facilitar-exportacoes.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 4,
+  "destino": "nota baixa",
+  "detalhe": "Proposta empresarial de corredor verde para exportações, sem relação com a temática racial nem com o Brasil."
+ },
+ {
+  "hora": "05:32",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Cargueiro russo arde no golfo da Finlândia após ataque com drones",
+  "link": "https://www.giranoticias.com/mundo/2026/11/32738-cargueiro-russo-arde-no-golfo-da-finlandia-apos-ataque-com-drones.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 1,
+  "destino": "nota baixa",
+  "detalhe": "Incidente militar na Finlândia, sem relação com África nem com a temática racial."
+ },
+ {
+  "hora": "05:32",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Captura de líder de cartel no México desencadeia violência",
+  "link": "https://www.giranoticias.com/mundo/2026/11/32737-captura-de-lider-de-cartel-no-mexico-desencadeia-violencia.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 1,
+  "destino": "nota baixa",
+  "detalhe": "Violência de cartel no México, sem relação com a África nem com a temática racial."
+ },
+ {
+  "hora": "05:32",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "COP31 entra em impasse por causa dos combustíveis fósseis",
+  "link": "https://www.giranoticias.com/mundo/2026/11/32736-cop31-entra-em-impasse-por-causa-dos-combustiveis-fosseis.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 4,
+  "destino": "nota baixa",
+  "detalhe": "Impasse em negociação climática sobre combustíveis fósseis, sem relação direta com a temática racial ou com o Brasil."
+ },
+ {
+  "hora": "05:32",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Explosão atinge depósito de munições numa base naval em Benghazi",
+  "link": "https://www.giranoticias.com/africa/2026/11/32735-explosao-atinge-deposito-de-municoes-numa-base-naval-em-benghazi.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Explosão em base militar na Líbia, sem relação com a temática racial nem com o Brasil."
  }
 ]
