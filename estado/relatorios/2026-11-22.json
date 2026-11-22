@@ -433,5 +433,39 @@
   "nota": 1,
   "destino": "nota baixa",
   "detalhe": "Lançamento de tênis de marca sem relação com a temática racial; trata-se de conteúdo publicitário e produto comercial, não notícia de relevância para a população negra."
+ },
+ {
+  "hora": "17:17",
+  "fonte": "Notícia Preta",
+  "titulo": "Coletivo Prot{agô}nistas estreia espetáculo {FÉ}STA no Sesc Copacabana",
+  "link": "https://noticiapreta.com.br/coletivo-protagonistas-estreia-espetaculo-festa-no-sesc-copacabana/?utm_source=rss&utm_medium=rss&utm_campaign=coletivo-protagonistas-estreia-espetaculo-festa-no-sesc-copacabana",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Estreia de espetáculo de coletivo negro (Prot{agô}nistas) sobre circo negro; lançamento de artista negro é notícia de nota mínima 7 e não há matéria recente sobre ele no portal."
+ },
+ {
+  "hora": "17:17",
+  "fonte": "Portal do RAP Nacional",
+  "titulo": "Afrodite BXD apresenta O Começo de Algo Novo, seu primeiro álbum",
+  "link": "https://portaldorapnacional.com.br/afrodite-bxd-o-comeco-de-algo-novo-album-estreia/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Lançamento de álbum de artista negra (Afrodite BXD), lançado em 20 de novembro; é o primeiro álbum e não há matéria recente sobre ele no portal. Nota mínima de lançamento de artista negra."
+ },
+ {
+  "hora": "17:18",
+  "fonte": "Notícia Preta",
+  "titulo": "Coletivo Prot{agô}nistas estreia espetáculo {FÉ}STA no Sesc Copacabana",
+  "link": "https://noticiapreta.com.br/coletivo-protagonistas-estreia-espetaculo-festa-no-sesc-copacabana/?utm_source=rss&utm_medium=rss&utm_campaign=coletivo-protagonistas-estreia-espetaculo-festa-no-sesc-copacabana",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "publicada",
+  "detalhe": "Coletivo Prot{agô}nistas estreia {FÉ}STA no Rio",
+  "foto": "Sergio Fernandes"
  }
 ]
