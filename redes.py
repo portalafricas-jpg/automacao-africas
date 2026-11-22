@@ -49,7 +49,7 @@ COR_CINZA = (200, 200, 200)
 CHAMADA_INSTAGRAM = "👉🏿 Quer ler a matéria completa? Comente APP que a gente te manda o link no direct."
 CHAMADA_FACEBOOK = "👉🏿 Leia a matéria completa no link do primeiro comentário ou no app Áfricas Play."
 LIMITE_LEGENDA = 700           # trava de segurança: o corpo da legenda nunca passa disso
-VERSAO_ENSAIO = 2              # mudou a versão: o ensaio refaz as matérias das últimas 24 horas
+VERSAO_ENSAIO = 3              # mudou a versão: o ensaio refaz as matérias das últimas 24 horas
 
 # Instagram de quem assina as matérias (preencher quando chegar a lista da equipe).
 AUTORES_INSTAGRAM = {
@@ -380,7 +380,7 @@ FERRAMENTA = {
         "type": "object",
         "properties": {
             "frase_destaque": {"type": "string", "description": "Frase forte para a tela 2, até 90 caracteres."},
-            "autor_frase": {"type": "string", "description": "Nome e função curta de quem disse (até 40 caracteres); senão vazio."},
+            "autor_frase": {"type": "string", "description": "Só o nome de quem disse, sem cargo ou função; senão vazio."},
             "legenda": {"type": "string", "description": "Gancho + 1 ou 2 parágrafos curtos, de 350 a 650 caracteres, sem chamada, créditos ou hashtags."},
             "hashtags": {"type": "array", "items": {"type": "string"}, "description": "De 3 a 4 hashtags específicas da matéria."},
             "alt_capa": {"type": "string", "description": "Descrição da imagem da capa para o texto alternativo, com palavras-chave."},
@@ -398,8 +398,8 @@ Vocabulário: escravizado (nunca escravo); difamar (nunca denegrir); grupos mino
 violência de Estado (nunca insegurança pública); pessoa negra / população negra (nunca "de cor" ou "moreno").
 
 1) frase_destaque: a frase mais forte da matéria, com NO MÁXIMO 90 caracteres. Se houver uma fala marcante,
-use um trecho fiel da fala (pode encurtar, sem mudar o sentido) e diga quem falou em autor_frase:
-nome e função curta, com NO MÁXIMO 40 caracteres (ex.: "Fátima Farkas, artista visual"; "Yung Peachie, cantora").
+use um trecho fiel da fala (pode encurtar, sem mudar o sentido) e escreva em autor_frase SÓ O NOME de quem
+falou, sem cargo, função ou explicação (ex.: "Fátima Farkas"; "Yung Peachie").
 Se não houver fala, escreva uma frase-síntese do fato e deixe autor_frase vazio. Sem aspas no texto.
 
 2) legenda (Instagram, carrossel): siga a fórmula.
