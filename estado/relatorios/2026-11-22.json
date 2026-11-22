@@ -309,5 +309,28 @@
   "nota": 5,
   "destino": "nota baixa",
   "detalhe": "Estudos sobre refugiados em Bangladesh e Etiópia tratam de tráfico e exploração infantil, sem recorte racial central e sem ligação direta com a população negra brasileira. É tema de direitos humanos com alcance limitado ao Áfricas. Vem de AlmaPreta, então é conteúdo exclusivo de outro veículo baseado em estudo próprio, o que reduz a nota."
+ },
+ {
+  "hora": "11:32",
+  "fonte": "RFI - África",
+  "titulo": "Guiné-Bissau à espera de eleições um ano depois do golpe",
+  "link": "https://www.rfi.fr/pt/%C3%A1frica-lus%C3%B3fona/20261122-guin%C3%A9-bissau-%C3%A0-espera-das-elei%C3%A7%C3%B5es-um-ano-depois-do-golpe",
+  "categoria": "mundo",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Notícia de país de língua portuguesa (Guiné-Bissau) sobre política e eleições após golpe militar; interessa ao leitor brasileiro que acompanha a África e a diáspora. Nota 7 por ser interna sem ligação direta com o Brasil."
+ },
+ {
+  "hora": "11:33",
+  "fonte": "RFI - África",
+  "titulo": "Guiné-Bissau à espera de eleições um ano depois do golpe",
+  "link": "https://www.rfi.fr/pt/%C3%A1frica-lus%C3%B3fona/20261122-guin%C3%A9-bissau-%C3%A0-espera-das-elei%C3%A7%C3%B5es-um-ano-depois-do-golpe",
+  "categoria": "mundo",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "publicada",
+  "detalhe": "Guiné-Bissau segue sem data para eleições",
+  "foto": "Divulgação"
  }
 ]
