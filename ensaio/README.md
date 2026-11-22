@@ -9,6 +9,56 @@ Ordem das imagens: capa (arte do site), destaque, app e story.
 
 *Cultura · robô, nota 8 · 22/11 13:19*
 
+<img src="2026-11-22/1419-exposicao-no-rio-resgata-o-lado-humano-de-joao-candido/1-capa.jpg" width="240"> <img src="2026-11-22/1419-exposicao-no-rio-resgata-o-lado-humano-de-joao-candido/2-destaque.jpg" width="240"> <img src="2026-11-22/1419-exposicao-no-rio-resgata-o-lado-humano-de-joao-candido/3-app.jpg" width="240"> <img src="2026-11-22/1419-exposicao-no-rio-resgata-o-lado-humano-de-joao-candido/story.jpg" width="240">
+
+**Legenda do Instagram:**
+
+> Exposição no Rio resgata o lado humano de João Cândido, líder da Revolta da Chibata, no Instituto Pretos Novos, na Gamboa.
+> 
+> A mostra reúne 11 obras da artista Fátima Farkas, com pintura, fotografia, colagem, bordado e instalação. A proposta é mostrar um João Cândido além do guerreiro: o homem sensível que bordava durante os períodos de reclusão.
+> 
+> A curadoria destaca que a história oficial pouco registrou esse lado do Almirante Negro. A visita é gratuita e a matéria completa traz o contexto do levante e a relação com o bairro da Pequena África.
+> 
+> 👉🏿 Quer ler a matéria completa? Comente APP que a gente te manda o link no direct.
+> 
+> Texto: Thays Andrade | Áfricas Play
+> 📸 Foto: Guilherme Vendrame/Divulgação
+> 
+> #ÁfricasPlay #JoãoCândido #RevoltaDaChibata #PequenaÁfrica #ExposiçãoRJ
+
+[Ver legendas do Facebook e textos alternativos](2026-11-22/1419-exposicao-no-rio-resgata-o-lado-humano-de-joao-candido/legendas.txt) · [Matéria no site](https://www.africas.com.br/noticia/exposicao-no-rio-resgata-o-lado-humano-de-joao-candido)
+
+---
+
+## Yung Peachie estreia Brasil Grime Show Apresenta
+
+*Cultura · robô, nota 8 · 21/11 18:39*
+
+<img src="2026-11-22/1419-yung-peachie-estreia-brasil-grime-show-apresenta/1-capa.jpg" width="240"> <img src="2026-11-22/1419-yung-peachie-estreia-brasil-grime-show-apresenta/2-destaque.jpg" width="240"> <img src="2026-11-22/1419-yung-peachie-estreia-brasil-grime-show-apresenta/3-app.jpg" width="240"> <img src="2026-11-22/1419-yung-peachie-estreia-brasil-grime-show-apresenta/story.jpg" width="240">
+
+**Legenda do Instagram:**
+
+> Yung Peachie é a primeira artista convidada do novo formato do Brasil Grime Show, o lançamento "Brasil Grime Show Apresenta". O trabalho já está nas plataformas digitais.
+> 
+> O novo formato aposta em showcases ao vivo que aproximam artistas e público, colocando a performance e a personalidade artística no centro da experiência. A proposta vai além das tradicionais sessões de grime e amplia o alcance da plataforma na música urbana do país.
+> 
+> A trajetória de Yung Peachie passa pelo samba, funk, charme, música eletrônica, rap e grime, com temas ligados à identidade, sexualidade e ocupação de espaços. Descubra como essas referências aparecem no novo trabalho.
+> 
+> 👉🏿 Quer ler a matéria completa? Comente APP que a gente te manda o link no direct.
+> 
+> Texto: Thays Andrade | Áfricas Play
+> 📸 Foto: @murabak_
+> 
+> #ÁfricasPlay #YungPeachie #BrasilGrimeShow #GrimeBrasil #MusicaUrbana
+
+[Ver legendas do Facebook e textos alternativos](2026-11-22/1419-yung-peachie-estreia-brasil-grime-show-apresenta/legendas.txt) · [Matéria no site](https://www.africas.com.br/noticia/yung-peachie-estreia-brasil-grime-show-apresenta)
+
+---
+
+## Exposição no Rio resgata o lado humano de João Cândido
+
+*Cultura · robô, nota 8 · 22/11 13:19*
+
 <img src="2026-11-22/1410-exposicao-no-rio-resgata-o-lado-humano-de-joao-candido/1-capa.jpg" width="240"> <img src="2026-11-22/1410-exposicao-no-rio-resgata-o-lado-humano-de-joao-candido/2-destaque.jpg" width="240"> <img src="2026-11-22/1410-exposicao-no-rio-resgata-o-lado-humano-de-joao-candido/3-app.jpg" width="240"> <img src="2026-11-22/1410-exposicao-no-rio-resgata-o-lado-humano-de-joao-candido/story.jpg" width="240">
 
 **Legenda do Instagram:**
