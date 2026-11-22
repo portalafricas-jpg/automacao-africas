@@ -1,0 +1,148 @@
+name: Teste da chave da Meta
+
+# Só lê informações. Não publica nada, não apaga nada, não altera nada.
+on:
+  workflow_dispatch:
+
+jobs:
+  teste:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Conferir chave, permissões e números de hoje
+        env:
+          META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+          META_USER_TOKEN: ${{ secrets.META_USER_TOKEN }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+        run: |
+          python3 - <<'FIM'
+          import json, os, time, urllib.parse, urllib.request, urllib.error
+
+          API = "https://graph.facebook.com/v26.0/"
+          PAGE = os.environ.get("META_PAGE_TOKEN", "").strip()
+          USER = os.environ.get("META_USER_TOKEN", "").strip()
+          FB = os.environ.get("FB_PAGE_ID", "").strip()
+          IG = os.environ.get("IG_USER_ID", "").strip()
+          linhas = []
+
+          def diz(t=""):
+              print(t)
+              linhas.append(t)
+
+          def pede(caminho, params, token):
+              params = dict(params)
+              params["access_token"] = token
+              url = API + caminho + "?" + urllib.parse.urlencode(params)
+              try:
+                  with urllib.request.urlopen(url, timeout=30) as r:
+                      return True, json.loads(r.read().decode())
+              except urllib.error.HTTPError as e:
+                  try:
+                      erro = json.loads(e.read().decode()).get("error", {})
+                      return False, f"{erro.get('message', 'erro')} (código {erro.get('code')})"
+                  except Exception:
+                      return False, f"erro HTTP {e.code}"
+              except Exception as e:
+                  return False, f"falha de conexão: {e.__class__.__name__}"
+
+          def quando(ts):
+              if not ts:
+                  return "não vence (permanente)"
+              return time.strftime("%d/%m/%Y", time.gmtime(ts))
+
+          diz("# Teste da chave da Meta")
+          diz("")
+          diz("## 1. Os cofres estão preenchidos?")
+          for nome, valor in [("META_PAGE_TOKEN", PAGE), ("META_USER_TOKEN", USER), ("FB_PAGE_ID", FB), ("IG_USER_ID", IG)]:
+              diz(f"- {nome}: {'preenchido' if valor else 'VAZIO'}")
+
+          diz("")
+          diz("## 2. Página do Facebook (com a chave da página)")
+          ok, d = pede(FB, {"fields": "id,name,followers_count,fan_count,instagram_business_account"}, PAGE)
+          if ok:
+              diz(f"- Página: {d.get('name')}")
+              diz(f"- Seguidores: {d.get('followers_count')} | Curtidas: {d.get('fan_count')}")
+              iga = (d.get("instagram_business_account") or {}).get("id")
+              diz(f"- Instagram ligado à página: {'sim' if iga else 'NÃO'}")
+              if iga:
+                  diz(f"- O Instagram ligado é o mesmo do cofre IG_USER_ID: {'sim' if iga == IG else 'NÃO (confira o número)'}")
+          else:
+              diz(f"- ERRO: {d}")
+
+          diz("")
+          diz("## 3. Conta do Instagram")
+          for nome, token in [("chave da página", PAGE), ("chave do usuário", USER)]:
+              ok, d = pede(IG, {"fields": "username,name,followers_count,follows_count,media_count"}, token)
+              if ok:
+                  diz(f"- Lido com a {nome}: @{d.get('username')} | seguidores: {d.get('followers_count')} | seguindo: {d.get('follows_count')} | posts: {d.get('media_count')}")
+              else:
+                  diz(f"- Com a {nome}: ERRO: {d}")
+
+          diz("")
+          diz("## 4. Limite de publicação do Instagram (sem publicar)")
+          ok, d = pede(IG + "/content_publishing_limit", {"fields": "config,quota_usage"}, PAGE)
+          if ok:
+              dados = (d.get("data") or [{}])[0]
+              cfg = dados.get("config") or {}
+              diz(f"- Publicação liberada. Usados nas últimas 24h: {dados.get('quota_usage')} de {cfg.get('quota_total')}")
+          else:
+              diz(f"- ERRO: {d}")
+
+          diz("")
+          diz("## 5. Validade e permissões das chaves")
+          precisa = {
+              "instagram_content_publish": "publicar no Instagram",
+              "instagram_basic": "ler a conta do Instagram",
+              "instagram_manage_comments": "ler e responder comentários (comente APP)",
+              "instagram_manage_messages": "mandar o link no direct (comente APP)",
+              "instagram_manage_insights": "ler alcance e números",
+              "pages_manage_posts": "publicar na página do Facebook",
+              "pages_read_engagement": "ler a página e os comentários",
+              "pages_show_list": "listar as páginas",
+              "pages_messaging": "responder pelo Messenger",
+              "business_management": "acesso pelo gerenciador de negócios",
+          }
+          escopos = set()
+          for nome, token in [("chave da página", PAGE), ("chave do usuário", USER)]:
+              ok, d = pede("debug_token", {"input_token": token}, USER)
+              if ok:
+                  info = d.get("data", {})
+                  escopos |= set(info.get("scopes", []))
+                  diz(f"- {nome}: válida = {'sim' if info.get('is_valid') else 'NÃO'} | tipo: {info.get('type')} | vence em: {quando(info.get('expires_at'))}")
+              else:
+                  diz(f"- {nome}: não deu para ler a validade ({d})")
+          if not escopos:
+              ok, d = pede("me/permissions", {}, USER)
+              if ok:
+                  escopos = {p["permission"] for p in d.get("data", []) if p.get("status") == "granted"}
+          diz("")
+          diz("Permissões necessárias:")
+          for p, uso in precisa.items():
+              diz(f"- {'OK' if p in escopos else 'FALTA'}: {p} ({uso})")
+
+          diz("")
+          diz("## 6. Últimos 5 posts (ponto de partida)")
+          ok, d = pede(IG + "/media", {"fields": "timestamp,media_type,like_count,comments_count", "limit": "5"}, PAGE)
+          if ok:
+              for m in d.get("data", []):
+                  diz(f"- {m.get('timestamp', '')[:10]} | {m.get('media_type')} | curtidas: {m.get('like_count')} | comentários: {m.get('comments_count')}")
+          else:
+              diz(f"- ERRO: {d}")
+
+          diz("")
+          diz("## 7. Alcance dos últimos dias")
+          ok, d = pede(IG + "/insights", {"metric": "reach", "period": "day"}, PAGE)
+          if ok:
+              for met in d.get("data", []):
+                  for v in met.get("values", [])[-3:]:
+                      diz(f"- {v.get('end_time', '')[:10]}: alcance {v.get('value')}")
+          else:
+              diz(f"- Não foi possível ler: {d}")
+
+          diz("")
+          diz("Fim do teste. Nada foi publicado.")
+          resumo = os.environ.get("GITHUB_STEP_SUMMARY")
+          if resumo:
+              with open(resumo, "a", encoding="utf-8") as f:
+                  f.write("\n".join(linhas) + "\n")
+          FIM
