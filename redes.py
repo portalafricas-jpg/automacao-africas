@@ -3,10 +3,11 @@
 # (capa do site + frase de destaque + chamada para o app) e escreve as legendas.
 #
 # MODO "ensaio": não publica nada. Salva tudo na pasta "ensaio" para aprovação.
-# (O modo de publicação de verdade entra no próximo passo, depois do ensaio aprovado.)
+# MODO "publicar": publica no Instagram (carrossel + story) e no Facebook (álbum + link no 1º comentário).
 
 import html
 import io
+import time
 import json
 import os
 import re
@@ -20,6 +21,11 @@ from email.utils import parsedate_to_datetime
 from zoneinfo import ZoneInfo
 
 from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont
+
+try:
+    import requests
+except ImportError:  # só o modo publicar precisa
+    requests = None
 
 # ---------------- Configuração ----------------
 RSS_SITE = "https://www.africas.com.br/noticias.xml"
@@ -50,6 +56,19 @@ CHAMADA_INSTAGRAM = "👉🏿 Quer ler a matéria completa? Comente APP que a ge
 CHAMADA_FACEBOOK = "👉🏿 Leia a matéria completa no link do primeiro comentário ou no app Áfricas Play."
 LIMITE_LEGENDA = 700           # trava de segurança: o corpo da legenda nunca passa disso
 VERSAO_ENSAIO = 3              # mudou a versão: o ensaio refaz as matérias das últimas 24 horas
+
+# ---------------- Regras da publicação (aprovadas em 22/11/2026) ----------------
+API_META = "https://graph.facebook.com/v26.0/"
+FEED_MAXIMO_DIA = 14          # carrosséis no feed por dia
+FEED_MINIMO_DIA = 10          # abaixo disso, a nota 7 entra para completar o dia
+STORIES_MAXIMO_DIA = 30
+STORIES_POR_RODADA = 3        # espalha os stories, sem rajada
+INTERVALO_FEED_MIN = 45       # minutos entre um post de feed e outro (breaking não espera)
+HORA_INICIO = (7, 0)          # publica das 7h...
+HORA_FIM = (0, 30)            # ...até 0h30; de madrugada, só breaking
+VALIDADE_FILA_HORAS = 12      # matéria que espera mais que isso na fila sai dela (notícia velha)
+ARQ_POSTS = os.path.join(PASTA_ESTADO, "posts-redes.json")   # o que foi publicado (usado pelo comente APP)
+PRIORIDADE = {"breaking": 0, "alta": 1, "parceiro": 2, "nota7": 3}
 
 # Instagram de quem assina as matérias (preencher quando chegar a lista da equipe).
 AUTORES_INSTAGRAM = {
@@ -366,10 +385,12 @@ def classificar(item, registro):
         breaking = m.get("prioridade") == "breaking"
         entra = breaking or nota >= NOTA_MINIMA_REDES
         return {"origem": "robô", "nota": nota, "breaking": breaking, "entra": entra,
+                "nota7": (not entra) and nota >= 7,
                 "palavras_chave": m.get("palavras_chave") or [], "hashtags": m.get("hashtags") or []}
     autor = (item["autor"] or "").lower()
     tipo = "assessoria" if (autor == "assessoria" or not autor) else "equipe/coluna"
-    return {"origem": tipo, "nota": None, "breaking": False, "entra": True, "palavras_chave": [], "hashtags": []}
+    return {"origem": tipo, "nota": None, "breaking": False, "entra": True, "nota7": False,
+            "palavras_chave": [], "hashtags": []}
 
 
 # ---------------- Claude: legendas e frase de destaque ----------------
@@ -398,8 +419,10 @@ Vocabulário: escravizado (nunca escravo); difamar (nunca denegrir); grupos mino
 violência de Estado (nunca insegurança pública); pessoa negra / população negra (nunca "de cor" ou "moreno").
 
 1) frase_destaque: a frase mais forte da matéria, com NO MÁXIMO 90 caracteres. Se houver uma fala marcante,
-use um trecho fiel da fala (pode encurtar, sem mudar o sentido) e escreva em autor_frase SÓ O NOME de quem
-falou, sem cargo, função ou explicação (ex.: "Fátima Farkas"; "Yung Peachie").
+copie um trecho LITERAL da fala, com as mesmas palavras e NA MESMA ORDEM do texto. É proibido reordenar,
+juntar pedaços de lugares diferentes ou reescrever a fala. Se a fala for longa, escolha um pedaço contínuo
+menor que caiba nos 90 caracteres. Em autor_frase, escreva SÓ O NOME de quem falou, sem cargo, função ou
+explicação (ex.: "Fátima Farkas"; "Yung Peachie").
 Se não houver fala, escreva uma frase-síntese do fato e deixe autor_frase vazio. Sem aspas no texto.
 
 2) legenda (Instagram, carrossel): siga a fórmula.
@@ -526,8 +549,8 @@ def atualizar_vitrine(blocos):
         f.write(cabecalho + "".join(blocos) + antigo.lstrip("\n"))
 
 
-# ---------------- Principal ----------------
-def main():
+# ---------------- Ensaio (principal) ----------------
+def main_ensaio():
     agora = datetime.now(timezone.utc)
     estado = ler_json(ARQ_REDES, {"vistos": [], "iniciado_em": None})
     if estado.get("versao") != VERSAO_ENSAIO:  # versão nova do ensaio: refaz as últimas 24 horas
@@ -589,5 +612,273 @@ def main():
     log(f"Fim: {feitos} matérias no ensaio. Nada foi publicado.")
 
 
+# ---------------- Publicação: Meta (Instagram e Facebook) ----------------
+class ErroMeta(Exception):
+    pass
+
+
+def meta(metodo, caminho, token, dados=None, arquivos=None, tentativas=2):
+    """Chamada à ferramenta oficial da Meta. Nunca mostra a chave no registro."""
+    url = API_META + caminho
+    for tentativa in range(tentativas):
+        try:
+            if metodo == "GET":
+                r = requests.get(url, params={**(dados or {}), "access_token": token}, timeout=60)
+            else:
+                r = requests.post(url, data={**(dados or {}), "access_token": token}, files=arquivos, timeout=120)
+            corpo = r.json()
+        except Exception as e:
+            if tentativa + 1 < tentativas:
+                time.sleep(5)
+                continue
+            raise ErroMeta(f"falha de conexão ({e.__class__.__name__})")
+        if "error" in corpo:
+            erro = corpo["error"]
+            if erro.get("is_transient") and tentativa + 1 < tentativas:
+                time.sleep(8)
+                continue
+            raise ErroMeta(f"{erro.get('message', 'erro')} (código {erro.get('code')})")
+        return corpo
+    raise ErroMeta("sem resposta")
+
+
+def jpeg(img):
+    b = io.BytesIO()
+    img.convert("RGB").save(b, "JPEG", quality=88)
+    b.seek(0)
+    return b
+
+
+def publicar_facebook(imagens, legenda, link, token, pagina):
+    """Álbum na página: sobe as 3 telas sem publicar, junta num post e põe o link no 1º comentário.
+    Devolve o id do post e os endereços das imagens (usados também pelo Instagram)."""
+    ids, enderecos = [], []
+    for i, img in enumerate(imagens):
+        r = meta("POST", f"{pagina}/photos", token, {"published": "false"},
+                 {"source": (f"tela{i + 1}.jpg", jpeg(img), "image/jpeg")})
+        ids.append(r["id"])
+    dados = {"message": legenda}
+    for i, foto in enumerate(ids):
+        dados[f"attached_media[{i}]"] = json.dumps({"media_fbid": foto})
+    post = meta("POST", f"{pagina}/feed", token, dados)["id"]
+    try:
+        meta("POST", f"{post}/comments", token, {"message": f"Matéria completa: {link}"})
+    except ErroMeta as e:
+        log(f"Aviso: post do Facebook saiu, mas o 1º comentário falhou ({e}).")
+    for foto in ids:
+        info = meta("GET", foto, token, {"fields": "images"})
+        imgs = sorted(info.get("images", []), key=lambda x: x.get("width", 0), reverse=True)
+        enderecos.append(imgs[0]["source"] if imgs else "")
+    return post, enderecos
+
+
+def esperar_container(container, token, limite=90):
+    inicio = time.time()
+    while time.time() - inicio < limite:
+        st = meta("GET", container, token, {"fields": "status_code"}).get("status_code")
+        if st == "FINISHED":
+            return
+        if st in ("ERROR", "EXPIRED"):
+            raise ErroMeta(f"o Instagram recusou a mídia ({st})")
+        time.sleep(4)
+    raise ErroMeta("o Instagram demorou demais para processar a mídia")
+
+
+def publicar_carrossel(enderecos, alts, legenda, token, ig):
+    filhos = []
+    for url, alt in zip(enderecos, alts):
+        dados = {"image_url": url, "is_carousel_item": "true"}
+        if alt:
+            dados["alt_text"] = alt[:1000]
+        filhos.append(meta("POST", f"{ig}/media", token, dados)["id"])
+    for f in filhos:
+        esperar_container(f, token)
+    pai = meta("POST", f"{ig}/media", token,
+               {"media_type": "CAROUSEL", "children": ",".join(filhos), "caption": legenda})["id"]
+    esperar_container(pai, token)
+    midia = meta("POST", f"{ig}/media_publish", token, {"creation_id": pai})["id"]
+    try:
+        link = meta("GET", midia, token, {"fields": "permalink"}).get("permalink", "")
+    except ErroMeta:
+        link = ""
+    return midia, link
+
+
+def publicar_story(url_arte, token, ig):
+    c = meta("POST", f"{ig}/media", token, {"image_url": url_arte, "media_type": "STORIES"})["id"]
+    esperar_container(c, token)
+    return meta("POST", f"{ig}/media_publish", token, {"creation_id": c})["id"]
+
+
+# ---------------- Publicação: fila, horários e limites ----------------
+def agora_sp():
+    return datetime.now(FUSO_SP)
+
+
+def dentro_do_horario(t):
+    hm = (t.hour, t.minute)
+    return hm >= HORA_INICIO or hm <= HORA_FIM
+
+
+def dia_de_trabalho(t):
+    """O 'dia' das redes vai das 7h às 0h30: o que sai até 0h30 conta no dia anterior."""
+    if (t.hour, t.minute) <= HORA_FIM:
+        t = t - timedelta(days=1)
+    return t.strftime("%Y-%m-%d")
+
+
+def para_fila(item, info):
+    if info["breaking"]:
+        prioridade = "breaking"
+    elif info["origem"] == "robô" and info["entra"]:
+        prioridade = "alta"
+    elif info["entra"]:
+        prioridade = "parceiro"
+    else:
+        prioridade = "nota7"
+    dados = {k: v for k, v in item.items() if k != "quando"}
+    dados["quando"] = item["quando"].isoformat() if item["quando"] else None
+    dados.update({"prioridade": prioridade, "nota": info["nota"], "origem": info["origem"],
+                  "breaking": info["breaking"], "entrou_na_fila": datetime.now(timezone.utc).isoformat()})
+    return dados
+
+
+def da_fila(dados):
+    item = dict(dados)
+    item["quando"] = datetime.fromisoformat(dados["quando"]) if dados.get("quando") else None
+    return item
+
+
+def publicar_materia(item, token, pagina, ig):
+    """Monta as telas, escreve os textos e publica no Facebook e no Instagram."""
+    capa = Image.open(io.BytesIO(baixar(item["arte_post"])))
+    try:
+        foto = Image.open(io.BytesIO(baixar(item["foto"]))) if item.get("foto") else None
+    except Exception:
+        foto = None
+    textos = gerar_textos(item)
+    tamanho = capa.size
+    telas = [selo_deslize(capa),
+             tela_destaque(textos["frase_destaque"], textos.get("autor_frase", ""), foto, tamanho,
+                           breaking=item.get("breaking", False)),
+             tela_app(tamanho)]
+    legenda_ig, legenda_fb = montar_legendas(item, textos)
+    fb_post, enderecos = publicar_facebook(telas, legenda_fb, item["link"], token, pagina)
+    alts = [textos.get("alt_capa", ""), textos.get("alt_destaque", ""),
+            "Tela do Áfricas Play: comente APP e receba o link da matéria completa no direct."]
+    midia, permalink = publicar_carrossel(enderecos, alts, legenda_ig, token, ig)
+    return {"titulo": item["titulo"], "link": item["link"], "ig_media": midia, "ig_link": permalink,
+            "fb_post": fb_post, "prioridade": item.get("prioridade"),
+            "publicado_em": datetime.now(timezone.utc).isoformat()}
+
+
+def main_publicar():
+    if requests is None:
+        raise SystemExit("Falta instalar o requests.")
+    token = (os.environ.get("META_PAGE_TOKEN") or "").strip()
+    pagina = (os.environ.get("FB_PAGE_ID") or "").strip()
+    ig = (os.environ.get("IG_USER_ID") or "").strip()
+    if not (token and pagina and ig):
+        raise SystemExit("Faltam META_PAGE_TOKEN, FB_PAGE_ID ou IG_USER_ID no cofre.")
+
+    t = agora_sp()
+    agora = datetime.now(timezone.utc)
+    hoje = dia_de_trabalho(t)
+    estado = ler_json(ARQ_REDES, {})
+    if estado.get("modo") != "publicar":  # primeira rodada publicando: começa do zero, sem repetir o ensaio
+        estado = {"modo": "publicar", "vistos": [], "fila": [], "fila_stories": [],
+                  "inicio": agora.isoformat()}
+    if estado.get("dia") != hoje:
+        estado.update({"dia": hoje, "feed_hoje": 0, "stories_hoje": 0})
+    vistos = set(estado.get("vistos", []))
+    fila = estado.get("fila", [])
+    fila_stories = estado.get("fila_stories", [])
+    posts = ler_json(ARQ_POSTS, [])
+    registro = {normalizar(m.get("titulo", "")): m for m in ler_json(ARQ_PUBLICADAS, [])}
+
+    # 1) Novidades do site entram na fila (na primeira rodada, só as das últimas 3 horas)
+    itens = ler_rss_site()
+    limite_inicio = datetime.fromisoformat(estado["inicio"]) - timedelta(hours=3)
+    novas = 0
+    for item in sorted(itens, key=lambda i: i["quando"] or agora):
+        if not item["link"] or item["link"] in vistos:
+            continue
+        vistos.add(item["link"])
+        if not item["quando"] or item["quando"] < limite_inicio:
+            continue
+        info = classificar(item, registro)
+        if not info["entra"] and not info["nota7"]:
+            log(f"Fora (nota {info['nota']}): {item['titulo'][:70]}")
+            continue
+        if not item.get("arte_post"):
+            log(f"Sem arte de post, fora: {item['titulo'][:70]}")
+            continue
+        dados = para_fila(item, info)
+        fila.append(dados)
+        if item.get("arte_story"):
+            fila_stories.append({"titulo": item["titulo"], "url": item["arte_story"],
+                                 "breaking": info["breaking"]})
+        novas += 1
+    log(f"Novas na fila: {novas} | fila do feed: {len(fila)} | fila de stories: {len(fila_stories)}")
+
+    # 2) Tira da fila o que ficou velho
+    validade = agora - timedelta(hours=VALIDADE_FILA_HORAS)
+    fila = [f for f in fila if datetime.fromisoformat(f["entrou_na_fila"]) >= validade or f["prioridade"] == "breaking"]
+
+    horario = dentro_do_horario(t)
+    ultimo = datetime.fromisoformat(estado["ultimo_feed"]) if estado.get("ultimo_feed") else None
+    pode_feed = ultimo is None or (agora - ultimo) >= timedelta(minutes=INTERVALO_FEED_MIN)
+    log(f"Hora: {t.strftime('%H:%M')} | {'horário de publicação' if horario else 'madrugada: só breaking'} | "
+        f"feed hoje: {estado['feed_hoje']}/{FEED_MAXIMO_DIA} | stories hoje: {estado['stories_hoje']}/{STORIES_MAXIMO_DIA}")
+
+    # 3) Feed: breaking sempre na hora; o resto respeita horário, intervalo e limite do dia
+    fila.sort(key=lambda f: (PRIORIDADE.get(f["prioridade"], 9), f.get("quando") or ""))
+    a_publicar = [f for f in fila if f["prioridade"] == "breaking"]
+    if not a_publicar and horario and pode_feed and estado["feed_hoje"] < FEED_MAXIMO_DIA:
+        for f in fila:
+            if f["prioridade"] == "nota7" and estado["feed_hoje"] >= FEED_MINIMO_DIA:
+                continue
+            a_publicar = [f]
+            break
+    for f in a_publicar:
+        try:
+            post = publicar_materia(da_fila(f), token, pagina, ig)
+            posts.append(post)
+            estado["feed_hoje"] += 1
+            estado["ultimo_feed"] = datetime.now(timezone.utc).isoformat()
+            log(f"PUBLICADO ({f['prioridade']}): {f['titulo'][:70]} {post['ig_link']}")
+        except Exception as e:
+            log(f"Erro ao publicar '{f['titulo'][:60]}': {e}")
+            f["falhas"] = f.get("falhas", 0) + 1
+            if f["falhas"] < 3:
+                continue  # tenta de novo na próxima rodada
+        fila = [x for x in fila if x["link"] != f["link"]]
+
+    # 4) Stories: breaking na hora; o resto no horário, até o limite do dia
+    feitos = 0
+    restantes = []
+    for s_ in fila_stories:
+        liberado = s_.get("breaking") or (horario and feitos < STORIES_POR_RODADA)
+        if liberado and estado["stories_hoje"] < STORIES_MAXIMO_DIA:
+            try:
+                publicar_story(s_["url"], token, ig)
+                estado["stories_hoje"] += 1
+                feitos += 1
+                log(f"STORY: {s_['titulo'][:70]}")
+                continue
+            except Exception as e:
+                log(f"Erro no story '{s_['titulo'][:60]}': {e}")
+        restantes.append(s_)
+    fila_stories = restantes[-60:]
+
+    estado.update({"vistos": list(vistos)[-500:], "fila": fila, "fila_stories": fila_stories})
+    salvar_json(ARQ_REDES, estado)
+    salvar_json(ARQ_POSTS, posts[-300:])
+    log("Fim da rodada.")
+
+
 if __name__ == "__main__":
-    main()
+    if MODO == "publicar":
+        main_publicar()
+    else:
+        main_ensaio()
