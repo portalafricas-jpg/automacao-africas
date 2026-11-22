@@ -1,0 +1,44 @@
+name: Robô das redes (ensaio)
+
+# MODO ENSAIO: monta carrosséis, stories e legendas e salva na pasta "ensaio".
+# Não publica nada nas redes.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: robo-africas
+  cancel-in-progress: false
+
+jobs:
+  ensaio:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Pegar os arquivos da pasta
+        uses: actions/checkout@v4
+
+      - name: Preparar o Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar o editor de imagens
+        run: pip install pillow
+
+      - name: Rodar o robô das redes (ensaio)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          MODO_REDES: ensaio
+        run: python redes.py
+
+      - name: Salvar o ensaio
+        run: |
+          git config user.name "robo-africas"
+          git config user.email "robo-africas@users.noreply.github.com"
+          git add ensaio estado/redes.json
+          git diff --cached --quiet || git commit -m "Robô das redes: ensaio"
+          git pull --rebase
+          git push
