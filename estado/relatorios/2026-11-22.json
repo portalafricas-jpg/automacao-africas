@@ -343,5 +343,16 @@
   "nota": 6,
   "destino": "nota baixa",
   "detalhe": "Feira de artesanato em Cabo Verde (país de língua portuguesa) com 150 expositores e 50 anos de cooperativa; interesse cultural para o leitor brasileiro, mas sem conexão racial direta e de menor porte. Nota 6 por ser fonte África com tema cultural, abaixo do mínimo de 7 para notícia de país lusófono interna."
+ },
+ {
+  "hora": "12:32",
+  "fonte": "Alma Preta",
+  "titulo": "Mulheres representam 58% dos leitores de e-books e audiolivros no Brasil",
+  "link": "https://almapreta.com.br/sessao/cotidiano/mulheres-ebooks-audiolivros-pesquisa/",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "Estudo sobre leitura de e-books e audiolivros por gênero, sem recorte racial no texto original; não é tema da temática racial e não entra no filtro."
  }
 ]
