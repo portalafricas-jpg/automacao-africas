@@ -46,8 +46,15 @@ COR_VERMELHO = (220, 30, 38)
 COR_CINZA = (200, 200, 200)
 
 # Chamada da Fase 1. Quando o "comente APP" estiver ligado (Fase 2), troca aqui.
-CHAMADA_INSTAGRAM = "Quer ler a matéria completa? Comente APP que a gente te manda o link no direct."
-CHAMADA_FACEBOOK = "Leia a matéria completa no link do primeiro comentário ou no app Áfricas Play."
+CHAMADA_INSTAGRAM = "👉🏿 Quer ler a matéria completa? Comente APP que a gente te manda o link no direct."
+CHAMADA_FACEBOOK = "👉🏿 Leia a matéria completa no link do primeiro comentário ou no app Áfricas Play."
+LIMITE_LEGENDA = 700           # trava de segurança: o corpo da legenda nunca passa disso
+VERSAO_ENSAIO = 2              # mudou a versão: o ensaio refaz as matérias das últimas 24 horas
+
+# Instagram de quem assina as matérias (preencher quando chegar a lista da equipe).
+AUTORES_INSTAGRAM = {
+    # "Thays Andrade": "@usuario",
+}
 HASHTAG_FIXA = "#ÁfricasPlay"
 ARQ_LOGO = os.path.join(PASTA, "AP_500_140_negativo.png")   # logo para fundo escuro (envio de 22/11/2026)
 
@@ -200,7 +207,7 @@ def tela_destaque(frase, autor, foto, tamanho, breaking=False):
     f, linhas = caber(d, frase, "forte", int(78 * escala), largura - 2 * margem, area_alt)
     passo = f.size * 1.18
     bloco = len(linhas) * passo
-    y0 = altura - int(250 * escala) - bloco
+    y0 = altura - int(300 * escala) - bloco
     if autor:  # aspas só quando é fala de alguém
         aspas = fonte("extra", int(220 * escala))
         d.text((margem - int(8 * escala), y0 - int(190 * escala)), "“", font=aspas, fill=COR_AMARELO)
@@ -212,8 +219,14 @@ def tela_destaque(frase, autor, foto, tamanho, breaking=False):
         y += passo
     if autor:
         d.rectangle((margem, y + int(28 * escala), margem + int(70 * escala), y + int(36 * escala)), fill=COR_AMARELO)
-        fa, la = quebrar(d, autor, "media", int(36 * escala), largura - 2 * margem)
-        d.text((margem, y + int(52 * escala)), la[0] if la else "", font=fa, fill=COR_CINZA)
+        for tam in (36, 32, 28):  # até 2 linhas; diminui a letra se precisar, sem cortar
+            fa, la = quebrar(d, autor, "media", int(tam * escala), largura - 2 * margem)
+            if len(la) <= 2:
+                break
+        ya = y + int(52 * escala)
+        for linha in la[:2]:
+            d.text((margem, ya), linha, font=fa, fill=COR_CINZA)
+            ya += fa.size * 1.3
     colar_logo(img, (largura - int(260 * escala)) / 2, altura - int(118 * escala), int(260 * escala))
     return seta_mais(img, ("esquerda", "direita"))
 
@@ -366,9 +379,9 @@ FERRAMENTA = {
     "input_schema": {
         "type": "object",
         "properties": {
-            "frase_destaque": {"type": "string", "description": "Frase forte para a tela 2, até 110 caracteres."},
-            "autor_frase": {"type": "string", "description": "Quem disse a frase, se for fala de alguém; senão vazio."},
-            "legenda": {"type": "string", "description": "Gancho + resumo em 2 ou 3 parágrafos curtos, sem chamada final e sem hashtags."},
+            "frase_destaque": {"type": "string", "description": "Frase forte para a tela 2, até 90 caracteres."},
+            "autor_frase": {"type": "string", "description": "Nome e função curta de quem disse (até 40 caracteres); senão vazio."},
+            "legenda": {"type": "string", "description": "Gancho + 1 ou 2 parágrafos curtos, de 350 a 650 caracteres, sem chamada, créditos ou hashtags."},
             "hashtags": {"type": "array", "items": {"type": "string"}, "description": "De 3 a 4 hashtags específicas da matéria."},
             "alt_capa": {"type": "string", "description": "Descrição da imagem da capa para o texto alternativo, com palavras-chave."},
             "alt_destaque": {"type": "string", "description": "Descrição da tela da frase para o texto alternativo."},
@@ -384,18 +397,21 @@ Narrador em 3ª pessoa; proibido o "nós". Nunca invente fatos, números, falas 
 Vocabulário: escravizado (nunca escravo); difamar (nunca denegrir); grupos minorizados (nunca minorias);
 violência de Estado (nunca insegurança pública); pessoa negra / população negra (nunca "de cor" ou "moreno").
 
-1) frase_destaque: a frase mais forte da matéria, até 110 caracteres. Se houver uma fala marcante de alguém,
-use a fala (fiel ao texto) e diga quem falou em autor_frase (nome e, se couber, quem é, em poucas palavras).
+1) frase_destaque: a frase mais forte da matéria, com NO MÁXIMO 90 caracteres. Se houver uma fala marcante,
+use um trecho fiel da fala (pode encurtar, sem mudar o sentido) e diga quem falou em autor_frase:
+nome e função curta, com NO MÁXIMO 40 caracteres (ex.: "Fátima Farkas, artista visual"; "Yung Peachie, cantora").
 Se não houver fala, escreva uma frase-síntese do fato e deixe autor_frase vazio. Sem aspas no texto.
 
 2) legenda (Instagram, carrossel): siga a fórmula.
 - 1ª linha (gancho): o fato mais forte, com a palavra-chave principal (nome, cidade, tema) nas primeiras palavras.
   Até 125 caracteres, porque só isso aparece antes do "mais".
-- Depois, 2 ou 3 parágrafos curtos (1 a 3 frases cada): o quê, quem e por que importa para a população negra.
-  Entregue o essencial, mas guarde detalhes (bastidores, falas completas, dados, desdobramentos) para a matéria.
+- Depois, 1 ou 2 parágrafos curtos (1 a 2 frases cada): o quê e por que importa para a população negra.
+- O objetivo é despertar a vontade de ler a matéria completa no app. Entregue o fato, NÃO entregue o ouro.
+  É PROIBIDO colocar na legenda: endereço, horário, preço, datas de funcionamento, programação detalhada,
+  falas completas, números detalhados, nomes de todos os envolvidos e o desfecho. Isso fica para a matéria.
 - Escreva as palavras-chave de forma natural, como as pessoas pesquisariam.
-- Sem emojis, sem hashtags, sem @, sem link e sem chamada final (a chamada é colocada depois).
-- Entre 450 e 1.000 caracteres no total. Separe os parágrafos com uma linha em branco.
+- Sem emojis, sem hashtags, sem @, sem link, sem créditos e sem chamada final (são colocados depois).
+- ENTRE 350 E 650 CARACTERES no total, contando o gancho. Separe os parágrafos com uma linha em branco.
 
 3) hashtags: de 3 a 4, específicas da matéria (tema, nome, cidade), sem a do portal.
 4) alt_capa e alt_destaque: descrições objetivas das imagens, com as palavras-chave, até 300 caracteres cada.
@@ -426,6 +442,29 @@ def gerar_textos(item):
     raise RuntimeError("O Claude não devolveu os campos.")
 
 
+def cortar_legenda(corpo):
+    """Trava de segurança: se o Claude passar do tamanho, mantém só os parágrafos que cabem."""
+    if len(corpo) <= LIMITE_LEGENDA:
+        return corpo
+    partes, total = [], 0
+    for p in corpo.split("\n\n"):
+        if partes and total + len(p) > LIMITE_LEGENDA:
+            break
+        partes.append(p)
+        total += len(p) + 2
+    return "\n\n".join(partes)
+
+
+def credito_texto(item):
+    autor = (item["autor"] or "").strip()
+    if not autor or autor.lower() == "assessoria":
+        autor = (item["publicou"] or "").strip()
+    if not autor:
+        return ""
+    arroba = AUTORES_INSTAGRAM.get(autor, "")
+    return f"Texto: {autor}" + (f" ({arroba})" if arroba else "") + " | Áfricas Play"
+
+
 def montar_legendas(item, textos):
     tags = []
     for h in [HASHTAG_FIXA] + list(textos.get("hashtags") or []):
@@ -433,10 +472,10 @@ def montar_legendas(item, textos):
         if len(h) > 1 and h.lower() not in [t.lower() for t in tags]:
             tags.append(h)
     tags = tags[:5]
-    corpo = textos["legenda"].strip()
-    credito = f"Foto: {item['credito']}" if item["credito"] else ""
-    instagram = "\n\n".join(p for p in [corpo, CHAMADA_INSTAGRAM, " ".join(tags), credito] if p)
-    facebook = "\n\n".join(p for p in [corpo, CHAMADA_FACEBOOK, " ".join(tags[:3])] if p)
+    corpo = cortar_legenda(textos["legenda"].strip())
+    creditos = "\n".join(c for c in [credito_texto(item), f"📸 Foto: {item['credito']}" if item["credito"] else ""] if c)
+    instagram = "\n\n".join(p for p in [corpo, CHAMADA_INSTAGRAM, creditos, " ".join(tags)] if p)
+    facebook = "\n\n".join(p for p in [corpo, CHAMADA_FACEBOOK, creditos, " ".join(tags[:3])] if p)
     return instagram, facebook
 
 
@@ -491,6 +530,8 @@ def atualizar_vitrine(blocos):
 def main():
     agora = datetime.now(timezone.utc)
     estado = ler_json(ARQ_REDES, {"vistos": [], "iniciado_em": None})
+    if estado.get("versao") != VERSAO_ENSAIO:  # versão nova do ensaio: refaz as últimas 24 horas
+        estado = {"vistos": [], "iniciado_em": None, "versao": VERSAO_ENSAIO}
     vistos = set(estado.get("vistos", []))
     primeira_vez = not estado.get("iniciado_em")
     registro = {normalizar(m.get("titulo", "")): m for m in ler_json(ARQ_PUBLICADAS, [])}
