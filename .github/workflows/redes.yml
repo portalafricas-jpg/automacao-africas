@@ -1,7 +1,7 @@
-name: Robô das redes (ensaio)
+name: Robô das redes
 
-# MODO ENSAIO: monta carrosséis, stories e legendas e salva na pasta "ensaio".
-# Não publica nada nas redes.
+# Publica no Instagram (carrossel + story) e no Facebook (álbum + link no 1º comentário).
+# Acionado pelo cron-job.org a cada 15 minutos.
 on:
   workflow_dispatch:
 
@@ -9,13 +9,13 @@ permissions:
   contents: write
 
 concurrency:
-  group: robo-africas
+  group: robo-redes
   cancel-in-progress: false
 
 jobs:
-  ensaio:
+  publicar:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - name: Pegar os arquivos da pasta
         uses: actions/checkout@v4
@@ -25,20 +25,27 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Instalar o editor de imagens
-        run: pip install pillow
+      - name: Instalar o editor de imagens e o conector
+        run: pip install pillow requests
 
-      - name: Rodar o robô das redes (ensaio)
+      - name: Rodar o robô das redes
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          MODO_REDES: ensaio
+          META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          MODO_REDES: publicar
         run: python redes.py
 
-      - name: Salvar o ensaio
+      - name: Salvar a fila e o registro
         run: |
           git config user.name "robo-africas"
           git config user.email "robo-africas@users.noreply.github.com"
-          git add ensaio estado/redes.json
-          git diff --cached --quiet || git commit -m "Robô das redes: ensaio"
-          git pull --rebase
-          git push
+          git add estado/redes.json estado/posts-redes.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Robô das redes: rodada"
+          for i in 1 2 3; do
+            git pull --rebase && git push && exit 0
+            sleep 5
+          done
+          exit 1
