@@ -70,7 +70,7 @@ VALIDADE_FILA_HORAS = 12      # matéria que espera mais que isso na fila sai de
 ARQ_POSTS = os.path.join(PASTA_ESTADO, "posts-redes.json")   # o que foi publicado (usado pelo comente APP)
 PRIORIDADE = {"breaking": 0, "alta": 1, "parceiro": 2, "nota7": 3}
 HORA_REELS = 19               # Resumo do dia (domingo: A semana em 10 fatos), a partir das 19h
-REELS_LIGADO = False          # liga depois que o Washington aprovar o vídeo de teste
+REELS_LIGADO = True           # ligado em 23/11/2026, aprovado pelo Washington
 
 # Instagram de quem assina as matérias (preencher quando chegar a lista da equipe).
 AUTORES_INSTAGRAM = {
