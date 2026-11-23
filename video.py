@@ -25,6 +25,7 @@ DURACAO_TELA = 3.0           # segundos por matéria
 TRANSICAO = 0.5
 DURACAO_FINAL = 2.6          # tela final do Comente APP
 BRILHO_MINIMO = 70           # abaixo disso (0 a 255) a foto é considerada escura
+BRILHO_INUTIL = 25           # abaixo disso a foto está praticamente preta: não dá para clarear
 PASTA_MUSICAS = os.path.join(R.PASTA, "musicas")
 TRANSICOES = ["fade", "slideleft", "smoothleft", "circleopen", "slideup", "fadeblack", "wipeleft"]
 ORDEM = {"breaking": 0, "alta": 1, "parceiro": 2, "nota7": 3}
@@ -83,9 +84,33 @@ def fotos_da_pagina(link):
 def abrir(url):
     try:
         img = Image.open(io.BytesIO(R.baixar(url))).convert("RGB")
-        return img if img.width >= 500 and img.height >= 400 else None
+        return img if img.width >= 400 and img.height >= 250 else None
     except Exception:
         return None
+
+
+def nomes_no_titulo(titulo):
+    """Nomes próprios do título (ex.: "Gaby Amarantos"), para buscar uma foto livre da pessoa."""
+    return re.findall(r"[A-ZÁÉÍÓÚÂÊÔÃÕÇ][\wáéíóúâêôãõç]+(?: (?:d[aeo]s? )?[A-ZÁÉÍÓÚÂÊÔÃÕÇ][\wáéíóúâêôãõç]+)+", titulo)
+
+
+def foto_similar(post):
+    """Foto livre parecida: a da pessoa citada no título (Wikipédia, licença livre)."""
+    try:
+        import robo
+    except Exception:
+        return None
+    for nome in nomes_no_titulo(post["titulo"]):
+        try:
+            achou = robo.foto_da_pessoa(nome)
+        except Exception:
+            achou = None
+        if achou and achou[0]:
+            img = abrir(achou[0])
+            if img is not None and brilho(img) >= BRILHO_INUTIL:
+                log(f"Reels: foto quase preta trocada por foto livre de {nome}")
+                return img
+    return None
 
 
 def foto_do_post(post):
@@ -105,7 +130,12 @@ def foto_do_post(post):
                 melhor, melhor_brilho = img, b
         if tentativa == 0:
             candidatas = [u for u in fotos_da_pagina(post["link"]) if u not in candidatas]
-    if melhor is None:
+    if melhor is None or melhor_brilho < BRILHO_INUTIL:
+        similar = foto_similar(post)
+        if similar is not None:
+            return similar if brilho(similar) >= BRILHO_MINIMO else \
+                ImageEnhance.Brightness(similar).enhance(min(1.9, (BRILHO_MINIMO + 20) / max(brilho(similar), 15)))
+        log(f"Reels: sem foto legível; matéria fica fora do vídeo: {post['titulo'][:50]}")
         return None
     fator = min(1.9, (BRILHO_MINIMO + 20) / max(melhor_brilho, 15))
     log(f"Reels: foto escura ({melhor_brilho:.0f}) clareada em {fator:.1f}x: {post['titulo'][:50]}")
@@ -234,7 +264,15 @@ def montar_video(telas, musica, saida):
 
 def fazer_video(posts, semana, agora_sp, saida):
     """Monta o vídeo. Devolve (lista de matérias usadas, duração) ou (None, 0) se não houver material."""
-    escolhidas = escolher(posts, 7 if semana else 1, 10 if semana else 5, agora_sp)
+    quantas = 10 if semana else 5
+    escolhidas, fotos = [], []
+    for p in escolher(posts, 7 if semana else 1, quantas + 4, agora_sp):
+        if len(escolhidas) == quantas:
+            break
+        foto = foto_do_post(p)
+        if foto is not None:
+            escolhidas.append(p)
+            fotos.append(foto)
     if len(escolhidas) < (5 if semana else 3):
         log(f"Reels: só {len(escolhidas)} matérias; o vídeo fica para a próxima.")
         return None, 0
@@ -244,7 +282,6 @@ def fazer_video(posts, semana, agora_sp, saida):
     else:
         cabecalho = "RESUMO DO DIA"
         data_txt = f"{DIAS_SEMANA[agora_sp.weekday()].capitalize()}, {agora_sp.strftime('%d/%m/%Y')}"
-    fotos = [foto_do_post(p) for p in escolhidas]
     telas = [(tela_gancho(fotos[0], semana, len(escolhidas), data_txt), DURACAO_GANCHO)]
     for i, (p, foto) in enumerate(zip(escolhidas, fotos), 1):
         telas.append((tela_materia(foto, p["titulo"], p.get("categoria", ""), i, len(escolhidas),
