@@ -286,5 +286,16 @@
   "destino": "publicada",
   "detalhe": "Tucuruvi anuncia porta-bandeira para 2027",
   "foto": "João Belli"
+ },
+ {
+  "hora": "10:02",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Angola elogia Fundo IBSA pelo apoio às populações",
+  "link": "https://www.giranoticias.com/politica/2026/11/32758-angola-elogia-fundo-ibsa-pelo-apoio-as-populacoes.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 5,
+  "destino": "nota baixa",
+  "detalhe": "[FONTE ÁFRICA] Angola elogia Fundo IBSA: é uma fala protocolar de elogio, sem fato relevante para o leitor brasileiro e sem conexão clara com a temática racial. Fica abaixo do corte de entrada para notícias da África."
  }
 ]
