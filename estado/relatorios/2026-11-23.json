@@ -97,5 +97,16 @@
   "nota": 3,
   "destino": "nota baixa",
   "detalhe": "Notícia sem título completo e sem resumo, sem informação suficiente para matéria honesta. Não há relação clara com a temática racial no material recebido; na dúvida, descartar."
+ },
+ {
+  "hora": "06:47",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Jornalistas homenageados pela dedicação e profissionalismo",
+  "link": "https://www.giranoticias.com/sociedade/2026/11/32750-jornalistas-homenageados-pela-dedicacao-e-profissionalismo.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Título genérico e sem fato concreto suficiente para matéria honesta; não há informação sobre quem, onde ou o que foi homenageado. Sem relação clara com a temática racial nem com o interesse do leitor brasileiro sobre África. Descartar."
  }
 ]
