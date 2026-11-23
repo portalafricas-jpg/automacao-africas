@@ -241,5 +241,50 @@
   "nota": 8,
   "destino": "recusada pelo redator",
   "detalhe": "Recusa por ser artigo/opinião de outro veículo? Não: o fato (retirada do anúncio pela Playbill) é noticiado pela imprensa e o texto traz fatos suficientes. Porém, o texto original cita que a informação sobre o pedido de desculpas vem do The New York Times e o conteúdo mistura reportagem com reações de famosos e comentários opinativos. A decisão de recusar se baseia em: o material é uma reescrita de matéria de outro veículo que reúne reação e análise de terceiros sem fato novo para o Brasil, e a notícia principal (anúncio do musical) já trata de um evento de repercussão restrita; além disso, a fonte primária é um veículo estrangeiro sem ligação direta com o público brasileiro. Na dúvida, descartar."
+ },
+ {
+  "hora": "09:47",
+  "fonte": "SRzd - Carnaval",
+  "titulo": "Tucuruvi surpreende ao anunciar porta-bandeira para o Carnaval 2027",
+  "link": "https://srzd.com/blog/carnaval/sao-paulo/tucuruvi-surpreende-ao-anunciar-porta-bandeira-carnaval-2027/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Carnaval e escola de samba (Acadêmicos do Tucuruvi) com anúncio de porta-bandeira, ligado à cultura negra; fato novo do ensaio do dia 22, sem cobertura anterior no portal."
+ },
+ {
+  "hora": "09:47",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Quénia disponibiliza vagas de formação especializada para profissionais de saúde angolanos",
+  "link": "https://www.giranoticias.com/sociedade/2026/11/32757-quenia-disponibiliza-vagas-de-formacao-especializada-para-profissionais-de-saude-angolanos.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "Formação de profissionais de saúde angolanos oferecida pelo Quénia: tema internacional de Angola, mas trata de vagas de formação sem relação com a população negra brasileira nem com a Agenda Preta; é ato burocrático de baixa relevância, fica de fora."
+ },
+ {
+  "hora": "09:47",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Aristides Pereira foi Presidente de Cabo Verde",
+  "link": "https://www.giranoticias.com/blogs/personalidade-da-semana/2026/11/32756-aristides-pereira-foi-presidente-de-cabo-verde.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 1,
+  "destino": "nota baixa",
+  "detalhe": "Texto sem fato suficiente (apenas o título, sem conteúdo); é notícia biográfica genérica sobre ex-presidente de Cabo Verde, sem ligação com a temática racial nem com o leitor brasileiro. Descartar."
+ },
+ {
+  "hora": "09:48",
+  "fonte": "SRzd - Carnaval",
+  "titulo": "Tucuruvi surpreende ao anunciar porta-bandeira para o Carnaval 2027",
+  "link": "https://srzd.com/blog/carnaval/sao-paulo/tucuruvi-surpreende-ao-anunciar-porta-bandeira-carnaval-2027/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "publicada",
+  "detalhe": "Tucuruvi anuncia porta-bandeira para 2027",
+  "foto": "João Belli"
  }
 ]
