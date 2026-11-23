@@ -235,7 +235,7 @@ def link_real_google(link):
     try:
         from googlenewsdecoder import gnewsdecoder
         r = gnewsdecoder(link, interval=1)
-        if r.get("status") and r.get("decoded_url"):
+        if (r.get("success") or r.get("status")) and r.get("decoded_url"):
             return r["decoded_url"]
         log(f"  Não desembrulhou o link do Google Notícias: {r.get('message', '')}")
     except Exception as e:

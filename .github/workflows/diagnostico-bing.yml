@@ -20,32 +20,23 @@ jobs:
       - name: Testar
         run: |
           python3 - <<'FIM'
-          import robo, json, re, base64, urllib.parse, requests
-          from googlenewsdecoder import gnewsdecoder
-          import googlenewsdecoder
-          print("versão:", getattr(googlenewsdecoder, "__version__", "?"))
-          itens = robo.ler_rss(robo.google_url("cultura negra"))[:3]
-          for it in itens:
-              link = it["link"]
-              print("\nLINK:", link[:120])
-              try:
-                  print("decoder:", json.dumps(gnewsdecoder(link, interval=1))[:300])
-              except Exception as e:
-                  print("decoder erro:", repr(e)[:300])
-              # tentativa manual (batchexecute)
-              try:
-                  aid = urllib.parse.urlparse(link).path.split("/")[-1]
-                  h = {"User-Agent": "Mozilla/5.0", "Cookie": "CONSENT=YES+cb"}
-                  r = requests.get(f"https://news.google.com/articles/{aid}", headers=h, timeout=20)
-                  print("página articles:", r.status_code, len(r.text), r.url[:80])
-                  sg = re.search(r'data-n-a-sg="([^"]+)"', r.text); ts = re.search(r'data-n-a-ts="([^"]+)"', r.text)
-                  print("assinatura:", bool(sg), bool(ts))
-                  if sg and ts:
-                      req = ["Fbv4je", f'["garturlreq",[["X","X",["X","X"],null,null,1,1,"US:en",null,1,null,null,null,null,null,0,1],"X","X",1,[1,1,1],1,1,null,0,0,null,0],"{aid}",{ts.group(1)},"{sg.group(1)}"]']
-                      r2 = requests.post("https://news.google.com/_/DotsSplashUi/data/batchexecute",
-                                         data={"f.req": json.dumps([[req]])},
-                                         headers={**h, "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"}, timeout=20)
-                      print("batchexecute:", r2.status_code, r2.text[:200].replace("\n"," "))
-              except Exception as e:
-                  print("manual erro:", repr(e)[:200])
+          import json
+          from datetime import datetime, timezone, timedelta
+          import robo
+          agora = datetime.now(timezone.utc)
+          fontes = [f for f in json.load(open("fontes.json")) if f.get("tipo") == "busca"]
+          total, janela, amostra = 0, 0, []
+          for f in fontes[:12]:
+              f = dict(f); f.pop("dia_semana", None); f["grupo"] = 0
+              itens = robo.ler_fonte(f, 0)
+              novos = [i for i in itens if i["data"] and agora - i["data"] <= timedelta(hours=3)]
+              total += len(itens); janela += len(novos); amostra += novos[:1]
+          print(f"TOTAL: {total} notícias, {janela} das últimas 3h (12 buscas)")
+          ok = 0
+          for i in amostra[:6]:
+              real = robo.link_real_google(i["link"])
+              m = robo.extrair_materia(real, i["titulo"]) if real else {"texto": "", "veiculo": ""}
+              ok += len(m.get("texto", "")) >= 600
+              print(f"RES * {i['titulo'][:60]} | {real[:70]} | veículo: {m.get('veiculo')} | texto: {len(m.get('texto',''))}")
+          print(f"RES lidas com texto completo: {ok} de {min(6, len(amostra))}")
           FIM
