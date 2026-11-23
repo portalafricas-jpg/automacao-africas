@@ -1,1 +1,46 @@
-[]
+[
+ {
+  "hora": "04:32",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "COP31 encerra sem acordo depois de a União Europeia rejeitar o texto final",
+  "link": "https://www.giranoticias.com/mundo/2026/11/32743-cop31-encerra-sem-acordo-depois-de-a-uniao-europeia-rejeitar-o-texto-final.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Negociação climática internacional sem relação com a temática racial nem com a Agenda Preta; não é tema de interesse direto do leitor do Áfricas."
+ },
+ {
+  "hora": "04:32",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Incendio de grandes proporcoes destrói fabrica de doces na Indonésia",
+  "link": "https://www.giranoticias.com/mundo/2026/11/32742-incendio-de-grandes-proporcoes-destroi-fabrica-de-doces-na-indonesia.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 1,
+  "destino": "nota baixa",
+  "detalhe": "Incêndio em fábrica de doces na Indonésia é crime comum/acidente sem relação com a população negra nem com a África."
+ },
+ {
+  "hora": "04:32",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Trump admite retomar a guerra contra o Irão no início do ano",
+  "link": "https://www.giranoticias.com/mundo/2026/11/32741-trump-admite-retomar-a-guerra-contra-o-irao-no-inicio-do-ano.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "Declaração sobre guerra com o Irã não tem relação com a África nem com a população negra; fora do escopo do portal."
+ },
+ {
+  "hora": "04:32",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Queda das acções tecnológicas abala bolsas asiáticas",
+  "link": "https://www.giranoticias.com/mundo/2026/11/32740-queda-das-accoes-tecnologicas-abala-bolsas-asiaticas.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 1,
+  "destino": "nota baixa",
+  "detalhe": "Oscilação de bolsas asiáticas é economia geral sem ligação com a África, a diáspora ou a temática racial."
+ }
+]
