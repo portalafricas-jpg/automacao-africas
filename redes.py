@@ -71,7 +71,8 @@ HORA_FIM = (0, 30)            # ...até 0h30; de madrugada, só breaking
 VALIDADE_FILA_HORAS = 12      # matéria que espera mais que isso na fila sai dela (notícia velha)
 ARQ_POSTS = os.path.join(PASTA_ESTADO, "posts-redes.json")   # o que foi publicado (usado pelo comente APP)
 PRIORIDADE = {"breaking": 0, "alta": 1, "parceiro": 2, "nota7": 3}
-HORA_REELS = 19               # Resumo do dia (domingo: A semana em 10 fatos), a partir das 19h
+HORA_REELS = 19               # Resumo do dia (domingo: Resumo da semana), a partir das 19h
+REELS_MEIO_DIA = 12 * 60 + 30   # Radar do meio-dia, a partir das 12h30 (aprovado em 23/11)
 REELS_LIGADO = True           # ligado em 23/11/2026, aprovado pelo Washington
 
 # Instagram de quem assina as matérias (preencher quando chegar a lista da equipe).
@@ -928,21 +929,33 @@ def main_publicar():
         restantes.append(s_)
     fila_stories = restantes[-60:]
 
-    # 5) Reels: Resumo do dia (domingo: A semana em 10 fatos), uma vez por dia, a partir das 19h
-    if REELS_LIGADO and horario and t.hour >= HORA_REELS and estado.get("reels_dia") != hoje and estado.get("reels_tentativas", 0) < 3:
-        semana = t.weekday() == 6
+    # 5) Reels: Radar do meio-dia (a partir das 12h30) e Resumo do dia (a partir das 19h; domingo, a semana).
+    #    O da noite não repete as matérias do meio-dia.
+    minutos = t.hour * 60 + t.minute
+    turnos = [("meio", REELS_MEIO_DIA, HORA_REELS * 60, "reels_meio_dia", "reels_meio_tentativas"),
+              ("noite", HORA_REELS * 60, 24 * 60, "reels_dia", "reels_tentativas")]
+    for turno, comeco, fim, chave, chave_tent in turnos:
+        if not (REELS_LIGADO and horario):
+            break
+        if estado.get(chave) != hoje and minutos < comeco:
+            estado[chave_tent] = 0
+        if not (comeco <= minutos < fim) or estado.get(chave) == hoje or estado.get(chave_tent, 0) >= 3:
+            continue
+        semana = turno == "noite" and t.weekday() == 6
+        excluir = estado.get("reels_meio_links", []) if (turno == "noite" and estado.get("reels_meio_dia") == hoje) else []
         try:
             import video
-            post = video.fazer_e_publicar(posts, semana, token, pagina, ig, estado, hoje)
+            post = video.fazer_e_publicar(posts, semana, token, pagina, ig, estado, hoje, turno, set(excluir))
             if post:
                 posts.append(post)
-            estado["reels_dia"] = hoje
-            estado["reels_tentativas"] = 0
+                if turno == "meio":
+                    estado["reels_meio_links"] = [m["link"] for m in post["links"]]
+            estado[chave] = hoje
+            estado[chave_tent] = 0
         except Exception as e:
-            estado["reels_tentativas"] = estado.get("reels_tentativas", 0) + 1
-            log(f"Erro no Reels (tentativa {estado['reels_tentativas']} de 3): {e}")
-    if estado.get("reels_dia") != hoje and t.hour < HORA_REELS:
-        estado["reels_tentativas"] = 0
+            estado[chave_tent] = estado.get(chave_tent, 0) + 1
+            log(f"Erro no Reels do turno {turno} (tentativa {estado[chave_tent]} de 3): {e}")
+        break  # um Reels por rodada
 
     estado.update({"vistos": list(vistos)[-500:], "fila": fila, "fila_stories": fila_stories})
     salvar_json(ARQ_REDES, estado)

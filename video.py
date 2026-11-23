@@ -44,7 +44,7 @@ def data_sp(iso):
     return datetime.fromisoformat(iso).astimezone(R.FUSO_SP)
 
 
-def escolher(posts, dias, quantas, agora_sp):
+def escolher(posts, dias, quantas, agora_sp, excluir=()):
     limite = agora_sp - timedelta(days=dias)
     if dias == 1:
         candidatas = [p for p in posts if p.get("tipo") != "reels" and p.get("publicado_em")
@@ -55,7 +55,7 @@ def escolher(posts, dias, quantas, agora_sp):
     vistos, unicas = set(), []
     for p in sorted(candidatas, key=lambda p: (ORDEM.get(p.get("prioridade"), 9), p["publicado_em"])):
         chave = R.normalizar(p["titulo"])
-        if chave not in vistos:
+        if chave not in vistos and p.get("link") not in excluir:
             vistos.add(chave)
             unicas.append(p)
     return unicas[:quantas]
@@ -323,11 +323,11 @@ def montar_video(telas, musica, saida):
     return total
 
 
-def fazer_video(posts, semana, agora_sp, saida):
+def fazer_video(posts, semana, agora_sp, saida, excluir=(), turno="noite"):
     """Monta o vídeo. Devolve (lista de matérias usadas, duração) ou (None, 0) se não houver material."""
     quantas = 8 if semana else 5
     escolhidas, fotos = [], []
-    for p in escolher(posts, 7 if semana else 1, quantas + 4, agora_sp):
+    for p in escolher(posts, 7 if semana else 1, quantas + 4, agora_sp, excluir):
         if len(escolhidas) == quantas:
             break
         foto = foto_do_post(p)
@@ -341,7 +341,7 @@ def fazer_video(posts, semana, agora_sp, saida):
         cabecalho = "RADAR DA SEMANA"
         data_txt = f"{(agora_sp - timedelta(days=6)).strftime('%d/%m')} a {agora_sp.strftime('%d/%m/%Y')}"
     else:
-        cabecalho = "RADAR"
+        cabecalho = "RADAR DO MEIO-DIA" if turno == "meio" else "RADAR"
         data_txt = f"{DIAS_SEMANA[agora_sp.weekday()].capitalize()}, {agora_sp.strftime('%d/%m/%Y')}"
     telas = [(tela_gancho(fotos[0], semana, len(escolhidas), data_txt), DURACAO_GANCHO)]
     curtas = manchetes_curtas([p["titulo"] for p in escolhidas])
@@ -360,9 +360,12 @@ def fazer_video(posts, semana, agora_sp, saida):
     return escolhidas, duracao
 
 
-def legenda(escolhidas, semana, agora_sp):
+def legenda(escolhidas, semana, agora_sp, turno="noite"):
     if semana:
         topo = f"📅 A semana em {len(escolhidas)} notícias: as notícias pretas que marcaram a semana no Áfricas Play."
+    elif turno == "meio":
+        topo = f"☀️ Radar do meio-dia: as notícias pretas desta manhã de {DIAS_SEMANA[agora_sp.weekday()]}, " \
+               f"{agora_sp.strftime('%d/%m')}."
     else:
         topo = f"🎬 Resumo do dia: as notícias pretas que marcaram este {DIAS_SEMANA[agora_sp.weekday()]}, " \
                f"{agora_sp.strftime('%d/%m')}."
@@ -408,23 +411,24 @@ def publicar_facebook(caminho, texto, token, pagina):
     return r["id"]
 
 
-def fazer_e_publicar(posts, semana, token, pagina, ig, estado=None, hoje=None):
+def fazer_e_publicar(posts, semana, token, pagina, ig, estado=None, hoje=None, turno="noite", excluir=()):
     """Instagram primeiro; o Facebook só depois que o Instagram der certo, e uma vez por dia (sem duplicar)."""
     estado = estado if estado is not None else {}
     agora_sp = R.agora_sp()
     saida = os.path.join(tempfile.mkdtemp(), "reels.mp4")
-    escolhidas, _ = fazer_video(posts, semana, agora_sp, saida)
+    escolhidas, _ = fazer_video(posts, semana, agora_sp, saida, excluir, turno)
     if not escolhidas:
         return None
-    texto = legenda(escolhidas, semana, agora_sp)
+    texto = legenda(escolhidas, semana, agora_sp, turno)
     midia, link = publicar_instagram(saida, texto, token, ig)
-    titulo = ("Resumo da semana" if semana else "Resumo do dia") + f" {agora_sp.strftime('%d/%m')}"
+    titulo = ("Resumo da semana" if semana else "Radar do meio-dia" if turno == "meio" else "Resumo do dia") + f" {agora_sp.strftime('%d/%m')}"
     log(f"REELS PUBLICADO: {titulo} {link}")
     video_fb = ""
-    if estado.get("reels_fb_dia") != hoje:
+    chave_fb = "reels_fb_dia" if turno == "noite" else f"reels_fb_{turno}"
+    if estado.get(chave_fb) != hoje:
         try:
             video_fb = publicar_facebook(saida, texto, token, pagina)
-            estado["reels_fb_dia"] = hoje
+            estado[chave_fb] = hoje
             log("Reels publicado também no Facebook.")
         except Exception as e:
             log(f"Reels no Facebook falhou: {e}")
