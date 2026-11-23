@@ -12,6 +12,7 @@ import re
 import subprocess
 import tempfile
 import time
+import urllib.request
 from datetime import datetime, timedelta, timezone
 
 from PIL import Image, ImageDraw, ImageEnhance
@@ -149,6 +150,44 @@ def fundo_foto(foto, escurecer=0.85, inicio=0.30):
     return R.degrade_escuro(img, inicio=inicio)
 
 
+FERRAMENTA_MANCHETES = {
+    "name": "manchetes_curtas",
+    "description": "Manchetes curtas para ler em 3 segundos no Reels, na mesma ordem dos títulos recebidos.",
+    "input_schema": {"type": "object", "properties": {"manchetes": {"type": "array", "items": {"type": "string"}}},
+                     "required": ["manchetes"]},
+}
+INSTRUCAO_MANCHETES = (
+    "Você é editor do portal Áfricas (jornalismo negro). Para cada título, escreva uma manchete curta para um "
+    "vídeo de Reels, lida em 3 segundos: no máximo 8 palavras e 50 caracteres. Mantenha o fato principal, o nome "
+    "da pessoa ou do lugar quando houver, e não invente nada que não esteja no título. Português do Brasil, "
+    "tom direto e popular, sem emoji, sem ponto final. Nunca use 'escravo' (use 'escravizado').")
+
+
+def manchetes_curtas(titulos):
+    """Pede ao Claude manchetes de até 8 palavras. Se der erro, usa os títulos originais."""
+    chave = (os.environ.get("ANTHROPIC_API_KEY") or "").strip()
+    if not chave:
+        return titulos
+    try:
+        corpo = json.dumps({
+            "model": R.MODELO, "max_tokens": 800, "system": INSTRUCAO_MANCHETES,
+            "messages": [{"role": "user", "content": "\n".join(f"{i}. {t}" for i, t in enumerate(titulos, 1))}],
+            "tools": [FERRAMENTA_MANCHETES], "tool_choice": {"type": "tool", "name": "manchetes_curtas"},
+        }).encode("utf-8")
+        req = urllib.request.Request("https://api.anthropic.com/v1/messages", data=corpo, headers={
+            "x-api-key": chave, "anthropic-version": "2023-06-01", "content-type": "application/json"})
+        with urllib.request.urlopen(req, timeout=90) as r:
+            resposta = json.loads(r.read().decode("utf-8"))
+        for bloco in resposta.get("content", []):
+            if bloco.get("type") == "tool_use":
+                curtas = bloco["input"].get("manchetes", [])
+                if len(curtas) == len(titulos):
+                    return [c.strip() if c.strip() and len(c) <= 70 else t for c, t in zip(curtas, titulos)]
+    except Exception as e:
+        log(f"Reels: manchetes curtas falharam ({e}); usando os títulos originais.")
+    return titulos
+
+
 def tela_gancho(foto, semana, total, data_txt):
     """Primeiro quadro: a promessa do vídeo em letras grandes, legível sem som."""
     if foto is not None:
@@ -222,24 +261,36 @@ def tela_materia(foto, titulo, categoria, numero, total, cabecalho, data_txt):
     return img
 
 
-def tela_final():
+# Chamadas da tela final: trocam a cada dia, para o vídeo não ficar com cara de robô.
+CHAMADAS_FINAIS = [
+    ("Quer ler as matérias", "completas?", "Receba os links no direct."),
+    ("Quer saber mais?", "", "Os links chegam no seu direct."),
+    ("Ficou curioso?", "", "A gente manda no seu direct."),
+    ("Quer ler tudo?", "", "Receba os links no direct."),
+]
+
+
+def tela_final(variante=None):
+    if variante is None:
+        variante = datetime.now(R.FUSO_SP).timetuple().tm_yday % len(CHAMADAS_FINAIS)
+    l1, l2, rodape = CHAMADAS_FINAIS[variante]
     img = Image.new("RGB", (L, A), R.COR_FUNDO)
     d = ImageDraw.Draw(img)
     m = 110
     d.rectangle((0, 0, L, 14), fill=R.COR_AMARELO)
-    R.colar_logo(img, m, 260, 460)
-    fm = R.fonte("forte", 66)
-    d.text((m, 560), "Quer ler as matérias", font=fm, fill=R.COR_TEXTO)
-    d.text((m, 640), "completas?", font=fm, fill=R.COR_TEXTO)
-    d.text((m, 780), "Comente", font=R.fonte("extra", 150), fill=R.COR_TEXTO)
-    d.text((m, 940), "APP", font=R.fonte("extra", 260), fill=R.COR_AMARELO)
-    fp = R.fonte("media", 46)
-    y = 1250
-    for linha in ["e receba os links no direct.", "Quem tem o app abre na matéria;", "quem não tem baixa grátis."]:
-        d.text((m, y), linha, font=fp, fill=R.COR_CINZA)
-        y += 64
-    w1 = R.botao_loja(d, m, 1480, "DISPONÍVEL NO", "Google Play", 1.0)
-    R.botao_loja(d, m + w1 + 30, 1480, "BAIXAR NA", "App Store", 1.0)
+    R.colar_logo(img, m, 300, 420)
+    fm = R.fonte("forte", 74)
+    y = 600
+    for linha in (l1, l2):
+        if linha:
+            d.text((m, y), linha, font=fm, fill=R.COR_TEXTO)
+            y += 90
+    y += 40
+    d.text((m, y), "Comente", font=R.fonte("extra", 150), fill=R.COR_TEXTO)
+    d.text((m, y + 160), "APP", font=R.fonte("extra", 280), fill=R.COR_AMARELO)
+    d.text((m, y + 500), rodape, font=R.fonte("forte", 56), fill=R.COR_TEXTO)
+    w1 = R.botao_loja(d, m, 1500, "DISPONÍVEL NO", "Google Play", 1.0)
+    R.botao_loja(d, m + w1 + 30, 1500, "BAIXAR NA", "App Store", 1.0)
     return img
 
 
@@ -296,8 +347,10 @@ def fazer_video(posts, semana, agora_sp, saida):
         cabecalho = "RESUMO DO DIA"
         data_txt = f"{DIAS_SEMANA[agora_sp.weekday()].capitalize()}, {agora_sp.strftime('%d/%m/%Y')}"
     telas = [(tela_gancho(fotos[0], semana, len(escolhidas), data_txt), DURACAO_GANCHO)]
-    for i, (p, foto) in enumerate(zip(escolhidas, fotos), 1):
-        telas.append((tela_materia(foto, p["titulo"], p.get("categoria", ""), i, len(escolhidas),
+    curtas = manchetes_curtas([p["titulo"] for p in escolhidas])
+    for i, (p, foto, curta) in enumerate(zip(escolhidas, fotos, curtas), 1):
+        log(f"Reels {i}: {curta}")
+        telas.append((tela_materia(foto, curta, p.get("categoria", ""), i, len(escolhidas),
                                    cabecalho, data_txt), DURACAO_TELA))
     telas.append((tela_final(), DURACAO_FINAL))
     faixas = sorted(glob.glob(os.path.join(PASTA_MUSICAS, "noticias-*.mp3" if semana else "afrobeat-*.mp3"))) or \
