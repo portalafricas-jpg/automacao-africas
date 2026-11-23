@@ -53,5 +53,38 @@
   "nota": 3,
   "destino": "nota baixa",
   "detalhe": "Fonte África, mas trata de ataque com drones a embarcações russas na costa da Líbia: conflito militar sem relação com Brasil, países de língua portuguesa ou diáspora africana, e sem interesse direto para a Agenda Preta. Fica abaixo do mínimo de 7 para matérias de fontes África."
+ },
+ {
+  "hora": "06:02",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Executivo reafirma compromisso com a dignificação da classe docente",
+  "link": "https://www.giranoticias.com/sociedade/2026/11/32744-executivo-reafirma-compromisso-com-a-dignificacao-da-classe-docente.html",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "Declaração protocolar de governo sobre docentes, sem relação com a temática racial nem com a Agenda Preta; conteúdo genérico e sem fato concreto."
+ },
+ {
+  "hora": "06:02",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Capacitados 173 profissionais em emergências de saúde",
+  "link": "https://www.giranoticias.com/sociedade/2026/11/32745-angola-capacita-173-profissionais-para-emergencias-de-saude.html",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "Capacitação genérica em emergências de saúde, sem recorte racial nem ligação com a Agenda Preta; sem informação suficiente para matéria honesta."
+ },
+ {
+  "hora": "06:02",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Angola termina em quinto lugar no Mundial de futebol para amputados",
+  "link": "https://www.giranoticias.com/desporto/2026/11/32739-angola-termina-em-quinto-lugar-no-mundial-de-futebol-para-amputados.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Esporte africano, ficou fora do escopo da linha editorial (nota 0 a 4)."
  }
 ]
