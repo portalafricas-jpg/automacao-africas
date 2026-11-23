@@ -479,5 +479,28 @@
   "destino": "publicada",
   "detalhe": "Afrodite BXD lança primeiro álbum, O Começo de Algo Novo",
   "foto": "Foto ilustrativa: Markus Spiske/Unsplash"
+ },
+ {
+  "hora": "21:32",
+  "fonte": "Portal do RAP Nacional",
+  "titulo": "Jotapê cumpre promessa, vence o Duelo Nacional 2026 e coroa temporada histórica",
+  "link": "https://portaldorapnacional.com.br/jotape-cumpre-promessa-vence-o-duelo-nacional-2026-e-fecha-temporada-historica/",
+  "categoria": "protagonista",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Conquista de MC negro: vence o Duelo de MCs Nacional 2026 e o prêmio de R$ 50 mil, notícia nova no portal, sem matéria recente sobre o mesmo fato."
+ },
+ {
+  "hora": "21:32",
+  "fonte": "Portal do RAP Nacional",
+  "titulo": "Jotapê cumpre promessa, vence o Duelo Nacional 2026 e coroa temporada histórica",
+  "link": "https://portaldorapnacional.com.br/jotape-cumpre-promessa-vence-o-duelo-nacional-2026-e-fecha-temporada-historica/",
+  "categoria": "protagonista",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "publicada",
+  "detalhe": "Jotapê vence Duelo de MCs Nacional 2026 em BH",
+  "foto": "@andre.scoelho"
  }
 ]
