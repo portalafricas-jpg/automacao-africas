@@ -933,7 +933,7 @@ def main_publicar():
         semana = t.weekday() == 6
         try:
             import video
-            post = video.fazer_e_publicar(posts, semana, token, pagina, ig)
+            post = video.fazer_e_publicar(posts, semana, token, pagina, ig, estado, hoje)
             if post:
                 posts.append(post)
             estado["reels_dia"] = hoje

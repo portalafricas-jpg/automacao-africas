@@ -12,6 +12,8 @@ import re
 import subprocess
 import tempfile
 import time
+
+import requests
 import urllib.request
 from datetime import datetime, timedelta, timezone
 
@@ -375,41 +377,62 @@ def legenda(escolhidas, semana, agora_sp):
 
 
 # ---------------- Publicação ----------------
-def publicar_video(caminho, texto, token, pagina, ig):
+def publicar_instagram(caminho, texto, token, ig):
+    """Envio direto do arquivo ao Instagram (upload resumível, o caminho oficial para Reels)."""
+    tamanho = os.path.getsize(caminho)
+    c = R.meta("POST", f"{ig}/media", token, {"media_type": "REELS", "upload_type": "resumable", "caption": texto,
+                                                "share_to_feed": "true", "thumb_offset": "800"})
     with open(caminho, "rb") as f:
-        r = R.meta("POST", f"{pagina}/videos", token, {"description": texto, "published": "true"},
-                   {"source": ("reels.mp4", f, "video/mp4")}, tentativas=1)
-    video_fb = r["id"]
-    fonte_url, inicio = "", time.time()
-    while time.time() - inicio < 300:
-        info = R.meta("GET", video_fb, token, {"fields": "source,status"})
-        fonte_url = info.get("source") or ""
-        if fonte_url:
+        r = requests.post(c["uri"], data=f.read(), timeout=300, headers={
+            "Authorization": f"OAuth {token}", "offset": "0", "file_size": str(tamanho)})
+    if r.status_code >= 300:
+        raise R.ErroMeta(f"o envio do vídeo ao Instagram falhou ({r.status_code}: {r.text[:200]})")
+    inicio = time.time()
+    while time.time() - inicio < 600:
+        info = R.meta("GET", c["id"], token, {"fields": "status_code,status"})
+        st = info.get("status_code")
+        if st == "FINISHED":
             break
+        if st in ("ERROR", "EXPIRED"):
+            raise R.ErroMeta(f"o Instagram recusou o vídeo ({info.get('status', st)})")
         time.sleep(10)
-    if not fonte_url:
-        raise R.ErroMeta("o Facebook não liberou o endereço do vídeo a tempo; o Instagram fica para a próxima")
-    c = R.meta("POST", f"{ig}/media", token, {"media_type": "REELS", "video_url": fonte_url, "caption": texto,
-                                                "share_to_feed": "true", "thumb_offset": "800"})["id"]
-    R.esperar_container(c, token, limite=420)
-    midia = R.meta("POST", f"{ig}/media_publish", token, {"creation_id": c})["id"]
+    else:
+        raise R.ErroMeta("o Instagram demorou demais para processar o vídeo")
+    midia = R.meta("POST", f"{ig}/media_publish", token, {"creation_id": c["id"]})["id"]
     try:
         link = R.meta("GET", midia, token, {"fields": "permalink"}).get("permalink", "")
     except R.ErroMeta:
         link = ""
-    return video_fb, midia, link
+    return midia, link
 
 
-def fazer_e_publicar(posts, semana, token, pagina, ig):
+def publicar_facebook(caminho, texto, token, pagina):
+    with open(caminho, "rb") as f:
+        r = R.meta("POST", f"{pagina}/videos", token, {"description": texto, "published": "true"},
+                   {"source": ("reels.mp4", f, "video/mp4")}, tentativas=1)
+    return r["id"]
+
+
+def fazer_e_publicar(posts, semana, token, pagina, ig, estado=None, hoje=None):
+    """Instagram primeiro; o Facebook só depois que o Instagram der certo, e uma vez por dia (sem duplicar)."""
+    estado = estado if estado is not None else {}
     agora_sp = R.agora_sp()
     saida = os.path.join(tempfile.mkdtemp(), "reels.mp4")
     escolhidas, _ = fazer_video(posts, semana, agora_sp, saida)
     if not escolhidas:
         return None
     texto = legenda(escolhidas, semana, agora_sp)
-    video_fb, midia, link = publicar_video(saida, texto, token, pagina, ig)
+    midia, link = publicar_instagram(saida, texto, token, ig)
     titulo = ("A semana em 10 fatos" if semana else "Resumo do dia") + f" {agora_sp.strftime('%d/%m')}"
     log(f"REELS PUBLICADO: {titulo} {link}")
+    video_fb = ""
+    if estado.get("reels_fb_dia") != hoje:
+        try:
+            video_fb = publicar_facebook(saida, texto, token, pagina)
+            estado["reels_fb_dia"] = hoje
+            log("Reels publicado também no Facebook.")
+        except Exception as e:
+            log(f"Reels no Facebook falhou: {e}")
     return {"tipo": "reels", "titulo": titulo, "link": "https://www.africas.com.br",
             "links": [{"titulo": p["titulo"], "link": p["link"]} for p in escolhidas],
             "ig_media": midia, "ig_link": link, "fb_post": video_fb, "prioridade": "reels",
