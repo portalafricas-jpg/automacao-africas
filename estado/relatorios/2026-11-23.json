@@ -42,5 +42,16 @@
   "nota": 1,
   "destino": "nota baixa",
   "detalhe": "Oscilação de bolsas asiáticas é economia geral sem ligação com a África, a diáspora ou a temática racial."
+ },
+ {
+  "hora": "04:47",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Dua embarcações russas atingidas com drones na costa da Líbia",
+  "link": "https://www.giranoticias.com/africa/2026/11/32746-dua-embarcacoes-russas-atingidas-com-drones-na-costa-da-libia.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "Fonte África, mas trata de ataque com drones a embarcações russas na costa da Líbia: conflito militar sem relação com Brasil, países de língua portuguesa ou diáspora africana, e sem interesse direto para a Agenda Preta. Fica abaixo do mínimo de 7 para matérias de fontes África."
  }
 ]
