@@ -1,4 +1,4 @@
-# Reels do Áfricas Play: "Resumo do dia" (todo dia, 19h) e "A semana em 10 fatos" (domingo, 19h).
+# Reels do Áfricas Play: "Resumo do dia" (todo dia, 19h) e "Resumo da semana" com 8 notícias (domingo, 19h).
 # Monta o vídeo com as fotos das matérias, manchetes, transições e música (ffmpeg, gratuito)
 # e publica no Facebook (vídeo) e no Instagram (Reels). Aprovado em 23/11/2026.
 
@@ -24,8 +24,8 @@ import redes as R
 L, A = 1080, 1920            # vídeo em pé (9:16)
 FPS = 30
 DURACAO_GANCHO = 2.2         # tela de abertura (gancho dos primeiros segundos)
-DURACAO_TELA = 3.0           # segundos por matéria
-TRANSICAO = 0.5
+DURACAO_TELA = 3.75          # segundos por matéria (4 matérias: o tempo da 5ª foi dividido entre elas, 24/11)
+TRANSICAO = 0.4
 DURACAO_FINAL = 2.6          # tela final do Comente APP
 BRILHO_MINIMO = 70           # abaixo disso (0 a 255) a foto é considerada escura
 BRILHO_INUTIL = 25           # abaixo disso a foto está praticamente preta: não dá para clarear
@@ -330,7 +330,7 @@ def montar_video(telas, musica, saida):
 
 def fazer_video(posts, semana, agora_sp, saida):
     """Monta o vídeo. Devolve (lista de matérias usadas, duração) ou (None, 0) se não houver material."""
-    quantas = 10 if semana else 5
+    quantas = 8 if semana else 4
     escolhidas, fotos = [], []
     for p in escolher(posts, 7 if semana else 1, quantas + 4, agora_sp):
         if len(escolhidas) == quantas:
@@ -367,12 +367,12 @@ def fazer_video(posts, semana, agora_sp, saida):
 
 def legenda(escolhidas, semana, agora_sp):
     if semana:
-        topo = "📅 A semana em 10 fatos: as notícias pretas que marcaram a semana no Áfricas Play."
+        topo = f"📅 A semana em {len(escolhidas)} notícias: as notícias pretas que marcaram a semana no Áfricas Play."
     else:
         topo = f"🎬 Resumo do dia: as notícias pretas que marcaram este {DIAS_SEMANA[agora_sp.weekday()]}, " \
                f"{agora_sp.strftime('%d/%m')}."
     lista = "\n".join(f"{i}. {p['titulo']}" for i, p in enumerate(escolhidas, 1))
-    tags = "#ÁfricasPlay #NotíciasPretas #CulturaNegra " + ("#SemanaEm10Fatos" if semana else "#ResumoDoDia")
+    tags = "#ÁfricasPlay #NotíciasPretas #CulturaNegra " + ("#ResumoDaSemana" if semana else "#ResumoDoDia")
     return f"{topo}\n\n{lista}\n\n👉🏿 Quer ler as matérias completas? Comente APP que a gente te manda os links no direct.\n📲 Manda pra quem precisa saber.\n\n{tags}"
 
 
@@ -423,7 +423,7 @@ def fazer_e_publicar(posts, semana, token, pagina, ig, estado=None, hoje=None):
         return None
     texto = legenda(escolhidas, semana, agora_sp)
     midia, link = publicar_instagram(saida, texto, token, ig)
-    titulo = ("A semana em 10 fatos" if semana else "Resumo do dia") + f" {agora_sp.strftime('%d/%m')}"
+    titulo = ("Resumo da semana" if semana else "Resumo do dia") + f" {agora_sp.strftime('%d/%m')}"
     log(f"REELS PUBLICADO: {titulo} {link}")
     video_fb = ""
     if estado.get("reels_fb_dia") != hoje:
