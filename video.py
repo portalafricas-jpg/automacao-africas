@@ -62,14 +62,15 @@ def brilho(img):
 
 
 def fotos_da_pagina(link):
-    """Outras fotos da própria matéria: a de compartilhamento e as do corpo do texto."""
+    """Outras fotos oficiais da própria matéria (compartilhamento no Facebook e no X)."""
     try:
         pagina = R.baixar(link).decode("utf-8", errors="replace")
     except Exception:
         return []
     urls = re.findall(r'<meta[^>]+property="og:image"[^>]+content="([^"]+)"', pagina) + \
         re.findall(r'<meta[^>]+content="([^"]+)"[^>]+property="og:image"', pagina) + \
-        re.findall(r'<img[^>]+src="(https?://[^"]+\.(?:jpe?g|png|webp)[^"]*)"', pagina, flags=re.I)
+        re.findall(r'<meta[^>]+name="twitter:image"[^>]+content="([^"]+)"', pagina)
+    # só as fotos declaradas da própria matéria (as imagens soltas da página podem ser de outras matérias)
     vistos, saida = set(), []
     for u in urls:
         u = html.unescape(u)
