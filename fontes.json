@@ -10,14 +10,14 @@
   "categoria": "cultura",
   "tipo": "rss",
   "url": "https://mundonegro.inf.br/feed/",
-  "imagem": "exigir_credito"
+  "imagem": "substituir_sempre"
  },
  {
   "nome": "Notícia Preta",
   "categoria": "protagonista",
   "tipo": "rss",
   "url": "https://noticiapreta.com.br/feed/",
-  "imagem": "exigir_credito"
+  "imagem": "substituir_sempre"
  },
  {
   "nome": "Geledés",
@@ -106,7 +106,8 @@
   "nome": "Africanize",
   "categoria": "cultura",
   "tipo": "pagina",
-  "url": "https://africanizeoficial.com.br/"
+  "url": "https://africanizeoficial.com.br/",
+  "imagem": "substituir_sempre"
  },
  {
   "nome": "Baobá - Blog",
