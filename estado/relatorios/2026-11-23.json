@@ -152,5 +152,61 @@
   "nota": 0,
   "destino": "nota baixa",
   "detalhe": "Notícia sem título completo e sem resumo, sem informação suficiente para matéria honesta; não há relação clara com a temática racial nem com a Agenda Preta, e o tema (distinção de presidente em conferência de saúde pública) é protocolar/burocrático, fora dos critérios de entrada da África."
+ },
+ {
+  "hora": "09:18",
+  "fonte": "Geledés",
+  "titulo": "Consciência negra dá frutos",
+  "link": "https://www.geledes.org.br/consciencia-negra-da-frutos/",
+  "categoria": "ancestralidade",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Matéria de contexto histórico sobre o 20 de novembro, publicada um dia depois da data da memória negra, com fatos (1971, Grupo Palmares, assassinato de Zumbi em 1695). Não é artigo de opinião, então entra na faixa de 7 a 8."
+ },
+ {
+  "hora": "09:18",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Fundo Soberano de Angola aposta na mineração africana",
+  "link": "https://www.giranoticias.com/economia/2026/11/32754-fundo-soberano-de-angola-aposta-na-mineracao-africana.html",
+  "categoria": "mundo",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Fonte africana sobre investimento de fundo soberano angolano em mineração. Política e economia de país de língua portuguesa, interesse do leitor que acompanha a África, mas sem ligação direta com o Brasil nem com a Agenda Preta."
+ },
+ {
+  "hora": "09:18",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "ExxonMobil e parceiros anunciam investimento de quatro mil milhões de dólares",
+  "link": "https://www.giranoticias.com/economia/2026/11/32752-exxonmobil-e-parceiros-anunciam-investimento-de-quatro-mil-milhoes-de-dolares.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 5,
+  "destino": "nota baixa",
+  "detalhe": "Investimento de US$ 4 bilhões da ExxonMobil e parceiros, notícia econômica sem ligação com o Brasil, com a diáspora nem com a temática racial. Fica no limite inferior do que interessa ao leitor."
+ },
+ {
+  "hora": "09:18",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Fundo Soberano de Angola aposta na mineração africana",
+  "link": "https://www.giranoticias.com/economia/2026/11/32754-fundo-soberano-de-angola-aposta-na-mineracao-africana.html",
+  "categoria": "mundo",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "publicada",
+  "detalhe": "Fundo Soberano de Angola investe em mineração",
+  "foto": "Divulgação"
+ },
+ {
+  "hora": "09:18",
+  "fonte": "Geledés",
+  "titulo": "Consciência negra dá frutos",
+  "link": "https://www.geledes.org.br/consciencia-negra-da-frutos/",
+  "categoria": "ancestralidade",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "recusada pelo redator",
+  "detalhe": "Recusado: o texto original é um artigo de opinião/coluna (tom opinativo, análise e prescrições como \"é preciso festejar as vitórias\" e \"espera-se que continue\", sem fato novo central), além de ser um texto de reflexão de autor e não notícia factual. Também reúne múltiplos temas sem um fato noticioso único e datado. Conforme a linha editorial, artigos de opinião de outros veículos não entram."
  }
 ]
