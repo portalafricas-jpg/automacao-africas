@@ -16,7 +16,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install trafilatura googlenewsdecoder
+      - run: pip install trafilatura googlenewsdecoder requests
       - name: Testar
         run: |
           python3 - <<'FIM'
