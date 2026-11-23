@@ -26,7 +26,7 @@ CATEGORIAS = ["mundo", "cotidiano", "protagonista", "cultura", "politica", "ance
 PRIORIDADES = ["breaking", "alta", "media"]
 MODELO = "claude-haiku-5-5"
 JANELA_HORAS = 1                # só entra notícia publicada na última hora (sites com RSS)
-JANELA_HORAS_BUSCA = 3          # buscas do Bing: 3 horas, porque o Bing mostra a notícia com atraso
+JANELA_HORAS_BUSCA = 3          # buscas no Google Notícias: notícias das últimas 3 horas
 VALIDADE_HORAS = 4              # notícia com mais de 4 horas não é publicada, nem saindo da fila
 NOTA_MINIMA = 7                 # nota do editor-chefe para ir para a fila
 LIMITE_AFRICA_DIA = 5           # no máximo 5 matérias por dia de fontes África (breaking não conta)
@@ -222,6 +222,27 @@ def bing_url(busca):
         {"q": busca, "format": "rss", "mkt": "pt-BR", "setlang": "pt-BR", "cc": "BR", "qft": 'sortbydate="1"'})
 
 
+def google_url(busca):
+    # Google Notícias (troca do Bing em 23/11/2026: o Bing mostrava as notícias com 10 a 24 horas de atraso)
+    return "https://news.google.com/rss/search?" + urllib.parse.urlencode(
+        {"q": f"{busca} when:1d", "hl": "pt-BR", "gl": "BR", "ceid": "BR:pt-419"})
+
+
+def link_real_google(link):
+    """O Google Notícias entrega o link 'embrulhado'; aqui ele é desembrulhado para o endereço real da matéria."""
+    if "news.google.com" not in link:
+        return link
+    try:
+        from googlenewsdecoder import gnewsdecoder
+        r = gnewsdecoder(link, interval=1)
+        if r.get("status") and r.get("decoded_url"):
+            return r["decoded_url"]
+        log(f"  Não desembrulhou o link do Google Notícias: {r.get('message', '')}")
+    except Exception as e:
+        log(f"  Não desembrulhou o link do Google Notícias: {e}")
+    return ""
+
+
 def link_real_bing(link):
     """O Bing esconde o endereço da matéria no pedaço url= do link."""
     q = urllib.parse.parse_qs(urlparse(link).query)
@@ -254,7 +275,7 @@ def ler_pagina_de_noticias(url):
 
 
 def ler_fonte(fonte, rodada):
-    """Lê uma fonte da lista conforme o tipo: rss, pagina (site sem RSS) ou busca (Bing Notícias)."""
+    """Lê uma fonte da lista conforme o tipo: rss, pagina (site sem RSS) ou busca (Google Notícias)."""
     tipo = fonte.get("tipo")
     if tipo == "rss":
         return ler_rss(fonte["url"])
@@ -266,10 +287,13 @@ def ler_fonte(fonte, rodada):
         if fonte.get("grupo", 0) % GRUPOS_BUSCA != rodada % GRUPOS_BUSCA:
             return []
         itens = []
-        for item in ler_rss(bing_url(fonte["busca"])):
-            item["link"] = link_real_bing(item["link"])
+        for item in ler_rss(google_url(fonte["busca"])):
+            # o Google põe " - Nome do veículo" no fim do título
+            partes = item["titulo"].rsplit(" - ", 1)
+            if len(partes) == 2 and len(partes[1]) <= 40:
+                item["titulo"] = partes[0].strip()
             if item["link"]:
-                itens.append(item)
+                itens.append(item)  # o link real é desembrulhado só quando a matéria vai ser escrita
         return itens
     log(f"  Tipo de fonte desconhecido: {fonte.get('nome')}")
     return []
@@ -940,6 +964,12 @@ def cortar_linha_fina(texto, limite=350):
 
 def publicar(materia_fila, linha_editorial, agora):
     """Extrai o texto original, manda o redator escrever e devolve a matéria pronta (ou None)."""
+    if "news.google.com" in materia_fila["link"]:
+        real = link_real_google(materia_fila["link"])
+        if not real:
+            registrar(materia_fila, "não abriu o texto", "link do Google Notícias não desembrulhou")
+            return None
+        materia_fila["link"] = real
     original = extrair_materia(materia_fila["link"], materia_fila["titulo_original"], materia_fila.get("descricao", ""))
     if len(original["texto"]) < TEXTO_MINIMO:
         log("  Descartada: não deu para ler o texto completo no site original.")
@@ -1085,7 +1115,7 @@ def main():
             candidatas.append(dict(item, titulo_original=item["titulo"]))
     candidatas.sort(key=lambda i: i["data"] or agora)
     candidatas = candidatas[:MAX_TRIAGEM_POR_RODADA]
-    log(f"Bing nesta rodada: {bing['buscas']} buscas com resultado, {bing['recebidas']} notícias recebidas, "
+    log(f"Google Notícias nesta rodada: {bing['buscas']} buscas com resultado, {bing['recebidas']} notícias recebidas, "
         f"{bing['na_janela']} das últimas {JANELA_HORAS_BUSCA} horas")
     log(f"Notícias novas para avaliar: {len(candidatas)}")
 

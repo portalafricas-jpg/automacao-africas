@@ -1,6 +1,6 @@
 name: Diagnóstico do Bing
 
-# Só lê o que o Bing (e o Google Notícias, para comparar) devolvem, com as datas. Não publica nada.
+# Teste do Google Notícias no robô (não publica nada, não grava nada).
 on:
   workflow_dispatch:
 
@@ -10,43 +10,34 @@ permissions:
 jobs:
   diagnostico:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
-      - name: Ler o Bing e o Google Notícias
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install trafilatura googlenewsdecoder
+      - name: Testar
         run: |
           python3 - <<'FIM'
-          import urllib.parse, urllib.request, xml.etree.ElementTree as ET
-          from email.utils import parsedate_to_datetime
-          from datetime import datetime, timezone
+          import json
+          from datetime import datetime, timezone, timedelta
+          import robo
           agora = datetime.now(timezone.utc)
-          buscas = ["racismo", "movimento negro", "consciência negra"]
-          def ler(nome, url):
-              try:
-                  req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-                  dados = urllib.request.urlopen(req, timeout=30).read()
-                  itens = list(ET.fromstring(dados).iter("item"))
-              except Exception as e:
-                  print(f"  {nome}: ERRO {e}"); return
-              idades = []
-              for it in itens:
-                  try:
-                      d = parsedate_to_datetime(it.findtext("pubDate") or "")
-                      idades.append((agora - d).total_seconds() / 3600)
-                  except Exception:
-                      idades.append(None)
-              validas = [i for i in idades if i is not None]
-              print(f"  {nome}: {len(itens)} notícias | com data: {len(validas)} | "
-                    f"últimas 3h: {sum(1 for i in validas if i <= 3)} | últimas 24h: {sum(1 for i in validas if i <= 24)}")
-              for it, idade in list(zip(itens, idades))[:3]:
-                  print(f"     - {('%.1fh' % idade) if idade is not None else 'sem data'} | {it.findtext('pubDate')} | {(it.findtext('title') or '')[:70]}")
-          for q in buscas:
-              print(f"\n### Busca: {q}")
-              base = {"q": q, "format": "rss"}
-              ler("Bing simples", "https://www.bing.com/news/search?" + urllib.parse.urlencode(base))
-              ler("Bing pt-BR + por data (atual)", "https://www.bing.com/news/search?" + urllib.parse.urlencode(
-                  {**base, "mkt": "pt-BR", "setlang": "pt-BR", "cc": "BR", "qft": 'sortbydate="1"'}))
-              ler("Bing pt-BR + interval 24h", "https://www.bing.com/news/search?" + urllib.parse.urlencode(
-                  {**base, "mkt": "pt-BR", "setlang": "pt-BR", "cc": "BR", "qft": 'interval="7"', "form": "PTFTNR"}))
-              ler("Google Notícias", "https://news.google.com/rss/search?" + urllib.parse.urlencode(
-                  {"q": q + " when:1d", "hl": "pt-BR", "gl": "BR", "ceid": "BR:pt-419"}))
+          fontes = [f for f in json.load(open("fontes.json")) if f.get("tipo") == "busca"]
+          print("buscas na lista:", len(fontes))
+          total, janela, amostra = 0, 0, []
+          for f in fontes[:12]:
+              f = dict(f); f.pop("dia_semana", None); f["grupo"] = 0
+              itens = robo.ler_fonte(f, 0)
+              novos = [i for i in itens if i["data"] and agora - i["data"] <= timedelta(hours=3)]
+              total += len(itens); janela += len(novos)
+              print(f"- {f['busca'][:40]:40} | {len(itens):3} notícias | {len(novos):3} das últimas 3h")
+              amostra += novos[:1]
+          print(f"TOTAL: {total} notícias, {janela} das últimas 3h (12 buscas)")
+          print("\nTeste de desembrulhar o link e ler o texto:")
+          for i in amostra[:5]:
+              real = robo.link_real_google(i["link"])
+              m = robo.extrair_materia(real, i["titulo"]) if real else {"texto": "", "veiculo": ""}
+              print(f"* {i['titulo'][:60]}\n   link real: {real[:90]}\n   veículo: {m.get('veiculo')} | texto lido: {len(m.get('texto',''))} caracteres")
           FIM
