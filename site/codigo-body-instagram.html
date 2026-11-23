@@ -1,4 +1,4 @@
-<!-- Áfricas Play: mostra o post do Instagram no fim de cada matéria (lista atualizada pelo robô das redes no GitHub) -->
+<!-- Áfricas Play: mostra o post do Instagram na matéria, no lugar do "Siga o Áfricas no Instagram" (lista atualizada pelo robô das redes no GitHub) -->
 <script>
 (function () {
   var caminho = location.pathname.replace(/\/+/g, "/").replace(/\/$/, "");
@@ -7,14 +7,29 @@
     .then(function (r) { return r.json(); })
     .then(function (mapa) {
       var link = mapa[caminho];
-      var alvo = document.getElementById("content");
-      if (!link || !alvo) return;
+      var texto = document.getElementById("content");
+      if (!link || !texto) return;
       var caixa = document.createElement("div");
-      caixa.style.margin = "32px 0";
+      caixa.style.margin = "28px 0";
       caixa.innerHTML = '<p><strong>Veja também no Instagram do Áfricas Play</strong></p>' +
         '<blockquote class="instagram-media" data-instgrm-permalink="' + link + '" data-instgrm-version="14" ' +
         'style="max-width:540px;width:100%;margin:0 auto;"></blockquote>';
-      alvo.appendChild(caixa);
+      // 1) no lugar da frase "Siga o Áfricas no Instagram: @africasplay"
+      var siga = null;
+      var links = texto.querySelectorAll('a[href*="instagram.com/africasplay"]');
+      for (var i = 0; i < links.length; i++) {
+        var bloco = links[i].closest("p, div");
+        if (bloco && bloco !== texto && /Siga o Áfricas/i.test(bloco.textContent)) { siga = bloco; break; }
+      }
+      if (siga) {
+        siga.parentNode.replaceChild(caixa, siga);
+      } else {
+        // 2) sem a frase: antes do botão do grupo de WhatsApp, ou no fim do texto
+        var grupo = texto.querySelector('img[src*="btn-whatsapp"], a[href*="chat.whatsapp.com"]');
+        var antes = grupo ? (grupo.closest("p, div, a") || grupo) : null;
+        if (antes && antes !== texto && texto.contains(antes)) antes.parentNode.insertBefore(caixa, antes);
+        else texto.appendChild(caixa);
+      }
       if (window.instgrm) { window.instgrm.Embeds.process(); return; }
       var s = document.createElement("script");
       s.async = true;
