@@ -177,7 +177,7 @@ def tela_gancho(foto, semana, total, data_txt):
     return img
 
 
-def fume(img, topo, forca=0.88):
+def fume(img, topo, forca=0.93):
     """Fundo fumê atrás do texto: escurece da faixa da manchete até o fim da tela,
     para letras que já existam na foto não embaralharem a leitura."""
     mascara = Image.new("L", (1, A))
