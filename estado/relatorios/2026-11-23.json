@@ -208,5 +208,38 @@
   "nota": 7,
   "destino": "recusada pelo redator",
   "detalhe": "Recusado: o texto original é um artigo de opinião/coluna (tom opinativo, análise e prescrições como \"é preciso festejar as vitórias\" e \"espera-se que continue\", sem fato novo central), além de ser um texto de reflexão de autor e não notícia factual. Também reúne múltiplos temas sem um fato noticioso único e datado. Conforme a linha editorial, artigos de opinião de outros veículos não entram."
+ },
+ {
+  "hora": "09:32",
+  "fonte": "Mundo Negro",
+  "titulo": "Musical de comédia sobre assassinato de George Floyd gera revolta",
+  "link": "https://mundonegro.inf.br/musical-de-comedia-sobre-assassinato-de-george-floyd-gera-revolta/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Tema racial ligado à cultura negra e à memória de George Floyd, com repercussão de figuras públicas. Fato novo: a Playbill retirou o anúncio de seleção, o que o torna matéria própria, mas o conteúdo trata de um projeto de musical com comédia sobre a morte de George Floyd, tema de violência racial."
+ },
+ {
+  "hora": "09:32",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Embaixadora Josefa Sacko reconhece solidariedade italiana",
+  "link": "https://www.giranoticias.com/politica/2026/11/32755-embaixadora-josefa-sacko-reconhece-solidariedade-italiana.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "Notícia protocolar sobre reconhecimento de solidariedade em nota de embaixadora, sem fato relevante para a população negra e sem ligação clara com a temática do portal."
+ },
+ {
+  "hora": "09:33",
+  "fonte": "Mundo Negro",
+  "titulo": "Musical de comédia sobre assassinato de George Floyd gera revolta",
+  "link": "https://mundonegro.inf.br/musical-de-comedia-sobre-assassinato-de-george-floyd-gera-revolta/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "recusada pelo redator",
+  "detalhe": "Recusa por ser artigo/opinião de outro veículo? Não: o fato (retirada do anúncio pela Playbill) é noticiado pela imprensa e o texto traz fatos suficientes. Porém, o texto original cita que a informação sobre o pedido de desculpas vem do The New York Times e o conteúdo mistura reportagem com reações de famosos e comentários opinativos. A decisão de recusar se baseia em: o material é uma reescrita de matéria de outro veículo que reúne reação e análise de terceiros sem fato novo para o Brasil, e a notícia principal (anúncio do musical) já trata de um evento de repercussão restrita; além disso, a fonte primária é um veículo estrangeiro sem ligação direta com o público brasileiro. Na dúvida, descartar."
  }
 ]
