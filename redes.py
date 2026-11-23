@@ -850,7 +850,9 @@ def main_publicar():
 
     horario = dentro_do_horario(t)
     ultimo = datetime.fromisoformat(estado["ultimo_feed"]) if estado.get("ultimo_feed") else None
-    pode_feed = ultimo is None or (agora - ultimo) >= timedelta(minutes=INTERVALO_FEED_MIN)
+    # tolerância de 3 minutos: o post sai 1 ou 2 minutos depois de o robô acordar, e sem ela
+    # os 45 minutos viravam 60 na prática (o robô acorda de 15 em 15)
+    pode_feed = ultimo is None or (agora - ultimo) >= timedelta(minutes=INTERVALO_FEED_MIN - 3)
     log(f"Hora: {t.strftime('%H:%M')} | {'horário de publicação' if horario else 'madrugada: só breaking'} | "
         f"feed hoje: {estado['feed_hoje']}/{FEED_MAXIMO_DIA} | stories hoje: {estado['stories_hoje']}/{STORIES_MAXIMO_DIA}")
 
