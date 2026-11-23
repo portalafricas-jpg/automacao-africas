@@ -20,9 +20,11 @@ import redes as R
 
 L, A = 1080, 1920            # vídeo em pé (9:16)
 FPS = 30
-DURACAO_TELA = 4.0           # segundos por matéria
-TRANSICAO = 0.6
-DURACAO_FINAL = 4.0          # tela final do Comente APP
+DURACAO_GANCHO = 2.2         # tela de abertura (gancho dos primeiros segundos)
+DURACAO_TELA = 3.0           # segundos por matéria
+TRANSICAO = 0.5
+DURACAO_FINAL = 2.6          # tela final do Comente APP
+BRILHO_MINIMO = 70           # abaixo disso (0 a 255) a foto é considerada escura
 PASTA_MUSICAS = os.path.join(R.PASTA, "musicas")
 TRANSICOES = ["fade", "slideleft", "smoothleft", "circleopen", "slideup", "fadeblack", "wipeleft"]
 ORDEM = {"breaking": 0, "alta": 1, "parceiro": 2, "nota7": 3}
@@ -55,31 +57,99 @@ def escolher(posts, dias, quantas, agora_sp):
     return unicas[:quantas]
 
 
-def foto_do_post(post):
-    """Foto limpa da matéria: a guardada no registro ou, nas antigas, a imagem de compartilhamento da página."""
-    url = post.get("foto") or ""
-    if not url:
-        try:
-            pagina = R.baixar(post["link"]).decode("utf-8", errors="replace")
-            achou = re.search(r'<meta[^>]+property="og:image"[^>]+content="([^"]+)"', pagina) or \
-                re.search(r'<meta[^>]+content="([^"]+)"[^>]+property="og:image"', pagina)
-            url = html.unescape(achou.group(1)) if achou else ""
-        except Exception:
-            url = ""
-    if not url:
-        return None
+def brilho(img):
+    return sum(img.convert("L").resize((64, 64)).getdata()) / 4096
+
+
+def fotos_da_pagina(link):
+    """Outras fotos da própria matéria: a de compartilhamento e as do corpo do texto."""
     try:
-        return Image.open(io.BytesIO(R.baixar(url))).convert("RGB")
+        pagina = R.baixar(link).decode("utf-8", errors="replace")
+    except Exception:
+        return []
+    urls = re.findall(r'<meta[^>]+property="og:image"[^>]+content="([^"]+)"', pagina) + \
+        re.findall(r'<meta[^>]+content="([^"]+)"[^>]+property="og:image"', pagina) + \
+        re.findall(r'<img[^>]+src="(https?://[^"]+\.(?:jpe?g|png|webp)[^"]*)"', pagina, flags=re.I)
+    vistos, saida = set(), []
+    for u in urls:
+        u = html.unescape(u)
+        if u not in vistos and "logo" not in u.lower() and "icon" not in u.lower():
+            vistos.add(u)
+            saida.append(u)
+    return saida[:6]
+
+
+def abrir(url):
+    try:
+        img = Image.open(io.BytesIO(R.baixar(url))).convert("RGB")
+        return img if img.width >= 500 and img.height >= 400 else None
     except Exception:
         return None
 
 
+def foto_do_post(post):
+    """Foto da matéria. Se for escura, procura outra foto mais clara na própria matéria;
+    se não houver, clareia a melhor que tiver."""
+    candidatas = [post["foto"]] if post.get("foto") else []
+    melhor, melhor_brilho = None, -1
+    for tentativa in range(2):
+        for url in candidatas:
+            img = abrir(url)
+            if img is None:
+                continue
+            b = brilho(img)
+            if b >= BRILHO_MINIMO:
+                return img
+            if b > melhor_brilho:
+                melhor, melhor_brilho = img, b
+        if tentativa == 0:
+            candidatas = [u for u in fotos_da_pagina(post["link"]) if u not in candidatas]
+    if melhor is None:
+        return None
+    fator = min(1.9, (BRILHO_MINIMO + 20) / max(melhor_brilho, 15))
+    log(f"Reels: foto escura ({melhor_brilho:.0f}) clareada em {fator:.1f}x: {post['titulo'][:50]}")
+    return ImageEnhance.Contrast(ImageEnhance.Brightness(melhor).enhance(fator)).enhance(1.08)
+
+
 # ---------------- Telas ----------------
-def tela_materia(foto, titulo, categoria, numero, total, cabecalho, data_txt):
+def fundo_foto(foto, escurecer=0.85, inicio=0.30):
+    img = R.cobrir(foto, L, A)
+    img = ImageEnhance.Brightness(img).enhance(escurecer)
+    return R.degrade_escuro(img, inicio=inicio)
+
+
+def tela_gancho(foto, semana, total, data_txt):
+    """Primeiro quadro: a promessa do vídeo em letras grandes, legível sem som."""
     if foto is not None:
-        img = R.cobrir(foto, L, A)
-        img = ImageEnhance.Brightness(img).enhance(0.75)
-        img = R.degrade_escuro(img, inicio=0.30)
+        img = fundo_foto(foto, escurecer=0.6, inicio=0.10)
+    else:
+        img = Image.new("RGB", (L, A), R.COR_FUNDO)
+    d = ImageDraw.Draw(img)
+    m = 90
+    d.rectangle((0, 0, L, 14), fill=R.COR_AMARELO)
+    if semana:
+        linhas = [("10 FATOS", R.COR_AMARELO, 150), ("que marcaram", R.COR_TEXTO, 96),
+                  ("a semana", R.COR_TEXTO, 96), ("do povo preto", R.COR_TEXTO, 96)]
+    else:
+        linhas = [(f"{total} NOTÍCIAS", R.COR_AMARELO, 140), ("que você precisa", R.COR_TEXTO, 96),
+                  ("saber hoje", R.COR_TEXTO, 96)]
+    y = 620
+    for texto, cor, tam in linhas:
+        f = R.fonte("extra", tam)
+        while d.textlength(texto, font=f) > L - 2 * m and tam > 50:
+            tam -= 4
+            f = R.fonte("extra", tam)
+        d.text((m, y), texto, font=f, fill=cor)
+        y += tam * 1.15
+    d.text((m, y + 30), data_txt, font=R.fonte("media", 44), fill=R.COR_CINZA)
+    R.colar_logo(img, m, 1560, 300)
+    return img
+
+
+def tela_materia(foto, titulo, categoria, numero, total, cabecalho, data_txt):
+    categoria = categoria or "Notícia"
+    if foto is not None:
+        img = fundo_foto(foto)
     else:
         img = Image.new("RGB", (L, A), R.COR_FUNDO)
     d = ImageDraw.Draw(img)
@@ -173,9 +243,10 @@ def fazer_video(posts, semana, agora_sp, saida):
     else:
         cabecalho = "RESUMO DO DIA"
         data_txt = f"{DIAS_SEMANA[agora_sp.weekday()].capitalize()}, {agora_sp.strftime('%d/%m/%Y')}"
-    telas = []
-    for i, p in enumerate(escolhidas, 1):
-        telas.append((tela_materia(foto_do_post(p), p["titulo"], p.get("categoria", ""), i, len(escolhidas),
+    fotos = [foto_do_post(p) for p in escolhidas]
+    telas = [(tela_gancho(fotos[0], semana, len(escolhidas), data_txt), DURACAO_GANCHO)]
+    for i, (p, foto) in enumerate(zip(escolhidas, fotos), 1):
+        telas.append((tela_materia(foto, p["titulo"], p.get("categoria", ""), i, len(escolhidas),
                                    cabecalho, data_txt), DURACAO_TELA))
     telas.append((tela_final(), DURACAO_FINAL))
     faixas = sorted(glob.glob(os.path.join(PASTA_MUSICAS, "noticias-*.mp3" if semana else "afrobeat-*.mp3"))) or \
@@ -196,7 +267,7 @@ def legenda(escolhidas, semana, agora_sp):
                f"{agora_sp.strftime('%d/%m')}."
     lista = "\n".join(f"{i}. {p['titulo']}" for i, p in enumerate(escolhidas, 1))
     tags = "#ÁfricasPlay #NotíciasPretas #CulturaNegra " + ("#SemanaEm10Fatos" if semana else "#ResumoDoDia")
-    return f"{topo}\n\n{lista}\n\n👉🏿 Quer ler as matérias completas? Comente APP que a gente te manda os links no direct.\n\n{tags}"
+    return f"{topo}\n\n{lista}\n\n👉🏿 Quer ler as matérias completas? Comente APP que a gente te manda os links no direct.\n📲 Manda pra quem precisa saber.\n\n{tags}"
 
 
 # ---------------- Publicação ----------------
@@ -215,7 +286,7 @@ def publicar_video(caminho, texto, token, pagina, ig):
     if not fonte_url:
         raise R.ErroMeta("o Facebook não liberou o endereço do vídeo a tempo; o Instagram fica para a próxima")
     c = R.meta("POST", f"{ig}/media", token, {"media_type": "REELS", "video_url": fonte_url, "caption": texto,
-                                                "share_to_feed": "true"})["id"]
+                                                "share_to_feed": "true", "thumb_offset": "800"})["id"]
     R.esperar_container(c, token, limite=420)
     midia = R.meta("POST", f"{ig}/media_publish", token, {"creation_id": c})["id"]
     try:
