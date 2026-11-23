@@ -9,6 +9,7 @@ import html
 import io
 import time
 import json
+import random
 from urllib.parse import urlparse
 import os
 import re
@@ -277,8 +278,20 @@ def botao_loja(d, x, y, linha1, linha2, escala):
     return w
 
 
-def tela_app(tamanho):
+# Chamadas da tela "Comente APP" do carrossel: trocam a cada post, para não ficar com cara de robô.
+CHAMADAS_APP = [
+    ("Quer ler a matéria", "completa?", "Receba o link no direct."),
+    ("Quer saber mais?", "", "O link chega no seu direct."),
+    ("Ficou curioso?", "", "A gente manda no seu direct."),
+    ("Quer ler tudo?", "", "Receba o link no direct."),
+]
+
+
+def tela_app(tamanho, variante=None):
     """Tela 3: comente APP e receba o link da matéria no direct (deep link: app ou loja)."""
+    if variante is None:
+        variante = random.randrange(len(CHAMADAS_APP))
+    l1, l2, rodape = CHAMADAS_APP[variante % len(CHAMADAS_APP)]
     largura, altura = tamanho
     escala = largura / 1080
     img = Image.new("RGB", (largura, altura), COR_FUNDO)
@@ -286,21 +299,19 @@ def tela_app(tamanho):
     margem = int(140 * escala)  # espaço para as setas laterais
     d.rectangle((0, 0, largura, int(16 * escala)), fill=COR_AMARELO)
     colar_logo(img, margem, int(110 * escala), int(430 * escala))
-    fm = fonte("forte", int(62 * escala))
+    fm = fonte("forte", int(68 * escala))
     y = altura * 0.27
-    d.text((margem, y), "Quer ler a matéria", font=fm, fill=COR_TEXTO)
-    y += fm.size * 1.2
-    d.text((margem, y), "completa?", font=fm, fill=COR_TEXTO)
-    y += fm.size * 1.6
+    for linha in (l1, l2):
+        if linha:
+            d.text((margem, y), linha, font=fm, fill=COR_TEXTO)
+            y += fm.size * 1.2
+    y += fm.size * 0.4
     fg = fonte("extra", int(140 * escala))
     d.text((margem, y), "Comente", font=fg, fill=COR_TEXTO)
     y += fg.size * 1.05
     d.text((margem, y), "APP", font=fonte("extra", int(230 * escala)), fill=COR_AMARELO)
-    y += int(230 * escala) * 1.15
-    fp = fonte("media", int(42 * escala))
-    for linha in ["e receba o link no seu direct.", "Quem tem o app abre na matéria;", "quem não tem baixa grátis."]:
-        d.text((margem, y), linha, font=fp, fill=COR_CINZA)
-        y += fp.size * 1.35
+    y += int(230 * escala) * 1.2
+    d.text((margem, y), rodape, font=fonte("forte", int(52 * escala)), fill=COR_TEXTO)
     y_loja = altura - int(170 * escala)
     w1 = botao_loja(d, margem, y_loja, "DISPONÍVEL NO", "Google Play", escala)
     botao_loja(d, margem + w1 + int(30 * escala), y_loja, "BAIXAR NA", "App Store", escala)
