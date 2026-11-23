@@ -218,7 +218,7 @@ def tela_gancho(foto, semana, total, data_txt):
     return img
 
 
-def fume(img, topo, forca=0.78):
+def fume(img, topo, forca=0.55):
     """Degradê suave: começa transparente bem acima da manchete e escurece aos poucos até o pé da tela.
     Sem faixa sólida, para a foto continuar aparecendo (ajuste pedido em 23/11)."""
     mascara = Image.new("L", (1, A))
