@@ -24,7 +24,7 @@ jobs:
           python-version: "3.12"
 
       - name: Instalar o leitor de matérias
-        run: pip install trafilatura
+        run: pip install trafilatura googlenewsdecoder
 
       - name: Rodar o robô
         env:
