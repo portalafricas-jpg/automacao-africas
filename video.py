@@ -218,18 +218,13 @@ def tela_gancho(foto, semana, total, data_txt):
     return img
 
 
-def fume(img, topo, forca=0.93):
-    """Fundo fumê atrás do texto: escurece da faixa da manchete até o fim da tela,
-    para letras que já existam na foto não embaralharem a leitura."""
+def fume(img, topo, forca=0.78):
+    """Degradê suave: começa transparente bem acima da manchete e escurece aos poucos até o pé da tela.
+    Sem faixa sólida, para a foto continuar aparecendo (ajuste pedido em 23/11)."""
     mascara = Image.new("L", (1, A))
-    inicio = max(0, topo - 260)
+    inicio = max(0, topo - 520)
     for y in range(A):
-        if y < inicio:
-            v = 0.0
-        elif y < topo:
-            v = (y - inicio) / (topo - inicio)
-        else:
-            v = 1.0
+        v = 0.0 if y < inicio else ((y - inicio) / (A - inicio)) ** 1.15
         mascara.putpixel((0, y), int(255 * forca * v))
     preto = Image.new("RGB", (L, A), R.COR_FUNDO)
     return Image.composite(preto, img, mascara.resize((L, A)))
@@ -253,7 +248,7 @@ def tela_materia(foto, titulo, categoria, numero, total, cabecalho, data_txt):
     d.rounded_rectangle((m, y - 90, m + w + 40, y - 30), radius=10, fill=R.COR_AMARELO)
     d.text((m + 20, y - 85), txt, font=fcat, fill=R.COR_FUNDO)
     for linha in linhas:
-        d.text((m, y), linha, font=f, fill=R.COR_TEXTO)
+        d.text((m, y), linha, font=f, fill=R.COR_TEXTO, stroke_width=3, stroke_fill=(0, 0, 0))
         y += passo
     # rodapé: logo + "RESUMO DO DIA · 1/5"
     R.colar_logo(img, m, 1560, 300)
@@ -343,10 +338,10 @@ def fazer_video(posts, semana, agora_sp, saida):
         log(f"Reels: só {len(escolhidas)} matérias; o vídeo fica para a próxima.")
         return None, 0
     if semana:
-        cabecalho = "A SEMANA EM 10 FATOS"
+        cabecalho = "RADAR DA SEMANA"
         data_txt = f"{(agora_sp - timedelta(days=6)).strftime('%d/%m')} a {agora_sp.strftime('%d/%m/%Y')}"
     else:
-        cabecalho = "RESUMO DO DIA"
+        cabecalho = "RADAR"
         data_txt = f"{DIAS_SEMANA[agora_sp.weekday()].capitalize()}, {agora_sp.strftime('%d/%m/%Y')}"
     telas = [(tela_gancho(fotos[0], semana, len(escolhidas), data_txt), DURACAO_GANCHO)]
     curtas = manchetes_curtas([p["titulo"] for p in escolhidas])
