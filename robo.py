@@ -793,6 +793,17 @@ COMUNS_DOMINIO = {"www", "com", "br", "org", "net", "gov", "ao", "inf", "pt", "f
 PALAVRAS_IA = re.compile(r"gerad[ao] (?:por|com) (?:ia|intelig[eê]ncia artificial)|intelig[eê]ncia artificial|\bia\b|midjourney|dall-?e|ai generated|\bai\b", re.I)
 
 
+# Grandes veículos: foto com direito autoral. Citar a fonte não autoriza o uso.
+# Regra (23/11/2026): procurar foto livre parecida; se não achar, foto genérica de tema.
+# Foto com crédito "Divulgação" ou "Reprodução" pode ser usada, venha de onde vier.
+GRANDES_VEICULOS = ("globo.com", "estadao.com.br", "folha.uol.com.br", "uol.com.br", "cnnbrasil.com.br",
+                    "r7.com", "terra.com.br", "metropoles.com", "bbc.com", "abril.com.br", "exame.com",
+                    "correiobraziliense.com.br", "band.uol.com.br", "sbt.com.br", "cartacapital.com.br",
+                    "istoe.com.br", "poder360.com.br", "gazetadopovo.com.br", "jovempan.com.br",
+                    "em.com.br", "otempo.com.br", "opovo.com.br", "jc.com.br", "zh.clicrbs.com.br")
+CREDITO_LIVRE = re.compile(r"divulga|reprodu", re.I)
+
+
 def foto_nao_pode(credito, veiculo, link, exigir_credito, imagem):
     """Diz se a foto original não pode ser usada (e por quê). Vazio = pode usar."""
     if not imagem:
@@ -801,6 +812,8 @@ def foto_nao_pode(credito, veiculo, link, exigir_credito, imagem):
     if dominio.endswith("gov.br") or dominio.endswith("ebc.com.br"):
         return ""  # fotos de governo e da Agência Brasil são de uso livre com crédito
     c = credito or ""
+    if any(dominio == g or dominio.endswith("." + g) for g in GRANDES_VEICULOS) and not CREDITO_LIVRE.search(c):
+        return "foto de grande veículo (direito autoral)"
     if not c.strip():
         return "foto sem crédito" if exigir_credito else ""
     if PALAVRAS_IA.search(c):
@@ -823,8 +836,9 @@ def foto_nao_pode(credito, veiculo, link, exigir_credito, imagem):
 FOTOS_USADAS = set()
 
 
-def foto_substituta(resultado):
-    """Pessoa específica: foto livre dela; senão, foto do tema sem rosto. Tema geral: foto ilustrativa."""
+def foto_substituta(resultado, generica=True):
+    """Pessoa específica: foto livre dela; senão, foto do tema sem rosto. Tema geral: foto ilustrativa.
+    Com generica=False, não usa a foto genérica de reserva: devolve None se não achar nada parecido."""
     pessoa = (resultado.get("pessoa_principal") or "").strip()
     achou = None
     if pessoa:
@@ -832,6 +846,8 @@ def foto_substituta(resultado):
     else:
         achou = foto_banco(resultado.get("busca_foto"), FOTOS_USADAS) or \
             foto_banco(resultado.get("busca_foto_sem_rosto"), FOTOS_USADAS)
+    if not achou and not generica:
+        return None
     achou = achou or foto_banco("african art pattern", FOTOS_USADAS)
     if not achou:
         log("  Aviso: não achou foto substituta; a matéria sai sem imagem.")
@@ -947,11 +963,21 @@ def publicar(materia_fila, linha_editorial, agora):
     corpo = montar_corpo(resultado, original)
     imagem = original["imagem"] or materia_fila.get("imagem_rss", "")
     credito = original["credito_foto"]
-    motivo_troca = foto_nao_pode(credito, original["veiculo"], materia_fila["link"],
-                                 materia_fila.get("imagem_banco", False), imagem)
-    if motivo_troca:
-        log(f"  Foto trocada: {motivo_troca}.")
-        imagem, credito = foto_substituta(resultado)
+    trocou = False
+    if materia_fila.get("imagem_trocar"):
+        # Mundo Negro, Notícia Preta e Africanize: primeiro tenta outra foto (Wikipédia/Commons ou Unsplash),
+        # para não repetir a mesma foto do veículo do mesmo segmento.
+        livre = foto_substituta(resultado, generica=False)
+        if livre:
+            imagem, credito = livre
+            trocou = True
+            log("  Foto trocada: veículo do mesmo segmento; usada foto livre parecida.")
+    if not trocou:
+        motivo_troca = foto_nao_pode(credito, original["veiculo"], materia_fila["link"],
+                                     materia_fila.get("imagem_banco", False), imagem)
+        if motivo_troca:
+            log(f"  Foto trocada: {motivo_troca}.")
+            imagem, credito = foto_substituta(resultado)
     credito = credito or "Divulgação"
     titulo = decodificar(resultado.get("titulo"))
     if not titulo or not corpo:
@@ -1048,7 +1074,8 @@ def main():
                 marcar_visto(item["link"])
                 continue
             item["categoria_fonte"] = fonte.get("categoria", "")
-            item["imagem_banco"] = fonte.get("imagem") == "exigir_credito"
+            item["imagem_banco"] = fonte.get("imagem") in ("exigir_credito", "substituir_sempre")
+            item["imagem_trocar"] = fonte.get("imagem") == "substituir_sempre"
             item["fonte_africa"] = bool(fonte.get("africa"))
             item["fonte_nome"] = nome
             candidatas.append(dict(item, titulo_original=item["titulo"]))
@@ -1093,6 +1120,7 @@ def main():
                 fila.append({
                     "link": c["link"], "titulo_original": c["titulo"], "descricao": c.get("descricao", ""),
                     "imagem_rss": c.get("imagem", ""), "imagem_banco": c.get("imagem_banco", False),
+                    "imagem_trocar": c.get("imagem_trocar", False),
                     "fonte_nome": c.get("fonte_nome", ""), "fonte_africa": c.get("fonte_africa", False),
                     "categoria": categoria, "prioridade": prioridade,
                     "nota": nota, "motivo_nota": a.get("motivo", ""),
