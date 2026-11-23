@@ -43,7 +43,7 @@ jobs:
         run: |
           git config user.name "robo-africas"
           git config user.email "robo-africas@users.noreply.github.com"
-          git add estado/redes.json estado/posts-redes.json
+          git add estado/redes.json estado/posts-redes.json feeds/instagram.json
           git diff --cached --quiet && exit 0
           git commit -m "Robô das redes: rodada"
           for i in 1 2 3; do

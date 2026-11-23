@@ -1,0 +1,26 @@
+<!-- Áfricas Play: mostra o post do Instagram no fim de cada matéria (lista atualizada pelo robô das redes no GitHub) -->
+<script>
+(function () {
+  var caminho = location.pathname.replace(/\/+/g, "/").replace(/\/$/, "");
+  if (caminho.indexOf("/noticia/") !== 0) return;
+  fetch("https://raw.githubusercontent.com/portalafricas-jpg/automacao-africas/main/feeds/instagram.json", { cache: "no-store" })
+    .then(function (r) { return r.json(); })
+    .then(function (mapa) {
+      var link = mapa[caminho];
+      var alvo = document.getElementById("content");
+      if (!link || !alvo) return;
+      var caixa = document.createElement("div");
+      caixa.style.margin = "32px 0";
+      caixa.innerHTML = '<p><strong>Veja também no Instagram do Áfricas Play</strong></p>' +
+        '<blockquote class="instagram-media" data-instgrm-permalink="' + link + '" data-instgrm-version="14" ' +
+        'style="max-width:540px;width:100%;margin:0 auto;"></blockquote>';
+      alvo.appendChild(caixa);
+      if (window.instgrm) { window.instgrm.Embeds.process(); return; }
+      var s = document.createElement("script");
+      s.async = true;
+      s.src = "https://www.instagram.com/embed.js";
+      document.body.appendChild(s);
+    })
+    .catch(function () {});
+})();
+</script>

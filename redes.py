@@ -9,6 +9,7 @@ import html
 import io
 import time
 import json
+from urllib.parse import urlparse
 import os
 import re
 import textwrap
@@ -798,6 +799,23 @@ def publicar_materia(item, token, pagina, ig):
             "publicado_em": datetime.now(timezone.utc).isoformat()}
 
 
+ARQ_MAPA_INSTAGRAM = os.path.join(PASTA, "feeds", "instagram.json")
+
+
+def gravar_mapa_instagram(posts):
+    """Lista matéria do site -> post do Instagram, lida pelo código colado no Body do site
+    para mostrar o post no fim de cada matéria. Acumula (não apaga as antigas)."""
+    mapa = ler_json(ARQ_MAPA_INSTAGRAM, {})
+    for p in posts:
+        if p.get("tipo") == "reels" or not p.get("ig_link"):
+            continue
+        caminho = urlparse(p.get("link", "")).path
+        caminho = "/" + caminho.strip("/")
+        if caminho.startswith("/noticia/"):
+            mapa[caminho] = p["ig_link"]
+    salvar_json(ARQ_MAPA_INSTAGRAM, mapa)
+
+
 def main_publicar():
     if requests is None:
         raise SystemExit("Falta instalar o requests.")
@@ -918,6 +936,7 @@ def main_publicar():
     estado.update({"vistos": list(vistos)[-500:], "fila": fila, "fila_stories": fila_stories})
     salvar_json(ARQ_REDES, estado)
     salvar_json(ARQ_POSTS, posts[-300:])
+    gravar_mapa_instagram(posts)
     log("Fim da rodada.")
 
 
