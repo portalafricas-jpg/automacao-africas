@@ -24,7 +24,7 @@ import redes as R
 L, A = 1080, 1920            # vídeo em pé (9:16)
 FPS = 30
 DURACAO_GANCHO = 2.2         # tela de abertura (gancho dos primeiros segundos)
-DURACAO_TELA = 3.75          # segundos por matéria (4 matérias: o tempo da 5ª foi dividido entre elas, 24/11)
+DURACAO_TELA = 4.2           # segundos por matéria: ~3,8 s de texto parado para dar tempo de ler (23/11)
 TRANSICAO = 0.4
 DURACAO_FINAL = 2.6          # tela final do Comente APP
 BRILHO_MINIMO = 70           # abaixo disso (0 a 255) a foto é considerada escura
@@ -325,7 +325,7 @@ def montar_video(telas, musica, saida):
 
 def fazer_video(posts, semana, agora_sp, saida):
     """Monta o vídeo. Devolve (lista de matérias usadas, duração) ou (None, 0) se não houver material."""
-    quantas = 8 if semana else 4
+    quantas = 8 if semana else 5
     escolhidas, fotos = [], []
     for p in escolher(posts, 7 if semana else 1, quantas + 4, agora_sp):
         if len(escolhidas) == quantas:
