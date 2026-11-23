@@ -297,5 +297,39 @@
   "nota": 5,
   "destino": "nota baixa",
   "detalhe": "[FONTE ÁFRICA] Angola elogia Fundo IBSA: é uma fala protocolar de elogio, sem fato relevante para o leitor brasileiro e sem conexão clara com a temática racial. Fica abaixo do corte de entrada para notícias da África."
+ },
+ {
+  "hora": "10:17",
+  "fonte": "Mundo Negro",
+  "titulo": "Childish Gambino passa de 1 bilhão de views com This Is America",
+  "link": "https://mundonegro.inf.br/childish-gambino-passa-de-1-bilhao-de-views-com-this-is-america/",
+  "categoria": "protagonista",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Conquista de Donald Glover (Childish Gambino), homem negro: primeiro artista a entrar no Billion Views Club do YouTube com o clipe. Fato novo: ultrapassou 1 bilhão de visualizações neste mês, não é repetida de matéria do portal nos últimos 5 dias."
+ },
+ {
+  "hora": "10:17",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Cuanza-Sul ganha maior Estação de Tratamento de Águas Residuais",
+  "link": "https://www.giranoticias.com/sociedade/2026/11/32759-cuanza-sul-ganha-maior-estacao-de-tratamento-de-aguas-residuais.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 6,
+  "destino": "nota baixa",
+  "detalhe": "Fonte África sobre infraestrutura de saneamento em Cuanza-Sul (Angola). Notícia interna de obra sem ligação direta com o Brasil nem com a temática racial, texto insuficiente para matéria honesta; fica abaixo do mínimo de 7 para a categoria África."
+ },
+ {
+  "hora": "10:18",
+  "fonte": "Mundo Negro",
+  "titulo": "Childish Gambino passa de 1 bilhão de views com This Is America",
+  "link": "https://mundonegro.inf.br/childish-gambino-passa-de-1-bilhao-de-views-com-this-is-america/",
+  "categoria": "protagonista",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "publicada",
+  "detalhe": "Childish Gambino chega a 1 bilhão de views",
+  "foto": "reprodução redes sociais"
  }
 ]
