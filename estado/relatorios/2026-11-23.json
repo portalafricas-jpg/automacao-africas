@@ -331,5 +331,61 @@
   "destino": "publicada",
   "detalhe": "Childish Gambino chega a 1 bilhão de views",
   "foto": "reprodução redes sociais"
+ },
+ {
+  "hora": "10:33",
+  "fonte": "Geledés",
+  "titulo": "“Policiais queriam vingança”, diz advogado da família de Kathlen Romeu",
+  "link": "https://www.geledes.org.br/policiais-queriam-vinganca-diz-advogado-da-familia-de-kathlen-romeu/",
+  "categoria": "cotidiano",
+  "prioridade": "breaking",
+  "nota": 9,
+  "destino": "na fila",
+  "detalhe": "Julgamento de policiais militares pelo assassinato de Kathlen Romeu, caso de violência de Estado contra mulher negra; decisão da Justiça que atinge a Agenda Preta. Começa na quinta-feira (26) e ainda não saiu no portal."
+ },
+ {
+  "hora": "10:33",
+  "fonte": "Mundo Negro",
+  "titulo": "Ópera sobre Conceição Evaristo tem últimas récitas em São Paulo",
+  "link": "https://mundonegro.inf.br/opera-sobre-conceicao-evaristo-tem-ultimas-recitas-em-sao-paulo/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Ópera sobre Conceição Evaristo, escritora negra, celebrando 80 anos; lançamento de obra cultural negra ligada ao protagonismo. Não é repetida: o portal tem apenas matéria sobre homenagem no Fórum da Longevidade, outro fato."
+ },
+ {
+  "hora": "10:33",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Embaixador angolano no Botswana interage com a comunidade",
+  "link": "https://www.giranoticias.com/politica/2026/11/32760-embaixador-angolano-no-botswana-interage-com-a-comunidade.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "Notícia protocolar sobre interação de embaixador angolano com comunidade, sem fato relevante; ato burocrático fica de fora."
+ },
+ {
+  "hora": "10:33",
+  "fonte": "Geledés",
+  "titulo": "“Policiais queriam vingança”, diz advogado da família de Kathlen Romeu",
+  "link": "https://www.geledes.org.br/policiais-queriam-vinganca-diz-advogado-da-familia-de-kathlen-romeu/",
+  "categoria": "cotidiano",
+  "prioridade": "breaking",
+  "nota": 9,
+  "destino": "recusada pelo redator",
+  "detalhe": "Recusa por exclusividade: o texto é uma entrevista concedida à Agência Brasil (perguntas e respostas com o advogado Rodrigo Mondego, com trechos \"Leia os principais trechos da entrevista\"). Conteúdo de entrevista própria de outro veículo, sem fato novo de fonte oficial, não entra. Além disso, o conteúdo é majoritariamente análise e opinião do advogado, e o julgamento em si é um fato que pode ser coberto de forma independente em outra ocasião, quando houver release oficial, decisão ou noticiário de vários veículos."
+ },
+ {
+  "hora": "10:33",
+  "fonte": "Mundo Negro",
+  "titulo": "Ópera sobre Conceição Evaristo tem últimas récitas em São Paulo",
+  "link": "https://mundonegro.inf.br/opera-sobre-conceicao-evaristo-tem-ultimas-recitas-em-sao-paulo/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "publicada",
+  "detalhe": "Ópera sobre Conceição Evaristo tem últimas récitas",
+  "foto": "Lula Oficial/Wikimedia Commons (CC BY-SA 2.0)"
  }
 ]
