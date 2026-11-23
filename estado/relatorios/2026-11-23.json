@@ -141,5 +141,16 @@
   "nota": 6,
   "destino": "nota baixa",
   "detalhe": "Fonte África sobre Angola (19 mortes no fim de semana). Não há contexto de Brasil nem conexão com a Agenda Preta; trata-se de notícia interna sem detalhes suficientes para matéria honesta, nota abaixo do mínimo para fonte África."
+ },
+ {
+  "hora": "09:03",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Presidente da República distinguido na Conferência sobre Saúde Pública",
+  "link": "https://www.giranoticias.com/politica/2026/11/32751-presidente-da-republica-distinguido-na-conferencia-sobre-saude-publica.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Notícia sem título completo e sem resumo, sem informação suficiente para matéria honesta; não há relação clara com a temática racial nem com a Agenda Preta, e o tema (distinção de presidente em conferência de saúde pública) é protocolar/burocrático, fora dos critérios de entrada da África."
  }
 ]
