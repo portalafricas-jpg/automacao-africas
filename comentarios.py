@@ -57,6 +57,11 @@ def pediu_app(texto):
 
 
 def mensagem_direct(post):
+    if post.get("links"):  # Reels com várias matérias
+        lista = "\n\n".join(f"• {m['titulo']}\n{m['link']}" for m in post["links"])
+        return (f"Oi! Aqui estão as matérias completas do {post['titulo']}:\n\n{lista}\n\n"
+                f"Se você tem o app Áfricas Play, elas abrem direto nele.\n"
+                f"Ainda não tem? Baixe grátis:\nAndroid: {LOJA_ANDROID}\niPhone: {LOJA_IPHONE}")
     return (f"Oi! Aqui está a matéria completa: {post['titulo']}\n{post['link']}\n\n"
             f"Se você tem o app Áfricas Play, ela abre direto nele.\n"
             f"Ainda não tem? Baixe grátis:\nAndroid: {LOJA_ANDROID}\niPhone: {LOJA_IPHONE}")

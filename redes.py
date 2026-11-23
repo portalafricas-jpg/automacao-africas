@@ -69,6 +69,8 @@ HORA_FIM = (0, 30)            # ...até 0h30; de madrugada, só breaking
 VALIDADE_FILA_HORAS = 12      # matéria que espera mais que isso na fila sai dela (notícia velha)
 ARQ_POSTS = os.path.join(PASTA_ESTADO, "posts-redes.json")   # o que foi publicado (usado pelo comente APP)
 PRIORIDADE = {"breaking": 0, "alta": 1, "parceiro": 2, "nota7": 3}
+HORA_REELS = 19               # Resumo do dia (domingo: A semana em 10 fatos), a partir das 19h
+REELS_LIGADO = False          # liga depois que o Washington aprovar o vídeo de teste
 
 # Instagram de quem assina as matérias (preencher quando chegar a lista da equipe).
 AUTORES_INSTAGRAM = {
@@ -792,6 +794,7 @@ def publicar_materia(item, token, pagina, ig):
     midia, permalink = publicar_carrossel(enderecos, alts, legenda_ig, token, ig)
     return {"titulo": item["titulo"], "link": item["link"], "ig_media": midia, "ig_link": permalink,
             "fb_post": fb_post, "prioridade": item.get("prioridade"),
+            "foto": item.get("foto", ""), "categoria": item.get("categoria", ""),
             "publicado_em": datetime.now(timezone.utc).isoformat()}
 
 
@@ -895,6 +898,22 @@ def main_publicar():
                 log(f"Erro no story '{s_['titulo'][:60]}': {e}")
         restantes.append(s_)
     fila_stories = restantes[-60:]
+
+    # 5) Reels: Resumo do dia (domingo: A semana em 10 fatos), uma vez por dia, a partir das 19h
+    if REELS_LIGADO and horario and t.hour >= HORA_REELS and estado.get("reels_dia") != hoje and estado.get("reels_tentativas", 0) < 3:
+        semana = t.weekday() == 6
+        try:
+            import video
+            post = video.fazer_e_publicar(posts, semana, token, pagina, ig)
+            if post:
+                posts.append(post)
+            estado["reels_dia"] = hoje
+            estado["reels_tentativas"] = 0
+        except Exception as e:
+            estado["reels_tentativas"] = estado.get("reels_tentativas", 0) + 1
+            log(f"Erro no Reels (tentativa {estado['reels_tentativas']} de 3): {e}")
+    if estado.get("reels_dia") != hoje and t.hour < HORA_REELS:
+        estado["reels_tentativas"] = 0
 
     estado.update({"vistos": list(vistos)[-500:], "fila": fila, "fila_stories": fila_stories})
     salvar_json(ARQ_REDES, estado)

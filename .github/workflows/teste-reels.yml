@@ -1,0 +1,26 @@
+name: Teste do Reels
+
+# Só monta o vídeo do Resumo do dia com as matérias publicadas hoje. Não publica nada.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  teste:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: |
+          pip install pillow requests
+          which ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
+      - run: python video.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reels-teste
+          path: ensaio/reels-teste.mp4
