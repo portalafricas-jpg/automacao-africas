@@ -1,12 +1,15 @@
 name: Comente APP
 
-# Responde quem comentou "APP": link da matéria no direct e resposta no comentário.
-# Acionado pelo cron-job.org a cada 2 minutos. Não grava nada no repositório.
+# Robô dos comentários do Instagram (acionado pelo cron-job.org a cada 2 minutos):
+# APP -> link no direct; elogio e pergunta -> resposta; crítica -> aviso por e-mail;
+# ofensa ou spam -> esconde e avisa. Não grava nada no repositório: os comentários já vistos
+# ficam no cache do GitHub.
 on:
   workflow_dispatch:
 
 permissions:
   contents: read
+  issues: write
 
 concurrency:
   group: comente-app
@@ -15,10 +18,17 @@ concurrency:
 jobs:
   responder:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 8
     steps:
       - name: Pegar os arquivos da pasta
         uses: actions/checkout@v4
+
+      - name: Lembrar os comentários já vistos
+        uses: actions/cache/restore@v4
+        with:
+          path: cache
+          key: comentarios-vistos-${{ github.run_id }}
+          restore-keys: comentarios-vistos-
 
       - name: Instalar o conector
         run: pip install requests
@@ -28,4 +38,13 @@ jobs:
           META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python comentarios.py
+
+      - name: Guardar os comentários já vistos
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: cache
+          key: comentarios-vistos-${{ github.run_id }}
