@@ -343,11 +343,37 @@ def limpar_html(bruto):
     return re.sub(r"[ \t]+", " ", re.sub(r"\n\s*\n+", "\n\n", sem)).strip()
 
 
+ITEM_RE = re.compile(r"<item\b.*?</item>", re.S | re.I)
+CABECALHO_NS = ('<rss xmlns:media="http://search.yahoo.com/mrss/" xmlns:social="urn:3wcontrol:rss:social:1" '
+                'xmlns:content="http://purl.org/rss/1.0/modules/content/" '
+                'xmlns:dc="http://purl.org/dc/elements/1.1/"><channel>{}</channel></rss>')
+
+
+def itens_do_rss(dados):
+    """Lê o RSS do site. Se o arquivo vier com defeito (às vezes vem), lê matéria por matéria
+    e pula só a que estiver quebrada, em vez de parar tudo."""
+    try:
+        return list(ET.fromstring(dados).iter("item")), 0
+    except ET.ParseError:
+        pass
+    texto = dados.decode("utf-8", errors="replace")
+    itens, quebrados = [], 0
+    for bloco in ITEM_RE.findall(texto):
+        bloco = re.sub(r"&(?!(?:amp|lt|gt|quot|apos|#\d+|#x[0-9a-fA-F]+);)", "&amp;", bloco)
+        try:
+            itens.extend(ET.fromstring(CABECALHO_NS.format(bloco)).iter("item"))
+        except ET.ParseError:
+            quebrados += 1
+    return itens, quebrados
+
+
 def ler_rss_site():
     dados = baixar(RSS_SITE)
-    raiz = ET.fromstring(dados)
+    nos, quebrados = itens_do_rss(dados)
+    if quebrados:
+        log(f"Aviso: o RSS do site veio com defeito; {quebrados} matéria(s) puladas nesta rodada.")
     itens = []
-    for it in raiz.iter("item"):
+    for it in nos:
         midia = it.find("media:content", NS)
         data = texto_de(it, "pubDate")
         try:
