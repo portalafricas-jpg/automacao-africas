@@ -86,5 +86,16 @@
   "nota": 2,
   "destino": "nota baixa",
   "detalhe": "Esporte africano, ficou fora do escopo da linha editorial (nota 0 a 4)."
+ },
+ {
+  "hora": "06:33",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Assembleia Nacional promove Caminhada da Democracia",
+  "link": "https://www.giranoticias.com/politica/2026/11/32749-assembleia-nacional-promove-caminhada-da-democracia.html",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "Notícia sem título completo e sem resumo, sem informação suficiente para matéria honesta. Não há relação clara com a temática racial no material recebido; na dúvida, descartar."
  }
 ]
