@@ -159,12 +159,12 @@ def tela_gancho(foto, semana, total, data_txt):
     m = 90
     d.rectangle((0, 0, L, 14), fill=R.COR_AMARELO)
     if semana:
-        linhas = [("10 FATOS", R.COR_AMARELO, 150), ("que marcaram", R.COR_TEXTO, 96),
-                  ("a semana", R.COR_TEXTO, 96), ("do povo preto", R.COR_TEXTO, 96)]
+        linhas = [(f"{total} NOTÍCIAS", R.COR_AMARELO, 140), ("PRETAS", R.COR_AMARELO, 140),
+                  ("que marcaram", R.COR_TEXTO, 96), ("a semana", R.COR_TEXTO, 96)]
     else:
-        linhas = [(f"{total} NOTÍCIAS", R.COR_AMARELO, 140), ("que você precisa", R.COR_TEXTO, 96),
-                  ("saber hoje", R.COR_TEXTO, 96)]
-    y = 620
+        linhas = [(f"{total} NOTÍCIAS", R.COR_AMARELO, 140), ("PRETAS", R.COR_AMARELO, 140),
+                  ("que você precisa", R.COR_TEXTO, 96), ("saber hoje", R.COR_TEXTO, 96)]
+    y = 540
     for texto, cor, tam in linhas:
         f = R.fonte("extra", tam)
         while d.textlength(texto, font=f) > L - 2 * m and tam > 50:
@@ -177,35 +177,48 @@ def tela_gancho(foto, semana, total, data_txt):
     return img
 
 
+def fume(img, topo, forca=0.88):
+    """Fundo fumê atrás do texto: escurece da faixa da manchete até o fim da tela,
+    para letras que já existam na foto não embaralharem a leitura."""
+    mascara = Image.new("L", (1, A))
+    inicio = max(0, topo - 260)
+    for y in range(A):
+        if y < inicio:
+            v = 0.0
+        elif y < topo:
+            v = (y - inicio) / (topo - inicio)
+        else:
+            v = 1.0
+        mascara.putpixel((0, y), int(255 * forca * v))
+    preto = Image.new("RGB", (L, A), R.COR_FUNDO)
+    return Image.composite(preto, img, mascara.resize((L, A)))
+
+
 def tela_materia(foto, titulo, categoria, numero, total, cabecalho, data_txt):
     categoria = categoria or "Notícia"
-    if foto is not None:
-        img = fundo_foto(foto)
-    else:
-        img = Image.new("RGB", (L, A), R.COR_FUNDO)
+    img = R.cobrir(foto, L, A) if foto is not None else Image.new("RGB", (L, A), R.COR_FUNDO)
     d = ImageDraw.Draw(img)
     m = 90
-    # faixa do topo
-    d.rectangle((0, 0, L, 14), fill=R.COR_AMARELO)
-    d.text((m, 150), cabecalho, font=R.fonte("extra", 58), fill=R.COR_AMARELO)
-    d.text((m, 225), data_txt, font=R.fonte("media", 38), fill=R.COR_TEXTO)
-    fc = R.fonte("extra", 46)
-    cont = f"{numero}/{total}"
-    d.text((L - m - d.textlength(cont, font=fc), 160), cont, font=fc, fill=R.COR_TEXTO)
     # manchete (dentro da área segura do Reels: longe da legenda e dos botões)
     f, linhas = R.caber(d, titulo, "forte", 84, L - 2 * m - 60, 520)
     passo = f.size * 1.18
     y = 1480 - len(linhas) * passo
-    if categoria:
-        fcat = R.fonte("extra", 36)
-        txt = categoria.upper()
-        w = d.textlength(txt, font=fcat)
-        d.rounded_rectangle((m, y - 90, m + w + 40, y - 30), radius=10, fill=R.COR_AMARELO)
-        d.text((m + 20, y - 85), txt, font=fcat, fill=R.COR_FUNDO)
+    img = fume(img, int(y - 110))
+    d = ImageDraw.Draw(img)
+    d.rectangle((0, 0, L, 14), fill=R.COR_AMARELO)
+    fcat = R.fonte("extra", 36)
+    txt = categoria.upper()
+    w = d.textlength(txt, font=fcat)
+    d.rounded_rectangle((m, y - 90, m + w + 40, y - 30), radius=10, fill=R.COR_AMARELO)
+    d.text((m + 20, y - 85), txt, font=fcat, fill=R.COR_FUNDO)
     for linha in linhas:
         d.text((m, y), linha, font=f, fill=R.COR_TEXTO)
         y += passo
+    # rodapé: logo + "RESUMO DO DIA · 1/5"
     R.colar_logo(img, m, 1560, 300)
+    frod = R.fonte("extra", 34)
+    rodape = f"{cabecalho}  ·  {numero}/{total}"
+    d.text((L - m - d.textlength(rodape, font=frod), 1568), rodape, font=frod, fill=R.COR_AMARELO)
     return img
 
 
