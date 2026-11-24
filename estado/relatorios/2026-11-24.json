@@ -482,5 +482,38 @@
   "nota": 0,
   "destino": "nota baixa",
   "detalhe": "Matéria sobre política e entretenimento em Hollywood sem relação com a população negra ou a Agenda Preta."
+ },
+ {
+  "hora": "02:02",
+  "fonte": "Cultura Preta",
+  "titulo": "Oh Polêmico lança “Tarará” e celebra a identidade baiana em aposta para o verão 2027",
+  "link": "https://culturapreta.com/2026/11/23/oh-polemico-lanca-tarara-verao-2027/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "02:03",
+  "fonte": "Busca - Viola Davis",
+  "titulo": "Esquadrão Suicida: Viola Davis pode estrelar nova série derivada do filme",
+  "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPbm9mNGRWSW83NnFRVmZ3TEUwdlpVSTZOaklOUlhEOTlhNC1BVWNTdHBRdHpDYlYxVmpMdzYwVTRZTUh3aDQxa2RFMWx2WXA3QXktTGVHRWhzLWpKdWZLdnZtR3JuSTN6ZDRNRksyZVVVTmwwQm1jN25GVzZqa3l1R2dRQWlmQUFaMmJHc0gtSFhOU29CQzg40gGcAUFVX3lxTE5jMkRyVWRlcERqNU5WcjE4YXRWM2Q3ZG5FVmxUOGN5NnFSVy1aZ05VbGthM2NUWmV1RE11NHF4NGpPUDBaTFpLTTBfdEhTQmNBb09WaFNaemZCRi1wWmo5QWVIMmJWR2w5NUhObmtxc1RNNG5fT1VsREhsUHo4cVJoX0hwWXR4c3FGMGh5ckk2OXB6LTRER1JtS2FNTg?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Notícia sobre série derivada de filme de Hollywood com Viola Davis, sem relação direta com a temática racial nem fato relevante para a população negra; é conteúdo de entretenimento sem recorte racial no texto. Não entra."
+ },
+ {
+  "hora": "02:03",
+  "fonte": "Busca - Paulo Vieira",
+  "titulo": "Série do Canal Brasil sobre Ronald Biggs, o lendário assaltante do trem pagador inglês, ganha data de estreia",
+  "link": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxOZGdmMUJTZmJiczdqd0dacGZMdW5qdUlrQjNPUGJKTVJ6LWJXamdRZGtlLW9HY2kwcFZRN1MtSWJMV2JGNWZhR1g1eHFVb2F6VkFtNzZSVlh2RkREdmFrdGd2MTVjMlRGUEdja2lmSkhiMjAyM3VXMjRyR3ZQNDNHelMxUFNEekZNcHlUM0xmRm9GUUJmZTZCM1YwSmpJY1hrXzRqLS1aR19YSDEzOFZibUp6RmlrTlhHekJHSnowZUZWN2llanpfVUQzSnZUUGxxNlhYYkN0VnVOV3laRC1sTi1xZVduaFJFUThPYWFhbUZsSzBmWEhUSWJ3LVZHZ9IBjAJBVV95cUxPMnZ2QjMyWWlVTU95c3EwVGxyMXdRQlhEQVRCTVhZZ3lyRTZCM2dUTUdBaVJadndWSzFWNUg2b0VjXzU5c3RNVXd2RXpSQ2hZdnV0bjM1VE9MZHhEcEIta1BlZ3BkZlFCc0NhcVRtMUNadVRBSnhCVGc5S0RnQUV3WnN2SzdFdXpnMnliMF9xTFQ1ckthaWxTMkF1M25mcUp2SE1sMVJGeF9jR3BOZFlIUktZN183c2VtdW5PSGM1Mkp0MVZPaFNlQ1QtazVCUmpYclJqQmRXbklyOUJ5cXRkdElPLXhJUG92dXJPUTZERjFWWGNvNGtIYzhuUmZTQkJsdmhQblc4aFRMRkVC?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 1,
+  "destino": "nota baixa",
+  "detalhe": "Série do Canal Brasil sobre o assaltante Ronald Biggs, sem relação com a temática racial nem com a Agenda Preta; apenas divulgação de data de estreia."
  }
 ]
