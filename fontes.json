@@ -233,11 +233,12 @@
     "grupo": 3
   },
   {
-    "nome": "Busca - Paulo Vieira",
+    "nome": "Busca semanal - Paulo Vieira",
     "categoria": "protagonista",
     "tipo": "busca",
     "busca": "Paulo Vieira",
-    "grupo": 0
+    "grupo": 0,
+    "dia_semana": 5
   },
   {
     "nome": "Busca - Jeferson Tenório",
@@ -254,25 +255,28 @@
     "grupo": 2
   },
   {
-    "nome": "Busca - Conceição Evaristo",
+    "nome": "Busca semanal - Conceição Evaristo",
     "categoria": "protagonista",
     "tipo": "busca",
     "busca": "Conceição Evaristo",
-    "grupo": 3
+    "grupo": 3,
+    "dia_semana": 6
   },
   {
-    "nome": "Busca - Sheron Menezzes",
+    "nome": "Busca semanal - Sheron Menezzes",
     "categoria": "protagonista",
     "tipo": "busca",
     "busca": "Sheron Menezzes",
-    "grupo": 0
+    "grupo": 0,
+    "dia_semana": 0
   },
   {
-    "nome": "Busca - Thiaguinho",
+    "nome": "Busca semanal - Thiaguinho",
     "categoria": "protagonista",
     "tipo": "busca",
     "busca": "Thiaguinho",
-    "grupo": 1
+    "grupo": 1,
+    "dia_semana": 3
   },
   {
     "nome": "Busca - Samuel L. Jackson",
@@ -289,11 +293,12 @@
     "grupo": 3
   },
   {
-    "nome": "Busca - Seu Jorge",
+    "nome": "Busca semanal - Seu Jorge",
     "categoria": "protagonista",
     "tipo": "busca",
     "busca": "Seu Jorge",
-    "grupo": 0
+    "grupo": 0,
+    "dia_semana": 1
   },
   {
     "nome": "Busca - Lázaro Ramos",
@@ -303,11 +308,12 @@
     "grupo": 1
   },
   {
-    "nome": "Busca - Liniker",
+    "nome": "Busca semanal - Liniker",
     "categoria": "protagonista",
     "tipo": "busca",
     "busca": "Liniker",
-    "grupo": 2
+    "grupo": 2,
+    "dia_semana": 5
   },
   {
     "nome": "Busca - Emicida",
@@ -317,11 +323,12 @@
     "grupo": 3
   },
   {
-    "nome": "Busca - Ludmilla",
+    "nome": "Busca semanal - Ludmilla",
     "categoria": "protagonista",
     "tipo": "busca",
     "busca": "Ludmilla",
-    "grupo": 0
+    "grupo": 0,
+    "dia_semana": 6
   },
   {
     "nome": "Busca - Tyla",
@@ -352,11 +359,12 @@
     "grupo": 0
   },
   {
-    "nome": "Busca - Michael B. Jordan",
+    "nome": "Busca semanal - Michael B. Jordan",
     "categoria": "protagonista",
     "tipo": "busca",
     "busca": "Michael B. Jordan",
-    "grupo": 1
+    "grupo": 1,
+    "dia_semana": 2
   },
   {
     "nome": "Busca - Kendrick Lamar",
@@ -380,11 +388,12 @@
     "grupo": 0
   },
   {
-    "nome": "Busca - Black Money",
+    "nome": "Busca semanal - Black Money",
     "categoria": "protagonista",
     "tipo": "busca",
     "busca": "Black Money",
-    "grupo": 1
+    "grupo": 1,
+    "dia_semana": 2
   },
   {
     "nome": "Busca - Empreendedor negro",
@@ -464,60 +473,40 @@
     "grupo": 0
   },
   {
-    "nome": "Busca - Angola",
+    "nome": "Busca semanal - Angola",
     "categoria": "mundo",
     "tipo": "busca",
     "busca": "Angola",
     "grupo": 1,
-    "africa": true
+    "africa": true,
+    "dia_semana": 3
   },
   {
-    "nome": "Busca - Moçambique",
+    "nome": "Busca semanal - Moçambique",
     "categoria": "mundo",
     "tipo": "busca",
     "busca": "Moçambique",
     "grupo": 2,
-    "africa": true
+    "africa": true,
+    "dia_semana": 0
   },
   {
-    "nome": "Busca - Cabo Verde",
+    "nome": "Busca semanal - Cabo Verde",
     "categoria": "mundo",
     "tipo": "busca",
     "busca": "Cabo Verde",
     "grupo": 3,
-    "africa": true
+    "africa": true,
+    "dia_semana": 4
   },
   {
-    "nome": "Busca - Guiné-Bissau",
-    "categoria": "mundo",
-    "tipo": "busca",
-    "busca": "Guiné-Bissau",
-    "grupo": 0,
-    "africa": true
-  },
-  {
-    "nome": "Busca - São Tomé e Príncipe",
-    "categoria": "mundo",
-    "tipo": "busca",
-    "busca": "\"São Tomé e Príncipe\"",
-    "grupo": 1,
-    "africa": true
-  },
-  {
-    "nome": "Busca - África do Sul",
-    "categoria": "mundo",
-    "tipo": "busca",
-    "busca": "África do Sul",
-    "grupo": 2,
-    "africa": true
-  },
-  {
-    "nome": "Busca - Nigéria",
+    "nome": "Busca semanal - Nigéria",
     "categoria": "mundo",
     "tipo": "busca",
     "busca": "Nigéria",
     "grupo": 3,
-    "africa": true
+    "africa": true,
+    "dia_semana": 1
   },
   {
     "nome": "Busca - União Africana",
@@ -536,11 +525,12 @@
     "africa": true
   },
   {
-    "nome": "Busca - IZA cantora",
+    "nome": "Busca semanal - IZA cantora",
     "categoria": "cultura",
     "tipo": "busca",
     "busca": "IZA cantora",
-    "grupo": 2
+    "grupo": 2,
+    "dia_semana": 4
   },
   {
     "nome": "Busca - empresário negro",
@@ -562,14 +552,6 @@
     "tipo": "busca",
     "busca": "Burna Boy",
     "grupo": 1
-  },
-  {
-    "nome": "Busca - RTP África",
-    "categoria": "mundo",
-    "tipo": "busca",
-    "busca": "site:rtp.pt África",
-    "grupo": 2,
-    "africa": true
   },
   {
     "nome": "Busca - Expo África Brasil",
@@ -1081,14 +1063,6 @@
     "busca": "Wizkid",
     "grupo": 0,
     "dia_semana": 6
-  },
-  {
-    "nome": "Busca - site:rtp.pt África",
-    "categoria": "mundo",
-    "tipo": "busca",
-    "busca": "site:rtp.pt África",
-    "grupo": 0,
-    "africa": true
   },
   {
     "nome": "Busca - Expo África Brasil",
