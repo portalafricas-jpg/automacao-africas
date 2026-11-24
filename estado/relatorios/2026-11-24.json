@@ -713,5 +713,38 @@
   "nota": 3,
   "destino": "nota baixa",
   "detalhe": "Recepção protocolar de diplomata da ONU em palácio presidencial; ato protocolar, sem fato relevante para a população negra e sem detalhes suficientes."
+ },
+ {
+  "hora": "03:17",
+  "fonte": "Busca - São Tomé e Príncipe",
+  "titulo": "Obstáculos econômicos freiam planos da juventude, alerta Unfpa",
+  "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9ld2lwRUdhd2VWUk4wUENhbWZ5dXlEQnc3aHE3UmNHTUEwQjVVV3ZNQjVrRENwYndrR3gwQ2dNV2twclNjQkJ2OGZ0Wkx6eU5iXzFCeTE2Zw?oc=5",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "Fonte africana sobre juventude e obstáculos econômicos (UNFPA), tema de economia e sociedade que interessa ao leitor brasileiro; nota 7 por ser assunto geral, sem ligação direta com o Brasil."
+ },
+ {
+  "hora": "03:17",
+  "fonte": "Busca - Cineasta negro",
+  "titulo": "Black Myth: Zhong Kui será feito sem IA generativa, diz Game Science",
+  "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOeWF0czJsOFlNdGN2ZUJIYXBXX0hUX2dZMUZ2QUpJRktueFhZTEhmb2pVWUE5MlNmLWpVcWp2WTlGbzhWVTJzeE9FaXBZWnRjbVhMN2x6VHFRVE9jblY5UF9Fa21zbHJGdVFSOGluYWJrYkFOa2xGQlB6RlRPOG5pX3NfczV3c052Z2F3WUU3TXJ5VUlrRU1IVi1YS1ExTHhDcjJB?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 1,
+  "destino": "nota baixa",
+  "detalhe": "Notícia de games sobre uso de IA, sem relação com a temática racial."
+ },
+ {
+  "hora": "03:17",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Angola apresenta em Londres visão e compromisso para erradicar minas",
+  "link": "https://www.giranoticias.com/politica/2026/11/32765-angola-apresenta-em-londres-visao-e-compromisso-para-erradicar-minas.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 6,
+  "destino": "nota baixa",
+  "detalhe": "Fonte africana sobre Angola (país de língua portuguesa) e desminagem apresentada em Londres; tema de interesse, mas é ato institucional de apresentação com pouco fato relevante para o leitor. Nota abaixo de 7 por ser apresentação protocolar."
  }
 ]
