@@ -117,6 +117,13 @@
     "imagem": "substituir_sempre"
   },
   {
+    "nome": "Lista Preta",
+    "categoria": "cultura",
+    "tipo": "rss",
+    "url": "https://listapreta.com/feed/",
+    "imagem": "substituir_sempre"
+  },
+  {
     "nome": "Baobá - Blog",
     "categoria": "protagonista",
     "tipo": "rss",
