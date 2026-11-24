@@ -460,5 +460,27 @@
   "nota": 0,
   "destino": "nota baixa",
   "detalhe": "Título genérico de noticiário sem fato específico; não há notícia identificável."
+ },
+ {
+  "hora": "01:47",
+  "fonte": "Busca semanal - Zendaya",
+  "titulo": "The Witch, de Robert Eggers, volta ao Hulu em 2 de dezembro",
+  "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQOVY4VkdfaW85R2RJdVdzaU5IRDZHQ0pveVpjMFp4VFpVUFBBOElwa2RvTGYyanY2TTdtM3VFbVJ1a1dnN3E0YUZqUkZ3X0ZZdVJacjUyU1dLQWNYSC1KOGh6YndmVmpFczcxY1VndENaNVhtZUlLeVFFdDZyYkRRcXZPaWVmNWRkcnRxZkhsYWhqSVRhd0dFSTlHSQ?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Notícia sobre série de Robert Eggers sem relação com a temática racial; não é pauta do portal."
+ },
+ {
+  "hora": "01:47",
+  "fonte": "Busca - Ryan Coogler",
+  "titulo": "Política vira motivo de riso e diversão em Hollywood que se isenta de debates públicos",
+  "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQbUpWQ24zVm4wUzVNWE1LdWNRV3FpRlBoOXB0VjhIN21ieE12b2RnZldPVTVkbUV6RHY1MjRJVVJxLUxReU4zX3pmNU1HV09SbnlOVHFyTjY5QWhPRWo2aWNDNEhfNi1qRHBpX1hDYklUWl81QWRUNW9qYk5mTFdyelJENFBUblVudVh0a05OaFpnRFBPYklmeDFxdXlSTG9lWXF1VTJ3VUJ2UEw1RHlsV3JvdWNOUzI5VkxINjFZNm9lak14M2g5RWhBMVJCZVI1SHBZ?oc=5",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Matéria sobre política e entretenimento em Hollywood sem relação com a população negra ou a Agenda Preta."
  }
 ]
