@@ -95,25 +95,6 @@
   "valido_ate": ""
  },
  {
-  "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOQ1A5alNieDZ2R0Q4S2pPNlk0OEtVZUxkekIxcG90SEhSOVBvUjAtRWNXeUtHSEJaX3ZBQU5LYlFZTjdrcmQxOUxGdU9GY0Nrd1hZVnVwaVBua0VYVlFHek1JT2lRTzZPdmIwVnFuU1hGOTdWX0ZiYjNqclY5Z1dfdjlubnJTLVBUck90V0ZIazZWcTBTS3NIdXljcXgxRURhMko4eDhBbWl0X1hqNjUycldzMzZUZlIyNFE2MkQyVVR0VFJUWGlUNw?oc=5",
-  "titulo_original": "Animação “Turma do Carvalinho”, de autoria de Vitor Carvalho, estreia em Volta Redonda no próximo dia 30",
-  "descricao": "Animação “Turma do Carvalinho”, de autoria de Vitor Carvalho, estreia em Volta Redonda no próximo dia 30    A Voz da Cidade",
-  "imagem_rss": "",
-  "imagem_banco": false,
-  "imagem_trocar": false,
-  "fonte_nome": "Busca semanal - Seu Jorge",
-  "fonte_africa": false,
-  "categoria": "cultura",
-  "prioridade": "media",
-  "nota": 8,
-  "motivo_nota": "Animação de autoria de Vitor Carvalho; não há ligação clara com temática racial no resumo. Sem relação comprovada com a população negra, nota baixa.",
-  "ministerio": false,
-  "excecao_nota7": false,
-  "data_original": "2026-11-24T13:19:37+00:00",
-  "criado_em": "2026-11-24T15:02:16.182403+00:00",
-  "valido_ate": ""
- },
- {
   "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1nMFhWZlA0TVJzbnNRTUoyLVk1SGNNLVVaWE5pLUNVSlRhRXVrQzd4ZnVhUmRnTGlmblNyby0wX2dHekp2WnhrT3ZVcGNnaGFMQ0MxU3BqSFdRR2NadUUtRVduQ3BwUlBsVWJ4LUlqNEpNSnFFdHJF?oc=5",
   "titulo_original": "Defensoria Pública do Rio firma acordo com ministério contra racismo",
   "descricao": "Defensoria Pública do Rio firma acordo com ministério contra racismo    Agenda do Poder",
@@ -282,6 +263,25 @@
   "excecao_nota7": true,
   "data_original": "2026-11-24T16:55:31+00:00",
   "criado_em": "2026-11-24T17:17:26.610211+00:00",
+  "valido_ate": ""
+ },
+ {
+  "link": "https://noticiapreta.com.br/ana-elisa-sera-homenageada-pela-camara-do-rio-com-a-medalha-chiquinha-gonzaga/?utm_source=rss&utm_medium=rss&utm_campaign=ana-elisa-sera-homenageada-pela-camara-do-rio-com-a-medalha-chiquinha-gonzaga",
+  "titulo_original": "Ana Elisa será homenageada pela Câmara do Rio com a Medalha Chiquinha Gonzaga",
+  "descricao": "Ana Elisa Santos Silva (PT-MG), deputada federal eleita, será homenageada com a Medalha de Reconhecimento Chiquinha Gonzaga, concedida pela Câmara Municipal do Rio de Janeiro. A cerimônia acontece nesta quinta-feira (26), às 18h, e reconhece a trajetória da jovem mineira, que ganhou destaque nacional antes mesmo de assumir seu primeiro mandato parlamentar. Natural de Divinópolis, […] \n O post Ana Elisa será homenageada pela Câmara do Rio com a Medalha Chiquinha Gonzaga apareceu primeiro em Noticia Preta - NP .",
+  "imagem_rss": "",
+  "imagem_banco": true,
+  "imagem_trocar": true,
+  "fonte_nome": "Notícia Preta",
+  "fonte_africa": false,
+  "categoria": "protagonista",
+  "prioridade": "media",
+  "nota": 8,
+  "motivo_nota": "Homenagem a deputada federal eleita, mulher negra, com Medalha Chiquinha Gonzaga; reconhecimento de trajetória e conquista de pessoa negra em cargo de destaque.",
+  "ministerio": false,
+  "excecao_nota7": false,
+  "data_original": "2026-11-24T17:30:00+00:00",
+  "criado_em": "2026-11-24T17:32:15.333739+00:00",
   "valido_ate": ""
  }
 ]
