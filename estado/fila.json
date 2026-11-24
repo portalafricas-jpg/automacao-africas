@@ -226,5 +226,43 @@
   "data_original": "2026-11-24T13:19:37+00:00",
   "criado_em": "2026-11-24T15:02:16.182403+00:00",
   "valido_ate": ""
+ },
+ {
+  "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOX29PX0ZoQXFwdUlFQnJSTUdjVkNCM0l2WEdjVTBrR1FXcWR2aVZKX3Jhb0RVREtpZkVFbUVGUHlsSk5uUkRzWDFncTJ1M2tmX2tlSjQtREczTk1NYmxHeFowd1NJLV9aNnlwM1E3SmlhaVJkbTRMQ3dkRmQ0SXF0TDBGakdXcUxYQTZtX3NoaWxJd3dXUHZXaGV5SU44elBLWVp1ZTNOd1VlbzB5LXhXcmZR?oc=5",
+  "titulo_original": "Lázaro Ramos: “Escrevia para não me sentir sozinho”. Hoje tem 11 livros publicados",
+  "descricao": "Lázaro Ramos: “Escrevia para não me sentir sozinho”. Hoje tem 11 livros publicados    NiT New in Town",
+  "imagem_rss": "",
+  "imagem_banco": false,
+  "imagem_trocar": false,
+  "fonte_nome": "Busca - Lázaro Ramos",
+  "fonte_africa": false,
+  "categoria": "protagonista",
+  "prioridade": "alta",
+  "nota": 8,
+  "motivo_nota": "Trajetória de Lázaro Ramos, ator negro, com 11 livros publicados; conquista e lançamento de obra de artista negro.",
+  "ministerio": false,
+  "excecao_nota7": true,
+  "data_original": "2026-11-24T13:47:00+00:00",
+  "criado_em": "2026-11-24T15:17:16.715990+00:00",
+  "valido_ate": ""
+ },
+ {
+  "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1nMFhWZlA0TVJzbnNRTUoyLVk1SGNNLVVaWE5pLUNVSlRhRXVrQzd4ZnVhUmRnTGlmblNyby0wX2dHekp2WnhrT3ZVcGNnaGFMQ0MxU3BqSFdRR2NadUUtRVduQ3BwUlBsVWJ4LUlqNEpNSnFFdHJF?oc=5",
+  "titulo_original": "Defensoria Pública do Rio firma acordo com ministério contra racismo",
+  "descricao": "Defensoria Pública do Rio firma acordo com ministério contra racismo    Agenda do Poder",
+  "imagem_rss": "",
+  "imagem_banco": false,
+  "imagem_trocar": false,
+  "fonte_nome": "Busca - igualdade racial",
+  "fonte_africa": false,
+  "categoria": "politica",
+  "prioridade": "alta",
+  "nota": 7,
+  "motivo_nota": "Acordo da Defensoria Pública do Rio com ministério contra racismo; ação institucional de combate ao racismo.",
+  "ministerio": true,
+  "excecao_nota7": false,
+  "data_original": "2026-11-24T14:17:00+00:00",
+  "criado_em": "2026-11-24T15:17:16.715990+00:00",
+  "valido_ate": ""
  }
 ]
