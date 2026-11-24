@@ -2873,5 +2873,71 @@
   "destino": "publicada",
   "detalhe": "Violência doméstica atinge mais mulheres negras",
   "foto": "Divulgação"
+ },
+ {
+  "hora": "08:48",
+  "fonte": "Busca - Nigéria",
+  "titulo": "Da cocada ao quindim: 7 doces com herança africana na culinária",
+  "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNS2lfMUpGTzRwN1hoZ1BFRDc2a2Jzempwbk55OHZ5WGZBUlJ6eGdyQy1seTJuME1HZEtxMktzbVloaWxKS2FrRTVYTHg0bDJod3Q1NmRwWFdzaGUwRFhJeXFqSGdHTExsN0lNdWFNNXVGMkNtWGtpQ2pYdXQtMjl2REZPUGRndXdCb3I1U1MxV1FMbjlxd08tSEluLUJmcUg4c3Vsb2JKLUxieHZLWk5fU0RfbmJTZ05XZ3g0NUlldDd2OHptMzVGSm1xcEJxaXhBckRkcU5zMA?oc=5",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "Matéria sobre doces com herança africana na culinária; tema de ancestralidade e diáspora, mas é conteúdo de lista/entretenimento de veículo brasileiro, sem fato novo forte. Nota no limite, tratada como cultural de interesse ao leitor brasileiro."
+ },
+ {
+  "hora": "08:48",
+  "fonte": "Busca - Conceição Evaristo",
+  "titulo": "Corpos negros no teatro de ópera",
+  "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9XT2dPdkxrLVZoUjd5eDRnc05rb3hFVkFzUTJyYlFhU3FIYnVIVU11YUdvVWxHa3JhQ3F6YW1SZUlTVllFRlk3dEhITkxXbW9RLUZ5cVRTTjhNZVRia0lHOTFJY3Q0T0dBclFHbTBkNldNYWlYakpCcjNyRQ?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Título sem fato concreto identificável no resumo; material insuficiente para matéria honesta."
+ },
+ {
+  "hora": "08:48",
+  "fonte": "Busca - Nigéria",
+  "titulo": "Sinal vermelho para os Cristãos",
+  "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1VVjR6eGpGdXFNZXd3a2xpYkhqbDcwdW9xcnQ5bnB4VzREdnJzbVBjZ2RsbUNJTktKOTNrb1BabEFyTlJNYlFvWVVVYVI1U3hoYVlMSGJTMU5FQjFsaUZsTTBOT0thVTNqT2owaTNIX2JvQi12Nnc?oc=5",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Título ambíguo sem relação clara com a temática racial ou com a Agenda Preta; sem informação suficiente."
+ },
+ {
+  "hora": "08:48",
+  "fonte": "Busca - Cabo Verde",
+  "titulo": "Deicy Sanches desenvolve filme sobre memória feminina apagada pelo colonialismo",
+  "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPWG9XUXJVRWFkclJXWTY2eHJUTjN3VEFLbXN4RTRwZkRPX09RSWZuR2xlLVlkQ1d0Wm1Ca1ZuZHJOX292clA1X2g1VVNJcU51S3FZNmtPWmdDbmlTTlc1RWxxbk1XUUxtak5oUU1PaW9lbHdmcE5ZUGY1ZF9MYkt6RVZZeDQxMkdGYXR3aE83cnNtRjJ4U1lSMWtmYmhJUjlJaldRdzl4MDdLQThwQ2Y1NWFqZ0thZw?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Desenvolvimento de filme de cineasta africana sobre memória feminina apagada pelo colonialismo; lançamento de artista negra ainda em desenvolvimento, com relação à diáspora e ao continente."
+ },
+ {
+  "hora": "08:48",
+  "fonte": "Busca - Cabo Verde",
+  "titulo": "COP31: PM cabo-verdiano pede que impasse não trave cooperação climática",
+  "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNMERBdm0xOVRqQzdDNjV0U1FsSGt0d1ZvLXhMZVhfWTlNZ1lRRndEMlQ3MHdpQmJDT2toNWt0THYzTDUweUFBSTFqYWdGVVp4MVliS3lkSmEtWEYyLVJ1cTdMRWVudEs1b1d2eFh1RklRb0I1aHNaQjQxcTA2S3ptMUc5R003dnZDNHdSMy1HdnpIbmFIVGZzaDltODVqVzVqeDlZTkN3Z0FLb3ZGWGRKRDQyTXAwYV9n?oc=5",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 6,
+  "destino": "nota baixa",
+  "detalhe": "Primeiro-ministro de Cabo Verde pede cooperação climática na COP31; país de língua portuguesa, mas tema climático geral sem foco racial, nota 6 pela regra de países lusófonos em temas de interesse comum."
+ },
+ {
+  "hora": "08:48",
+  "fonte": "Busca - Racismo",
+  "titulo": "Notícias - Mogi das Cruzes avança em política antirracista com capacitação em “Letramento Racial”",
+  "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPOU51Z2xCTVFXVTIwdXRUdkNMTzJOaGhfeGdtQk5LTjVzWjVNZHJGb2NOdFdrUGV2b29xSkNodmtwYzU1TldRWUV5eXM3VWloTWtncmFDa1Y0c2RsZ3Y0MEE4b1FOcTZjaWhrUzZoVnZkVFJpbk4tUFVud21zbmtoVjI2RnZjWkYxc3h6d3h0aWRYQzJ4R3ZEV1c0YUVTQ05qbU1meXlQaklTSFh0SjBFS2lqOEpOcU1zSVB5VVhSWkgzOFBMXy1F?oc=5",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 6,
+  "destino": "nota baixa",
+  "detalhe": "evento local pequeno: Capacitação municipal em letramento racial em Mogi das Cruzes; ação de prefeitura do interior sem fato relevante, questão racial no centro mas sem nota de destaque."
  }
 ]
