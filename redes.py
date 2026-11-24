@@ -64,10 +64,11 @@ API_META = "https://graph.facebook.com/v26.0/"
 FEED_MAXIMO_DIA = 14          # carrosséis no feed por dia
 FEED_MINIMO_DIA = 10          # abaixo disso, a nota 7 entra para completar o dia
 STORIES_MAXIMO_DIA = 30
-STORIES_POR_RODADA = 3        # espalha os stories, sem rajada
+STORIES_POR_RODADA = 1        # 1 por rodada (15 min) e cota proporcional ao horário: não esgota cedo (24/11)
+STORIES_INICIO, STORIES_FIM = 7, 23  # os 30 stories se espalham das 7h às 23h
 INTERVALO_FEED_MIN = 45       # minutos entre um post de feed e outro (breaking não espera)
 # Carrosséis concentrados nos horários de maior alcance (aprovado em 24/11): (início, fim, quantos)
-JANELAS_FEED = [((7, 0), (9, 0), 2), ((9, 0), (13, 0), 3), ((13, 0), (18, 0), 2), ((18, 0), (22, 0), 5)]
+JANELAS_FEED = [((7, 0), (9, 0), 2), ((9, 0), (13, 0), 3), ((13, 0), (18, 0), 4), ((18, 0), (22, 0), 5)]  # tarde: 1 por hora (24/11)
 HORA_INICIO = (7, 0)          # publica das 7h...
 HORA_FIM = (0, 30)            # ...até 0h30; de madrugada, só breaking
 VALIDADE_FILA_HORAS = 12      # matéria que espera mais que isso na fila sai dela (notícia velha)
@@ -976,8 +977,14 @@ def main_publicar():
     # 4) Stories: breaking na hora; o resto no horário, até o limite do dia
     feitos = 0
     restantes = []
+    # cota até agora: proporcional ao tempo passado entre 7h e 23h (ex.: às 15h, no máximo metade dos 30)
+    frac = min(1.0, max(0.0, ((t.hour + t.minute / 60) - STORIES_INICIO) / (STORIES_FIM - STORIES_INICIO)))
+    cota_agora = max(1, round(STORIES_MAXIMO_DIA * frac))
+    # mais novos primeiro: matéria fresca vale mais que fila acumulada
+    fila_stories = sorted(fila_stories, key=lambda x: 0 if x.get("breaking") else 1)
+    fila_stories = [x for x in fila_stories if x.get("breaking")] + list(reversed([x for x in fila_stories if not x.get("breaking")]))
     for s_ in fila_stories:
-        liberado = s_.get("breaking") or (horario and feitos < STORIES_POR_RODADA)
+        liberado = s_.get("breaking") or (horario and feitos < STORIES_POR_RODADA and estado["stories_hoje"] < cota_agora)
         if liberado and estado["stories_hoje"] < STORIES_MAXIMO_DIA:
             try:
                 publicar_story(s_["url"], token, ig)
@@ -988,7 +995,7 @@ def main_publicar():
             except Exception as e:
                 log(f"Erro no story '{s_['titulo'][:60]}': {e}")
         restantes.append(s_)
-    fila_stories = restantes[-60:]
+    fila_stories = list(reversed(restantes))[-60:]  # volta à ordem de chegada para guardar
 
     # 5) Reels: Radar do meio-dia (a partir das 12h30) e Resumo do dia (a partir das 19h; domingo, a semana).
     #    O da noite não repete as matérias do meio-dia.
