@@ -422,6 +422,7 @@ def fazer_e_publicar(posts, semana, token, pagina, ig, estado=None, hoje=None, t
     midia, link = publicar_instagram(saida, texto, token, ig)
     titulo = ("Resumo da semana" if semana else "Radar do meio-dia" if turno == "meio" else "Resumo do dia") + f" {agora_sp.strftime('%d/%m')}"
     log(f"REELS PUBLICADO: {titulo} {link}")
+    video_yt = publicar_no_youtube(saida, escolhidas, semana, agora_sp, turno, estado, hoje)
     video_fb = ""
     chave_fb = "reels_fb_dia" if turno == "noite" else f"reels_fb_{turno}"
     if estado.get(chave_fb) != hoje:
@@ -433,8 +434,48 @@ def fazer_e_publicar(posts, semana, token, pagina, ig, estado=None, hoje=None, t
             log(f"Reels no Facebook falhou: {e}")
     return {"tipo": "reels", "titulo": titulo, "link": "https://www.africas.com.br",
             "links": [{"titulo": p["titulo"], "link": p["link"]} for p in escolhidas],
-            "ig_media": midia, "ig_link": link, "fb_post": video_fb, "prioridade": "reels",
+            "ig_media": midia, "ig_link": link, "fb_post": video_fb, "yt_video": video_yt, "prioridade": "reels",
             "publicado_em": datetime.now(timezone.utc).isoformat()}
+
+
+def texto_youtube(escolhidas, semana, agora_sp, turno):
+    """Título (até 60 caracteres, data só aqui, nunca dentro do vídeo) e descrição pesquisável."""
+    data = agora_sp.strftime("%d/%m/%Y")
+    if semana:
+        titulo = f"Notícias pretas da semana | Radar Áfricas {agora_sp.strftime('%d/%m')} #Shorts"
+    else:
+        titulo = f"Notícias pretas {data} | Radar Áfricas #Shorts"
+    lista = "\n".join(f"{i}. {p['titulo']}\n{p['link']}" for i, p in enumerate(escolhidas, 1))
+    descricao = (f"Notícias pretas de {data}: as principais pautas da população negra no Brasil e no mundo, "
+                 f"no Radar do Áfricas Play.\n\n{lista}\n\n"
+                 "📲 Baixe o app Áfricas Play e acompanhe as notícias pretas: https://app.africas.com.br\n"
+                 "🌐 Portal: https://www.africas.com.br\n🔔 Inscreva-se no canal para receber o Radar.\n\n"
+                 "#NotíciasPretas #ÁfricasPlay #CulturaNegra #Shorts")
+    tags = ["notícias pretas", "Áfricas Play", "população negra", "cultura negra", "movimento negro",
+            "igualdade racial", "notícias", "Radar Áfricas"]
+    return titulo, descricao, tags
+
+
+def publicar_no_youtube(saida, escolhidas, semana, agora_sp, turno, estado, hoje):
+    """Envia o mesmo vídeo como Shorts. Uma vez por turno por dia; falha aqui não atrapalha as outras redes."""
+    try:
+        import youtube
+    except Exception as e:
+        log(f"YouTube indisponível: {e}")
+        return ""
+    chave = f"yt_{turno}"
+    if not youtube.configurado() or (estado is not None and estado.get(chave) == hoje):
+        return ""
+    try:
+        titulo, descricao, tags = texto_youtube(escolhidas, semana, agora_sp, turno)
+        vid, priv = youtube.enviar_video(saida, titulo, descricao, tags)
+        if estado is not None:
+            estado[chave] = hoje
+        log(f"Reels enviado também ao YouTube: https://youtu.be/{vid} (situação: {priv})")
+        return vid
+    except Exception as e:
+        log(f"Envio ao YouTube falhou: {e}")
+        return ""
 
 
 def teste(semana=False):
