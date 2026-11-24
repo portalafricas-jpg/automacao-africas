@@ -801,5 +801,38 @@
   "nota": 0,
   "destino": "nota baixa",
   "detalhe": "Notícia sem conteúdo suficiente (resumo vazio) para matéria honesta."
+ },
+ {
+  "hora": "03:47",
+  "fonte": "Busca - Racismo",
+  "titulo": "Racismo estrutural e desigualdade exigem políticas públicas contínuas, diz socióloga",
+  "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOYmFwT2RESWFDYkI0WUFwQUVUa0M1RVc4UzQ2ZEZvRVlnN1JuZzNCVi0yMGNvLTVoWkRfZmFEMV9zdEM5amZ1MjVKWGFuSG5jUGh0anRQLW5qQWJWOTBwTTl6bDlWUkVQVDUxeWZjMFZKc0ppVkJYWUYwX0dDLXIwSTdqOTdiZ1BhWmRmN0dPMGhubzkyeXMyT3h6aWEzMDhYLTkxT3l6QkZ5Ukw3a1VBczRObUtQb0lZWHZQWkhfRlBMU09nUlhTNzFGTWp4dmpOSWl6MmxQRdIB1wFBVV95cUxOYmFwT2RESWFDYkI0WUFwQUVUa0M1RVc4UzQ2ZEZvRVlnN1JuZzNCVi0yMGNvLTVoWkRfZmFEMV9zdEM5amZ1MjVKWGFuSG5jUGh0anRQLW5qQWJWOTBwTTl6bDlWUkVQVDUxeWZjMFZKc0ppVkJYWUYwX0dDLXIwSTdqOTdiZ1BhWmRmN0dPMGhubzkyeXMyT3h6aWEzMDhYLTkxT3l6QkZ5Ukw3a1VBczRObUtQb0lZWHZQWkhfRlBMU09nUlhTNzFGTWp4dmpOSWl6MmxQRQ?oc=5",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 6,
+  "destino": "nota baixa",
+  "detalhe": "Fala de socióloga defendendo políticas públicas contínuas contra racismo estrutural; é opinião/declaração sem fato novo relevante, a questão racial é tema central mas sem fato concreto de impacto."
+ },
+ {
+  "hora": "03:47",
+  "fonte": "Busca - Nigéria",
+  "titulo": "JCI anuncia os Dez Jovens de Destaque Mundial de 2026",
+  "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPNldHaTRzQlBFOFZoVGdlR25SdnVSOUEyTy1xSU5mX1JMNkFZZHpPb3p2UG9EeW51N1otYzBkZktCazUwdVFtR2xCX0M3VmtvdGdYaWNBdGNtbllVeUlRMlo4WEd2SlBacnFNWDJrUGwyWXhyM05meW9CRXdrSktHM1ByR2d1cU5sY1BvRGVFaTJmdFJxMnprVURUbzF1aThzNTNKeUVYSXFvY2FEaTVrT3dZdjVNZXJiT2RyZE5VcGFKOGFWQnJIN0tiVUF5NGpIR0xXVGxtX3lOTHk4bmVkYUkzSUViTERYQUF3Z1Zn?oc=5",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Premiação JCI de jovens de destaque mundial sem relação com a temática racial nem com a população negra; não é notícia para o portal."
+ },
+ {
+  "hora": "03:48",
+  "fonte": "Busca - Conceição Evaristo",
+  "titulo": "Biblioteca Nacional e MRE financiam tradução de autores brasileiros no exterior",
+  "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQb29lNm9ISjJGcHBJeklJR0UweHBQZHNiMjdqb2ZwYXZsWExVRXYtbTNQVnhDdUdsWk5TNUlKd296QUZBUEpjb010R0RNSnEwcHczY0k4R3VVZ3pfVkxFUTRXSFVZOVB5SnB4NFl5UnNPTFpmeXBtNGhaMEstLVRTZUNGVy0xeGo2SFJURXAxWjUtTTlPYTVQcWdvTGZZcEQ1X2EtTTZOUFJ4dVp3Mkk5S1FDdjFpY1hXZ1hZNS03a1hTRlk?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 3,
+  "destino": "na fila",
+  "detalhe": "Financiamento de tradução de autores brasileiros no exterior por órgãos federais, sem recorte racial no texto; não atinge diretamente a população negra."
  }
 ]
