@@ -592,5 +592,49 @@
   "nota": 1,
   "destino": "nota baixa",
   "detalhe": "Lista de vencedores do Emmy Internacional sem recorte racial nem ligação com a Agenda Preta; título sem conteúdo de notícia."
+ },
+ {
+  "hora": "02:47",
+  "fonte": "Busca - Racismo",
+  "titulo": "Racismo estrutural e desigualdade exigem políticas públicas contínuas, diz socióloga",
+  "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQQi1pUHNUeEEtRF9EUnpGT3VwZDJFRDVFcUIxWlJUamNjclMxZWtfVWdQcnl6MVJlVDNzQnVhNTRSLTZlYWZOWFV2aF9iU3RDLUxaNGx3bjVBa0tvTWNMaGtiUGIwYlRQaUpWUlgyUHR0b0hTd1NWWUQ4YUMwWmFQRXMtQnB0c1o0a0dNWGFSd2FCTUxyQjQyR2pSY0dqVjFpbHJZcC1fWmtRRGZGYWl3eUdrckJMV3NOUEhwNzhSazBQU3BPWnVwRUlXbkFFa3fSAdcBQVVfeXFMTmJhcE9kRElhQ2JCNFlBcEFFVGtDNUVXOFM0NmRGb0VZZzdSbmczQlYtMjBjby01aFpEX2ZhRDFfc3RDOWpmdTI1SlhhbkhuY1BodGp0UC1uakFiVjkwcE05emw5VlJFUFQ1MXlmYzBWSnNKaVZCWFlGMF9HQy1yMEk3ajk3YmdQYVpkZjdHTzBobm85MnlzMk94emlhMzA4WC05MU95ekJGeVJMN2tVQXM0Tm1LUG9JWVh2UFpIX0ZQTFNPZ1JYUzcxRk1qeHZqTklpejJsUEU?oc=5",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 6,
+  "destino": "nota baixa",
+  "detalhe": "Fala de socióloga sobre racismo estrutural e políticas públicas; tema racial é central, mas é opinião/declaração sem fato novo relevante, e a fonte é regional."
+ },
+ {
+  "hora": "02:47",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "João Lourenço distinguido pela sua contribuição à lutra contra o cancro da próstata",
+  "link": "https://www.giranoticias.com/politica/2026/11/32763-joao-lourenco-distinguido-pela-sua-contribuicao-a-lutra-contra-o-cancro-da-prostata.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Homenagem a presidente angolano por causa de saúde não tem relação com a temática racial nem com a Agenda Preta; protocolar."
+ },
+ {
+  "hora": "02:47",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Zelensky confirma que a Ucrânia atacou navios russos ao largo da Líbia",
+  "link": "https://www.giranoticias.com/mundo/2026/11/32762-zelensky-confirma-que-a-ucrania-atacou-navios-russos-ao-largo-da-libia.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Conflito militar entre Ucrânia e Rússia no Mar Negro/Líbia não tem ligação com a população negra nem com o Brasil-África."
+ },
+ {
+  "hora": "02:47",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Incêndio destrói seis hotéis em Zanzibar e força retirada de 183 turistas",
+  "link": "https://www.giranoticias.com/africa/2026/11/32761-incendio-destroi-seis-hoteis-em-zanzibar-e-forca-retirada-de-183-turistas.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 4,
+  "destino": "nota baixa",
+  "detalhe": "Incêndio em hotéis de Zanzibar é fato de grande porte, mas sem relação com população negra, Brasil ou diáspora; crime/acidente comum sem relevância maior."
  }
 ]
