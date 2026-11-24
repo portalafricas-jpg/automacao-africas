@@ -441,12 +441,10 @@ def fazer_e_publicar(posts, semana, token, pagina, ig, estado=None, hoje=None, t
 
 def texto_youtube(escolhidas, semana, agora_sp, turno):
     """Título (até 60 caracteres) e descrição pesquisáveis, sem data: o vídeo fica no ar por muito tempo."""
-    sufixo = " | Radar Áfricas"
     manchete = (escolhidas[0].get("curta") or escolhidas[0]["titulo"]).strip()
-    limite = 60 - len(sufixo)
-    if len(manchete) > limite:
-        manchete = manchete[:limite - 1].rsplit(" ", 1)[0].rstrip(" ,.:;-–") + "…"
-    titulo = manchete + sufixo
+    if len(manchete) > 60:
+        manchete = manchete[:59].rsplit(" ", 1)[0].rstrip(" ,.:;-–") + "…"
+    titulo = manchete
     lista = "\n".join(f"{i}. {p['titulo']}\n{p['link']}" for i, p in enumerate(escolhidas, 1))
     descricao = ("Notícias pretas: as principais pautas da população negra no Brasil e no mundo, "
                  f"no Radar do Áfricas Play.\n\n{lista}\n\n"
