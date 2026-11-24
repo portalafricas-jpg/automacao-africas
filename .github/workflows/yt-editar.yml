@@ -1,0 +1,21 @@
+name: Editar descrição e tags de vídeos do YouTube
+on:
+  workflow_dispatch:
+    inputs:
+      arquivo:
+        description: "Arquivo JSON na pasta ajustes"
+        required: true
+jobs:
+  editar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - run: python yt_editar.py "ajustes/${{ github.event.inputs.arquivo }}"
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
