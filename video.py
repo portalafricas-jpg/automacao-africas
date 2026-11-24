@@ -23,8 +23,8 @@ import redes as R
 
 L, A = 1080, 1920            # vídeo em pé (9:16)
 FPS = 30
-DURACAO_GANCHO = 2.2         # tela de abertura (gancho dos primeiros segundos)
-DURACAO_TELA = 4.2           # segundos por matéria: ~3,8 s de texto parado para dar tempo de ler (23/11)
+DURACAO_GANCHO = 2.0         # capa (gancho): tempo para ler a frase de abertura
+DURACAO_TELA = 5.2           # segundos por matéria: ~4,8 s de texto parado (pedido em 23/11, total ~28 s)
 TRANSICAO = 0.4
 DURACAO_FINAL = 2.6          # tela final do Comente APP
 BRILHO_MINIMO = 70           # abaixo disso (0 a 255) a foto é considerada escura
@@ -325,7 +325,7 @@ def montar_video(telas, musica, saida):
 
 def fazer_video(posts, semana, agora_sp, saida, excluir=(), turno="noite"):
     """Monta o vídeo. Devolve (lista de matérias usadas, duração) ou (None, 0) se não houver material."""
-    quantas = 8 if semana else 5
+    quantas = 6 if semana else 5
     escolhidas, fotos = [], []
     for p in escolher(posts, 7 if semana else 1, quantas + 4, agora_sp, excluir):
         if len(escolhidas) == quantas:
@@ -334,7 +334,7 @@ def fazer_video(posts, semana, agora_sp, saida, excluir=(), turno="noite"):
         if foto is not None:
             escolhidas.append(p)
             fotos.append(foto)
-    if len(escolhidas) < (5 if semana else 3):
+    if len(escolhidas) < (4 if semana else 3):
         log(f"Reels: só {len(escolhidas)} matérias; o vídeo fica para a próxima.")
         return None, 0
     if semana:
