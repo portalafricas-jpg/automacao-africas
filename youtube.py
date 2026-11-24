@@ -11,6 +11,22 @@ CATEGORIA = "25"          # Notícias e política
 UPLOAD = "https://www.googleapis.com/upload/youtube/v3/videos"
 
 
+# ---- Links oficiais do Áfricas Play (um lugar só: ao abrir uma rede nova, como LinkedIn, acrescentar aqui) ----
+APP_GOOGLE_PLAY = "https://play.google.com/store/apps/details?id=br.com.app.gpu2633271.gpuc8cfd42c63ec76c640904e227254c57c&hl=pt_BR&gl=US&pli=1"
+APP_STORE = "https://apps.apple.com/br/app/%C3%A1fricas-play/id6448585492"
+PORTAL = "https://www.africas.com.br"
+REDES = [("Instagram", "https://www.instagram.com/africasplay"),
+         ("Facebook", "https://www.facebook.com/africasplay"),
+         ("TikTok", "https://www.tiktok.com/@africasplay"),
+         ("X", "https://x.com/AfricasPlay")]
+
+
+def bloco_links(chamada="🔔 Inscreva-se no canal e ative o sininho."):
+    redes = "\n".join(f"{nome}: {url}" for nome, url in REDES)
+    return (f"📲 Baixe o app Áfricas Play:\nGoogle Play: {APP_GOOGLE_PLAY}\nApp Store: {APP_STORE}\n\n"
+            f"🌐 Portal: {PORTAL}\n{chamada}\n\n📱 Siga o Áfricas Play:\n{redes}")
+
+
 def configurado():
     return all(os.environ.get(k) for k in ("YT_CLIENT_ID", "YT_CLIENT_SECRET", "YT_REFRESH_TOKEN"))
 

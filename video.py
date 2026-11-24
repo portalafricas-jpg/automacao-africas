@@ -479,16 +479,16 @@ def texto_youtube(escolhidas, semana, agora_sp, turno):
     lista = "\n".join(f"{i}. {p['titulo']}\n{p['link']}" for i, p in enumerate(escolhidas, 1))
     descricao = ("Notícias pretas: as principais pautas da população negra no Brasil e no mundo, "
                  f"no Radar do Áfricas Play.\n\n{lista}\n\n"
-                 "📲 Baixe o app Áfricas Play:\n"
-                 "Google Play: https://play.google.com/store/apps/details?id=br.com.app.gpu2633271.gpuc8cfd42c63ec76c640904e227254c57c\n"
-                 "App Store: https://apps.apple.com/br/app/%C3%A1fricas/id6448585492\n\n"
-                 "🌐 Portal: https://www.africas.com.br\n🔔 Inscreva-se no canal para receber o Radar.\n\n"
-                 "📱 Instagram: https://www.instagram.com/africasplay\n"
-                 "TikTok: https://www.tiktok.com/@africasplay\nX: https://x.com/AfricasPlay\n\n"
+                 + youtube_links() + "\n\n"
                  "#NotíciasPretas #ÁfricasPlay #CulturaNegra #Shorts")
     tags = ["notícias pretas", "Áfricas Play", "população negra", "cultura negra", "movimento negro",
             "igualdade racial", "notícias", "Radar Áfricas"]
     return titulo, descricao, tags
+
+
+def youtube_links():
+    import youtube
+    return youtube.bloco_links("🔔 Inscreva-se no canal para receber o Radar.")
 
 
 def publicar_no_youtube(saida, escolhidas, semana, agora_sp, turno, estado, hoje):
