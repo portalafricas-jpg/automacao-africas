@@ -515,5 +515,49 @@
   "nota": 1,
   "destino": "nota baixa",
   "detalhe": "Série do Canal Brasil sobre o assaltante Ronald Biggs, sem relação com a temática racial nem com a Agenda Preta; apenas divulgação de data de estreia."
+ },
+ {
+  "hora": "02:17",
+  "fonte": "Busca - mulheres negras",
+  "titulo": "Negra, mãe e vítima de agressão: estudo traça perfil de detentas no RJ",
+  "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNTHFId3dSa01zQ21NWHBKbzJ5akpqMnlINWFYMmVBTXNseGtBeVJwUXl4RTZzLXItbG8zdXZJbWN3bXNFWTNUZzVCWG5tVVJINTh0Yi1KTS12LVpzUlQ5eHFVNjl3QkxZNENpOUxDbG5wUU80ZzFJQ0FWM2pWMGxXZkgzVk9FUUdSc3VFeEczLTVJaTVBUVQxOHJLc21rb3c?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "repetida",
+  "detalhe": "título quase igual a outra notícia"
+ },
+ {
+  "hora": "02:17",
+  "fonte": "Busca - Cineasta negro",
+  "titulo": "Mostra de Cinema destaca potencial das pessoas idosas",
+  "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNaDcwOXdqeVljclZfTUxxaGZmbFdXRW9jNWtHYjRIQi1uUVFSVHdQcFVwYklCdDNLeXpjV21jZk45b1VwNFoyWmRNUHVodk1WUndDYXpkdUFSQ1h4RG1TVjhoTnRnQTIycVNxWVROb3liVTNiYm9vN2pWQmNPZDdRdU5KVkgwcG5NNEVRb082S2RRQUFo?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 1,
+  "destino": "nota baixa",
+  "detalhe": "Mostra de cinema sobre pessoas idosas, sem relação com a temática racial no resumo."
+ },
+ {
+  "hora": "02:17",
+  "fonte": "Busca - mulheres negras",
+  "titulo": "Trabalhadores negros no Ceará recebem até 36% menos que os brancos, aponta Dieese",
+  "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPcWxsRE4zeXpQMC13OS1YUmVjaUtTaXNLMkY5dFJWQXRLY213TThpSWVSUkpRMXU1YzZ2X1djaUtCUGRMbWhzd1M2VEtLNFpKMEdFQUFGblROT2Zoelk0QWtHQlNoOHMyY0pvVFNmVWxEM0haMkdWeEZ0RWRmYWk2SFp2ZWhuZHNkMFAtckNrR0pkZmNxbGZSTTQ2NkNiSHdySVE?oc=5",
+  "categoria": "politica",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Dado do Dieese sobre desigualdade salarial racial no Ceará (negros recebem até 36% menos); pesquisa com dados sobre desigualdade racial no trabalho, ligada ao eixo de desigualdade e renda."
+ },
+ {
+  "hora": "02:17",
+  "fonte": "Busca - mulheres negras",
+  "titulo": "Beleza negra: mercado ainda falha em representatividade, diz maquiadora",
+  "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPSjNEVlFFRDZKcU91UThZRWdwWXVvd2F6WDUwakQ2c1d4VXpibXVqN05mLUktRm9sSzJaNFV0c1ZWdkcyLVpXZlNndUhHVVJsZHhUa1pwOFBJTExOWHVfNEFHSi1NdlBXelgteUhOd3dFVng0NGxXaG9WM3JnQ2huUEpSNmNhQ3VlSzgyMkRXSzJyRzQwc2NUeW1nb0Y3U3hjLVJMYUN4Z2JidExEcFhTOHI0ZTVrVUhyWUJldHZn?oc=5",
+  "categoria": "protagonista",
+  "prioridade": "",
+  "nota": 5,
+  "destino": "nota baixa",
+  "detalhe": "Questão racial aparece (representatividade na beleza negra), mas é fala de maquiadora sobre o mercado sem fato novo ou conquista; opinativa e sem recorte central."
  }
 ]
