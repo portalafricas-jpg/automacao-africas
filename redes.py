@@ -66,6 +66,8 @@ FEED_MINIMO_DIA = 10          # abaixo disso, a nota 7 entra para completar o di
 STORIES_MAXIMO_DIA = 30
 STORIES_POR_RODADA = 3        # espalha os stories, sem rajada
 INTERVALO_FEED_MIN = 45       # minutos entre um post de feed e outro (breaking não espera)
+# Carrosséis concentrados nos horários de maior alcance (aprovado em 24/11): (início, fim, quantos)
+JANELAS_FEED = [((7, 0), (9, 0), 2), ((9, 0), (13, 0), 3), ((13, 0), (18, 0), 2), ((18, 0), (22, 0), 5)]
 HORA_INICIO = (7, 0)          # publica das 7h...
 HORA_FIM = (0, 30)            # ...até 0h30; de madrugada, só breaking
 VALIDADE_FILA_HORAS = 12      # matéria que espera mais que isso na fila sai dela (notícia velha)
@@ -886,6 +888,15 @@ def main_publicar():
     # tolerância de 3 minutos: o post sai 1 ou 2 minutos depois de o robô acordar, e sem ela
     # os 45 minutos viravam 60 na prática (o robô acorda de 15 em 15)
     pode_feed = ultimo is None or (agora - ultimo) >= timedelta(minutes=INTERVALO_FEED_MIN - 3)
+    janela = next((j for j in JANELAS_FEED if j[0] <= (t.hour, t.minute) < j[1]), None)
+    if janela is None:
+        pode_feed = False  # fora das janelas de carrossel (só breaking)
+    else:
+        inicio_j = t.replace(hour=janela[0][0], minute=janela[0][1], second=0, microsecond=0)
+        na_janela = sum(1 for p in posts if p.get("tipo") != "reels" and p.get("publicado_em")
+                        and datetime.fromisoformat(p["publicado_em"]) >= inicio_j.astimezone(timezone.utc))
+        if na_janela >= janela[2]:
+            pode_feed = False  # janela já completa
     log(f"Hora: {t.strftime('%H:%M')} | {'horário de publicação' if horario else 'madrugada: só breaking'} | "
         f"feed hoje: {estado['feed_hoje']}/{FEED_MAXIMO_DIA} | stories hoje: {estado['stories_hoje']}/{STORIES_MAXIMO_DIA}")
 

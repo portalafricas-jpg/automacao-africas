@@ -32,13 +32,19 @@ VALIDADE_HORAS = 4              # notícia com mais de 4 horas não é publicada
 NOTA_MINIMA = 8                 # nota do editor-chefe para ir para a fila (era 7; mudou em 23/11)
 NOTA_EXCECAO = 7                # carnaval/escolas de samba e lançamentos de artistas negros continuam com 7
 TETO_DIA = 25                   # no máximo 25 matérias por dia no site (breaking e ministérios fora do teto)
-TETO_POR_HORA = 2               # e no máximo 2 por hora, para espalhar ao longo do dia
+def teto_por_hora(hora):
+    """Picos de leitura no celular (aprovado em 24/11): manhã no trajeto, expediente calmo, noite."""
+    if 6 <= hora < 9:
+        return 4
+    if hora >= 18:
+        return 2
+    return 1
 TETO_EDITORIA = {"politica": 3, "cultura": 6, "cotidiano": 5, "ancestralidade": 4, "protagonista": 4, "mundo": 3}  # política 3 (23/11)
 LIMITE_AFRICA_DIA = 5           # no máximo 5 matérias por dia de fontes África (breaking não conta)
 INTERVALO_AFRICA_HORAS = 2      # e no mínimo 2 horas entre uma e outra
 MINUTO_PARTIDA = 2              # o cron-job.org dá a partida em :02, :17, :32 e :47 (o site lê em :00, :15, :30, :45)
 MINUTOS_PARA_PUBLICAR = 7       # só publica até 7 minutos depois da partida, para o site ver a matéria com certeza
-HORA_INICIO = 8                 # das 8h à meia-noite publica normal; de madrugada, só breaking
+HORA_INICIO = 6                 # das 6h à meia-noite publica normal; de madrugada, só breaking (6h desde 24/11)
 MAX_TRIAGEM_POR_RODADA = 40     # quantos títulos o editor-chefe avalia por rodada
 TEXTO_MINIMO = 600              # menos que isso de texto original = descarta (evita inventar)
 SEMELHANCA_MESMO_FATO = 0.62    # títulos parecidos acima disso = mesmo fato (entre fontes da mesma rodada)
@@ -1278,7 +1284,7 @@ def main():
             if not fora_do_teto:
                 if publicadas_hoje >= TETO_DIA:
                     break  # teto diário atingido
-                if ultima_hora >= TETO_POR_HORA:
+                if ultima_hora >= teto_por_hora(agora.astimezone(FUSO_SP).hour):
                     break  # espera a próxima hora para espalhar ao longo do dia
                 if por_editoria[materia_fila["categoria"]] >= TETO_EDITORIA.get(materia_fila["categoria"], 3):
                     break  # teto da editoria atingido hoje
