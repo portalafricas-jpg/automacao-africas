@@ -49,3 +49,38 @@ def enviar_video(caminho, titulo, descricao, tags=(), privacidade=PRIVACIDADE):
             break
         time.sleep(10 * (tentativa + 1))
     raise RuntimeError(f"YouTube: o envio do arquivo falhou ({r.status_code}: {r.text[:300]})")
+
+
+def id_playlist(nome):
+    """Procura no canal a playlist cujo título contém o nome (ex.: "Radar" acha "📡 Radar")."""
+    acesso = token()
+    tok = None
+    while True:
+        p = {"part": "snippet", "mine": "true", "maxResults": 50}
+        if tok:
+            p["pageToken"] = tok
+        r = requests.get("https://www.googleapis.com/youtube/v3/playlists", headers={"Authorization": f"Bearer {acesso}"},
+                         params=p, timeout=30)
+        if r.status_code != 200:
+            raise RuntimeError(f"YouTube: não consegui listar as playlists ({r.status_code}: {r.text[:200]})")
+        d = r.json()
+        for pl in d.get("items", []):
+            if nome.lower() in pl["snippet"]["title"].lower():
+                return pl["id"]
+        tok = d.get("nextPageToken")
+        if not tok:
+            return None
+
+
+def adicionar_na_playlist(video_id, nome="Radar"):
+    """Coloca o vídeo no topo da playlist indicada. Devolve True se deu certo."""
+    pl = id_playlist(nome)
+    if not pl:
+        raise RuntimeError(f"YouTube: playlist com '{nome}' no título não encontrada")
+    corpo = {"snippet": {"playlistId": pl, "position": 0, "resourceId": {"kind": "youtube#video", "videoId": video_id}}}
+    r = requests.post("https://www.googleapis.com/youtube/v3/playlistItems", params={"part": "snippet"},
+                      headers={"Authorization": f"Bearer {token()}", "Content-Type": "application/json"},
+                      data=json.dumps(corpo), timeout=30)
+    if r.status_code not in (200, 201):
+        raise RuntimeError(f"YouTube: não consegui pôr na playlist ({r.status_code}: {r.text[:200]})")
+    return True

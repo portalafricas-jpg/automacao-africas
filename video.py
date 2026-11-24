@@ -474,6 +474,11 @@ def publicar_no_youtube(saida, escolhidas, semana, agora_sp, turno, estado, hoje
         if estado is not None:
             estado[chave] = hoje
         log(f"Reels enviado também ao YouTube: https://youtu.be/{vid} (situação: {priv})")
+        try:
+            youtube.adicionar_na_playlist(vid, "Radar")
+            log("Vídeo colocado na playlist Radar do YouTube.")
+        except Exception as e:
+            log(f"Playlist Radar falhou: {e}")
         return vid
     except Exception as e:
         log(f"Envio ao YouTube falhou: {e}")
