@@ -23,7 +23,7 @@ import redes as R
 
 L, A = 1080, 1920            # vídeo em pé (9:16)
 FPS = 30
-DURACAO_GANCHO = 2.0         # capa (gancho): tempo para ler a frase de abertura
+DURACAO_GANCHO = 4.2         # capa (gancho): 2 s a mais, pedido em 23/11
 DURACAO_TELA = 5.2           # segundos por matéria: ~4,8 s de texto parado (pedido em 23/11, total ~28 s)
 TRANSICAO = 0.4
 DURACAO_FINAL = 2.6          # tela final do Comente APP
