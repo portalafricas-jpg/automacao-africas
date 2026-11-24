@@ -204,7 +204,7 @@ def tela_gancho(foto, semana, total, data_txt):
                   ("que marcaram", R.COR_TEXTO, 96), ("a semana", R.COR_TEXTO, 96)]
     else:
         linhas = [(f"{total} NOTÍCIAS", R.COR_AMARELO, 140), ("PRETAS", R.COR_AMARELO, 140),
-                  ("que você precisa", R.COR_TEXTO, 96), ("saber hoje", R.COR_TEXTO, 96)]
+                  ("que você precisa", R.COR_TEXTO, 96), ("saber", R.COR_TEXTO, 96)]
     y = 540
     for texto, cor, tam in linhas:
         f = R.fonte("extra", tam)
@@ -341,7 +341,7 @@ def fazer_video(posts, semana, agora_sp, saida, excluir=(), turno="noite"):
         cabecalho = "RADAR DA SEMANA"
         data_txt = f"{(agora_sp - timedelta(days=6)).strftime('%d/%m')} a {agora_sp.strftime('%d/%m/%Y')}"
     else:
-        cabecalho = "RADAR DO MEIO-DIA" if turno == "meio" else "RADAR"
+        cabecalho = "RADAR"  # sem referência de tempo: o mesmo vídeo vai para YouTube, TikTok etc.
         data_txt = f"{DIAS_SEMANA[agora_sp.weekday()].capitalize()}, {agora_sp.strftime('%d/%m/%Y')}"
     telas = [(tela_gancho(fotos[0], semana, len(escolhidas), data_txt), DURACAO_GANCHO)]
     curtas = manchetes_curtas([p["titulo"] for p in escolhidas])
@@ -364,11 +364,10 @@ def legenda(escolhidas, semana, agora_sp, turno="noite"):
     if semana:
         topo = f"📅 A semana em {len(escolhidas)} notícias: as notícias pretas que marcaram a semana no Áfricas Play."
     elif turno == "meio":
-        topo = f"☀️ Radar do meio-dia: as notícias pretas desta manhã de {DIAS_SEMANA[agora_sp.weekday()]}, " \
-               f"{agora_sp.strftime('%d/%m')}."
+        topo = f"☀️ As primeiras notícias pretas do dia, {DIAS_SEMANA[agora_sp.weekday()]}, {agora_sp.strftime('%d/%m')}."
     else:
-        topo = f"🎬 Resumo do dia: as notícias pretas que marcaram {'este' if agora_sp.weekday() >= 5 else 'esta'} {DIAS_SEMANA[agora_sp.weekday()]}, " \
-               f"{agora_sp.strftime('%d/%m')}."
+        topo = (f"🌆 Mais notícias pretas que marcaram {'este' if agora_sp.weekday() >= 5 else 'esta'} "
+                f"{DIAS_SEMANA[agora_sp.weekday()]}, {agora_sp.strftime('%d/%m')}.")
     lista = "\n".join(f"{i}. {p['titulo']}" for i, p in enumerate(escolhidas, 1))
     tags = "#ÁfricasPlay #NotíciasPretas #CulturaNegra " + ("#ResumoDaSemana" if semana else "#ResumoDoDia")
     return f"{topo}\n\n{lista}\n\n👉🏿 Quer ler as matérias completas? Comente APP que a gente te manda os links no direct.\n📲 Manda pra quem precisa saber.\n\n{tags}"
