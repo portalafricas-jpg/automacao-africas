@@ -1,0 +1,33 @@
+name: Publicar Reels agora (teste)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency: robo-redes
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow requests && sudo apt-get install -y -qq ffmpeg > /dev/null
+      - run: python reels_agora.py
+        env:
+          META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      - name: Guardar o registro
+        run: |
+          git config user.name "robo-africas"
+          git config user.email "robo-africas@users.noreply.github.com"
+          git add estado/redes.json estado/posts-redes.json feeds/instagram.json
+          git commit -m "Reels de teste publicado" || exit 0
+          for i in 1 2 3; do git pull --rebase && git push && exit 0; sleep 5; done
