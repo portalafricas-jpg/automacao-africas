@@ -212,24 +212,33 @@ def assinatura(desenho, largura, altura, escala):
     desenho.text(((largura - w) / 2, altura - int(78 * escala)), texto, font=f, fill=COR_AMARELO)
 
 
-def tela_foto(foto, legenda, credito, tamanho):
-    """Telas extras do carrossel: fotos do corpo da matéria original, com legenda curta e crédito."""
+def tela_foto(foto, frase, autor, credito, tamanho):
+    """Telas extras do carrossel: foto do corpo da matéria com outra frase de impacto (layout diferente da
+    tela 2: barra amarela ao lado da frase, foto mais clara) e o crédito pequeno no canto."""
     largura, altura = tamanho
     escala = largura / 1080
     img = cobrir(foto, largura, altura)
-    img = degrade_escuro(img, inicio=0.62)
+    img = ImageEnhance.Brightness(img).enhance(0.8)
+    img = degrade_escuro(img, inicio=0.45 if frase else 0.8)
     d = ImageDraw.Draw(img)
     margem = int(140 * escala)
-    y = altura - int(70 * escala)
-    fc = fonte("media", int(30 * escala))
-    texto_credito = f"Foto: {credito}"
-    d.text((margem, y - fc.size), texto_credito, font=fc, fill=COR_CINZA)
-    if legenda:
-        f, linhas = caber(d, legenda, "forte", int(40 * escala), largura - 2 * margem, int(140 * escala))
-        y -= fc.size + int(20 * escala) + len(linhas) * f.size * 1.2
+    if frase:
+        f, linhas = caber(d, frase, "forte", int(64 * escala), largura - 2 * margem - int(40 * escala), altura * 0.3)
+        passo = f.size * 1.18
+        altura_autor = int(60 * escala) if autor else 0
+        y0 = altura - int(150 * escala) - len(linhas) * passo - altura_autor
+        d.rectangle((margem, y0 + int(6 * escala), margem + int(10 * escala), y0 + len(linhas) * passo), fill=COR_AMARELO)
+        y = y0
         for linha in linhas:
-            d.text((margem, y), linha, font=f, fill=COR_TEXTO)
-            y += f.size * 1.2
+            d.text((margem + int(36 * escala), y), linha, font=f, fill=COR_TEXTO, stroke_width=2, stroke_fill=(0, 0, 0))
+            y += passo
+        if autor:
+            fa, la = quebrar(d, autor, "media", int(34 * escala), largura - 2 * margem)
+            d.text((margem + int(36 * escala), y + int(14 * escala)), la[0], font=fa, fill=COR_AMARELO)
+    fc = fonte("media", int(26 * escala))
+    texto = f"Foto: {credito}"
+    d.text((largura - margem - d.textlength(texto, font=fc), altura - int(70 * escala)), texto, font=fc,
+           fill=COR_CINZA, stroke_width=1, stroke_fill=(0, 0, 0))
     return seta_mais(img, ("esquerda", "direita"))
 
 
@@ -466,6 +475,9 @@ FERRAMENTA = {
         "properties": {
             "frase_destaque": {"type": "string", "description": "Frase forte para a tela 2, até 90 caracteres."},
             "autor_frase": {"type": "string", "description": "Só o nome de quem disse, sem cargo ou função; senão vazio."},
+            "frases_extras": {"type": "array", "maxItems": 3, "description": "Até 3 outras frases fortes, diferentes da frase_destaque, para as telas com fotos.",
+                              "items": {"type": "object", "properties": {"frase": {"type": "string"}, "autor": {"type": "string"}},
+                                        "required": ["frase", "autor"]}},
             "legenda": {"type": "string", "description": "Gancho + 1 ou 2 parágrafos curtos, de 350 a 650 caracteres, sem chamada, créditos ou hashtags."},
             "hashtags": {"type": "array", "items": {"type": "string"}, "description": "De 3 a 4 hashtags específicas da matéria."},
             "alt_capa": {"type": "string", "description": "Descrição da imagem da capa para o texto alternativo, com palavras-chave."},
@@ -488,6 +500,11 @@ juntar pedaços de lugares diferentes ou reescrever a fala. Se a fala for longa,
 menor que caiba nos 90 caracteres. Em autor_frase, escreva SÓ O NOME de quem falou, sem cargo, função ou
 explicação (ex.: "Fátima Farkas"; "Yung Peachie").
 Se não houver fala, escreva uma frase-síntese do fato e deixe autor_frase vazio. Sem aspas no texto.
+
+1b) frases_extras: até 3 OUTRAS frases de impacto da matéria, diferentes da frase_destaque e entre si, com no
+máximo 90 caracteres cada, seguindo a mesma regra: fala LITERAL (mesmas palavras, mesma ordem) com SÓ O NOME de
+quem disse em "autor"; ou, se não houver outra fala, um dado ou fato forte da matéria com "autor" vazio.
+Nunca invente. Se a matéria não tiver material, devolva menos frases ou a lista vazia.
 
 2) legenda (Instagram, carrossel): siga a fórmula.
 - 1ª linha (gancho): o fato mais forte, com a palavra-chave principal (nome, cidade, tema) nas primeiras palavras.
@@ -825,11 +842,13 @@ def publicar_materia(item, token, pagina, ig):
     alts_extras = []
     # fotos do corpo da matéria original (guardadas pelo robô do portal), até 3 telas a mais
     registro = {normalizar(m.get("titulo", "")): m for m in ler_json(ARQ_PUBLICADAS, [])}
-    for f in (registro.get(normalizar(item.get("titulo", ""))) or {}).get("fotos_extras", [])[:3]:
+    frases = [x for x in (textos.get("frases_extras") or []) if x.get("frase")]
+    for n, f in enumerate((registro.get(normalizar(item.get("titulo", ""))) or {}).get("fotos_extras", [])[:3]):
+        fx = frases[n] if n < len(frases) else {}
         try:
             telas.append(tela_foto(Image.open(io.BytesIO(baixar(f["url"]))).convert("RGB"),
-                                   f.get("legenda", ""), f.get("credito", ""), tamanho))
-            alts_extras.append(f.get("legenda") or "Foto da matéria")
+                                   fx.get("frase", ""), fx.get("autor", ""), f.get("credito", ""), tamanho))
+            alts_extras.append(f.get("legenda") or fx.get("frase") or "Foto da matéria")
         except Exception as e:
             log(f"  Foto extra não entrou no carrossel: {e}")
     telas.append(tela_app(tamanho))

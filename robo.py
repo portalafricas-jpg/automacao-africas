@@ -1117,6 +1117,10 @@ def publicar(materia_fila, linha_editorial, agora):
             break
     if fotos_extras:
         corpo = inserir_fotos(corpo, fotos_extras)
+        # crédito geral da matéria com todos os fotógrafos (24/11)
+        nomes = [credito] + [f["credito"] for f in fotos_extras]
+        unicos = [n for i, n in enumerate(nomes) if n and n.lower() not in [x.lower() for x in nomes[:i]]]
+        credito = unicos[0] if len(unicos) == 1 else ", ".join(unicos[:-1]) + " e " + unicos[-1]
         log(f"  {len(fotos_extras)} foto(s) do corpo da matéria original incluída(s).")
     titulo = decodificar(resultado.get("titulo"))
     if not titulo or not corpo:
