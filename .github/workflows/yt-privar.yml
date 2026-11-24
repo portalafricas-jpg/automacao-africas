@@ -1,0 +1,21 @@
+name: Deixar vídeos privados no YouTube
+on:
+  workflow_dispatch:
+    inputs:
+      videos:
+        description: "IDs separados por espaço"
+        required: true
+jobs:
+  privar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - run: python yt_privar.py ${{ github.event.inputs.videos }}
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
