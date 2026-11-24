@@ -73,11 +73,11 @@ def id_playlist(nome):
 
 
 def adicionar_na_playlist(video_id, nome="Radar"):
-    """Coloca o vídeo no topo da playlist indicada. Devolve True se deu certo."""
+    """Coloca o vídeo na playlist indicada (a ordem segue a configuração da playlist). Devolve True se deu certo."""
     pl = id_playlist(nome)
     if not pl:
         raise RuntimeError(f"YouTube: playlist com '{nome}' no título não encontrada")
-    corpo = {"snippet": {"playlistId": pl, "position": 0, "resourceId": {"kind": "youtube#video", "videoId": video_id}}}
+    corpo = {"snippet": {"playlistId": pl, "resourceId": {"kind": "youtube#video", "videoId": video_id}}}
     r = requests.post("https://www.googleapis.com/youtube/v3/playlistItems", params={"part": "snippet"},
                       headers={"Authorization": f"Bearer {token()}", "Content-Type": "application/json"},
                       data=json.dumps(corpo), timeout=30)
