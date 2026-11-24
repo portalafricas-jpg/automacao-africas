@@ -609,6 +609,7 @@ Para cada notícia nova, dê:
 - ministerio: true para ação, anúncio ou decisão do Ministério da Igualdade Racial ou de qualquer ministério do governo federal que atinja a população negra.
 - motivo: frase curta explicando a nota com base na régua.
 Release de órgão público (prefeitura, governo estadual, secretaria, assembleia) só merece nota 8 ou mais se trouxer fato relevante de verdade para a população negra.
+Notícia sobre o próprio veículo de imprensa (parceria comercial ou de conteúdo entre veículos, prêmio do veículo, aniversário, nova edição, nova equipe, evento ou campanha do veículo, como "RAÇA Brasil e UOL anunciam parceria") não interessa ao público do Áfricas: nota 0.
 Notícias marcadas com [FONTE ÁFRICA] vêm de veículos africanos ou de buscas sobre o continente: avalie pela seção "Notícias da África e do mundo" da linha editorial, e não pela pergunta sobre a questão racial.
 Registre a avaliação de todas as notícias usando a ferramenta avaliar_noticias.
 """
