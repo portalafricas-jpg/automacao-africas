@@ -404,11 +404,14 @@ def legenda(escolhidas, semana, agora_sp, turno="noite"):
 
 
 # ---------------- Publicação ----------------
-def publicar_instagram(caminho, texto, token, ig):
+def publicar_instagram(caminho, texto, token, ig, colaboradores=()):
     """Envio direto do arquivo ao Instagram (upload resumível, o caminho oficial para Reels)."""
     tamanho = os.path.getsize(caminho)
-    c = R.meta("POST", f"{ig}/media", token, {"media_type": "REELS", "upload_type": "resumable", "caption": texto,
-                                                "share_to_feed": "true", "thumb_offset": "800"})
+    dados = {"media_type": "REELS", "upload_type": "resumable", "caption": texto,
+             "share_to_feed": "true", "thumb_offset": "800"}
+    if colaboradores:
+        dados["collaborators"] = json.dumps(list(colaboradores))
+    c = R.meta("POST", f"{ig}/media", token, dados)
     with open(caminho, "rb") as f:
         r = requests.post(c["uri"], data=f.read(), timeout=300, headers={
             "Authorization": f"OAuth {token}", "offset": "0", "file_size": str(tamanho)})

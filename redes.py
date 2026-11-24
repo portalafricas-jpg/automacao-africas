@@ -1025,6 +1025,14 @@ def main_publicar():
             log(f"Erro no Reels do turno {turno} (tentativa {estado[chave_tent]} de 3): {e}")
         break  # um Reels por rodada
 
+    # 6) Campanhas programadas (ex.: Expo África Brasil): peças com hora marcada, fora dos limites do dia
+    if horario:
+        try:
+            import campanha
+            campanha.rodar(token, pagina, ig, estado)
+        except Exception as e:
+            log(f"Campanhas: erro geral: {e}")
+
     estado.update({"vistos": list(vistos)[-500:], "fila": fila, "fila_stories": fila_stories})
     salvar_json(ARQ_REDES, estado)
     salvar_json(ARQ_POSTS, posts[-300:])

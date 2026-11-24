@@ -1,0 +1,59 @@
+{
+ "colaboradores": [
+  "expoafricabrasil",
+  "joaocandaoficial"
+ ],
+ "stories": [
+  {
+   "hora": "10:00",
+   "arquivo": "story1.jpg"
+  },
+  {
+   "hora": "13:00",
+   "arquivo": "story2.jpg"
+  },
+  {
+   "hora": "16:00",
+   "arquivo": "story3.jpg"
+  },
+  {
+   "hora": "18:30",
+   "arquivo": "story7.jpg"
+  }
+ ],
+ "carrossel": {
+  "hora": "20:00",
+  "imagens": [
+   "c1.jpg",
+   "c2.jpg",
+   "c3.jpg",
+   "c4.jpg",
+   "c5.jpg",
+   "c6.jpg",
+   "c7.jpg"
+  ],
+  "legenda": "A Expo África Brasil 2026 está chegando! 🌍 Dois dias de negócios, investimentos e conexões entre o Brasil e os países africanos, com ministros, embaixadas, câmaras de comércio e empreendedores.\n\n📅 3 e 4 de dezembro · 📍 Espaço Center 3, Av. Paulista, 2064, São Paulo\n🎟️ Ingressos: expoafricabrasil.com.br/ingressos\n📲 Programação e novidades ao vivo no Áfricas Play, app oficial do evento. Link na bio.\n\n@expoafricabrasil @joaocandaoficial\n#ExpoAfricaBrasil2026 #BrasilAfrica #NegociosInternacionais",
+  "link": "https://expoafricabrasil.com.br/ingressos"
+ },
+ "reels": {
+  "hora": "21:00",
+  "arquivo": "reels.mp4",
+  "legenda": "Um convite especial do Buza, diretor de eventos da Expo África Brasil 2026! 🎬 Nos vemos em 3 e 4 de dezembro, em São Paulo.\n\n📲 Baixe o Áfricas Play, app oficial do evento, e acompanhe a programação ao vivo.\n\n@expoafricabrasil @joaocandaoficial\n#ExpoAfricaBrasil2026 #BrasilAfrica"
+ },
+ "youtube": {
+  "hora": "21:00",
+  "arquivo": "short.mp4",
+  "titulo": "5 nomes da Expo África Brasil que você precisa conhecer",
+  "descricao": "Ministra da Nigéria, Fundo de Investimento Mutapa (Zimbábue), Câmara de Comércio Brasil-Gana, Embaixada do Togo e Sebrae Nacional: conheça 5 nomes da Expo África Brasil 2026, encontro internacional de negócios, investimentos e oportunidades entre o Brasil e os países africanos.\n\n📅 3 e 4 de dezembro de 2026 · Espaço Center 3, Av. Paulista, 2064, São Paulo\n🎟️ Ingressos: https://expoafricabrasil.com.br/ingressos\n📲 Programação e novidades ao vivo no Áfricas Play, app oficial do evento.\n\n#ExpoAfricaBrasil2026 #BrasilAfrica #Shorts",
+  "tags": [
+   "Expo África Brasil",
+   "Expo África Brasil 2026",
+   "Brasil África",
+   "negócios internacionais",
+   "Hannatu Musa Musawa",
+   "Áfricas Play",
+   "investimentos na África"
+  ],
+  "playlist": "Expo"
+ }
+}
