@@ -4912,5 +4912,82 @@
   "nota": 3,
   "destino": "nota baixa",
   "detalhe": "Artigo de opinião de outro veículo; não é notícia."
+ },
+ {
+  "hora": "12:32",
+  "fonte": "Busca - Cultura negra",
+  "titulo": "cultura afro-brasileira em Caranaíba",
+  "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPMTIweWR4cWYzU1ZuNV9hNnFYZ1FVS25kcGlmMWJXRXQ2YVdhdTMwRG1FM0lCczVGaEU1VWFwS2J0bnVjUmxKQ1FTT2NhV3dKdWVEbERwaElkdGZhbVk2R1dzUTBLaVY1eHhyZ18ta2ZXMFZwUThzOTBIalVZZFo5ellzVzJEZUtmMHQ2MWVRdTNuTEVpcGVpcHpZSzdyWWI2MHYzMmNONjdXX3dZa3c?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "repetida",
+  "detalhe": "título quase igual a outra notícia"
+ },
+ {
+  "hora": "12:33",
+  "fonte": "Busca - Saúde da população negra",
+  "titulo": "Prefeitura do Recife promove ações gratuitas de saúde e mutirões em terreiros nesta semana",
+  "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPZ3AzbC0yZkdSOTlBZHBkUXJKZktrSmxDaGRaN2J2ZkJUdldtcWE1dW1GREQtY1hNbWNJWl96UWtlLUtjUzJxcU4xcVVndVR5NFpCSzFGU2s0Tks0REdKUGVYNWQtdEtXenRGbGphMnhCUUN1UVBuc05LQk5tQjFWQVFTSE5wSnA1RGI2Z2k2YmYzczFIVDh6SkF4bXZJZVVLdjlUSmZDSElKNHpJcU1yddIBtAFBVV95cUxOVGRhVTFyZjRsUENlaExMUGNoWFp0Y0U5NnZyMGlVcXFCR2s2ZWdGMkh4NGdZcEhMZUg3aVAyOFY4U2JnV0FGb3YwREdaY053TkgwSUpZNDVKbHhfMTU5Z1l2UDlYQXc5OTByZVJDZ1l0T3FJLWNMZXd6RlF3WVNpMDZGUUxlc3J6dHhFQV9fSFJqbDRLcXZRRGRxSU1TdHMzdUgyQmZfSkp3czJJQlFiLUN5S2k?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "evento local pequeno: Ações de saúde e mutirões em terreiros: saúde e matrizes africanas, mas evento municipal de menor porte; nota 7 pelo eixo saúde/matriz africana."
+ },
+ {
+  "hora": "12:33",
+  "fonte": "Busca - Moda afro",
+  "titulo": "Sob direção criativa de Katrine Moreira, HĒRA apresenta ÉLEVÉ, nova coleção com recortes marcantes e design autoral",
+  "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPcGhyenViUnpKYTQyRmp0V3lkaUpSVEpKUkdSdUlZckxkY2otRk9SUjViS29fS3hMMVNTemhTMWRqQllKc0cyY1hNSThBX0NNLWNrWGFOQ2V2LWcyT0h0MlBNRktCS0FzQkFCOFQwUUR3dHdmemlkT1NiYkpJQ2Fza2dRVDRDLU1DemJVS1F3WVE0SUxYRUpZQWVGRVdrTVlVbWNZZmpSaHpnYV8zTkhZTURocnJtY05lUlVFR1FWZWpGWHc3dDZRZVo5anJ0VjB5S0hNYkMzbw?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Lançamento de coleção de moda comercial/publicidade de marca, sem fato de relevância para a população negra."
+ },
+ {
+  "hora": "12:33",
+  "fonte": "Busca - racismo estrutural",
+  "titulo": "Defesa da advocacia criminal ganha destaque na 25ª Conferência Nacional da Advocacia",
+  "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQLXp0dFgtM29MWVpsNzZsT2YwNEdDOHF6NTBlSUhDYkJ4YTFDYnRxb1BaR2tGeW50NXVFMm4td0d3NnBxeTA1RmhUQ3hzUW01U2RyYzdKZk1WVDM1dzVrRjgwb29pdGhiel9EdjExcjNhTjBEdERCQ2dVUzBhdUg4WFo4OVNHLUpwcHU4NjNrQ01jR2VFalNYT212c0NWMjhycjJSck1rSkgzWWdHT0YxVmtYZ3ZKMllPSHc?oc=5",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Conferência da advocacia criminal sem recorte racial e sem fato relevante para a temática racial."
+ },
+ {
+  "hora": "12:33",
+  "fonte": "Busca - Cultura negra",
+  "titulo": "Cultura afro-brasileira será celebrada neste sábado (28)",
+  "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNTTd0TDc5cVoyUHdTMzROWnBmcFRtSnNTb2J1c2ZzcTY3S2FTYXEzMmpmQS1HelFqZ3ZUMWRzdzRfUHhTZzQ3UUNMNElyU3NfZHJBdDNuR0ZkcHFySzhUd1NBa2Fwd3MxWGRRQW95NzVYSDJWZXp3eXdsMGROajNSOFRnVElfMUF3bEhjeExfSlctTXd2RS14Y21aR1RNZ0laZ25KSGMwNVJSWlk?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "evento local pequeno: Celebração da cultura afro-brasileira em evento municipal, ligada à memória negra; nota 7 pelo eixo cultura negra, evento local."
+ },
+ {
+  "hora": "12:33",
+  "fonte": "Busca - Cultura negra",
+  "titulo": "Salvador recebe oficinas gratuitas de dança no Pelourinho com foco na cultura negra",
+  "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPOURqb010Y01yVlctOXNhVnZTLUI0ZkpnUG9zMFlNTEZjYjRSb2thQ0Z3V3JsUVVrYnR4bHlZSXlMMTVuQWJlX3NicVRsTW5NbjJaT1RUMFNQR0JzZFpEQ09BRzh2dElRcDhodkNVWFpSYzlPaTFoTE9RZGptUlp4a2VMMURONDZ0V1lJWjRJNTFGS3RoZTJHbnlxTVY4dTZpb2FIU1kxWlExVWJwS3FkdnZSNlBqWjFuWjJzcDNTaEt2TVZZeW9BdDhSTXRHdw?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "Oficinas gratuitas de dança com foco na cultura negra no Pelourinho, Salvador; cultura negra com fato concreto."
+ },
+ {
+  "hora": "12:33",
+  "fonte": "Busca - Saúde da população negra",
+  "titulo": "Comissão especial debate redução da maioridade penal",
+  "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOSDk4TkhoQ1loeEU0RTRkTEU3T29aV044OXJsREdLb1g3Mjh3enZyYmNXeHRBYXQydE40TGw0dExYN01ITUNBZFlEekhfQV9OWEgtR0dPT0R1V0NjTW9BbGx6cnNlRGwxbjBFY1Q4VGdWeTJZV0pWekFCblAzUGdYa3Z6aFdvR25fbXJ1VW9wajVpUGRDaEVKMUR0ZEZNcFU?oc=5",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Debate sobre redução da maioridade penal sem recorte racial no texto; não há conexão explícita com a população negra no material recebido."
  }
 ]
