@@ -212,6 +212,27 @@ def assinatura(desenho, largura, altura, escala):
     desenho.text(((largura - w) / 2, altura - int(78 * escala)), texto, font=f, fill=COR_AMARELO)
 
 
+def tela_foto(foto, legenda, credito, tamanho):
+    """Telas extras do carrossel: fotos do corpo da matéria original, com legenda curta e crédito."""
+    largura, altura = tamanho
+    escala = largura / 1080
+    img = cobrir(foto, largura, altura)
+    img = degrade_escuro(img, inicio=0.62)
+    d = ImageDraw.Draw(img)
+    margem = int(140 * escala)
+    y = altura - int(70 * escala)
+    fc = fonte("media", int(30 * escala))
+    texto_credito = f"Foto: {credito}"
+    d.text((margem, y - fc.size), texto_credito, font=fc, fill=COR_CINZA)
+    if legenda:
+        f, linhas = caber(d, legenda, "forte", int(40 * escala), largura - 2 * margem, int(140 * escala))
+        y -= fc.size + int(20 * escala) + len(linhas) * f.size * 1.2
+        for linha in linhas:
+            d.text((margem, y), linha, font=f, fill=COR_TEXTO)
+            y += f.size * 1.2
+    return seta_mais(img, ("esquerda", "direita"))
+
+
 def tela_destaque(frase, autor, foto, tamanho, breaking=False):
     """Tela 2: foto original escurecida, com a frase forte da matéria entre aspas."""
     largura, altura = tamanho
@@ -800,12 +821,22 @@ def publicar_materia(item, token, pagina, ig):
     tamanho = capa.size
     telas = [selo_deslize(capa),
              tela_destaque(textos["frase_destaque"], textos.get("autor_frase", ""), foto, tamanho,
-                           breaking=item.get("breaking", False)),
-             tela_app(tamanho)]
+                           breaking=item.get("breaking", False))]
+    alts_extras = []
+    # fotos do corpo da matéria original (guardadas pelo robô do portal), até 3 telas a mais
+    registro = {normalizar(m.get("titulo", "")): m for m in ler_json(ARQ_PUBLICADAS, [])}
+    for f in (registro.get(normalizar(item.get("titulo", ""))) or {}).get("fotos_extras", [])[:3]:
+        try:
+            telas.append(tela_foto(Image.open(io.BytesIO(baixar(f["url"]))).convert("RGB"),
+                                   f.get("legenda", ""), f.get("credito", ""), tamanho))
+            alts_extras.append(f.get("legenda") or "Foto da matéria")
+        except Exception as e:
+            log(f"  Foto extra não entrou no carrossel: {e}")
+    telas.append(tela_app(tamanho))
     legenda_ig, legenda_fb = montar_legendas(item, textos)
     fb_post, enderecos = publicar_facebook(telas, legenda_fb, item["link"], token, pagina)
-    alts = [textos.get("alt_capa", ""), textos.get("alt_destaque", ""),
-            "Tela do Áfricas Play: comente APP e receba o link da matéria completa no direct."]
+    alts = [textos.get("alt_capa", ""), textos.get("alt_destaque", "")] + alts_extras + \
+           ["Tela do Áfricas Play: comente APP e receba o link da matéria completa no direct."]
     midia, permalink = publicar_carrossel(enderecos, alts, legenda_ig, token, ig)
     return {"titulo": item["titulo"], "link": item["link"], "ig_media": midia, "ig_link": permalink,
             "fb_post": fb_post, "prioridade": item.get("prioridade"),

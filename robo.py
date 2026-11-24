@@ -427,6 +427,7 @@ def extrair_materia(link, titulo="", descricao=""):
             if resultado["credito_foto"]:
                 break
 
+    resultado["fotos_corpo"] = achar_fotos_corpo(pagina, resultado["imagem"])
     resultado["embeds"] = achar_embeds(pagina)
     resultado["links_uteis"] = achar_links_uteis(pagina)
     resultado["texto"] = limpeza_mecanica(resultado["texto"], titulo, descricao)
@@ -452,6 +453,37 @@ def trecho_da_materia(pagina):
     """Pega só o miolo da matéria (tag <article>), para não pegar menus e rodapé."""
     m = re.search(r"<article\b.*?</article>", pagina, flags=re.S | re.I)
     return m.group(0) if m else ""
+
+
+def achar_fotos_corpo(pagina, principal=""):
+    """Fotos dentro do texto da matéria original (com legenda e crédito), além da foto principal."""
+    miolo = trecho_da_materia(pagina) or pagina
+    base_principal = re.sub(r"[-_]\d+x\d+|[-_](?:c|k|b|o)(?=\.)", "", os.path.basename(urlparse(principal).path))
+    fotos, vistas = [], set()
+    for fig in re.findall(r"<figure\b.*?</figure>", miolo, flags=re.S | re.I):
+        m = re.search(r"<img[^>]+(?:data-src|data-lazy-src|src)=[\"']([^\"']+)[\"']", fig, re.I)
+        if not m:
+            continue
+        src = html.unescape(m.group(1))
+        if src.startswith("//"):
+            src = "https:" + src
+        if not src.startswith("http") or re.search(r"logo|icon|avatar|banner|publicidade|\.svg|\.gif", src, re.I):
+            continue
+        base = re.sub(r"[-_]\d+x\d+|[-_](?:c|k|b|o)(?=\.)", "", os.path.basename(urlparse(src).path))
+        if base in vistas or (base_principal and base == base_principal):
+            continue
+        vistas.add(base)
+        cap = decodificar(re.sub(r"<[^>]+>", " ", " ".join(re.findall(r"<figcaption[^>]*>(.*?)</figcaption>", fig, flags=re.S | re.I))))
+        cap = re.sub(r"\s+", " ", cap).strip()
+        credito, legenda = "", cap
+        c = re.search(r"(?i)\b(?:foto|fotos|imagem|crédito|credito)\s*:?\s*([^|]{3,80})$", cap)
+        if c:
+            credito = limpar_credito(c.group(1))
+            legenda = cap[:c.start()].strip(" –—-|,.")
+        fotos.append({"url": src, "legenda": legenda[:200], "credito": credito})
+        if len(fotos) >= 6:
+            break
+    return fotos
 
 
 def achar_embeds(pagina):
@@ -750,6 +782,18 @@ def inserir_embeds(corpo, embeds):
     return corpo[:pos] + blocos + corpo[pos:]
 
 
+def inserir_fotos(corpo, fotos):
+    """Coloca as fotos do corpo entre os parágrafos (depois do 2º, do 4º e do 6º), com legenda e crédito."""
+    fins = [m.end() for m in re.finditer(r"</p>", corpo)]
+    posicoes = [fins[i] for i in (1, 3, 5) if i < len(fins) - 1][:len(fotos)]
+    for pos, f in sorted(zip(posicoes, fotos), key=lambda x: -x[0]):
+        texto = (f["legenda"] + ". " if f["legenda"] else "") + "Foto: " + f["credito"]
+        bloco = (f'<figure><img src="{html.escape(f["url"], quote=True)}" alt="{html.escape(f["legenda"] or "Foto da matéria", quote=True)}" '
+                 f'style="max-width:100%;height:auto;" /><figcaption>{html.escape(texto, quote=False)}</figcaption></figure>')
+        corpo = corpo[:pos] + bloco + corpo[pos:]
+    return corpo
+
+
 URL_BUSCA = "https://www.africas.com.br/noticias/buscar/"
 COR_LINK = "#FF0000"
 MAX_LINKS = 5
@@ -880,6 +924,10 @@ GRANDES_VEICULOS = ("globo.com", "estadao.com.br", "folha.uol.com.br", "uol.com.
                     "istoe.com.br", "poder360.com.br", "gazetadopovo.com.br", "jovempan.com.br",
                     "em.com.br", "otempo.com.br", "opovo.com.br", "jc.com.br", "zh.clicrbs.com.br")
 CREDITO_LIVRE = re.compile(r"divulga|reprodu", re.I)
+# Agências pagas: foto só com licença (regra de 24/11/2026)
+AGENCIAS_PAGAS = re.compile(r"reuters|\bap\b|associated press|\bafp\b|getty|folhapress|estad[aã]o conte[uú]do|"
+                            r"ag[eê]ncia o globo|shutterstock|istock|alamy|\bepa\b|efe\b|bloomberg|sipa|abaca|"
+                            r"agif|futura press|photopress|brazil photo press|ag[eê]ncia estado", re.I)
 
 
 def foto_nao_pode(credito, veiculo, link, exigir_credito, imagem):
@@ -893,7 +941,9 @@ def foto_nao_pode(credito, veiculo, link, exigir_credito, imagem):
     if any(dominio == g or dominio.endswith("." + g) for g in GRANDES_VEICULOS) and not CREDITO_LIVRE.search(c):
         return "foto de grande veículo (direito autoral)"
     if not c.strip():
-        return "foto sem crédito" if exigir_credito else ""
+        return "foto sem crédito"  # regra de 24/11: sem crédito não usa, em qualquer fonte
+    if AGENCIAS_PAGAS.search(c):
+        return f"agência paga ({credito})"
     if PALAVRAS_IA.search(c):
         return "imagem gerada por IA"
     c_norm = normalizar(sem_acento(c))
@@ -1047,22 +1097,27 @@ def publicar(materia_fila, linha_editorial, agora):
     corpo = montar_corpo(resultado, original)
     imagem = original["imagem"] or materia_fila.get("imagem_rss", "")
     credito = original["credito_foto"]
-    trocou = False
-    if materia_fila.get("imagem_trocar"):
-        # Mundo Negro, Notícia Preta e Africanize: primeiro tenta outra foto (Wikipédia/Commons ou Unsplash),
-        # para não repetir a mesma foto do veículo do mesmo segmento.
-        livre = foto_substituta(resultado, generica=False)
-        if livre:
-            imagem, credito = livre
-            trocou = True
-            log("  Foto trocada: veículo do mesmo segmento; usada foto livre parecida.")
-    if not trocou:
+    # Regra única de fotos (24/11/2026), para todas as fontes, imprensa negra incluída:
+    # crédito do próprio veículo, agência paga ou sem crédito = não usa; qualquer outro crédito = usa.
+    if True:
         motivo_troca = foto_nao_pode(credito, original["veiculo"], materia_fila["link"],
                                      materia_fila.get("imagem_banco", False), imagem)
         if motivo_troca:
             log(f"  Foto trocada: {motivo_troca}.")
             imagem, credito = foto_substituta(resultado)
     credito = credito or "Divulgação"
+    fotos_extras = []
+    for f in original.get("fotos_corpo", []):
+        motivo = foto_nao_pode(f["credito"], original["veiculo"], materia_fila["link"], True, f["url"])
+        if motivo:
+            log(f"  Foto do corpo não usada: {motivo}.")
+            continue
+        fotos_extras.append(f)
+        if len(fotos_extras) >= 3:
+            break
+    if fotos_extras:
+        corpo = inserir_fotos(corpo, fotos_extras)
+        log(f"  {len(fotos_extras)} foto(s) do corpo da matéria original incluída(s).")
     titulo = decodificar(resultado.get("titulo"))
     if not titulo or not corpo:
         log("  Descartada: o redator não devolveu título ou texto.")
@@ -1078,6 +1133,7 @@ def publicar(materia_fila, linha_editorial, agora):
         "corpo_html": corpo,
         "imagem": imagem,
         "credito_imagem": credito,
+        "fotos_extras": fotos_extras,
         "veiculo": original["veiculo"],
         "autor": original["autor"],
         "palavras_chave": resultado.get("palavras_chave") or [],
