@@ -213,7 +213,7 @@ def tela_gancho(foto, semana, total, data_txt):
             f = R.fonte("extra", tam)
         d.text((m, y), texto, font=f, fill=cor)
         y += tam * 1.15
-    d.text((m, y + 30), data_txt, font=R.fonte("media", 44), fill=R.COR_CINZA)
+    # sem data na capa: o vídeo é atemporal e vai para várias redes (a data fica na legenda e no título)
     R.colar_logo(img, m, 1560, 300)
     return img
 
