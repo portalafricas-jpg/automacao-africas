@@ -1,1093 +1,1100 @@
 [
- {
-  "nome": "CONAQ - Notícias",
-  "categoria": "ancestralidade",
-  "tipo": "rss",
-  "url": "https://conaq.org.br/category/noticias/feed/"
- },
- {
-  "nome": "Mundo Negro",
-  "categoria": "cultura",
-  "tipo": "rss",
-  "url": "https://mundonegro.inf.br/feed/",
-  "imagem": "substituir_sempre"
- },
- {
-  "nome": "Notícia Preta",
-  "categoria": "protagonista",
-  "tipo": "rss",
-  "url": "https://noticiapreta.com.br/feed/",
-  "imagem": "substituir_sempre"
- },
- {
-  "nome": "Geledés",
-  "categoria": "cotidiano",
-  "tipo": "rss",
-  "url": "https://www.geledes.org.br/feed/"
- },
- {
-  "nome": "Virada da Consciência",
-  "categoria": "cultura",
-  "tipo": "rss",
-  "url": "https://viradadaconsciencia.com.br/feed/"
- },
- {
-  "nome": "O País (Angola)",
-  "categoria": "mundo",
-  "tipo": "rss",
-  "url": "https://www.opais.ao/feed/",
-  "africa": true
- },
- {
-  "nome": "DigiPress (Angola)",
-  "categoria": "mundo",
-  "tipo": "rss",
-  "url": "https://press.digi.ao/feed.xml",
-  "africa": true
- },
- {
-  "nome": "Giranotícias (Angola)",
-  "categoria": "mundo",
-  "tipo": "pagina",
-  "url": "https://www.giranoticias.com/",
-  "africa": true
- },
- {
-  "nome": "SRzd - Carnaval",
-  "categoria": "cultura",
-  "tipo": "rss",
-  "url": "https://srzd.com/category/carnaval/feed/"
- },
- {
-  "nome": "RFI - África lusófona",
-  "categoria": "mundo",
-  "tipo": "rss",
-  "url": "https://www.rfi.fr/pt/%C3%A1frica-lus%C3%B3fona/rss",
-  "africa": true
- },
- {
-  "nome": "RFI - África",
-  "categoria": "mundo",
-  "tipo": "rss",
-  "url": "https://www.rfi.fr/pt/tag/%C3%A1frica/rss",
-  "africa": true
- },
- {
-  "nome": "Portal do RAP Nacional",
-  "categoria": "cultura",
-  "tipo": "rss",
-  "url": "https://portaldorapnacional.com.br/feed/"
- },
- {
-  "nome": "Alma Preta",
-  "categoria": "cotidiano",
-  "tipo": "rss",
-  "url": "https://almapreta.com.br/feed/"
- },
- {
-  "nome": "Fundação Palmares",
-  "categoria": "politica",
-  "tipo": "pagina",
-  "url": "https://www.gov.br/palmares/pt-br/assuntos/noticias"
- },
- {
-  "nome": "Ministério da Cultura",
-  "categoria": "cultura",
-  "tipo": "pagina",
-  "url": "https://www.gov.br/cultura/pt-br/assuntos/noticias"
- },
- {
-  "nome": "Cultura Preta",
-  "categoria": "cultura",
-  "tipo": "rss",
-  "url": "https://culturapreta.com/feed/"
- },
- {
-  "nome": "Africanize",
-  "categoria": "cultura",
-  "tipo": "pagina",
-  "url": "https://africanizeoficial.com.br/",
-  "imagem": "substituir_sempre"
- },
- {
-  "nome": "Baobá - Blog",
-  "categoria": "protagonista",
-  "tipo": "rss",
-  "url": "https://baoba.org.br/feed/"
- },
- {
-  "nome": "TV Zimbo - País",
-  "categoria": "mundo",
-  "tipo": "pagina",
-  "url": "https://tvzimbo.ao/category/pais/",
-  "africa": true
- },
- {
-  "nome": "TPA",
-  "categoria": "mundo",
-  "tipo": "pagina",
-  "url": "https://tpa.tecla21.ao/",
-  "africa": true
- },
- {
-  "nome": "Expo África Brasil",
-  "categoria": "cultura",
-  "tipo": "pagina",
-  "url": "https://expoafricabrasil.com.br/"
- },
- {
-  "nome": "Expo África Brasil",
-  "categoria": "cultura",
-  "tipo": "pagina",
-  "url": "https://expoafricabrasil.com.br/"
- },
- {
-  "nome": "Busca - liberdade religiosa",
-  "categoria": "ancestralidade",
-  "tipo": "busca",
-  "busca": "\"liberdade religiosa\"",
-  "grupo": 0
- },
- {
-  "nome": "Busca - povos de terreiro",
-  "categoria": "ancestralidade",
-  "tipo": "busca",
-  "busca": "\"povos de terreiro\"",
-  "grupo": 1
- },
- {
-  "nome": "Busca - religião de matriz africana",
-  "categoria": "ancestralidade",
-  "tipo": "busca",
-  "busca": "\"religião de matriz africana\"",
-  "grupo": 2
- },
- {
-  "nome": "Busca - Quilombola",
-  "categoria": "ancestralidade",
-  "tipo": "busca",
-  "busca": "Quilombola",
-  "grupo": 3
- },
- {
-  "nome": "Busca - Intolerância religiosa",
-  "categoria": "ancestralidade",
-  "tipo": "busca",
-  "busca": "Intolerância religiosa",
-  "grupo": 0
- },
- {
-  "nome": "Busca - Pantera Negra 3",
-  "categoria": "cultura",
-  "tipo": "busca",
-  "busca": "Pantera Negra 3",
-  "grupo": 1
- },
- {
-  "nome": "Busca - Moda afro",
-  "categoria": "cultura",
-  "tipo": "busca",
-  "busca": "Moda afro",
-  "grupo": 2
- },
- {
-  "nome": "Busca - Teatro negro",
-  "categoria": "cultura",
-  "tipo": "busca",
-  "busca": "Teatro negro",
-  "grupo": 3
- },
- {
-  "nome": "Busca - Literatura negra",
-  "categoria": "cultura",
-  "tipo": "busca",
-  "busca": "Literatura negra",
-  "grupo": 0
- },
- {
-  "nome": "Busca - Cineasta negro",
-  "categoria": "cultura",
-  "tipo": "busca",
-  "busca": "Cineasta negro",
-  "grupo": 1
- },
- {
-  "nome": "Busca - Cultura negra",
-  "categoria": "cultura",
-  "tipo": "busca",
-  "busca": "Cultura negra",
-  "grupo": 2
- },
- {
-  "nome": "Busca - Damson Idris",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Damson Idris",
-  "grupo": 3
- },
- {
-  "nome": "Busca - Paulo Vieira",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Paulo Vieira",
-  "grupo": 0
- },
- {
-  "nome": "Busca - Jeferson Tenório",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Jeferson Tenório",
-  "grupo": 1
- },
- {
-  "nome": "Busca - Djamila Ribeiro",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Djamila Ribeiro",
-  "grupo": 2
- },
- {
-  "nome": "Busca - Conceição Evaristo",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Conceição Evaristo",
-  "grupo": 3
- },
- {
-  "nome": "Busca - Sheron Menezzes",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Sheron Menezzes",
-  "grupo": 0
- },
- {
-  "nome": "Busca - Thiaguinho",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Thiaguinho",
-  "grupo": 1
- },
- {
-  "nome": "Busca - Samuel L. Jackson",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Samuel L. Jackson",
-  "grupo": 2
- },
- {
-  "nome": "Busca - Criolo",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Criolo",
-  "grupo": 3
- },
- {
-  "nome": "Busca - Seu Jorge",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Seu Jorge",
-  "grupo": 0
- },
- {
-  "nome": "Busca - Lázaro Ramos",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Lázaro Ramos",
-  "grupo": 1
- },
- {
-  "nome": "Busca - Liniker",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Liniker",
-  "grupo": 2
- },
- {
-  "nome": "Busca - Emicida",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Emicida",
-  "grupo": 3
- },
- {
-  "nome": "Busca - Ludmilla",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Ludmilla",
-  "grupo": 0
- },
- {
-  "nome": "Busca - Tyla",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Tyla",
-  "grupo": 1
- },
- {
-  "nome": "Busca - SZA",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "SZA",
-  "grupo": 2
- },
- {
-  "nome": "Busca - Ryan Coogler",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Ryan Coogler",
-  "grupo": 3
- },
- {
-  "nome": "Busca - Viola Davis",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Viola Davis",
-  "grupo": 0
- },
- {
-  "nome": "Busca - Michael B. Jordan",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Michael B. Jordan",
-  "grupo": 1
- },
- {
-  "nome": "Busca - Kendrick Lamar",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Kendrick Lamar",
-  "grupo": 2
- },
- {
-  "nome": "Busca - Beyoncé",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Beyoncé",
-  "grupo": 3
- },
- {
-  "nome": "Busca - Empreendedora negra",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Empreendedora negra",
-  "grupo": 0
- },
- {
-  "nome": "Busca - Black Money",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Black Money",
-  "grupo": 1
- },
- {
-  "nome": "Busca - Empreendedor negro",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Empreendedor negro",
-  "grupo": 2
- },
- {
-  "nome": "Busca - Afroempreendedorismo",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Afroempreendedorismo",
-  "grupo": 3
- },
- {
-  "nome": "Busca - movimento negro",
-  "categoria": "politica",
-  "tipo": "busca",
-  "busca": "movimento negro",
-  "grupo": 0
- },
- {
-  "nome": "Busca - igualdade racial",
-  "categoria": "politica",
-  "tipo": "busca",
-  "busca": "igualdade racial",
-  "grupo": 1
- },
- {
-  "nome": "Busca - racismo estrutural",
-  "categoria": "cotidiano",
-  "tipo": "busca",
-  "busca": "racismo estrutural",
-  "grupo": 2
- },
- {
-  "nome": "Busca - injúria racial",
-  "categoria": "cotidiano",
-  "tipo": "busca",
-  "busca": "injúria racial",
-  "grupo": 3
- },
- {
-  "nome": "Busca - discriminação racial",
-  "categoria": "cotidiano",
-  "tipo": "busca",
-  "busca": "discriminação racial",
-  "grupo": 0
- },
- {
-  "nome": "Busca - mulheres negras",
-  "categoria": "cotidiano",
-  "tipo": "busca",
-  "busca": "mulheres negras",
-  "grupo": 1
- },
- {
-  "nome": "Busca - Saúde da população negra",
-  "categoria": "cotidiano",
-  "tipo": "busca",
-  "busca": "Saúde da população negra",
-  "grupo": 2
- },
- {
-  "nome": "Busca - Racismo",
-  "categoria": "cotidiano",
-  "tipo": "busca",
-  "busca": "Racismo",
-  "grupo": 3
- },
- {
-  "nome": "Busca - Antirracista",
-  "categoria": "cotidiano",
-  "tipo": "busca",
-  "busca": "Antirracista",
-  "grupo": 0
- },
- {
-  "nome": "Busca - Angola",
-  "categoria": "mundo",
-  "tipo": "busca",
-  "busca": "Angola",
-  "grupo": 1,
-  "africa": true
- },
- {
-  "nome": "Busca - Moçambique",
-  "categoria": "mundo",
-  "tipo": "busca",
-  "busca": "Moçambique",
-  "grupo": 2,
-  "africa": true
- },
- {
-  "nome": "Busca - Cabo Verde",
-  "categoria": "mundo",
-  "tipo": "busca",
-  "busca": "Cabo Verde",
-  "grupo": 3,
-  "africa": true
- },
- {
-  "nome": "Busca - Guiné-Bissau",
-  "categoria": "mundo",
-  "tipo": "busca",
-  "busca": "Guiné-Bissau",
-  "grupo": 0,
-  "africa": true
- },
- {
-  "nome": "Busca - São Tomé e Príncipe",
-  "categoria": "mundo",
-  "tipo": "busca",
-  "busca": "\"São Tomé e Príncipe\"",
-  "grupo": 1,
-  "africa": true
- },
- {
-  "nome": "Busca - África do Sul",
-  "categoria": "mundo",
-  "tipo": "busca",
-  "busca": "África do Sul",
-  "grupo": 2,
-  "africa": true
- },
- {
-  "nome": "Busca - Nigéria",
-  "categoria": "mundo",
-  "tipo": "busca",
-  "busca": "Nigéria",
-  "grupo": 3,
-  "africa": true
- },
- {
-  "nome": "Busca - União Africana",
-  "categoria": "mundo",
-  "tipo": "busca",
-  "busca": "\"União Africana\"",
-  "grupo": 0,
-  "africa": true
- },
- {
-  "nome": "Busca - diáspora africana",
-  "categoria": "mundo",
-  "tipo": "busca",
-  "busca": "\"diáspora africana\"",
-  "grupo": 1,
-  "africa": true
- },
- {
-  "nome": "Busca - IZA cantora",
-  "categoria": "cultura",
-  "tipo": "busca",
-  "busca": "IZA cantora",
-  "grupo": 2
- },
- {
-  "nome": "Busca - empresário negro",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "\"empresário negro\"",
-  "grupo": 3
- },
- {
-  "nome": "Busca - Péricles cantor",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Péricles cantor",
-  "grupo": 0
- },
- {
-  "nome": "Busca - Burna Boy",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Burna Boy",
-  "grupo": 1
- },
- {
-  "nome": "Busca - RTP África",
-  "categoria": "mundo",
-  "tipo": "busca",
-  "busca": "site:rtp.pt África",
-  "grupo": 2,
-  "africa": true
- },
- {
-  "nome": "Busca - Expo África Brasil",
-  "categoria": "cultura",
-  "tipo": "busca",
-  "busca": "\"Expo África Brasil\"",
-  "grupo": 3
- },
- {
-  "nome": "Busca semanal - Gilberto Gil",
-  "categoria": "cultura",
-  "tipo": "busca",
-  "busca": "Gilberto Gil",
-  "grupo": 0,
-  "dia_semana": 0
- },
- {
-  "nome": "Busca semanal - Milton Nascimento",
-  "categoria": "cultura",
-  "tipo": "busca",
-  "busca": "Milton Nascimento",
-  "grupo": 0,
-  "dia_semana": 1
- },
- {
-  "nome": "Busca semanal - Djavan",
-  "categoria": "cultura",
-  "tipo": "busca",
-  "busca": "Djavan",
-  "grupo": 0,
-  "dia_semana": 2
- },
- {
-  "nome": "Busca semanal - Jorge Ben Jor",
-  "categoria": "cultura",
-  "tipo": "busca",
-  "busca": "Jorge Ben Jor",
-  "grupo": 0,
-  "dia_semana": 3
- },
- {
-  "nome": "Busca semanal - Alcione",
-  "categoria": "cultura",
-  "tipo": "busca",
-  "busca": "Alcione",
-  "grupo": 0,
-  "dia_semana": 4
- },
- {
-  "nome": "Busca semanal - Martinho da Vila",
-  "categoria": "cultura",
-  "tipo": "busca",
-  "busca": "Martinho da Vila",
-  "grupo": 0,
-  "dia_semana": 5
- },
- {
-  "nome": "Busca semanal - Margareth Menezes",
-  "categoria": "cultura",
-  "tipo": "busca",
-  "busca": "Margareth Menezes",
-  "grupo": 0,
-  "dia_semana": 6
- },
- {
-  "nome": "Busca semanal - Mano Brown",
-  "categoria": "cultura",
-  "tipo": "busca",
-  "busca": "\"Mano Brown\"",
-  "grupo": 1,
-  "dia_semana": 0
- },
- {
-  "nome": "Busca semanal - Racionais MC's",
-  "categoria": "cultura",
-  "tipo": "busca",
-  "busca": "Racionais MC's",
-  "grupo": 1,
-  "dia_semana": 1
- },
- {
-  "nome": "Busca semanal - Djonga",
-  "categoria": "cultura",
-  "tipo": "busca",
-  "busca": "Djonga",
-  "grupo": 1,
-  "dia_semana": 2
- },
- {
-  "nome": "Busca semanal - BK rapper",
-  "categoria": "cultura",
-  "tipo": "busca",
-  "busca": "\"BK rapper\"",
-  "grupo": 1,
-  "dia_semana": 3
- },
- {
-  "nome": "Busca semanal - Baco Exu do Blues",
-  "categoria": "cultura",
-  "tipo": "busca",
-  "busca": "Baco Exu do Blues",
-  "grupo": 1,
-  "dia_semana": 4
- },
- {
-  "nome": "Busca semanal - Karol Conká",
-  "categoria": "cultura",
-  "tipo": "busca",
-  "busca": "Karol Conká",
-  "grupo": 1,
-  "dia_semana": 5
- },
- {
-  "nome": "Busca semanal - MC Soffia",
-  "categoria": "cultura",
-  "tipo": "busca",
-  "busca": "MC Soffia",
-  "grupo": 1,
-  "dia_semana": 6
- },
- {
-  "nome": "Busca semanal - Luedji Luna",
-  "categoria": "cultura",
-  "tipo": "busca",
-  "busca": "Luedji Luna",
-  "grupo": 2,
-  "dia_semana": 0
- },
- {
-  "nome": "Busca semanal - Larissa Luz",
-  "categoria": "cultura",
-  "tipo": "busca",
-  "busca": "Larissa Luz",
-  "grupo": 2,
-  "dia_semana": 1
- },
- {
-  "nome": "Busca semanal - Majur cantora",
-  "categoria": "cultura",
-  "tipo": "busca",
-  "busca": "Majur cantora",
-  "grupo": 2,
-  "dia_semana": 2
- },
- {
-  "nome": "Busca semanal - Linn da Quebrada",
-  "categoria": "cultura",
-  "tipo": "busca",
-  "busca": "Linn da Quebrada",
-  "grupo": 2,
-  "dia_semana": 3
- },
- {
-  "nome": "Busca semanal - Ferrugem cantor",
-  "categoria": "cultura",
-  "tipo": "busca",
-  "busca": "Ferrugem cantor",
-  "grupo": 2,
-  "dia_semana": 4
- },
- {
-  "nome": "Busca semanal - Mumuzinho",
-  "categoria": "cultura",
-  "tipo": "busca",
-  "busca": "Mumuzinho",
-  "grupo": 2,
-  "dia_semana": 5
- },
- {
-  "nome": "Busca semanal - Xande de Pilares",
-  "categoria": "cultura",
-  "tipo": "busca",
-  "busca": "Xande de Pilares",
-  "grupo": 2,
-  "dia_semana": 6
- },
- {
-  "nome": "Busca semanal - Dilsinho",
-  "categoria": "cultura",
-  "tipo": "busca",
-  "busca": "Dilsinho",
-  "grupo": 3,
-  "dia_semana": 0
- },
- {
-  "nome": "Busca semanal - Taís Araújo",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Taís Araújo",
-  "grupo": 3,
-  "dia_semana": 1
- },
- {
-  "nome": "Busca semanal - Camila Pitanga",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Camila Pitanga",
-  "grupo": 3,
-  "dia_semana": 2
- },
- {
-  "nome": "Busca semanal - Zezé Motta",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Zezé Motta",
-  "grupo": 3,
-  "dia_semana": 3
- },
- {
-  "nome": "Busca semanal - Érika Januza",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Érika Januza",
-  "grupo": 3,
-  "dia_semana": 4
- },
- {
-  "nome": "Busca semanal - Juliana Alves atriz",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Juliana Alves atriz",
-  "grupo": 3,
-  "dia_semana": 5
- },
- {
-  "nome": "Busca semanal - Bella Campos",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Bella Campos",
-  "grupo": 3,
-  "dia_semana": 6
- },
- {
-  "nome": "Busca semanal - Jessica Ellen",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Jessica Ellen",
-  "grupo": 0,
-  "dia_semana": 0
- },
- {
-  "nome": "Busca semanal - Fabrício Boliveira",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Fabrício Boliveira",
-  "grupo": 0,
-  "dia_semana": 1
- },
- {
-  "nome": "Busca semanal - Ícaro Silva",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Ícaro Silva",
-  "grupo": 0,
-  "dia_semana": 2
- },
- {
-  "nome": "Busca semanal - Babu Santana",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Babu Santana",
-  "grupo": 0,
-  "dia_semana": 3
- },
- {
-  "nome": "Busca semanal - Maju Coutinho",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Maju Coutinho",
-  "grupo": 0,
-  "dia_semana": 4
- },
- {
-  "nome": "Busca semanal - Manoel Soares",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Manoel Soares",
-  "grupo": 0,
-  "dia_semana": 5
- },
- {
-  "nome": "Busca semanal - Rita Batista",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Rita Batista",
-  "grupo": 0,
-  "dia_semana": 6
- },
- {
-  "nome": "Busca semanal - Anielle Franco",
-  "categoria": "politica",
-  "tipo": "busca",
-  "busca": "Anielle Franco",
-  "grupo": 1,
-  "dia_semana": 0
- },
- {
-  "nome": "Busca semanal - Benedita da Silva",
-  "categoria": "politica",
-  "tipo": "busca",
-  "busca": "Benedita da Silva",
-  "grupo": 1,
-  "dia_semana": 1
- },
- {
-  "nome": "Busca semanal - Erika Hilton",
-  "categoria": "politica",
-  "tipo": "busca",
-  "busca": "Erika Hilton",
-  "grupo": 1,
-  "dia_semana": 2
- },
- {
-  "nome": "Busca semanal - Sueli Carneiro",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Sueli Carneiro",
-  "grupo": 1,
-  "dia_semana": 3
- },
- {
-  "nome": "Busca semanal - Rebeca Andrade",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Rebeca Andrade",
-  "grupo": 1,
-  "dia_semana": 4
- },
- {
-  "nome": "Busca semanal - Vinícius Júnior",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Vinícius Júnior",
-  "grupo": 1,
-  "dia_semana": 5
- },
- {
-  "nome": "Busca semanal - Rihanna",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Rihanna",
-  "grupo": 1,
-  "dia_semana": 6
- },
- {
-  "nome": "Busca semanal - Jay-Z",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Jay-Z",
-  "grupo": 2,
-  "dia_semana": 0
- },
- {
-  "nome": "Busca semanal - Doechii",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Doechii",
-  "grupo": 2,
-  "dia_semana": 1
- },
- {
-  "nome": "Busca semanal - Cardi B",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Cardi B",
-  "grupo": 2,
-  "dia_semana": 2
- },
- {
-  "nome": "Busca semanal - Megan Thee Stallion",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Megan Thee Stallion",
-  "grupo": 2,
-  "dia_semana": 3
- },
- {
-  "nome": "Busca semanal - Usher cantor",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Usher cantor",
-  "grupo": 2,
-  "dia_semana": 4
- },
- {
-  "nome": "Busca semanal - Janelle Monáe",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Janelle Monáe",
-  "grupo": 2,
-  "dia_semana": 5
- },
- {
-  "nome": "Busca semanal - Denzel Washington",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Denzel Washington",
-  "grupo": 2,
-  "dia_semana": 6
- },
- {
-  "nome": "Busca semanal - Halle Berry",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Halle Berry",
-  "grupo": 3,
-  "dia_semana": 0
- },
- {
-  "nome": "Busca semanal - Zendaya",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Zendaya",
-  "grupo": 3,
-  "dia_semana": 1
- },
- {
-  "nome": "Busca semanal - Halle Bailey",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Halle Bailey",
-  "grupo": 3,
-  "dia_semana": 2
- },
- {
-  "nome": "Busca semanal - Spike Lee",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Spike Lee",
-  "grupo": 3,
-  "dia_semana": 3
- },
- {
-  "nome": "Busca semanal - Jordan Peele",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Jordan Peele",
-  "grupo": 3,
-  "dia_semana": 4
- },
- {
-  "nome": "Busca semanal - Ava DuVernay",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Ava DuVernay",
-  "grupo": 3,
-  "dia_semana": 5
- },
- {
-  "nome": "Busca semanal - Oprah Winfrey",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Oprah Winfrey",
-  "grupo": 3,
-  "dia_semana": 6
- },
- {
-  "nome": "Busca semanal - Michelle Obama",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Michelle Obama",
-  "grupo": 0,
-  "dia_semana": 0
- },
- {
-  "nome": "Busca semanal - Barack Obama",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Barack Obama",
-  "grupo": 0,
-  "dia_semana": 1
- },
- {
-  "nome": "Busca semanal - Kamala Harris",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Kamala Harris",
-  "grupo": 0,
-  "dia_semana": 2
- },
- {
-  "nome": "Busca semanal - Simone Biles",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Simone Biles",
-  "grupo": 0,
-  "dia_semana": 3
- },
- {
-  "nome": "Busca semanal - Serena Williams",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Serena Williams",
-  "grupo": 0,
-  "dia_semana": 4
- },
- {
-  "nome": "Busca semanal - Tems cantora",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Tems cantora",
-  "grupo": 0,
-  "dia_semana": 5
- },
- {
-  "nome": "Busca semanal - Wizkid",
-  "categoria": "protagonista",
-  "tipo": "busca",
-  "busca": "Wizkid",
-  "grupo": 0,
-  "dia_semana": 6
- },
- {
-  "nome": "Busca - site:rtp.pt África",
-  "categoria": "mundo",
-  "tipo": "busca",
-  "busca": "site:rtp.pt África",
-  "grupo": 0,
-  "africa": true
- },
- {
-  "nome": "Busca - Expo África Brasil",
-  "categoria": "cultura",
-  "tipo": "busca",
-  "busca": "\"Expo África Brasil\"",
-  "grupo": 1
- }
+  {
+    "nome": "CONAQ - Notícias",
+    "categoria": "ancestralidade",
+    "tipo": "rss",
+    "url": "https://conaq.org.br/category/noticias/feed/"
+  },
+  {
+    "nome": "Mundo Negro",
+    "categoria": "cultura",
+    "tipo": "rss",
+    "url": "https://mundonegro.inf.br/feed/",
+    "imagem": "substituir_sempre"
+  },
+  {
+    "nome": "Notícia Preta",
+    "categoria": "protagonista",
+    "tipo": "rss",
+    "url": "https://noticiapreta.com.br/feed/",
+    "imagem": "substituir_sempre"
+  },
+  {
+    "nome": "Geledés",
+    "categoria": "cotidiano",
+    "tipo": "rss",
+    "url": "https://www.geledes.org.br/feed/"
+  },
+  {
+    "nome": "Virada da Consciência",
+    "categoria": "cultura",
+    "tipo": "rss",
+    "url": "https://viradadaconsciencia.com.br/feed/"
+  },
+  {
+    "nome": "O País (Angola)",
+    "categoria": "mundo",
+    "tipo": "rss",
+    "url": "https://www.opais.ao/feed/",
+    "africa": true
+  },
+  {
+    "nome": "DigiPress (Angola)",
+    "categoria": "mundo",
+    "tipo": "rss",
+    "url": "https://press.digi.ao/feed.xml",
+    "africa": true
+  },
+  {
+    "nome": "Giranotícias (Angola)",
+    "categoria": "mundo",
+    "tipo": "pagina",
+    "url": "https://www.giranoticias.com/",
+    "africa": true
+  },
+  {
+    "nome": "SRzd - Carnaval",
+    "categoria": "cultura",
+    "tipo": "rss",
+    "url": "https://srzd.com/category/carnaval/feed/"
+  },
+  {
+    "nome": "RFI - África lusófona",
+    "categoria": "mundo",
+    "tipo": "rss",
+    "url": "https://www.rfi.fr/pt/%C3%A1frica-lus%C3%B3fona/rss",
+    "africa": true
+  },
+  {
+    "nome": "RFI - África",
+    "categoria": "mundo",
+    "tipo": "rss",
+    "url": "https://www.rfi.fr/pt/tag/%C3%A1frica/rss",
+    "africa": true
+  },
+  {
+    "nome": "Portal do RAP Nacional",
+    "categoria": "cultura",
+    "tipo": "rss",
+    "url": "https://portaldorapnacional.com.br/feed/"
+  },
+  {
+    "nome": "Alma Preta",
+    "categoria": "cotidiano",
+    "tipo": "rss",
+    "url": "https://almapreta.com.br/feed/"
+  },
+  {
+    "nome": "Fundação Palmares",
+    "categoria": "politica",
+    "tipo": "pagina",
+    "url": "https://www.gov.br/palmares/pt-br/assuntos/noticias"
+  },
+  {
+    "nome": "Ministério da Cultura",
+    "categoria": "cultura",
+    "tipo": "pagina",
+    "url": "https://www.gov.br/cultura/pt-br/assuntos/noticias"
+  },
+  {
+    "nome": "Cultura Preta",
+    "categoria": "cultura",
+    "tipo": "rss",
+    "url": "https://culturapreta.com/feed/"
+  },
+  {
+    "nome": "Africanize",
+    "categoria": "cultura",
+    "tipo": "pagina",
+    "url": "https://africanizeoficial.com.br/",
+    "imagem": "substituir_sempre"
+  },
+  {
+    "nome": "Revista Raça",
+    "categoria": "cultura",
+    "tipo": "rss",
+    "url": "https://revistaraca.com.br/feed/",
+    "imagem": "substituir_sempre"
+  },
+  {
+    "nome": "Baobá - Blog",
+    "categoria": "protagonista",
+    "tipo": "rss",
+    "url": "https://baoba.org.br/feed/"
+  },
+  {
+    "nome": "TV Zimbo - País",
+    "categoria": "mundo",
+    "tipo": "pagina",
+    "url": "https://tvzimbo.ao/category/pais/",
+    "africa": true
+  },
+  {
+    "nome": "TPA",
+    "categoria": "mundo",
+    "tipo": "pagina",
+    "url": "https://tpa.tecla21.ao/",
+    "africa": true
+  },
+  {
+    "nome": "Expo África Brasil",
+    "categoria": "cultura",
+    "tipo": "pagina",
+    "url": "https://expoafricabrasil.com.br/"
+  },
+  {
+    "nome": "Expo África Brasil",
+    "categoria": "cultura",
+    "tipo": "pagina",
+    "url": "https://expoafricabrasil.com.br/"
+  },
+  {
+    "nome": "Busca - liberdade religiosa",
+    "categoria": "ancestralidade",
+    "tipo": "busca",
+    "busca": "\"liberdade religiosa\"",
+    "grupo": 0
+  },
+  {
+    "nome": "Busca - povos de terreiro",
+    "categoria": "ancestralidade",
+    "tipo": "busca",
+    "busca": "\"povos de terreiro\"",
+    "grupo": 1
+  },
+  {
+    "nome": "Busca - religião de matriz africana",
+    "categoria": "ancestralidade",
+    "tipo": "busca",
+    "busca": "\"religião de matriz africana\"",
+    "grupo": 2
+  },
+  {
+    "nome": "Busca - Quilombola",
+    "categoria": "ancestralidade",
+    "tipo": "busca",
+    "busca": "Quilombola",
+    "grupo": 3
+  },
+  {
+    "nome": "Busca - Intolerância religiosa",
+    "categoria": "ancestralidade",
+    "tipo": "busca",
+    "busca": "Intolerância religiosa",
+    "grupo": 0
+  },
+  {
+    "nome": "Busca - Pantera Negra 3",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "Pantera Negra 3",
+    "grupo": 1
+  },
+  {
+    "nome": "Busca - Moda afro",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "Moda afro",
+    "grupo": 2
+  },
+  {
+    "nome": "Busca - Teatro negro",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "Teatro negro",
+    "grupo": 3
+  },
+  {
+    "nome": "Busca - Literatura negra",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "Literatura negra",
+    "grupo": 0
+  },
+  {
+    "nome": "Busca - Cineasta negro",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "Cineasta negro",
+    "grupo": 1
+  },
+  {
+    "nome": "Busca - Cultura negra",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "Cultura negra",
+    "grupo": 2
+  },
+  {
+    "nome": "Busca - Damson Idris",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Damson Idris",
+    "grupo": 3
+  },
+  {
+    "nome": "Busca - Paulo Vieira",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Paulo Vieira",
+    "grupo": 0
+  },
+  {
+    "nome": "Busca - Jeferson Tenório",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Jeferson Tenório",
+    "grupo": 1
+  },
+  {
+    "nome": "Busca - Djamila Ribeiro",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Djamila Ribeiro",
+    "grupo": 2
+  },
+  {
+    "nome": "Busca - Conceição Evaristo",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Conceição Evaristo",
+    "grupo": 3
+  },
+  {
+    "nome": "Busca - Sheron Menezzes",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Sheron Menezzes",
+    "grupo": 0
+  },
+  {
+    "nome": "Busca - Thiaguinho",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Thiaguinho",
+    "grupo": 1
+  },
+  {
+    "nome": "Busca - Samuel L. Jackson",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Samuel L. Jackson",
+    "grupo": 2
+  },
+  {
+    "nome": "Busca - Criolo",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Criolo",
+    "grupo": 3
+  },
+  {
+    "nome": "Busca - Seu Jorge",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Seu Jorge",
+    "grupo": 0
+  },
+  {
+    "nome": "Busca - Lázaro Ramos",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Lázaro Ramos",
+    "grupo": 1
+  },
+  {
+    "nome": "Busca - Liniker",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Liniker",
+    "grupo": 2
+  },
+  {
+    "nome": "Busca - Emicida",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Emicida",
+    "grupo": 3
+  },
+  {
+    "nome": "Busca - Ludmilla",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Ludmilla",
+    "grupo": 0
+  },
+  {
+    "nome": "Busca - Tyla",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Tyla",
+    "grupo": 1
+  },
+  {
+    "nome": "Busca - SZA",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "SZA",
+    "grupo": 2
+  },
+  {
+    "nome": "Busca - Ryan Coogler",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Ryan Coogler",
+    "grupo": 3
+  },
+  {
+    "nome": "Busca - Viola Davis",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Viola Davis",
+    "grupo": 0
+  },
+  {
+    "nome": "Busca - Michael B. Jordan",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Michael B. Jordan",
+    "grupo": 1
+  },
+  {
+    "nome": "Busca - Kendrick Lamar",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Kendrick Lamar",
+    "grupo": 2
+  },
+  {
+    "nome": "Busca - Beyoncé",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Beyoncé",
+    "grupo": 3
+  },
+  {
+    "nome": "Busca - Empreendedora negra",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Empreendedora negra",
+    "grupo": 0
+  },
+  {
+    "nome": "Busca - Black Money",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Black Money",
+    "grupo": 1
+  },
+  {
+    "nome": "Busca - Empreendedor negro",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Empreendedor negro",
+    "grupo": 2
+  },
+  {
+    "nome": "Busca - Afroempreendedorismo",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Afroempreendedorismo",
+    "grupo": 3
+  },
+  {
+    "nome": "Busca - movimento negro",
+    "categoria": "politica",
+    "tipo": "busca",
+    "busca": "movimento negro",
+    "grupo": 0
+  },
+  {
+    "nome": "Busca - igualdade racial",
+    "categoria": "politica",
+    "tipo": "busca",
+    "busca": "igualdade racial",
+    "grupo": 1
+  },
+  {
+    "nome": "Busca - racismo estrutural",
+    "categoria": "cotidiano",
+    "tipo": "busca",
+    "busca": "racismo estrutural",
+    "grupo": 2
+  },
+  {
+    "nome": "Busca - injúria racial",
+    "categoria": "cotidiano",
+    "tipo": "busca",
+    "busca": "injúria racial",
+    "grupo": 3
+  },
+  {
+    "nome": "Busca - discriminação racial",
+    "categoria": "cotidiano",
+    "tipo": "busca",
+    "busca": "discriminação racial",
+    "grupo": 0
+  },
+  {
+    "nome": "Busca - mulheres negras",
+    "categoria": "cotidiano",
+    "tipo": "busca",
+    "busca": "mulheres negras",
+    "grupo": 1
+  },
+  {
+    "nome": "Busca - Saúde da população negra",
+    "categoria": "cotidiano",
+    "tipo": "busca",
+    "busca": "Saúde da população negra",
+    "grupo": 2
+  },
+  {
+    "nome": "Busca - Racismo",
+    "categoria": "cotidiano",
+    "tipo": "busca",
+    "busca": "Racismo",
+    "grupo": 3
+  },
+  {
+    "nome": "Busca - Antirracista",
+    "categoria": "cotidiano",
+    "tipo": "busca",
+    "busca": "Antirracista",
+    "grupo": 0
+  },
+  {
+    "nome": "Busca - Angola",
+    "categoria": "mundo",
+    "tipo": "busca",
+    "busca": "Angola",
+    "grupo": 1,
+    "africa": true
+  },
+  {
+    "nome": "Busca - Moçambique",
+    "categoria": "mundo",
+    "tipo": "busca",
+    "busca": "Moçambique",
+    "grupo": 2,
+    "africa": true
+  },
+  {
+    "nome": "Busca - Cabo Verde",
+    "categoria": "mundo",
+    "tipo": "busca",
+    "busca": "Cabo Verde",
+    "grupo": 3,
+    "africa": true
+  },
+  {
+    "nome": "Busca - Guiné-Bissau",
+    "categoria": "mundo",
+    "tipo": "busca",
+    "busca": "Guiné-Bissau",
+    "grupo": 0,
+    "africa": true
+  },
+  {
+    "nome": "Busca - São Tomé e Príncipe",
+    "categoria": "mundo",
+    "tipo": "busca",
+    "busca": "\"São Tomé e Príncipe\"",
+    "grupo": 1,
+    "africa": true
+  },
+  {
+    "nome": "Busca - África do Sul",
+    "categoria": "mundo",
+    "tipo": "busca",
+    "busca": "África do Sul",
+    "grupo": 2,
+    "africa": true
+  },
+  {
+    "nome": "Busca - Nigéria",
+    "categoria": "mundo",
+    "tipo": "busca",
+    "busca": "Nigéria",
+    "grupo": 3,
+    "africa": true
+  },
+  {
+    "nome": "Busca - União Africana",
+    "categoria": "mundo",
+    "tipo": "busca",
+    "busca": "\"União Africana\"",
+    "grupo": 0,
+    "africa": true
+  },
+  {
+    "nome": "Busca - diáspora africana",
+    "categoria": "mundo",
+    "tipo": "busca",
+    "busca": "\"diáspora africana\"",
+    "grupo": 1,
+    "africa": true
+  },
+  {
+    "nome": "Busca - IZA cantora",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "IZA cantora",
+    "grupo": 2
+  },
+  {
+    "nome": "Busca - empresário negro",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "\"empresário negro\"",
+    "grupo": 3
+  },
+  {
+    "nome": "Busca - Péricles cantor",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Péricles cantor",
+    "grupo": 0
+  },
+  {
+    "nome": "Busca - Burna Boy",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Burna Boy",
+    "grupo": 1
+  },
+  {
+    "nome": "Busca - RTP África",
+    "categoria": "mundo",
+    "tipo": "busca",
+    "busca": "site:rtp.pt África",
+    "grupo": 2,
+    "africa": true
+  },
+  {
+    "nome": "Busca - Expo África Brasil",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"Expo África Brasil\"",
+    "grupo": 3
+  },
+  {
+    "nome": "Busca semanal - Gilberto Gil",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "Gilberto Gil",
+    "grupo": 0,
+    "dia_semana": 0
+  },
+  {
+    "nome": "Busca semanal - Milton Nascimento",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "Milton Nascimento",
+    "grupo": 0,
+    "dia_semana": 1
+  },
+  {
+    "nome": "Busca semanal - Djavan",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "Djavan",
+    "grupo": 0,
+    "dia_semana": 2
+  },
+  {
+    "nome": "Busca semanal - Jorge Ben Jor",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "Jorge Ben Jor",
+    "grupo": 0,
+    "dia_semana": 3
+  },
+  {
+    "nome": "Busca semanal - Alcione",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "Alcione",
+    "grupo": 0,
+    "dia_semana": 4
+  },
+  {
+    "nome": "Busca semanal - Martinho da Vila",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "Martinho da Vila",
+    "grupo": 0,
+    "dia_semana": 5
+  },
+  {
+    "nome": "Busca semanal - Margareth Menezes",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "Margareth Menezes",
+    "grupo": 0,
+    "dia_semana": 6
+  },
+  {
+    "nome": "Busca semanal - Mano Brown",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"Mano Brown\"",
+    "grupo": 1,
+    "dia_semana": 0
+  },
+  {
+    "nome": "Busca semanal - Racionais MC's",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "Racionais MC's",
+    "grupo": 1,
+    "dia_semana": 1
+  },
+  {
+    "nome": "Busca semanal - Djonga",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "Djonga",
+    "grupo": 1,
+    "dia_semana": 2
+  },
+  {
+    "nome": "Busca semanal - BK rapper",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"BK rapper\"",
+    "grupo": 1,
+    "dia_semana": 3
+  },
+  {
+    "nome": "Busca semanal - Baco Exu do Blues",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "Baco Exu do Blues",
+    "grupo": 1,
+    "dia_semana": 4
+  },
+  {
+    "nome": "Busca semanal - Karol Conká",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "Karol Conká",
+    "grupo": 1,
+    "dia_semana": 5
+  },
+  {
+    "nome": "Busca semanal - MC Soffia",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "MC Soffia",
+    "grupo": 1,
+    "dia_semana": 6
+  },
+  {
+    "nome": "Busca semanal - Luedji Luna",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "Luedji Luna",
+    "grupo": 2,
+    "dia_semana": 0
+  },
+  {
+    "nome": "Busca semanal - Larissa Luz",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "Larissa Luz",
+    "grupo": 2,
+    "dia_semana": 1
+  },
+  {
+    "nome": "Busca semanal - Majur cantora",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "Majur cantora",
+    "grupo": 2,
+    "dia_semana": 2
+  },
+  {
+    "nome": "Busca semanal - Linn da Quebrada",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "Linn da Quebrada",
+    "grupo": 2,
+    "dia_semana": 3
+  },
+  {
+    "nome": "Busca semanal - Ferrugem cantor",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "Ferrugem cantor",
+    "grupo": 2,
+    "dia_semana": 4
+  },
+  {
+    "nome": "Busca semanal - Mumuzinho",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "Mumuzinho",
+    "grupo": 2,
+    "dia_semana": 5
+  },
+  {
+    "nome": "Busca semanal - Xande de Pilares",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "Xande de Pilares",
+    "grupo": 2,
+    "dia_semana": 6
+  },
+  {
+    "nome": "Busca semanal - Dilsinho",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "Dilsinho",
+    "grupo": 3,
+    "dia_semana": 0
+  },
+  {
+    "nome": "Busca semanal - Taís Araújo",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Taís Araújo",
+    "grupo": 3,
+    "dia_semana": 1
+  },
+  {
+    "nome": "Busca semanal - Camila Pitanga",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Camila Pitanga",
+    "grupo": 3,
+    "dia_semana": 2
+  },
+  {
+    "nome": "Busca semanal - Zezé Motta",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Zezé Motta",
+    "grupo": 3,
+    "dia_semana": 3
+  },
+  {
+    "nome": "Busca semanal - Érika Januza",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Érika Januza",
+    "grupo": 3,
+    "dia_semana": 4
+  },
+  {
+    "nome": "Busca semanal - Juliana Alves atriz",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Juliana Alves atriz",
+    "grupo": 3,
+    "dia_semana": 5
+  },
+  {
+    "nome": "Busca semanal - Bella Campos",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Bella Campos",
+    "grupo": 3,
+    "dia_semana": 6
+  },
+  {
+    "nome": "Busca semanal - Jessica Ellen",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Jessica Ellen",
+    "grupo": 0,
+    "dia_semana": 0
+  },
+  {
+    "nome": "Busca semanal - Fabrício Boliveira",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Fabrício Boliveira",
+    "grupo": 0,
+    "dia_semana": 1
+  },
+  {
+    "nome": "Busca semanal - Ícaro Silva",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Ícaro Silva",
+    "grupo": 0,
+    "dia_semana": 2
+  },
+  {
+    "nome": "Busca semanal - Babu Santana",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Babu Santana",
+    "grupo": 0,
+    "dia_semana": 3
+  },
+  {
+    "nome": "Busca semanal - Maju Coutinho",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Maju Coutinho",
+    "grupo": 0,
+    "dia_semana": 4
+  },
+  {
+    "nome": "Busca semanal - Manoel Soares",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Manoel Soares",
+    "grupo": 0,
+    "dia_semana": 5
+  },
+  {
+    "nome": "Busca semanal - Rita Batista",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Rita Batista",
+    "grupo": 0,
+    "dia_semana": 6
+  },
+  {
+    "nome": "Busca semanal - Anielle Franco",
+    "categoria": "politica",
+    "tipo": "busca",
+    "busca": "Anielle Franco",
+    "grupo": 1,
+    "dia_semana": 0
+  },
+  {
+    "nome": "Busca semanal - Benedita da Silva",
+    "categoria": "politica",
+    "tipo": "busca",
+    "busca": "Benedita da Silva",
+    "grupo": 1,
+    "dia_semana": 1
+  },
+  {
+    "nome": "Busca semanal - Erika Hilton",
+    "categoria": "politica",
+    "tipo": "busca",
+    "busca": "Erika Hilton",
+    "grupo": 1,
+    "dia_semana": 2
+  },
+  {
+    "nome": "Busca semanal - Sueli Carneiro",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Sueli Carneiro",
+    "grupo": 1,
+    "dia_semana": 3
+  },
+  {
+    "nome": "Busca semanal - Rebeca Andrade",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Rebeca Andrade",
+    "grupo": 1,
+    "dia_semana": 4
+  },
+  {
+    "nome": "Busca semanal - Vinícius Júnior",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Vinícius Júnior",
+    "grupo": 1,
+    "dia_semana": 5
+  },
+  {
+    "nome": "Busca semanal - Rihanna",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Rihanna",
+    "grupo": 1,
+    "dia_semana": 6
+  },
+  {
+    "nome": "Busca semanal - Jay-Z",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Jay-Z",
+    "grupo": 2,
+    "dia_semana": 0
+  },
+  {
+    "nome": "Busca semanal - Doechii",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Doechii",
+    "grupo": 2,
+    "dia_semana": 1
+  },
+  {
+    "nome": "Busca semanal - Cardi B",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Cardi B",
+    "grupo": 2,
+    "dia_semana": 2
+  },
+  {
+    "nome": "Busca semanal - Megan Thee Stallion",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Megan Thee Stallion",
+    "grupo": 2,
+    "dia_semana": 3
+  },
+  {
+    "nome": "Busca semanal - Usher cantor",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Usher cantor",
+    "grupo": 2,
+    "dia_semana": 4
+  },
+  {
+    "nome": "Busca semanal - Janelle Monáe",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Janelle Monáe",
+    "grupo": 2,
+    "dia_semana": 5
+  },
+  {
+    "nome": "Busca semanal - Denzel Washington",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Denzel Washington",
+    "grupo": 2,
+    "dia_semana": 6
+  },
+  {
+    "nome": "Busca semanal - Halle Berry",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Halle Berry",
+    "grupo": 3,
+    "dia_semana": 0
+  },
+  {
+    "nome": "Busca semanal - Zendaya",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Zendaya",
+    "grupo": 3,
+    "dia_semana": 1
+  },
+  {
+    "nome": "Busca semanal - Halle Bailey",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Halle Bailey",
+    "grupo": 3,
+    "dia_semana": 2
+  },
+  {
+    "nome": "Busca semanal - Spike Lee",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Spike Lee",
+    "grupo": 3,
+    "dia_semana": 3
+  },
+  {
+    "nome": "Busca semanal - Jordan Peele",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Jordan Peele",
+    "grupo": 3,
+    "dia_semana": 4
+  },
+  {
+    "nome": "Busca semanal - Ava DuVernay",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Ava DuVernay",
+    "grupo": 3,
+    "dia_semana": 5
+  },
+  {
+    "nome": "Busca semanal - Oprah Winfrey",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Oprah Winfrey",
+    "grupo": 3,
+    "dia_semana": 6
+  },
+  {
+    "nome": "Busca semanal - Michelle Obama",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Michelle Obama",
+    "grupo": 0,
+    "dia_semana": 0
+  },
+  {
+    "nome": "Busca semanal - Barack Obama",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Barack Obama",
+    "grupo": 0,
+    "dia_semana": 1
+  },
+  {
+    "nome": "Busca semanal - Kamala Harris",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Kamala Harris",
+    "grupo": 0,
+    "dia_semana": 2
+  },
+  {
+    "nome": "Busca semanal - Simone Biles",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Simone Biles",
+    "grupo": 0,
+    "dia_semana": 3
+  },
+  {
+    "nome": "Busca semanal - Serena Williams",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Serena Williams",
+    "grupo": 0,
+    "dia_semana": 4
+  },
+  {
+    "nome": "Busca semanal - Tems cantora",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Tems cantora",
+    "grupo": 0,
+    "dia_semana": 5
+  },
+  {
+    "nome": "Busca semanal - Wizkid",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "Wizkid",
+    "grupo": 0,
+    "dia_semana": 6
+  },
+  {
+    "nome": "Busca - site:rtp.pt África",
+    "categoria": "mundo",
+    "tipo": "busca",
+    "busca": "site:rtp.pt África",
+    "grupo": 0,
+    "africa": true
+  },
+  {
+    "nome": "Busca - Expo África Brasil",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"Expo África Brasil\"",
+    "grupo": 1
+  }
 ]
