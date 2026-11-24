@@ -108,5 +108,27 @@
   "nota": 6,
   "destino": "nota baixa",
   "detalhe": "Texto institucional do IFRN sobre educação antirracista; tema relevante, mas sem fato novo, personagem ou dado claro no resumo."
+ },
+ {
+  "hora": "00:18",
+  "fonte": "Busca - São Tomé e Príncipe",
+  "titulo": "Jornalistas lusófonos e hispânicos visitam Macau e Hengqin",
+  "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxORFVGZzY2MzhVdHNXU0llYWtQSzVfWV83cmE5OUE1N1VCamJZWWVyYzhOeEFLVk03aTF6ejNKWFhsbng2N25GN2hibFZRak5aTjBlOHB3WUpNS0FVOF9zQ2JsSkpIZURST3Q4eFVhTm9iakdOcDVwbExuMWEwamxOekp4Vm5zVXBDaW5iUlBVSWNZekNjdVNqUS11RUYyS3AwZE1GYw?oc=5",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Visita de jornalistas lusófonos e hispânicos a Macau e Hengqin é tema de mídia e turismo sem relação com a população negra nem com a Agenda Preta; não é fato da África ligado ao Brasil."
+ },
+ {
+  "hora": "00:18",
+  "fonte": "Busca - igualdade racial",
+  "titulo": "O Brasil que ainda insiste em negar a igualdade racial",
+  "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPYko4cFUtZWFOSl85NElMRTVwWmNEYjAzTURuQk9sRmhveXl5enl4cFhQTHV1b0RPOGhteGp5aERNZGxoeVJ1Zm1PY3l3cU9mZGlHcmZVWnlfVjVOZFNWcDlVNkwxX3ZLYXhIdW0xQ0lNaWVLNEwtcHRKZ1FzZHBhZ0FLMkF6YlFyYkZ2dzdoVUJzQTBlRWNRVWNrbkhOdXlJVzJJYQ?oc=5",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Título indica texto opinativo (coluna de opinião sobre igualdade racial), que não entra como notícia; sem fato novo ou dado apurado no resumo."
  }
 ]
