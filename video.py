@@ -267,10 +267,12 @@ CHAMADAS_FINAIS = [
 ]
 
 
-def tela_final(variante=None):
+def tela_final(variante=None, youtube=False):
     if variante is None:
         variante = datetime.now(R.FUSO_SP).timetuple().tm_yday % len(CHAMADAS_FINAIS)
     l1, l2, rodape = CHAMADAS_FINAIS[variante]
+    if youtube:
+        return tela_final_youtube(l1, l2)
     img = Image.new("RGB", (L, A), R.COR_FUNDO)
     d = ImageDraw.Draw(img)
     m = 110
@@ -286,6 +288,28 @@ def tela_final(variante=None):
     d.text((m, y), "Comente", font=R.fonte("extra", 150), fill=R.COR_TEXTO)
     d.text((m, y + 160), "APP", font=R.fonte("extra", 280), fill=R.COR_AMARELO)
     d.text((m, y + 500), rodape, font=R.fonte("forte", 56), fill=R.COR_TEXTO)
+    w1 = R.botao_loja(d, m, 1500, "DISPONÍVEL NO", "Google Play", 1.0)
+    R.botao_loja(d, m + w1 + 30, 1500, "BAIXAR NA", "App Store", 1.0)
+    return img
+
+
+def tela_final_youtube(l1, l2):
+    """No YouTube não há direct: a chamada manda para a descrição, onde estão os links."""
+    img = Image.new("RGB", (L, A), R.COR_FUNDO)
+    d = ImageDraw.Draw(img)
+    m = 110
+    d.rectangle((0, 0, L, 14), fill=R.COR_AMARELO)
+    R.colar_logo(img, m, 300, 420)
+    fm = R.fonte("forte", 74)
+    y = 600
+    for linha in (l1, l2):
+        if linha:
+            d.text((m, y), linha, font=fm, fill=R.COR_TEXTO)
+            y += 90
+    y += 40
+    d.text((m, y), "Links na", font=R.fonte("extra", 150), fill=R.COR_TEXTO)
+    d.text((m, y + 165), "descrição", font=R.fonte("extra", 150), fill=R.COR_AMARELO)
+    d.text((m, y + 380), "Baixe o app Áfricas Play", font=R.fonte("forte", 56), fill=R.COR_TEXTO)
     w1 = R.botao_loja(d, m, 1500, "DISPONÍVEL NO", "Google Play", 1.0)
     R.botao_loja(d, m + w1 + 30, 1500, "BAIXAR NA", "App Store", 1.0)
     return img
@@ -323,7 +347,7 @@ def montar_video(telas, musica, saida):
     return total
 
 
-def fazer_video(posts, semana, agora_sp, saida, excluir=(), turno="noite"):
+def fazer_video(posts, semana, agora_sp, saida, excluir=(), turno="noite", saida_yt=None):
     """Monta o vídeo. Devolve (lista de matérias usadas, duração) ou (None, 0) se não houver material."""
     quantas = 6 if semana else 5
     escolhidas, fotos = [], []
@@ -357,6 +381,11 @@ def fazer_video(posts, semana, agora_sp, saida, excluir=(), turno="noite"):
         raise RuntimeError("nenhuma música na pasta musicas")
     musica = random.choice(faixas)
     duracao = montar_video(telas, musica, saida)
+    if saida_yt:
+        try:
+            montar_video(telas[:-1] + [(tela_final(youtube=True), DURACAO_FINAL)], musica, saida_yt)
+        except Exception as e:
+            log(f"Versão do YouTube falhou ({e}); o YouTube usa o vídeo normal.")
     log(f"Reels montado: {len(escolhidas)} matérias, {duracao:.0f}s, música {os.path.basename(musica)}")
     return escolhidas, duracao
 
@@ -416,14 +445,16 @@ def fazer_e_publicar(posts, semana, token, pagina, ig, estado=None, hoje=None, t
     estado = estado if estado is not None else {}
     agora_sp = R.agora_sp()
     saida = os.path.join(tempfile.mkdtemp(), "reels.mp4")
-    escolhidas, _ = fazer_video(posts, semana, agora_sp, saida, excluir, turno)
+    saida_yt = os.path.join(os.path.dirname(saida), "reels-youtube.mp4")
+    escolhidas, _ = fazer_video(posts, semana, agora_sp, saida, excluir, turno, saida_yt)
     if not escolhidas:
         return None
     texto = legenda(escolhidas, semana, agora_sp, turno)
     midia, link = publicar_instagram(saida, texto, token, ig)
     titulo = ("Resumo da semana" if semana else "Radar do meio-dia" if turno == "meio" else "Resumo do dia") + f" {agora_sp.strftime('%d/%m')}"
     log(f"REELS PUBLICADO: {titulo} {link}")
-    video_yt = publicar_no_youtube(saida, escolhidas, semana, agora_sp, turno, estado, hoje)
+    video_yt = publicar_no_youtube(saida_yt if os.path.exists(saida_yt) else saida,
+                                   escolhidas, semana, agora_sp, turno, estado, hoje)
     video_fb = ""
     chave_fb = "reels_fb_dia" if turno == "noite" else f"reels_fb_{turno}"
     if estado.get(chave_fb) != hoje:
