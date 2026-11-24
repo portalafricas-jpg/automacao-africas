@@ -1,0 +1,28 @@
+name: Baixar dados de vídeos do YouTube (preparo de ajustes)
+on:
+  workflow_dispatch:
+    inputs:
+      pasta:
+        required: true
+      videos:
+        required: true
+permissions:
+  contents: write
+jobs:
+  dados:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - run: python yt_dados.py "ensaio/${{ github.event.inputs.pasta }}" ${{ github.event.inputs.videos }}
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+      - run: |
+          git config user.name "robo-africas"; git config user.email "robo-africas@users.noreply.github.com"
+          git add -f "ensaio/${{ github.event.inputs.pasta }}"; git commit -m "Dados para ajustes do YouTube" || exit 0
+          for i in 1 2 3; do git pull --rebase && git push && exit 0; sleep 5; done
