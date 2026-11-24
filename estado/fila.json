@@ -76,25 +76,6 @@
   "valido_ate": ""
  },
  {
-  "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNX2tFVEZQYUFsOE81Yk9hN0h5YzAwMWNUcDNZNjBTMERYZ1NsUzJmU0hSN0JXLUtucFl5NWdaTkhmS3p6UTEyMHNjcl9tME1TaDNLQUVyTG5nZUVZVk5pcGpCOE5zVDFzZGhfaFBZSFNDQzF5ZTFoZkhHVGUxRGgyOXMxYXJkQ1llTGlOQ0pHM0NzVFJEWVY2aUd4UDBYZjVoQmFZZ1pPWU9QWjhmNWJZV3ZxMVZpSWR0bmowdC1ia2NUcWQyZi02b2xpaw?oc=5",
-  "titulo_original": "Câmara pode votar projetos sobre saúde da população negra, educação e proteção às mulheres",
-  "descricao": "Câmara pode votar projetos sobre saúde da população negra, educação e proteção às mulheres    LOCAL MT",
-  "imagem_rss": "",
-  "imagem_banco": false,
-  "imagem_trocar": false,
-  "fonte_nome": "Busca - Saúde da população negra",
-  "fonte_africa": false,
-  "categoria": "politica",
-  "prioridade": "alta",
-  "nota": 8,
-  "motivo_nota": "Projetos de lei sobre saúde da população negra, educação e proteção às mulheres na pauta da Câmara. Eixo da Agenda Preta, com possível decisão do Congresso que atinge a população negra.",
-  "ministerio": false,
-  "excecao_nota7": false,
-  "data_original": "2026-11-24T18:34:41+00:00",
-  "criado_em": "2026-11-24T19:32:16.205133+00:00",
-  "valido_ate": ""
- },
- {
   "link": "https://almapreta.com.br/sessao/cotidiano/mortes-mulheres-por-dia-2025-onu/",
   "titulo_original": "Mais de 100 mulheres foram mortas diariamente por parceiros ou familiares em 2025",
   "descricao": "Relatório da ONU aponta que 47 mil mulheres e meninas foram assassinadas por parceiros ou familiares no último ano \n O post Mais de 100 mulheres foram mortas diariamente por parceiros ou familiares em 2025 apareceu primeiro em AlmaPreta .",
@@ -624,6 +605,25 @@
   "excecao_nota7": false,
   "data_original": "2026-11-24T22:25:38+00:00",
   "criado_em": "2026-11-24T22:32:17.743011+00:00",
+  "valido_ate": ""
+ },
+ {
+  "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5yZUhSVFQ1RFZaN3BMa1FZUGRWSFRhYjVTUldmMGNzMjZtdnJ6cVhQNDNvUUVKN3EwbUdHSDlXS0NVeHZfVVdfUnBVRjJic3c4UzZvQ05n?oc=5",
+  "titulo_original": "✊🏾 RECONHECIMENTO - O Quilombo Frechal, localizado em Mirinzal, no Maranhão, recebeu a declaração de tombamento como Patrimônio Cultural do Brasil pelo Iphan. Com uma trajetória que remonta a 1792, o território representa a força da memória qu",
+  "descricao": "✊🏾 RECONHECIMENTO - O Quilombo Frechal, localizado em Mirinzal, no Maranhão, recebeu a declaração de tombamento como Patrimônio Cultural do Brasil pelo Iphan. Com uma trajetória que remonta a 1792, o território representa a força da memória qu    Instagram",
+  "imagem_rss": "",
+  "imagem_banco": false,
+  "imagem_trocar": false,
+  "fonte_nome": "Busca - Quilombola",
+  "fonte_africa": false,
+  "categoria": "ancestralidade",
+  "prioridade": "media",
+  "nota": 8,
+  "motivo_nota": "Tombamento do Quilombo Frechal como Patrimônio Cultural do Brasil pelo Iphan, fato novo de território quilombola e memória; a fonte é Instagram, mas o fato é oficial (Iphan).",
+  "ministerio": false,
+  "excecao_nota7": false,
+  "data_original": "2026-11-24T21:58:42+00:00",
+  "criado_em": "2026-11-24T22:47:14.936260+00:00",
   "valido_ate": ""
  }
 ]
