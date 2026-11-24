@@ -301,5 +301,38 @@
   "foto": "https://www.africas.com.br/uploads/images/2026/11/homem-que-agrediu-musico-negro-em-curitiba-e-julgado1795528926.jpg",
   "categoria": "Radar",
   "publicado_em": "2026-11-24T14:08:39.730381+00:00"
+ },
+ {
+  "tipo": "reels",
+  "titulo": "Radar do meio-dia 24/11",
+  "link": "https://www.africas.com.br",
+  "links": [
+   {
+    "titulo": "Homem que agrediu músico negro em Curitiba é julgado",
+    "link": "https://www.africas.com.br/noticia/homem-que-agrediu-musico-negro-em-curitiba-e-julgado"
+   },
+   {
+    "titulo": "Quilombos do Pará avançam no CAR Coletivo PCT",
+    "link": "https://www.africas.com.br/noticia/quilombos-do-para-avancam-no-car-coletivo-pct"
+   },
+   {
+    "titulo": "Mulheres encarceradas no RJ: estudo traça perfil",
+    "link": "https://www.africas.com.br/noticia/mulheres-encarceradas-no-rj-estudo-traca-perfil"
+   },
+   {
+    "titulo": "Quilombo do Sopapo celebra Consciência Negra em POA",
+    "link": "https://www.africas.com.br/noticia/quilombo-do-sopapo-celebra-consciencia-negra-em-poa"
+   },
+   {
+    "titulo": "Líder do PL tenta barrar projeto sobre saúde negra",
+    "link": "https://www.africas.com.br/noticia/lider-do-pl-tenta-barrar-projeto-sobre-saude-negra"
+   }
+  ],
+  "ig_media": "18143417023661998",
+  "ig_link": "https://www.instagram.com/reel/DgIS5GrgptR/",
+  "fb_post": "1874848323515146",
+  "yt_video": "",
+  "prioridade": "reels",
+  "publicado_em": "2026-11-24T15:38:59.552701+00:00"
  }
 ]
