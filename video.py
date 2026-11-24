@@ -345,6 +345,7 @@ def fazer_video(posts, semana, agora_sp, saida, excluir=(), turno="noite"):
         data_txt = f"{DIAS_SEMANA[agora_sp.weekday()].capitalize()}, {agora_sp.strftime('%d/%m/%Y')}"
     telas = [(tela_gancho(fotos[0], semana, len(escolhidas), data_txt), DURACAO_GANCHO)]
     curtas = manchetes_curtas([p["titulo"] for p in escolhidas])
+    escolhidas = [dict(p, curta=c) for p, c in zip(escolhidas, curtas)]  # a curta também vira título no YouTube
     for i, (p, foto, curta) in enumerate(zip(escolhidas, fotos, curtas), 1):
         log(f"Reels {i}: {curta}")
         telas.append((tela_materia(foto, curta, p.get("categoria", ""), i, len(escolhidas),
@@ -441,7 +442,7 @@ def fazer_e_publicar(posts, semana, token, pagina, ig, estado=None, hoje=None, t
 def texto_youtube(escolhidas, semana, agora_sp, turno):
     """Título (até 60 caracteres) e descrição pesquisáveis, sem data: o vídeo fica no ar por muito tempo."""
     sufixo = " | Radar Áfricas"
-    manchete = escolhidas[0]["titulo"].strip()
+    manchete = (escolhidas[0].get("curta") or escolhidas[0]["titulo"]).strip()
     limite = 60 - len(sufixo)
     if len(manchete) > limite:
         manchete = manchete[:limite - 1].rsplit(" ", 1)[0].rstrip(" ,.:;-–") + "…"
