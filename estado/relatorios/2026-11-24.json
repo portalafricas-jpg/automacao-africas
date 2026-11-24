@@ -1065,5 +1065,16 @@
   "nota": 1,
   "destino": "nota baixa",
   "detalhe": "Noticiário genérico de TV sem fato específico identificado; não é notícia para a pauta."
+ },
+ {
+  "hora": "04:47",
+  "fonte": "Busca - Conceição Evaristo",
+  "titulo": "Aos 80 anos, Conceição Evaristo rejeita ideia de meritocracia e diz que ainda quer escrever rap e poemas eróticos",
+  "link": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxNTkRYREJYVkFNN2JBRXQ1UGR6OXBKSWpFVFNfT1VHSmdyemRnQ1NBWW9jUUI0VGNLaEdWSWtGOC0yRFBFei1YZWtQTkZCUmxJamxlc3hwQ1JiMF9WaDZLejZsX0RGdzhrTDZLV2xjcGhTZXhNWVVBaG4zSzUycFRBSzJNSGk2ZVpTQ0plVGNUemRBMDlpT0xDeWVtNTloTng2cGo0WjJPVmQyWWNVdlZuUGxpTFlFNmE3UDhvM0lWSEdrQlVJZU1XZFMyWHE2cmY1RnBqTlpqYUNCRm5sbDljMy1XbS05SjNPckxOeEo4SjJXeUhvWWxMR1BWalQ5UdIBjAJBVV95cUxQZzBVaVEzb0pxdTgydHAybENLdV85TldFNmJyX21mVW44WXBHT1pNU3FWRXluSUdEcFBvVXNEX0NySktkbUxpVEE1ZTZ1MkR4X2kzVWVkSTZtamVtR2pIbFFKVGtNckJtWC1QNmZ4OUw4VWJJMXhvZlBXVld4M093c29Ib3huU0wzbkNYUDM2NmQwS0RqM0FIcnlhY0NlcEhQQnpURFhBZE81Z1FzRGNCaHQtMElLdlhsNmV3b0pYb1liMGs3WGFMMXVFTURnYVFhOHdUemJrZ2Z5VGVzWFBHb2lSblM0ZjZvZkZLRUVIa2tVdjBJR3F3c2I4MTFPc2hrVlZlaU56UGREUmZt?oc=5",
+  "categoria": "protagonista",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Conceição Evaristo, escritora negra, fala sobre meritocracia e seus projetos; trata-se de perfil de pessoa negra debatendo desigualdade e oportunidades. Não é repetida: a matéria sobre a ópera trata de outro fato, e a entrevista do G1 traz ângulo novo sem ser o mesmo lançamento. Nota 8 por ser entrevista com fala de visão sobre desigualdade, sem ser conteúdo exclusivo de opinião."
  }
 ]
