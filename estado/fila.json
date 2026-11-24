@@ -1,22 +1,5 @@
 [
  {
-  "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNem5ENWhpMjRyZGZiWlkydnFYdkNxMWdKSEJ5N0tkS25MTkZYZHlTSXhVZGMtQUVGQ0tZenJUR05BRXZvV3pFbWMxWEZaUnhTVjdBczVkYTFNQlNYWi10bkR4Ny05YVRNeXhsbV9HSnk3dUZSYXdNN3hfWFl0NWFkX2pGVjdSU01PbDJlLUVTSmdzRm9vRVpzTUsxMTVaYU1oMjVSdnFONVZwemdvMHdjNXV0MTkxN1NZN0NaRmRvRzhFaGItaFNJb3A5c2tJckxUTF9xNHYzWU5VM0IydG5uMnloY0o?oc=5",
-  "titulo_original": "6° Expo Internacional Dia da Consciência Negra celebra a cultura negra em São Paulo",
-  "descricao": "6° Expo Internacional Dia da Consciência Negra celebra a cultura negra em São Paulo    Prefeitura de São Paulo",
-  "imagem_rss": "",
-  "imagem_banco": false,
-  "imagem_trocar": false,
-  "fonte_nome": "Busca - Moda afro",
-  "fonte_africa": false,
-  "categoria": "cultura",
-  "prioridade": "media",
-  "nota": 8,
-  "motivo_nota": "Expo internacional celebrando a cultura negra em São Paulo, ligada à data da Consciência Negra.",
-  "data_original": "2026-11-23T21:30:30+00:00",
-  "criado_em": "2026-11-23T21:32:16.778178+00:00",
-  "valido_ate": ""
- },
- {
   "link": "https://tvzimbo.ao/executivo-define-meta-de-65-de-inclusao-financeira-ate-2027/",
   "titulo_original": "Executivo define meta de 65% de inclusão financeira até 2027",
   "descricao": "",
@@ -315,6 +298,25 @@
   "excecao_nota7": true,
   "data_original": "2026-11-24T00:57:56+00:00",
   "criado_em": "2026-11-24T01:02:15.438787+00:00",
+  "valido_ate": ""
+ },
+ {
+  "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5hV3Z4azd2R0RMcy16YWtNa3B3N1lyYkl3YnZfMHQyTjRPZVNXSXd4dVIxMGgxWE1aUEFuRlJfa3ZWZlhGdFJ1S2lOenNVU3VOZ2Qw?oc=5",
+  "titulo_original": "Episódio n.º - Preto no Branco - Documentários",
+  "descricao": "Episódio n.º - Preto no Branco - Documentários    RTP",
+  "imagem_rss": "",
+  "imagem_banco": false,
+  "imagem_trocar": false,
+  "fonte_nome": "Busca - RTP África",
+  "fonte_africa": true,
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "motivo_nota": "Fonte África (RTP), título genérico sobre episódio de documentário; sem fato claro sobre África ou população negra, conteúdo de programação de TV. Ajustado para descarte pela falta de informação suficiente.",
+  "ministerio": false,
+  "excecao_nota7": true,
+  "data_original": "2026-11-24T00:14:02+00:00",
+  "criado_em": "2026-11-24T01:32:17.987832+00:00",
   "valido_ate": ""
  }
 ]
