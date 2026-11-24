@@ -439,14 +439,15 @@ def fazer_e_publicar(posts, semana, token, pagina, ig, estado=None, hoje=None, t
 
 
 def texto_youtube(escolhidas, semana, agora_sp, turno):
-    """Título (até 60 caracteres, data só aqui, nunca dentro do vídeo) e descrição pesquisável."""
-    data = agora_sp.strftime("%d/%m/%Y")
-    if semana:
-        titulo = f"Notícias pretas da semana | Radar Áfricas {agora_sp.strftime('%d/%m')} #Shorts"
-    else:
-        titulo = f"Notícias pretas {data} | Radar Áfricas #Shorts"
+    """Título (até 60 caracteres) e descrição pesquisáveis, sem data: o vídeo fica no ar por muito tempo."""
+    sufixo = " | Radar Áfricas"
+    manchete = escolhidas[0]["titulo"].strip()
+    limite = 60 - len(sufixo)
+    if len(manchete) > limite:
+        manchete = manchete[:limite - 1].rsplit(" ", 1)[0].rstrip(" ,.:;-–") + "…"
+    titulo = manchete + sufixo
     lista = "\n".join(f"{i}. {p['titulo']}\n{p['link']}" for i, p in enumerate(escolhidas, 1))
-    descricao = (f"Notícias pretas de {data}: as principais pautas da população negra no Brasil e no mundo, "
+    descricao = ("Notícias pretas: as principais pautas da população negra no Brasil e no mundo, "
                  f"no Radar do Áfricas Play.\n\n{lista}\n\n"
                  "📲 Baixe o app Áfricas Play e acompanhe as notícias pretas: https://app.africas.com.br\n"
                  "🌐 Portal: https://www.africas.com.br\n🔔 Inscreva-se no canal para receber o Radar.\n\n"
