@@ -9,4 +9,4 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install trafilatura googlenewsdecoder && python diag/fotos.py
+      - run: pip install trafilatura googlenewsdecoder && PYTHONPATH=. python diag/fotos.py
