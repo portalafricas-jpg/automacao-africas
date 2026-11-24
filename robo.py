@@ -5,6 +5,7 @@
 import difflib
 import html
 import json
+from collections import Counter
 import os
 import re
 import unicodedata
@@ -28,7 +29,11 @@ MODELO = "claude-haiku-5-5"
 JANELA_HORAS = 1                # só entra notícia publicada na última hora (sites com RSS)
 JANELA_HORAS_BUSCA = 3          # buscas no Google Notícias: notícias das últimas 3 horas
 VALIDADE_HORAS = 4              # notícia com mais de 4 horas não é publicada, nem saindo da fila
-NOTA_MINIMA = 7                 # nota do editor-chefe para ir para a fila
+NOTA_MINIMA = 8                 # nota do editor-chefe para ir para a fila (era 7; mudou em 23/11)
+NOTA_EXCECAO = 7                # carnaval/escolas de samba e lançamentos de artistas negros continuam com 7
+TETO_DIA = 25                   # no máximo 25 matérias por dia no site (breaking e ministérios fora do teto)
+TETO_POR_HORA = 2               # e no máximo 2 por hora, para espalhar ao longo do dia
+TETO_EDITORIA = {"politica": 6, "cultura": 6, "cotidiano": 4, "ancestralidade": 3, "protagonista": 3, "mundo": 3}
 LIMITE_AFRICA_DIA = 5           # no máximo 5 matérias por dia de fontes África (breaking não conta)
 INTERVALO_AFRICA_HORAS = 2      # e no mínimo 2 horas entre uma e outra
 MINUTO_PARTIDA = 2              # o cron-job.org dá a partida em :02, :17, :32 e :47 (o site lê em :00, :15, :30, :45)
@@ -555,9 +560,12 @@ FERRAMENTA_EDITOR = {
                         "categoria": {"type": "string", "enum": CATEGORIAS},
                         "prioridade": {"type": "string", "enum": PRIORIDADES},
                         "repetida": {"type": "boolean"},
+                        "excecao_nota7": {"type": "boolean", "description": "true se for carnaval/escola de samba ou lançamento de artista negro (disco, livro, filme, série, espetáculo)"},
+                        "evento_local_pequeno": {"type": "boolean", "description": "true se for evento local pequeno (oficina, palestra, celebração municipal, ação de biblioteca ou escola) fora de capital ou grande cidade e sem personagem ou fato relevante"},
+                        "ministerio": {"type": "boolean", "description": "true se for ação, anúncio ou decisão do Ministério da Igualdade Racial ou de outro ministério do governo federal que atinja a população negra"},
                         "motivo": {"type": "string"},
                     },
-                    "required": ["id", "nota", "categoria", "prioridade", "repetida", "motivo"],
+                    "required": ["id", "nota", "categoria", "prioridade", "repetida", "excecao_nota7", "evento_local_pequeno", "ministerio", "motivo"],
                 },
             }
         },
@@ -596,7 +604,11 @@ Para cada notícia nova, dê:
 - categoria: mundo, cotidiano, protagonista, cultura, politica ou ancestralidade.
 - prioridade: breaking, alta ou media, conforme a seção "Prioridade" da linha editorial.
 - repetida: true se for o mesmo fato de outra notícia da lista nova (fique só com a primeira) ou de uma matéria do portal dos últimos 5 dias. Um mesmo lançamento, evento ou anúncio já publicado é repetida, mesmo com entrevista, falas novas ou outro ângulo. Só marque false se trouxer fato novo de verdade (desdobramento, decisão, resultado, número novo).
+- excecao_nota7: true só para carnaval/escolas de samba e lançamentos de artistas negros (disco, livro, filme, série, espetáculo).
+- evento_local_pequeno: true para oficina, palestra, celebração municipal, ação de biblioteca, escola ou prefeitura do interior, fora de capital ou grande cidade, sem personagem conhecido ou fato relevante.
+- ministerio: true para ação, anúncio ou decisão do Ministério da Igualdade Racial ou de qualquer ministério do governo federal que atinja a população negra.
 - motivo: frase curta explicando a nota com base na régua.
+Release de órgão público (prefeitura, governo estadual, secretaria, assembleia) só merece nota 8 ou mais se trouxer fato relevante de verdade para a população negra.
 Notícias marcadas com [FONTE ÁFRICA] vêm de veículos africanos ou de buscas sobre o continente: avalie pela seção "Notícias da África e do mundo" da linha editorial, e não pela pergunta sobre a questão racial.
 Registre a avaliação de todas as notícias usando a ferramenta avaliar_noticias.
 """
@@ -1174,7 +1186,13 @@ def main():
                     log(f"Repetida: {c['titulo'][:70]}")
                     registrar(dict(c, nota=nota, categoria=a.get("categoria", "")), "repetida", a.get("motivo", ""))
                     continue
-                if nota < NOTA_MINIMA:
+                ministerio = bool(a.get("ministerio"))
+                minima = NOTA_EXCECAO if a.get("excecao_nota7") else NOTA_MINIMA
+                if a.get("evento_local_pequeno") and not ministerio:
+                    log(f"Evento local pequeno, fora: {c['titulo'][:70]}")
+                    registrar(dict(c, nota=nota, categoria=a.get("categoria", "")), "nota baixa", "evento local pequeno: " + a.get("motivo", ""))
+                    continue
+                if nota < minima and not ministerio:
                     log(f"Nota {nota}, fora: {c['titulo'][:70]} ({a.get('motivo', '')})")
                     registrar(dict(c, nota=nota, categoria=a.get("categoria", "")), "nota baixa", a.get("motivo", ""))
                     continue
@@ -1192,7 +1210,7 @@ def main():
                     "imagem_trocar": c.get("imagem_trocar", False),
                     "fonte_nome": c.get("fonte_nome", ""), "fonte_africa": c.get("fonte_africa", False),
                     "categoria": categoria, "prioridade": prioridade,
-                    "nota": nota, "motivo_nota": a.get("motivo", ""),
+                    "nota": nota, "motivo_nota": a.get("motivo", ""), "ministerio": ministerio, "excecao_nota7": bool(a.get("excecao_nota7")),
                     "data_original": (c["data"] or agora).astimezone(timezone.utc).isoformat(),
                     "criado_em": agora.isoformat(),
                     "valido_ate": (agora_sp.replace(hour=12, minute=0, second=0, microsecond=0).astimezone(timezone.utc).isoformat()
@@ -1203,11 +1221,14 @@ def main():
 
     # Etapa C: publicar (uma por categoria por rodada)
     hoje = agora_sp.date().isoformat()
-    publicadas_hoje = sum(
-        1 for m in publicadas
-        if m.get("prioridade") != "breaking"
-        and datetime.fromisoformat(m["publicado_em"]).astimezone(FUSO_SP).date().isoformat() == hoje
-    )
+    def conta_no_teto(m):
+        return m.get("prioridade") != "breaking" and not m.get("ministerio")
+    do_dia = [m for m in publicadas
+              if datetime.fromisoformat(m["publicado_em"]).astimezone(FUSO_SP).date().isoformat() == hoje]
+    publicadas_hoje = sum(1 for m in do_dia if conta_no_teto(m))
+    por_editoria = Counter(m.get("categoria") for m in do_dia if conta_no_teto(m))
+    ultima_hora = sum(1 for m in do_dia if conta_no_teto(m)
+                      and agora - datetime.fromisoformat(m["publicado_em"]) < timedelta(hours=1))
     africa_hoje = [m for m in publicadas
                    if m.get("fonte_africa") and m.get("prioridade") != "breaking"
                    and datetime.fromisoformat(m["publicado_em"]).astimezone(FUSO_SP).date().isoformat() == hoje]
@@ -1215,15 +1236,15 @@ def main():
     horario_normal = agora_sp.hour >= HORA_INICIO
     minuto_no_ciclo = (agora_sp.minute - MINUTO_PARTIDA) % 15
     pode_publicar = minuto_no_ciclo <= MINUTOS_PARA_PUBLICAR
-    log(f"Publicadas hoje (sem contar breaking): {publicadas_hoje} | "
+    log(f"Publicadas hoje no teto: {publicadas_hoje} de {TETO_DIA} | na última hora: {ultima_hora} | "
         f"{'horário normal' if horario_normal else 'madrugada: só breaking'}")
     if not pode_publicar:
         log("Fora da janela de publicação (o site poderia não ver a matéria): publica na próxima rodada.")
 
     def ordem(m):
         # fontes África: dentro da mesma prioridade, a de nota mais alta sai primeiro
-        return (PRIORIDADES.index(m["prioridade"]), -(m.get("nota") or 0) if m.get("fonte_africa") else 0,
-                m["data_original"])
+        # com teto diário, dentro da mesma prioridade sai primeiro a de nota mais alta
+        return (PRIORIDADES.index(m["prioridade"]), -(m.get("nota") or 0), m["data_original"])
 
     os.makedirs(PASTA_FEEDS, exist_ok=True)
     for categoria in CATEGORIAS:
@@ -1247,6 +1268,19 @@ def main():
             e_breaking = materia_fila["prioridade"] == "breaking"
             if not e_breaking and not horario_normal:
                 break  # madrugada: só breaking
+            if (materia_fila.get("nota") or 0) < NOTA_MINIMA and not (
+                    e_breaking or materia_fila.get("ministerio") or materia_fila.get("excecao_nota7")):
+                fila.remove(materia_fila)  # entrou na fila pela regra antiga (nota 7)
+                registrar(materia_fila, "nota baixa", "nota 7 deixou de entrar (regra de 23/11)")
+                continue
+            fora_do_teto = e_breaking or materia_fila.get("ministerio")
+            if not fora_do_teto:
+                if publicadas_hoje >= TETO_DIA:
+                    break  # teto diário atingido
+                if ultima_hora >= TETO_POR_HORA:
+                    break  # espera a próxima hora para espalhar ao longo do dia
+                if por_editoria[materia_fila["categoria"]] >= TETO_EDITORIA.get(materia_fila["categoria"], 3):
+                    break  # teto da editoria atingido hoje
             if materia_fila.get("fonte_africa") and not e_breaking:
                 if len(africa_hoje) >= LIMITE_AFRICA_DIA:
                     continue  # limite diário de matérias da África atingido
@@ -1276,8 +1310,10 @@ def main():
                 africa_hoje.append(pronta)
                 ultima_africa = agora
             registrar(pronta, "publicada", pronta["titulo"], foto=pronta["credito_imagem"])
-            if not e_breaking:
+            if not (e_breaking or pronta.get("ministerio")):
                 publicadas_hoje += 1
+                ultima_hora += 1
+                por_editoria[pronta["categoria"]] += 1
             log(f"  RSS {pronta['categoria']} atualizado: {pronta['titulo']}")
             break  # uma por categoria por rodada
 
