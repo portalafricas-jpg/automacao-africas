@@ -1,24 +1,5 @@
 [
  {
-  "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQb29lNm9ISjJGcHBJeklJR0UweHBQZHNiMjdqb2ZwYXZsWExVRXYtbTNQVnhDdUdsWk5TNUlKd296QUZBUEpjb010R0RNSnEwcHczY0k4R3VVZ3pfVkxFUTRXSFVZOVB5SnB4NFl5UnNPTFpmeXBtNGhaMEstLVRTZUNGVy0xeGo2SFJURXAxWjUtTTlPYTVQcWdvTGZZcEQ1X2EtTTZOUFJ4dVp3Mkk5S1FDdjFpY1hXZ1hZNS03a1hTRlk?oc=5",
-  "titulo_original": "Biblioteca Nacional e MRE financiam tradução de autores brasileiros no exterior",
-  "descricao": "Biblioteca Nacional e MRE financiam tradução de autores brasileiros no exterior    O Tempo",
-  "imagem_rss": "",
-  "imagem_banco": false,
-  "imagem_trocar": false,
-  "fonte_nome": "Busca - Conceição Evaristo",
-  "fonte_africa": false,
-  "categoria": "cultura",
-  "prioridade": "media",
-  "nota": 3,
-  "motivo_nota": "Financiamento de tradução de autores brasileiros no exterior por órgãos federais, sem recorte racial no texto; não atinge diretamente a população negra.",
-  "ministerio": true,
-  "excecao_nota7": false,
-  "data_original": "2026-11-24T06:16:13+00:00",
-  "criado_em": "2026-11-24T06:47:14.628153+00:00",
-  "valido_ate": ""
- },
- {
   "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOMnVyazRNOHBvMnVWN2k2aWVma3IxRjNBakxRRUlxZzVHYjNoaUZIS2FCTlRDeDc4ZVRtZTNIeWJpamcwSVlaUHhmdWRBRjlhQzlHaHprMnNTUUFCUWIybWxLeWFOUGxDdnZ1WHNraFFiMzVSdjlHeFVZa2dIcVBsMmZVdzJGWTZaZHhHVHU2UW42XzBTU1hJcU4wT0YzaFd2LTZWemxZV3BwcGh3aDhyVFlVN3JtUm9Tc1hjQ3YtMjlGZEx1V1h6VEpjR19BLXlOcm5jck9nZmpUQlVWcVVNWDZpU2dmY19BRUQxeWl2Q1Y?oc=5",
   "titulo_original": "BRASILIANAS | Exposição 'Arquétipos Afroindígena', de Josafá Neves, ocupa Museu Nacional",
   "descricao": "BRASILIANAS | Exposição 'Arquétipos Afroindígena', de Josafá Neves, ocupa Museu Nacional    www.correiodamanha.com.br",
@@ -206,6 +187,25 @@
   "excecao_nota7": false,
   "data_original": "2026-11-24T10:00:00+00:00",
   "criado_em": "2026-11-24T10:02:19.331614+00:00",
+  "valido_ate": ""
+ },
+ {
+  "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPZ3RoUkJUaklUd042TlV5TnV4THFHV01YX0N3ZzlHUGU1V29hYUotTGVfeVpraVBIbmw1bFk4MFlTNy1uRlp1T3JMYWFnQTB1Z2V0S1lURmZqSlRRY3BlSlAyZlFLSk03OE5ndjVKTEM4b3ZwSDUwcERlRTRSZUtTVUtKa09QZ3h5Q1h4QWJWUUdSMFJXZDRiWmFVMFZocFJ5NU9obGt0RnV0aFVTTmR0bzA4TlNMdWl6cXlzaldTQmdWU3c1WHhXUjZWR3dJVlV5cGk0Q2doWnVRd0hQX05ubU9qYVcyVmdleFE?oc=5",
+  "titulo_original": "'Correndo atrás!': filme com Aílton Graça e Lázaro Ramos terá exibição gratuita em Juiz de Fora",
+  "descricao": "'Correndo atrás!': filme com Aílton Graça e Lázaro Ramos terá exibição gratuita em Juiz de Fora    Tribuna de Minas",
+  "imagem_rss": "",
+  "imagem_banco": false,
+  "imagem_trocar": false,
+  "fonte_nome": "Busca - Cineasta negro",
+  "fonte_africa": false,
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "motivo_nota": "Lançamento de filme com Aílton Graça e Lázaro Ramos, artistas negros, com exibição gratuita; lançamento de artista negro é notícia de nota mínima 7.",
+  "ministerio": false,
+  "excecao_nota7": true,
+  "data_original": "2026-11-24T09:30:07+00:00",
+  "criado_em": "2026-11-24T10:17:17.093726+00:00",
   "valido_ate": ""
  }
 ]
