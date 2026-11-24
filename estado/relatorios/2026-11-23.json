@@ -16068,5 +16068,60 @@
   "nota": 0,
   "destino": "nota baixa",
   "detalhe": "Noticiário genérico de programação da RTP África, sem fato específico descrito; não é notícia."
+ },
+ {
+  "hora": "22:47",
+  "fonte": "Busca - Cultura negra",
+  "titulo": "Livro produzido por professoras de Osasco reúne projetos sobre ancestralidade e cultura afro-brasileira",
+  "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOa2REcW02MjlNVW5wYTdzZnBKbFNIUFJHc3kxVWNmeEs2V2YzOXBBN2Ztcm13cVlOVDc2QTduM3FtS3IzZC1GcUo4UXdyWXlTNlhwMUZ1eVByamVCQ0dXSHU2c0RMVmJ2MXRWRDVaZ0R0NFZvOXN0U2dCcmhWM1d3S1hFbkR4WHdPUFJ0bzMwWndkNVd0Vzd1c2M5dmFnOE9YLXZQYTJ3ZXJtcV9rbDVhejE3cl9FQlBrdlpOQWI1LXdGNk1LU3czNi1R0gGeA0FVX3lxTFBUNk5ETVliQm1LLWJCZjVpbFdzdnQ2aXRUamEwd1Y0aGdUWE5iVG5lVFdoOGIyb19MeHhyWTVMN0pLeVVHMGtUX1gySlVvVkhjYWJ2Q1pZdU1tcjdKVkpta1VZd3RvdWFoUmtYODRoX3RfaUNVSWhBMkh2bTk4S3NzSDhPeWtmWE1hN3AzdjktWFIxVktLN3NBOTlmSmRMSGxWUE5jU0FVS1dWbHl0c05xLWZhUV9tbm5LVXlKYWhKOVA5RWloVjdFZktqVlNPeW1hUVVxVllvaHIzWV9ybmJLVVFoTGdhNlBkeXZ6NGZsbW9RVzFGdnYzNXBPY01lekFVQXpnRnBDWFpsb19xcWJWSVljOWlGaHNEcndVNzlNNzJoWl9yT1o2Skp5SW5rWUNxcWt5cjRnTHBoLVJ5NUhqamtMMngyelFiZlRILXdjZDF4WlNEa083a3Q0MWxpUVEzNmlpQmZGYUJLYzVzZ1BJRlJHX2ItNEQ2U1ZseVZySktramdMR3NvX2pSMkozc0RjVFMyeWZEQTJiRm1Jdw?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "22:47",
+  "fonte": "Busca - Quilombola",
+  "titulo": "São Mateus: capital por um dia e benefícios para quilombolas",
+  "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPUTF6TjBIRVhEejVULVZHSUlkWXk1SEpUdmhTTmlWRGd6SVhvQ2pqOFN3VHZ4Q09TUE1Yam9Va0l1QUFCbURWOThUYjdhOXRaU0pLUzN3aTlvbVpOWnI2Y015SnRkaG13OXc3MkJ5dlIzektJWm1McUNjZXByM19pNzJoVHlfZGExZTd6TS0zbllpSXNPdVJDZw?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 5,
+  "destino": "nota baixa",
+  "detalhe": "evento local pequeno: Título sugere ação local em São Mateus com benefícios para quilombolas, mas o resumo é insuficiente para confirmar o fato e o tema central; questão racial aparece sem ser o centro e sem detalhes verificáveis."
+ },
+ {
+  "hora": "22:47",
+  "fonte": "Busca - Cultura negra",
+  "titulo": "Escola Santa Efigênia encerra projeto Consciência Negra com desfile e apresentações culturais",
+  "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPS2JPTENCZkhTY1VGeTNzN241WE9ENW1XN3BxeGx1bGlMRy1KMXJnRjJYU3lRWnMyV1hYZFFoNnpzX3A4TldrYi1MdElfaWFsQlRXTmQ1aGl1aDZtQ2FPRGNQWkJOWVBTRzN2TjRYYWsyY0RBOFA1WHFRQW9BS0VJajhfN29HQ0NlUVJWREFybElUemVDcTM0TnZTRFB1N1JEMVpXTDJLRTRGSUZvbkcwUmxqcUNOTkVPVTM1Qnk0a2JzLVQ2SjNvS0h2am1NQQ?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "nota 7 deixou de entrar (regra de 23/11)"
+ },
+ {
+  "hora": "22:47",
+  "fonte": "Busca - Cultura negra",
+  "titulo": "FESTIVAL VOZES NEGRAS FORTALECE CULTURA AFRO-BRASILEIRA, ARTISTAS LOCAIS E ECONOMIA CRIATIVA EM SÃO BERNARDO",
+  "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNTEVCQWdSdWxLalpkejI4MWFQb0htTmNBck5RWEhodG1fOFZLY2hQVTBkaG9CUHktMU80MWdVMVY5b2JOQWN1alhHZlRjRzNTbnAzTGNWSEFGM0Rodm1WUmE3Y2x5c2QwVDNEUDBqRzNDWlJySjhIQXNOTHhhSnRzWjlsWmh0aG5hWHRSX1hVOVZJUGFxOVplZTZoM05WWVNLTXdWcjNpazY1NmFjak5GbTVod2lOSHJnaFdfd05fUjZyZjdnZGtGWGRXem9aZ2c?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "nota 7 deixou de entrar (regra de 23/11)"
+ },
+ {
+  "hora": "22:47",
+  "fonte": "Busca - Cultura negra",
+  "titulo": "Consciência Negra: projeto Roteiro Afro percorre diversos pontos da cidade e reúne 90 participantes",
+  "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOV3VEdkg5X1ozMmVOc2pRQndBU2w4aFhnNjY5Z3I5ME9TNWttUEg2NE9Qek1fV2U2TE9Kd2UxT0p6RG1Dak92V09ENWM5SjRGclREcFhJVDRaQUtuYnRQcDA3TV9MaGQ1Z1J6VjBfVE03dl9PbmdTZDVHV3hyR0hTRFhNeEc0TDh1Ujl2b25DQlppNUxWV04wcWxDSjNaanpadEw4cGoybHNpaDhJOTRhdm1EYm8tcUU1Wm1CVDVQVjhyVHZuYjU3blZyT2l4LWItY3NRMWF3?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "nota 7 deixou de entrar (regra de 23/11)"
  }
 ]
