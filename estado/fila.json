@@ -238,20 +238,22 @@
   "valido_ate": ""
  },
  {
-  "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOcGZ6ZkxPb19jemZ2MVVhWkZobEw5YmpVeXk3ZTB0YXI4eVZrdEtidUZyVkZiei1YVGkwYVZ4czZudTVMcUZiWEZLazN6MkV6QXhTVGVrQmtCaDIwY2JvY2ZwMDRycEhNeF9ERkg4V2xQRThkamNuYnFZTnh1TXJSUG5WQ0hPNkhYUUFrbk9PMG5xcU5WZTVkU2czSFZOMVI1WlFiY0lsR1VIYUU?oc=5",
-  "titulo_original": "Coordenadoria de Igualdade Racial ganha espaço próprio no São Luiz, em Criciúma",
-  "descricao": "Coordenadoria de Igualdade Racial ganha espaço próprio no São Luiz, em Criciúma    Linha Verdade",
+  "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNaWs3MXpNOGZlNFRoTkUzZm1UMmJ6c1lvd1JpeWgtTFdhV251RXpYN1V2ZlhfUE5RYnpiTko0NWJIcWJnVkV4aTdKZVU3XzdiLWIybzN3bXNqSHlTZEc4R3ZwNXFMVW1PZUxjLWI5RjlNd1BIaWRrVlVJQXlwYi13WEIzMG5Xb0hOcGRCNjA3THpoTWpGaFhTSDk3c3N3RWM5SUhnV3JiV0lzekZFd096Z3VtUm9mcmF2WVEtOTBXSlo1eFA2UTJqeXUzZ2RINGdNbXU0bkNGR0JrZFlvUnlHSG5OZWNhLVBPYko5VXJiV2hFZw?oc=5",
+  "titulo_original": "Após desfilar sob chuva em ensaio da Mangueira, Liniker dança até o chão em festa na comunidade",
+  "descricao": "Após desfilar sob chuva em ensaio da Mangueira, Liniker dança até o chão em festa na comunidade    Tribuna do Sertão",
   "imagem_rss": "",
   "imagem_banco": false,
   "imagem_trocar": false,
-  "fonte_nome": "Busca - igualdade racial",
+  "fonte_nome": "Busca - Liniker",
   "fonte_africa": false,
-  "categoria": "politica",
+  "categoria": "cultura",
   "prioridade": "media",
   "nota": 7,
-  "motivo_nota": "Espaço próprio para Coordenadoria de Igualdade Racial é política pública municipal de igualdade racial, ligada à Agenda Preta e à equidade; nota na faixa 7 a 8.",
-  "data_original": "2026-11-24T00:01:58+00:00",
-  "criado_em": "2026-11-24T00:17:25.880640+00:00",
+  "motivo_nota": "Carnaval e escola de samba (Mangueira): desfile e ensaio são cultura negra. Porém a matéria trata de festa e dança, com foco em aspecto pessoal da cantora Liniker; é notícia de carnaval, nota mínima 7. Não é repetida do portal.",
+  "ministerio": false,
+  "excecao_nota7": true,
+  "data_original": "2026-11-23T23:53:00+00:00",
+  "criado_em": "2026-11-24T00:32:29.269464+00:00",
   "valido_ate": ""
  }
 ]
