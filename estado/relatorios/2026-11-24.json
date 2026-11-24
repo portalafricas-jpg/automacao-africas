@@ -361,5 +361,104 @@
   "nota": 5,
   "destino": "repetida",
   "detalhe": "Mesmo assunto da notícia 1 (exibição de Sem Remorso na Tela Quente com Michael B. Jordan). Fica só a primeira; matéria de cobertura de programação, sem fato relevante para a temática racial."
+ },
+ {
+  "hora": "01:32",
+  "fonte": "Busca - discriminação racial",
+  "titulo": "Embraer é alvo de ação de R$ 209 milhões por suspeita de discriminação racial",
+  "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNWTc1YWVoY3hBSEFJYTJGUGdKRWR2VmdUYU9wbVVaUXhld1NQVWp6WFVXbWRITE5GUGpZUVg4UXgzalUwTG9yUnNvbnNYdlA0aU45cWZKUXN6dFJ6MklrQmxaZnNYWGxQZmhPSUd1aVVZQmNqNVpKOTFWa3hiOURjQkJtajJ4NzFMLWlzMzJfUnJuN0hENE1OQS04VDBSdW5JQnZSWVBNenQzTEt3RHJlU2JkOUJWMEd1VGpr?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "01:33",
+  "fonte": "Busca - Cultura negra",
+  "titulo": "Nova biografia revela como Toni Morrison alavancou a cultura negra editando livros",
+  "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNYnBDY29mVzB2cTFkS21HM3F5ZWdRQ1dtYUNZRWRQSERwdmdTV3dfS0hmUnBwWDAzc25ZS05GY0NlaVYyeWJvX1BWVEJ5dkF0bnZJUy1TM0FvVzZzQU1tYjBYY0xLUVhIM0pNdV9GVDBvajN3NHRDNWxXRFRPbk5xNzQwbjRrVWVzNXhYYnk4eUl5LU5SUWFuOGNzN0pHSlcyUWpVVUJDdjJTaDl5SXZsaURteFVzcUNwTlJnVVhySTFNZFRUaVF1UHk0UVQxdw?oc=5",
+  "categoria": "protagonista",
+  "prioridade": "",
+  "nota": 5,
+  "destino": "nota baixa",
+  "detalhe": "Trata de Toni Morrison, escritora negra, mas o título fala de biografia e atuação editorial; a questão racial aparece sem ser o centro e sem conquista nova clara. Sem fato urgente."
+ },
+ {
+  "hora": "01:33",
+  "fonte": "Busca - RTP África",
+  "titulo": "Este episódio não se encontra disponível",
+  "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE81WGk2enVEdmxyMmlNLWdsY1lKWDZDejdfeGI5cnV0T3ZkVVcyQVhsWmNRWWlxaG1LN0g0OERfTjJ2UTFWS19QVU9zRS1qeWdSNTI5eURqMl9faWZTc2c1aUJHYzhpbVNE?oc=5",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Título é apenas aviso de episódio indisponível; não há notícia."
+ },
+ {
+  "hora": "01:33",
+  "fonte": "Busca - Moçambique",
+  "titulo": "Cegid Inaugura Escritório em Moçambique e Apresenta Plataforma de IA",
+  "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQdXRQNllOdUd4YmZoN1gxdE5TY0xBMGdaVVQ3UHAtZGpfTEdNVWVuN3I0SUpORldwaEk3YzJRZTRVMHYxRnJvclNiVDJwSFJ0bUNpZi11djVNcFlfV1pVQkZPcTIxLU11UGNQT011UUh0SXB3WGlYWHZ2ZWxENi1EVVRfWG1NNDRucEp4WFNSdUR5Y0hyaVliRmF3SjlFWjlQSGc3WFJ6WGxPYUh5RXNEbWYwTDlibzZ3RVFBalFEWUxzR2ZuQWZKZUdn?oc=5",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "Inauguração de escritório de empresa de software em Moçambique; é comercial/publicidade corporativa, sem relação com a temática racial."
+ },
+ {
+  "hora": "01:33",
+  "fonte": "Busca - Samuel L. Jackson",
+  "titulo": "xXx, filme de Vin Diesel, deixa a Netflix em 1º de dezembro",
+  "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxObGtleWdzNTR1ZFFQakJ5eXA1VEMtVTU1X2tFb0h2cFZfV0hpQUt6WG5Qb05LYmpiNGh3TE1QdjFZVzJSeWdDMjJxTW5yUnpfSzhhRTZQallWTS1BWUZvZTFTZE9FMTZtOTY5VFI0bTkxZTdUSjcxc3l2dVBvdmtRS3hRRTg3SjB2RlpqUEdTWk5aOTVWU08yTmRB?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Notícia sobre saída de filme de catálogo de streaming; sem relação com a temática racial."
+ },
+ {
+  "hora": "01:33",
+  "fonte": "Busca - Moçambique",
+  "titulo": "+EMPREGO II: Camões, I.P e CTA Renovam Parceria Para Promover Emprego Jovem e Fortalecer PME",
+  "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQb1pieUEtUkxlQVJBN1M0bGNremh2ZmlERWU3RGY0aWNzR3I0VlBmX0VfOXQ2dU15VFY1YzBfSzBxVzNUN2RGWUphQTQ2b3pjWE5GWWJ3LTJuTllLMDZzWVBUUDFIcXZTLVpzOGVwOTZYb3dtd0xwYmJlU2RoTi1xakVBdWlmS3NzRi1pdUdSWXhBRXU3dVRwb3lqY19hTWNrM2V4YmctYUhYOUVoQllmbWdCRTFCSmIzLXVWTmNDMWFyVE9JZnktQjI2ZlY5NEJRaThLb1V3?oc=5",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Parceria de instituto português para emprego jovem; sem recorte racial e sem relação direta com a população negra."
+ },
+ {
+  "hora": "01:33",
+  "fonte": "Busca - África do Sul",
+  "titulo": "Criança de Taung, com 3 milhões de anos, novamente abala nossa árvore genealógica",
+  "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNNjVmRkFYQjk1c0lPNzVQLThNdzJucnEySGdyOXo1cHgwZ0JXeWFEbkVCaDgwOVhmQTR1VjRkNDREdEpXc21xeFBPVlpRQUtGYnRtQXFBLVc5NHFpN09Nc1RCSWpDNmxDeFRxZ3Nudi01WHJhRjczS29BVWptS2V3TEd2RDNCMjV0UkJiRjVwYmxaTXItZEpYMnA4TktaY3VCeE9vMnZDWmpNNk44OWZPVGJtRmp4LUFiRk5BdTh0dUZWU1p3cHA2Mld3?oc=5",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 4,
+  "destino": "nota baixa",
+  "detalhe": "Achado paleoantropológico na África do Sul; tema científico sem relação com a temática racial nem com a Agenda Preta."
+ },
+ {
+  "hora": "01:33",
+  "fonte": "Busca - Moçambique",
+  "titulo": "Multa astronómica em Moçambique: a manobra institucional que silenciou vozes críticas no país",
+  "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9adExoNGJEbnFqZUdraS1wREVSX0lmWWpzS250SFhNUTlzaWkwczNnOTM3UmVHODd0Wk1maDJ5S2VKRjJoQjBFdzdjbTBueVJJdmFWMGlZLVpYclRMZVRTdkFadUN2c2FqNUY2VlVfZGJvQmNrdmZ3b0FHaTlwZw?oc=5",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 6,
+  "destino": "nota baixa",
+  "detalhe": "Multa contra vozes críticas em Moçambique, tema de direitos humanos e liberdade de expressão, mas a fonte é de propaganda russa e o título é opinativo; sem dados verificáveis suficientes para matéria honesta."
+ },
+ {
+  "hora": "01:33",
+  "fonte": "Busca - RTP África",
+  "titulo": "Noticiário de 24 nov 2026",
+  "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1MTXdOV3dnZmNESkpVSi1lQ1BOWGlFSk12YlU3M090YXBqSW5wWFRaeEJlU2Q2QXJfc1o4YXQ3U3BoWThkclFwN3hLME92TnlodW14TThmUzlySGNOcUhEQU5qSzN6aUd4?oc=5",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Título genérico de noticiário sem fato específico; não há notícia identificável."
  }
 ]
