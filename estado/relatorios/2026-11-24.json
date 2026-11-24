@@ -1296,5 +1296,93 @@
   "nota": 1,
   "destino": "nota baixa",
   "detalhe": "Noticiário televisivo genérico sem fato específico relacionado à população negra."
+ },
+ {
+  "hora": "05:47",
+  "fonte": "Busca - mulheres negras",
+  "titulo": "Trabalhadores negros no Ceará recebem até 36% menos que os brancos, aponta Dieese",
+  "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPcWxsRE4zeXpQMC13OS1YUmVjaUtTaXNLMkY5dFJWQXRLY213TThpSWVSUkpRMXU1YzZ2X1djaUtCUGRMbWhzd1M2VEtLNFpKMEdFQUFGblROT2Zoelk0QWtHQlNoOHMyY0pvVFNmVWxEM0haMkdWeEZ0RWRmYWk2SFp2ZWhuZHNkMFAtckNrR0pkZmNxbGZSTTQ2NkNiSHdySVE?oc=5",
+  "categoria": "politica",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "05:47",
+  "fonte": "Busca - Racismo",
+  "titulo": "Jundiaí lança Procon Racial para combater discriminação nas relações de consumo",
+  "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNak5VN0ZaZTE3Y0piUjJOWXloSjRBclpmcktlSEVSbDRfblJQcjVXdzNaWVROZklKZ19CTnJjOXB2dWhVUUJNRWNPX3JBOVFHOWQ2VGpYNTNjSlBTRUZtV3pHcmxUR0VLY094dGxfMVRhYmZ1WTdXWHFpeXFnZXhVeGZURGliemZWS3dBU04zN1hyQzNRSXJrbkdpS05WN191bEZhMDVfQmdLTTBaSEpWN1dvOEhRUExiRnhz?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "repetida",
+  "detalhe": "título quase igual a outra notícia"
+ },
+ {
+  "hora": "05:47",
+  "fonte": "Busca - Cabo Verde",
+  "titulo": "Opinião de... Episódio 209 - de 24 nov 2026",
+  "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9idWUtdXlCSkdfbzU2NllmM2V2NVRsaVJFcTI5ajctdFBrLWxUOS05MFBkRDhkXzJMWk5hd0ozTnQ2dUo2NkJ5TVZCeVJlcGprejUyVHFWZV9OT3FSM2ZN?oc=5",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Episódio de programa de opinião da RTP, conteúdo opinativo de outro veículo sem fato novo; não é notícia."
+ },
+ {
+  "hora": "05:47",
+  "fonte": "Busca - Quilombola",
+  "titulo": "Rara na Amazônia, árvore sagrada africana terá 30 mudas em comunidades negras do AP",
+  "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOOW04eXpfLXEwT2k4cjhJa3A3cW9obW11a2FaaHJEaEMzakRLQ0JQSnNjalhaa1F5N2ZWdzZaLUw2ci1nWkZQVHVucjRhWl9aQlhwRzhITGdOVXZWcGFFTHVXQlQ1MDNSRUh2TTdmT19veHJnNU1tZFdpQXRkdDN6QTNQYnBsOGtJWGxfQ0tVU05jSUZTMEtOSlRkMG5icFVpLWQ4VTBCMGM0RTRiTGhjUEVNaXM0bUVHTjVOSDVxZmhpSGRid1dkY1Zua2dXazJLSlhN0gHiAUFVX3lxTE1DenUyNTkwNFMyUTh0N1RUdHN2WVpsYjhSYmVyQUFzSS1za05CWldvZndicHNEeUJLY3RJbW9FTXh3VXZ4bURlVE12QmRFSWlsbGRIUl9UdENaam91RUd2aGlueHdQNnVvSHBmbE9fYkY3V0YwdVFXVkdJV3dacDVqYnQ3dGNLQzZpZ3pqMTd5V1pJRTRaS3EzcktpaktEaUg3cmVEMDRHXzhyWEF6c1NBZVdjZnR2bnY5QkpjNktNMGc1QmRuS09fQlZiN1YtR3hzTTBBMkgteGE1M0dYZmNLN3c?oc=5",
+  "categoria": "ancestralidade",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "Muda de árvore sagrada africana em comunidades negras e território quilombola do Amapá, ligação à diáspora e território; nota 7 por eixo de território e tradição."
+ },
+ {
+  "hora": "05:47",
+  "fonte": "Busca - Racismo",
+  "titulo": "Alemanha apoia projeto de valorização da ancestralidade africana e combate ao racismo religioso na Bahia",
+  "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNQTc1YWdvdGxLcFlLTzhjTzIxMzBOcFVHWDVwRnlKMmIwTjZYQkJUZDlndUxpTHQ2X3VXeHh2TjdySS1ZNF9SSTdoQXgxQVRSc3djb3FkUHZoQS10aU1GMEg5LTJxckVKY0JtNXViR3pXakRfdXUtcGRnYThBRXp2Vnd0ZTZUanJJNERVandzWXhrNTl2TXg5QzdfYTR5UzI0aUpkRVg4UmNzcHhUdHdScmF0cDVyTEtBVnVMVEFTMEx2VUVLN2R3V3NzdF9VRU4wWXRpd0xLMWNIRVpPQ2h4RQ?oc=5",
+  "categoria": "ancestralidade",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "Apoio internacional a projeto de valorização da ancestralidade africana e combate ao racismo religioso na Bahia; matrizes africanas e racismo religioso."
+ },
+ {
+  "hora": "05:47",
+  "fonte": "Busca - Racismo",
+  "titulo": "Brasil e Costa Rica promovem diálogo sobre experiências das populações afrodescendentes",
+  "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOTFU3QTNDSWQ0LUMyUHF6TGFkd00yYVJrVkdhdWNDS1lPdFAtOXhuMXQ3bENkMzRHSExWcnB3SnFaSnM0THRZS1FkZ2VXOF9leEVYbWtDWHVEbW1HYi1WRFlRY0s0aUN6N1J0bEh6dXJoS3NOd3BTWHNKbWdoeUdqYlR3TmVfeUp3MF81WVZob2xPdTFDRWRqS0JzX3dmYndOOFR1RHB1VWFQNDBhdzUtR0llVlF6Z3ozWjlHekI4S1J3OXdHQ3U4bW1B?oc=5",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 6,
+  "destino": "nota baixa",
+  "detalhe": "Diálogo Brasil–Costa Rica sobre populações afrodescendentes; relevante, mas sem fato central forte e sem ação concreta clara."
+ },
+ {
+  "hora": "05:47",
+  "fonte": "Busca - Cabo Verde",
+  "titulo": "Miss Universo chega à 75ª edição com ineditismos do Brasil a Cabo Verde",
+  "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQTVl5d3hWMjE0YlVKWkVsODR2YTV6YnpmT3VmOEdCR1lLR3VMWkZnVkVuMkdLSnhHRHJSYmtZRFdtcFFuOWl3N1c1Q3drOEZmT2NzNDBLRU4xOHV6cHNyR0JVQnNmbm1ScHNtQmRZUlUzNjJhUjZBUDloWmtCelptcTdGS1drMVUzVjNWNF9uaXROQm93RzlKY01tQWotb3FRc0doSy1EUzdhVmxFdVBYVEpDdWNBUkNoR1BHZ2NpdE10WFU?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 4,
+  "destino": "nota baixa",
+  "detalhe": "Concurso de beleza internacional; não tem relação central com a temática racial e fica como entretenimento."
+ },
+ {
+  "hora": "05:47",
+  "fonte": "Busca - Quilombola",
+  "titulo": "Bocaiuva celebra Dia da Consciência Negra com valorização da cultura quilombola e da ancestralidade",
+  "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQU0IwRk5ibnc3UWtvOEpPU044QUJ5RzRnNEx0TXN3ZDMydEtXeF9RUlN2azRlZlNjVU0xaGhON25jcjh5UklhY2gxWF93OVRIcGJaWHBic1pLbm9tWEZ3Y2JqWlNndmo5MDJhUW15NmtYUm1fZkQtNDl0R2pBN0lmYTJ1QWNkcFBPNVhjSWJJX1FpdVZmYmt5dHBIRG9BUHBYc1FYY0xWWGdyV3M2R1BfTXd4aGxzRzFWVGo0SnA3TDNOdw?oc=5",
+  "categoria": "ancestralidade",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "evento local pequeno: Celebração municipal do Dia da Consciência Negra com valorização de cultura quilombola; evento local em cidade do interior, ligado a data da memória negra, nota 7."
  }
 ]
