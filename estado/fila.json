@@ -19,25 +19,6 @@
   "valido_ate": "2026-11-24T15:00:00+00:00"
  },
  {
-  "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPZ3RoUkJUaklUd042TlV5TnV4THFHV01YX0N3ZzlHUGU1V29hYUotTGVfeVpraVBIbmw1bFk4MFlTNy1uRlp1T3JMYWFnQTB1Z2V0S1lURmZqSlRRY3BlSlAyZlFLSk03OE5ndjVKTEM4b3ZwSDUwcERlRTRSZUtTVUtKa09QZ3h5Q1h4QWJWUUdSMFJXZDRiWmFVMFZocFJ5NU9obGt0RnV0aFVTTmR0bzA4TlNMdWl6cXlzaldTQmdWU3c1WHhXUjZWR3dJVlV5cGk0Q2doWnVRd0hQX05ubU9qYVcyVmdleFE?oc=5",
-  "titulo_original": "'Correndo atrás!': filme com Aílton Graça e Lázaro Ramos terá exibição gratuita em Juiz de Fora",
-  "descricao": "'Correndo atrás!': filme com Aílton Graça e Lázaro Ramos terá exibição gratuita em Juiz de Fora    Tribuna de Minas",
-  "imagem_rss": "",
-  "imagem_banco": false,
-  "imagem_trocar": false,
-  "fonte_nome": "Busca - Cineasta negro",
-  "fonte_africa": false,
-  "categoria": "cultura",
-  "prioridade": "media",
-  "nota": 7,
-  "motivo_nota": "Lançamento de filme com Aílton Graça e Lázaro Ramos, artistas negros, com exibição gratuita; lançamento de artista negro é notícia de nota mínima 7.",
-  "ministerio": false,
-  "excecao_nota7": true,
-  "data_original": "2026-11-24T09:30:07+00:00",
-  "criado_em": "2026-11-24T10:17:17.093726+00:00",
-  "valido_ate": ""
- },
- {
   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPWG9XUXJVRWFkclJXWTY2eHJUTjN3VEFLbXN4RTRwZkRPX09RSWZuR2xlLVlkQ1d0Wm1Ca1ZuZHJOX292clA1X2g1VVNJcU51S3FZNmtPWmdDbmlTTlc1RWxxbk1XUUxtak5oUU1PaW9lbHdmcE5ZUGY1ZF9MYkt6RVZZeDQxMkdGYXR3aE83cnNtRjJ4U1lSMWtmYmhJUjlJaldRdzl4MDdLQThwQ2Y1NWFqZ0thZw?oc=5",
   "titulo_original": "Deicy Sanches desenvolve filme sobre memória feminina apagada pelo colonialismo",
   "descricao": "Deicy Sanches desenvolve filme sobre memória feminina apagada pelo colonialismo    Buala .org",
@@ -244,6 +225,25 @@
   "excecao_nota7": false,
   "data_original": "2026-11-24T12:38:00+00:00",
   "criado_em": "2026-11-24T13:17:27.956008+00:00",
+  "valido_ate": ""
+ },
+ {
+  "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPcEZVZy10NWhpaTNMdEhoRm9uRHRGRFNYUk1OSVl0U0tLSUZocUZzRkpkZExGUVJOd3Vja1FJM01ac0RsUDNObEhoOEpsSlpEa3RSTkpxaE05MGl0a0pDNEh0bTdnckE5Wm1oUVZTeFB4MmdLNkVydWV4TVRjQ2kzcm5QRjlfWVBfZVI2RmdocWRhbVBfSzVRU2VadTBHdW5tbE5taTFaUzhDOGxn0gGsAUFVX3lxTE9wRlVnLXQ1aGlpM0x0SGhGb25EdEZEU1hSTU5JWXRTS0tJRmhxRnNGSmRkTEZRUk53dWNrUUkzTVpzRGxQM05sSGg4SmxKWkRrdFJOSnFoTTkwaXRrSkM0SHRtN2dyQTlabWhRVlN4UHgyZ0s2RXJ1ZXhNVGNDaTNyblBGOV9ZUF9lUjZGZ2hxZGFtUF9LNVFTZVp1MEd1bm1sTm1pMVpTOEM4bGc?oc=5",
+  "titulo_original": "José de Freitas realiza primeira edição da Feira Preta",
+  "descricao": "José de Freitas realiza primeira edição da Feira Preta    Portal R10",
+  "imagem_rss": "",
+  "imagem_banco": false,
+  "imagem_trocar": false,
+  "fonte_nome": "Busca - Cultura negra",
+  "fonte_africa": false,
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "motivo_nota": "Evento cultural negro (Feira Preta) em primeira edição; não há repetição no portal nos últimos 5 dias.",
+  "ministerio": false,
+  "excecao_nota7": false,
+  "data_original": "2026-11-24T10:59:58+00:00",
+  "criado_em": "2026-11-24T13:32:17.969531+00:00",
   "valido_ate": ""
  }
 ]
