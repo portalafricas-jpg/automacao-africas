@@ -1560,5 +1560,192 @@
   "nota": 0,
   "destino": "nota baixa",
   "detalhe": "Registro de sismo de magnitude cinco, sem relação com a população negra nem com a pauta do portal; crise sem impacto racial informado. Material insuficiente para matéria honesta."
+ },
+ {
+  "hora": "06:33",
+  "fonte": "Busca - IZA cantora",
+  "titulo": "Iza lança novo álbum e ‘invade’ o mundo do reggae",
+  "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNcnJXWFlteXVCX3hrellycUVZVkNpVXhsUUxCVUVoaHowMllYOHNrOWNxZ05wQkd6WlFjQXFKdnFLMUdDaWM4X0lKaTJtRkdmSDZiODFXdWNIN2tnRm5pZWFTa082UXd5eTN2T2dZTnlqREFtYWRKb0V0Rmw0WlhIemozQ1Y3LV9USVpIYVgyMDJUbWN1aWc2YlV2NmhnRVFSeXRkdVFIcGfSAagBQVVfeXFMTXJyV1hZbXl1Ql94a3pZcnFFWVZDaVV4bFFMQlVFaGh6MDJZWDhzazljcWdOcEJHelpRY0FxSnZxSzFHQ2ljOF9JSmkybUZHZkg2YjgxV3VjSDdrZ0ZuaWVhU2tPNlF3eXkzdk9nWU55akRBbWFkSm9FdEZsNFpYSHpqM0NWNy1fVElaSGFYMjAyVG1jdWlnNmJVdjZoZ0VRUnl0ZHVRSHBn?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "repetida",
+  "detalhe": "título quase igual a outra notícia"
+ },
+ {
+  "hora": "06:33",
+  "fonte": "Busca - RTP África",
+  "titulo": "Noticiário de 24 nov 2026",
+  "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9Vak14UnpoamZ3QlZRT0hTWjZzN3BEelFsbVM1WU41N1h3aHhES28wVDFzbXN0TUVWMm9zdU5rQWlxRllqTm9LNXBUTWFzalFxbVl2OUpwVGtRejZwSUJMaHlhRjBMRHVv?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "repetida",
+  "detalhe": "título quase igual a outra notícia"
+ },
+ {
+  "hora": "06:33",
+  "fonte": "Busca - RTP África",
+  "titulo": "Episódio n.º - Parlamento - Informação - Entrevista e Debate",
+  "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1ITHoyUmY2cUFWRktOTlM2VEN6a1VqSC1tdGwwYnVyTjNrQkdTSWdiLTlwd2JZNmp1YU5BU3BNWUgwVTZNVGhKYnB0YTNKcm9xb2Nz?oc=5",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Título genérico de programa de TV (RTP), sem fato sobre população negra ou temática racial."
+ },
+ {
+  "hora": "06:33",
+  "fonte": "Busca - RTP África",
+  "titulo": "Madeira Viva",
+  "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBYT0RwVUxUMk1JZVJzXy15VXdwSFV6Z19XclZPa1dtVEVQU3c5ZFBYSEFnSzBmMG9uUUJVWnRUaUQxaUN5UjZ2VTlZQkNfeFlTMVAyQg?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 1,
+  "destino": "nota baixa",
+  "detalhe": "Título de programa de TV sem informação suficiente nem relação com a temática racial."
+ },
+ {
+  "hora": "06:33",
+  "fonte": "Busca - RTP África",
+  "titulo": "A conquista do futuro - Uma História de Autonomia - 50 Anos - Documentários",
+  "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE85R3oteUZlTU0zclA3a3pMTDMya1dlblBXY0xlMFhydGEtZDVFQ2hqbnNTVGVGTWI2Z3M4OGw3WlgwYzAzOVY1dWtsSTdJNHBOZXc?oc=5",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "Documentário da RTP sobre autonomia; sem fato noticioso concreto e sem relação clara com a população negra."
+ },
+ {
+  "hora": "06:33",
+  "fonte": "Busca - RTP África",
+  "titulo": "Bom Dia Portugal de 24 nov 2026",
+  "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFB3X0ZLdjNyYXl1OG1KMGg5c1FJX1A1VWRsR21GTFBEVFVSMmczdzZoVVdZdnVUSXdRUElXcmNsTHdvZ0cwYzZSbnJsVzhqYmpRMlNXd1I0NDNpY0JFeWxFSWE5ZlduQQ?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 1,
+  "destino": "nota baixa",
+  "detalhe": "Programa de telejornal matinal, sem fato noticioso relacionado à temática racial."
+ },
+ {
+  "hora": "06:33",
+  "fonte": "Busca - RTP África",
+  "titulo": "A Minha Lancheira",
+  "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1LSzhmb3MweTAza1U0c1NkZGJXZGxaSjZEUThlMHp3am1jQlY2dUtmdjZOR0dsVzhRQmxDZHprNEQwQ1V4dUwzTWFuT1hEamx1UGYtR2NjQmlXbFlkUUc0ZDhIWUw2WE5lNDF5SDhGNkw?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 1,
+  "destino": "nota baixa",
+  "detalhe": "Título de programa infantil de TV, sem fato noticioso relevante."
+ },
+ {
+  "hora": "06:33",
+  "fonte": "Busca - África do Sul",
+  "titulo": "Benfica: Nycole Raysla assistida no Hospital de Braga com corte na face",
+  "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNX2o5OHlvUjBWS1ptbUpFVW52bUZmTkxRWWp4TVpUeUtXVzhNNUVNd0JSTENycTVnVjJFdWJvWURad3hKTlVpSjNmVlI1cTFWSlgwbUVxUjVHU0FKM3ZlWXFJZEl5cXV5WDFaMnU0cGxMV21qOWtwdG1fM05tdG1CSkoxU192V1FGSi1uanFPZlZHWnFYcnhTYmVpZk45Nkk?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Notícia de esporte (ferimento de atleta) sem relação com a temática racial; esporte africano fica de fora."
+ },
+ {
+  "hora": "06:33",
+  "fonte": "Busca - Moçambique",
+  "titulo": "Moçambique. UE prolonga missão militar de assistência até final de 2028 com 17,17 ME",
+  "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQN2ZyNHBuZVZjQ0I1TUViOWlmQzV0RExVM2NhZVJYUnhuY3doWi1oVFJUWHdDbDlWN0c0MnlpaHUyVTI2ejZPTldONzZWMVBjVFZfOHNhbVNyTjNwbjBxcWJYRjlRTDFwNWtsWldLVktTMXNWZFgzT2xZdkRYM2hUVHl4VWR3SmROT2lXR3hvb21DVmkwYmZvM3V1YzZ1T3BncEhuclpCcFJBNDVTaWdpU3psTHB6Q1VYWHhScW1GYUxUYjNDS25EYQ?oc=5",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "Moçambique é país de língua portuguesa; decisão da União Europeia de prolongar missão de assistência militar é de interesse do leitor brasileiro, nota 7 para notícia internacional."
+ },
+ {
+  "hora": "06:33",
+  "fonte": "Busca - Moçambique",
+  "titulo": "Farmacêuticos lusófonos debatem desafios da profissão em Maputo",
+  "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNSENyUjdhZHRKYk5rTHhsWlNxT0M0QjdmcUNRMURXR3g5RFJSOGZqSTJvdWgzeXdRVlc4NmdaU05iNGRZY1lHWGNOWk9JbXhNWi1TRXpqZlJHaDBsRUxKWnU2OTlRbkpSTDJZblIxVDhYdDlCa1BCVWtQZ0hQa0tTRVhZUUZnakhac2lvZUs3WVZUNWJMOXRXMHdkZXEzdw?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 4,
+  "destino": "nota baixa",
+  "detalhe": "Encontro profissional de farmacêuticos lusófonos; tema sem relação direta com população negra e sem fato de grande impacto."
+ },
+ {
+  "hora": "06:33",
+  "fonte": "Busca - Moçambique",
+  "titulo": "Chapo desafia Banco Central a reforçar medidas contra especulação na venda de divisas",
+  "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNWlkxcU5BaTJiWG9XdlJabGJkdjM4SkkzRFdvRk1PekdXMmJacFRUZlFHRWFvTkF0Vmh5N256M3JZTnJSUHNyRUYxM28tVHdHcjh6YUZvVjZVaU5oTEltUHVSd0NteTd1TnBHMDh3ZVZ0ZnVIOGpYNlJoU0pxQ3gzUHZxZ2o4UVhONDZzNklXN0V0amNldjN3c0std3p2NkJ3VVNkZ3prSWpTTHJocGpsMkRrMDR0bU1YNExnVWRmM0dadlBBQVFmUUtLd2Q?oc=5",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 6,
+  "destino": "nota baixa",
+  "detalhe": "Economia de Moçambique (país lusófono) sobre especulação cambial; interesse para o leitor, mas sem ligação direta com a Agenda Preta e sem conexão com o Brasil."
+ },
+ {
+  "hora": "06:33",
+  "fonte": "Busca - Moçambique",
+  "titulo": "Acidente de viação na EN1 deixa cinco mortos em Cabo Delgado",
+  "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPanNja2FoWHNBeWxTdGU0UFEzMGdXV0M2aldOVm1DcGVmMThVUHgtSkFUMnlwaXNRMjBqTXRZbGZxY1JDR0dpS18tT0FvT1JZU1Bpc1A0TktqdW9aeDRxeW5OVnpDMUVpRGpBc3hWWE83QzdPWDFXcjZoWGl4bFVNNEZ4MXFjUGZ3NFJDU0NLQVVHZDc3R1c1QjJGdGc?oc=5",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Acidente de trânsito local sem relevância maior; crime ou acidente comum fica de fora."
+ },
+ {
+  "hora": "06:33",
+  "fonte": "Busca - Cultura negra",
+  "titulo": "Pedro Leopoldo celebra Dia da Consciência Negra com programação especial",
+  "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPLTd0ZkNncWwtZk4wb2h3ODFINlh0NExsVFBfczVxMl9MMjJrZS1IYlUxUTFqNmVST2NtMVFQbnNMOFFNMlp4TkFGUXg0dVpPNXp1aFJLYlBnTlJ6ZVZYeUR0OVEzY09nR3lJQVRBLUpvOGRpQUFhc2RFRHBOZnBMSV84WTZjdUd5ajhCWlhrT3FzTDlCclo4M3F2QmpGX0RBU0RnM1JQaw?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "evento local pequeno: Programação do Dia da Consciência Negra em cidade do interior; evento ligado à data da memória negra, nota 7, sem personagem ou fato relevante."
+ },
+ {
+  "hora": "06:33",
+  "fonte": "Busca - Cultura negra",
+  "titulo": "Feira Literária em Marataízes celebra cultura afro-brasileira e homenageia Maria Laurinda",
+  "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQU3FmWnhLZG1YdUtVV3plRElsTkNVb0piUkxQSlpCMFZtV0dmbmd1VXlZRFhCcDA3SVh1aVgzTm5Icm9uNEVOQ3haZV80VmVXQktmMVg1T0g5V2VDb3U4SEFBMHEtVmxjQV83bVQtcXVrUE0tSEM0MEFjdldPU3g3U1JvWDhlaU5vS2x5OThDRzh6SnU1bkh2VTdyN1RnUDNXNVBSa2UtZG14dzhlNkpUY2dmV3lZZw?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "evento local pequeno: Feira literária com cultura afro-brasileira e homenagem a Maria Laurinda, em cidade pequena; evento de cultura negra e literatura."
+ },
+ {
+  "hora": "06:33",
+  "fonte": "Busca - Moçambique",
+  "titulo": "Diretor do INS de Moçambique eleito presidente da IANPHI",
+  "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNb0hkWm1sdUtUOUR4R3pCaGhsOWwyd2h2RnhQSmROcFN5UGVzb05RRUJFdUdEZER1YV93YTBrVDNRUUhsQnhfMTZ1ZWFESGw1RFJxR29MeDRDYVhPZUY2Z0VsbXE1WEc3Zm1qam00UXYwTHhpR0l6cXRqOFgzRE1IYUgyRVU0N0JFMTBfSzFnbUJIa0ww?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 4,
+  "destino": "nota baixa",
+  "detalhe": "Eleição de diretor do INS de Moçambique para presidência de rede internacional; ato institucional sem impacto direto para a população negra brasileira."
+ },
+ {
+  "hora": "06:33",
+  "fonte": "Busca - RTP África",
+  "titulo": "Noticiários RTP África de 24 nov 2026",
+  "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5aNUdtUjV2MGU3UmtXN0dmQ0hUU1JmdXRDLUNUVUxxLU1INmtkSTBnNXZqZG4yUk5TUVYzUk5SeXhVdzY0XzdYaHpGdTRXbGg3NW0yNkZOYmU5Wm4zbGZSZ1JURnV5NVdqdFVVRg?oc=5",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 1,
+  "destino": "nota baixa",
+  "detalhe": "Programa de telejornal da RTP, sem fato noticioso específico."
+ },
+ {
+  "hora": "06:33",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Adão de Almeida destaca importância de dar voz às crianças",
+  "link": "https://www.giranoticias.com/politica/2026/11/32769-adao-de-almeida-destaca-importancia-de-dar-voz-as-criancas.html",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Fala sobre crianças sem fato relevante e sem informação suficiente para matéria honesta."
  }
 ]
