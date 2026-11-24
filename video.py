@@ -367,7 +367,7 @@ def legenda(escolhidas, semana, agora_sp, turno="noite"):
         topo = f"☀️ Radar do meio-dia: as notícias pretas desta manhã de {DIAS_SEMANA[agora_sp.weekday()]}, " \
                f"{agora_sp.strftime('%d/%m')}."
     else:
-        topo = f"🎬 Resumo do dia: as notícias pretas que marcaram este {DIAS_SEMANA[agora_sp.weekday()]}, " \
+        topo = f"🎬 Resumo do dia: as notícias pretas que marcaram {'este' if agora_sp.weekday() >= 5 else 'esta'} {DIAS_SEMANA[agora_sp.weekday()]}, " \
                f"{agora_sp.strftime('%d/%m')}."
     lista = "\n".join(f"{i}. {p['titulo']}" for i, p in enumerate(escolhidas, 1))
     tags = "#ÁfricasPlay #NotíciasPretas #CulturaNegra " + ("#ResumoDaSemana" if semana else "#ResumoDoDia")
