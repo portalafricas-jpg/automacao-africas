@@ -889,5 +889,60 @@
   "nota": 0,
   "destino": "nota baixa",
   "detalhe": "Noticiário genérico de telejornal sem fato específico nem relação com a temática racial; não é notícia isolada."
+ },
+ {
+  "hora": "04:18",
+  "fonte": "Busca - mulheres negras",
+  "titulo": "Representatividade e desafios na maquiagem para pele negra ganham foco no setor de beleza",
+  "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQS200ckdJTDZDa1Q1dHNJRlAtRXBDTkd2U08wLUM1bkZ0RDMxdHRLNDVidG5OcFk1THFjdWtyUEdJZUhIbFFteEJxT3hOZTB6Ykw4QW5ZVU9ETENrTnBJUUlJWUFDcFY2R1pyM0RtRkQxTjFMVFNfTzQ0a3c4TjczUVg5OW10bHc2ZlFzNVRGVWg1WGdtQzduMFVyM1JKM2VSOTRWWGdfaDRlQ1ZNWjVqUmlRY1RmZmZKeWJLMQ?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 6,
+  "destino": "nota baixa",
+  "detalhe": "Matéria sobre representatividade e desafios na maquiagem para pele negra no setor de beleza; a questão racial é tema central, mas não há conquista nem fato relevante de pessoa negra nem lançamento."
+ },
+ {
+  "hora": "04:18",
+  "fonte": "Busca - Angola",
+  "titulo": "Obras do novo Hospital Geral do Uíge atingem 37,65 por cento de execução",
+  "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPQXZNZmlNZmYyOENSMjV2dGJ6bi1OTkdYSVk1UEpPbkM3bTQyd0FvRG00QUZFZEdRYzV2SUJPVm92NFZLQU9vNEVmb1dhLTNITm15QlM5UE91a2NjREZRV25GaWdtSUxJbEZvdWszaVNPaDRyeE01cGpoQk5TUmJzYlozejJMakNOYTJjMk5QVkptS3ZrQkJzRjV0TGJsTDhFdzVxdWhBUHU3Y001eXdFTXpMd0lDYlBYTzV1MnZPVW9uRHU0Q3RIX3JYVlMwbjFqSE5UTEJuTkhxOXV4?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 5,
+  "destino": "nota baixa",
+  "detalhe": "Obra de hospital em Angola com percentual de execução; sem ligação com o Brasil, sem recorte racial e sem fato de interesse para a população negra brasileira. Abaixo do mínimo para a seção África."
+ },
+ {
+  "hora": "04:18",
+  "fonte": "Busca - Pantera Negra 3",
+  "titulo": "O retorno de Luke Cage expõe nova disputa interna por controle das ruas do MCU",
+  "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE02dkxTbHhRMFF2T2lXYnhSdFpkNEtkdXJUaWs4bWxvdkRISUNpaVoxVDBUVEFmcnNPSDR2OVBCWEhkeGdmODV6ZlFZQ3hldk05NmN4aXNsUGZudEY0SXVXaUF5NGIxNHBHVXBIeEJqdzZUamFlN2oyYTVB?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Notícia de ficção/quadrinhos sobre personagem do MCU sem relação com a temática racial."
+ },
+ {
+  "hora": "04:18",
+  "fonte": "Busca - diáspora africana",
+  "titulo": "BRASILIANAS | Exposição 'Arquétipos Afroindígena', de Josafá Neves, ocupa Museu Nacional",
+  "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOMnVyazRNOHBvMnVWN2k2aWVma3IxRjNBakxRRUlxZzVHYjNoaUZIS2FCTlRDeDc4ZVRtZTNIeWJpamcwSVlaUHhmdWRBRjlhQzlHaHprMnNTUUFCUWIybWxLeWFOUGxDdnZ1WHNraFFiMzVSdjlHeFVZa2dIcVBsMmZVdzJGWTZaZHhHVHU2UW42XzBTU1hJcU4wT0YzaFd2LTZWemxZV3BwcGh3aDhyVFlVN3JtUm9Tc1hjQ3YtMjlGZEx1V1h6VEpjR19BLXlOcm5jck9nZmpUQlVWcVVNWDZpU2dmY19BRUQxeWl2Q1Y?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Exposição de artista negro (Josafá Neves) ocupando museu, lançamento de artista negro com obra sobre identidade afro-indígena; nota mínima 7. Veio marcada como fonte África, mas é evento brasileiro com interesse para o leitor."
+ },
+ {
+  "hora": "04:18",
+  "fonte": "Busca - Cineasta negro",
+  "titulo": "Consciência Negra: além de novembro, diretores indicam obras que desafiam estereótipos e ampliam a representatividade",
+  "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNWUt2Ukw3Rzdxb0NPN19GWkloclZHR1Q1MFAyaVNOQWxTMDB2N2NyeGwtaENjUUpEUHgyQ0lWbEt0LVZLNUFrN09yZG9BcTE1OTNybDFzX0ZBeEpfeFpaSW1mX194WFgyUldXTDhWSHJJczFFbEFSZ19obFA0ZEtTdFhqZXlqX3pHd09aczZiZGdlZE5BRnJVMFl3ZVFnalV1Wi1BelpRZkZJQ21aZTBVX0RkYkxqY1NRbGpiRjl3WUtlaFF5OV9hZ0FFSU9VelY1TFZ3YkZqR25vU0x1ZGYtZGE0WQ?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 5,
+  "destino": "nota baixa",
+  "detalhe": "Recomendação de obras por diretores sobre representatividade; a questão racial é o tema, mas não há conquista de pessoa negra nem fato novo relevante. Matéria de lista/indicação sem lançamento."
  }
 ]
