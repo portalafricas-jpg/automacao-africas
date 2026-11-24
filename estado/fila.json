@@ -1,24 +1,5 @@
 [
  {
-  "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPTU8zN1U1aEVnR3RETVRWTkt1eWhBbThYLUgwVkFuMWxSUnVsMVFPZmdvX3lFRUxHM3dNQnpVQV9ua1ZSbUdqU0poZF9Pd20yZ2p5ZVNTWklkVEI1X0pFT1FJT1dxWUVLSkZERjJVMW9yWS1pZEpKb2thUXBQbmtuel9ILWRFUUFobzlES3RzV0ZQTC1uM3czcFNsYm94eXVZbDlqbWkyUmtaNi1jaWVXdUhLSHlHTmFmanc?oc=5",
-  "titulo_original": "Mato Grosso conquista 2º lugar nacional em educação quilombola, aponta MEC",
-  "descricao": "Mato Grosso conquista 2º lugar nacional em educação quilombola, aponta MEC    Muvuca Popular",
-  "imagem_rss": "",
-  "imagem_banco": false,
-  "imagem_trocar": false,
-  "fonte_nome": "Busca - Quilombola",
-  "fonte_africa": false,
-  "categoria": "cotidiano",
-  "prioridade": "media",
-  "nota": 8,
-  "motivo_nota": "Educação quilombola com 2º lugar nacional segundo MEC; eixo de educação e território quilombola.",
-  "ministerio": false,
-  "excecao_nota7": false,
-  "data_original": "2026-11-24T12:08:08+00:00",
-  "criado_em": "2026-11-24T12:47:15.377085+00:00",
-  "valido_ate": ""
- },
- {
   "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQOXNKOF9PWXZ1TWdqV3JtUG14WWVJVXpjTGVZcGRSZW9VdGJRWDVqX0ZXamJ2NDRtQ2FPeHlLbktZcUlhWmU2SjRobWczZ2VFUzRmNzlfa2pwTXMyRWhzSHNJU0RabTJ1Qk01Q0lCeFU2M2N1MEh4emFWTGppMUNraUNOYWRyYXlsV3V0aWdOcThNMmlFRnFTMWdIM003T1d6dW1qczNmZmxmbl9LdV92TzU4YkRJRW1RTTJxMl92VGVKbEwydEl6V3RqckJ1cmFtOHEyZ2ZsMA?oc=5",
   "titulo_original": "Câmara pode votar projetos sobre saúde da população negra, educação e proteção às mulheres",
   "descricao": "Câmara pode votar projetos sobre saúde da população negra, educação e proteção às mulheres    Agência Tocantins",
@@ -319,25 +300,6 @@
   "ministerio": false,
   "excecao_nota7": false,
   "data_original": "2026-11-24T15:58:44+00:00",
-  "criado_em": "2026-11-24T16:02:15.789985+00:00",
-  "valido_ate": ""
- },
- {
-  "link": "https://noticiapreta.com.br/violencia-domestica-matou-cinco-mulheres-por-hora-em-2025-mulheres-negras-sao-maioria-das-vitimas-de-feminicidio-no-brasil/?utm_source=rss&utm_medium=rss&utm_campaign=violencia-domestica-matou-cinco-mulheres-por-hora-em-2025-mulheres-negras-sao-maioria-das-vitimas-de-feminicidio-no-brasil",
-  "titulo_original": "Violência doméstica matou cinco mulheres por hora em 2025; mulheres negras são maioria das vítimas de feminicídio no Brasil",
-  "descricao": "Relatório da ONU aponta que 47 mil mulheres e meninas foram assassinadas por parceiros ou familiares no mundo. No Brasil, mulheres negras representam 65,1% das vítimas de feminicídio, segundo o Fórum Brasileiro de Segurança Pública. Cerca de 47 mil mulheres e meninas foram assassinadas por parceiros íntimos ou outros familiares em todo o mundo em […] \n O post Violência doméstica matou cinco mulheres por hora em 2025; mulheres negras são maioria das vítimas de feminicídio no Brasil apareceu primeiro em Noticia Preta - NP .",
-  "imagem_rss": "",
-  "imagem_banco": true,
-  "imagem_trocar": true,
-  "fonte_nome": "Notícia Preta",
-  "fonte_africa": false,
-  "categoria": "cotidiano",
-  "prioridade": "alta",
-  "nota": 9,
-  "motivo_nota": "Dados de feminicídio com mulheres negras como 65,1% das vítimas, segundo Fórum Brasileiro de Segurança Pública; violência contra mulheres negras, pilar de luta e impacto amplo.",
-  "ministerio": false,
-  "excecao_nota7": false,
-  "data_original": "2026-11-24T16:00:00+00:00",
   "criado_em": "2026-11-24T16:02:15.789985+00:00",
   "valido_ate": ""
  }
