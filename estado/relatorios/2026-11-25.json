@@ -894,5 +894,83 @@
   "nota": 0,
   "destino": "nota baixa",
   "detalhe": "Esporte africano (futebol de praia), fica de fora pelas regras editoriais."
+ },
+ {
+  "hora": "07:18",
+  "fonte": "Busca semanal - Erika Hilton",
+  "titulo": "VÍDEO - Erika anuncia saída de Bilynskyj da Comissão das Mulheres: \"Vitória das brasileiras\"",
+  "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNVlZUb05jTGIzYVZRWE1Dd0NzRjJ2WHFiVTNDdGlqbFNvdGF6TDF4b3hpTW94NG5Vbjg3OVZ6ZlBtMG0zUk1GZDNpQ0x1TXBCdEMtTjBnM0M3cFVRVkxROGNqTmNhVjUzeFhkVmFLeU11SjhLRDVWSDcwcGQzdEFieVJmUTlSb1NyVVZvWU5yUnp1MjlBT08zZzBKT3lTemJGUUNrVVhCcTVkeEhRYy1LaGRkeDhzVGtoMTRVV2JXbjJXd2FpcEw4Mg?oc=5",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Assunto político sem relação com a população negra; a notícia trata de disputa na Comissão das Mulheres, sem recorte racial."
+ },
+ {
+  "hora": "07:18",
+  "fonte": "Busca - mulheres negras",
+  "titulo": "CNPq e Petrobras lançam 1,5 mil bolsas para alunas negras do ensino médio em ciência e transição energética",
+  "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOZjltS0NNNUZteFQ2Rll1MGxQM0pvbjRybG5uVzd3V1ZwcDhpUWFPLUlLN0RiT1pwRmJHZUxKVjZpRHFUbjFLTlhmdWZpanl2cU0xdjltcmhXZHpFZW4yLV9WTEFEYnU1bHFXaHVBLWNzRWxKNXMtRjQ4UEtzejBFUEVGMDhyV3dnbGdXSmdCODR1TFk1QVNscmNEN1hheGU5bXhmcVk1MlBlaDlOQUVPdkwwYnltcUFkT1h4M2ZGZHljdFZSclk3VzBxaWtvcVl5T1hFczczaw?oc=5",
+  "categoria": "protagonista",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Programa de 1,5 mil bolsas para alunas negras do ensino médio em ciência, ligado à educação e à equidade racial; fonte oficial (CNPq e Petrobras)."
+ },
+ {
+  "hora": "07:18",
+  "fonte": "Notícia Preta",
+  "titulo": "ONU alerta para riscos da inteligência artificial e pede ação global",
+  "link": "https://noticiapreta.com.br/onu-alerta-para-riscos-da-inteligencia-artificial-e-pede-acao-global/?utm_source=rss&utm_medium=rss&utm_campaign=onu-alerta-para-riscos-da-inteligencia-artificial-e-pede-acao-global",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Alerta geral sobre inteligência artificial, sem relação com a temática racial."
+ },
+ {
+  "hora": "07:18",
+  "fonte": "Busca - Cineasta negro",
+  "titulo": "Diversão na Black Friday: cinemas oferecem meia-entrada e parques têm descontos de até 50% em atrações",
+  "link": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPcWh2eU04QVptbjVWRmJ0Yy1qcUkyUUJTMThHaTJ6ckxpaU01OC1OUGhnQkdPUHhsOXY4ZzNoRV9nYS1NWHZiQ3JNbUFKem9xSzBFZHE1WWs0andHNkpGS3ZBOU9OZXE3dW9oelpTLVBEb0UxcFVpc1l6N1UxRmN0LWk4TU5Wb295R1pMMlFkbkdLRGc4alRXOGFoWXM5S1JwVl9PVlp2UlBPNE1IUzJpNFk5a0UtaTJtOURPS2hZczdXVmZVVFFWTGlVY2hsZXV6X1l5elExTGVKSGNIalpiOFVfMGtDUDNBdERnc3RxeGQ4MWR0NHc?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Conteúdo promocional de descontos na Black Friday, sem relação com a temática racial."
+ },
+ {
+  "hora": "07:18",
+  "fonte": "Busca - mulheres negras",
+  "titulo": "Exposição Sertão Quilombola apresenta a riqueza cultural das comunidades negras em Pombal",
+  "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQLXowMl9LM3dGM3N6anJNYlVCVmRnQ09iTU12Yk5TQzVYckY4aUFKdWd5WUd5R2tUZXFtME0wdGExTnV5Y2t6Y2pzYnFkNllDb2dJU25qMjZRZjN0SFFzbzZYNmJHa2lrVGRMemoyTGdhdTZpVjlFSnMxWm5HRlB4MzE5THdRWVc2ZFJ3UzJnOTl1YlEwWW8waEhnTUpqU3V3dDhoa21SSlE5cHdYeTF2NmpuYXpTY1gxRkFCVFoxWDFORWdjSnc?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "evento local pequeno: Exposição sobre a cultura de comunidades quilombolas em Pombal, evento local de menor porte mas ligado a território e cultura negra."
+ },
+ {
+  "hora": "07:18",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Adão de Almeida reitera compromisso com protecção dos direitos das crianças",
+  "link": "https://www.giranoticias.com/politica/2026/11/32782-adao-de-almeida-reitera-compromisso-com-proteccao-dos-direitos-das-criancas.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Declaração protocolar sobre direitos das crianças em Angola, sem relação com a população negra no Brasil nem fato relevante."
+ },
+ {
+  "hora": "07:18",
+  "fonte": "Busca - mulheres negras",
+  "titulo": "CNPq e Petrobras lançam 1,5 mil bolsas para alunas negras do ensino médio em ciência e transição energética",
+  "link": "https://www.rcwtv.com.br/noticia/cnpq-e-petrobras-lancam-1-5-mil-bolsas-para-alunas-negras-do-ensino-medio-em-ciencia-e-transicao-energetica",
+  "categoria": "protagonista",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "publicada",
+  "detalhe": "CNPq e Petrobras lançam 1.500 bolsas a alunas negras",
+  "foto": "Foto ilustrativa: Felipe Gregate/Unsplash"
  }
 ]
