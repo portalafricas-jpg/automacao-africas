@@ -383,5 +383,49 @@
   "nota": 8,
   "destino": "venceu na fila",
   "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "05:02",
+  "fonte": "Busca - Teatro negro",
+  "titulo": "Coral Negro de Curitiba leva espetáculo sobre Zumbi e Dandara ao Teatro Guaíra",
+  "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPdkJWellNRl9kT0RWTGtjcmp4bkhxODNqNW93TF8wbWhtWWFVZ3FhUFF6Tkw4TjJiUmhSZUEydlpacndwalV1Tm9JRXpSRjlObzQ5d013SEZOejJSQXVaQVBJQUVwWUZtdEVzV2ZuQTdabHl0RU55TnZsaW5kOHpkWlpPcXdfZnEtanREVC1IUUVKQ1ZyajhjdDhrTmtaOUxIa0pUN1hYNkg?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "05:06",
+  "fonte": "Busca semanal - Djavan",
+  "titulo": "Djavan, Chico Buarque, Martinho da Vila e Dorival Caymmi: quando a MPB invadiu Angola em 1980",
+  "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNNlF4RVo4TEFDeldrQ1BaMGlrbGRlZ3J0SDhmNm5BUnlZM0hKMkhkeTVLcGtUdDBmSV84ZE1qck1vQlVYOWlwLWNrNEFNY3RwazlCUGRISlpjUXhKU2MxNGhSeFpERzh4cFJlTWZOdkRjemlJbFYtZGx1a1hSUEtDaFFVQUVvZkdrN19mWVpHVnR0LUZXTlRUOVNYV0JKVDVhWTRuMmM3VnY2bmcwWGNBN01BZm1pNXB4bVR2dnVCMFVseXpyc196RXJhZkJfU2xYV01Fbml2RHRJY1g1SlhMVUVqOWU4RTdHNTBn0gH6AUFVX3lxTE5LRFBydnpERmlRc21DRVNGcnVRbTN2ZzRPRVZjYlk4dEZyMEJ4ak4zQkhEZ3RjNk93MHVNYmp2dk44YzFFVloydFdoOHRDVnB2UVR0SG16YmJ1Z2ktTGl0c0FKN2x6SU5jOEZOWTFrMldWZ3V5cW5MMHpsdy1oQjVIRUJkSGdwTGJjeU9qMTFnRTFVZ01xY1daQVNmMXVEbG1vaTcybXF6OU1RNzg2N3dGQ2xwNkZSS2hnZ0o5X2tMWlpDbDJRWjRUSVktQk1MTDNZd1dxZl8zeDZXbzA2TFA1V3REVlF2a2xmMGVhQm1ZWGlKVkF4dVF0NGc?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "repetida",
+  "detalhe": "título quase igual a outra notícia"
+ },
+ {
+  "hora": "05:06",
+  "fonte": "Busca - Literatura negra",
+  "titulo": "Pesquisadores brasileiros em Portugal sofrem atrasos nas bolsas do governo",
+  "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPWVhKZ2ZieFBIbDNDTGFYWFFHYVJGZ1Zib3phTFlGSkYzbVNFUmoyQXl5WjQtNzhTQWJOcVNYMjcwOWZTWG4zakdjLU0wUmxwaV9aWmdNQ3N6WC1XTWNCclFUaGhqM0hwNVdUcWJWMVhpMEl2ZGdxc2RuLTBDSHQyVGZNNzBNQUtHNGhWek9rQlFxX0VhT29YQzJ5SDdOY000eEJiZUZQRllfaU1UQm02eTVWLWMwa1N0b3pZRjZ2NnFGSkhUdllhRlA5bWNGb1Q0X3p6N9IB4wFBVV95cUxQbmFING40Z09aZGZCVE1SSEhzZWJJSlQ5dlV6UHNVM3JxbGxsc1Q2cFRNTG0wUE5RNzJMX1FjODlZZjh3SDduOVpFOGkxMVZkQWdVZ3I2aFA2MTdBX0FDWnh3SzdsYlJyTURJN0pjSVNkN3BGSi04VnpBdWs5dEVRY0hHUWVFdGdsdExpZUU0aDI3dm1lVks1TmpCVUJ0V2lNYzkwSVE4OVVneC1YUlR6RzhxTmNGZ2M4M3J1UV9wbFlJbXY0TlY1MmRsblFta0R3VUFZT3VCT3pYX2hvMXNKU3JWVQ?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Atraso em bolsas de pesquisadores brasileiros em Portugal não tem relação com a temática racial nem atinge a população negra de forma direta no texto; sem recorte para o portal."
+ },
+ {
+  "hora": "05:06",
+  "fonte": "Busca semanal - Djavan",
+  "titulo": "Mariza edita novo álbum \"Amor\" esta sexta-feira com participações de Djavan, Gson e Virgul",
+  "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPUVRoTE1ndlc3TmNROHk5Z3hDXzVYZV9leTBYX0JfX0laTGRsVzF6RV81YVpVZUJTU1BYUk42OGs2dWtaTHpNWEJET3d3YWNTbDMyV0hENmZKcGxuVG80LXRYeHZRYXVzdGYwSVlqZFpjUHo1anFyQ2diNFlQeFRJdWcwOThtcGJqaWxkU1pGSFl1TlhUb2d4Sm02X0F1MW9Wc0FEWUxQN3BXNnh6?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "Mariza é cantora portuguesa de origem caboverdiana, mas o texto não informa que é negra; lançamento de álbum seria exceção nota 7, porém sem informação de que a artista é negra e sem relação clara com a temática racial, então fica abaixo da régua."
  }
 ]
