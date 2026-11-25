@@ -197,10 +197,7 @@ def tela_gancho(foto, semana, total, data_txt, etiqueta="RADAR"):
     if foto is not None:
         # foto nítida em cima; embaixo, a cor da própria foto (sem desfoque e sem preto chapado, 25/11)
         # foto pequena ou borrada: nitidez e contraste antes de ampliar (ajuste de 25/11)
-        pequena = foto.width < 900 or foto.height < 700
-        topo = R.cobrir(foto, L, 1250)
-        topo = topo.filter(ImageFilter.UnsharpMask(radius=3 if pequena else 2, percent=140 if pequena else 90, threshold=2))
-        topo = ImageEnhance.Contrast(topo).enhance(1.06)
+        topo = R.cobrir(foto, L, 1250)  # a foto já chega com nitidez (R.melhorar_foto)
         img = Image.new("RGB", (L, A), (30, 27, 25))  # preto leve, sempre o mesmo tom
         suave = Image.new("L", (1, 1250), 255)
         for y in range(850, 1250):
@@ -369,7 +366,7 @@ def fazer_video(posts, semana, agora_sp, saida, excluir=(), turno="noite", saida
     for p in escolher(posts, 7 if semana else 1, quantas + 4, agora_sp, excluir):
         if len(escolhidas) == quantas:
             break
-        foto = foto_do_post(p)
+        foto = R.melhorar_foto(foto_do_post(p))
         if foto is not None:
             escolhidas.append(p)
             fotos.append(foto)

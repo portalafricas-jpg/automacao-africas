@@ -189,6 +189,19 @@ def caber(desenho, texto, tipo, tamanho_max, largura_max, altura_max, entrelinha
     return quebrar(desenho, texto, tipo, 30, largura_max)
 
 
+
+def melhorar_foto(img, leve=False):
+    """Regra de 25/11 (vale para tudo: vídeos, carrosséis, stories): foto pequena ou borrada ganha nitidez
+    e um pouco de contraste antes de entrar; foto boa recebe só um reforço leve."""
+    if img is None:
+        return None
+    img = img.convert("RGB")
+    pequena = img.width < 900 or img.height < 700
+    if leve:
+        return img.filter(ImageFilter.UnsharpMask(radius=1.5, percent=60, threshold=3))
+    img = img.filter(ImageFilter.UnsharpMask(radius=3 if pequena else 2, percent=140 if pequena else 90, threshold=2))
+    return ImageEnhance.Contrast(img).enhance(1.06 if pequena else 1.03)
+
 def cobrir(foto, largura, altura):
     """Recorta a foto para preencher o tamanho, sem distorcer."""
     img = foto.convert("RGB")
@@ -671,12 +684,13 @@ def main_ensaio():
             continue
         try:
             capa = Image.open(io.BytesIO(baixar(item["arte_post"]))) if item["arte_post"] else None
+            capa = melhorar_foto(capa, leve=True)
             if capa is None:
                 log(f"Sem arte de post, pulando: {item['titulo'][:80]}")
                 continue
             story = Image.open(io.BytesIO(baixar(item["arte_story"]))) if item["arte_story"] else None
             try:
-                foto = Image.open(io.BytesIO(baixar(item["foto"]))) if item["foto"] else None
+                foto = melhorar_foto(Image.open(io.BytesIO(baixar(item["foto"])))) if item["foto"] else None
             except Exception:
                 foto = None
             textos = gerar_textos(item)
@@ -849,9 +863,9 @@ def da_fila(dados):
 
 def publicar_materia(item, token, pagina, ig):
     """Monta as telas, escreve os textos e publica no Facebook e no Instagram."""
-    capa = Image.open(io.BytesIO(baixar(item["arte_post"])))
+    capa = melhorar_foto(Image.open(io.BytesIO(baixar(item["arte_post"]))), leve=True)
     try:
-        foto = Image.open(io.BytesIO(baixar(item["foto"]))) if item.get("foto") else None
+        foto = melhorar_foto(Image.open(io.BytesIO(baixar(item["foto"])))) if item.get("foto") else None
     except Exception:
         foto = None
     textos = gerar_textos(item)
@@ -866,7 +880,7 @@ def publicar_materia(item, token, pagina, ig):
     for n, f in enumerate((registro.get(normalizar(item.get("titulo", ""))) or {}).get("fotos_extras", [])[:3]):
         fx = frases[n] if n < len(frases) else {}
         try:
-            telas.append(tela_foto(Image.open(io.BytesIO(baixar(f["url"]))).convert("RGB"),
+            telas.append(tela_foto(melhorar_foto(Image.open(io.BytesIO(baixar(f["url"])))),
                                    fx.get("frase", ""), fx.get("autor", ""), f.get("credito", ""), tamanho))
             alts_extras.append(f.get("legenda") or fx.get("frase") or "Foto da matéria")
         except Exception as e:
