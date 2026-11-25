@@ -17,7 +17,7 @@ import requests
 import urllib.request
 from datetime import datetime, timedelta, timezone
 
-from PIL import Image, ImageDraw, ImageEnhance
+from PIL import Image, ImageDraw, ImageEnhance, ImageFilter
 
 import redes as R
 
@@ -195,11 +195,18 @@ def tela_gancho(foto, semana, total, data_txt, etiqueta="RADAR"):
     embaixo, no padrão das capas aprovado em 25/11."""
     img = Image.new("RGB", (L, A), R.COR_FUNDO)
     if foto is not None:
+        # fundo: a própria foto desfocada e um pouco escura (sem preto chapado, ajuste de 25/11)
+        fundo = R.cobrir(foto, L, A).filter(ImageFilter.GaussianBlur(30))
+        img = ImageEnhance.Brightness(fundo).enhance(0.55)
         topo = R.cobrir(foto, L, 1250)
-        img.paste(topo, (0, 0))
+        suave = Image.new("L", (1, 1250), 255)
+        for y in range(800, 1250):
+            suave.putpixel((0, y), int(255 * (1 - (y - 800) / 450)))
+        img.paste(topo, (0, 0), suave.resize((L, 1250)))
+        # escurece só o suficiente atrás do texto para a leitura
         mascara = Image.new("L", (1, A), 0)
         for y in range(A):
-            mascara.putpixel((0, y), 0 if y < 650 else min(255, int(255 * ((y - 650) / 560) ** 1.3)))
+            mascara.putpixel((0, y), 0 if y < 700 else min(150, int(150 * (y - 700) / 400)))
         img = Image.composite(Image.new("RGB", (L, A), R.COR_FUNDO), img, mascara.resize((L, A)))
     d = ImageDraw.Draw(img)
     m = 90
@@ -217,7 +224,7 @@ def tela_gancho(foto, semana, total, data_txt, etiqueta="RADAR"):
         while d.textlength(texto, font=f) > L - 2 * m and tam > 50:
             tam -= 4
             f = R.fonte("extra", tam)
-        d.text((m, y), texto, font=f, fill=cor)
+        d.text((m, y), texto, font=f, fill=cor, stroke_width=3, stroke_fill=(0, 0, 0))
         y += tam * 1.12
     # sem data na capa: o vídeo é atemporal e vai para várias redes (a data fica na legenda e no título)
     return img
