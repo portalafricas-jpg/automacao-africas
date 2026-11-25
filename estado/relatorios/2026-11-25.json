@@ -427,5 +427,27 @@
   "nota": 3,
   "destino": "nota baixa",
   "detalhe": "Mariza é cantora portuguesa de origem caboverdiana, mas o texto não informa que é negra; lançamento de álbum seria exceção nota 7, porém sem informação de que a artista é negra e sem relação clara com a temática racial, então fica abaixo da régua."
+ },
+ {
+  "hora": "05:18",
+  "fonte": "Busca semanal - Black Money",
+  "titulo": "Carlyle vende parte de sua participação na Piramal Pharma em uma transação em bloco de 2.200 crore de rúpias – Money Control",
+  "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5pY0c3U0x1MFpjUXV3SGlDVlhuODQ5U0FjLWlkeU4wZkNESEFfUlVuZ2I0RzYzM2lkU0ZMeDJ0TFQzSk5rV012RFJldFRCWU1EaHg4dWtnWDJvSHJUUEJJMjBwVDVuazNkS3RQcHBEUWJ0R1lYYzdr?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Notícia de mercado financeiro sobre a Piramal Pharma, sem relação com a temática racial."
+ },
+ {
+  "hora": "05:18",
+  "fonte": "Busca - mulheres negras",
+  "titulo": "Candidaturas negras caem em Alagoas nas eleições de 2026",
+  "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPRkFrdTRXOG1FaUQ2VFpwZ0t2MXNhOTFpN1VkOVdPUW0yc29mRGJPd2Zxb1FJY0hxQS0welFDbmh5VVlLMklxZzVrcDFrc1UzamN0NHRBUFRTdExETmoxUEcyRzJqV3BwUmZWdUNRajhfbjZZV1JsNkRheHQxU1RSZHllOG1kRm1fYnBHZ2VlY1dJU08x?oc=5",
+  "categoria": "politica",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Queda de candidaturas negras nas eleições de 2026 em Alagoas é tema de representatividade e direitos políticos da população negra, com dado regional relevante; fonte de site local, sem sinal de exclusividade própria."
  }
 ]
