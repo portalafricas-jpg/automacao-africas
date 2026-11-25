@@ -191,8 +191,8 @@ def manchetes_curtas(titulos):
 
 
 def tela_gancho(foto, semana, total, data_txt, etiqueta="RADAR"):
-    """Primeiro quadro (vira a capa no YouTube Shorts): foto clara em cima, selo do programa e o gancho
-    em letras grandes embaixo, no padrão das capas aprovado em 25/11."""
+    """Primeiro quadro (vira a capa no YouTube Shorts): foto clara em cima e o gancho em letras grandes
+    embaixo, no padrão das capas aprovado em 25/11."""
     img = Image.new("RGB", (L, A), R.COR_FUNDO)
     if foto is not None:
         topo = R.cobrir(foto, L, 1250)
@@ -205,18 +205,13 @@ def tela_gancho(foto, semana, total, data_txt, etiqueta="RADAR"):
     m = 90
     d.rectangle((0, 0, L, 14), fill=R.COR_AMARELO)
     R.colar_logo(img, m, 70, 300)
-    fe = R.fonte("extra", 40)
-    w = d.textlength(etiqueta, font=fe)
-    y = 950
-    d.rounded_rectangle((m, y, m + w + 44, y + 66), radius=10, fill=R.COR_AMARELO)
-    d.text((m + 22, y + 8), etiqueta, font=fe, fill=R.COR_FUNDO)
+    y = 1000  # sem o selo do programa (pedido em 25/11): mais espaço para o gancho
     if semana:
         linhas = [(f"{total} NOTÍCIAS", R.COR_TEXTO, 140), ("PRETAS", R.COR_AMARELO, 140),
                   ("que marcaram", R.COR_TEXTO, 96), ("a semana", R.COR_TEXTO, 96)]
     else:
         linhas = [(f"{total} NOTÍCIAS", R.COR_TEXTO, 140), ("PRETAS", R.COR_AMARELO, 140),
                   ("que você precisa", R.COR_TEXTO, 96), ("saber", R.COR_TEXTO, 96)]
-    y += 100
     for texto, cor, tam in linhas:
         f = R.fonte("extra", tam)
         while d.textlength(texto, font=f) > L - 2 * m and tam > 50:
