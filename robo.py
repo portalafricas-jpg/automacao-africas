@@ -31,9 +31,10 @@ JANELA_HORAS_BUSCA = 3          # buscas no Google Notícias: notícias das últ
 VALIDADE_HORAS = 4              # notícia com mais de 4 horas não é publicada, nem saindo da fila
 NOTA_MINIMA = 8                 # nota do editor-chefe para ir para a fila (era 7; mudou em 23/11)
 NOTA_EXCECAO = 7                # carnaval/escolas de samba e lançamentos de artistas negros continuam com 7
-TETO_DIA = 25                   # no máximo 25 matérias por dia no site (breaking e ministérios fora do teto)
-TETO_GENTE = 15                 # "Gente e Música" (artistas, música, carnaval, atletas negros): até 15 por dia (25/11)
-RESERVA_GENTE = 10              # até as 18h, 10 vagas do dia ficam guardadas para "Gente e Música"
+TETO_DIA = 35                   # no máximo 35 matérias por dia no site (era 25; 25/11) (breaking e ministérios fora do teto)
+TETO_GENTE = 20                 # "Gente e Música" (artistas, música, carnaval, atletas negros): até 20 por dia (25/11)
+TETO_GENTE_EDITORIA = {"cultura": 12, "protagonista": 10}  # equilíbrio entre obras/música/carnaval e personalidades
+RESERVA_GENTE = 14              # até as 18h, 14 vagas do dia ficam guardadas para "Gente e Música"
 HORA_LIBERA_RESERVA = 18        # depois das 18h, as vagas não usadas voltam para as outras linhas
 def teto_por_hora(hora):
     """Picos de leitura no celular (aprovado em 24/11): manhã no trajeto, expediente calmo, noite."""
@@ -41,7 +42,7 @@ def teto_por_hora(hora):
         return 4
     if hora >= 18:
         return 2
-    return 1
+    return 2  # expediente: era 1; subiu com o teto de 35 por dia (25/11)
 TETO_EDITORIA = {"politica": 3, "cultura": 6, "cotidiano": 5, "ancestralidade": 4, "protagonista": 4, "mundo": 3}  # política 3 (23/11)
 LIMITE_AFRICA_DIA = 5           # no máximo 5 matérias por dia de fontes África (breaking não conta)
 INTERVALO_AFRICA_HORAS = 2      # e no mínimo 2 horas entre uma e outra
@@ -1359,6 +1360,7 @@ def main():
     publicadas_hoje = sum(1 for m in do_dia if conta_no_teto(m))
     por_editoria = Counter(m.get("categoria") for m in do_dia if conta_no_teto(m))
     gente_hoje = sum(1 for m in do_dia if conta_no_teto(m) and m.get("gente"))
+    gente_editoria = Counter(m.get("categoria") for m in do_dia if conta_no_teto(m) and m.get("gente"))
     outras_hoje = publicadas_hoje - gente_hoje
     limite_outras = TETO_DIA - RESERVA_GENTE if agora_sp.hour < HORA_LIBERA_RESERVA else TETO_DIA
     ultima_hora = sum(1 for m in do_dia if conta_no_teto(m)
@@ -1418,6 +1420,8 @@ def main():
                 if materia_fila.get("gente"):
                     if gente_hoje >= TETO_GENTE:
                         continue  # cota de Gente e Música do dia atingida; tenta uma de outra linha
+                    if gente_editoria[materia_fila["categoria"]] >= TETO_GENTE_EDITORIA.get(materia_fila["categoria"], 4):
+                        continue  # equilíbrio entre cultura e protagonistas dentro de Gente e Música
                 else:
                     if outras_hoje >= limite_outras:
                         continue  # vagas guardadas para Gente e Música até as 18h
@@ -1458,6 +1462,7 @@ def main():
                 por_editoria[pronta["categoria"]] += 1
                 if pronta.get("gente"):
                     gente_hoje += 1
+                    gente_editoria[pronta["categoria"]] += 1
                 else:
                     outras_hoje += 1
             log(f"  RSS {pronta['categoria']} atualizado: {pronta['titulo']}")
