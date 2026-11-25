@@ -9,10 +9,19 @@ NOMES_DA_CASA = {  # correções fixas de nomes que a transcrição costuma erra
 }
 
 
+def audio_16k(caminho):
+    """Extrai o áudio com o FFmpeg (16 kHz, mono), do jeito que o Whisper espera."""
+    import subprocess
+    import numpy as np
+    bruto = subprocess.run(["ffmpeg", "-v", "error", "-i", caminho, "-f", "s16le", "-ac", "1", "-ar", "16000", "-"],
+                           capture_output=True, check=True).stdout
+    return np.frombuffer(bruto, np.int16).astype(np.float32) / 32768.0
+
+
 def transcrever(caminho, modelo="medium"):
     from faster_whisper import WhisperModel
     m = WhisperModel(modelo, device="cpu", compute_type="int8")
-    trechos, _ = m.transcribe(caminho, language="pt", word_timestamps=True, vad_filter=True)
+    trechos, _ = m.transcribe(audio_16k(caminho), language="pt", word_timestamps=True, vad_filter=True)
     palavras = []
     for t in trechos:
         for w in t.words:
