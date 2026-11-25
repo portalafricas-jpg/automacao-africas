@@ -1371,5 +1371,109 @@
     "tipo": "rss",
     "url": "https://ratedrnb.com/feed/",
     "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Negra Li",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"Negra Li\"",
+    "grupo": 1,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Dona Onete",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"Dona Onete\"",
+    "grupo": 2,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Os Garotin",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"Os Garotin\"",
+    "grupo": 3,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Melly cantora",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"Melly cantora\"",
+    "grupo": 0,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Rincon Sapiência",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"Rincon Sapiência\"",
+    "grupo": 1,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Papatinho",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "Papatinho",
+    "grupo": 2,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Yagô Oproprio",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"Yagô Oproprio\"",
+    "grupo": 3,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Eli Soares",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"Eli Soares\"",
+    "grupo": 0,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Evinha cantora",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"Evinha cantora\"",
+    "grupo": 1,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Lauryn Hill",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"Lauryn Hill\"",
+    "grupo": 2,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Wyclef Jean",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"Wyclef Jean\"",
+    "grupo": 3,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Don Toliver",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"Don Toliver\"",
+    "grupo": 0,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Billboard Brasil",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "site:billboard.com.br",
+    "grupo": 2,
+    "criada": "2026-11-25"
   }
 ]
