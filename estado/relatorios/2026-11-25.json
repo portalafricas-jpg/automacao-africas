@@ -471,5 +471,150 @@
   "nota": 0,
   "destino": "nota baixa",
   "detalhe": "Título genérico sobre respeito, sem fato noticioso identificável no resumo; falta informação suficiente para matéria honesta."
+ },
+ {
+  "hora": "06:02",
+  "fonte": "Lista Preta",
+  "titulo": "Самые популярные казино онлайн 2026 – получите незабываемые впечатления",
+  "link": "https://listapreta.com/samye-populyarnye-kazino-onlayn-2026-poluchite-nezabyvaemye-vpechatleniya/",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "repetida",
+  "detalhe": "título quase igual a outra notícia"
+ },
+ {
+  "hora": "06:03",
+  "fonte": "Busca - Empreendedora negra",
+  "titulo": "Desigualdade racial custa R$ 800 bilhões por ano à economia brasileira, estima empreendedor",
+  "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNUWEyWG5xMVZTbHp1ZDFXZFpGOGVmM1VqOHFLTTZlcXlxaEhwYlNEeVdLNXItOVh5YU9UQzAzUWRtM01DZ0w3Ri1uNDlUaW1nekNzVWZNaU1HdUpWWjBqdkpwVllLNkxudHYxUzhIeHAta24wWmtZTnJ5QnhDMlRDLVl1Q1dPSHBoZS1lc1lqMFFPQTYwQjhZWHpWLWxXN2RUUmhsRnl6Vk9TQjBjc1plaUIxNGtmUEEzX3NGc1FrQ1FBaWRheXpWanBEVzlYUmR5cTdRNUwyS0piZTlkMW9NMm9HSUpvQ1BGWWVxOTB30gHuAUFVX3lxTE1RYTJYbnExVlNsenVkMVdkWkY4ZWYzVWo4cUtNNmVxeXFoSHBiU0R5V0s1ci05WHlhT1RDMDNRZG0zTUNnTDdGLW40OVRpbWd6Q3NVZk1pTUd1SlZaMGp2SnBWWUs2TG50djFTOEh4cC1rbjBaa1lOcnlCeEMyVEMtWXVDV09IcGhlLWVzWWowUU9BNjBCOFlYelYtbFc3ZFRSaGxGeXpWT1NCMGNzWmVpQjE0a2ZQQTNfc0ZzUWtDUUFpZGF5elZqcERXOVhSZHlxN1E1TDJLSmJlOWQxb00yb0dJSm9DUEZZZXE5MHc?oc=5",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 6,
+  "destino": "nota baixa",
+  "detalhe": "Estimativa de empreendedor sobre custo econômico da desigualdade racial; questão racial é o centro, mas é opinião/estimativa de uma pessoa, sem fonte oficial nem levantamento verificado, por isso nota intermediária."
+ },
+ {
+  "hora": "06:03",
+  "fonte": "Busca - Literatura negra",
+  "titulo": "Pesquisadores brasileiros em Portugal sofrem atrasos nas bolsas do governo",
+  "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQbmFING40Z09aZGZCVE1SSEhzZWJJSlQ5dlV6UHNVM3JxbGxsc1Q2cFRNTG0wUE5RNzJMX1FjODlZZjh3SDduOVpFOGkxMVZkQWdVZ3I2aFA2MTdBX0FDWnh3SzdsYlJyTURJN0pjSVNkN3BGSi04VnpBdWs5dEVRY0hHUWVFdGdsdExpZUU0aDI3dm1lVks1TmpCVUJ0V2lNYzkwSVE4OVVneC1YUlR6RzhxTmNGZ2M4M3J1UV9wbFlJbXY0TlY1MmRsblFta0R3VUFZT3VCT3pYX2hvMXNKU3JWVdIB4wFBVV95cUxQbmFING40Z09aZGZCVE1SSEhzZWJJSlQ5dlV6UHNVM3JxbGxsc1Q2cFRNTG0wUE5RNzJMX1FjODlZZjh3SDduOVpFOGkxMVZkQWdVZ3I2aFA2MTdBX0FDWnh3SzdsYlJyTURJN0pjSVNkN3BGSi04VnpBdWs5dEVRY0hHUWVFdGdsdExpZUU0aDI3dm1lVks1TmpCVUJ0V2lNYzkwSVE4OVVneC1YUlR6RzhxTmNGZ2M4M3J1UV9wbFlJbXY0TlY1MmRsblFta0R3VUFZT3VCT3pYX2hvMXNKU3JWVQ?oc=5",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "Atraso em bolsas de pesquisadores brasileiros em Portugal não tem relação com a temática racial."
+ },
+ {
+  "hora": "06:03",
+  "fonte": "Busca - Empreendedora negra",
+  "titulo": "Maior diversidade traria melhora para economia",
+  "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQS2ZpclphYS1LQ2tRbVJSRk1NVUt5dUhBUWJJOVZ5amY3YktoTTU2UHVMRV9jTzNzdVJoeWM1VUp6d21jNWFhc01PTEJ1TzV2aEs1ckp6LS1xOFd4YzJuOUdPQVVYZXR2Q0NPWEF3cUJpdVVERnNrYmU0bWFRTHAzWE1ZYXRuWVN0UWVDZWR2b1pMWUpjYmYzcXZZQ2doZGt1bUR3d1ZFaXFvVXRrblBNSFYwcDcwU29yM2dyNGVTMUlBd9IB0AFBVV95cUxQbWRTaWg5Xzg3MjF4ZURTN2dSOE0zMjdsQjladUF6Ql9yMmkwTnF4OW04LVR3THozR1VCbzRHbC15STFvMnFzWHUtN0R0VFdoeWJ4X1lqTHpNV21lRjJsRUZSdVRxcUlMTkFxbEx2YWw4YmtuV21hNTNBWXdpTkY2YnItNFAzSjdjdU5SbzZBcWNWcmd1QmY3UDZUdVhIRFYxMElUYUZtSThiNDRmRzlEbWhpMnA4c2VpdU5MVlBKbTZ3eXNnLUx3WXBwMlQ3OUMx?oc=5",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 4,
+  "destino": "nota baixa",
+  "detalhe": "Título genérico sobre diversidade e economia, sem clara centralidade racial nem fato concreto identificável no resumo."
+ },
+ {
+  "hora": "06:03",
+  "fonte": "Busca - movimento negro",
+  "titulo": "“A Negona da Comunicação” lança livro na Câmara de Salvador",
+  "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOcVp3NVhRWnllcW83UFd2bDIxT2oxX3lEM0l6MnlOclp5X3Q3cUVfTHdfczktR2Z6S3plWDFlaWhPNDBlRzBWU3pWX0gyM3hNcGY2RFpJNzVmcFlxdm9OTF9rVi1UaW80RmYybU8wc0dzZXhaSzJkUTc1UFUzNE81cjlLcjZubGthSlZhN2k0UU0wZjg?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Lançamento de livro de autora negra, com evento na Câmara de Salvador; lançamento de artista negra é notícia nota mínima 7."
+ },
+ {
+  "hora": "06:03",
+  "fonte": "Busca - União Africana",
+  "titulo": "MOSAP 3 vai beneficiar 3.222 famílias agrícolas",
+  "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNcmJ1bjRibmgtaUZOZDByZm9ZaEUyOHVxOGMtVlIzN3JUOUt3VWRNbTVZYWcxczk5SU9HYWZIaFNiSVVLSUM5TW1oYWhFcnVQYXhTQmc1M2tNZFIzWnVNcXFxbkpYdDZxeEVIU2hEbzdqb2duVldkcTA3cUJtdGVFQ3BySWhPamY0ZUdhdGVldzRKLXRyUkR1NFphRzBrdm9rUmR3OUFLWVVOSzFTX3Q4dzlwSWQ?oc=5",
+  "categoria": "mundo",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Projeto agrícola em Angola (país de língua portuguesa) beneficiando famílias, com interesse para leitor que acompanha a África; segurança alimentar, mas sem conexão direta com o Brasil, então nota 7 a 8."
+ },
+ {
+  "hora": "06:03",
+  "fonte": "Lista Preta",
+  "titulo": "Самые надежные казино онлайн 2026 – играйте с уверенностью и безопасностью",
+  "link": "https://listapreta.com/samye-nadezhnye-kazino-onlayn-2026-igrayte-s-uverennostyu-i-bezopasnostyu-3/",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Publicidade de cassino online, sem relação com a temática racial."
+ },
+ {
+  "hora": "06:03",
+  "fonte": "Lista Preta",
+  "titulo": "Самые популярные казино онлайн 2026 – получите незабываемые впечатления",
+  "link": "https://listapreta.com/samye-populyarnye-kazino-onlayn-2026-poluchite-nezabyvaemye-vpechatleniya-2/",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Publicidade de cassino online, sem relação com a temática racial."
+ },
+ {
+  "hora": "06:03",
+  "fonte": "Lista Preta",
+  "titulo": "Пинко Казино Официальный Сайт – Играть в Онлайн Казино Pinco",
+  "link": "https://listapreta.com/pinko-kazino-oficialnyy-sayt-igrat-v-onlayn-kazino-pinco/",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Publicidade de cassino online, sem relação com a temática racial."
+ },
+ {
+  "hora": "06:03",
+  "fonte": "Lista Preta",
+  "titulo": "1win букмекерская контора — вход",
+  "link": "https://listapreta.com/1win-bukmekerskaya-kontora-vhod/",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Publicidade de casa de apostas, sem relação com a temática racial."
+ },
+ {
+  "hora": "06:03",
+  "fonte": "Busca - mulheres negras",
+  "titulo": "Candidaturas negras caem em Alagoas nas eleições de 2026",
+  "link": "https://082noticias.com/politica/candidaturas-negras-caem-em-alagoas-nas-eleicoes-de-2026/",
+  "categoria": "politica",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "publicada",
+  "detalhe": "Candidaturas negras caem em Alagoas em 2026",
+  "foto": "Foto ilustrativa: Element5 Digital/Unsplash"
+ },
+ {
+  "hora": "06:03",
+  "fonte": "Busca semanal - Djavan",
+  "titulo": "Djavan, Chico Buarque, Martinho da Vila e Dorival Caymmi: quando a MPB invadiu Angola em 1980",
+  "link": "https://oglobo.globo.com/cultura/musica/noticia/2026/11/25/djavan-chico-buarque-martinho-da-vila-e-dorival-caymmi-quando-a-mpb-invadiu-angola-em-1980.ghtml",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "publicada",
+  "detalhe": "Projeto Kalunga: a caravana da MPB em Angola",
+  "foto": "Foto ilustrativa: Peter Herrmann/Unsplash"
+ },
+ {
+  "hora": "06:03",
+  "fonte": "Busca - União Africana",
+  "titulo": "MOSAP 3 vai beneficiar 3.222 famílias agrícolas",
+  "link": "https://www.jornaldeangola.ao/noticias/4/economia/700251/mosap-3-vai-beneficiar-3.222-fam%C3%ADlias-agr%C3%ADcolas",
+  "categoria": "mundo",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "não abriu o texto",
+  "detalhe": "texto original curto ou bloqueado"
  }
 ]
