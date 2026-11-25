@@ -1250,5 +1250,82 @@
   "destino": "publicada",
   "detalhe": "Major RD abre turnê do ALFA no Rio em 27/11",
   "foto": "Foto ilustrativa: Scarlett Alt/Unsplash"
+ },
+ {
+  "hora": "08:33",
+  "fonte": "Busca - Moda afro",
+  "titulo": "Beleza Negra: desfile em SP celebra ancestralidade e representatividade por meio da moda afro",
+  "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQbUVUYjNWWU9ldGZCN1IzZzJhZWlPajdUdWZXb3Z3czdsZUduZUdsZ0dJV2pRd3htY2Q2MEgwQ2JSSWpVSFBMck01dEFjNTRhOTRVZHpYVW5XMlo5dHNFdHNQaXhjTTBjRnA4dEhKb09ReU1sZXprYVJ3NDBvdjNtbUZNeFotcXVteXBfbVJHMG9ycENXRDZDYlMxclY3czRqX0FOZUVCT2htTk1WR3JiaHgzOHdiU0lmMEptLWR3?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "Desfile de moda afro em SP celebrando ancestralidade e representatividade; evento cultural negro, nota 7. Não há matéria recente sobre o mesmo evento."
+ },
+ {
+  "hora": "08:33",
+  "fonte": "Busca - Moda afro",
+  "titulo": "Carnaval fora de época: festival gratuito reúne fanfarras, circo e música em SP",
+  "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOZGhnelRjMi01c01qWHBHb3dhLW12NU5GcUlvZl9yRjNSR0dVVlE1NHRKRm9hMXpXVzFTdzhOX2NQNkw3RnlLaDlHYTlFTUd1TW9LdU4tMmdPWDF3QVdHN3F0TGl4VGswdU81bnBRd2ZOOHFaT2FtRzYxZndET0pfYzZTYVZGVEl1ZnkydHZfU3FnQ0RDOU84N2E4aXBTRDF0QzlwYjdzclVFQQ?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "Festival de fanfarras, circo e música sem recorte racial; não é carnaval de escola de samba nem tema da população negra."
+ },
+ {
+  "hora": "08:33",
+  "fonte": "Busca - Cultura negra",
+  "titulo": "Cartas ao passado aproximam alunos de Canasvieiras da história afro-brasileira",
+  "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQcG5neFJncmFZcGlfN1Y4Y0dKNEFaZkRKV3VwMlB3VHZLaDlSdVh1YXRKS1Bka05jc1g5SkxKTjNLXzZ0VkVTSTlPN2FiWU5rUVNTVjMzb2xyVFo1VGlxVzlzU1BUV05lU1NRRGdGMXFYbmJ3c09uWU9ESnBXbjFSa2xzNGhVbEEySlFOWXhMTE5QM1o3c0k0S3pzbjNLRlI4M295YjdWdWRVSHliWDMw?oc=5",
+  "categoria": "ancestralidade",
+  "prioridade": "",
+  "nota": 6,
+  "destino": "nota baixa",
+  "detalhe": "evento local pequeno: Ação escolar sobre história afro-brasileira em cidade pequena do interior; ligada à educação antirracista, mas sem personagem ou fato relevante, por isso fica abaixo de 7."
+ },
+ {
+  "hora": "08:33",
+  "fonte": "Busca - Moda afro",
+  "titulo": "Bibliotecas sobre rodas levam livros e atividades gratuitas a 17 pontos de São Paulo",
+  "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOa09BTjd1Y1VQV2xuNGdrWUQ2NFE1VjNLTzAzRzhJMXpLd3lhcFROelRtS3psSUpHU0dtZ2lUTnU5SnV3Ym92aGpWQVhDbWNhTzVUYmc0eTNBX2ZIaXk2aUFiMHpjYnZFRkdQcFdzWjk2YTM1b3V4eThrZnBpcDhwSERINTlLMUdyYWwtUG9hOFY2eEdmZ211SUNaR2RuRFN3b1dWRlk5UWJQQXpESkQtMnVKdw?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 5,
+  "destino": "nota baixa",
+  "detalhe": "evento local pequeno: Bibliotecas itinerantes em SP com atividades gratuitas; a questão racial não é o centro e não há fato relevante para a população negra."
+ },
+ {
+  "hora": "08:33",
+  "fonte": "Notícia Preta",
+  "titulo": "Anvisa aprova novo medicamento para tratar câncer de mama",
+  "link": "https://noticiapreta.com.br/anvisa-aprova-novo-medicamento-para-tratar-cancer-de-mama/?utm_source=rss&utm_medium=rss&utm_campaign=anvisa-aprova-novo-medicamento-para-tratar-cancer-de-mama",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 1,
+  "destino": "nota baixa",
+  "detalhe": "Aprovação de medicamento contra câncer de mama sem relação com a temática racial."
+ },
+ {
+  "hora": "08:33",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Ministro reafirma importância da comunicação no desempenho governativo",
+  "link": "https://www.giranoticias.com/sociedade/2026/11/32785-ministro-reafirma-importancia-da-comunicacao-no-desempenho-governativ.html",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Fonte África sobre comunicação governamental, sem relação com a população negra nem com o Brasil; texto vazio e sem conteúdo suficiente para matéria."
+ },
+ {
+  "hora": "08:33",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Angola reafirma compromisso com segurança no Golfo da Guiné",
+  "link": "https://www.giranoticias.com/politica/2026/11/32784-angola-reafirma-compromisso-com-seguranca-no-golfo-da-guine.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 4,
+  "destino": "nota baixa",
+  "detalhe": "Segurança no Golfo da Guiné, tema internacional sem ligação com o Brasil nem com temas de interesse direto do leitor; notícia interna sem conexão brasileira e sem texto suficiente."
  }
 ]
