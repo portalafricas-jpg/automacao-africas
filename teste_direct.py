@@ -31,7 +31,10 @@ def main():
     posts = json.load(open(C.ARQ_POSTS, encoding="utf-8"))
     limite = datetime.now(timezone.utc) - timedelta(hours=72)
     for post in [p for p in posts if p.get("ig_media") and datetime.fromisoformat(p["publicado_em"]) >= limite]:
-        dados = C.meta("GET", f"{post['ig_media']}/comments", {"fields": "id,text,username", "limit": "50"})
+        try:
+            dados = C.meta("GET", f"{post['ig_media']}/comments", {"fields": "id,text,username", "limit": "50"})
+        except RuntimeError:
+            continue
         for c in dados.get("data", []):
             if "TESTEBOTAO" not in normal(c.get("text")):
                 continue
