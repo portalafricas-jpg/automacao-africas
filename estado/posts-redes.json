@@ -510,5 +510,38 @@
   "foto": "https://www.africas.com.br/uploads/images/2026/11/morre-juninho-bau-fundador-da-nossa-roda1795620003.jpg",
   "categoria": "Protagonistas",
   "publicado_em": "2026-11-25T15:23:21.484354+00:00"
+ },
+ {
+  "tipo": "reels",
+  "titulo": "Radar do meio-dia 25/11",
+  "link": "https://www.africas.com.br",
+  "links": [
+   {
+    "titulo": "Condenado a 16 anos por matar músico negro em Curitiba",
+    "link": "https://www.africas.com.br/noticia/condenado-a-16-anos-por-matar-musico-negro-em-curitiba"
+   },
+   {
+    "titulo": "Morre Juninho Baú, fundador da Nossa Roda",
+    "link": "https://www.africas.com.br/noticia/morre-juninho-bau-fundador-da-nossa-roda"
+   },
+   {
+    "titulo": "Macapá regulamenta educação quilombola nas escolas",
+    "link": "https://www.africas.com.br/noticia/macapa-regulamenta-educacao-quilombola-nas-escolas"
+   },
+   {
+    "titulo": "Busto de Dandara dos Palmares é inaugurado no Rio",
+    "link": "https://www.africas.com.br/noticia/busto-de-dandara-dos-palmares-e-inaugurado-no-rio"
+   },
+   {
+    "titulo": "Escola quilombola é reparação histórica, dizem debatedores",
+    "link": "https://www.africas.com.br/noticia/escola-quilombola-e-reparacao-historica-dizem-debatedores"
+   }
+  ],
+  "ig_media": "18101927282425275",
+  "ig_link": "https://www.instagram.com/reel/DgK3rI0BEZ2/",
+  "fb_post": "1667733211712635",
+  "yt_video": "HBx-_f9ws6g",
+  "prioridade": "reels",
+  "publicado_em": "2026-11-25T15:38:48.891139+00:00"
  }
 ]
