@@ -616,5 +616,39 @@
   "nota": 8,
   "destino": "não abriu o texto",
   "detalhe": "texto original curto ou bloqueado"
+ },
+ {
+  "hora": "06:18",
+  "fonte": "Busca - Burna Boy",
+  "titulo": "Assista Iran x Australia ao vivo online | DAZN BR",
+  "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOd0U4NWVzbjJoVURDN2M5ZXRfLW5XcTBrcEtaZnIzR2tCMkFaVU01NGhWRFg3S0NYaHprVnRMakhPMkFqNjRZM0I4N0lMUFJSUE4wQWtFVGR1dVBuRF82U3U2UFR6RWk5NmhvZDRYZ0FrNDhBdEVJTlhILWhfYTB1VHg2dnF1WnZmUGRiYy13?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Página de transmissão de jogo de futebol (esporte), sem relação com a temática racial e sem conteúdo de notícia."
+ },
+ {
+  "hora": "06:18",
+  "fonte": "Busca - igualdade racial",
+  "titulo": "Secretário de Igualdade Racial defende políticas permanentes após caso de racismo em Palmas",
+  "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOYURpeE1mV1JNajhxQVU2UTg5ZDh4TkZDXzFZYTZDV1VidVcyNUJLU2FwcXdRUFgzVW02MEJTWUkyV2pRa2p3TnJyaktpVGJ0X0ZuX0cyRVRiT010ZGJPVlVDcWNCYU1hX2JFMTdjSk1qcVh5Wk9OUm9DS2N0OF80Z2pqMFJ5T3JndkNvLU1YcUtzdE5pS2pxWDc5WEhWX2FvYk51Y0xGRXBlQzZabjBNS09JeldQRUJBdUJQdHlHZ1pCNlU0T1ctci11UjFRSG8wZEhxbEZRV0JDR05MWXRn?oc=5",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "Secretário de Igualdade Racial defende políticas permanentes após caso de racismo em Palmas; tema ligado à igualdade racial e à luta antirracista, mas assunto já coberto por outras matérias recentes sobre o caso em Palmas e sem fato novo claramente identificado, por isso mantida na faixa mediana."
+ },
+ {
+  "hora": "06:18",
+  "fonte": "Busca - movimento negro",
+  "titulo": "“A Negona da Comunicação” lança livro na Câmara de Salvador",
+  "link": "https://bahianapolitica.com.br/a-negona-da-comunicacao-lanca-livro-na-camara-de-salvador/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "publicada",
+  "detalhe": "Adriana Santtos lança livro na Câmara de Salvador",
+  "foto": "Foto ilustrativa: Peter Herrmann/Unsplash"
  }
 ]
