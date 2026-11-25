@@ -850,5 +850,49 @@
   "destino": "publicada",
   "detalhe": "Documentário sobre mulheres quilombolas em MT",
   "foto": "S. Hurok (classical Arts concert promoter)/Wikimedia Commons (Public domain)"
+ },
+ {
+  "hora": "07:03",
+  "fonte": "Busca - liberdade religiosa",
+  "titulo": "Burkina Faso: nova lei preocupa líderes cristãos",
+  "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE92anpzRW5COTZWemZ2RkhmRUx3TlhkYXpUZkw2MDhaWm9yUkhQZWlnU19jU1ZNRm0tVWxoMm5tbjI3WFRLOTRDaWFxbU5pQ3VXR01jczFjUjNTeGsteTdRc3lkSGw0OTQ3RnVjTUln?oc=5",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Notícia sobre lei de Burkina Faso e líderes cristãos; sem relação com a temática racial nem com a diáspora, e a fonte não é de veículo africano de interesse da Agenda Preta."
+ },
+ {
+  "hora": "07:03",
+  "fonte": "Busca - União Africana",
+  "titulo": "MINSA capacita 572 enfermeiros em nefrologia e tauma",
+  "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQOGtzcGJwWTVfdUV5V1NZb0xvd1V0ZE54dnEtSVVBVERPbERNTFIxVlRfSndLaHNwNUNDb3JRazRycWhRb2FWRjE3Y0Vod3M2RHdjYlQzTWpHcWxhY0tycWVGb1BQd01DYUt1cV9qd3FCX2VlenN3bTAtOXNZbm53Q2NZUDZaWGFOSkZWbWhhS2dGUzM0X2tKMnFaN3BJNk9aNWFNa01qTkZfUDBJS2s0Mw?oc=5",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 4,
+  "destino": "nota baixa",
+  "detalhe": "Capacitação de enfermeiros em Angola: tema de saúde, mas é ato institucional/formativo sem ligação com o Brasil nem fato relevante para a população negra; fica abaixo do mínimo."
+ },
+ {
+  "hora": "07:03",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Ministro da Energia e Água defende gestão integrada das bacias hidrográficas",
+  "link": "https://www.giranoticias.com/economia/2026/11/32780-ministro-da-energia-e-agua-defende-gestao-integrada-das-bacias-hidrograficas.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Declaração de ministro angolano sobre gestão de bacias hidrográficas; sem interesse direto ao leitor brasileiro nem conexão racial, e sem texto suficiente."
+ },
+ {
+  "hora": "07:03",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Futebol de praia: Angola estreia-se frente à Mauritânia no CAN2026",
+  "link": "https://www.giranoticias.com/desporto/2026/11/32779-futebol-de-praia-angola-estreia-se-frente-a-mauritania-no-can2026.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Esporte africano (futebol de praia), fica de fora pelas regras editoriais."
  }
 ]
