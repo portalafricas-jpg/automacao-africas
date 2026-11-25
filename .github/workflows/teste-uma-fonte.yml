@@ -1,0 +1,24 @@
+name: Testar uma fonte (temporario)
+on:
+  workflow_dispatch:
+jobs:
+  testar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install trafilatura
+      - run: |
+          python - <<'PY'
+          import robo as R
+          for u in ["https://billboard.com.br/feed/"]:
+              try:
+                  itens=R.ler_rss(u); print("RSS", u, "itens:", len(itens))
+                  for it in itens[:8]: print("  -", it.get("titulo","")[:90], "|", it.get("data",""))
+                  if itens:
+                      t=R.extrair_materia(itens[0]["link"], itens[0]["titulo"], "")
+                      print("TEXTO", itens[0]["link"], len(t.get("texto","")))
+              except Exception as e: print("ERRO", u, e)
+          PY
