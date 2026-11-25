@@ -9,4 +9,4 @@ for nome in sorted(os.listdir(pasta)):
     with open(os.path.join(pasta, nome), "rb") as f:
         r = requests.post("https://www.googleapis.com/upload/youtube/v3/thumbnails/set",
                           headers={**H, "Content-Type": "image/jpeg"}, params={"videoId": vid}, data=f.read(), timeout=60)
-    print(vid, "OK" if r.status_code == 200 else f"ERRO {r.status_code} {r.text[:200]}")
+    print(vid, "OK" if r.status_code == 200 else f"ERRO {r.status_code} {" ".join(r.text.split())[:400]}")
