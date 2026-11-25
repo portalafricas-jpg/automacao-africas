@@ -83,6 +83,11 @@ AUTORES_INSTAGRAM = {
     # "Thays Andrade": "@usuario",
 }
 HASHTAG_FIXA = "#ÁfricasPlay"
+EXPO_COLAB = ["expoafricabrasil", "joaocandaoficial"]  # toda matéria da Expo: arrobas e collab (25/11)
+
+
+def eh_expo(item):
+    return "expo" in (item.get("categoria") or "").lower()
 ARQ_LOGO = os.path.join(PASTA, "AP_500_140_negativo.png")   # logo para fundo escuro (envio de 22/11/2026)
 
 NS = {
@@ -582,7 +587,8 @@ def montar_legendas(item, textos):
     tags = tags[:5]
     corpo = cortar_legenda(textos["legenda"].strip())
     creditos = "\n".join(c for c in [credito_texto(item), f"📸 Foto: {item['credito']}" if item["credito"] else ""] if c)
-    instagram = "\n\n".join(p for p in [corpo, CHAMADA_INSTAGRAM, creditos, " ".join(tags)] if p)
+    arrobas = " ".join("@" + c for c in EXPO_COLAB) if eh_expo(item) else ""
+    instagram = "\n\n".join(p for p in [corpo, CHAMADA_INSTAGRAM, creditos, arrobas, " ".join(tags)] if p)
     facebook = "\n\n".join(p for p in [corpo, CHAMADA_FACEBOOK.format(link=item["link"]), creditos,
                                          " ".join(tags[:3])] if p)
     return instagram, facebook
@@ -766,7 +772,7 @@ def esperar_container(container, token, limite=90):
     raise ErroMeta("o Instagram demorou demais para processar a mídia")
 
 
-def publicar_carrossel(enderecos, alts, legenda, token, ig):
+def publicar_carrossel(enderecos, alts, legenda, token, ig, colaboradores=()):
     filhos = []
     for url, alt in zip(enderecos, alts):
         dados = {"image_url": url, "is_carousel_item": "true"}
@@ -775,8 +781,17 @@ def publicar_carrossel(enderecos, alts, legenda, token, ig):
         filhos.append(meta("POST", f"{ig}/media", token, dados)["id"])
     for f in filhos:
         esperar_container(f, token)
-    pai = meta("POST", f"{ig}/media", token,
-               {"media_type": "CAROUSEL", "children": ",".join(filhos), "caption": legenda})["id"]
+    dados_pai = {"media_type": "CAROUSEL", "children": ",".join(filhos), "caption": legenda}
+    if colaboradores:
+        dados_pai["collaborators"] = json.dumps(list(colaboradores))
+    try:
+        pai = meta("POST", f"{ig}/media", token, dados_pai)["id"]
+    except ErroMeta as e:
+        if not colaboradores:
+            raise
+        log(f"  Instagram recusou os colaboradores ({e}); publicando sem collab.")
+        dados_pai.pop("collaborators")
+        pai = meta("POST", f"{ig}/media", token, dados_pai)["id"]
     esperar_container(pai, token)
     midia = meta("POST", f"{ig}/media_publish", token, {"creation_id": pai})["id"]
     try:
@@ -861,7 +876,8 @@ def publicar_materia(item, token, pagina, ig):
     fb_post, enderecos = publicar_facebook(telas, legenda_fb, item["link"], token, pagina)
     alts = [textos.get("alt_capa", ""), textos.get("alt_destaque", "")] + alts_extras + \
            ["Tela do Áfricas Play: comente APP e receba o link da matéria completa no direct."]
-    midia, permalink = publicar_carrossel(enderecos, alts, legenda_ig, token, ig)
+    midia, permalink = publicar_carrossel(enderecos, alts, legenda_ig, token, ig,
+                                          EXPO_COLAB if eh_expo(item) else ())
     return {"titulo": item["titulo"], "link": item["link"], "ig_media": midia, "ig_link": permalink,
             "fb_post": fb_post, "prioridade": item.get("prioridade"),
             "foto": item.get("foto", ""), "categoria": item.get("categoria", ""),
