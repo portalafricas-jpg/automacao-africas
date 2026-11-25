@@ -32,6 +32,9 @@ VALIDADE_HORAS = 4              # notícia com mais de 4 horas não é publicada
 NOTA_MINIMA = 8                 # nota do editor-chefe para ir para a fila (era 7; mudou em 23/11)
 NOTA_EXCECAO = 7                # carnaval/escolas de samba e lançamentos de artistas negros continuam com 7
 TETO_DIA = 25                   # no máximo 25 matérias por dia no site (breaking e ministérios fora do teto)
+TETO_GENTE = 15                 # "Gente e Música" (artistas, música, carnaval, atletas negros): até 15 por dia (25/11)
+RESERVA_GENTE = 10              # até as 18h, 10 vagas do dia ficam guardadas para "Gente e Música"
+HORA_LIBERA_RESERVA = 18        # depois das 18h, as vagas não usadas voltam para as outras linhas
 def teto_por_hora(hora):
     """Picos de leitura no celular (aprovado em 24/11): manhã no trajeto, expediente calmo, noite."""
     if 6 <= hora < 9:
@@ -45,7 +48,7 @@ INTERVALO_AFRICA_HORAS = 2      # e no mínimo 2 horas entre uma e outra
 MINUTO_PARTIDA = 2              # o cron-job.org dá a partida em :02, :17, :32 e :47 (o site lê em :00, :15, :30, :45)
 MINUTOS_PARA_PUBLICAR = 7       # só publica até 7 minutos depois da partida, para o site ver a matéria com certeza
 HORA_INICIO = 6                 # das 6h à meia-noite publica normal; de madrugada, só breaking (6h desde 24/11)
-MAX_TRIAGEM_POR_RODADA = 40     # quantos títulos o editor-chefe avalia por rodada
+MAX_TRIAGEM_POR_RODADA = 60     # quantos títulos o editor-chefe avalia por rodada (era 40; 25/11)
 TEXTO_MINIMO = 600              # menos que isso de texto original = descarta (evita inventar)
 SEMELHANCA_MESMO_FATO = 0.62    # títulos parecidos acima disso = mesmo fato (entre fontes da mesma rodada)
 SEMELHANCA_JA_PUBLICADA = 0.85  # quase idêntico a matéria do portal = repetida sem precisar do editor-chefe
@@ -314,6 +317,59 @@ def ler_pagina_de_noticias(url):
         vistos.add(link)
         itens.append({"titulo": titulo, "link": link, "data": None, "imagem": "", "descricao": ""})
     return itens[:20]
+
+
+ARQ_ARTISTAS = os.path.join(PASTA_ESTADO, "artistas-vistos.json")      # nomes das matérias de Gente e Música
+ARQ_BUSCAS_AUTO = os.path.join(PASTA_ESTADO, "buscas-auto.json")      # buscas criadas sozinhas (nome novo)
+ARQ_AJUSTE_BUSCAS = os.path.join(PASTA_ESTADO, "buscas-ajuste.json")  # frequência definida no ajuste semanal
+VEZES_PARA_ENTRAR = 2           # nome que aparece 2 vezes em 7 dias vira busca
+DIAS_PARA_ENTRAR = 7
+
+
+def chave_nome(t):
+    return sem_acento((t or "").lower()).replace('"', "").replace("busca semanal - ", "").replace("busca - ", "").strip()
+
+
+def juntar_buscas(fontes):
+    """Fontes do arquivo + buscas criadas sozinhas, com a frequência do ajuste semanal (25/11/2026)."""
+    existentes = {chave_nome(f.get("busca", "")) for f in fontes if f.get("tipo") == "busca"}
+    for b in ler_json(ARQ_BUSCAS_AUTO, []):
+        if chave_nome(b.get("busca", "")) not in existentes:
+            fontes.append(b)
+            existentes.add(chave_nome(b.get("busca", "")))
+    ajuste = ler_json(ARQ_AJUSTE_BUSCAS, {})
+    saida = []
+    for f in fontes:
+        regra = ajuste.get(f.get("nome", "")) if f.get("tipo") == "busca" else None
+        if regra == "espera":
+            continue  # 30 dias sem nada: fica de fora até a próxima revisão
+        if isinstance(regra, int):
+            f = dict(f, dia_semana=regra)
+        elif regra == "diaria":
+            f = {k: v for k, v in f.items() if k != "dia_semana"}
+        saida.append(f)
+    return saida
+
+
+def anotar_artista(nome, categoria, agora):
+    """Nome novo de Gente e Música que aparece 2 vezes em 7 dias passa a ser buscado sozinho."""
+    vistos = ler_json(ARQ_ARTISTAS, {})
+    corte = (agora - timedelta(days=DIAS_PARA_ENTRAR)).isoformat()
+    datas = [d for d in vistos.get(nome, []) if d >= corte] + [agora.isoformat()]
+    vistos[nome] = datas
+    vistos = {n: d for n, d in vistos.items() if any(x >= corte for x in d)}
+    salvar_json(ARQ_ARTISTAS, vistos)
+    if len(datas) < VEZES_PARA_ENTRAR:
+        return
+    fontes = juntar_buscas(ler_json(ARQ_FONTES, []))
+    if any(chave_nome(nome) == chave_nome(f.get("busca", "")) or chave_nome(nome) in chave_nome(f.get("busca", ""))
+           for f in fontes if f.get("tipo") == "busca"):
+        return
+    auto = ler_json(ARQ_BUSCAS_AUTO, [])
+    auto.append({"nome": f"Busca - {nome}", "categoria": categoria, "tipo": "busca", "busca": f'"{nome}"',
+                 "grupo": sum(map(ord, nome)) % GRUPOS_BUSCA, "auto": agora.astimezone(FUSO_SP).date().isoformat()})
+    salvar_json(ARQ_BUSCAS_AUTO, auto)
+    log(f"Nome novo de Gente e Música vira busca: {nome}")
 
 
 def ler_fonte(fonte, rodada):
@@ -601,9 +657,11 @@ FERRAMENTA_EDITOR = {
                         "excecao_nota7": {"type": "boolean", "description": "true se for carnaval/escola de samba ou lançamento de artista negro (disco, livro, filme, série, espetáculo)"},
                         "evento_local_pequeno": {"type": "boolean", "description": "true se for evento local pequeno (oficina, palestra, celebração municipal, ação de biblioteca ou escola) fora de capital ou grande cidade e sem personagem ou fato relevante"},
                         "ministerio": {"type": "boolean", "description": "true se for ação, anúncio ou decisão do Ministério da Igualdade Racial ou de outro ministério do governo federal que atinja a população negra"},
+                        "gente_musica": {"type": "boolean", "description": "true se for da linha Gente e Música: artista negro (música, TV, cinema, teatro), carnaval e samba, ou atleta negro, sem ser fofoca"},
+                        "artista": {"type": "string", "description": "nome do artista ou atleta negro principal da notícia de Gente e Música; senão, vazio"},
                         "motivo": {"type": "string"},
                     },
-                    "required": ["id", "nota", "categoria", "prioridade", "repetida", "excecao_nota7", "evento_local_pequeno", "ministerio", "motivo"],
+                    "required": ["id", "nota", "categoria", "prioridade", "repetida", "excecao_nota7", "evento_local_pequeno", "ministerio", "gente_musica", "artista", "motivo"],
                 },
             }
         },
@@ -645,6 +703,8 @@ Para cada notícia nova, dê:
 - excecao_nota7: true só para carnaval/escolas de samba e lançamentos de artistas negros (disco, livro, filme, série, espetáculo).
 - evento_local_pequeno: true para oficina, palestra, celebração municipal, ação de biblioteca, escola ou prefeitura do interior, fora de capital ou grande cidade, sem personagem conhecido ou fato relevante.
 - ministerio: true para ação, anúncio ou decisão do Ministério da Igualdade Racial ou de qualquer ministério do governo federal que atinja a população negra.
+- gente_musica: true para a linha "Gente e Música" da linha editorial (artista negro, carnaval e samba, atleta negro), sem fofoca. Nessa linha a nota mínima é 7.
+- artista: nome da pessoa negra principal da notícia de Gente e Música (ex.: "Ludmilla", "Zeca Pagodinho"); vazio nos outros casos.
 - motivo: frase curta explicando a nota com base na régua.
 Release de órgão público (prefeitura, governo estadual, secretaria, assembleia) só merece nota 8 ou mais se trouxer fato relevante de verdade para a população negra.
 Notícia sobre o próprio veículo de imprensa (parceria comercial ou de conteúdo entre veículos, prêmio do veículo, aniversário, nova edição, nova equipe, evento ou campanha do veículo, como "RAÇA Brasil e UOL anunciam parceria") não interessa ao público do Áfricas: nota 0.
@@ -1149,7 +1209,7 @@ def publicar(materia_fila, linha_editorial, agora):
 def main():
     agora = datetime.now(timezone.utc)
     agora_sp = agora.astimezone(FUSO_SP)
-    fontes = ler_json(ARQ_FONTES, [])
+    fontes = juntar_buscas(ler_json(ARQ_FONTES, []))
     primeira_vez = ler_json(ARQ_PRIMEIRA_VEZ, {"fontes_iniciadas": [], "links": {}})
     rodada = int(agora.timestamp() // 900)  # número da rodada de 15 minutos (define o grupo de buscas)
     with open(ARQ_LINHA, encoding="utf-8") as f:
@@ -1254,7 +1314,8 @@ def main():
                     registrar(dict(c, nota=nota, categoria=a.get("categoria", "")), "repetida", a.get("motivo", ""))
                     continue
                 ministerio = bool(a.get("ministerio"))
-                minima = NOTA_EXCECAO if a.get("excecao_nota7") else NOTA_MINIMA
+                gente = bool(a.get("gente_musica"))
+                minima = NOTA_EXCECAO if (a.get("excecao_nota7") or gente) else NOTA_MINIMA
                 if a.get("evento_local_pequeno") and not ministerio:
                     log(f"Evento local pequeno, fora: {c['titulo'][:70]}")
                     registrar(dict(c, nota=nota, categoria=a.get("categoria", "")), "nota baixa", "evento local pequeno: " + a.get("motivo", ""))
@@ -1278,12 +1339,15 @@ def main():
                     "fonte_nome": c.get("fonte_nome", ""), "fonte_africa": c.get("fonte_africa", False),
                     "categoria": categoria, "prioridade": prioridade,
                     "nota": nota, "motivo_nota": a.get("motivo", ""), "ministerio": ministerio, "excecao_nota7": bool(a.get("excecao_nota7")),
+                    "gente": gente, "artista": (a.get("artista") or "").strip()[:60],
                     "data_original": (c["data"] or agora).astimezone(timezone.utc).isoformat(),
                     "criado_em": agora.isoformat(),
                     "valido_ate": (agora_sp.replace(hour=12, minute=0, second=0, microsecond=0).astimezone(timezone.utc).isoformat()
                                    if c.get("fonte_africa") and agora_sp.hour < HORA_INICIO else ""),
                 })
-                log(f"Nota {nota}, na fila: [{categoria} / {prioridade}] {c['titulo'][:70]}")
+                log(f"Nota {nota}, na fila: [{categoria} / {prioridade}{' / gente' if gente else ''}] {c['titulo'][:70]}")
+                if gente and fila[-1]["artista"]:
+                    anotar_artista(fila[-1]["artista"], categoria, agora)
                 registrar(fila[-1], "na fila", a.get("motivo", ""))
 
     # Etapa C: publicar (uma por categoria por rodada)
@@ -1294,6 +1358,9 @@ def main():
               if datetime.fromisoformat(m["publicado_em"]).astimezone(FUSO_SP).date().isoformat() == hoje]
     publicadas_hoje = sum(1 for m in do_dia if conta_no_teto(m))
     por_editoria = Counter(m.get("categoria") for m in do_dia if conta_no_teto(m))
+    gente_hoje = sum(1 for m in do_dia if conta_no_teto(m) and m.get("gente"))
+    outras_hoje = publicadas_hoje - gente_hoje
+    limite_outras = TETO_DIA - RESERVA_GENTE if agora_sp.hour < HORA_LIBERA_RESERVA else TETO_DIA
     ultima_hora = sum(1 for m in do_dia if conta_no_teto(m)
                       and agora - datetime.fromisoformat(m["publicado_em"]) < timedelta(hours=1))
     africa_hoje = [m for m in publicadas
@@ -1311,7 +1378,9 @@ def main():
     def ordem(m):
         # fontes África: dentro da mesma prioridade, a de nota mais alta sai primeiro
         # com teto diário, dentro da mesma prioridade sai primeiro a de nota mais alta
-        return (PRIORIDADES.index(m["prioridade"]), -(m.get("nota") or 0), m["data_original"])
+        # Gente e Música (25/11): dentro da mesma prioridade, sai antes enquanto não chega a 15 no dia
+        na_frente = 0 if (m.get("gente") and gente_hoje < TETO_GENTE) else 1
+        return (PRIORIDADES.index(m["prioridade"]), na_frente, -(m.get("nota") or 0), m["data_original"])
 
     os.makedirs(PASTA_FEEDS, exist_ok=True)
     for categoria in CATEGORIAS:
@@ -1336,7 +1405,7 @@ def main():
             if not e_breaking and not horario_normal:
                 break  # madrugada: só breaking
             if (materia_fila.get("nota") or 0) < NOTA_MINIMA and not (
-                    e_breaking or materia_fila.get("ministerio") or materia_fila.get("excecao_nota7")):
+                    e_breaking or materia_fila.get("ministerio") or materia_fila.get("excecao_nota7") or materia_fila.get("gente")):
                 fila.remove(materia_fila)  # entrou na fila pela regra antiga (nota 7)
                 registrar(materia_fila, "nota baixa", "nota 7 deixou de entrar (regra de 23/11)")
                 continue
@@ -1346,8 +1415,14 @@ def main():
                     break  # teto diário atingido
                 if ultima_hora >= teto_por_hora(agora.astimezone(FUSO_SP).hour):
                     break  # espera a próxima hora para espalhar ao longo do dia
-                if por_editoria[materia_fila["categoria"]] >= TETO_EDITORIA.get(materia_fila["categoria"], 3):
-                    break  # teto da editoria atingido hoje
+                if materia_fila.get("gente"):
+                    if gente_hoje >= TETO_GENTE:
+                        continue  # cota de Gente e Música do dia atingida; tenta uma de outra linha
+                else:
+                    if outras_hoje >= limite_outras:
+                        continue  # vagas guardadas para Gente e Música até as 18h
+                    if por_editoria[materia_fila["categoria"]] >= TETO_EDITORIA.get(materia_fila["categoria"], 3):
+                        break  # teto da editoria atingido hoje
             if materia_fila.get("fonte_africa") and not e_breaking:
                 if len(africa_hoje) >= LIMITE_AFRICA_DIA:
                     continue  # limite diário de matérias da África atingido
@@ -1381,6 +1456,10 @@ def main():
                 publicadas_hoje += 1
                 ultima_hora += 1
                 por_editoria[pronta["categoria"]] += 1
+                if pronta.get("gente"):
+                    gente_hoje += 1
+                else:
+                    outras_hoje += 1
             log(f"  RSS {pronta['categoria']} atualizado: {pronta['titulo']}")
             break  # uma por categoria por rodada
 

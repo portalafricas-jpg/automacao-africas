@@ -1077,5 +1077,299 @@
     "tipo": "busca",
     "busca": "\"Expo África Brasil\"",
     "grupo": 1
+  },
+  {
+    "nome": "Busca - Zeca Pagodinho",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"Zeca Pagodinho\"",
+    "grupo": 0,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Fundo de Quintal",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"Fundo de Quintal\"",
+    "grupo": 1,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Mart'nália",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "Mart'nália",
+    "grupo": 2,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Jorge Aragão",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"Jorge Aragão\"",
+    "grupo": 3,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Leci Brandão",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"Leci Brandão\"",
+    "grupo": 0,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Teresa Cristina cantora",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"Teresa Cristina cantora\"",
+    "grupo": 1,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Arlindinho",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "Arlindinho",
+    "grupo": 2,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Dudu Nobre",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"Dudu Nobre\"",
+    "grupo": 3,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Belo cantor",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"Belo cantor\"",
+    "grupo": 0,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Grupo Revelação",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"Grupo Revelação\"",
+    "grupo": 1,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Raça Negra banda",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"Raça Negra banda\"",
+    "grupo": 2,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Marvvila",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "Marvvila",
+    "grupo": 3,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Gloria Groove",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"Gloria Groove\"",
+    "grupo": 0,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Xênia França",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"Xênia França\"",
+    "grupo": 1,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Léo Santana",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"Léo Santana\"",
+    "grupo": 2,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Rachel Reis cantora",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"Rachel Reis cantora\"",
+    "grupo": 3,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Buchecha cantor",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"Buchecha cantor\"",
+    "grupo": 0,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - O Polêmico cantor",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"O Polêmico cantor\"",
+    "grupo": 1,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Una Menino",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"Una Menino\"",
+    "grupo": 2,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Diladim",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "Diladim",
+    "grupo": 3,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Clara Moneke",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"Clara Moneke\"",
+    "grupo": 0,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Douglas Silva ator",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"Douglas Silva ator\"",
+    "grupo": 1,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Lupita Nyong'o",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"Lupita Nyong'o\"",
+    "grupo": 2,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Davido",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "Davido",
+    "grupo": 3,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - cantora negra",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"cantora negra\"",
+    "grupo": 0,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - cantor negro",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"cantor negro\"",
+    "grupo": 1,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - atriz negra",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"atriz negra\"",
+    "grupo": 2,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - ator negro",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"ator negro\"",
+    "grupo": 3,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - samba",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "samba",
+    "grupo": 0,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - pagode",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "pagode",
+    "grupo": 1,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - rap nacional",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"rap nacional\"",
+    "grupo": 2,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - escola de samba",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"escola de samba\"",
+    "grupo": 3,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Carnaval 2027",
+    "categoria": "cultura",
+    "tipo": "busca",
+    "busca": "\"Carnaval 2027\"",
+    "grupo": 0,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - atleta negra",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "\"atleta negra\"",
+    "grupo": 1,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - atleta negro",
+    "categoria": "protagonista",
+    "tipo": "busca",
+    "busca": "\"atleta negro\"",
+    "grupo": 2,
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "R&B Brazil",
+    "categoria": "cultura",
+    "tipo": "rss",
+    "url": "https://www.rnbbrazil.com.br/blog-feed.xml",
+    "criada": "2026-11-25"
+  },
+  {
+    "nome": "Rated R&B (EUA)",
+    "categoria": "cultura",
+    "tipo": "rss",
+    "url": "https://ratedrnb.com/feed/",
+    "criada": "2026-11-25"
   }
 ]

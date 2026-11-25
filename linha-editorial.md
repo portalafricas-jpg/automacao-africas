@@ -57,9 +57,20 @@ Agenda Preta (prioridade): combate ao genocídio e à violência de Estado; dire
 - Conteúdo exclusivo de outro veículo não entra (nota 0 a 4): entrevista exclusiva concedida ao veículo, reportagem investigativa própria, levantamento próprio e furo. É o trabalho deles, principalmente da imprensa negra, e o Áfricas não se apropria dele. O mesmo fato só entra quando vier de fonte oficial (governo, órgão público, assessoria, release) ou for noticiado por vários veículos.
 - Estudos, pesquisas e levantamentos com dados sobre racismo e desigualdade racial são notícia (nota mínima 7).
 - Matéria explicativa ou de contexto histórico sobre uma data da memória negra, publicada no dia dela, é notícia (nota mínima 7), desde que traga fatos e não seja artigo de opinião.
-- Fofoca não é notícia (nota 0 a 4): namoro, separação, briga entre famosos, vida íntima, corpo, roupa, festa, polêmica de rede social e qualquer assunto pessoal sem conquista ou sem relação com a luta antirracista.
+- Fofoca não é notícia (nota 0 a 4): namoro, separação, briga entre famosos, vida íntima, corpo, polêmica de rede social, resumo ou spoiler de capítulo de novela e qualquer assunto pessoal da vida privada. Atenção: o trabalho e a agenda pública de um artista negro NÃO são fofoca (veja "Gente e Música").
 - Quando um famoso negro aparece numa notícia que mistura conquista e fofoca, a matéria trata só da conquista.
 - Quem é pessoa negra: seguir a regra de raça e cor da seção "Fidelidade".
+
+## Gente e Música (prioridade desde 25/11/2026)
+O Áfricas também é entretenimento negro, como Mundo Negro, Africanize, Lista Preta e Cultura Preta: a cara dos nossos artistas, sem fofoca. Isso atrai o público mais novo. Para estas notícias, marque gente_musica = true e informe o artista. Nota mínima 7, mesmo sem falar de racismo.
+- Música: single, clipe, disco, show, turnê, festival, participação especial, parceria, premiação e indicação, recorde de streaming, marco de carreira (aniversário de disco ou de carreira), homenagem. Vale para samba, pagode, R&B, rap, funk, soul, axé, MPB e música africana e da diáspora.
+- TV, cinema, teatro e streaming: artista negro escalado ou estreando trabalho novo (papel em novela, filme, série, peça), bastidores de produção, entrevista a programa de TV ou podcast com fala pública relevante, premiação. Novela entra só como trabalho do artista; resumo de capítulo, enredo e spoiler ficam fora.
+- Carnaval e samba: escolas de samba, ensaios técnicos e de rua, quadras, enredos, sambas-enredo e clipes, rainhas e musas de bateria, porta-bandeiras, cortes do carnaval, blocos afro e de samba, artistas negros em ensaios e desfiles.
+- Esporte: conquista, recorde, título, convocação ou marco de atleta negro brasileiro ou internacional (como Vini Jr. e Rebeca Andrade). Esporte africano de seleções continua fora.
+- Moda e beleza: artista negro em premiação ou desfile de moda com marca ou estilista negro.
+- Continuam fora (nota 0 a 4): vida amorosa, separação, briga, corpo, polêmica de rede social, "famoso foi visto em tal lugar" sem trabalho ou evento.
+- A pessoa precisa ser negra, pela regra de raça e cor da seção "Fidelidade". Artista não negro só entra se a notícia for sobre um artista negro.
+- Categoria: cultura (música, carnaval, TV e cinema) ou protagonista (conquistas, prêmios, esporte e trajetória).
 
 ## Notícias da África e do mundo
 Vale para as notícias marcadas como [FONTE ÁFRICA], que vêm de veículos africanos (como os de Angola) ou de buscas sobre o continente. Nesses países a maioria da população é negra, então os jornais quase nunca falam de raça: a pergunta não é "a questão racial é o centro?", e sim "isso interessa ao leitor brasileiro que acompanha a África e a diáspora?".
