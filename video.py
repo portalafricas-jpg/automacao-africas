@@ -341,7 +341,7 @@ def montar_video(telas, musica, saida):
         quadros = int(dur * FPS)
         filtros.append(
             f"[{i}:v]scale={int(L * 1.12)}:{int(A * 1.12)},"
-            f"zoompan=z='min(zoom+0.0007,1.10)':d={quadros}:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'"
+            f"zoompan=z='min(zoom+0.0003,1.04)':d={quadros}:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'"
             f":s={L}x{A}:fps={FPS},setsar=1,format=yuv420p[v{i}]")
         duracoes.append(dur)
     atual, offset = "v0", 0.0
