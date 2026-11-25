@@ -30,19 +30,20 @@ def mensagem(post):
 def main():
     posts = json.load(open(C.ARQ_POSTS, encoding="utf-8"))
     limite = datetime.now(timezone.utc) - timedelta(hours=72)
+    achados = []  # pega o comentário TESTEBOTAO mais recente (cada comentário só aceita uma mensagem)
     for post in [p for p in posts if p.get("ig_media") and datetime.fromisoformat(p["publicado_em"]) >= limite]:
         try:
-            dados = C.meta("GET", f"{post['ig_media']}/comments", {"fields": "id,text,username", "limit": "50"})
+            dados = C.meta("GET", f"{post['ig_media']}/comments", {"fields": "id,text,username,timestamp", "limit": "50"})
         except RuntimeError:
             continue
-        for c in dados.get("data", []):
-            if "TESTEBOTAO" not in normal(c.get("text")):
-                continue
-            print(f"Achei o comentário de @{c.get('username')} em '{post['titulo']}'")
-            mensagem, _ = C.mensagem_direct(post)
-            ok = C.mandar_direct(c["id"], mensagem)  # sem texto reserva: queremos ver se os botões passam
-            print(f"RESULTADO: {'botões ENVIADOS' if ok else 'botões RECUSADOS'}")
-            return
+        achados += [(c.get("timestamp", ""), c, post) for c in dados.get("data", []) if "TESTEBOTAO" in normal(c.get("text"))]
+    if achados:
+        _, c, post = max(achados, key=lambda x: x[0])
+        print(f"Achei o comentário de @{c.get('username')} em '{post['titulo']}' ({c.get('timestamp')})")
+        mensagem, _ = C.mensagem_direct(post)
+        ok = C.mandar_direct(c["id"], mensagem)  # sem texto reserva: queremos ver se os botões passam
+        print(f"RESULTADO: {'botões ENVIADOS' if ok else 'botões RECUSADOS'}")
+        return
     print("RESULTADO: nenhum comentário TESTEBOTAO encontrado nos posts dos últimos 3 dias")
 
 

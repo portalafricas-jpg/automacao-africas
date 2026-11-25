@@ -73,6 +73,12 @@ PERFIL = "https://www.instagram.com/africasplay/"
 CONVITE = "No app Áfricas Play ela abre direto. E siga o Áfricas para não perder as próximas! 👇"
 
 
+def com_utm(link, conteudo):
+    """Marca o link para o Google Analytics mostrar os leitores que vieram do direct (aprovado em 25/11/2026)."""
+    sep = "&" if "?" in link else "?"
+    return f"{link}{sep}utm_source=instagram&utm_medium=direct&utm_campaign=comente-app&utm_content={conteudo}"
+
+
 def foto_da_materia(link, cache={}):
     """Foto oficial da matéria (og:image), para o cartão do carrossel no direct."""
     if link not in cache:
@@ -92,10 +98,9 @@ def mensagem_direct(post):
     """Direct com botões clicáveis (aprovado em 25/11/2026). Devolve (mensagem com botões, texto reserva)."""
     if post.get("links"):  # Reels com várias matérias: carrossel, um cartão por matéria
         cartoes = []
-        for m in post["links"][:9]:
+        for n, m in enumerate(post["links"][:9], 1):
             c = {"title": m["titulo"][:80], "subtitle": "Áfricas Play",
-                 "default_action": {"type": "web_url", "url": m["link"]},
-                 "buttons": [{"type": "web_url", "url": m["link"], "title": "Ler a matéria"}]}
+                 "buttons": [{"type": "web_url", "url": com_utm(m["link"], f"radar-{n}"), "title": "Ler a matéria"}]}
             foto = foto_da_materia(m["link"])
             if foto:
                 c["image_url"] = foto
@@ -111,7 +116,7 @@ def mensagem_direct(post):
     texto = f"Oi! 👋 Aqui está a matéria completa:\n{post['titulo']}\n\n{CONVITE}"
     mensagem = {"attachment": {"type": "template", "payload": {
         "template_type": "button", "text": texto[:640],
-        "buttons": [{"type": "web_url", "url": post["link"], "title": "Ler a matéria"},
+        "buttons": [{"type": "web_url", "url": com_utm(post["link"], "materia"), "title": "Ler a matéria"},
                     {"type": "web_url", "url": APP_PAGINA, "title": "Baixar o app"},
                     {"type": "web_url", "url": PERFIL, "title": "Seguir o Áfricas"}]}}}
     reserva = (f"Oi! Aqui está a matéria completa: {post['titulo']}\n{post['link']}\n\n"
