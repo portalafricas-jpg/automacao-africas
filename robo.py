@@ -1041,12 +1041,12 @@ def foto_outra_cobertura(consulta, link_original):
         return None
     dominio_original = urlparse(link_original).netloc.lower()
     try:
-        itens = ler_rss(google_url(consulta))[:6]
+        itens = ler_rss(google_url(consulta).replace("when%3A1d", "when%3A7d"))[:8]  # últimos 7 dias
     except Exception:
         return None
     tentativas = 0
     for it in itens:
-        if tentativas >= 4:
+        if tentativas >= 5:
             break
         try:
             link = link_real_google(it["link"]) if "news.google.com" in it["link"] else it["link"]
