@@ -620,5 +620,49 @@
   "foto": "https://www.africas.com.br/uploads/images/2026/11/coruja-lanca-album-o-que-nao-digo-tambem-e-meu1795630813.jpg",
   "categoria": "Cultura",
   "publicado_em": "2026-11-25T21:53:23.571722+00:00"
+ },
+ {
+  "titulo": "Morre Juninho Baú, nome do samba de BH",
+  "link": "https://www.africas.com.br/noticia/morre-juninho-bau-nome-do-samba-de-bh",
+  "ig_media": "18111234641344515",
+  "ig_link": "https://www.instagram.com/p/DgLkSjMjQjW/",
+  "fb_post": "103917485738096_1142852745178055",
+  "prioridade": "breaking",
+  "foto": "https://www.africas.com.br/uploads/images/2026/11/morre-juninho-bau-nome-do-samba-de-bh1795644120.jpg",
+  "categoria": "Protagonistas",
+  "publicado_em": "2026-11-25T22:08:15.786296+00:00"
+ },
+ {
+  "tipo": "reels",
+  "titulo": "Resumo do dia 25/11",
+  "link": "https://www.africas.com.br",
+  "links": [
+   {
+    "titulo": "Morre Juninho Baú, fundador do Nossa Roda",
+    "link": "https://www.africas.com.br/noticia/morre-juninho-bau-fundador-do-nossa-roda"
+   },
+   {
+    "titulo": "Câmara aprova registro de raça e cor no SUS",
+    "link": "https://www.africas.com.br/noticia/camara-aprova-registro-de-raca-e-cor-no-sus"
+   },
+   {
+    "titulo": "Morre Juninho Baú, nome do samba de BH",
+    "link": "https://www.africas.com.br/noticia/morre-juninho-bau-nome-do-samba-de-bh"
+   },
+   {
+    "titulo": "Formiga: futebol, racismo e mulheres negras no poder",
+    "link": "https://www.africas.com.br/noticia/formiga-futebol-racismo-e-mulheres-negras-no-poder"
+   },
+   {
+    "titulo": "Lauryn Hill e Wyclef Jean em SP em janeiro de 2027",
+    "link": "https://www.africas.com.br/noticia/lauryn-hill-e-wyclef-jean-em-sp-em-janeiro-de-2027"
+   }
+  ],
+  "ig_media": "18213366505371147",
+  "ig_link": "https://www.instagram.com/reel/DgLkaH_uS1I/",
+  "fb_post": "2632326887265859",
+  "yt_video": "f1FodC67i10",
+  "prioridade": "reels",
+  "publicado_em": "2026-11-25T22:09:43.505662+00:00"
  }
 ]
