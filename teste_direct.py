@@ -39,14 +39,9 @@ def main():
             if "TESTEBOTAO" not in normal(c.get("text")):
                 continue
             print(f"Achei o comentário de @{c.get('username')} em '{post['titulo']}'")
-            corpo = {"recipient": {"comment_id": c["id"]}, "message": mensagem(post)}
-            for onde in (C.PAGINA, C.IG):
-                try:
-                    C.meta("POST", f"{onde}/messages", json_corpo=corpo)
-                    print(f"RESULTADO: botões ENVIADOS (pela conta {onde})")
-                    return
-                except RuntimeError as e:
-                    print(f"RESULTADO: recusado pela conta {onde}: {e}")
+            mensagem, _ = C.mensagem_direct(post)
+            ok = C.mandar_direct(c["id"], mensagem)  # sem texto reserva: queremos ver se os botões passam
+            print(f"RESULTADO: {'botões ENVIADOS' if ok else 'botões RECUSADOS'}")
             return
     print("RESULTADO: nenhum comentário TESTEBOTAO encontrado nos posts dos últimos 3 dias")
 

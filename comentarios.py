@@ -68,30 +68,69 @@ def pediu_app(texto):
     return re.search(r"\b(app|aplicativo|apps)\b", t) is not None
 
 
+APP_PAGINA = "https://app.africas.com.br"          # página do portal com as duas lojas (Android e iPhone)
+PERFIL = "https://www.instagram.com/africasplay/"
+CONVITE = "No app Áfricas Play ela abre direto. E siga o Áfricas para não perder as próximas! 👇"
+
+
+def foto_da_materia(link, cache={}):
+    """Foto oficial da matéria (og:image), para o cartão do carrossel no direct."""
+    if link not in cache:
+        foto = ""
+        try:
+            h = requests.get(link, timeout=20, headers={"User-Agent": "Mozilla/5.0 (robo-africas)"}).text
+            m = re.search(r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)', h) or \
+                re.search(r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image', h)
+            foto = m.group(1) if m and m.group(1).startswith("https://") else ""
+        except Exception:
+            pass
+        cache[link] = foto
+    return cache[link]
+
+
 def mensagem_direct(post):
-    if post.get("links"):  # Reels com várias matérias
+    """Direct com botões clicáveis (aprovado em 25/11/2026). Devolve (mensagem com botões, texto reserva)."""
+    if post.get("links"):  # Reels com várias matérias: carrossel, um cartão por matéria
+        cartoes = []
+        for m in post["links"][:9]:
+            c = {"title": m["titulo"][:80], "subtitle": "Áfricas Play",
+                 "default_action": {"type": "web_url", "url": m["link"]},
+                 "buttons": [{"type": "web_url", "url": m["link"], "title": "Ler a matéria"}]}
+            foto = foto_da_materia(m["link"])
+            if foto:
+                c["image_url"] = foto
+            cartoes.append(c)
+        cartoes.append({"title": "Áfricas Play: jornalismo negro", "subtitle": "No app as matérias abrem direto. Siga o Áfricas!",
+                        "buttons": [{"type": "web_url", "url": APP_PAGINA, "title": "Baixar o app"},
+                                    {"type": "web_url", "url": PERFIL, "title": "Seguir o Áfricas"}]})
+        mensagem = {"attachment": {"type": "template", "payload": {"template_type": "generic", "elements": cartoes}}}
         lista = "\n\n".join(f"• {m['titulo']}\n{m['link']}" for m in post["links"])
-        return (f"Oi! Aqui estão as matérias completas do {post['titulo']}:\n\n{lista}\n\n"
-                f"Se você tem o app Áfricas Play, elas abrem direto nele.\n"
-                f"Ainda não tem? Baixe grátis:\nAndroid: {LOJA_ANDROID}\niPhone: {LOJA_IPHONE}")
-    return (f"Oi! Aqui está a matéria completa: {post['titulo']}\n{post['link']}\n\n"
-            f"Se você tem o app Áfricas Play, ela abre direto nele.\n"
-            f"Ainda não tem? Baixe grátis:\nAndroid: {LOJA_ANDROID}\niPhone: {LOJA_IPHONE}")
+        reserva = (f"Oi! Aqui estão as matérias completas do {post['titulo']}:\n\n{lista}\n\n"
+                   f"Baixe o app Áfricas Play: {APP_PAGINA}")
+        return mensagem, reserva
+    texto = f"Oi! 👋 Aqui está a matéria completa:\n{post['titulo']}\n\n{CONVITE}"
+    mensagem = {"attachment": {"type": "template", "payload": {
+        "template_type": "button", "text": texto[:640],
+        "buttons": [{"type": "web_url", "url": post["link"], "title": "Ler a matéria"},
+                    {"type": "web_url", "url": APP_PAGINA, "title": "Baixar o app"},
+                    {"type": "web_url", "url": PERFIL, "title": "Seguir o Áfricas"}]}}}
+    reserva = (f"Oi! Aqui está a matéria completa: {post['titulo']}\n{post['link']}\n\n"
+               f"Baixe o app Áfricas Play: {APP_PAGINA}")
+    return mensagem, reserva
 
 
-def mandar_direct(comentario_id, texto):
-    corpo = {"recipient": {"comment_id": comentario_id}, "message": {"text": texto}}
-    try:
-        meta("POST", f"{PAGINA}/messages", json_corpo=corpo)
-        return True
-    except RuntimeError as e:
-        log(f"  direct pela página falhou ({e}); tentando pela conta do Instagram")
-    try:
-        meta("POST", f"{IG}/messages", json_corpo=corpo)
-        return True
-    except RuntimeError as e:
-        log(f"  direct falhou ({e})")
-        return False
+def mandar_direct(comentario_id, mensagem, reserva=None):
+    """Tenta a mensagem com botões; se o Instagram recusar, manda o texto reserva."""
+    tentativas = [mensagem] + ([{"text": reserva}] if reserva else [])
+    for msg in tentativas:
+        corpo = {"recipient": {"comment_id": comentario_id}, "message": msg}
+        for onde in (PAGINA, IG):
+            try:
+                meta("POST", f"{onde}/messages", json_corpo=corpo)
+                return True
+            except RuntimeError as e:
+                log(f"  direct pela conta {onde} falhou ({e})")
+    return False
 
 
 # ---------------- Outros comentários (elogio, pergunta, crítica, ofensa) ----------------
@@ -259,7 +298,7 @@ def main():
                 continue
             if autor in atendidos:
                 continue
-            ok = mandar_direct(c["id"], mensagem_direct(post))
+            ok = mandar_direct(c["id"], *mensagem_direct(post))
             try:
                 meta("POST", f"{c['id']}/replies", {"message": RESPOSTA_OK if ok else RESPOSTA_SEM_DIRECT})
             except RuntimeError as e:
