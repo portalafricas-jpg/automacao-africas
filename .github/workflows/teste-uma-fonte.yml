@@ -9,16 +9,19 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install trafilatura
+      - run: pip install trafilatura googlenewsdecoder
       - run: |
           python - <<'PY'
           import robo as R
-          for u in ["https://billboard.com.br/feed/"]:
+          try:
+              t,_=R.baixar("https://billboard.com.br/feed/"); print("FEED BRUTO", len(t), t[:200].replace("\n"," "))
+          except Exception as e: print("ERRO FEED", e)
+          itens=R.ler_rss(R.google_url("site:billboard.com.br"))
+          print("GOOGLE itens:", len(itens))
+          for it in itens[:8]: print("  -", it["titulo"][:90])
+          for it in itens[:2]:
               try:
-                  itens=R.ler_rss(u); print("RSS", u, "itens:", len(itens))
-                  for it in itens[:8]: print("  -", it.get("titulo","")[:90], "|", it.get("data",""))
-                  if itens:
-                      t=R.extrair_materia(itens[0]["link"], itens[0]["titulo"], "")
-                      print("TEXTO", itens[0]["link"], len(t.get("texto","")))
-              except Exception as e: print("ERRO", u, e)
+                  real=R.link_real_google(it["link"]); t=R.extrair_materia(real, it["titulo"], "")
+                  print("TEXTO", real, len(t.get("texto","")))
+              except Exception as e: print("ERRO", e)
           PY
