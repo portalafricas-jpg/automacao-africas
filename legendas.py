@@ -6,6 +6,7 @@ import os
 import sys
 
 NOMES_DA_CASA = {  # correções fixas de nomes que a transcrição costuma errar
+    "Busa": "Buza", "Busa,": "Buza,", "Busa.": "Buza.",
 }
 
 
