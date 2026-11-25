@@ -504,27 +504,6 @@
   "valido_ate": ""
  },
  {
-  "link": "https://news.google.com/rss/articles/CBMijgJBVV95cUxPVVN6WVZYLXZMV09BRVVadXNGQy1IS0xhU0dmczNJdkhLelg0QW9pa0RGVkRVYmdVNEhyZ1k2Z19QRVg3V2hkMUM1RUdpaUZiT1hRQVRmSlFYVy14b3dyWXBkMnlSMnh0OEJxT3lWWGpTcEQzd3hqMUxDR3htY09QMWdHVGd5NFdEZ1lwTTRaYnd0SDBvZ3dNWnZFTGZQRDNsTUVWYV93MnJkTF9YZ1RIMTFQRnRtY0xkMlk2cGE3dlFYdnAyd2pKZ3hqeVBZbEZQdVEydUZqVmlvRGlmQkJ0Wm1pV2dyeEpPclJBVE12QW8tYVRpTUMzWlhHWjBoR3oycWJKTFVfMkJ0czl2MEHSAZwCQVVfeXFMUHc2M0djX1hQRDYxYW9tV1luSFBpYnZsVHNlUEo2MXMtQVdDM0psclZQbTJlQ29lXzctMkMwdXJOaHdTck5wUkNqaE9xMWVOT1VwdlRrT1g3VUNLS0E5WHZEQWd2RTZFMGdjcVR6aUVfazVsS0tQajJXd3pGSFVGbzVtN1R5UDBDenpxdU1EU1J6YmVOSEJYVUdDUDV2VGtDcENCNThrSjFhYjJLbzFGY0lPdWMtMTdyV0RoZ0N4MjhUOFBfRkU0MVFIcDJFQWhlbHlDV3RlOVEwRWxBOHlweTRBT2dUcUdTUW1oUFY0aHFQdGlJTU9TVTAwV016T2RveW5ZWEJoVGE2eFN3em1KbW14eEdZMGxzd2lIeE4?oc=5",
-  "titulo_original": "Coruja parte do samba de filme do Cinema Novo para ir além do rap no álbum 'O que não digo também é meu'",
-  "descricao": "Coruja parte do samba de filme do Cinema Novo para ir além do rap no álbum 'O que não digo também é meu'    G1",
-  "imagem_rss": "",
-  "imagem_banco": false,
-  "imagem_trocar": false,
-  "fonte_nome": "Busca - samba",
-  "fonte_africa": false,
-  "categoria": "cultura",
-  "prioridade": "alta",
-  "nota": 8,
-  "motivo_nota": "Lançamento de álbum de artista negro (Coruja) com samba, linha Gente e Música.",
-  "ministerio": false,
-  "excecao_nota7": true,
-  "gente": true,
-  "artista": "Coruja",
-  "data_original": "2026-11-25T13:56:14+00:00",
-  "criado_em": "2026-11-25T15:02:18.855644+00:00",
-  "valido_ate": ""
- },
- {
   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBObW13ZXpndDJjZG5pS2xfVGxQWVo2V0hvNDdPUTdOaUFSbldoaTNTZmFwc0dKcFBlenBwbTVQd3o2M0Q3QnA4R3FYTTVKczdUVHRrQzFvSmZmR1Jkb3dXcm5FV1lyeGM?oc=5",
   "titulo_original": "\"Samba-Doido\" na Avenida Paulista: o icônico trio Azymuth sobe ao palco do Blue Note São Paulo, para celebrar 50 anos de um dos álbuns mais importantes do jazz-funk brasileiro",
   "descricao": "\"Samba-Doido\" na Avenida Paulista: o icônico trio Azymuth sobe ao palco do Blue Note São Paulo, para celebrar 50 anos de um dos álbuns mais importantes do jazz-funk brasileiro    São Paulo Secreto",
@@ -627,6 +606,27 @@
   "artista": "Pinha Presidente",
   "data_original": "2026-11-25T15:14:14+00:00",
   "criado_em": "2026-11-25T15:17:17.100746+00:00",
+  "valido_ate": ""
+ },
+ {
+  "link": "https://mundonegro.inf.br/campanha-orienta-como-denunciar-racismo-em-aeroportos-e-voos/",
+  "titulo_original": "Campanha orienta como denunciar racismo em aeroportos e voos",
+  "descricao": "Guia do governo federal ensina como agir ao sofrer ou presenciar racismo em voos e aeroportos, do aviso à tripulação à denúncia na Ouvidoria do MIR. O Governo Federal lançou no dia 19 de novembro, véspera do Dia Nacional de Zumbi e da Consciência Negra, a campanha “Racismo Não Decola”, voltada ao enfrentamento da discriminação […] \n O post Campanha orienta como denunciar racismo em aeroportos e voos apareceu primeiro em Mundo Negro .",
+  "imagem_rss": "",
+  "imagem_banco": true,
+  "imagem_trocar": true,
+  "fonte_nome": "Mundo Negro",
+  "fonte_africa": false,
+  "categoria": "cotidiano",
+  "prioridade": "alta",
+  "nota": 8,
+  "motivo_nota": "Campanha do governo federal (Ministério da Igualdade Racial, Ouvidoria do MIR) contra racismo em voos e aeroportos; ação de governo que atinge a população negra. Lançada em 19/11, notícia dentro da janela de 5 dias, mas sem outra matéria igual no portal.",
+  "ministerio": true,
+  "excecao_nota7": false,
+  "gente": false,
+  "artista": "",
+  "data_original": "2026-11-25T15:27:11+00:00",
+  "criado_em": "2026-11-25T15:32:23.115295+00:00",
   "valido_ate": ""
  }
 ]
