@@ -972,5 +972,50 @@
   "destino": "publicada",
   "detalhe": "CNPq e Petrobras lançam 1.500 bolsas a alunas negras",
   "foto": "Foto ilustrativa: Felipe Gregate/Unsplash"
+ },
+ {
+  "hora": "07:33",
+  "fonte": "Busca - religião de matriz africana",
+  "titulo": "População negra: Câmara aprova raça ou cor no SUS",
+  "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPUGxsTHRXcGppdnZLUWxGMzZjZDdzV3ppcG9scF9KSVJyR0ZfdHM2a1pqYUMzSWlUNkxpcGRpcDZjWDFGWGdEblpWYlVEeGJLVkd4b3oyVTZaeGJfTG81MU4xY2xNYnU5dnhQVEkxdGlCX3lrelY2bFdxY0tRRjRRV2lCLVA0dXl2aS03MQ?oc=5",
+  "categoria": "politica",
+  "prioridade": "alta",
+  "nota": 9,
+  "destino": "na fila",
+  "detalhe": "Decisão do Congresso (Câmara aprova) que atinge diretamente a população negra na saúde, Agenda Preta; fato novo, não há cobertura igual nos últimos 5 dias."
+ },
+ {
+  "hora": "07:33",
+  "fonte": "Alma Preta",
+  "titulo": "O que conecta Brasil e África na luta pela justiça climática?",
+  "link": "https://almapreta.com.br/sessao/quilombo/brasil-africa-luta-justica-climatica/",
+  "categoria": "ancestralidade",
+  "prioridade": "",
+  "nota": 6,
+  "destino": "nota baixa",
+  "detalhe": "Conexão Brasil-África em justiça climática com comunidades; questão racial aparece mas não é o centro, e é texto de outro veículo (AlmaPreta) com possível conteúdo exclusivo; sem fato claro e urgente."
+ },
+ {
+  "hora": "07:33",
+  "fonte": "Busca - Djamila Ribeiro",
+  "titulo": "Opinião - Mauricio Portugal Ribeiro: A frase que faltou no pacote fiscal",
+  "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQWGJMM1hzX3RpWTJUT2V3TW53X05iSlFSSkdMemc5dmRxeE8xSVhHcEpJNkEza3dpLVNGcjV1ZVV1S2o2WW5VdkU3Y2ZJdHI2MjRMTC10U0k1Rlg3b1NFM3lpWnFLVU5faDVVU0dXMDgwSXA5dFpXc1NtcmNkeTZid0JvSmpvSmRJT0dLeGFCajJyMzhwd1U5Q0NUaXM5OGMtekxaSHlaZzkwQWlYUXNmdmR5QQ?oc=5",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Artigo de opinião de outro veículo (Folha), sem relação com a temática racial; não é notícia."
+ },
+ {
+  "hora": "07:33",
+  "fonte": "Busca - religião de matriz africana",
+  "titulo": "População negra: Câmara aprova raça ou cor no SUS",
+  "link": "https://minhabahia.com.br/saude/populacao-negra-camara-raca-cor-sus-valmir-assuncao/",
+  "categoria": "politica",
+  "prioridade": "alta",
+  "nota": 9,
+  "destino": "publicada",
+  "detalhe": "Câmara aprova quesito raça ou cor no SUS",
+  "foto": "Thiago Cristino/Câmara dos Deputados"
  }
 ]
