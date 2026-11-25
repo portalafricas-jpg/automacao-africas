@@ -218,5 +218,27 @@
   "nota": 0,
   "destino": "nota baixa",
   "detalhe": "Texto opinativo de veículo de outra natureza (título de artigo sobre imagem do STF), sem fato novo; conteúdo de opinião não entra."
+ },
+ {
+  "hora": "01:32",
+  "fonte": "Busca semanal - Erika Hilton",
+  "titulo": "Pressão popular derruba Bilynskyj da Comissão de Defesa dos Direitos da Mulher",
+  "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQY0pxOEVHZ1ZZZzRNMGxaRFRPXzdUZFNhS1ozaDNvM3hGdGlEMlZmV1NlQUtzcmpqYXkzc2R0aTZrLVR4aFZoUm16ZlAwRm1BTFVuR2lULXFMMjc1T2c5aTZQX1p5c3VmQ3Riam5aUVJMRnlqZW12c3U5MFpCM0hTdHVxQmdsVE9KMHBWU0V2VHZpVnc2Z1IxVUxJQ0NpenlZM0lFWjFUUzVxMm83TDRyYUY0LXdrd3h3dElKU09VRHVxUQ?oc=5",
+  "categoria": "politica",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "01:33",
+  "fonte": "Busca - Djamila Ribeiro",
+  "titulo": "TCE participa de reuniões estratégicas e atividades técnicas no primeiro dia do X ENTC",
+  "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1xSW1senpleHZ3Zjd6S0tEeUJzRGVxcXZqYjdFWlpGR1Y2OWpNNTRKSC1fVGhCR2tyNTR3NVNzSUdkalJPemJlaHBqZTVyc2RsbkZoMnA4YU4wWENyQmJLcXlkclQySGc?oc=5",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Notícia institucional de tribunal de contas sobre reuniões técnicas, sem relação com a temática racial nem com a Agenda Preta."
  }
 ]
