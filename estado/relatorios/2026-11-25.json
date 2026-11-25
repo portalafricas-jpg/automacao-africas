@@ -152,5 +152,38 @@
   "nota": 0,
   "destino": "nota baixa",
   "detalhe": "Resumo vago e sem fatos verificáveis no material recebido (sem detalhes da campanha, órgãos ou dados); não há informação suficiente para matéria honesta. Título genérico de agência, descartar."
+ },
+ {
+  "hora": "01:02",
+  "fonte": "Busca - igualdade racial",
+  "titulo": "Câmara aprova medidas de equidade racial no SUS",
+  "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNbDN4a0dIbzd6YTM5Rl84UEQ1QzFhVzRkeVVoMC1iLXJKcW1CTS0yR3E0RXNDY05uVW5ZQWhCSDZjMUtYaHZsM29MN0RVeFNWOEtlMzUtUENQaGpwWlRUZWIzaXVMcUMxU09EeGdUTjJwNmxybVhXQlBrLU5CNW1MdVRObWQzRlN4RlRqV1FSajJzUWJEZXJwUC1ScmZ0cGRYai1weXN3S19GRl9xVnBNOTM0d3p5RlJkU2wxajN4QQ?oc=5",
+  "categoria": "politica",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "01:02",
+  "fonte": "Busca - Racismo",
+  "titulo": "Justiça Federal condena mulher por racismo durante jogo online e determina atividades de letramento racial na Paraíba",
+  "link": "https://news.google.com/rss/articles/CBMilAJBVV95cUxNTGZXbjQ1Q3oyYUtIeFgxMUhQZEFWc25GRzRLbm5UQWRNVXpnWEc0LThhZ1lxcmNiaFlvR08tMGV5dy1wWFpvM243VWMwZzBfaWdsZkdFRkxMMlhTN0tQcDVVc3BMdHp2c2tHUVV1V0wxazE3SFRZMnN4Rm80cjFYWVRMUVQ3cnEzU1dWdnhjLXE3YWR2Q0x6QUcwbExqZm13ZHhsOGl6V1hhTjlRRVcybWxNdS1iVFFMS1RDb1JFVjVWaE9MZzRNaUVkb3lSUDFCSTJvQ0JmSDFZdHZvVlI5Y0VVNjRIWEFUY2liZUJCTGtDSDBhWEVLM0I5OVZtV00tWDd5amFjMm5jWUtKd0pOS2lCLW4?oc=5",
+  "categoria": "politica",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "01:02",
+  "fonte": "Busca - Antirracista",
+  "titulo": "Conselho da Mulher promove palestra antirracista no Parque São Francisco",
+  "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNYUVGUU9tRzVXQllSQXlBNldWczJqZEk3ZUxWcE1LTG05VkxPRTh3eFRHRUY3cnpxd3VOR3lTVW5CN0tEcWx0bno2QVlibEYtT2wtZlM1R3p3cER6LXVxR1MtaXc5VzV2MF9jd1R6TmdTQXl3SG1PSmFXV1ZmaXlnM2pSSV9HVEtncEZGVlNLanFGODBZeEwwM2l3VUF1QUc1Q2Z6Z0VVdXFHYUF0cHV4cjBXaFRYUDhFdG1LVA?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "evento local pequeno: Palestra local antirracista promovida pelo Conselho da Mulher; sem personagem conhecido nem fato relevante, e o texto recebido é apenas o título, sem informação suficiente para matéria honesta."
  }
 ]
