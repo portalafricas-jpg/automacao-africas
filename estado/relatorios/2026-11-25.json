@@ -1017,5 +1017,27 @@
   "destino": "publicada",
   "detalhe": "Câmara aprova quesito raça ou cor no SUS",
   "foto": "Thiago Cristino/Câmara dos Deputados"
+ },
+ {
+  "hora": "07:48",
+  "fonte": "Busca - Ryan Coogler",
+  "titulo": "A beleza dolorosa de “Josephine”",
+  "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPS0d2MXppR1pwU3FVNUlJUWFGRkhlM3hlTG9EZnZ5YVloU3plcTYwV1hJbUJKcGlrNUZia0J4ZlBjMm43NXNSSVpsWEQzNzBDTVBEY1pvX045QndTa0N4ckViMmJYRThWX01Fd3FMT1VpMkJ1cDNhYmZjWlhiQTlBYmMyZGtsR1dsWkJWYTdkZWR6cWxZSmpHek5yczlzeVo3YlFyeEs5akdIUEkyOG9fbkVSai1MNXE3UjFMU0VFb2IzSUNrbGZFdTNBNEQ?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Título e resumo sem informação suficiente sobre o fato; não há indicação de notícia sobre a temática racial, apenas título de conteúdo artístico vago. Descartada por falta de informação."
+ },
+ {
+  "hora": "07:48",
+  "fonte": "Busca - injúria racial",
+  "titulo": "Professora é condenada à perda do cargo por chamar aluno de “preto feio”",
+  "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPcEo5MnRyby1lR0tFMjhIeXdrSFgtZFlfY0FXZDE1eUEtSXN6U1AyY3NSdElEaEc3alpZUVYxLXpYaFp5SUl4bzVmZXF0YTlfdmdHZnNiSS10V2x0czF4bWU4N1QzeXlCWUdkNkhkRUducGtYU0p3bktjdU5fM013aF9VU1FqN3lkVDlabW1LRTFPRF84aXNvd3h5N09rVnMwUGVFdjVvTlZ4U2VHNmlVV0ZKaDkzQ2E4MWxndnk5RQ?oc=5",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "Decisão da Justiça sobre professora condenada por chamar aluno de 'preto feio' (injúria racial no ambiente escolar). Fato novo, sem repetição no portal; ligada à educação e à justiça racial."
  }
 ]
