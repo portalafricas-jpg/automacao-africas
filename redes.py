@@ -457,8 +457,11 @@ def classificar(item, registro):
     if m:
         nota = m.get("nota") or 0
         breaking = m.get("prioridade") == "breaking"
-        entra = breaking or nota >= NOTA_MINIMA_REDES
-        return {"origem": "robô", "nota": nota, "breaking": breaking, "entra": entra,
+        gente = bool(m.get("gente"))  # Gente e Música (25/11): nota 7 já entra no feed
+        entra = breaking or nota >= NOTA_MINIMA_REDES or (gente and nota >= 7)
+        ilustrativa = (m.get("credito_imagem") or "").lower().startswith("foto ilustrativa")
+        return {"origem": "robô", "nota": nota, "breaking": breaking, "entra": entra, "gente": gente,
+                "ilustrativa": ilustrativa,
                 "nota7": (not entra) and nota >= 7,
                 "palavras_chave": m.get("palavras_chave") or [], "hashtags": m.get("hashtags") or []}
     autor = (item["autor"] or "").lower()
@@ -818,6 +821,7 @@ def para_fila(item, info):
     dados = {k: v for k, v in item.items() if k != "quando"}
     dados["quando"] = item["quando"].isoformat() if item["quando"] else None
     dados.update({"prioridade": prioridade, "nota": info["nota"], "origem": info["origem"],
+                  "gente": info.get("gente", False), "ilustrativa": info.get("ilustrativa", False),
                   "breaking": info["breaking"], "entrou_na_fila": datetime.now(timezone.utc).isoformat()})
     return dados
 
@@ -952,7 +956,9 @@ def main_publicar():
         f"feed hoje: {estado['feed_hoje']}/{FEED_MAXIMO_DIA} | stories hoje: {estado['stories_hoje']}/{STORIES_MAXIMO_DIA}")
 
     # 3) Feed: breaking sempre na hora; o resto respeita horário, intervalo e limite do dia
-    fila.sort(key=lambda f: (PRIORIDADE.get(f["prioridade"], 9), f.get("quando") or ""))
+    # foto real antes de foto ilustrativa; dentro da mesma prioridade, Gente e Música primeiro (25/11)
+    fila.sort(key=lambda f: (PRIORIDADE.get(f["prioridade"], 9), bool(f.get("ilustrativa")),
+                             not f.get("gente"), f.get("quando") or ""))
     a_publicar = [f for f in fila if f["prioridade"] == "breaking"]
     if not a_publicar and horario and pode_feed and estado["feed_hoje"] < FEED_MAXIMO_DIA:
         for f in fila:

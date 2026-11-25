@@ -684,6 +684,7 @@ FERRAMENTA_REDATOR = {
             "palavras_chave": {"type": "array", "items": {"type": "string"}, "description": "3 a 5 assuntos curtos (1 a 3 palavras, até 4 se for nome próprio), do tipo que vira tag, tirados do próprio corpo e escritos exatamente como aparecem nele"},
             "hashtags": {"type": "array", "items": {"type": "string"}, "description": "3 a 6, sem espaços, começando com #"},
             "pessoa_principal": {"type": "string", "description": "nome completo da pessoa de quem a matéria trata, se for sobre uma pessoa específica; senão, vazio"},
+            "local_principal": {"type": "string", "description": "nome do lugar físico conhecido onde o fato acontece (casa de show, teatro, estádio, quadra de escola de samba, museu), se houver; senão, vazio"},
             "busca_foto": {"type": "string", "description": "2 a 4 palavras em inglês que descrevem a cena do tema, para buscar foto ilustrativa (ex.: black woman entrepreneur)"},
             "busca_foto_sem_rosto": {"type": "string", "description": "2 a 4 palavras em inglês com objetos ou lugar do tema, sem pessoas (ex.: african drums, books library, stage microphone)"},
         },
@@ -918,11 +919,19 @@ def baixar_json(url, cabecalho):
 
 
 def foto_da_pessoa(nome):
-    """Foto livre da própria pessoa: a foto principal dela na Wikipédia, se a licença for livre."""
+    """Foto livre da pessoa (ou do lugar): a foto principal na Wikipédia em português e, se não houver, em inglês."""
+    for lingua in ("pt", "en"):
+        achou = foto_wikipedia(nome, lingua)
+        if achou:
+            return achou
+    return None
+
+
+def foto_wikipedia(nome, lingua):
     try:
         q = urllib.parse.urlencode({"action": "query", "titles": nome, "prop": "pageimages",
                                     "piprop": "name", "redirects": 1, "format": "json"})
-        dados = baixar_json("https://pt.wikipedia.org/w/api.php?" + q, {"User-Agent": ROBO_WIKI})
+        dados = baixar_json(f"https://{lingua}.wikipedia.org/w/api.php?" + q, {"User-Agent": ROBO_WIKI})
         arquivo = ""
         for pagina in dados.get("query", {}).get("pages", {}).values():
             arquivo = pagina.get("pageimage", "")
@@ -1025,13 +1034,51 @@ def foto_nao_pode(credito, veiculo, link, exigir_credito, imagem):
 FOTOS_USADAS = set()
 
 
+def foto_outra_cobertura(consulta, link_original):
+    """Procura o mesmo assunto em outros sites e usa a primeira foto que pode ser usada
+    (crédito de divulgação, assessoria ou fotógrafo, que não seja do próprio site nem agência paga). (25/11/2026)"""
+    if not consulta:
+        return None
+    dominio_original = urlparse(link_original).netloc.lower()
+    try:
+        itens = ler_rss(google_url(consulta))[:6]
+    except Exception:
+        return None
+    tentativas = 0
+    for it in itens:
+        if tentativas >= 4:
+            break
+        try:
+            link = link_real_google(it["link"]) if "news.google.com" in it["link"] else it["link"]
+        except Exception:
+            continue
+        if not link or urlparse(link).netloc.lower() == dominio_original:
+            continue
+        tentativas += 1
+        outra = extrair_materia(link, it.get("titulo", ""), "")
+        candidatas = [(outra.get("imagem"), outra.get("credito_foto"))] + \
+                     [(f["url"], f["credito"]) for f in outra.get("fotos_corpo", [])]
+        for url, cred in candidatas:
+            if url and url not in FOTOS_USADAS and not foto_nao_pode(cred, outra.get("veiculo"), link, True, url):
+                log(f"  Foto achada em outra cobertura: {outra.get('veiculo') or urlparse(link).netloc} ({cred})")
+                return url, cred
+    return None
+
+
 def foto_substituta(resultado, generica=True):
     """Pessoa específica: foto livre dela; senão, foto do tema sem rosto. Tema geral: foto ilustrativa.
     Com generica=False, não usa a foto genérica de reserva: devolve None se não achar nada parecido."""
     pessoa = (resultado.get("pessoa_principal") or "").strip()
+    local = (resultado.get("local_principal") or "").strip()
     achou = None
-    if pessoa:
-        achou = foto_da_pessoa(pessoa) or foto_banco(resultado.get("busca_foto_sem_rosto"), FOTOS_USADAS)
+    # Ordem aprovada em 25/11/2026: foto de divulgação do mesmo assunto em outra cobertura,
+    # foto livre da pessoa, foto livre do lugar e, só por último, foto ilustrativa de banco.
+    achou = foto_outra_cobertura(pessoa or resultado.get("titulo", ""), resultado.get("link_original", "")) \
+        or (foto_da_pessoa(pessoa) if pessoa else None) or (foto_da_pessoa(local) if local else None)
+    if achou:
+        pass
+    elif pessoa:
+        achou = foto_banco(resultado.get("busca_foto_sem_rosto"), FOTOS_USADAS)
     else:
         achou = foto_banco(resultado.get("busca_foto"), FOTOS_USADAS) or \
             foto_banco(resultado.get("busca_foto_sem_rosto"), FOTOS_USADAS)
@@ -1165,7 +1212,15 @@ def publicar(materia_fila, linha_editorial, agora):
                                      materia_fila.get("imagem_banco", False), imagem)
         if motivo_troca:
             log(f"  Foto trocada: {motivo_troca}.")
-            imagem, credito = foto_substituta(resultado)
+            do_corpo = next((f for f in original.get("fotos_corpo", [])
+                             if not foto_nao_pode(f["credito"], original["veiculo"], materia_fila["link"], True, f["url"])), None)
+            if do_corpo:
+                imagem, credito = do_corpo["url"], do_corpo["credito"]
+                original["fotos_corpo"] = [f for f in original["fotos_corpo"] if f is not do_corpo]
+                log(f"  Capa: foto do corpo da própria matéria ({credito}).")
+            else:
+                resultado["link_original"] = materia_fila["link"]
+                imagem, credito = foto_substituta(resultado)
     credito = credito or "Divulgação"
     fotos_extras = []
     for f in original.get("fotos_corpo", []):
