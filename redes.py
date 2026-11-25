@@ -469,6 +469,23 @@ def normalizar(t):
     return re.sub(r"[^a-z0-9]+", " ", t).strip()
 
 
+# Regra (25/11/2026): o mesmo fato com palavras quase iguais não sai duas vezes
+# (ex.: "fundador da Nossa Roda" x "fundador do Nossa Roda").
+PALAVRAS_VAZIAS = set("a o as os de da do das dos e em no na nos nas um uma para por com sem que se ao aos a sua seu".split())
+
+
+def palavras_chave(titulo):
+    return {p for p in normalizar(titulo).split() if p not in PALAVRAS_VAZIAS and len(p) > 1}
+
+
+def mesmo_fato_palavras(t1, t2):
+    a, b = palavras_chave(t1), palavras_chave(t2)
+    if not a or not b:
+        return False
+    comuns = len(a & b)
+    return comuns >= 3 and comuns / min(len(a), len(b)) >= 0.7
+
+
 def classificar(item, registro):
     """Matéria do robô: entra com nota 8+ ou breaking. Fora do registro (coluna, assessoria): entra sempre."""
     m = registro.get(normalizar(item["titulo"]))
@@ -955,6 +972,12 @@ def main_publicar():
             continue
         if not item.get("arte_post"):
             log(f"Sem arte de post, fora: {item['titulo'][:70]}")
+            continue
+        limite_rep = agora - timedelta(hours=24)
+        ja_saiu = [p.get("titulo", "") for p in posts if p.get("tipo") != "reels" and p.get("publicado_em")
+                   and datetime.fromisoformat(p["publicado_em"]) >= limite_rep]
+        if any(mesmo_fato_palavras(item["titulo"], t) for t in ja_saiu + [f["titulo"] for f in fila]):
+            log(f"Repetida (mesmo fato já publicado ou na fila), fora: {item['titulo'][:70]}")
             continue
         dados = para_fila(item, info)
         fila.append(dados)

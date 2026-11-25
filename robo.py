@@ -1159,6 +1159,23 @@ def mesmo_fato(titulo, lista, limite):
     return False
 
 
+# Regra (25/11/2026): o mesmo fato com palavras quase iguais não sai duas vezes
+# (ex.: "fundador da Nossa Roda" x "fundador do Nossa Roda").
+PALAVRAS_VAZIAS = set("a o as os de da do das dos e em no na nos nas um uma para por com sem que se ao aos a sua seu".split())
+
+
+def palavras_chave(titulo):
+    return {p for p in normalizar(titulo).split() if p not in PALAVRAS_VAZIAS and len(p) > 1}
+
+
+def mesmo_fato_palavras(t1, t2):
+    a, b = palavras_chave(t1), palavras_chave(t2)
+    if not a or not b:
+        return False
+    comuns = len(a & b)
+    return comuns >= 3 and comuns / min(len(a), len(b)) >= 0.7
+
+
 def cortar_linha_fina(texto, limite=350):
     """Se a linha fina passar de 350 caracteres, corta na última frase completa."""
     if len(texto) <= limite:
@@ -1327,7 +1344,8 @@ def main():
             if agora - item["data"] > timedelta(hours=janela):
                 marcar_visto(item["link"])
                 continue
-            if mesmo_fato(item["titulo"], recentes, SEMELHANCA_JA_PUBLICADA) or \
+            if any(mesmo_fato_palavras(item["titulo"], m.get("titulo_original") or "") for m in recentes) or \
+                    mesmo_fato(item["titulo"], recentes, SEMELHANCA_JA_PUBLICADA) or \
                     mesmo_fato(item["titulo"], candidatas, SEMELHANCA_MESMO_FATO):
                 log(f"Repetida (mesmo fato): {item['titulo'][:80]}")
                 registrar(dict(item, fonte_nome=nome), "repetida", "título quase igual a outra notícia")
@@ -1503,6 +1521,10 @@ def main():
                 continue
             fila.remove(materia_fila)
             if not pronta:
+                continue
+            if any(mesmo_fato_palavras(pronta.get("titulo", ""), m.get("titulo", "")) for m in recentes + publicadas[-60:]):
+                log(f"  Repetida: já saiu matéria com título quase igual. Não publicada: {pronta.get('titulo', '')[:70]}")
+                registrar(materia_fila, "recusada", "mesmo fato já publicado (título quase igual)")
                 continue
             with open(os.path.join(PASTA_FEEDS, f"{pronta['categoria']}.xml"), "w", encoding="utf-8") as f:
                 f.write(montar_rss(pronta, pronta["categoria"]))
