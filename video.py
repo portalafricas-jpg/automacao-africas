@@ -190,31 +190,41 @@ def manchetes_curtas(titulos):
     return titulos
 
 
-def tela_gancho(foto, semana, total, data_txt):
-    """Primeiro quadro: a promessa do vídeo em letras grandes, legível sem som."""
+def tela_gancho(foto, semana, total, data_txt, etiqueta="RADAR"):
+    """Primeiro quadro (vira a capa no YouTube Shorts): foto clara em cima, selo do programa e o gancho
+    em letras grandes embaixo, no padrão das capas aprovado em 25/11."""
+    img = Image.new("RGB", (L, A), R.COR_FUNDO)
     if foto is not None:
-        img = fundo_foto(foto, escurecer=0.6, inicio=0.10)
-    else:
-        img = Image.new("RGB", (L, A), R.COR_FUNDO)
+        topo = R.cobrir(foto, L, 1250)
+        img.paste(topo, (0, 0))
+        mascara = Image.new("L", (1, A), 0)
+        for y in range(A):
+            mascara.putpixel((0, y), 0 if y < 650 else min(255, int(255 * ((y - 650) / 560) ** 1.3)))
+        img = Image.composite(Image.new("RGB", (L, A), R.COR_FUNDO), img, mascara.resize((L, A)))
     d = ImageDraw.Draw(img)
     m = 90
     d.rectangle((0, 0, L, 14), fill=R.COR_AMARELO)
+    R.colar_logo(img, m, 70, 300)
+    fe = R.fonte("extra", 40)
+    w = d.textlength(etiqueta, font=fe)
+    y = 950
+    d.rounded_rectangle((m, y, m + w + 44, y + 66), radius=10, fill=R.COR_AMARELO)
+    d.text((m + 22, y + 8), etiqueta, font=fe, fill=R.COR_FUNDO)
     if semana:
-        linhas = [(f"{total} NOTÍCIAS", R.COR_AMARELO, 140), ("PRETAS", R.COR_AMARELO, 140),
+        linhas = [(f"{total} NOTÍCIAS", R.COR_TEXTO, 140), ("PRETAS", R.COR_AMARELO, 140),
                   ("que marcaram", R.COR_TEXTO, 96), ("a semana", R.COR_TEXTO, 96)]
     else:
-        linhas = [(f"{total} NOTÍCIAS", R.COR_AMARELO, 140), ("PRETAS", R.COR_AMARELO, 140),
+        linhas = [(f"{total} NOTÍCIAS", R.COR_TEXTO, 140), ("PRETAS", R.COR_AMARELO, 140),
                   ("que você precisa", R.COR_TEXTO, 96), ("saber", R.COR_TEXTO, 96)]
-    y = 540
+    y += 100
     for texto, cor, tam in linhas:
         f = R.fonte("extra", tam)
         while d.textlength(texto, font=f) > L - 2 * m and tam > 50:
             tam -= 4
             f = R.fonte("extra", tam)
         d.text((m, y), texto, font=f, fill=cor)
-        y += tam * 1.15
+        y += tam * 1.12
     # sem data na capa: o vídeo é atemporal e vai para várias redes (a data fica na legenda e no título)
-    R.colar_logo(img, m, 1560, 300)
     return img
 
 
@@ -367,7 +377,7 @@ def fazer_video(posts, semana, agora_sp, saida, excluir=(), turno="noite", saida
     else:
         cabecalho = "RADAR"  # sem referência de tempo: o mesmo vídeo vai para YouTube, TikTok etc.
         data_txt = f"{DIAS_SEMANA[agora_sp.weekday()].capitalize()}, {agora_sp.strftime('%d/%m/%Y')}"
-    telas = [(tela_gancho(fotos[0], semana, len(escolhidas), data_txt), DURACAO_GANCHO)]
+    telas = [(tela_gancho(fotos[0], semana, len(escolhidas), data_txt, cabecalho), DURACAO_GANCHO)]
     curtas = manchetes_curtas([p["titulo"] for p in escolhidas])
     escolhidas = [dict(p, curta=c) for p, c in zip(escolhidas, curtas)]  # a curta também vira título no YouTube
     for i, (p, foto, curta) in enumerate(zip(escolhidas, fotos, curtas), 1):
