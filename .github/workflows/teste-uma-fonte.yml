@@ -9,16 +9,19 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install trafilatura
+      - run: pip install trafilatura anthropic
+      - run: pip install googlenewsdecoder
       - run: |
           python - <<'PY'
-          import testar_fontes as T
-          for u in ["https://www.afro.tv/feed/"]:
+          import robo as R
+          itens=R.ler_rss(R.google_url("site:afro.tv"))
+          print("GOOGLE itens:", len(itens))
+          for it in itens[:6]: print("  -", it["titulo"][:90])
+          import robo
+          for it in itens[:3]:
               try:
-                  texto,_=T.baixar(u); itens=T.ler_rss(texto)
-                  print("RSS", u, "itens:", len(itens), T.resumo_itens(itens))
-                  for i in itens[:5]: print("  -", i)
-                  print("LEITURA", T.testar_leitura(itens, lambda l:(l,"")))
-              except Exception as e: print("ERRO", u, e)
-          print("SITE", T.achar_rss_do_site("https://www.afro.tv/")[0])
+                  real=R.link_real_google(it["link"]); print("LINK", real)
+                  t=R.extrair_materia(real, it["titulo"], "")
+                  print("TEXTO", len(t or "") if not isinstance(t,tuple) else [len(str(x)) for x in t])
+              except Exception as e: print("ERRO", e)
           PY
