@@ -86,5 +86,49 @@
   "nota": 0,
   "destino": "nota baixa",
   "detalhe": "Página genérica de rádio sem fato identificado; sem conteúdo para matéria."
+ },
+ {
+  "hora": "00:32",
+  "fonte": "Busca - Racismo",
+  "titulo": "Ministério da Justiça lança protocolo para combater racismo e discriminação de gênero em investigações",
+  "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQLUVSNWZUcEE1QUd5aVAxU3VfdF9JNU84TWVRcGdsWjF0cDc0czkwMDNzaU1oTnl3YngwOXFUd2VEamFOTG9UYy1fM2VORlJ5UEZrdmZON2ZhVjh3QnY2RC1TOFBVUEJLNUxCM1ZkZmNlQU5sVDhjU3llci1fWU5fYWl4NkJOeUxZcHFkYV9sUG0tZngzaVNqQW1JNFExbGlVOFJicHdXYWd3Y0pZMmY0SlNuYThZeTl5Unc?oc=5",
+  "categoria": "politica",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "00:32",
+  "fonte": "Busca - Afroempreendedorismo",
+  "titulo": "Cinquenta iniciativas de afroturismo receberão apoio em todo o país",
+  "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQb3lNZkhWTTROX1VxUDM5UW9HaV9aVlJXMmVaWHNwN1pUZXNVN281NmhzeEh4SlRSOFZ6ejRxNFEzOEdoaHEzbmtnTnlqeDNnemZ5bEQySFk5UXpibTlGWlVCWXd2TEZ2X2l4R3oySnR5V1FJM1k4Mk1vLWU1NG5YMlFkRklXY0QtV3I4cnNlYmdqNjhjcjVacm00QW04NkdaNVh3QVEtWVBKbkI0YXFRWGYwVF9UdmlrcHIzR2JhRXppcUp3NDREWEppbGtpd0MycXMwRHh3SDVTZXFNM3c?oc=5",
+  "categoria": "politica",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "00:32",
+  "fonte": "Busca semanal - Benedita da Silva",
+  "titulo": "Deputados retomam nesta quarta-feira votação de projetos em defesa da população negra",
+  "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOTWxiblJiemJ2Q2dwTWg0aEhCR0xSM1duWXc2blIwRXdjWUprRmpNTDAzSkhoN1N2YXpJN3lsUU0zRUVVMTlDbmswSHRyYThHZ2NWOTFXcnZrcGdIRkdyUDB4ck5YYUdBT3E4dlFaMEpQM3ZKeFBqQkdyVnNpWDd5VnFqcGpoZDZzYWlfTGxlZ1AxallkOFdEZ3JwNVdHS0tOc0FxNGt0V2VKYWVSa1Y5QmZQc1Y4V1d2RVR4QlRUc2RNdV9hSmZFVGZn?oc=5",
+  "categoria": "politica",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "00:32",
+  "fonte": "Busca - Cultura negra",
+  "titulo": "Ações do Novembro Negro celebraram a cultura afro-brasileira em Macaé",
+  "link": "https://news.google.com/rss/articles/CBMiyAJBVV95cUxNdEVMUlRQc3NybzRoWGRTXzNoeWRGTEV3d3YtYXlMdGV1OU11RWVHMVRDVThWQlcxYjR3UHphVy1NOVkzTlRLNzAxbUlraS1seTJtU3pjZnpvRnplZ01OZDBNSVpmSHNodXlVRnNQOWV4R25xZThXdVZ3X0JvU2RhRnJBVm94a2NIalpPUk1XT09iZENPOUJVZXhYLThLclRvdEtzV0RKZlpNWEpNTktyZEp3eTF2dTJiTFlueGZveHg4U2E4NzI5WGJyYnBEbTVEZU5ER3BRbzJ2YmpiSVpMLV9VaUdvcnhva0VIQnpfZ083Z0xTTE1hZHhOaU5GaDdCWnpuUThILWNweTlDRHFIUnJYYnMzdllzc0xISy00Xzh6NTdKeXdKclpzb09iMmxOQTVuMkJ6d195OUw5V3lZQWlsckNRNmJC0gHXAkFVX3lxTE1RbVo4NXBhaUlXMlFTcEVUUjR6aTNaQlk5TFlQZW1iakVjZG12MnkwYTFIYmhPOUI3WjB4UE1FU0JwUkdCb2h5MS1QaS01ZC1oVjJsUlVHcmwyNXJLY2ZCQXUwY3dUTFNTSGxxaEtxY2dSaHpxOXJYMmU0WDU5ZFU2TGhJQkVqRHdQaGZCdnRjQjNhcW1kdlRvVTRqb2JESXZ1WDQwUlFZWDk5cmZtVTdsVVo3UEo5S0xvdHI0dXlDTGY5Y2FLR1MxVmxXT1BNNTJJQ0VfblNpN1YtQ3BoZ2l6ajdjUU1NY3NGWm1SWFoyeExTTE5STzVqMDlIcUtCaDQ2Rjd6XzBoTEREMldqUWNHVHZ0RG1jaERWMzJvQWc5U19qOW1pMHVKWWQtXzFqV05tNl8wSWpSOG5sNDlGOWNCRkI3WlRwNmstZlcwLWgxMGcyWE5tYlE?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "evento local pequeno: Ações do Novembro Negro celebrando cultura afro-brasileira em Macaé: evento ligado à data da memória negra (Mês da Consciência Negra), nota 7. Evento local, sem personagem ou fato relevante, e não há matéria repetida sobre o mesmo fato nos últimos 5 dias."
  }
 ]
