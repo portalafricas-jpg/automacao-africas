@@ -1,0 +1,19 @@
+name: Testar foto (temporario)
+on:
+  workflow_dispatch:
+jobs:
+  testar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install trafilatura googlenewsdecoder
+      - run: |
+          python - <<'PY'
+          import robo as R
+          print("COBERTURA", R.foto_outra_cobertura("Major RD", "https://www.africas.com.br/x"))
+          print("WIKI", R.foto_da_pessoa("Major RD"))
+          print("LUGAR", R.foto_da_pessoa("Fundição Progresso"))
+          PY
