@@ -195,18 +195,18 @@ def tela_gancho(foto, semana, total, data_txt, etiqueta="RADAR"):
     embaixo, no padrão das capas aprovado em 25/11."""
     img = Image.new("RGB", (L, A), R.COR_FUNDO)
     if foto is not None:
-        # fundo: a própria foto desfocada e um pouco escura (sem preto chapado, ajuste de 25/11)
-        fundo = R.cobrir(foto, L, A).filter(ImageFilter.GaussianBlur(30))
-        img = ImageEnhance.Brightness(fundo).enhance(0.55)
+        # foto nítida em cima; embaixo, a cor da própria foto (sem desfoque e sem preto chapado, 25/11)
         topo = R.cobrir(foto, L, 1250)
+        base = topo.crop((0, 1100, L, 1250)).resize((1, 1)).getpixel((0, 0))
+        img = Image.new("RGB", (L, A), tuple(int(v * 0.8) for v in base))
         suave = Image.new("L", (1, 1250), 255)
-        for y in range(800, 1250):
-            suave.putpixel((0, y), int(255 * (1 - (y - 800) / 450)))
+        for y in range(850, 1250):
+            suave.putpixel((0, y), int(255 * (1 - (y - 850) / 400)))
         img.paste(topo, (0, 0), suave.resize((L, 1250)))
         # escurece só o suficiente atrás do texto para a leitura
         mascara = Image.new("L", (1, A), 0)
         for y in range(A):
-            mascara.putpixel((0, y), 0 if y < 700 else min(150, int(150 * (y - 700) / 400)))
+            mascara.putpixel((0, y), 0 if y < 700 else min(90, int(90 * (y - 700) / 400)))
         img = Image.composite(Image.new("RGB", (L, A), R.COR_FUNDO), img, mascara.resize((L, A)))
     d = ImageDraw.Draw(img)
     m = 90
