@@ -1,0 +1,24 @@
+name: Testar uma fonte (temporario)
+on:
+  workflow_dispatch:
+jobs:
+  testar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install trafilatura
+      - run: |
+          python - <<'PY'
+          import testar_fontes as T
+          for u in ["https://www.afro.tv/feed/"]:
+              try:
+                  texto,_=T.baixar(u); itens=T.ler_rss(texto)
+                  print("RSS", u, "itens:", len(itens), T.resumo_itens(itens))
+                  for i in itens[:5]: print("  -", i)
+                  print("LEITURA", T.testar_leitura(itens, lambda l:(l,"")))
+              except Exception as e: print("ERRO", u, e)
+          print("SITE", T.achar_rss_do_site("https://www.afro.tv/")[0])
+          PY
