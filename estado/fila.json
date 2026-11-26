@@ -63,27 +63,6 @@
   "valido_ate": ""
  },
  {
-  "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPbDh6NlU5YWlESVdNYlhhbjZnaXB3UUw5d1lYaTRzeGtWWWc4LXpRdzBJSEdwcUl4RHdxbHhqMUhaSTBrQmx1c3FPV1o3ZWtjdlgtVTREck5PWEkzVkhhSWpEMWtNQkM5QzFJNGZ5ZHBwTjh6U3NLQ2tzNURSQThVVVJLYU1IWUJ2aWlsZGpNRUc?oc=5",
-  "titulo_original": "Museu de Congonhas recebe cantora Luciana Mello em bate-papo gratuito nesta quinta-feira (26)",
-  "descricao": "Museu de Congonhas recebe cantora Luciana Mello em bate-papo gratuito nesta quinta-feira (26)    Jornal Voz Ativa",
-  "imagem_rss": "",
-  "imagem_banco": false,
-  "imagem_trocar": false,
-  "fonte_nome": "Busca - Mart'nália",
-  "fonte_africa": false,
-  "categoria": "cultura",
-  "prioridade": "media",
-  "nota": 7,
-  "motivo_nota": "Bate-papo de cantora negra em museu, com agenda pública; artista negra em atividade cultural, mas evento local de pequeno porte.",
-  "ministerio": false,
-  "excecao_nota7": false,
-  "gente": true,
-  "artista": "Luciana Mello",
-  "data_original": "2026-11-25T21:26:34+00:00",
-  "criado_em": "2026-11-25T22:32:17.109977+00:00",
-  "valido_ate": ""
- },
- {
   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBETTJadUVUYVpKSnpSbG1GY3ZGR2dQel9OY1lnUnhueUdkazllUUVNMWJKa3IzbzhQZ1g2S01HQjNDNnB2cnFvam5KOXVlNGxRN25WOWhjZ3FlY3otWGtSN2ROWlBFUGJJZU1F?oc=5",
   "titulo_original": "Sabotage ganha EP ao vivo com faixa inédita nas plataformas",
   "descricao": "Sabotage ganha EP ao vivo com faixa inédita nas plataformas    Billboard Brasil",
@@ -585,6 +564,27 @@
   "artista": "Danielle Brooks",
   "data_original": "2026-11-26T00:13:30+00:00",
   "criado_em": "2026-11-26T01:02:16.539249+00:00",
+  "valido_ate": ""
+ },
+ {
+  "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPN01OaTl5RE5OWlV2TEJKLUNwbTlvcWI0VHVINXItYkVkYnNnbzhudldreDkzRktCM19VTEppdVU5ZDlTdGRObGZyeFI2VGpFSEpJWXZGRmpuSzdSREJVUmRlb0ZKbUhkSkRHZ1ZTcDJ3S3hJVUhrLVJyY1RXczBkNnMyM2JFRFZueVBCWWR3dGJuUzMxaVlNZWR6ZEI2V2RGbndhSEIzTDVFOU1C?oc=5",
+  "titulo_original": "Iphan reconhece patrimônios culturais da população negra no Brasil",
+  "descricao": "Iphan reconhece patrimônios culturais da população negra no Brasil    planetaosasco.com",
+  "imagem_rss": "",
+  "imagem_banco": false,
+  "imagem_trocar": false,
+  "fonte_nome": "Busca - Cultura negra",
+  "fonte_africa": false,
+  "categoria": "ancestralidade",
+  "prioridade": "alta",
+  "nota": 8,
+  "motivo_nota": "Reconhecimento oficial de patrimônios ligados à memória e cultura negra; fonte oficial e tema central da Agenda Preta de território e tradição. Não foi encontrada no portal, mas há 'Iphan reconhece patrimônios ligados à memória negra' e 'Congo do Espírito Santo e Quilombo Frechal são reconhecidos' na lista de matérias recentes, o que indica cobertura do mesmo fato; avaliar como repetida.",
+  "ministerio": false,
+  "excecao_nota7": false,
+  "gente": false,
+  "artista": "",
+  "data_original": "2026-11-26T01:03:53+00:00",
+  "criado_em": "2026-11-26T01:32:17.721690+00:00",
   "valido_ate": ""
  }
 ]
