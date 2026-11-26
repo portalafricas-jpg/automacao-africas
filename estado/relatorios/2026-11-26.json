@@ -240,5 +240,38 @@
   "nota": 2,
   "destino": "nota baixa",
   "detalhe": "Comparação de personagem de game com Tokyo Toni; conteúdo de entretenimento sem fato relevante para a população negra."
+ },
+ {
+  "hora": "00:48",
+  "fonte": "Busca - escola de samba",
+  "titulo": "Luiza Caldi, Tais Eckhmann e mais musas arrasam em ensaio de rua da Vila Isabel",
+  "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNWHR0VXhpRlh1d2MzQTlCNWRJQVVvM2NHaDJjUllpUkNibjBBT2s4MFZWZDFFUGFQOXN0WDRvU0Jrb0twMFB6clh6dVpRT1lnWjFKbkR5Y1lHS1RjWV9lNG5mZjJsY1k0SFUwQjdHdEl0V2xRLUVzclV2ZHJuX1ZuZHBEbldOU0syeTg5Q1VqZ1BMa3l1WmlrZWt2YTRpOFhZSkpoSmo3d1g1bGtkampHMmxtXzZZS0daVjZrV1pqeUxiSHo0SG1HblIwbURwZHVJN280dHljRFFzaTl0dDlpaVA4NHZQRDJMSjJCc1JvMNIB7wFBVV95cUxNWHR0VXhpRlh1d2MzQTlCNWRJQVVvM2NHaDJjUllpUkNibjBBT2s4MFZWZDFFUGFQOXN0WDRvU0Jrb0twMFB6clh6dVpRT1lnWjFKbkR5Y1lHS1RjWV9lNG5mZjJsY1k0SFUwQjdHdEl0V2xRLUVzclV2ZHJuX1ZuZHBEbldOU0syeTg5Q1VqZ1BMa3l1WmlrZWt2YTRpOFhZSkpoSmo3d1g1bGtkampHMmxtXzZZS0daVjZrV1pqeUxiSHo0SG1HblIwbURwZHVJN280dHljRFFzaTl0dDlpaVA4NHZQRDJMSjJCc1JvMA?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "repetida",
+  "detalhe": "título quase igual a outra notícia"
+ },
+ {
+  "hora": "00:48",
+  "fonte": "Busca - Quilombola",
+  "titulo": "Desafios para educação em comunidades quilombolas mobilizam comissão — Senado Notícias",
+  "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOOFNOLWJlalJMdHpjQnRmblhwWnN4aERPcDZlWDRUTXROZGxWWkp4OEVzQXRQQVpmdXhjcEVGbmc4S0g4NVhEbWxCaWFMczBmMEJOc2xzb0lWTU9CN0xUcTlaVnJFME1hYlVic0ZValdfY1Z5aGZZUU90Q3VFLUU2a2JfcmJDa29mdVNFQmRpdGU2WmEwNzJFd1Fra2Z4MVNmWDNLVFpxNDJqR2U1Y1ZHQmJxbEdwUjJtX2dYV18wZXVsczZtNXQ1Mlh3?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Comissão do Senado debate educação em comunidades quilombolas, eixo de território e quilombos e educação da Agenda Preta. Não há matéria recente sobre o mesmo fato no portal."
+ },
+ {
+  "hora": "00:48",
+  "fonte": "Busca - injúria racial",
+  "titulo": "Professora de Medianeira é condenada por racismo e injúria racial",
+  "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOcnZyX2dLdEhvMVdnY2Ywakl6bEl4WlVxV0tLU25wcTJaN3lNVS1leFBpRXN0UHlVUE9BVFRVTW5sQmpPdXhJV19pTE5YRHpTbjZCTGVDUGpBaDBzSDEtMFlidlRnZDl0c2syTkhpVkRReVJfYlRKUldJT3YwWndfc3RtWWZpay1oeHZCcU9leXA1LWh6cVVCb2FEaEZMQkNtNVhGT0s1MjljVWdrLWVz?oc=5",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "Condenação por racismo e injúria racial de uma professora. Caso de justiça com impacto para a população negra, porém de menor porte regional, sem repetição no portal."
  }
 ]
