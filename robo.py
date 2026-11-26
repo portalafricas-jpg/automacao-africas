@@ -310,6 +310,8 @@ def ler_pagina_de_noticias(url):
         link = urljoin(url, html.unescape(href))
         p = urlparse(link)
         titulo = decodificar(re.sub(r"<[^>]+>", " ", texto))
+        # Agência Gov põe "política --> 20/11/2026 10:29 Tema" antes do título: tira esse começo
+        titulo = re.sub(r"^.*?\d{2}/\d{2}/\d{4}\s+\d{1,2}:\d{2}\s+", "", re.sub(r"\s+", " ", titulo)).strip()
         if p.netloc != dominio or link in vistos or len(titulo) < 35:
             continue
         caminho = p.path.strip("/")

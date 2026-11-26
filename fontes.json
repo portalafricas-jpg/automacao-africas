@@ -1491,5 +1491,12 @@
     "busca": "\"Fundação Cultural Palmares\"",
     "grupo": 2,
     "criada": "2026-11-26"
+  },
+  {
+    "nome": "Agência Gov - Igualdade racial",
+    "categoria": "politica",
+    "tipo": "pagina",
+    "url": "https://agenciagov.ebc.com.br/noticias/igualdade-racial",
+    "criada": "2026-11-26"
   }
 ]
