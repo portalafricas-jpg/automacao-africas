@@ -526,5 +526,27 @@
   "nota": 0,
   "destino": "nota baixa",
   "detalhe": "Notícia de empreendimento imobiliário (lotes de resort) sem relação com a temática racial; conteúdo publicitário."
+ },
+ {
+  "hora": "02:17",
+  "fonte": "Busca - Cultura negra",
+  "titulo": "Iphan reconhece patrimônios culturais da população negra no Brasil",
+  "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPN01OaTl5RE5OWlV2TEJKLUNwbTlvcWI0VHVINXItYkVkYnNnbzhudldreDkzRktCM19VTEppdVU5ZDlTdGRObGZyeFI2VGpFSEpJWXZGRmpuSzdSREJVUmRlb0ZKbUhkSkRHZ1ZTcDJ3S3hJVUhrLVJyY1RXczBkNnMyM2JFRFZueVBCWWR3dGJuUzMxaVlNZWR6ZEI2V2RGbndhSEIzTDVFOU1C?oc=5",
+  "categoria": "ancestralidade",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "02:17",
+  "fonte": "Busca - Intolerância religiosa",
+  "titulo": "Câmara de Cariacica (ES rejeita homenagem às religiões de matriz africana após seis vereadores mudarem de voto",
+  "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQdnRYb1FkUW5hTzVDLXF1Z0w4cUlBaDlEanFBVUpaVmpmRV9KdW5FSVYxeDVUa0FPZ2VOWUk5ZV8wX2kyVHFsVEhYQVVvY01GSHE1OEJORUFIWVRxakRMSXFBSWZwUnJOMWhydjZWbWxqcThUOWh4aGxqaWwwUm9BX2EwcjZrSElMTGVKVEFwMVJiQ0d0LTZJQUQ2eEI1UlNXcVNWVzA0NlVYRnM5ejktczFFMVlBTE1LLTc3ZVl4Y1o4RGF0M2lzNUh0NnRsNTc0Qm5iTw?oc=5",
+  "categoria": "ancestralidade",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
  }
 ]
