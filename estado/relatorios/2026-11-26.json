@@ -691,5 +691,38 @@
   "nota": 2,
   "destino": "nota baixa",
   "detalhe": "Projeção de turismo e voos na Bahia, sem relação com a temática racial."
+ },
+ {
+  "hora": "03:17",
+  "fonte": "Busca - Marvvila",
+  "titulo": "Marvvila reúne Mumuzinho, Dilsinho e outros artistas em gravação do audiovisual 'Vivências'",
+  "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNQWxKQllZb2ktYUpDZC1OZmNXUldIakQtN0xheEZDckU3NWw1WUZQZlczQWVVWEprbklmaXJaY3BDUm40QWpuZzVhT3lYN0xzS1JMSGtGQU9DRGxfU2pXeGhDZEdQazRVTHU4NlRCQmo1QVJFa3Zva3lCZURfTi1rSU01M0tNS2hDTUpja3BNV19NajA4SVJ6ZWhxVWNKTlY1aC1uREhWaFZBUUNBU1hCTTl3aw?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "03:18",
+  "fonte": "Busca - igualdade racial",
+  "titulo": "Niterói lança Cartilha Contra o Racismo no Esporte no Caramujo",
+  "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQay1iaHJ5a2xSRFVQTkd1d2tMSUhhbzRkN2ZmQ1IwRk9sNkRldHNia3hCN2RfQUZMZjUxUnFvSElDS21KQzRoeDdEWXBnVjJNb055MUNhVHJJUDBVcXl0X2ZXbUY2dEROTU51NU1DbkJOc2Iyb1pkMjdLa0xsSWMxTWFndFU0RjhBTkhVejV5Sk5vbUpZY2FWMF9pSDFxcmM4dlQ1RklTWjFFWWRfdDk1WU1TSDY2Mjg4QnfSAboBQVVfeXFMUGstYmhyeWtsUkRVUE5HdXdrTElIYW80ZDdmZkNSMEZPbDZEZXRzYmt4QjdkX0FGTGY1MVJxb0hJQ0ttSkM0aHg3RFlwZ1YyTW9OeTFDYVRySVAwVXF5dF9mV21GNnRETk1OdTVNQ25CTnNiMm9aZDI3S2tMbEljMU1hZ3RVNEY4QU5IVXo1eUpOb21KWWNhVjBfaUgxcXJjOHZUNUZJU1oxRVlkX3Q5NVlNU0g2NjI4OEJ3?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "repetida",
+  "detalhe": "título quase igual a outra notícia"
+ },
+ {
+  "hora": "03:18",
+  "fonte": "Busca - mulheres negras",
+  "titulo": "Consciência Negra: presença de mulheres negras cai nos cargos mais altos das empresas",
+  "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQZThmRUlETzhMT2RVbjQxTUtKZ09fYUNJbjI3Zm1lSHFrV1NaQm1rZ053V1NjeklKck5ZRjhNX0NfNGhuZXZneXRkZ1B4OTI3dmxwT2Z2OEVMWE5NdF9JTWRlWjdjdmxubzh1OGowcmZXTDNmRXdVSEM2eW9aMTdRVlJpY1I3R2x6cDlGdmhFclg3ODhOVnhTWjBSWGNqcTRWTGJjWnVyRElHYzUwY1I2ZWY5SXJDSEV0Q0lFYzhoTlE2cHJsZzNENTZIX0hMekE4aENpTQ?oc=5",
+  "categoria": "protagonista",
+  "prioridade": "",
+  "nota": 5,
+  "destino": "nota baixa",
+  "detalhe": "Dado sobre queda da presença de mulheres negras nos cargos mais altos das empresas, mas é levantamento de terceiros, com pouca informação no resumo; a questão racial é o centro, porém sem conquista nem fato relevante de pessoa negra. Notícia que repete o tema já publicado (estatística sobre diretorias)."
  }
 ]
