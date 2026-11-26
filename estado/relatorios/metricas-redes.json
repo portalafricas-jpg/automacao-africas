@@ -108,7 +108,7 @@
    "2026-11-26": 0
   },
   "facebook": {
-   "erro": "{'data': [], 'paging': {'previous': 'https://graph.facebook.com/v26.0/103917485738096/insights?access_token=EAAup5bxHz3wBTMVxgviP3Vm5nVQt2oDCqb4SI5bDkezRJ3syZC1qjBZBa49PgUwCjAZCf2koYDNXDvqV3u0xhyMU15Z"
+   "erro": "a Meta não devolveu dados para essa métrica"
   }
  },
  "posts": [

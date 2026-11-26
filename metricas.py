@@ -3,6 +3,7 @@
 # do Instagram (idade, gênero, cidades) e grava em estado/relatorios/metricas-redes.json.
 import json
 import os
+import re
 from datetime import datetime, timezone
 
 import requests
@@ -20,9 +21,16 @@ def get(caminho, **params):
     params["access_token"] = TOKEN
     r = requests.get(API + caminho, params=params, timeout=40)
     try:
-        return r.json()
+        d = r.json()
     except Exception:
-        return {"error": {"message": r.text[:200]}}
+        d = {"error": {"message": "resposta inválida"}}
+    d.pop("paging", None)  # os links de paginação trazem a chave: nunca gravar
+    return d
+
+
+def sem_chave(texto):
+    # apaga qualquer chave que apareça numa mensagem antes de gravar no arquivo
+    return re.sub(r"access_token=[^&\s'\"]+", "access_token=OCULTO", str(texto))
 
 
 def insights_ig(media_id, tipo):
@@ -62,7 +70,7 @@ def novos_seguidores_30_dias():
     try:
         saida["instagram"] = {v["end_time"][:10]: v["value"] for v in d["data"][0]["values"]}
     except Exception:
-        saida["instagram"] = {"erro": str(d.get("error", d))[:200]}
+        saida["instagram"] = {"erro": sem_chave(d.get("error", d))[:200]}
     for m in ("page_daily_follows_unique", "page_follows"):
         d = get(f"{PAGINA}/insights", metric=m, period="day", since=desde, until=ate)
         try:
@@ -70,7 +78,7 @@ def novos_seguidores_30_dias():
             saida["facebook_metrica"] = m
             break
         except Exception:
-            saida["facebook"] = {"erro": str(d.get("error", d))[:200]}
+            saida["facebook"] = {"erro": sem_chave(d.get("error", d))[:200]}
     return saida
 
 
@@ -104,7 +112,7 @@ def publico_ig():
             res = d["data"][0]["total_value"]["breakdowns"][0]["results"]
             saida[quebra] = {"/".join(r["dimension_values"]): r["value"] for r in res}
         except Exception:
-            saida[quebra] = {"erro": str(d.get("error", d))[:200]}
+            saida[quebra] = {"erro": sem_chave(d.get("error", d))[:200]}
     return saida
 
 
