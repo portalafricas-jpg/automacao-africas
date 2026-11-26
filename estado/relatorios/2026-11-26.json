@@ -966,5 +966,38 @@
   "nota": 7,
   "destino": "venceu na fila",
   "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "04:48",
+  "fonte": "Busca - Criolo",
+  "titulo": "Prêmio Multishow 2026: vote na categoria Álbum do Ano",
+  "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQQXRNOTZHMDFkR0Y1SG01RF9ZcVRwV0RURXVWb0NtYnBueHIwSU9YQnBvZ0QydUNLaXlOYjZqaFhFazExNlU3d3hDYTdxZFN5UXd5N2lFNVdkaDNYaWtWMUZVRzNSMi01YjhZTnhsbTNrWXQ3RlhaWnRsM0xYeXF0bmJRV1JJODZROTB1ak9QdUNSYXBNM3VHaTNQSHd3Y2RzN0hza3Z0R3JDRUk1ekd2LVQ5X1hsS3cwMEJhWUNDaDRQSTJ1cEhrVVF5SUhUUdIBzgFBVV95cUxQQXRNOTZHMDFkR0Y1SG01RF9ZcVRwV0RURXVWb0NtYnBueHIwSU9YQnBvZ0QydUNLaXlOYjZqaFhFazExNlU3d3hDYTdxZFN5UXd5N2lFNVdkaDNYaWtWMUZVRzNSMi01YjhZTnhsbTNrWXQ3RlhaWnRsM0xYeXF0bmJRV1JJODZROTB1ak9QdUNSYXBNM3VHaTNQSHd3Y2RzN0hza3Z0R3JDRUk1ekd2LVQ5X1hsS3cwMEJhWUNDaDRQSTJ1cEhrVVF5SUhUUQ?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Chamada de votação de premiação, sem notícia específica sobre artista negro nem fato relevante para a temática racial; conteúdo promocional do veículo/premiação."
+ },
+ {
+  "hora": "04:48",
+  "fonte": "Busca - injúria racial",
+  "titulo": "Mulher é presa suspeita de ofensas racistas durante briga de trânsito em MG",
+  "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQTUVPUy1IUTQ5TTJ6VUQ2eUx0bGY4cm9PTF80eTJLc1U4T3g2SjFUQWZVdGFQOFhsVzRJM05ZcC1sQzRHUHJoTWFtbTR3TnVpYWZtR3JyYW1KRlZvUHIwRnFLZ0pOTnV1cFlmOHF4dHVaODFVcV9sa3NMMy1sZV9VWTBqMTlyckRMRUVWUkk4SS1FUHJ1c2lfRms3cWh5MXNKcUFMNVAxa1J0MmZVNEo1MjhGWDBvSG8xalNIZ1piS09tWmY2d2xUajdNOVlkbkFUbncwU2dPMHJJQdIB6AFBVV95cUxQT2lpbFQ4Mlo5b1A0d1NtbnRnLW5ZWERUYmE1RVRnMjNBa2VOTTg1YUZDa1JHY1lLZTJpc0hEaC1TNW13T3l0UVJyOTJKT3BVYlVieWE1YVpfSV9VUHNQUkNiS0lGcm1oMnhGTTlPbUFjOXVMcHZnRVA3NFVhTTBiLXdNRmt5QURTSEM1MUdMSVBoQzVEdkFMdGd4WE5sU0xKUTRZazdPVkluZFhSbDdROTNNQ3hoTG9pTmR3YmxKX0MtYV9NY2dWUWE3cFhIalZJX0hhMmZiZTdBcWVKZ0V0RTZnZDEySDN6?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "Prisão por injúria racial em briga de trânsito: racismo como centro do caso, tema de violência racial no cotidiano, sem fonte exclusiva identificada na lista."
+ },
+ {
+  "hora": "04:48",
+  "fonte": "Busca - injúria racial",
+  "titulo": "Antena 10 FM",
+  "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPeUdramlRQzNaYmk0OGJ5TzV3bUZqZFJtRTZlUE9qNHVPV2dibmdrbFZkek5PREtpdGdhOU1RTzZ0ejM3SFNQNXVvWWJZX3J0TXlvQ3hjQ1JteWt4YXhkdHg1SGlOTjZPdTRBWmpaSTA0LVF3WDc4NkZlNWw4bGhsWVR2UmxPLXRWOXlSTng2b181Nm91bDVtN2gwMV9BNFFLT01FbjY1eWRERlA1cnBRNnZYUHNPb1ltenlMbUItRFVnZw?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Título genérico de emissora de rádio sem conteúdo informativo; não é notícia."
  }
 ]
