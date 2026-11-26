@@ -955,5 +955,16 @@
   "nota": 3,
   "destino": "nota baixa",
   "detalhe": "Acidente com incêndio no Egito; crime/acidente comum sem relação com a agenda racial nem relevância maior."
+ },
+ {
+  "hora": "04:32",
+  "fonte": "Busca - samba",
+  "titulo": "Pelourinho celebra Dia Nacional da Baiana de Acarajé com cortejo e samba",
+  "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPaFZLSXlvcTdpcVdHc2x3WmIyeXppaWtYWHBMMG8wQ1ZNS3JEWC12N1I0c1hNVmFKblJ6bUM2RjBYejNBd1ZaejRwdWhVUGpsM2g2Y2JJSTdxOEVTeWVHWHNmVUprdzRpQkVYVUFwR2IzVkN5NjF1Tmt5Z1NnU0ZaUF9EazhObVB2NlAxZFR4M3pySWd2QnpRTWJITTQ3Ti1uN0gtRkY2VDBGQjlqWk9ZWEJLakk3UQ?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
  }
 ]
