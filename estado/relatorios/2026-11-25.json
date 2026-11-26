@@ -15218,5 +15218,104 @@
   "nota": 7,
   "destino": "recusada pelo redator",
   "detalhe": "Recusado por ser conteúdo exclusivo de outro veículo: o texto é uma entrevista exclusiva concedida à segundabase.com.br (falas de Danielle Brooks colhidas pelo veículo, sem fonte oficial ou release). Além disso, o material não traz local, data e fato novo suficientes para uma matéria própria sem depender da entrevista. Não há fato noticiado por vários veículos que permita reescrita independente."
+ },
+ {
+  "hora": "23:17",
+  "fonte": "Busca - Racismo",
+  "titulo": "Câmara aprova protocolo contra racismo em escolas; texto vai ao Senado",
+  "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQd3V0Qjc2SlNkcVlkclpPdGhUNFRoVWt3ZGhMZmN1R1NDcFk2UlJBOERGbzM3TWwtS3VOblFERE9NRGtvTHEtOVJYb0ZyVU9POFhmQ05nXzNfamdLc2tqc1FzeUtyZmYtcUd1VzMzajFwV0Y1QlJjOTJnRVp2d0otb0g3cGM1MlVWQXpWcnEzQWhkTFVuQy1TUnI1QnZCVTdzYnZZUG5BUktWV3FVTnYtclZFTUtSbUdoX1kxOVp0REZjb1hKRmZZRnBkNmllWWVyRFBZcExR?oc=5",
+  "categoria": "politica",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "23:17",
+  "fonte": "Busca - samba",
+  "titulo": "Dia da Baiana de Acarajé é celebrado com festa, samba e valorização da tradição no Pelourinho",
+  "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNcmc5MFBFejRKSUR6d3EwUVh2b1ZzWFU1dXZmbVJibldEYXRTWEhmZ2RIMnAtSEFDS3c1RGtaZmljTk54LW1kcEp2cHJGajY2YVlwQmg5VDcyanFiM1d2UXd1anVtT2szT1V6QU9aT3FDTFdWTklqN190dXdKeDhDWF94OGRRWWhEb3B2YnVwc1VIdmI2eU9uTUhNSmdEWXVEaWhXa1JPSkRLaG9BU3NuSkVPM0RXYzZGdUdaNlNxUThvU2JycGdPeGpJMTRjLXZO?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "23:17",
+  "fonte": "Busca - samba",
+  "titulo": "Seu Jorge: da força do samba à sofisticação da MPB, artista leva sua pluralidade musical ao Festival A Bossa, em Juazeiro",
+  "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9zOWxQaG5VaTlUd3RwYU56alVhUlppTU9hdXhackp1QjJpQm9RNUlTU1RZd2NBMmFWSk1ieXladUN1cHBGOHBlaXVPNHhUSUtrcVF5Zw?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "23:18",
+  "fonte": "Busca - pagode",
+  "titulo": "'Último Pagode do Ano' reúne Uendel Pinheiro, Gustavo Lins, Thiago Soares e Bruno Diegues em 8h sem parar",
+  "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOODA0bXU2ZVF4T0swdUFzSFVHSWJPdVhTUU9yVFdKT1RkZjllOU9ULWVhM0xfM041TnJSSHJEN3BienEtVjduVnF6Uk9xcG9ITXZOck11Rm5Db3JkNDNISUhKejFPWGc4UTFJLXZmVHpfWkxxRlZ2dWpEbUtBZlh2WTZ0cmk5QjZYYV9tNC1qN0hrQmstNkVqcXUxZUZmM3lHblcwOU9HaDZISjhtSktWSGhDRlVMMDlkNFR1Tl8xY2F6akk?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Título trata de evento de pagode sem indicação clara de fato relevante para a temática racial; notícia de agenda de show de baixo alcance para a régua. Ficaria na faixa de 5 a 6 sem recorte racial central, mas sem informação suficiente para matéria honesta."
+ },
+ {
+  "hora": "23:18",
+  "fonte": "O País (Angola)",
+  "titulo": "MPLA admite insuficiências e promete melhorar resposta às aspirações dos angolanos",
+  "link": "https://opais.ao/politica/mpla-admite-insuficiencias-e-promete-melhorar-resposta-as-aspiracoes-dos-angolanos/",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 5,
+  "destino": "nota baixa",
+  "detalhe": "Autocrítica interna do MPLA sobre o mandato 2021-2026; notícia política de Angola com interesse ao leitor brasileiro, mas sem ligação direta com a população negra no Brasil e sem fato urgente."
+ },
+ {
+  "hora": "23:18",
+  "fonte": "O País (Angola)",
+  "titulo": "Ministro Mário Oliveira exige rigor jornalístico e defende oportunidades para os jovens",
+  "link": "https://opais.ao/politica/ministro-mario-oliveira-exige-rigor-jornalistico-e-defende-oportunidades-para-os-jovens/",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "Declaração de ministro angolano sobre rigor jornalístico e jovens; fala protocolar e burocrática, sem fato relevante para o leitor do Áfricas."
+ },
+ {
+  "hora": "23:18",
+  "fonte": "O País (Angola)",
+  "titulo": "Cinco projectos angolanos chegam às meias-finais do concurso internacional de inovação",
+  "link": "https://opais.ao/sociedade/cinco-projectos-angolanos-chegam-as-meias-finais-do-concurso-internacional-de-inovacao/",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 6,
+  "destino": "nota baixa",
+  "detalhe": "Concurso de inovação com projetos angolanos em fase intermediária; economia e inovação de país lusófono, sem conexão direta com o Brasil e sem resultado final."
+ },
+ {
+  "hora": "23:18",
+  "fonte": "Busca - igualdade racial",
+  "titulo": "Quem é Rachel Barros, ministra da Igualdade Racial - 19/11/2026 - Diversidade",
+  "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPV0x6d09CVEc0RkxtUFZMTVpuaUtnOTZpV0hqT29uNjZJb3RMbVV6SUFEdDBUQ2d1Qk1QZnVtYk80SmVMLXpDdFJUeW85VXhtYW5JQjlWYWZ5QjNpRk9NNkV0V2xWMHJuLU1mQTEyN2Q1Tmw0WE04NWtFYzl0M1ZYNWoyWkY4eTl1TzJtQUV5NWpGVER4S2NuMkoyZVVJTmVObVZnRWQ3RGp0Z1BOYU9QUlp4RGVXaEFWZUFKQy1tTWo0YlE?oc=5",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Perfil de ministra publicado pelo UOL em 19/11/2026, fora da janela de 48 horas e sem fato novo; conteúdo de outro veículo, não notícia nova do Áfricas."
+ },
+ {
+  "hora": "23:18",
+  "fonte": "SRzd - Carnaval",
+  "titulo": "Dia do diretor de harmonia: pouco reconhecimento e muito trabalho",
+  "link": "https://srzd.com/blog/carnaval/sao-paulo/dia-do-diretor-de-harmonia-pouco-reconhecimento-e-muito-trabalho-2/",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Texto de opinião/reflexão sobre o trabalho de diretores de harmonia; artigo opinativo, não notícia."
  }
 ]
