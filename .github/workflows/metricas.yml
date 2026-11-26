@@ -1,0 +1,37 @@
+name: Resultados das redes
+
+# Só leitura nas redes: busca curtidas, alcance, comentários, compartilhamentos e o perfil
+# do público do Instagram e do Facebook, e grava em estado/relatorios/metricas-redes.json.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 10 * * *"   # todo dia às 7h (Brasília)
+
+permissions:
+  contents: write
+
+jobs:
+  medir:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install requests
+      - name: Buscar os números
+        env:
+          META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+        run: python metricas.py
+      - name: Guardar o relatório
+        run: |
+          git config user.name "robo-africas"
+          git config user.email "robo-africas@users.noreply.github.com"
+          git add estado/relatorios/metricas-redes.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Resultados das redes: atualização"
+          for i in 1 2 3; do
+            git pull --rebase && git push && exit 0
+            sleep 5
+          done
+          exit 1
