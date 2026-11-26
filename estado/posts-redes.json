@@ -719,5 +719,34 @@
   "foto": "https://www.africas.com.br/uploads/images/2026/11/jessica-areias-e-lenna-bahule-fazem-show-em-sp1795686014.jpg",
   "categoria": "Cultura",
   "publicado_em": "2026-11-26T13:38:15.008759+00:00"
+ },
+ {
+  "tipo": "reels",
+  "titulo": "Radar do meio-dia 26/11",
+  "link": "https://www.africas.com.br",
+  "links": [
+   {
+    "titulo": "Edún Àrá Sangô lança álbum \"Elo\" em Pernambuco",
+    "link": "https://www.africas.com.br/noticia/edun-ara-sango-lanca-album-elo-em-pernambuco"
+   },
+   {
+    "titulo": "MC Hariel debate funk e preconceito na SIM SP",
+    "link": "https://www.africas.com.br/noticia/mc-hariel-debate-funk-e-preconceito-na-sim-sp"
+   },
+   {
+    "titulo": "Festival cores da saúde promove prevenção e cultura gratuita no rio",
+    "link": "https://www.africas.com.br/noticia/festival-cores-da-saude-promove-prevencao-e-cultura-gratuita-no-rio"
+   },
+   {
+    "titulo": "Espetáculo infantil Morro da batucada estreia no Sesc Pinheiros em dezembro",
+    "link": "https://www.africas.com.br/noticia/espetaculo-infantil-morro-da-batucada-estreia-no-sesc-pinheiros-em-dezembro"
+   }
+  ],
+  "ig_media": "17913249114666767",
+  "ig_link": "https://www.instagram.com/reel/DgNctItKrn7/",
+  "fb_post": "2439595133448251",
+  "yt_video": "tYkGU8Y0viA",
+  "prioridade": "reels",
+  "publicado_em": "2026-11-26T15:40:57.289643+00:00"
  }
 ]
