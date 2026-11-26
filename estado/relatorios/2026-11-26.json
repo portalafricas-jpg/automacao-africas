@@ -823,5 +823,137 @@
   "nota": 8,
   "destino": "venceu na fila",
   "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "04:18",
+  "fonte": "Busca - Pantera Negra 3",
+  "titulo": "Avatar 4 tem estreia confirmada pela Disney e reforça futuro da franquia de James Cameron",
+  "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPYnUwTDVTV1VIUnh6NXVhcmxTenJRQkVpaWFCdjBvNDJrYjBmbzBnUFRVM0dSYllLMHJTSjF5NXkwc2RENGNZdUF4UjVQbF9DNGdTUDRQd2pGR1J3UW03U080YWZHOU11OTZEcEtrMUNzakljOEozMFZ4RWhoaVkzbGxUaDNKbGpxa2NVVndhUmE5OUlRLWY1V1p0dDh5Y0prZWkxUnlMbi0tX0xIcHFjNzB1YW1jOGJR?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Sem relação com a temática racial; notícia de cinema geral sobre Avatar 4."
+ },
+ {
+  "hora": "04:18",
+  "fonte": "Busca - Lázaro Ramos",
+  "titulo": "Taís Araújo completa 48 anos e recebe declaração de amor de Lázaro Ramos",
+  "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNS3phbXdfeEdJRm9VS1ByRk5pWlJjc1dPek90Q1lWS3VrMjA3M0V1VHdMWV9VRU5xN3dLSWwya1BPOXhPZFVSTkxabk9xR1Vqb3J3OWJnSUZPcm43MFNQOUlMbGJIU3RwOWxvTkt0VGR1UW5COXNNX2N6dGVscmdlOThFY2VoQ1ExN0RoajdrUU5pc0tsNEktRjJEeFc2VDdBNTdEdWZUWTFidw?oc=5",
+  "categoria": "protagonista",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Aniversário de atriz negra com trabalho e carreira; a declaração de Lázaro Ramos é tratada como registro público, não fofoca. Nota mínima Gente e Música, mas o conteúdo é mais de homenagem pessoal, então nota no piso."
+ },
+ {
+  "hora": "04:18",
+  "fonte": "Busca semanal - Angola",
+  "titulo": "\"Os números não são bons\": exportações portuguesas de vinho para vários mercados estão em queda, dos Estados Unidos a Angola",
+  "link": "https://news.google.com/rss/articles/CBMimgJBVV95cUxPcmYtNDVjenNqQ3NsUHE3Z2lkNzZ4V2xmN0lOUzlWckFtLU1ubDFxTTNQcUdUdV95UEc3MjMzMlNhM3o4aXg5XzhudHY1dC1wbloxOU1LcXdRVm9fWXBFTkV2ejdzRnJ2d2J3V1dlTjRrODVjTGVlU1lGTmhqMmNZeVpLYm9NNlVVcVFidTZCM014dDc5TExuc3V1VHR3dVhFZHI5RERZMDhBcXptcUJjbUc3MkNiakdMY05fYWE2Y2Y4M2tLWWJTdTNzQ2lZVk01TXg1dUZpSTJGUUZnR3ZUcFEtemFkeWZneDdQRVU2alVoUFBsRlU2TUI4MUg3cTVORXNDLXdqR2N1UXVkQS1CcGJoSmR1UnNoU2c?oc=5",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "Exportações de vinho portuguesas em queda; economia de Portugal sem tema racial nem interesse direto da agenda africana para o leitor brasileiro."
+ },
+ {
+  "hora": "04:18",
+  "fonte": "Busca - Grupo Revelação",
+  "titulo": "Seal, Clássicos do Brasil, Roberto Carlos, Revelação e Xande, Noites de Verão e mais shows no Rio",
+  "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPVThRWlprUjRvbnUwSFpmNk9DQzFaUi1oVnh5UjlFWWtpdDF5MnJqUERYSnowcUtpcEx2R3ljOEZYSkdRcHBXT0hqVWt1c1VaYnBOYTN6ME1qTFJqV2xqTnlsdUlNZ2VPZ1pid1lZMjF5aDlwTTYyc1dtUnZpX3phc3dDcXBvOU5hSnVVUDFpV05fZ2ZJWW5yeVlidlI3VUZSWFc5djZOTk1qdk5tOG96Z1J3b2NrNlQ4aHlZR3kwdm5ONENjVnlSTGI1OHVobE9zVHdJTk01SFlhaTAwajgzUFYxN1JUM3NuZjFV0gH6AUFVX3lxTFBlMHZUOE9TdHVLczFSRnZQbHNWR1JLdVVCNGNGaS1aX2c5UGxGbG8wV1lYSFV5SlNiWTQxUTZ3b3E3YzZUOFVkY3I2TXptcmpsZkx4V2x0TUF2OWJhUE1CUUNSMnJDN0ctWW9jS2FNVDYzSkRraVBldlRBWmphQ19jaHVFQ0tLUlJJVHZHbTlweEVQV0kzX2U5UHpwWGttNU5PZ0RZX2lNRGRFU2oxWlJsM0owbF9zS3JjNjhpUlhGa29ma0R4R084MEpPMnBBSVZRWERObjJTeERWa2JlZExmRW55Qk1Pdi1rNVdfWDFJd3RrbkxubFVpLXc?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Agenda geral de shows no Rio; sem recorte de artista negro principal nem fato relevante para a temática."
+ },
+ {
+  "hora": "04:18",
+  "fonte": "Lista Preta",
+  "titulo": "Mostbet Azərbaycan – ödənişlər və pul çıxarma",
+  "link": "https://listapreta.com/mostbet-az-rbaycan-od-nisl-r-v-pul-cixarma/",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Página de cassino/publicidade, não é notícia."
+ },
+ {
+  "hora": "04:18",
+  "fonte": "Lista Preta",
+  "titulo": "Yard Casino – отзывы пользователей и впечатления от платформы",
+  "link": "https://listapreta.com/yard-casino-otzyvy-polzovateley-i-vpechatleniya-ot-platformy/",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Página de cassino/publicidade, não é notícia."
+ },
+ {
+  "hora": "04:18",
+  "fonte": "Lista Preta",
+  "titulo": "2J Bet game in the online casino – Live casino section and real dealer experience",
+  "link": "https://listapreta.com/2j-bet-game-in-the-online-casino-live-casino-section-and-real-dealer-experience/",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Página de cassino/publicidade, não é notícia."
+ },
+ {
+  "hora": "04:18",
+  "fonte": "Lista Preta",
+  "titulo": "Казино Sultan Games в Казахстане – Удобный вход и безопасная игра",
+  "link": "https://listapreta.com/kazino-sultan-games-v-kazahstane-udobnyy-vhod-i-bezopasnaya-igra/",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Página de cassino/publicidade, não é notícia."
+ },
+ {
+  "hora": "04:18",
+  "fonte": "Busca - pagode",
+  "titulo": "O Pagode Huong utiliza bilhetes eletrônicos e câmeras de vigilância para garantir a segurança durante a temporada de festivais.",
+  "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPRU9QRkV1WTU1NXFxbDhLOXR6djUzUGUxeHJ2VnBGa1NtTFVMYmpUeFF4T0NEbzBJZUlzMGV5dVEyQl9BNjlaVmE5NlF2cmFMaFRVazdwYl8wNk1yT2FFLVprdzJ6QzgzX0wzQUlMMUg3aURtSmZuZVU0RXdMMjJfa0hPaWpoc1FGUnV1Um5kOWNrblc3UHFJZjB3?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Matéria sobre festivais no Vietnã (Pagode Huong), sem relação com a temática racial."
+ },
+ {
+  "hora": "04:18",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Nigéria aposta no fabrico de equipamentos de rega com parceria americana",
+  "link": "https://www.giranoticias.com/africa/2026/11/32795-nigeria-aposta-no-fabrico-de-equipamentos-de-rega-com-parceria-americana.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 5,
+  "destino": "nota baixa",
+  "detalhe": "Economia agrícola na Nigéria com parceria americana; interesse ao leitor brasileiro é limitado e o texto não traz conteúdo suficiente para matéria honesta."
+ },
+ {
+  "hora": "04:18",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Grupos armados na Nigéria matam 30 pessoas no estado do Níger",
+  "link": "https://www.giranoticias.com/africa/2026/11/32794-grupos-armados-na-nigeria-matam-30-pessoas-no-estado-do-niger.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "Crime e ataque armado na Nigéria sem relevância maior para o leitor brasileiro; violência local comum."
+ },
+ {
+  "hora": "04:18",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Pelo menos 30 mortos em incêndio após capotamento de veículo no Egipto",
+  "link": "https://www.giranoticias.com/africa/2026/11/32793-pelo-menos-30-mortos-em-incendio-apos-capotamento-de-veiculo-no-egipto.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "Acidente com incêndio no Egito; crime/acidente comum sem relação com a agenda racial nem relevância maior."
  }
 ]
