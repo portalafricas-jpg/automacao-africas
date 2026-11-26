@@ -1120,5 +1120,71 @@
   "nota": 5,
   "destino": "nota baixa",
   "detalhe": "Título sugere texto analítico/opinativo sobre racismo estrutural no Direito, sem fato noticioso claro no resumo; questão racial central, mas sem fato novo identificável e possível artigo de opinião."
+ },
+ {
+  "hora": "05:47",
+  "fonte": "Busca - injúria racial",
+  "titulo": "Tribunal do Júri condena a 16 anos, 6 meses e 7 dias de prisão homem por injúria racial e tentativa",
+  "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOWTZRM2J5dVpQYTRjd3p2Q3U3VFluTENDRXlFcV96dC1yM3F0TnNKbUhLU0dlMGtHZnhHaGhCX2lLYkQ5ajgwMUhTZEppNllUTDZrMDdvQjF6MTZxMVkwT2hFaEZCTXRhdzVsM0dLc0tKZkF0aXJyRzhiSk1oOFZhMEV5c2lGampGNGQ2RGhxbnczeHloX2VwU1RFV0FoQ2hJQTJ4bk1B?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "repetida",
+  "detalhe": "título quase igual a outra notícia"
+ },
+ {
+  "hora": "05:48",
+  "fonte": "Busca - Racismo",
+  "titulo": "PSG leva adiante caso de racismo, e Roma corre risco de punições severas",
+  "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPeVhQbFQxQzVrMmdMVjhIUjFqZXhPN0lsaGVhX2VTd25kbWF4VldjaGNHbnRFU1YyMFNLc0hIY1JOcWlveUZHbGh2UmR0SEtJQUV1Ni03M18yOEFNZWV6TGQxRk5wVzdKLXpGaGdTSGNaQmw5bFBZTTNlOW9ES3VIT2ZfVmVobHJ4RnZ3cGV6Zlp5TTJuOVMzYzMteHZKQXpkLU5TTi1CTFZ5TWpyUjBPMVBYaUdobXhmbWo3QlE1NGpCal9mZkNLUw?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Caso de racismo no futebol europeu, sem fato ligado à população negra brasileira ou à Agenda Preta; fonte esportiva estrangeira sem ângulo de pauta do portal. Ficaria no limite do filtro, e o título não traz informação suficiente para matéria honesta."
+ },
+ {
+  "hora": "05:48",
+  "fonte": "O País (Angola)",
+  "titulo": "Huba interpreta realidade sócio-cultural angolana em spoken word",
+  "link": "https://opais.ao/cultura/huba-interpreta-realidade-socio-cultural-angolana-em-spoken-word/",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 4,
+  "destino": "nota baixa",
+  "detalhe": "Espetáculo de spoken word de artista angolano em Luanda; evento cultural local sem ligação direta com o Brasil. Ainda assim é lançamento cultural de artista africano, mas sem conexão brasileira a nota fica baixa."
+ },
+ {
+  "hora": "05:48",
+  "fonte": "O País (Angola)",
+  "titulo": "Enigma Teatro estreia “Divua” uma peça reflexiva",
+  "link": "https://opais.ao/cultura/enigma-teatro-estreia-divua-uma-peca-reflexiva/",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 4,
+  "destino": "nota baixa",
+  "detalhe": "Estreia de peça de teatro de companhia angolana, interna ao país, sem ligação com o Brasil. Regra de cultura africana aceita nota mínima 7, mas a estreia de peça em Luanda sem conexão brasileira fica no limite; tratada como evento local de menor porte."
+ },
+ {
+  "hora": "05:48",
+  "fonte": "O País (Angola)",
+  "titulo": "Membros do “Círculo de Leitores António de Assis Júnior” apresentam resumos das obras recebidas no primeiro encontro",
+  "link": "https://opais.ao/cultura/membros-do-circulo-de-leitores-antonio-de-assis-junior-apresentam-resumos-das-obras-recebidas-no-primeiro-encontro/",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "evento local pequeno: Reunião de círculo de leitores de bairro em Luanda, sem personagem conhecido nem fato relevante; evento pequeno e sem conexão com o Brasil."
+ },
+ {
+  "hora": "05:48",
+  "fonte": "O País (Angola)",
+  "titulo": "“Semba Sound Festival 2026” acontece este Sábado na Marginal de Luanda",
+  "link": "https://opais.ao/cultura/semba-sound-festival-2026-acontece-este-sabado-na-marginal-de-luanda/",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 4,
+  "destino": "nota baixa",
+  "detalhe": "Festival de semba em Luanda com músicos angolanos conhecidos; é cultura africana, mas sem ligação com o Brasil e sem fato de impacto para o leitor brasileiro, então nota baixa."
  }
 ]
