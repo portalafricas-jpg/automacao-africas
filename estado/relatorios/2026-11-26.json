@@ -724,5 +724,38 @@
   "nota": 5,
   "destino": "nota baixa",
   "detalhe": "Dado sobre queda da presença de mulheres negras nos cargos mais altos das empresas, mas é levantamento de terceiros, com pouca informação no resumo; a questão racial é o centro, porém sem conquista nem fato relevante de pessoa negra. Notícia que repete o tema já publicado (estatística sobre diretorias)."
+ },
+ {
+  "hora": "03:32",
+  "fonte": "Busca - Racismo",
+  "titulo": "Câmara aprova protocolo nacional para combater racismo nas escolas",
+  "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNeTd1N19hVTNNc1o4MVpWbEw2S2JYM2t3UjMzRENWbkhXOWk5R1IxbjJRUmFhNDJiZkJTTXVJZG1XZExDajZETS13eTUxamhNX1JwVUFqTkZaZzlkR1Z4Vm92cTVJbWxrdmNaanlMUjNFNVZqWW55VUlabnRwMF9BQnNrVWtLVVlxb3V6WWpWeUMxWTFHSVBsT1pkdm5fMkhhdnFRMlVMSEVVVFB1LTAwWXZ3ZzlSUFFqMU1TXw?oc=5",
+  "categoria": "politica",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "03:33",
+  "fonte": "Busca - Empreendedor negro",
+  "titulo": "Mr. Black Café firma parceria com Bradesco e facilita financiamento para abertura de novas franquias",
+  "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOSUloaW5nUVNKc1JOZHR0amhCY0VMaXBtanZFUEJUZXpmWXYwQ3hISjZMenY1S042cmVKdnNXdHpKU2hPUmliNkNXaGNKV0Z6LVZRdENwTktJNTdMRllXLTFFQzQxd0JTckYxdldHWVg5NU15cThJQ3YtaFdGd2tpTnR4T1lwVXowSWVsSGZMOHM5WEYtd1VndDdXczlaNEsxY3RyaWp1WDNjQ2d3STMzSkRvTmpqaGxLeS1XRGdGel9jaV91Yk9yYXhPX21lblB1OHkyZXlOVTNudHhU?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Notícia sobre parceria comercial de franquia, sem relação com a temática racial; conteúdo publicitário."
+ },
+ {
+  "hora": "03:33",
+  "fonte": "Busca - Djamila Ribeiro",
+  "titulo": "Na grade escolar: escola social em São Paulo mantém aulas regulares de Letramento Racial para o 9º ano",
+  "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPaEZha1JRWlQ4Vk5jNmwzRF84aEVJVlAtcDRMRko2clp5NHpJbWU4TVFlb0JpZlpqbmlJVmFTTUNqUWctVmg2WWtBYnJKZmFVM1pOdzQtNC14RHdIQm5MODUwSkFBOENPQUJPY0FoSUx3OC1PWURFN1FDbkQtbHdleWZRbm9GMGE2WWxpb1ZueFZ5ZFBZZGJGZzUtR2NiMHBDMlEwZExmMWRGZmJNamNjNGdOd0ZVSU1KRUZaV0xJSU1IdzAwRmt5MEJvN0F6NjdWdlExdFBCemNHSlBqLUh4Y05mOF9oRFRUX3c?oc=5",
+  "categoria": "educacao",
+  "prioridade": "",
+  "nota": 5,
+  "destino": "nota baixa",
+  "detalhe": "Aulas de Letramento Racial em escola social de São Paulo; tema racial e educação, mas notícia de alcance local e sem fato relevante claro. Categoria válida do portal é cotidiano."
  }
 ]
