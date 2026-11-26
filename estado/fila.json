@@ -1,26 +1,5 @@
 [
  {
-  "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQcmwzVlFRMTQxenItcWI3VWV1Wl9tRENxMXFpVllhWXZvUVlSdE9ESVJ3c0g0dlVjdVYwdGNUdU1DNktacDVzNWlGeWNQaGxiUFNFcUYxMDBOWkttd2VvTjh5MGFpQzN6TzBybTJaaUpQYjBTNUlHT2tXTVdhQjZla09rTGtKQ0dzdTAxUFU3SmlRSFBDQ0NQTWlfLU03MnVHWGgwTw?oc=5",
-  "titulo_original": "Banda Deu Samba celebra três anos de carreira com festa em BH",
-  "descricao": "Banda Deu Samba celebra três anos de carreira com festa em BH    SouBH",
-  "imagem_rss": "",
-  "imagem_banco": false,
-  "imagem_trocar": false,
-  "fonte_nome": "Busca - samba",
-  "fonte_africa": false,
-  "categoria": "cultura",
-  "prioridade": "media",
-  "nota": 7,
-  "motivo_nota": "Gente e Música: banda de samba celebra três anos de carreira com festa em BH, marco de carreira de grupo de samba. Nota mínima da linha.",
-  "ministerio": false,
-  "excecao_nota7": false,
-  "gente": true,
-  "artista": "Deu Samba",
-  "data_original": "2026-11-26T12:21:22+00:00",
-  "criado_em": "2026-11-26T13:02:18.257284+00:00",
-  "valido_ate": ""
- },
- {
   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPYkFIMHRLTHdILTkzam5wNG5jcGxWd2Q2ZERCZjdaQUtxSE1Jdzg1VDN0VXlVMTdlTHB5SWgtcEtLQ2dlczg5MVJ1dG1sbThmLXpRMDdjVVBROWxlTkJFRWtZMW4tRlYzUVZjczdKY1hTZEk1R3NNcmR6SW9MZFNNcg?oc=5",
   "titulo_original": "Gilberto Gil: as histórias por trás de 10 grandes letras",
   "descricao": "Gilberto Gil: as histórias por trás de 10 grandes letras    Billboard Brasil",
@@ -459,6 +438,27 @@
   "artista": "",
   "data_original": "2026-11-26T15:55:03+00:00",
   "criado_em": "2026-11-26T16:02:27.533997+00:00",
+  "valido_ate": ""
+ },
+ {
+  "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5fSkp1SzJwQlAwbkc3X241bzFsZFU1d3dUMFJiNDUxUXJXTUhILWZPSHhIMDJ6UTR6NWY3aVpDbjZxcE1wUGY0dkZNZGVielQzSzlCdG0zcDJGc1FtcDVJaUNfemV1eXllNWJjcw?oc=5",
+  "titulo_original": "Somos 90: show inédito reúne a nata do pagode em um único palco",
+  "descricao": "Somos 90: show inédito reúne a nata do pagode em um único palco    Billboard Brasil",
+  "imagem_rss": "",
+  "imagem_banco": false,
+  "imagem_trocar": false,
+  "fonte_nome": "Busca - Billboard Brasil",
+  "fonte_africa": false,
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "motivo_nota": "Show inédito de pagode com nomes de destaque do gênero, linha Gente e Música (música negra); o artista principal não foi identificado no resumo, então o campo ficou vazio.",
+  "ministerio": false,
+  "excecao_nota7": true,
+  "gente": true,
+  "artista": "Zeca Pagodinho",
+  "data_original": "2026-11-26T16:17:36+00:00",
+  "criado_em": "2026-11-26T16:32:16.972185+00:00",
   "valido_ate": ""
  }
 ]
