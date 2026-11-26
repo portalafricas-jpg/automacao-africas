@@ -21,27 +21,6 @@
   "valido_ate": ""
  },
  {
-  "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxONEYzNFFIX1VON3B6cERUV2p1eEZXYV82UW5SZ3FyaGIwSHFWeFVqYzVKeEdSOVMyYmJXUlFQZGJxMU1FRlZUXzdWdUJRWDNLZjRBX0tPakxLOVJGcnlvYkRQQi1iYVM5QjNKWDgzb0FjS2JSOVFoOUdpTmxneTlNZEhoWG1vRkJhbVVJZjRlVnZLYTY0X3ZJSkpVQVBDUmpDX2NOeElkZmcyOWZwVktfUm1RWVc4a0MwZlJncGNJRWFzVW1VbG53bWhuR2YzdVRpQTJvLXdNUHJzMkNUTnhHSGVENFpPemVTMzRuQU1iTUtQYzluYkdmLQ?oc=5",
-  "titulo_original": "Lincoln Senna projeta evento em parceria com Tony Salles e Léo Santana pelos 30 anos do Parangolé em 2027",
-  "descricao": "Lincoln Senna projeta evento em parceria com Tony Salles e Léo Santana pelos 30 anos do Parangolé em 2027    Portal Salvador FM",
-  "imagem_rss": "",
-  "imagem_banco": false,
-  "imagem_trocar": false,
-  "fonte_nome": "Busca - Léo Santana",
-  "fonte_africa": false,
-  "categoria": "cultura",
-  "prioridade": "media",
-  "nota": 7,
-  "motivo_nota": "Projeto de evento pelos 30 anos do Parangolé com Tony Salles e Léo Santana, artistas do pagode baiano; marco de carreira de grupo musical negro.",
-  "ministerio": false,
-  "excecao_nota7": false,
-  "gente": true,
-  "artista": "Lincoln Senna",
-  "data_original": "2026-11-25T23:52:14+00:00",
-  "criado_em": "2026-11-26T00:32:26.233440+00:00",
-  "valido_ate": ""
- },
- {
   "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9BVjQ1dVItVkRLYTZoYld0T0p1YVAyNVBOREh2RXM3V29fV3Q3ajRTTTJYOExsNHQtcDU2WmgwRzRBVkJEREJhNmhCSDI4NDhNSlc0NDl0RjVFRm04dVFrSnR6ZG1DRy1yZnFib1pLVQ?oc=5",
   "titulo_original": "Una Menino lança o álbum Costura",
   "descricao": "Una Menino lança o álbum Costura    Rato de Show",
@@ -291,6 +270,27 @@
   "artista": "",
   "data_original": "2026-11-26T02:42:00+00:00",
   "criado_em": "2026-11-26T03:47:19.161598+00:00",
+  "valido_ate": ""
+ },
+ {
+  "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPaFZLSXlvcTdpcVdHc2x3WmIyeXppaWtYWHBMMG8wQ1ZNS3JEWC12N1I0c1hNVmFKblJ6bUM2RjBYejNBd1ZaejRwdWhVUGpsM2g2Y2JJSTdxOEVTeWVHWHNmVUprdzRpQkVYVUFwR2IzVkN5NjF1Tmt5Z1NnU0ZaUF9EazhObVB2NlAxZFR4M3pySWd2QnpRTWJITTQ3Ti1uN0gtRkY2VDBGQjlqWk9ZWEJLakk3UQ?oc=5",
+  "titulo_original": "Pelourinho celebra Dia Nacional da Baiana de Acarajé com cortejo e samba",
+  "descricao": "Pelourinho celebra Dia Nacional da Baiana de Acarajé com cortejo e samba    Portal N1N",
+  "imagem_rss": "",
+  "imagem_banco": false,
+  "imagem_trocar": false,
+  "fonte_nome": "Busca - samba",
+  "fonte_africa": false,
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "motivo_nota": "Celebração da cultura negra (baianas de acarajé, samba) em data nacional ligada à tradição afro-brasileira; evento com cortejo e samba no Pelourinho.",
+  "ministerio": false,
+  "excecao_nota7": true,
+  "gente": false,
+  "artista": "",
+  "data_original": "2026-11-26T03:26:52+00:00",
+  "criado_em": "2026-11-26T04:02:16.803777+00:00",
   "valido_ate": ""
  }
 ]

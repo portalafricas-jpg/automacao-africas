@@ -273,5 +273,38 @@
   "nota": 7,
   "destino": "nota baixa",
   "detalhe": "Condenação por racismo e injúria racial de uma professora. Caso de justiça com impacto para a população negra, porém de menor porte regional, sem repetição no portal."
+ },
+ {
+  "hora": "01:02",
+  "fonte": "Busca - Léo Santana",
+  "titulo": "Lincoln Senna projeta evento em parceria com Tony Salles e Léo Santana pelos 30 anos do Parangolé em 2027",
+  "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxONEYzNFFIX1VON3B6cERUV2p1eEZXYV82UW5SZ3FyaGIwSHFWeFVqYzVKeEdSOVMyYmJXUlFQZGJxMU1FRlZUXzdWdUJRWDNLZjRBX0tPakxLOVJGcnlvYkRQQi1iYVM5QjNKWDgzb0FjS2JSOVFoOUdpTmxneTlNZEhoWG1vRkJhbVVJZjRlVnZLYTY0X3ZJSkpVQVBDUmpDX2NOeElkZmcyOWZwVktfUm1RWVc4a0MwZlJncGNJRWFzVW1VbG53bWhuR2YzdVRpQTJvLXdNUHJzMkNUTnhHSGVENFpPemVTMzRuQU1iTUtQYzluYkdmLQ?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "01:03",
+  "fonte": "Busca - samba",
+  "titulo": "Pelourinho celebra Dia Nacional da Baiana de Acarajé com cortejo e samba",
+  "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPaFZLSXlvcTdpcVdHc2x3WmIyeXppaWtYWHBMMG8wQ1ZNS3JEWC12N1I0c1hNVmFKblJ6bUM2RjBYejNBd1ZaejRwdWhVUGpsM2g2Y2JJSTdxOEVTeWVHWHNmVUprdzRpQkVYVUFwR2IzVkN5NjF1Tmt5Z1NnU0ZaUF9EazhObVB2NlAxZFR4M3pySWd2QnpRTWJITTQ3Ti1uN0gtRkY2VDBGQjlqWk9ZWEJLakk3UQ?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Celebração da cultura negra (baianas de acarajé, samba) em data nacional ligada à tradição afro-brasileira; evento com cortejo e samba no Pelourinho."
+ },
+ {
+  "hora": "01:03",
+  "fonte": "Mundo Negro",
+  "titulo": "Black Friday e Natal: 7 dicas para vender mais no fim de ano",
+  "link": "https://mundonegro.inf.br/black-friday-e-natal-7-dicas-para-vender-mais-no-fim-de-ano/",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Conteúdo de dicas de negócios e publicidade editorial sem relação com a temática racial; post de outro site."
  }
 ]
