@@ -14,5 +14,13 @@
   "busca": "\"Wesley Nóog\"",
   "grupo": 0,
   "auto": "2026-11-25"
+ },
+ {
+  "nome": "Busca - Olodum",
+  "categoria": "cultura",
+  "tipo": "busca",
+  "busca": "\"Olodum\"",
+  "grupo": 0,
+  "auto": "2026-11-25"
  }
 ]
