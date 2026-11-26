@@ -1,0 +1,30 @@
+name: Links para os grupos do Facebook
+
+# Todo dia útil às 8h (Brasília) manda por e-mail (aviso do GitHub) as 2 melhores matérias
+# de política com o link de compartilhar no Facebook. Não posta nada sozinho.
+on:
+  workflow_dispatch:
+    inputs:
+      teste:
+        description: "Marcar como teste"
+        default: "0"
+  schedule:
+    - cron: "0 11 * * 1-5"
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  avisar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install requests pillow
+      - name: Montar e enviar o aviso
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TESTE_GRUPOS: ${{ github.event.inputs.teste || '0' }}
+        run: python grupos.py
