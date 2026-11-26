@@ -2530,5 +2530,93 @@
   "nota": 1,
   "destino": "não abriu o texto",
   "detalhe": "texto original curto ou bloqueado"
+ },
+ {
+  "hora": "07:33",
+  "fonte": "Busca - Dona Onete",
+  "titulo": "'Sou atrevida e abusada', resume Dona Onete, tema de documentário",
+  "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOV19sOENQaDdJYXRiWEF1enJSaGlQdXQ0UTktNERjM3FRSTdNNDQ1eVZKWHFlR0ozaU9XYm5iYnhEc055WkJOcTZZQ0I5Qkh2bUFjb1ZDNnpqY1BwX1RRUGpFSklqYk5hT3dKUUxPazBFNERseHZCU3o5ZW5KNlVWWnZHN2RTSUlxeUlLSWtmS0NyU1RfVkRhR1U0UkFiTjI5NF9PWEVCc1IxUDRhVHZyam9VcWFDS1RsOEJPcmY0SGxWWVBMVUxJ?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "repetida",
+  "detalhe": "título quase igual a outra notícia"
+ },
+ {
+  "hora": "07:33",
+  "fonte": "Busca - racismo estrutural",
+  "titulo": "Direito Internacional e o racismo estrutural",
+  "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQSU12RTlRRUhmNjNJbGEwZFpERU45UnNkdnd5YVpGMTkzbVAycWV6d3VGOVFKbG1saWdLdU9pVEZsRnJSX0ZWLVRYOU5DMXA5czg5TW5fVEk0Vmo5NWZaSzZtLVpic21WNURUc2RrdThveEZjTDgxUlFiUzFvaTItY0pxTm10ME9kUHdpckI0UXBqT0FjdFdianpKTDZSVDBLRGVIY0FwNjM?oc=5",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 5,
+  "destino": "nota baixa",
+  "detalhe": "Análise sobre racismo estrutural, mas sem fato novo concreto identificável no resumo; parece artigo de opinião ou texto analítico de outro veículo."
+ },
+ {
+  "hora": "07:33",
+  "fonte": "Busca - Empreendedor negro",
+  "titulo": "Índice revela desigualdade racial no acesso à riqueza no Brasil",
+  "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPUWJXLTBSek83a1ZSc2xmRmp2VGZXUmV6eEt6TWI0di1qMnN5cXJTU3ZQMHlpeEhycXZGbHZJZ3RlWU1PQmZZZjg2SjdaNlRpazVrYU1ReVNNTm8zLWlhREk0a3V6VkZSeC1MSm1jVVAzV2s3MTBwRE5WMnVpaEhXWTVTQmZmSjlvdkw4NlVkRFlBVm1HU2VzbTRuWTR0ZW5WeTNSdjZkdTBBMVlZSVN1SWJvQ3k?oc=5",
+  "categoria": "politica",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Índice com dados sobre desigualdade racial no acesso à riqueza, ligado ao eixo de desigualdade e a estudos com dados sobre racismo."
+ },
+ {
+  "hora": "07:33",
+  "fonte": "Busca - Empreendedor negro",
+  "titulo": "Plataforma EXAB365 deve conectar cem empresários afro-brasileiros com mercado africano, oferecendo suporte para internacionalização",
+  "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOQWM1R2VzRWJRSWpQQlVqNjRjeWhnU0xMandrLXlSTkludnVlaXpyaHdVQXVyWk1CUF9ndEJTTjU5bXBCOGUyYzRrVjBOc0pUREsxSmE0WVd5VmROa3M4UG9MOWozbmx0X2tualZCY1UyR2ZmbGNyNzB5VVpUZDUtVWh4Z2hpeVNUV3R4UnExUGjSAZYBQVVfeXFMUHdwcjNSV1RxelNDNm9Ed0ZZRmxaSnRnVFhBQmhwOGpwU3JsbURqVzFXUk5EaFFTbjR2NEcxUm42QWM1LXlwNHl6VENsc1R2Y0JCUlpkd3gxRk5lSlVsN2MxX0kxOEVvUjZDY01saHp0bk5fMWwtMUt6aFlyVE1SdkcxQlp5WkRGb1hLTURSWE1hVGtBYXVn?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "Plataforma que conecta empresários afro-brasileiros ao mercado africano; empreendedorismo negro e diáspora, mas é iniciativa de porte limitado."
+ },
+ {
+  "hora": "07:33",
+  "fonte": "Busca - Dona Onete",
+  "titulo": "'Sou atrevida e abusada', resume Dona Onete, tema de documentário",
+  "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOM3hJOGxLM3U3WnRRMUZ4MllyYWxBRUU0cVktN2ZIYjdZZkZGSVhCTWxLODliUHMwS2VEU3JwX0J4dHo4TnJYZm5vTDN1ZGhTSXFCT3ZlTUlhbnlyNkRrRUt2ZzgzLTZ6aG5IRHlfQXhJcXIxU2swbGo0Vmc5djdtMGRpQ1BxUzk4ZlM2WEhqb0V1U0N2UFpmZzlwZ3NzQll4ZE1nQmM3YlNhUjdheVdBX2ZSczdzMHhuYXc?oc=5",
+  "categoria": "protagonista",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Trajetória de cantora negra tema de documentário; lançamento de obra sobre artista negra, linha Gente e Música. Sem fofoca."
+ },
+ {
+  "hora": "07:33",
+  "fonte": "Busca semanal - Linn da Quebrada",
+  "titulo": "Corpo em evidência",
+  "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5hQzkzbWdlRVZFRTZDV0p1ckc3Zy03Vno1UWJuTXY3ODJDcnNoOWFKWGpsWVlrbXk4cVFTdGU0WFMyeHNEUC1NbUV6RGJNUU5aR214MjZR?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Título genérico de revista de moda sem informação sobre notícia relevante para a população negra; conteúdo sem fato identificável."
+ },
+ {
+  "hora": "07:33",
+  "fonte": "Busca - rap nacional",
+  "titulo": "Barromeo junta Rincon Sapiência e Dow Raiz em single de 2min37",
+  "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNWmpjRGxBYWY2c3ZqbWxweXJzUTJKVUl0RjhzUkFvTXg0RHFBcjBwdklPY3kxTVVVMHVDclh6YW0xOGdkRXNrb0FWN0JJbHhtWERpcFY5bHdXakwyT0dqb25UVUFRNHdlWlR6cllBRjhUUjBYS1IwTVlqd0VsT3BPazhR?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Lançamento de single com artistas negros (Rincon Sapiência e Dow Raiz) na linha Gente e Música."
+ },
+ {
+  "hora": "07:33",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Comité Central do MPLA aprova documentos para o nono Congresso do partido",
+  "link": "https://www.giranoticias.com/politica/2026/11/32802-comite-central-do-mpla-aprova-documentos-para-o-nono-congresso-do-partido.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "Política interna do MPLA, partido de Angola, país de língua portuguesa; notícia da África com interesse para leitor brasileiro, sem ligação direta com o Brasil, nota 7."
  }
 ]
