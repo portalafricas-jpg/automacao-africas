@@ -370,8 +370,13 @@ def tela_app(tamanho, variante=None):
     return seta_mais(img, ("esquerda",))
 
 
+SETAS_LIGADAS = False  # desligado em 25/11/2026 a pedido do Washington: o Instagram já põe as setas brancas dele
+
+
 def seta_mais(img, lados=("direita",)):
     """Setas amarelas no meio das laterais: ir para a próxima tela e voltar para a anterior."""
+    if not SETAS_LIGADAS:
+        return img
     largura, altura = img.size
     escala = largura / 1080
     d = ImageDraw.Draw(img)
