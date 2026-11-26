@@ -1475,5 +1475,21 @@
     "busca": "site:billboard.com.br",
     "grupo": 2,
     "criada": "2026-11-25"
+  },
+  {
+    "nome": "Busca - Ministério da Igualdade Racial",
+    "categoria": "politica",
+    "tipo": "busca",
+    "busca": "\"Ministério da Igualdade Racial\"",
+    "grupo": 0,
+    "criada": "2026-11-26"
+  },
+  {
+    "nome": "Busca - Fundação Cultural Palmares",
+    "categoria": "politica",
+    "tipo": "busca",
+    "busca": "\"Fundação Cultural Palmares\"",
+    "grupo": 2,
+    "criada": "2026-11-26"
   }
 ]

@@ -317,6 +317,12 @@ def ler_pagina_de_noticias(url):
             continue
         vistos.add(link)
         itens.append({"titulo": titulo, "link": link, "data": None, "imagem": "", "descricao": ""})
+    # Sites do gov.br (Palmares e outros) têm um menu enorme antes da lista: se houver links "dentro"
+    # da própria página de notícias, fica só com eles (corrigido em 26/11/2026).
+    base = urlparse(url).path.rstrip("/") + "/"
+    dentro = [i for i in itens if urlparse(i["link"]).path.startswith(base)]
+    if dentro:
+        itens = dentro
     return itens[:20]
 
 
@@ -657,7 +663,7 @@ FERRAMENTA_EDITOR = {
                         "repetida": {"type": "boolean"},
                         "excecao_nota7": {"type": "boolean", "description": "true se for carnaval/escola de samba ou lançamento de artista negro (disco, livro, filme, série, espetáculo)"},
                         "evento_local_pequeno": {"type": "boolean", "description": "true se for evento local pequeno (oficina, palestra, celebração municipal, ação de biblioteca ou escola) fora de capital ou grande cidade e sem personagem ou fato relevante"},
-                        "ministerio": {"type": "boolean", "description": "true se for ação, anúncio ou decisão do Ministério da Igualdade Racial ou de outro ministério do governo federal que atinja a população negra"},
+                        "ministerio": {"type": "boolean", "description": "true se for ação, anúncio ou decisão do Ministério da Igualdade Racial, da Fundação Cultural Palmares ou de outro ministério do governo federal que atinja a população negra"},
                         "gente_musica": {"type": "boolean", "description": "true se for da linha Gente e Música: artista negro (música, TV, cinema, teatro), carnaval e samba, ou atleta negro, sem ser fofoca"},
                         "artista": {"type": "string", "description": "nome do artista ou atleta negro principal da notícia de Gente e Música; senão, vazio"},
                         "motivo": {"type": "string"},
@@ -704,7 +710,7 @@ Para cada notícia nova, dê:
 - repetida: true se for o mesmo fato de outra notícia da lista nova (fique só com a primeira) ou de uma matéria do portal dos últimos 5 dias. Um mesmo lançamento, evento ou anúncio já publicado é repetida, mesmo com entrevista, falas novas ou outro ângulo. Só marque false se trouxer fato novo de verdade (desdobramento, decisão, resultado, número novo).
 - excecao_nota7: true só para carnaval/escolas de samba e lançamentos de artistas negros (disco, livro, filme, série, espetáculo).
 - evento_local_pequeno: true para oficina, palestra, celebração municipal, ação de biblioteca, escola ou prefeitura do interior, fora de capital ou grande cidade, sem personagem conhecido ou fato relevante.
-- ministerio: true para ação, anúncio ou decisão do Ministério da Igualdade Racial ou de qualquer ministério do governo federal que atinja a população negra.
+- ministerio: true para ação, anúncio ou decisão do Ministério da Igualdade Racial, da Fundação Cultural Palmares ou de qualquer ministério do governo federal que atinja a população negra.
 - gente_musica: true para a linha "Gente e Música" da linha editorial (artista negro, carnaval e samba, atleta negro), sem fofoca. Nessa linha a nota mínima é 7.
 - artista: nome da pessoa negra principal da notícia de Gente e Música (ex.: "Ludmilla", "Zeca Pagodinho"); vazio nos outros casos.
 - motivo: frase curta explicando a nota com base na régua.
