@@ -38,5 +38,13 @@
   "busca": "\"Ruxell\"",
   "grupo": 0,
   "auto": "2026-11-26"
+ },
+ {
+  "nome": "Busca - João Nogueira",
+  "categoria": "cultura",
+  "tipo": "busca",
+  "busca": "\"João Nogueira\"",
+  "grupo": 1,
+  "auto": "2026-11-26"
  }
 ]
