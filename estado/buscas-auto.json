@@ -30,5 +30,13 @@
   "busca": "\"Joel Zito Araújo\"",
   "grupo": 3,
   "auto": "2026-11-26"
+ },
+ {
+  "nome": "Busca - Ruxell",
+  "categoria": "cultura",
+  "tipo": "busca",
+  "busca": "\"Ruxell\"",
+  "grupo": 0,
+  "auto": "2026-11-26"
  }
 ]
