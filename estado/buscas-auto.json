@@ -62,5 +62,21 @@
   "busca": "\"Luciana Mello\"",
   "grupo": 2,
   "auto": "2026-11-26"
+ },
+ {
+  "nome": "Busca - Marcos Southo",
+  "categoria": "cultura",
+  "tipo": "busca",
+  "busca": "\"Marcos Southo\"",
+  "grupo": 3,
+  "auto": "2026-11-26"
+ },
+ {
+  "nome": "Busca - Karinah",
+  "categoria": "cultura",
+  "tipo": "busca",
+  "busca": "\"Karinah\"",
+  "grupo": 2,
+  "auto": "2026-11-26"
  }
 ]
