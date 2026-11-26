@@ -3967,5 +3967,137 @@
   "nota": 1,
   "destino": "nota baixa",
   "detalhe": "Crime policial comum sem relação com a temática racial."
+ },
+ {
+  "hora": "10:02",
+  "fonte": "Busca - discriminação racial",
+  "titulo": "Câmara aprova protocolo nacional de combate ao racismo nas escolas",
+  "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPaTZpR09WazY1MUUxWGVoTWNkSjNqeExiS3lPMUNIR1paU1JFSmg5OWswSHU4ZFlDbldFalpYN0REY0lvTGg0cF9VOFNMamxRcm15a1hDQnc0WlJwRFJNTUpEVlBNdWNQa0p6YXkyUnJBSmdGWThlTEU0UDAwaFlXNzYtd1JZTkRxSlFVRzJUTlZuMERkc3h6TnlXY1V0ckpHeFJiS1NkUUhqVDBs?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "repetida",
+  "detalhe": "título quase igual a outra notícia"
+ },
+ {
+  "hora": "10:03",
+  "fonte": "Busca - Carnaval 2027",
+  "titulo": "Concurso da Corte de Momo 2027 recebe inscrições até o dia 4 de dezembro",
+  "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOb21EdUdJeWpjN2lZQ1lVdGJoOVoxYjh6TFZSX2FNeEhiUFdOclBSMXlYS2M3Qm1xajdldmNWWHhTSmVPTll5QlQzUmxFWC00dkVibDA3R1VxTjFCcFlaNG5yQ21NSzB0NUllMkpndlVaMEc4U0VRc3VrWWFnRG1sNHVhQW44RFlUY3A0MkQxVkYzVVNMTVlHeXhKQmZNbHFLWkJELWFpMFRhZ1k?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "evento local pequeno: Inscrições para concurso da Corte de Momo sem relação com a temática racial; é comunicado de prefeitura sem fato relevante para a população negra."
+ },
+ {
+  "hora": "10:03",
+  "fonte": "Busca - Literatura negra",
+  "titulo": "GriôTeca: Crianças de Maceió Celebram Literatura Oral Africana e Afro-brasileira em Projeto que Valoriza História e Diversidade Cultural",
+  "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOTW5OQUhnUUszc2l4emc2RXY1UHlZN2o5Qjl4bXFLSzVfcjFNZ2htcTZhT3lNM0wwQjNxY0c2V25hMDhXMk9mZHptcEhKVDRPenNiUVVlQjhHWW1yUW9rYXl0cDhubmhsWldqMENia1NWX0NHQlBvTkZCQnhHbDN1N3B0RXFxVlUzNGEteDRicVQ4akFVRmgtcERTYTZxVTFVNkFpQzVzRk9sOVZKMDJ4NURKMUhsTUFnaHBxMzE1TktsRm1BaWs5LWV1NG5ILWhxZHktSG9LYkhnbXJJWS1TVnVCcjZGUndlbmZPUmdLSFRFdUZXYU1hTTF3?oc=5",
+  "categoria": "ancestralidade",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "evento local pequeno: Projeto de literatura oral africana e afro-brasileira com crianças; ligado ao pilar de matrizes africanas e educação, mesmo sendo local."
+ },
+ {
+  "hora": "10:03",
+  "fonte": "Busca - discriminação racial",
+  "titulo": "Câmara aprova projeto que obriga escolas a adotar medidas de combate ao racismo",
+  "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5kUDFPUWpuMVlCUTE0cUttREFwbE1hajEySFJINTB5NHNEd0VHMU9PM2s0dWVSanBSbWpabG5FZU1peDlrT0hMNTBtT2tOTHNzcVZ0NWVMSk9SRmZxbUxYWUhFdDZZMkstQm4wMWRpOGlzRDQzQWkyd1dR?oc=5",
+  "categoria": "politica",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Aprovação na Câmara de projeto que obriga escolas a combater o racismo; decisão do Congresso ligada à educação e ação afirmativa. Há outras notícias da Câmara sobre o mesmo tema na lista, então é a primeira a sair."
+ },
+ {
+  "hora": "10:03",
+  "fonte": "Busca - samba",
+  "titulo": "Banda Deu Samba celebra três anos de carreira com festa em BH",
+  "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQcmwzVlFRMTQxenItcWI3VWV1Wl9tRENxMXFpVllhWXZvUVlSdE9ESVJ3c0g0dlVjdVYwdGNUdU1DNktacDVzNWlGeWNQaGxiUFNFcUYxMDBOWkttd2VvTjh5MGFpQzN6TzBybTJaaUpQYjBTNUlHT2tXTVdhQjZla09rTGtKQ0dzdTAxUFU3SmlRSFBDQ0NQTWlfLU03MnVHWGgwTw?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Gente e Música: banda de samba celebra três anos de carreira com festa em BH, marco de carreira de grupo de samba. Nota mínima da linha."
+ },
+ {
+  "hora": "10:03",
+  "fonte": "Busca - Viola Davis",
+  "titulo": "Hayden Panettiere morreu sem testamento e deixou fortuna estimada em R$ 35 milhões",
+  "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxObGJVbEJxUUllS2s3dlF4N01MQUxhNnVGOXgwcHZsRUhoQVhrM1ZvaGMzeXlaeFFzWGhncnpvaDZfQXdxU3ltaXYzc2c1eTRVSWl3TVpjUUdmaVhjNEdXcmhYcXZIelpXUFZRU1c0SGFmSGRlbndjb01FdDlJc2dncUkwUWhYQk94eFMyWjNKblJicXM4SGQzajZQay12TXA4U2R4LVdJYjJzQldKTFdPU1ZwcGJ4SGVnMk05WnlpaUVJRnBRZVRlMEFzSjRncnpaRUE?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Herança e fortuna de atriz branca, sem relação com a temática racial."
+ },
+ {
+  "hora": "10:03",
+  "fonte": "Busca - Carnaval 2027",
+  "titulo": "Blog do Marrom: Frenesi inicia vendas para o Carnaval 2027 com Tatau - Coluna - Holofote",
+  "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNU0Jvd0UzdnJmYUlnMHZxQWRFMjBnd3N2QjlnZ2dCZThkMmhTTTEtWDloUGY3aV9ORGw4bUgyX0FYYWVVcGRjY2U0X2tjb1hKaGlCOWpCQ29DejU4UWZGVnVhVFpxRl9KSTlLbGx3eTdKTnQxcm9Kazd1d3lnNHpwamk3aDZ3R0w0eUVNNm93d3dXZDdrRlpCWnM2UEtQUU9YbHpoYXl6dnR4c3I3R2k3UVpET0lUcXd4Yi04UDB3?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Coluna de vendas de bloco de carnaval sobre Frenesi e Tatau; é conteúdo publicitário/comercial de venda de ingressos, sem fato de interesse racial claro."
+ },
+ {
+  "hora": "10:03",
+  "fonte": "Busca - cantora negra",
+  "titulo": "Feirão Limpa Nome abre tenda no Vale do Anhangabaú com até 99% de desconto",
+  "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOaFJWVC1zUy0zRnhaUDI1NVZIYlRUVmNJVFRiUDJveHZhUWV1dl9kdXlZdlF5dEEwR2dXcHVuZWV0QlZlXzJJU1Q0OXA5NDZCWXNRc3FTSzlBVFVoOEtqX1U1azZ1Z3JYMVRldl9jMTFtWmRPdGxRbTRHVUpnVzB1VDhGLXZ6WHFTZHp1VlFFamlBLW55aEt1djRXSjJNTDhfTERiOUJjbWZVRWlzWWI0?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Feirão de negociação de dívidas sem relação com a temática racial."
+ },
+ {
+  "hora": "10:03",
+  "fonte": "Busca - samba",
+  "titulo": "Desligamentos! Morro da Casa Verde informa mudanças na direção de alegoria",
+  "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQT241WkJ5eVBwQ1laUHlCWDVmbmIzcUpoZm9EQW9JYTB6RGlQcTloNnhtVDZxQmVxT2dqeFRlNHFPVlhsVnBpcS1rNFM2T3BoZkd2OV9UcDRGLUx3UlVHcWx1OWNHdmhwQ2hVUkgzZVhfQVpBbm1zaTlhbmhTcGdPUFB5SGJVdkRKSGlJekhpekpDS2kxWFA2OTRWM25CbExhaEJfelB3QnpmeTBKbEFFSnVOYlc4dw?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 6,
+  "destino": "nota baixa",
+  "detalhe": "Carnaval e escola de samba (Morro da Casa Verde), mudanças na direção de alegoria; trata de logística de desfile, sem personagem negro específico. Nota mantida em faixa de carnaval por ser informação técnica de bastidor."
+ },
+ {
+  "hora": "10:03",
+  "fonte": "Busca - Coruja",
+  "titulo": "Petnique Solidário terá vacinação e desfile de cães em Veranópolis",
+  "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQUHFXbjlUOW5PYzQ2dUpsSUFKaWFfSkk3UnlCcjhpSG1rSlotZFVvNEMybzFrd0xBb3JVcWdaSW9NckRrR2U0RXdQb25oUzl1dXdRT1lZM2tFX2VEYWRkVHRkSFVYeVBMeGc2aHdUU0ZwdENDc0FZa1AxRnFYZVJ6WUlTdUpPQUE2aFQzZk5la1VMdkdqUXh6VlR4d2xBMGVfRVE?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "evento local pequeno: Vacinação e desfile de cães em evento municipal sem relação com a temática racial."
+ },
+ {
+  "hora": "10:03",
+  "fonte": "Mundo Negro",
+  "titulo": "Tina Turner fugiu com 36 centavos e se tornou a rainha do rock",
+  "link": "https://mundonegro.inf.br/tina-turner-fugiu-com-36-centavos-e-se-tornou-a-rainha-do-rock/",
+  "categoria": "protagonista",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Gente e Música: marco e trajetória de Tina Turner, artista negra, com aniversário e carreira; é conteúdo de trajetória e não fofoca. Nota mínima da linha."
+ },
+ {
+  "hora": "10:03",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Segunda fase do Kwenda beneficia 986 pessoas em Malanje",
+  "link": "https://www.giranoticias.com/sociedade/2026/11/32808-segunda-fase-do-kwenda-beneficia-986-pessoas-em-malanje.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 5,
+  "destino": "nota baixa",
+  "detalhe": "Fonte África sobre segunda fase de programa social em Malanje, Angola; é notícia interna sem ligação clara com o Brasil e sem conteúdo de interesse ao leitor brasileiro, abaixo do mínimo de 7 do tema."
  }
 ]
