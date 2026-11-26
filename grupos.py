@@ -51,20 +51,27 @@ def pergunta_para_grupo(item):
     padrao = "O que vocês acham disso?"
     if not chave:
         return padrao
+    for tentativa in range(2):  # tenta 2 vezes antes de usar a frase padrão
+        texto = _perguntar(chave, item)
+        if texto and len(texto.split()) <= 22:
+            return texto
+    return padrao
+
+
+def _perguntar(chave, item):
     try:
         r = requests.post(
             "https://api.anthropic.com/v1/messages",
             headers={"x-api-key": chave, "anthropic-version": "2023-06-01", "content-type": "application/json"},
             json={"model": "claude-haiku-5-5", "max_tokens": 120, "messages": [{"role": "user", "content":
-                  "Escreva UMA pergunta curta (até 20 palavras), em português do Brasil, para eu postar num "
+                  "Escreva UMA pergunta curta e direta (no máximo 15 palavras), em português do Brasil, para eu postar num "
                   "grupo do movimento negro no Facebook junto com esta matéria, puxando debate respeitoso. "
                   "Não invente fatos além do texto. Responda só a pergunta.\n\n"
                   f"Título: {item['titulo']}\nResumo: {item['resumo'][:600]}"}]},
             timeout=40)
-        texto = r.json()["content"][0]["text"].strip().strip('"')
-        return texto or padrao
+        return r.json()["content"][0]["text"].strip().strip('"')
     except Exception:
-        return padrao
+        return ""
 
 
 def montar(itens):
