@@ -1,9 +1,9 @@
 {
- "gerado_em": "2026-11-26T17:31:24.864458+00:00",
+ "gerado_em": "2026-11-26T21:39:13.897671+00:00",
  "conta": {
   "id": "17841448024517295",
-  "followers_count": 3820,
-  "media_count": 12500,
+  "followers_count": 3822,
+  "media_count": 12503,
   "username": "africasplay"
  },
  "publico_instagram": {
@@ -11,15 +11,15 @@
    "13-17": 2,
    "18-24": 104,
    "25-34": 638,
-   "35-44": 1222,
-   "45-54": 1177,
-   "55-64": 481,
+   "35-44": 1223,
+   "45-54": 1176,
+   "55-64": 484,
    "65+": 187
   },
   "gender": {
-   "F": 2047,
-   "M": 1275,
-   "U": 489
+   "F": 2048,
+   "M": 1276,
+   "U": 490
   },
   "city": {
    "Ribeirão Prêto, São Paulo (state)": 24,
@@ -43,7 +43,6 @@
    "São Carlos, São Paulo (state)": 21,
    "Guarulhos, São Paulo (state)": 34,
    "Sorocaba, São Paulo (state)": 13,
-   "Natal, Rio Grande do Norte": 11,
    "Piracicaba, São Paulo (state)": 12,
    "Paulista, Pernambuco": 13,
    "São Bernardo do Campo, São Paulo (state)": 14,
@@ -64,6 +63,7 @@
    "Taguatinga, Federal District": 17,
    "Curitiba, Paraná": 22,
    "Santo André, São Paulo (state)": 23,
+   "Taboão da Serra, São Paulo (state)": 11,
    "Belém, Pará": 13,
    "Campinas, São Paulo (state)": 26,
    "São Gonçalo, Rio de Janeiro (state)": 24
@@ -75,7 +75,127 @@
   "fan_count": 164,
   "id": "103917485738096"
  },
+ "seguidores_30_dias": {
+  "instagram": {
+   "2026-10-29": 4,
+   "2026-10-30": 5,
+   "2026-10-31": 3,
+   "2026-11-01": 7,
+   "2026-11-02": 1,
+   "2026-11-03": 7,
+   "2026-11-04": 0,
+   "2026-11-05": 6,
+   "2026-11-06": 1,
+   "2026-11-07": 4,
+   "2026-11-08": 4,
+   "2026-11-09": 5,
+   "2026-11-10": 1,
+   "2026-11-11": 5,
+   "2026-11-12": 4,
+   "2026-11-13": 12,
+   "2026-11-14": 8,
+   "2026-11-15": 3,
+   "2026-11-16": 3,
+   "2026-11-17": 7,
+   "2026-11-18": 5,
+   "2026-11-19": 13,
+   "2026-11-20": 8,
+   "2026-11-21": 3,
+   "2026-11-22": 3,
+   "2026-11-23": 8,
+   "2026-11-24": 2,
+   "2026-11-25": 3,
+   "2026-11-26": 0
+  },
+  "facebook": {
+   "erro": "{'data': [], 'paging': {'previous': 'https://graph.facebook.com/v26.0/103917485738096/insights?access_token=EAAup5bxHz3wBTMVxgviP3Vm5nVQt2oDCqb4SI5bDkezRJ3syZC1qjBZBa49PgUwCjAZCf2koYDNXDvqV3u0xhyMU15Z"
+  }
+ },
  "posts": [
+  {
+   "id": "18145659214722512",
+   "data": "2026-11-26T20:37:57+0000",
+   "formato": "FEED",
+   "tipo": "CAROUSEL_ALBUM",
+   "link": "https://www.instagram.com/p/DgN-xCjEj3n/",
+   "legenda": "Câmara dos Deputados aprova fim de acordo penal em crimes de racismo, e texto agora segue para o Senado.\n\nO projeto proíbe a oferta de acordo de não persecução ",
+   "curtidas": 1,
+   "comentarios": 0,
+   "comentaram_app": 0,
+   "textos_comentarios": [],
+   "robo": true,
+   "categoria": "Radar",
+   "prioridade": "breaking",
+   "titulo": "Câmara aprova fim de acordo penal em crimes de racismo",
+   "fb_post": "103917485738096_1143866015076728",
+   "reach": 11,
+   "saved": 0,
+   "shares": 0,
+   "total_interactions": 1,
+   "views": 20,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null,
+   "fb_reacoes": 0,
+   "fb_comentarios": 0,
+   "fb_compartilhamentos": 0
+  },
+  {
+   "id": "18149929540560865",
+   "data": "2026-11-26T18:08:02+0000",
+   "formato": "FEED",
+   "tipo": "CAROUSEL_ALBUM",
+   "link": "https://www.instagram.com/p/DgNtnDwIFrz/",
+   "legenda": "Professora negra da UFPE perde cargo após decisão do TRF5 sobre cotas raciais em concurso\n\nO Tribunal Regional Federal da 5ª Região suspendeu o cargo de Rafaela",
+   "curtidas": 4,
+   "comentarios": 0,
+   "comentaram_app": 0,
+   "textos_comentarios": [],
+   "robo": true,
+   "categoria": "Radar",
+   "prioridade": "breaking",
+   "titulo": "Professora negra da UFPE perde cargo por cotas",
+   "fb_post": "103917485738096_1143760338420629",
+   "reach": 87,
+   "saved": 1,
+   "shares": 0,
+   "total_interactions": 7,
+   "views": 183,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null,
+   "fb_reacoes": 0,
+   "fb_comentarios": 0,
+   "fb_compartilhamentos": 0
+  },
+  {
+   "id": "17970417474206136",
+   "data": "2026-11-26T17:38:03+0000",
+   "formato": "FEED",
+   "tipo": "CAROUSEL_ALBUM",
+   "link": "https://www.instagram.com/p/DgNqLB-lxVP/",
+   "legenda": "Seu Jorge se apresenta no Festival A Bossa, em Juazeiro, nesta sexta-feira (27), no Palco Orla II.\n\nO cantor, compositor e ator de \"Cidade de Deus\" traz ao públ",
+   "curtidas": 0,
+   "comentarios": 0,
+   "comentaram_app": 0,
+   "textos_comentarios": [],
+   "robo": true,
+   "categoria": "Cultura",
+   "prioridade": "alta",
+   "titulo": "Seu Jorge se apresenta no Festival A Bossa em Juazeiro",
+   "fb_post": "103917485738096_1143737461756250",
+   "reach": 22,
+   "saved": 0,
+   "shares": 1,
+   "total_interactions": 1,
+   "views": 29,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null,
+   "fb_reacoes": 0,
+   "fb_comentarios": 0,
+   "fb_compartilhamentos": 0
+  },
   {
    "id": "18107998133572423",
    "data": "2026-11-26T16:53:05+0000",
@@ -92,11 +212,14 @@
    "prioridade": "alta",
    "titulo": "DENNIS renova com a Sony e lança single \"Mangueira\"",
    "fb_post": "103917485738096_1143701381759858",
-   "reach": 5,
+   "reach": 11,
    "saved": 0,
    "shares": 0,
    "total_interactions": 0,
-   "views": 12,
+   "views": 20,
+   "follows": 0,
+   "profile_visits": 1,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -117,11 +240,14 @@
    "prioridade": "breaking",
    "titulo": "Letalidade policial na Baixada Santista sobe 244%",
    "fb_post": "103917485738096_1143663785096951",
-   "reach": 10,
+   "reach": 18,
    "saved": 0,
    "shares": 0,
    "total_interactions": 0,
-   "views": 19,
+   "views": 28,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -142,12 +268,13 @@
    "prioridade": "reels",
    "titulo": "Radar do meio-dia 26/11",
    "fb_post": "2439595133448251",
-   "reach": 8,
+   "reach": 9,
    "saved": 0,
    "shares": 0,
    "total_interactions": 0,
-   "views": 13,
-   "ig_reels_avg_watch_time": 3699,
+   "views": 15,
+   "ig_reels_avg_watch_time": 5880,
+   "alcance_por_tipo": null,
    "fb_reacoes": null,
    "fb_comentarios": null,
    "fb_compartilhamentos": null
@@ -168,11 +295,14 @@
    "prioridade": "alta",
    "titulo": "Jéssica Areias e Lenna Bahule fazem show em SP",
    "fb_post": "103917485738096_1143523655110964",
-   "reach": 7,
+   "reach": 8,
    "saved": 0,
    "shares": 0,
    "total_interactions": 0,
-   "views": 11,
+   "views": 12,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -193,11 +323,14 @@
    "prioridade": "alta",
    "titulo": "MC Hariel debate funk e preconceito na SIM SP",
    "fb_post": "103917485738096_1143485498448113",
-   "reach": 7,
+   "reach": 8,
    "saved": 0,
    "shares": 0,
    "total_interactions": 0,
    "views": 28,
+   "follows": 0,
+   "profile_visits": 3,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -218,11 +351,14 @@
    "prioridade": "alta",
    "titulo": "Edún Àrá Sangô lança álbum \"Elo\" em Pernambuco",
    "fb_post": "103917485738096_1143445961785400",
-   "reach": 22,
+   "reach": 24,
    "saved": 0,
    "shares": 0,
    "total_interactions": 1,
-   "views": 37,
+   "views": 41,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -234,7 +370,7 @@
    "tipo": "CAROUSEL_ALBUM",
    "link": "https://www.instagram.com/p/DgM73N1F-wg/",
    "legenda": "Espetáculo infantil Morro da batucada, da Cia. Menina Fulô, estreia em dezembro no Sesc Pinheiros, em São Paulo. A montagem fala de resistência cultural e de di",
-   "curtidas": 9,
+   "curtidas": 11,
    "comentarios": 2,
    "comentaram_app": 0,
    "textos_comentarios": [
@@ -246,11 +382,14 @@
    "prioridade": "parceiro",
    "titulo": "Espetáculo infantil Morro da batucada estreia no Sesc Pinheiros em dezembro",
    "fb_post": "103917485738096_1143382715125058",
-   "reach": 68,
+   "reach": 130,
    "saved": 0,
-   "shares": 2,
-   "total_interactions": 14,
-   "views": 217,
+   "shares": 8,
+   "total_interactions": 23,
+   "views": 366,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -276,6 +415,9 @@
    "shares": 0,
    "total_interactions": 0,
    "views": 22,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -296,12 +438,13 @@
    "prioridade": null,
    "titulo": null,
    "fb_post": null,
-   "reach": 52,
+   "reach": 54,
    "saved": 0,
    "shares": 1,
    "total_interactions": 12,
-   "views": 69,
-   "ig_reels_avg_watch_time": 13359
+   "views": 71,
+   "ig_reels_avg_watch_time": 13089,
+   "alcance_por_tipo": null
   },
   {
    "id": "18121751266997428",
@@ -310,7 +453,7 @@
    "tipo": "CAROUSEL_ALBUM",
    "link": "https://www.instagram.com/p/DgLrMx5GijY/",
    "legenda": "A Expo África Brasil 2026 está chegando! 🌍 Dois dias de negócios, investimentos e conexões entre o Brasil e os países africanos, com ministros, embaixadas, câma",
-   "curtidas": 20,
+   "curtidas": 21,
    "comentarios": 0,
    "comentaram_app": 0,
    "textos_comentarios": [],
@@ -319,11 +462,14 @@
    "prioridade": null,
    "titulo": null,
    "fb_post": null,
-   "reach": 107,
+   "reach": 118,
    "saved": 0,
    "shares": 0,
-   "total_interactions": 21,
-   "views": 242
+   "total_interactions": 22,
+   "views": 275,
+   "follows": 1,
+   "profile_visits": 4,
+   "alcance_por_tipo": null
   },
   {
    "id": "18213366505371147",
@@ -332,7 +478,7 @@
    "tipo": "VIDEO",
    "link": "https://www.instagram.com/reel/DgLkaH_uS1I/",
    "legenda": "🌆 Mais notícias pretas que marcaram esta quarta, 25/11.\n\n1. Morre Juninho Baú, fundador do Nossa Roda\n2. Câmara aprova registro de raça e cor no SUS\n3. Morre Ju",
-   "curtidas": 1,
+   "curtidas": 2,
    "comentarios": 0,
    "comentaram_app": 0,
    "textos_comentarios": [],
@@ -341,12 +487,13 @@
    "prioridade": "reels",
    "titulo": "Resumo do dia 25/11",
    "fb_post": "2632326887265859",
-   "reach": 42,
+   "reach": 44,
    "saved": 0,
    "shares": 0,
-   "total_interactions": 1,
-   "views": 53,
-   "ig_reels_avg_watch_time": 9708,
+   "total_interactions": 2,
+   "views": 56,
+   "ig_reels_avg_watch_time": 9971,
+   "alcance_por_tipo": null,
    "fb_reacoes": null,
    "fb_comentarios": null,
    "fb_compartilhamentos": null
@@ -358,7 +505,7 @@
    "tipo": "CAROUSEL_ALBUM",
    "link": "https://www.instagram.com/p/DgLkSjMjQjW/",
    "legenda": "Morre Juninho Baú, sambista e integrante do grupo Nossa Roda, em Belo Horizonte\n\nO sambista Oswaldo Mafaldo Junior, conhecido como Juninho Baú, morreu nesta qua",
-   "curtidas": 11,
+   "curtidas": 13,
    "comentarios": 0,
    "comentaram_app": 0,
    "textos_comentarios": [],
@@ -367,11 +514,14 @@
    "prioridade": "breaking",
    "titulo": "Morre Juninho Baú, nome do samba de BH",
    "fb_post": "103917485738096_1142852745178055",
-   "reach": 121,
+   "reach": 134,
    "saved": 0,
    "shares": 0,
-   "total_interactions": 13,
-   "views": 208,
+   "total_interactions": 15,
+   "views": 224,
+   "follows": 0,
+   "profile_visits": 4,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -392,11 +542,14 @@
    "prioridade": "alta",
    "titulo": "Coruja lança álbum \"O Que Não Digo Também É Meu\"",
    "fb_post": "103917485738096_1142843118512351",
-   "reach": 21,
+   "reach": 23,
    "saved": 0,
    "shares": 0,
    "total_interactions": 1,
-   "views": 43,
+   "views": 45,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -422,6 +575,9 @@
    "shares": 0,
    "total_interactions": 3,
    "views": 48,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -447,6 +603,9 @@
    "shares": 0,
    "total_interactions": 1,
    "views": 13,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -458,7 +617,7 @@
    "tipo": "CAROUSEL_ALBUM",
    "link": "https://www.instagram.com/p/DgLKivIIN6V/",
    "legenda": "Morreu Juninho Baú, cofundador do grupo de samba Nossa Roda, vítima de aneurisma cerebral. O músico mineiro Osvaldo Mafaldo Junior foi lembrado por colegas de g",
-   "curtidas": 17,
+   "curtidas": 18,
    "comentarios": 0,
    "comentaram_app": 0,
    "textos_comentarios": [],
@@ -467,11 +626,14 @@
    "prioridade": "breaking",
    "titulo": "Morre Juninho Baú, fundador do Nossa Roda",
    "fb_post": "103917485738096_1142699751860021",
-   "reach": 159,
+   "reach": 171,
    "saved": 0,
    "shares": 2,
-   "total_interactions": 20,
-   "views": 231,
+   "total_interactions": 21,
+   "views": 249,
+   "follows": 0,
+   "profile_visits": 2,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -499,6 +661,9 @@
    "shares": 0,
    "total_interactions": 7,
    "views": 65,
+   "follows": 0,
+   "profile_visits": 3,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -526,6 +691,9 @@
    "shares": 0,
    "total_interactions": 5,
    "views": 68,
+   "follows": 0,
+   "profile_visits": 1,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -546,11 +714,14 @@
    "prioridade": "parceiro",
    "titulo": "Expo África Brasil 2026 muda para o InvestSP, em São Paulo",
    "fb_post": "103917485738096_1142585598538103",
-   "reach": 69,
+   "reach": 85,
    "saved": 0,
    "shares": 1,
    "total_interactions": 11,
-   "views": 109,
+   "views": 133,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -577,6 +748,7 @@
    "total_interactions": 0,
    "views": 12,
    "ig_reels_avg_watch_time": 13369,
+   "alcance_por_tipo": null,
    "fb_reacoes": null,
    "fb_comentarios": null,
    "fb_compartilhamentos": null
@@ -602,6 +774,9 @@
    "shares": 0,
    "total_interactions": 1,
    "views": 27,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -627,6 +802,9 @@
    "shares": 0,
    "total_interactions": 2,
    "views": 27,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -652,6 +830,9 @@
    "shares": 0,
    "total_interactions": 2,
    "views": 37,
+   "follows": 0,
+   "profile_visits": 1,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -679,6 +860,9 @@
    "shares": 0,
    "total_interactions": 5,
    "views": 71,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -706,6 +890,9 @@
    "shares": 0,
    "total_interactions": 3,
    "views": 94,
+   "follows": 0,
+   "profile_visits": 1,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -733,6 +920,9 @@
    "shares": 0,
    "total_interactions": 3,
    "views": 41,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -760,6 +950,9 @@
    "shares": 0,
    "total_interactions": 4,
    "views": 16,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -793,6 +986,7 @@
    "total_interactions": 10,
    "views": 23,
    "ig_reels_avg_watch_time": 13662,
+   "alcance_por_tipo": null,
    "fb_reacoes": null,
    "fb_comentarios": null,
    "fb_compartilhamentos": null
@@ -820,6 +1014,9 @@
    "shares": 0,
    "total_interactions": 4,
    "views": 33,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -847,6 +1044,9 @@
    "shares": 0,
    "total_interactions": 7,
    "views": 132,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -874,6 +1074,9 @@
    "shares": 0,
    "total_interactions": 3,
    "views": 27,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -899,6 +1102,9 @@
    "shares": 0,
    "total_interactions": 4,
    "views": 98,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -925,6 +1131,7 @@
    "total_interactions": 1,
    "views": 11,
    "ig_reels_avg_watch_time": 5558,
+   "alcance_por_tipo": null,
    "fb_reacoes": null,
    "fb_comentarios": null,
    "fb_compartilhamentos": null
@@ -950,6 +1157,9 @@
    "shares": 0,
    "total_interactions": 1,
    "views": 23,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -970,11 +1180,14 @@
    "prioridade": "alta",
    "titulo": "Dino D'Santiago: Grammy Latino e entrevista na RTP",
    "fb_post": "103917485738096_1141358751994121",
-   "reach": 40,
+   "reach": 42,
    "saved": 0,
    "shares": 0,
    "total_interactions": 1,
    "views": 64,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -995,11 +1208,14 @@
    "prioridade": "alta",
    "titulo": "Líder do PL tenta barrar projeto sobre saúde negra",
    "fb_post": "103917485738096_1141316665331663",
-   "reach": 20,
+   "reach": 21,
    "saved": 0,
    "shares": 0,
    "total_interactions": 0,
-   "views": 40,
+   "views": 42,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -1025,6 +1241,9 @@
    "shares": 1,
    "total_interactions": 4,
    "views": 80,
+   "follows": 0,
+   "profile_visits": 1,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -1050,6 +1269,9 @@
    "shares": 0,
    "total_interactions": 0,
    "views": 37,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -1070,11 +1292,14 @@
    "prioridade": "alta",
    "titulo": "Quilombos do Pará avançam no CAR Coletivo PCT",
    "fb_post": "103917485738096_1141177835345546",
-   "reach": 20,
+   "reach": 21,
    "saved": 0,
    "shares": 0,
    "total_interactions": 0,
-   "views": 32,
+   "views": 35,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -1100,7 +1325,8 @@
    "shares": 0,
    "total_interactions": 2,
    "views": 26,
-   "ig_reels_avg_watch_time": 7603
+   "ig_reels_avg_watch_time": 7603,
+   "alcance_por_tipo": null
   },
   {
    "id": "18193292620410212",
@@ -1125,7 +1351,8 @@
    "shares": 0,
    "total_interactions": 4,
    "views": 99,
-   "ig_reels_avg_watch_time": 11331
+   "ig_reels_avg_watch_time": 11331,
+   "alcance_por_tipo": null
   },
   {
    "id": "18086824037708918",
@@ -1148,6 +1375,9 @@
    "shares": 0,
    "total_interactions": 2,
    "views": 34,
+   "follows": 0,
+   "profile_visits": 1,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -1176,6 +1406,9 @@
    "shares": 0,
    "total_interactions": 5,
    "views": 39,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -1201,6 +1434,9 @@
    "shares": 0,
    "total_interactions": 1,
    "views": 95,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -1226,6 +1462,9 @@
    "shares": 0,
    "total_interactions": 0,
    "views": 85,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -1253,6 +1492,9 @@
    "shares": 3,
    "total_interactions": 4,
    "views": 27,
+   "follows": 0,
+   "profile_visits": 1,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -1277,7 +1519,10 @@
    "saved": 0,
    "shares": 0,
    "total_interactions": 2,
-   "views": 61,
+   "views": 68,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null,
    "fb_reacoes": 1,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -1303,6 +1548,9 @@
    "shares": 0,
    "total_interactions": 5,
    "views": 112,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -1328,6 +1576,9 @@
    "shares": 0,
    "total_interactions": 1,
    "views": 48,
+   "follows": 0,
+   "profile_visits": 2,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -1353,6 +1604,9 @@
    "shares": 0,
    "total_interactions": 0,
    "views": 31,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -1378,6 +1632,9 @@
    "shares": 0,
    "total_interactions": 2,
    "views": 66,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -1405,6 +1662,9 @@
    "shares": 0,
    "total_interactions": 7,
    "views": 83,
+   "follows": 0,
+   "profile_visits": 7,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -1430,11 +1690,14 @@
    "prioridade": "parceiro",
    "titulo": "Com sangue de samba carioca, neto do “Síndico da Sapucaí” é eleito novo Rei Momo de Porto Alegre",
    "fb_post": "103917485738096_1140120315451298",
-   "reach": 772,
+   "reach": 778,
    "saved": 3,
    "shares": 6,
    "total_interactions": 58,
-   "views": 1255,
+   "views": 1261,
+   "follows": 2,
+   "profile_visits": 15,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -1462,6 +1725,9 @@
    "shares": 0,
    "total_interactions": 5,
    "views": 40,
+   "follows": 1,
+   "profile_visits": 3,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -1487,6 +1753,9 @@
    "shares": 0,
    "total_interactions": 3,
    "views": 76,
+   "follows": 0,
+   "profile_visits": 3,
+   "alcance_por_tipo": null,
    "fb_reacoes": 1,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -1512,6 +1781,9 @@
    "shares": 0,
    "total_interactions": 1,
    "views": 36,
+   "follows": 0,
+   "profile_visits": 2,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -1540,6 +1812,9 @@
    "shares": 0,
    "total_interactions": 8,
    "views": 100,
+   "follows": 0,
+   "profile_visits": 3,
+   "alcance_por_tipo": null,
    "fb_reacoes": 0,
    "fb_comentarios": 0,
    "fb_compartilhamentos": 0
@@ -1564,7 +1839,10 @@
    "saved": 0,
    "shares": 0,
    "total_interactions": 0,
-   "views": 69
+   "views": 69,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null
   },
   {
    "id": "18009063872792106",
@@ -1586,7 +1864,10 @@
    "saved": 0,
    "shares": 0,
    "total_interactions": 7,
-   "views": 92
+   "views": 92,
+   "follows": 1,
+   "profile_visits": 0,
+   "alcance_por_tipo": null
   },
   {
    "id": "18472650523138991",
@@ -1595,7 +1876,7 @@
    "tipo": "IMAGE",
    "link": "https://www.instagram.com/p/DgCucjWjp_W/",
    "legenda": "Mindelact entra em rede mundial de teatro\nO festival de teatro do Mindelo, em Cabo Verde, passa a integrar a rede do Instituto Internacional de Teatro, ligado à",
-   "curtidas": 12,
+   "curtidas": 13,
    "comentarios": 0,
    "comentaram_app": 0,
    "textos_comentarios": [],
@@ -1604,11 +1885,14 @@
    "prioridade": null,
    "titulo": null,
    "fb_post": null,
-   "reach": 131,
+   "reach": 132,
    "saved": 0,
    "shares": 4,
-   "total_interactions": 16,
-   "views": 210
+   "total_interactions": 17,
+   "views": 212,
+   "follows": 0,
+   "profile_visits": 1,
+   "alcance_por_tipo": null
   },
   {
    "id": "18133179511894173",
@@ -1630,7 +1914,10 @@
    "saved": 0,
    "shares": 0,
    "total_interactions": 0,
-   "views": 99
+   "views": 99,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null
   },
   {
    "id": "18027102992740845",
@@ -1648,11 +1935,14 @@
    "prioridade": null,
    "titulo": null,
    "fb_post": null,
-   "reach": 81,
+   "reach": 82,
    "saved": 0,
    "shares": 0,
    "total_interactions": 1,
-   "views": 116
+   "views": 117,
+   "follows": 0,
+   "profile_visits": 1,
+   "alcance_por_tipo": null
   },
   {
    "id": "18089469497699635",
@@ -1670,11 +1960,14 @@
    "prioridade": null,
    "titulo": null,
    "fb_post": null,
-   "reach": 125,
+   "reach": 126,
    "saved": 0,
    "shares": 0,
    "total_interactions": 7,
-   "views": 185
+   "views": 186,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null
   },
   {
    "id": "18100643162541833",
@@ -1696,7 +1989,10 @@
    "saved": 0,
    "shares": 0,
    "total_interactions": 3,
-   "views": 147
+   "views": 147,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null
   },
   {
    "id": "17875286769643381",
@@ -1718,7 +2014,10 @@
    "saved": 0,
    "shares": 0,
    "total_interactions": 2,
-   "views": 85
+   "views": 85,
+   "follows": 0,
+   "profile_visits": 2,
+   "alcance_por_tipo": null
   },
   {
    "id": "17878572819637599",
@@ -1740,11 +2039,14 @@
    "prioridade": null,
    "titulo": null,
    "fb_post": null,
-   "reach": 184,
+   "reach": 185,
    "saved": 1,
    "shares": 2,
    "total_interactions": 30,
-   "views": 339
+   "views": 341,
+   "follows": 3,
+   "profile_visits": 2,
+   "alcance_por_tipo": null
   },
   {
    "id": "18126159805934588",
@@ -1766,7 +2068,10 @@
    "saved": 0,
    "shares": 0,
    "total_interactions": 0,
-   "views": 46
+   "views": 46,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null
   },
   {
    "id": "17973584130188357",
@@ -1788,7 +2093,10 @@
    "saved": 1,
    "shares": 0,
    "total_interactions": 2,
-   "views": 163
+   "views": 163,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null
   },
   {
    "id": "18229237108354403",
@@ -1810,7 +2118,10 @@
    "saved": 0,
    "shares": 0,
    "total_interactions": 1,
-   "views": 136
+   "views": 136,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null
   },
   {
    "id": "18131253317489058",
@@ -1832,7 +2143,10 @@
    "saved": 0,
    "shares": 0,
    "total_interactions": 0,
-   "views": 26
+   "views": 26,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null
   },
   {
    "id": "18199631347392814",
@@ -1850,11 +2164,14 @@
    "prioridade": null,
    "titulo": null,
    "fb_post": null,
-   "reach": 54,
+   "reach": 55,
    "saved": 0,
    "shares": 0,
    "total_interactions": 1,
-   "views": 85
+   "views": 86,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null
   },
   {
    "id": "18103327481436659",
@@ -1876,7 +2193,10 @@
    "saved": 1,
    "shares": 1,
    "total_interactions": 3,
-   "views": 66
+   "views": 66,
+   "follows": 0,
+   "profile_visits": 1,
+   "alcance_por_tipo": null
   },
   {
    "id": "18221015827360847",
@@ -1898,7 +2218,10 @@
    "saved": 0,
    "shares": 0,
    "total_interactions": 0,
-   "views": 99
+   "views": 99,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null
   },
   {
    "id": "18149455171580074",
@@ -1920,7 +2243,10 @@
    "saved": 0,
    "shares": 0,
    "total_interactions": 0,
-   "views": 74
+   "views": 74,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null
   },
   {
    "id": "18091751171274476",
@@ -1938,11 +2264,14 @@
    "prioridade": null,
    "titulo": null,
    "fb_post": null,
-   "reach": 79,
+   "reach": 80,
    "saved": 0,
    "shares": 0,
    "total_interactions": 0,
-   "views": 108
+   "views": 110,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null
   },
   {
    "id": "18382661491238864",
@@ -1964,7 +2293,10 @@
    "saved": 0,
    "shares": 0,
    "total_interactions": 3,
-   "views": 197
+   "views": 197,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null
   },
   {
    "id": "17944652595366533",
@@ -1986,7 +2318,10 @@
    "saved": 0,
    "shares": 0,
    "total_interactions": 1,
-   "views": 86
+   "views": 86,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null
   },
   {
    "id": "18096023813683496",
@@ -2010,8 +2345,11 @@
    "reach": 94,
    "saved": 0,
    "shares": 1,
-   "total_interactions": 18,
-   "views": 135
+   "total_interactions": 19,
+   "views": 136,
+   "follows": 1,
+   "profile_visits": 0,
+   "alcance_por_tipo": null
   },
   {
    "id": "18435320950150249",
@@ -2033,7 +2371,10 @@
    "saved": 0,
    "shares": 0,
    "total_interactions": 1,
-   "views": 125
+   "views": 125,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null
   },
   {
    "id": "18418464874081752",
@@ -2055,7 +2396,10 @@
    "saved": 0,
    "shares": 0,
    "total_interactions": 1,
-   "views": 110
+   "views": 110,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null
   },
   {
    "id": "18171201166477497",
@@ -2077,7 +2421,10 @@
    "saved": 0,
    "shares": 0,
    "total_interactions": 0,
-   "views": 75
+   "views": 75,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null
   },
   {
    "id": "18128784139903862",
@@ -2101,7 +2448,10 @@
    "saved": 0,
    "shares": 6,
    "total_interactions": 46,
-   "views": 1415
+   "views": 1417,
+   "follows": 1,
+   "profile_visits": 3,
+   "alcance_por_tipo": null
   },
   {
    "id": "18220567483354861",
@@ -2125,7 +2475,10 @@
    "saved": 2,
    "shares": 0,
    "total_interactions": 15,
-   "views": 91
+   "views": 91,
+   "follows": 0,
+   "profile_visits": 1,
+   "alcance_por_tipo": null
   },
   {
    "id": "18126497848729758",
@@ -2143,11 +2496,14 @@
    "prioridade": null,
    "titulo": null,
    "fb_post": null,
-   "reach": 54,
+   "reach": 55,
    "saved": 0,
    "shares": 0,
    "total_interactions": 1,
-   "views": 79
+   "views": 80,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null
   },
   {
    "id": "18129443852511609",
@@ -2169,7 +2525,10 @@
    "saved": 0,
    "shares": 0,
    "total_interactions": 1,
-   "views": 29
+   "views": 29,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null
   },
   {
    "id": "18192253600411638",
@@ -2191,7 +2550,10 @@
    "saved": 0,
    "shares": 0,
    "total_interactions": 2,
-   "views": 43
+   "views": 43,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null
   },
   {
    "id": "18122078885007307",
@@ -2217,7 +2579,8 @@
    "shares": 1,
    "total_interactions": 11,
    "views": 66,
-   "ig_reels_avg_watch_time": 15256
+   "ig_reels_avg_watch_time": 15256,
+   "alcance_por_tipo": null
   },
   {
    "id": "17986200725903700",
@@ -2239,7 +2602,10 @@
    "saved": 0,
    "shares": 0,
    "total_interactions": 1,
-   "views": 39
+   "views": 39,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null
   },
   {
    "id": "18120050468018794",
@@ -2257,11 +2623,14 @@
    "prioridade": null,
    "titulo": null,
    "fb_post": null,
-   "reach": 46,
+   "reach": 47,
    "saved": 0,
    "shares": 0,
    "total_interactions": 2,
-   "views": 62
+   "views": 63,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null
   },
   {
    "id": "17942927625400480",
@@ -2283,7 +2652,10 @@
    "saved": 0,
    "shares": 0,
    "total_interactions": 1,
-   "views": 62
+   "views": 62,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null
   },
   {
    "id": "18654991603062313",
@@ -2305,7 +2677,10 @@
    "saved": 0,
    "shares": 0,
    "total_interactions": 3,
-   "views": 52
+   "views": 52,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null
   },
   {
    "id": "18119498069612706",
@@ -2327,7 +2702,10 @@
    "saved": 2,
    "shares": 0,
    "total_interactions": 4,
-   "views": 89
+   "views": 89,
+   "follows": 0,
+   "profile_visits": 1,
+   "alcance_por_tipo": null
   },
   {
    "id": "18133757533759731",
@@ -2349,7 +2727,10 @@
    "saved": 0,
    "shares": 0,
    "total_interactions": 1,
-   "views": 26
+   "views": 26,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null
   },
   {
    "id": "18105425720164406",
@@ -2377,7 +2758,10 @@
    "saved": 0,
    "shares": 4,
    "total_interactions": 16,
-   "views": 59
+   "views": 59,
+   "follows": 1,
+   "profile_visits": 3,
+   "alcance_por_tipo": null
   },
   {
    "id": "18289375381295961",
@@ -2399,7 +2783,10 @@
    "saved": 0,
    "shares": 0,
    "total_interactions": 0,
-   "views": 59
+   "views": 59,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null
   },
   {
    "id": "18075831860758778",
@@ -2421,7 +2808,10 @@
    "saved": 0,
    "shares": 0,
    "total_interactions": 6,
-   "views": 191
+   "views": 191,
+   "follows": 0,
+   "profile_visits": 3,
+   "alcance_por_tipo": null
   },
   {
    "id": "17951070945346194",
@@ -2443,80 +2833,10 @@
    "saved": 0,
    "shares": 0,
    "total_interactions": 3,
-   "views": 61
-  },
-  {
-   "id": "18100998863226730",
-   "data": "2026-11-19T14:29:18+0000",
-   "formato": "FEED",
-   "tipo": "IMAGE",
-   "link": "https://www.instagram.com/p/Df7TAIjl-dk/",
-   "legenda": "Roda de samba no Catete celebra Mês da Consciência Negra com Paulão 7 Cordas\nProjeto quinzenal reúne grandes instrumentistas no Glorioso Cultural em uma homenag",
-   "curtidas": 6,
-   "comentarios": 1,
-   "comentaram_app": 0,
-   "textos_comentarios": [
-    "@fraukurten @sambalivrelevesolto"
-   ],
-   "robo": false,
-   "categoria": null,
-   "prioridade": null,
-   "titulo": null,
-   "fb_post": null,
-   "reach": 97,
-   "saved": 0,
-   "shares": 3,
-   "total_interactions": 11,
-   "views": 167
-  },
-  {
-   "id": "18026063282925806",
-   "data": "2026-11-19T14:22:30+0000",
-   "formato": "FEED",
-   "tipo": "IMAGE",
-   "link": "https://www.instagram.com/p/Df7SOT4F8pY/",
-   "legenda": "Gabrelú e DJ Noé lançam o álbum Dragão com dualidade e identidade no rap\nProjeto une boombap e jazz-rap em 13 faixas que exploram ancestralidade, transformação ",
-   "curtidas": 2,
-   "comentarios": 0,
-   "comentaram_app": 0,
-   "textos_comentarios": [],
-   "robo": false,
-   "categoria": null,
-   "prioridade": null,
-   "titulo": null,
-   "fb_post": null,
-   "reach": 45,
-   "saved": 0,
-   "shares": 0,
-   "total_interactions": 2,
-   "views": 94
-  },
-  {
-   "id": "18080789012424544",
-   "data": "2026-11-19T14:15:20+0000",
-   "formato": "FEED",
-   "tipo": "IMAGE",
-   "link": "https://www.instagram.com/p/Df7RZ2SF7mp/",
-   "legenda": "Aori resgata clássico do rap carioca em “Musa”\nCom produção musical de Iky Castilho, single chega ao streaming na próxima sexta-feira (20) em versão remasteriza",
-   "curtidas": 31,
-   "comentarios": 4,
-   "comentaram_app": 0,
-   "textos_comentarios": [
-    "Um dos melhores Rap BR",
-    "Clássico absoluto",
-    "Ae sim!!! Uma das melhores músicas do RAP brasileiro!!",
-    "Obrigado"
-   ],
-   "robo": false,
-   "categoria": null,
-   "prioridade": null,
-   "titulo": null,
-   "fb_post": null,
-   "reach": 329,
-   "saved": 1,
-   "shares": 2,
-   "total_interactions": 39,
-   "views": 538
+   "views": 61,
+   "follows": 0,
+   "profile_visits": 0,
+   "alcance_por_tipo": null
   }
  ]
 }
