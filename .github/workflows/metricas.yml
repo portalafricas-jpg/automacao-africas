@@ -27,7 +27,7 @@ jobs:
         run: |
           git config user.name "robo-africas"
           git config user.email "robo-africas@users.noreply.github.com"
-          git add estado/relatorios/metricas-redes.json
+          git add estado/relatorios/metricas-redes.json estado/relatorios/seguidores-historico.json
           git diff --cached --quiet && exit 0
           git commit -m "Resultados das redes: atualização"
           for i in 1 2 3; do
