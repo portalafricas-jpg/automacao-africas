@@ -32,6 +32,11 @@ jobs:
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
         run: python robo.py
 
+      - name: Matérias da redação (manuais, na hora marcada)
+        env:
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+        run: python materia_manual.py
+
       - name: Salvar os RSS atualizados
         run: |
           git config user.name "robo-africas"
