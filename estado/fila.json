@@ -21,27 +21,6 @@
   "valido_ate": ""
  },
  {
-  "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOcm8yUUhvMTdDdzF6RXV1T2Jza1Z2c0Z5bHdvZFNxWGFyXzE2SS1rOXFhT1ZmeWlQQklnU2pUOWN2TEc2aVJlb1J0dVQtRy1kZzBQTFV6UWV0UlRucXo1a2QtOExxb0FKdXNwazVBbm95N1R5YVlCcm9aOVhpMzg0Ql9pMFMwSE9IUnpEaW01NEJmQ1lvOXhaTzVnLUQyWVJTX2xZVm1SZlB3QmJrcVRWTnRiR0hzdnJ0Ykg4QjJaLXlSaG1LTHgtN2ZJUFJfdXFUelBNSGNtbGFDeHJWeXR4ZnpJbXc?oc=5",
-  "titulo_original": "Em parceria inédita com Ludmilla, Murilo Huff lança clipe que mistura sertanejo e pagode nesta sexta-feira (27)",
-  "descricao": "Em parceria inédita com Ludmilla, Murilo Huff lança clipe que mistura sertanejo e pagode nesta sexta-feira (27)    Sertanejo Hits Brasil",
-  "imagem_rss": "",
-  "imagem_banco": false,
-  "imagem_trocar": false,
-  "fonte_nome": "Busca - pagode",
-  "fonte_africa": false,
-  "categoria": "cultura",
-  "prioridade": "media",
-  "nota": 8,
-  "motivo_nota": "Gente e Música: lançamento de clipe com a artista negra Ludmilla em parceria com Murilo Huff.",
-  "ministerio": false,
-  "excecao_nota7": true,
-  "gente": true,
-  "artista": "Ludmilla",
-  "data_original": "2026-11-25T20:47:03+00:00",
-  "criado_em": "2026-11-25T21:17:17.610664+00:00",
-  "valido_ate": ""
- },
- {
   "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOS3g3WlhiWlR6cnJtalBMcGpmVk9xYWl5UG5SMW96TU1lOERBTW96aHprQnlBWEFzdjRKd3djTmZNNkVwRy1ySjZybmFjeXJFYnk0Rkp2VTNNUmpDeVNfX0lJOHZJS2RoZThTLUdRWUFwZ2pheW1NVXpqaGhRQWVVZ2o5dFJXY2V1MlM1UGdINzZWeUR2NVAwd05wcUFQakFHSVNOWEFnYzZfZjFzdnQ4YUVkZkZPR2pNaWc?oc=5",
   "titulo_original": "MPPR e parceiros certificam 11 cidades paranaenses com selo antirracista",
   "descricao": "MPPR e parceiros certificam 11 cidades paranaenses com selo antirracista    Umuarama News",
@@ -732,6 +711,27 @@
   "artista": "Una Menino",
   "data_original": "2026-11-26T00:30:05+00:00",
   "criado_em": "2026-11-26T00:32:26.233440+00:00",
+  "valido_ate": ""
+ },
+ {
+  "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxObnFfbWgzYWpfRmViZ0ZBREd3N3VZcU9nNUp5WGM4bU1mT2FEbnBEZi1nWWxkTEtKWUdtdkFlc3J3VE9abVlZZEVYcVNhYTN4MkVfR2NqaDBqSGkydThsX1R2U0M2Y1dHWUl3OTlsd0ljb2FHN3FCRDRzcUl2LWxQYlBVR2ZVTmhXN2k4ZmVITTM3cm1RdXYydDQyVmR1YmhpazZTRVFXZ1pOY2twU19NQmN3YkJhRmZ1LVplVA?oc=5",
+  "titulo_original": "Câmara dos Deputados aprova protocolo contra racismo em escolas públicas e privadas",
+  "descricao": "Câmara dos Deputados aprova protocolo contra racismo em escolas públicas e privadas    conexaoes.com.br",
+  "imagem_rss": "",
+  "imagem_banco": false,
+  "imagem_trocar": false,
+  "fonte_nome": "Busca - Racismo",
+  "fonte_africa": false,
+  "categoria": "politica",
+  "prioridade": "alta",
+  "nota": 8,
+  "motivo_nota": "Decisão do Congresso (Câmara dos Deputados) sobre protocolo contra racismo nas escolas, ligada à Agenda Preta e à educação antirracista.",
+  "ministerio": false,
+  "excecao_nota7": false,
+  "gente": false,
+  "artista": "",
+  "data_original": "2026-11-26T00:28:00+00:00",
+  "criado_em": "2026-11-26T00:47:17.253797+00:00",
   "valido_ate": ""
  }
 ]
