@@ -1,6 +1,6 @@
 name: Assessorias - envio de e-mails
 
-# Por enquanto: só o aviso de autor desconhecido para portalafricas@gmail.com (modelo 13).
+# Por enquanto: lê a caixa (só leitura) e envia o aviso de autor desconhecido para portalafricas@gmail.com (modelo 13).
 # Acionado à mão; depois vai para o cron-job.org nos horários aprovados.
 on:
   workflow_dispatch:
@@ -23,10 +23,10 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Enviar os avisos
+      - name: Ler a caixa e enviar os avisos
         env:
           GMAIL_SENHA_APP: ${{ secrets.GMAIL_SENHA_APP }}
-        run: python envio_assessorias.py avisos
+        run: python envio_assessorias.py tudo
 
       - name: Salvar o registro dos envios
         run: |
