@@ -15454,5 +15454,82 @@
   "nota": 6,
   "destino": "nota baixa",
   "detalhe": "evento local pequeno: Selo de Município Antirracista para Foz do Iguaçu; mesmo tema da certificação paranaense já publicada, sem fato novo claro. Nota 6 por ser local, de menor porte."
+ },
+ {
+  "hora": "23:32",
+  "fonte": "SRzd - Carnaval",
+  "titulo": "CARNAVAL: Escolas do Grupo Especial desfilam na Cidade do Samba a partir desta 6ª",
+  "link": "https://srzd.com/blog/carnaval/rio-de-janeiro/carnaval-escolas-do-grupo-especial-desfilam-na-cidade-do-samba-a-partir-desta-6a/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "23:32",
+  "fonte": "Busca - Negra Li",
+  "titulo": "Karol Conká revisita o experimentalismo de Batuk Freak e debate o protagonismo feminino no rap",
+  "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdWhnNzdZLTJhR2dBdEM2WmptSjh6Q0Izb2p0Q0dSOFg3LWZLdVlNU0E0c2tFTkx5RW1ZeWI4cjU2VV80UC1DT21XWHhnZ0Ita1JHUzlhTUdhdHpIYWhOelZMeHpIdXpIczRZMFdUU2t6X2V0NTRoamMxOXlKZGczN1NnMzQ1NzBKcDk2QURqc19Gd1M1X1ViNW9pcDhLUWM5alhSdndQMG5KQdIBrwFBVV95cUxNR0NrTXVqV0ZJQ3BuX0k1OU9iRi1EVDl1M0ZPT054WmR2d3BRSjhnSzc5Y1dtd3JXOHpjb0ktMEVUR0tWNjg5MVhDd2FRSmM2cWhfTWZMamJSRy05bGxnWjNmMWFTMktMbDB5UmEwRUduZTdERUVkTWJPczh5WFBpaW0zdFAxN2ExT25KXzB4cFIwRDBLWmw5N2stQW9IQzU4dWRrdmo0V2c4TzlwRUxJ?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "23:33",
+  "fonte": "Busca - Billboard Brasil",
+  "titulo": "Kit Pop Billboard Brasil",
+  "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE94TUpqLXdoaE5UOGdjVW13OUxkdnVxamc2dXZLQUMyNkxhSjM4bGswMzI0VVd1TDdod2ZJa3FQXzNWcHNQSEgxUElNU3o5bnBISGttWWt0WFl5Wk5zd1NIMkNjV2dZaTU2TlA4VS0tXzc?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "descartada pelo filtro",
+  "detalhe": "filtro: busca ampla sem sinal (artista, escola/bloco ou termo)"
+ },
+ {
+  "hora": "23:33",
+  "fonte": "Busca - Billboard Brasil",
+  "titulo": "Kit Feminejo Billboard Brasil",
+  "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE83QTloTTQwVnVmSmZoRVlRRmxpbzBwWkNlZnVna0p3MWVFaW5WZFgwTXgzSFNBUVM3RzVoVklRaGxBbWZlZklkMElYTUFVSE1DbEN0TnBxVHBLdEdNNHhPZm9KakU3OVg2TG9iMElQel8xemJCQTFB?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "descartada pelo filtro",
+  "detalhe": "filtro: busca ampla sem sinal (artista, escola/bloco ou termo)"
+ },
+ {
+  "hora": "23:33",
+  "fonte": "Busca - Billboard Brasil",
+  "titulo": "Kit K-pop Billboard Brasil",
+  "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9LeGdVUFhIYWFabnRfXzZFYk9zSlBNY3Ixb2RZYndyS1ZRQW44Q0pyVHZlN3ltNHMtZl9iVnJybzF1VlM3blVZa1VSdEJITFdqZGd1M0xHb3dkTnVscVlNMjM2TU9raGFqQVJRUVptV18wZEU?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "descartada pelo filtro",
+  "detalhe": "filtro: busca ampla sem sinal (artista, escola/bloco ou termo)"
+ },
+ {
+  "hora": "23:33",
+  "fonte": "Busca - Arlindinho",
+  "titulo": "Dudu Nobre e Thiago Martins fazem show gratuito em Maricá nesta sexta - O São Gonçalo",
+  "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNRFJSZ3JNWnViNHB1ZWJYbThLbEpNcjV0eXNoT25ldHRkbGl3Tmt6Q3RQc3hyTFA3Mk9ZMndfVU1fZ0Y3Nnd2TnZiU1BydUFsbjVzWm1CeUR6UURxYnpNNUJtNnMtZ3lzd3NJQll1MEVESmw5NDBCMGlMZkM0UFZ2Smp3U2ZscDlhWWp3TF9jeXRsUmFxR3NjQno5dWRDVEMxVURic2w0bVZnOVhpQTExcXUwM3PSAbwBQVVfeXFMUFJBejJKWEtpZW93eEhOanN3Y3J6M0dYVF9iTWUxNWhXaXN1U18tNVhhRjM2MS0weC01RGhDSEJuU3JMaHJXX05UMEVuX1BaOU1qMUtyQmVVY0g4OEwwVXMwWmw2bWlKenhNVHhjQUJmd2pPX0l5UWMza0RzQ21NN2M1ZzRNNUhoMlF1MzE1S1JGV3BFLUtiMjYzRmtJQXBzbldxODNVblQ4RC1ON0x3YnRoaUNnbzlNT1FKdEg?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Show gratuito de artistas do pagode (Dudu Nobre e Thiago Martins) em Maricá; agenda musical de artista negro, sem fofoca. Nota 7 pela linha Gente e Música, sem a notícia tratar de fato racial."
+ },
+ {
+  "hora": "23:33",
+  "fonte": "Busca - Billboard Brasil",
+  "titulo": "Kit Pagode Premium Billboard Brasil",
+  "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1BR3ZHV3gtMmpVU0d3WHdnRnV4eGlObzdZT2xYQWNaLW1QamNSaFZ0bzZoaWJzbWdZZzVjWmYzSzhwTWpENk9Fd2pCeFBuRXNpOXFHQ05HNnVLVE9WZmtLYTJra0VDZzdLYTZJZXltdkpXWFdITlVEejFWZERPS3c?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Título sem conteúdo suficiente para matéria (apenas nome de kit/produto de revista), sem relação clara com a temática racial; conteúdo publicitário/sem informação suficiente."
  }
 ]
