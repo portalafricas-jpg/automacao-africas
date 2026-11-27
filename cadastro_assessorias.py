@@ -209,5 +209,5 @@ def _registrar(itens, log):
     _salvar(ARQ_ARROBAS, arrobas)
     _salvar(ARQ_HISTORICO, hist)
     _salvar(ARQ_AVISOS, avisos)
-    log("Assessorias: " + ", ".join(f"{k} {v}" for k, v in contagem.items()))
+    log(f"Assessorias ({len(itens)} no RSS do site): " + ", ".join(f"{k} {v}" for k, v in contagem.items()))
     return contagem
