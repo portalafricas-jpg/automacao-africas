@@ -1,0 +1,42 @@
+name: Assessorias - envio de e-mails
+
+# Por enquanto: só o aviso de autor desconhecido para portalafricas@gmail.com (modelo 13).
+# Acionado à mão; depois vai para o cron-job.org nos horários aprovados.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: assessorias-envio
+  cancel-in-progress: false
+
+jobs:
+  enviar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Enviar os avisos
+        env:
+          GMAIL_SENHA_APP: ${{ secrets.GMAIL_SENHA_APP }}
+        run: python envio_assessorias.py avisos
+
+      - name: Salvar o registro dos envios
+        run: |
+          git config user.name "robo-africas"
+          git config user.email "robo-africas@users.noreply.github.com"
+          git add assessorias/
+          git diff --cached --quiet && exit 0
+          git commit -m "Assessorias: registro de envios"
+          for i in 1 2 3; do
+            git pull --rebase && git push && exit 0
+            sleep 5
+          done
+          exit 1
