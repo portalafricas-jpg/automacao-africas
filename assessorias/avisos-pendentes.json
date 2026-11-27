@@ -9,6 +9,18 @@
    "aviso_enviado": true,
    "aviso_id": "<179579311874.2409.15546358980743420568@africas.com.br>",
    "aviso_em": "2026-11-27T15:25:21+00:00"
+  },
+  {
+   "nome": "Agência Is",
+   "motivo": "desconhecido",
+   "materia": "Terras raras: avanço da mineração ameaça direitos quilombolas e expõe racismo ambiental",
+   "link": "https://www.africas.com.br/noticia/terras-raras-avanco-da-mineracao-ameaca-direitos-quilombolas-e-expoe-racismo-ambiental",
+   "quando": "2026-11-27T22:37:30+00:00",
+   "aviso_enviado": false,
+   "outras_materias": [
+    "https://www.africas.com.br/noticia/samba-e-resistencia-encontro-em-sao-paulo-debate-a-preservacao-da-memoria-negra-nos-territorios",
+    "https://www.africas.com.br/noticia/minicurso-gratuito-debate-racismo-algoritmico-e-impactos-da-inteligencia-artificial-nos-direitos-humanos"
+   ]
   }
  ],
  "nomes_atualizados": []
