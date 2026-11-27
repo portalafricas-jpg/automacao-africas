@@ -197,13 +197,16 @@ def ler_caixa():
             mid = (msg.get("Message-ID") or "").strip()
             if not mid or mid in feitos:
                 continue
+            if mid in avisos_por_id or mid in por_id:
+                continue  # é o próprio e-mail que o robô mandou, não uma resposta
             refs = " ".join([msg.get("In-Reply-To") or "", msg.get("References") or ""])
             de = parseaddr(msg.get("From", ""))[1].lower()
             assunto = _cab(msg, "Subject")
             original = next((i for i in list(avisos_por_id) + list(por_id) if i in refs), None)
             m_aviso = re.search(r"N[ãa]o localizamos o e-mail de (.+)$", assunto)
             aviso = avisos_por_id.get(original) or (avisos_por_nome.get(_chave(m_aviso.group(1))) if m_aviso else None)
-            if not original and not (aviso and de in NOSSOS):
+            eh_resposta = bool(refs.strip()) or assunto.lower().startswith(("re:", "res:", "resp:"))
+            if not eh_resposta or (not original and not (aviso and de in NOSSOS)):
                 continue  # não é resposta a um e-mail do robô
             feitos.add(mid)
             contagem["lidos"] += 1
