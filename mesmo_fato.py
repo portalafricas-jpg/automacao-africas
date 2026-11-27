@@ -5,8 +5,12 @@
 import json
 import os
 import re
+import time
 import unicodedata
+import urllib.error
 import urllib.request
+
+ULTIMO_ERRO = [""]
 
 MODELO = "claude-haiku-5-5"
 LIGACOES = {"de", "da", "do", "das", "dos", "e"}
@@ -81,10 +85,22 @@ def conferir(nova, antiga):
                         "messages": [{"role": "user", "content": pedido}]}).encode()
     req = urllib.request.Request("https://api.anthropic.com/v1/messages", data=corpo, headers={
         "x-api-key": chave, "anthropic-version": "2023-06-01", "content-type": "application/json"})
-    try:
-        with urllib.request.urlopen(req, timeout=40) as r:
-            resposta = json.loads(r.read())["content"][0]["text"].upper()
-    except Exception:
+    resposta = None
+    for tentativa in range(4):  # a API às vezes pede para esperar (muitas consultas seguidas)
+        try:
+            with urllib.request.urlopen(req, timeout=40) as r:
+                resposta = json.loads(r.read())["content"][0]["text"].upper()
+            break
+        except urllib.error.HTTPError as e:
+            ULTIMO_ERRO[0] = f"HTTP {e.code}"
+            if e.code in (429, 500, 502, 503, 529):
+                time.sleep(5 * (tentativa + 1))
+                continue
+            return None
+        except Exception as e:
+            ULTIMO_ERRO[0] = str(e)[:100]
+            time.sleep(3)
+    if resposta is None:
         return None
     for palavra in ("DESDOBRAMENTO", "DIFERENTE", "MESMO"):
         if palavra in resposta:

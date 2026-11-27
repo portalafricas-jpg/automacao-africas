@@ -10,5 +10,5 @@ for i, nova in enumerate(pub):
     anteriores = [m for m in pub[:i] if t - datetime.fromisoformat(m["criado_em"]) <= timedelta(days=3)]
     for antiga in mesmo_fato.suspeitas(nova, anteriores):
         v = mesmo_fato.conferir(nova, antiga)
-        acao = {"MESMO": "BLOQUEADA", "DESDOBRAMENTO": "publica (fato novo)", "DIFERENTE": "publica"}.get(v, "SEGURADA (sem resposta)")
+        acao = {"MESMO": "BLOQUEADA", "DESDOBRAMENTO": "publica (fato novo)", "DIFERENTE": "publica"}.get(v, "SEGURADA " + mesmo_fato.ULTIMO_ERRO[0])
         print(f"{acao:24} | {antiga['titulo'][:55]}  x  {nova['titulo'][:55]}")
