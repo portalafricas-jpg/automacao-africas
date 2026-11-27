@@ -81,7 +81,7 @@ def conferir(nova, antiga):
         "DIFERENTE = são fatos diferentes (ex.: o mesmo tipo de evento em cidades diferentes).\n\n"
         f"JÁ PUBLICADA: {texto_de(antiga)[:700]}\n\nNOVA: {texto_de(nova)[:700]}"
     )
-    corpo = json.dumps({"model": MODELO, "max_tokens": 10,
+    corpo = json.dumps({"model": MODELO, "max_tokens": 300,
                         "messages": [{"role": "user", "content": pedido}]}).encode()
     req = urllib.request.Request("https://api.anthropic.com/v1/messages", data=corpo, headers={
         "x-api-key": chave, "anthropic-version": "2023-06-01", "content-type": "application/json"})
@@ -89,7 +89,12 @@ def conferir(nova, antiga):
     for tentativa in range(4):  # a API às vezes pede para esperar (muitas consultas seguidas)
         try:
             with urllib.request.urlopen(req, timeout=40) as r:
-                resposta = json.loads(r.read())["content"][0]["text"].upper()
+                dados = json.loads(r.read())
+            resposta = " ".join(b.get("text", "") for b in dados.get("content", []) if b.get("type") == "text").upper()
+            if not resposta:
+                ULTIMO_ERRO[0] = f"sem texto ({dados.get('stop_reason')})"
+                resposta = None
+                continue
             break
         except urllib.error.HTTPError as e:
             ULTIMO_ERRO[0] = f"HTTP {e.code}"
