@@ -4,6 +4,22 @@
   {
    "hora": "09:20",
    "arquivo": "story_stand.jpg"
+  },
+  {
+   "hora": "19:00",
+   "arquivo": "s1_entrada.jpg"
+  },
+  {
+   "hora": "20:00",
+   "arquivo": "s2_stand.jpg"
+  },
+  {
+   "hora": "21:00",
+   "arquivo": "s3_ecossistema.jpg"
+  },
+  {
+   "hora": "22:00",
+   "arquivo": "s4_app.jpg"
   }
  ],
  "carrossel": {
