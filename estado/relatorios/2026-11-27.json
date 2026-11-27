@@ -1598,5 +1598,83 @@
   "destino": "publicada",
   "detalhe": "Alaíde Costa lança disco e faz show em BH",
   "foto": "Fábio Audi / Divulgação"
+ },
+ {
+  "hora": "07:32",
+  "fonte": "Busca - Cultura negra",
+  "titulo": "De circo a exposições: veja o que fazer no fim de semana em MT",
+  "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNUzFpUU5kY0NVQTFqMXdOdjhuYVBxQWl1N0djbVgtMWlXQU1XblJBSTI5bkh1OU1UaVFQYlBYejNGdHZ6clh4VUJ1NGx4dFlZQnNMWHhmd1pocC05eG9mTnNmOXpGNW1RNEpweGVTVm9ieWJuQ3ZXdFV1WDNYOGFTSTVjUFplM2oyUUtYMVZrQUZueHVJWmo0UVkyLTEwQmtrVm9iMVJmQnVscENqSVdaZGNEZjFiTzU5cWR4NUZFbVVkOGJT?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "descartada pelo filtro",
+  "detalhe": "filtro: busca ampla sem sinal (artista, escola/bloco ou termo)"
+ },
+ {
+  "hora": "07:33",
+  "fonte": "Busca - racismo estrutural",
+  "titulo": "A sensualidade negra não é um convite à hipersexualização",
+  "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOVk1aV1pyV2tEMml1TklMNGROVTRyQzlpTkNJRkFIbXFVOGF6V2ZxYmozZjk3WWlHazU3b0RaaDIwMXdIYVM3TGZoVV91c3JxNmNEWGQ1SGFyS0w0TldmcGFyLUdvdFo3X2tVeUF3eUpwaDJzU09ydVNZUHdNN3RWMjZSM0xjOG9OeUI2WEwwanV4aHVP?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "repetida",
+  "detalhe": "título quase igual a outra notícia"
+ },
+ {
+  "hora": "07:33",
+  "fonte": "Alma Preta",
+  "titulo": "A sensualidade negra não é um convite à hipersexualização",
+  "link": "https://almapreta.com.br/sessao/quilombo/sensualidade-negra-nao-convite-hipersexualizacao/",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "Texto de opinião/coluna de outro veículo, sem fato novo; não é notícia."
+ },
+ {
+  "hora": "07:33",
+  "fonte": "Busca - racismo estrutural",
+  "titulo": "Mês da Consciência Negra: infâncias negras ainda esperam futuros mais dignos",
+  "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQcXNqRV9STHV3YXB2MjF3RXR5T2RTN3pMdEJQdjl6bmRrSVIyU01QbkZvekN2UzB1eHd5VndEUFdGZEhiSWRLVXhaYUNtcTdCeW5YOE96ajBVUFB6ZVNnMDBCYV9TQXgtOTBSX1UzclhySTFmcDRZZ0RVSm93d2tSR25qQmVENy1XODVvc08yQnlPZU1XZkl5V3NRRkRtQUVyam9SNTVoMWVwb1JmcVZpdXN0SVBnUkJZVVlLby1PMElaMVNONmdkbXQ2bGFKZzhHWHFkamE1OW16SGxaYkVQbDdaVXg?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 5,
+  "destino": "nota baixa",
+  "detalhe": "Matéria de contexto sobre infâncias negras no Mês da Consciência Negra, mas o título e resumo não trazem fatos concretos suficientes para uma matéria honesta; questão racial aparece sem fato relevante central."
+ },
+ {
+  "hora": "07:33",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "João Lourenço manifesta pesar pela morte da antiga Vice-Presidente da África do Sul",
+  "link": "https://www.giranoticias.com/politica/2026/11/32820-joao-lourenco-manifesta-pesar-pela-morte-da-antiga-vice-presidente-da-africa-do-sul.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Nota de pesar protocolar de chefe de Estado sobre morte de ex-vice-presidente sul-africana; ato protocolar, fora do escopo."
+ },
+ {
+  "hora": "07:33",
+  "fonte": "Busca - Grupo Revelação",
+  "titulo": "Grátis! Fim de semana tem minidesfiles de escolas de samba e festivais",
+  "link": "https://odia.ig.com.br/diversao/show-e-lazer/2026/11/7325858-gratis-fim-de-semana-tem-minidesfiles-de-escolas-de-samba-e-festivais.html",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "recusada pelo redator",
+  "detalhe": "Recusada: é um guia de programação de fim de semana (agenda de shows, espetáculos, minidesfiles e festivais no Rio) com muitos eventos sem relação com a temática racial, e o texto é majoritariamente listagem de ingressos e horários. O trecho com recorte negro (Festival com artesãs quilombolas, Dicró, Dia Nacional do Samba) é pequeno e não forma uma matéria honesta e focada. Além disso, o texto original é pouco objetivo como notícia de um fato único. Sem fato central claro para reescrita fiel."
+ },
+ {
+  "hora": "07:33",
+  "fonte": "Busca - rap nacional",
+  "titulo": "Rashid, Emicida e Projota lançam clipe emocionante da música 'Ouro, Mirra e Incenso'",
+  "link": "https://www.mthoje.com.br/cultura/id-733892/rashid__emicida_e_projota_lancam_clipe_emocionante_da_musica_e_39ouro__mirra_e_incensoe_39",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "publicada",
+  "detalhe": "Rashid, Emicida e Projota lançam clipe de Ouro, Mirra",
+  "foto": "Ênio César"
  }
 ]
