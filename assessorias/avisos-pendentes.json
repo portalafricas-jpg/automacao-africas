@@ -1,4 +1,13 @@
 {
- "desconhecidos": [],
+ "desconhecidos": [
+  {
+   "nome": "Higor Souza",
+   "motivo": "desconhecido",
+   "materia": "Prêmio Sankofa do Impossível reconhece a produção teatral negra no Rio e homenageia grandes referências artísticas com Projeto Legados",
+   "link": "https://www.africas.com.br/noticia/premio-sankofa-do-impossivel-reconhece-a-producao-teatral-negra-no-rio-e-homenageia-grandes-referencias-artisticas-com-projeto-legados",
+   "quando": "2026-11-27T14:52:45+00:00",
+   "aviso_enviado": false
+  }
+ ],
  "nomes_atualizados": []
 }
