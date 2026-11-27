@@ -42,6 +42,12 @@ jobs:
           MODO_REDES: publicar
         run: python redes.py
 
+      - name: Assessorias - ler a caixa e mandar avisos (27/11/2026)
+        continue-on-error: true
+        env:
+          GMAIL_SENHA_APP: ${{ secrets.GMAIL_SENHA_APP }}
+        run: python envio_assessorias.py tudo
+
       - name: Salvar a fila e o registro
         run: |
           git config user.name "robo-africas"
