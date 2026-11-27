@@ -36,7 +36,9 @@
     "categoria": "mundo",
     "tipo": "rss",
     "url": "https://www.opais.ao/feed/",
-    "africa": true
+    "africa": true,
+    "pausada": "revisar",
+    "pausada_em": "2026-11-26"
   },
   {
     "nome": "DigiPress (Angola)",
@@ -400,7 +402,9 @@
     "tipo": "busca",
     "busca": "Black Money",
     "grupo": 1,
-    "dia_semana": 2
+    "dia_semana": 2,
+    "pausada": "eterna",
+    "pausada_em": "2026-11-26"
   },
   {
     "nome": "Busca - Empreendedor negro",

@@ -17,6 +17,9 @@ from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from urllib.parse import urljoin, urlparse
 
+from filtro import Filtro
+import revisao_filtro
+
 try:
     import trafilatura
 except ImportError:
@@ -1291,6 +1294,8 @@ def main():
     agora = datetime.now(timezone.utc)
     agora_sp = agora.astimezone(FUSO_SP)
     fontes = juntar_buscas(ler_json(ARQ_FONTES, []))
+    global FILTRO
+    FILTRO = Filtro()  # lê filtro.json e a lista de artistas atualizada a cada rodada
     primeira_vez = ler_json(ARQ_PRIMEIRA_VEZ, {"fontes_iniciadas": [], "links": {}})
     rodada = int(agora.timestamp() // 900)  # número da rodada de 15 minutos (define o grupo de buscas)
     with open(ARQ_LINHA, encoding="utf-8") as f:
@@ -1327,6 +1332,15 @@ def main():
     candidatas = []
     bing = {"buscas": 0, "recebidas": 0, "na_janela": 0}
     for fonte in fontes:
+        if fonte.get("pausada") == "revisar":
+            # pausada revisável (26/11/2026): lê só os títulos, de graça, para a revisão quinzenal
+            try:
+                revisao_filtro.observar(fonte, ler_fonte(fonte, rodada), agora_sp)
+            except Exception as e:
+                log(f"  Não conseguiu observar a fonte pausada {fonte.get('nome')}: {e}")
+            continue
+        if fonte.get("pausada"):
+            continue  # pausada para sempre ("eterna"); só volta se o Washington pedir
         itens = ler_fonte(fonte, rodada)
         if fonte.get("tipo") == "busca" and itens:
             bing["buscas"] += 1
@@ -1357,6 +1371,12 @@ def main():
                     mesmo_fato(item["titulo"], candidatas, SEMELHANCA_MESMO_FATO):
                 log(f"Repetida (mesmo fato): {item['titulo'][:80]}")
                 registrar(dict(item, fonte_nome=nome), "repetida", "título quase igual a outra notícia")
+                marcar_visto(item["link"])
+                continue
+            motivo_filtro = FILTRO.motivo_descarte(item, nome)
+            if motivo_filtro:
+                # filtro grátis antes do Claude (26/11/2026): não gasta crédito com lixo óbvio
+                registrar(dict(item, fonte_nome=nome), "descartada pelo filtro", motivo_filtro)
                 marcar_visto(item["link"])
                 continue
             item["categoria_fonte"] = fonte.get("categoria", "")
@@ -1563,6 +1583,12 @@ def main():
         salvar_relatorio(agora)
     except Exception as e:
         log(f"Não conseguiu salvar o relatório do dia: {e}")
+    try:
+        revisao_filtro.marcar_inicio(agora_sp)
+        if revisao_filtro.esta_na_hora(agora_sp):
+            revisao_filtro.revisar(agora_sp, enviar_claude, linha_editorial, log)
+    except Exception as e:
+        log(f"Revisão quinzenal do filtro não rodou (tenta na próxima rodada): {e}")
     log(f"Fim. Na fila de espera: {len(fila)} | Publicadas hoje: {publicadas_hoje}")
     if any(USO.values()):
         log(f"Uso do Claude nesta rodada: {USO['input_tokens']} tokens novos, "
