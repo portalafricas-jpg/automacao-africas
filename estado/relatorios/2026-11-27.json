@@ -834,5 +834,27 @@
   "nota": 0,
   "destino": "nota baixa",
   "detalhe": "Previsão do tempo em Manaus, sem relação com a temática racial nem com a Agenda Preta."
+ },
+ {
+  "hora": "04:02",
+  "fonte": "Busca - mulheres negras",
+  "titulo": "RENACINE CELEBRA 13 ANOS COM SESSÃO ESPECIAL NO NOVEMBRO NEGRO",
+  "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOUHNPZnY4bDNMZWE0eWYwNEQxWHNxeE03LXBSSGwySEszME9kOExpNzRBTjZROWtfUEtmOFkxZlI1eGl2Rko1UkxRLXctRWUzOHNvRV8zbkJiX3ZMbjZTV0h4dHVPaWRYT1dZSGVxVlU4LWc2VmU1MzhUNlBqQ1dNOUc5U1lhVHpnby1vMGdhS002aTJFTEEzY1VydmVObDdWVzBQWFdWVnBTUWd4Y0E?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "04:02",
+  "fonte": "Busca - samba",
+  "titulo": "Dia Nacional do Samba tem show especial no Potengi",
+  "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNY1Z6dWJBbU9QSU92aDB4T3FvdDhZMWVFVjdLVm5KTmFaNG85dVZndXRfZWdTR29xT3BJM2dkd3hIVjJmaE1sTy0xZVh1U19Ja1RBX3hRcURGb1lWWldxOXd0Ujl5R19wQkhCSlhadEZJbGdWSDJVUmF6OGx0YXN2Wkg3SlVnbURvVTlrOXJqV2U?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
  }
 ]
