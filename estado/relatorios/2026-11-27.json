@@ -801,5 +801,27 @@
   "nota": 2,
   "destino": "nota baixa",
   "detalhe": "Título é apenas um guia de programação genérico (o que fazer em SP), sem fato noticioso claro nem conteúdo suficiente para matéria honesta; a menção a Conceição Evaristo e Roberta Campos é de agenda, sem conquista nem fato relevante."
+ },
+ {
+  "hora": "03:33",
+  "fonte": "Busca - Arlindinho",
+  "titulo": "'O maior encontro do samba' chega a BH com Gil como convidado",
+  "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNR29xNkhDYWkzRUhPcnN5djF2Z1l0NDFfcHZDdWFDcWJKZ2lPb2t3QjJyeWhFOEJwUmo1ZDFTVFRCS1NwUlJoTEY1bThRTXQtRHZqTUxRZ29YZ25Ka1J2eTcyOGd4bG1iQ3hzLWYxNVE3Y1YxZTVwenduWFV6LVNxN2xNSmJhWEJSM0s5azJoNVh2akZZaEljNUNSRWxuZ1o0ajhOSFc4NmtzcUZMZFNfNWttVk7SAbQBQVVfeXFMTUdvcTZIQ2FpM0VIT3JzeXYxdmdZdDQxX3B2Q3VhQ3FiSmdpT29rd0IycnloRThCcFJqNWQxU1RUQktTcFJSaExGNW04UU10LUR2ak1MUWdvWGduSmtSdnk3MjhneGxtYkN4cy1mMTVRN2NWMWU1cHp3blhVei1TcTdsTUpiYVhCUjNLOWsyaDVYdmpGWWhJYzVDUkVsbmdaNGo4TkhXODZrc3FGTGRTXzVrbVZO?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Evento de samba com Gil como convidado em BH: música e samba, linha Gente e Música (Gilberto Gil é artista negro). Nota 7 pela linha Gente e Música; não há lista de repetição no portal sobre este evento."
+ },
+ {
+  "hora": "03:33",
+  "fonte": "Busca - Empreendedor negro",
+  "titulo": "Instituto Negras em Ação realiza o Festival Casa Preta em Movimento na Sala dos Toninhos",
+  "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQekl5ZWEtSEl6eXAzeGJDT1Y0WGNKVFRFSy0xcTdoZksta1o5VU1CcUJORVJHRG9SajEtU09wSHlkaFhEUkI1N1psbUZZbXVvMzYwcy0tWEJFUHpaRjdBLUhRS0I1ZUNjVUN0SWJ6a2p3SkZURjJLRkItVGtfT1VQRkdzRnMwU3dBR00ybmI0djZ4cWFrTG5KYU5nMFR6dUxDeGdzUnNxQU9OVm1UTTFJQktwS0NfLV85TGd2ZEZR?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 5,
+  "destino": "nota baixa",
+  "detalhe": "evento local pequeno: Festival de coletivo negro em Campinas (Sala dos Toninhos), evento local sem personagem ou fato relevante; a questão racial é o centro, mas o evento é de pequeno porte e não há conquista ou fato de destaque."
  }
 ]
