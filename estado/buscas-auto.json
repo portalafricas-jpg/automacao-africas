@@ -110,5 +110,13 @@
   "busca": "\"Alaíde Costa\"",
   "grupo": 2,
   "auto": "2026-11-27"
+ },
+ {
+  "nome": "Busca - Hariany Almeida",
+  "categoria": "cultura",
+  "tipo": "busca",
+  "busca": "\"Hariany Almeida\"",
+  "grupo": 1,
+  "auto": "2026-11-27"
  }
 ]
