@@ -24,6 +24,7 @@ from zoneinfo import ZoneInfo
 
 import cadastro_assessorias
 from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont
+import mesmo_fato
 
 try:
     import requests
@@ -986,6 +987,16 @@ def main_publicar():
         if any(mesmo_fato_palavras(item["titulo"], t) for t in ja_saiu + [f["titulo"] for f in fila]):
             log(f"Repetida (mesmo fato já publicado ou na fila), fora: {item['titulo'][:70]}")
             continue
+        # Protocolo anti-repetição, trava 3 (27/11/2026): mesmo fato nos últimos 3 dias, com outras palavras
+        limite_3d = agora - timedelta(days=3)
+        recentes_redes = [p for p in posts if p.get("tipo") != "reels" and p.get("publicado_em")
+                          and datetime.fromisoformat(p["publicado_em"]) >= limite_3d] + fila
+        rep, antiga = mesmo_fato.repetida(item, recentes_redes)
+        if rep is not False:
+            log(f"Repetida (mesmo fato de \"{(antiga or {}).get('titulo', '')[:60]}\"), fora: {item['titulo'][:70]}")
+            if rep is None:
+                vistos.discard(item["link"])  # não deu para conferir: tenta de novo na próxima rodada
+            continue
         dados = para_fila(item, info)
         fila.append(dados)
         if item.get("arte_story"):
@@ -1029,6 +1040,8 @@ def main_publicar():
     for f in a_publicar:
         try:
             post = publicar_materia(da_fila(f), token, pagina, ig)
+            if isinstance(post, dict):
+                post.setdefault("resumo", (f.get("resumo") or "")[:400])  # usado pela trava anti-repetição
             posts.append(post)
             estado["feed_hoje"] += 1
             estado["ultimo_feed"] = datetime.now(timezone.utc).isoformat()

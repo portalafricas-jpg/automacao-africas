@@ -81,7 +81,7 @@ def conferir(nova, antiga):
         "DIFERENTE = são fatos diferentes (ex.: o mesmo tipo de evento em cidades diferentes).\n\n"
         f"JÁ PUBLICADA: {texto_de(antiga)[:700]}\n\nNOVA: {texto_de(nova)[:700]}"
     )
-    corpo = json.dumps({"model": MODELO, "max_tokens": 300,
+    corpo = json.dumps({"model": MODELO, "max_tokens": 1000,
                         "messages": [{"role": "user", "content": pedido}]}).encode()
     req = urllib.request.Request("https://api.anthropic.com/v1/messages", data=corpo, headers={
         "x-api-key": chave, "anthropic-version": "2023-06-01", "content-type": "application/json"})

@@ -1,0 +1,25 @@
+name: Alarme de matérias repetidas
+
+# Todo dia às 7h30 (Brasília): se alguma matéria repetida escapou nas últimas 24 horas,
+# manda aviso por e-mail. Só leitura no site: não apaga nem altera nada.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 10 * * *"
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  conferir:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install requests
+      - name: Conferir repetidas
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python alarme_repetidas.py
