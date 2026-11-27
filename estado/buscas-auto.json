@@ -86,5 +86,13 @@
   "busca": "\"Carol Santos\"",
   "grupo": 1,
   "auto": "2026-11-26"
+ },
+ {
+  "nome": "Busca - Sorriso Maroto",
+  "categoria": "cultura",
+  "tipo": "busca",
+  "busca": "\"Sorriso Maroto\"",
+  "grupo": 3,
+  "auto": "2026-11-27"
  }
 ]
