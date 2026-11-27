@@ -1288,5 +1288,28 @@
   "destino": "publicada",
   "detalhe": "Milton Filho fala de racismo e carreira na TV",
   "foto": "Foto ilustrativa: Glenn Carstens-Peters/Unsplash"
+ },
+ {
+  "hora": "06:18",
+  "fonte": "Busca - mulheres negras",
+  "titulo": "Uma mulher negra para o Supremo Tribunal Federal",
+  "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQbW5PNWc3QmhCS2pSbHRWR215clVZZjBHOHVvbl9FZ2x1NjFUMWdzUzBfSWVEMTVIWXl6SHNaZHRVZWZEczNLYVBDVks5aWZjRmlkaFZtUmFPN250MGl3SlhkRnN0LWlZTkxrekNvSkl2TmltLXNncG9zR243UlVMbTZvc2JuOGViU3ViMjVXT1lsR2lXQ1A0T3llbFkyaldfYlhUcGtYTkRvQTg?oc=5",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 6,
+  "destino": "nota baixa",
+  "detalhe": "Debate sobre indicação de mulher negra ao STF, tema de representatividade no Judiciário. Porém o título e resumo são vagos, sem fato concreto novo (não há indicação nem decisão). Há matérias recentes do portal sobre o mesmo pedido de indicação de Lula (Em carta, Lula é pressionado a indicar 1ª mulher negra para o STF), o que torna esta uma repetição do mesmo assunto."
+ },
+ {
+  "hora": "06:18",
+  "fonte": "Busca - samba",
+  "titulo": "Escolas do Grupo Especial do Rio fazem minidesfiles neste fim de semana para celebrar o Dia do Samba; veja a programação",
+  "link": "https://extra.globo.com/entretenimento/programacao/noticia/2026/11/escolas-do-grupo-especial-do-rio-fazem-minidesfiles-neste-fim-de-semana-para-celebrar-o-dia-do-samba-veja-a-programacao.ghtml",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "publicada",
+  "detalhe": "Grupo Especial faz minidesfiles no Rio",
+  "foto": "Thaís Brum e Eduardo Hollanda/Rio Carnaval/Divulgação, Thais Brum/Rio Carnaval/Divulgação e Eduardo Hollanda/Rio Carnaval/Divulgação"
  }
 ]
