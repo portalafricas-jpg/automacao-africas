@@ -22,6 +22,7 @@ from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from zoneinfo import ZoneInfo
 
+import cadastro_assessorias
 from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont
 
 try:
@@ -963,6 +964,7 @@ def main_publicar():
 
     # 1) Novidades do site entram na fila (na primeira rodada, só as das últimas 3 horas)
     itens = ler_rss_site()
+    cadastro_assessorias.registrar(itens, log)  # assessorias: só lê e anota (27/11/2026)
     limite_inicio = datetime.fromisoformat(estado["inicio"]) - timedelta(hours=3)
     novas = 0
     for item in sorted(itens, key=lambda i: i["quando"] or agora):
