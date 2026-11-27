@@ -1553,5 +1553,50 @@
   "nota": 0,
   "destino": "nota baixa",
   "detalhe": "Notícia de agenda de governo sobre reunião da AUDA-NEPAD sem fato concreto para o leitor e sem informação suficiente para matéria honesta; é ato protocolar de preparativos, descartar."
+ },
+ {
+  "hora": "07:18",
+  "fonte": "Busca - igualdade racial",
+  "titulo": "COMPIR-GV elege novos conselheiros e define composição de sua diretoria - Jornal da Cidade",
+  "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNUVpoVVNHaG5mRFNiNmQ1SDdQci1idXRIQmlDS1VjUmVZZFcyelZzR2JyZmNxTmZZYUFSUk91a0tnZ3VSMmYyUDNBWWlFbGIwdmRuVVlvQTlGT3F0T1otYTVGUWtjMmowdWt2ZEFsUnhYUkR6QWtnb0FGYWRQWFM0SmlibmZMNmFzT2NmNU5ZSzR3VUJVckZEX2dKUk44MmNjeEtZTmtNemRLd3RUb3M2ZQ?oc=5",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "evento local pequeno: Eleição de conselheiros e composição de diretoria de conselho municipal sem fato relevante para a população negra nem ligação com a temática racial; notícia local burocrática."
+ },
+ {
+  "hora": "07:18",
+  "fonte": "Notícia Preta",
+  "titulo": "Câmara aprova jornada mínima de 7 horas para o ensino integral",
+  "link": "https://noticiapreta.com.br/camara-aprova-jornada-minima-de-7-horas-para-o-ensino-integral/?utm_source=rss&utm_medium=rss&utm_campaign=camara-aprova-jornada-minima-de-7-horas-para-o-ensino-integral",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "Política de educação (ensino integral, jornada mínima) que atinge diretamente a população negra, maioria na rede pública; entra pelo pilar educação, sem citar recorte racial no texto."
+ },
+ {
+  "hora": "07:18",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "João Lourenço cria Instituto Público Praça da República",
+  "link": "https://www.giranoticias.com/politica/2026/11/32821-joao-lourenco-cria-instituto-publico-praca-da-republica.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Notícia de Angola sobre criação de instituto público: decisão burocrática interna, sem ligação com o Brasil nem fato de grande impacto; título sem conteúdo suficiente para matéria honesta."
+ },
+ {
+  "hora": "07:18",
+  "fonte": "Busca - Emicida",
+  "titulo": "Alaíde Costa reúne grandes compositores em novo disco e desembarca em BH no próximo mês para show",
+  "link": "https://www.hojeemdia.com.br/entretenimento/alaide-costa-reune-grandes-compositores-em-novo-disco-e-desembarca-em-bh-no-proximo-mes-para-show-1.1142355",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "publicada",
+  "detalhe": "Alaíde Costa lança disco e faz show em BH",
+  "foto": "Fábio Audi / Divulgação"
  }
 ]
