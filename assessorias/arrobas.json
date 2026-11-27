@@ -1,0 +1,87 @@
+{
+ "atualizado_em": "2026-11-27",
+ "como_funciona": "Dois espaços: 'assessoria' = @ que a assessoria mandou (formulário ou e-mail); 'sistema' = @ que o robô achou no texto das matérias. Antes de pedir @ à assessoria e ao montar o collab, o robô consulta esta tabela pelo nome (sem diferenciar maiúsculas e acentos). O que a assessoria manda vale mais que o do sistema.",
+ "assessoria": [
+  {
+   "arroba": "@daniel_sal94",
+   "nome": "Daniel",
+   "tipo": "assessoria",
+   "email": "limaprojetoforadecampo@gmail.com",
+   "origem": "lista do Drive (27/11/2026)"
+  }
+ ],
+ "sistema": [
+  {
+   "arroba": "@sescsaocarlossp",
+   "nome": "Sesc São Carlos",
+   "tipo": "espaço cultural",
+   "materia": "Novembro Negro em São Carlos tem marcha e shows",
+   "link": "https://saocarlos.portaldacidade.com/noticias/cultura/novembro-negro-em-sao-carlos-tem-marcha-e-shows-de-fat-family-karol-conka-e-criolo-2616",
+   "visto_em": "2026-11-27"
+  },
+  {
+   "arroba": "@pocarfestival",
+   "nome": "Circuito POCAR",
+   "tipo": "evento",
+   "materia": "Circuito POCAR leva cultura quilombola a Curitiba",
+   "link": "https://folhadecuritiba.com.br/do-sape-do-norte-a-curitiba-circuito-pocar-coloca-historias-negras-no-centro-da-cena/",
+   "visto_em": "2026-11-27"
+  },
+  {
+   "arroba": "@quilombodosopapo",
+   "nome": "Quilombo do Sopapo",
+   "tipo": "espaço cultural",
+   "materia": "Quilombo do Sopapo celebra Consciência Negra em POA",
+   "link": "https://www.brasildefato.com.br/2026/11/23/quilombo-do-sopapo-celebra-a-consciencia-negra-com-vivencias-e-musica-em-porto-alegre/",
+   "visto_em": "2026-11-27"
+  },
+  {
+   "arroba": "@artesania.decultura",
+   "nome": "(nome a confirmar: projeto de moda no Vale do Aço)",
+   "tipo": "projeto",
+   "materia": "Mostra no Vale do Aço valoriza mulheres negras pela moda",
+   "link": "https://www.diariodoaco.com.br/noticia/138643-projeto-valoriza-mulheres-negras-da-regiao-por-meio-da-moda",
+   "visto_em": "2026-11-27"
+  },
+  {
+   "arroba": "@pontaoflordomato",
+   "nome": "Pontão de Cultura Flor do Mato",
+   "tipo": "projeto",
+   "materia": "Documentário sobre mulheres quilombolas em MT",
+   "link": "https://diariodaserra.com.br/noticia/flor-do-mato-prepara-documentario-sobre-mulheres-quilombolas",
+   "visto_em": "2026-11-27"
+  },
+  {
+   "arroba": "@quintaludi",
+   "nome": "Quintal Gastronomia & Cultura (Uberlândia), a confirmar",
+   "tipo": "espaço cultural",
+   "materia": "Carol Santos lança livro com poesia e samba",
+   "link": "https://regionalzao.com.br/acontece/carol-santos-lanca-migalhas-poeticas-de-uma-vida-2-em-noite-gratuita-de-poesia-e-samba-em-uberlandia/",
+   "visto_em": "2026-11-27"
+  },
+  {
+   "arroba": "@1kilorec",
+   "nome": "1Kilo",
+   "tipo": "artista",
+   "materia": "1Kilo lança cypher Movimento$ reunindo diferentes gerações do rap nacional",
+   "link": "RSS do site (autor da matéria de Luana Barreto)",
+   "visto_em": "2026-11-27"
+  },
+  {
+   "arroba": "@expoafricabrasil",
+   "nome": "Expo África Brasil",
+   "tipo": "evento",
+   "materia": "collab fixo de toda matéria da Expo",
+   "link": "redes.py (EXPO_COLAB)",
+   "visto_em": "2026-11-27"
+  },
+  {
+   "arroba": "@joaocandaoficial",
+   "nome": "(nome a confirmar)",
+   "tipo": "pessoa",
+   "materia": "collab fixo de toda matéria da Expo",
+   "link": "redes.py (EXPO_COLAB)",
+   "visto_em": "2026-11-27"
+  }
+ ]
+}
