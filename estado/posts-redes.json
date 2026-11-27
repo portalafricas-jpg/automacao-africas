@@ -938,5 +938,38 @@
   "foto": "https://www.africas.com.br/uploads/images/2026/11/grupo-especial-faz-minidesfiles-no-rio1795771217.jpg",
   "categoria": "Cultura",
   "publicado_em": "2026-11-27T14:08:42.129476+00:00"
+ },
+ {
+  "tipo": "reels",
+  "titulo": "Radar do meio-dia 27/11",
+  "link": "https://www.africas.com.br",
+  "links": [
+   {
+    "titulo": "Policial aposentado é preso por ameaças a quilombolas",
+    "link": "https://www.africas.com.br/noticia/policial-aposentado-e-preso-por-ameacas-a-quilombolas"
+   },
+   {
+    "titulo": "Marcos Southo celebra 27 anos com show no TAM",
+    "link": "https://www.africas.com.br/noticia/marcos-southo-celebra-27-anos-com-show-no-tam"
+   },
+   {
+    "titulo": "Karinah lança As Damas do Samba com 16 clássicos",
+    "link": "https://www.africas.com.br/noticia/karinah-lanca-as-damas-do-samba-com-16-classicos"
+   },
+   {
+    "titulo": "Grupo Especial faz minidesfiles no Rio",
+    "link": "https://www.africas.com.br/noticia/grupo-especial-faz-minidesfiles-no-rio"
+   },
+   {
+    "titulo": "Sebrae seleciona 100 empreendedores negros para a África",
+    "link": "https://www.africas.com.br/noticia/sebrae-seleciona-100-empreendedores-negros-para-a-africa"
+   }
+  ],
+  "ig_media": "17905576236612225",
+  "ig_link": "https://www.instagram.com/reel/DgQC_PyoyGR/",
+  "fb_post": "1141952495218677",
+  "yt_video": "QJtEH-AC2UE",
+  "prioridade": "reels",
+  "publicado_em": "2026-11-27T15:54:01.783045+00:00"
  }
 ]
