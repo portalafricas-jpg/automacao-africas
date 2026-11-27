@@ -856,5 +856,38 @@
   "nota": 7,
   "destino": "venceu na fila",
   "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "04:18",
+  "fonte": "Busca - Cineasta negro",
+  "titulo": "R$150 OFF! Smart TV 4K Hisense Hi-QLED 43\" surge mais barata na Black Friday da Amazon",
+  "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxOazBwY0hEZmJQYlI1eVdsVEFHVEM1b1VtWmNvZWM1UGllQXZPUDBQX0VEeDllS0VuNjNpU0tmLVo1MFZqclRJdTV5NXVjSDJvRHJlcFdFZUpidVRHampYQmRlaGZHZ3h5M0NISW9ucU9qbWpObnc2bm1GMDJJSGVpTldNMFhlQnVzSWhSbWZFeHNOaGdtWHdLcFJrWFI1SnV0OFgydDR1Smo5S3ZzYkY1NUZoVzRVNHFHSy1EdXBvci1JXzlNa3RVYmRFQThEUVBmakFHa25BaEpHOTAtOW1UbEU5VzNEVWV3QTlTVnhmOVIzWGJpV1NteV8wUTVpREN0VHlvN2V3?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "descartada pelo filtro",
+  "detalhe": "filtro: comércio (black friday)"
+ },
+ {
+  "hora": "04:18",
+  "fonte": "Busca - Cineasta negro",
+  "titulo": "Edição de colecionador de Neon Genesis Evangelion! Todos os 7 volumes do mangá em oferta na Black Friday da Amazon",
+  "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE84blh2QjB3blp1RWhqRjY2bVVVNWx1LUI2YnlXZjVScmxyU3lRalZSWVF2cHUzaXZEU3V2cElCVWp4ZGtIdXF5Y1NCN1FJWFJSdm5jOFZQR3lLWGdtX1VMRzlyYjFGVm9Zd09jX1J1T1M?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "descartada pelo filtro",
+  "detalhe": "filtro: comércio (black friday)"
+ },
+ {
+  "hora": "04:18",
+  "fonte": "Busca - igualdade racial",
+  "titulo": "Lideranças globais discutem caminhos por justiça racial",
+  "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOX2ItWGpqVjNCem1fenlNN05kb0xNNjFuenY1UUdoN1NvVkY0UjFqaXZyRHFtNUNxNWs3TjlhVnd0TjltajZKSHZUZHA5eElNSzV2SEtQREw5NmZGNzc0QnR1TlZiR1RQckFLZEc5M0JoaFAtT1IwU2w2UlkzOUNPeHVpVHd0YWFuUEw2VGNYMzhHcW9sLVNGVkIxclhXNkxyV19qNGNVZS14MldGU0ROcUdnbVJiOXBxRU8xMllmbHZkV0lIOFE?oc=5",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 1,
+  "destino": "nota baixa",
+  "detalhe": "Título genérico e sem fato concreto; o material não traz informação suficiente para matéria honesta sobre justiça racial, e a fonte é de baixa credibilidade para o portal. Descartar."
  }
 ]
