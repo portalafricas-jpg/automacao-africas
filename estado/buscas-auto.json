@@ -102,5 +102,13 @@
   "busca": "\"Rashid\"",
   "grupo": 3,
   "auto": "2026-11-27"
+ },
+ {
+  "nome": "Busca - Alaíde Costa",
+  "categoria": "cultura",
+  "tipo": "busca",
+  "busca": "\"Alaíde Costa\"",
+  "grupo": 2,
+  "auto": "2026-11-27"
  }
 ]
