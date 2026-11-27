@@ -1311,5 +1311,38 @@
   "destino": "publicada",
   "detalhe": "Grupo Especial faz minidesfiles no Rio",
   "foto": "Thaís Brum e Eduardo Hollanda/Rio Carnaval/Divulgação, Thais Brum/Rio Carnaval/Divulgação e Eduardo Hollanda/Rio Carnaval/Divulgação"
+ },
+ {
+  "hora": "06:32",
+  "fonte": "Busca - Empreendedor negro",
+  "titulo": "Oito em Cada Dez Lojistas Esperam Aumentar o Faturamento na Black Friday, Aponta Pesquisa",
+  "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQTTNmSV80MTBjUHhvcjVGNU1iOUdaVEZoeHA0ejRxSTJUZ284dlB5ZWVtWXp4TEpOV2ZYaENZV3JwblhZeWNBRXR4ODFHTGJERmRzLXVKZXRtb0FXRHd5czAtTkxzdUlmaWZDVkRfWnpCQVh2azNGb1ZPRXRGdUJadTBGRG1BV1pnTlNXYUhrLWtVTktQWnJTaVRmYi1HVTNyYTF0YnRXQzFRS3JIQzFGN2V2NTAyMmJkQTV2aFVmX0ctQnRDTHViaThfZw?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "descartada pelo filtro",
+  "detalhe": "filtro: comércio (black friday)"
+ },
+ {
+  "hora": "06:32",
+  "fonte": "Busca - racismo estrutural",
+  "titulo": "II Jornada pela Equidade Racial do STJ retoma debate sobre racismo institucional e o Sistema de Justiça",
+  "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOWjdFblEtUVlDN1prUkU5X29icjUwRFdpcFZZUEJrek01YzJBQ1FqSFFZdjh3N1FoMXBOeHZHVlNva05DanE0V29neGFmSGVndzdlMFp2WWp2c3ZDeUpnS0lYeFk2VmZWUEZucmI1dFh2UmY3bDhPdERhbl9OYlVTUnM0VUI0Y05BLUlVU1RZQkN5UVdaN1FsTTE4cUxnSWVUQW9EaHRlSWx4YkZ6N0IzdFpMVlJZRUdKSjE5N2VfQVFRc2FudGVpOEhOZ2tYN2ZsZ25yQWN1ZkU?oc=5",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "Debate sobre racismo institucional e Sistema de Justiça em jornada do STJ; fato institucional ligado à equidade racial, sem fato novo de grande impacto."
+ },
+ {
+  "hora": "06:32",
+  "fonte": "Busca - rap nacional",
+  "titulo": "Rashid, Emicida e Projota lançam clipe emocionante da música 'Ouro, Mirra e Incenso'",
+  "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNUXlQQ0hQOVBCZ2ktOHZoWTJxNXVYMjl3Mm1KSm9xaGI0RExDeC1pRkdQTHFkcm9DaHlZRW1FaEYzWTlCSGUyeG5ib2RrTXVjRHFHNG5XUWVMY0R3LUQ5ZkNxQzk4bkRBQkZBVlJDd3AxeVQyQTFzeWhtZUVxU1hfeDhWcHhnSktsWTIwTkFIVW93OUFTMXJ4VmNGcGNCRGkwcWdGejlISlpBYk1tcEpNLXNTWGVXWVR5cnNIZkM5ek9iYVd2VmtZUVVpamJBRDQ?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Lançamento de clipe de artistas negros (Rashid, Emicida e Projota) em Gente e Música; não há matéria recente do mesmo clipe no portal, apenas o marco de 20 anos de amizade citado em outra notícia, sem repetição direta."
  }
 ]

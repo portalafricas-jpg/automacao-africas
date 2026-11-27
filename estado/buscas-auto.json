@@ -94,5 +94,13 @@
   "busca": "\"Sorriso Maroto\"",
   "grupo": 3,
   "auto": "2026-11-27"
+ },
+ {
+  "nome": "Busca - Rashid",
+  "categoria": "cultura",
+  "tipo": "busca",
+  "busca": "\"Rashid\"",
+  "grupo": 3,
+  "auto": "2026-11-27"
  }
 ]
