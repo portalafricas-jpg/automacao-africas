@@ -39,7 +39,7 @@ A parte entre as marcas AUTOMATICO é refeita sozinha pelo robô conexoes.yml se
 ### Robôs (gerado automaticamente a partir de .github/workflows)
 - ajuste-buscas.yml: Ajuste semanal das buscas (agendado (UTC): 0 12 * * 1). Chaves: GITHUB_TOKEN
 - alarme-repetidas.yml: Alarme de matérias repetidas (agendado (UTC): 30 10 * * *). Chaves: ANTHROPIC_API_KEY, GITHUB_TOKEN
-- assessorias-envio.yml: Assessorias - envio de e-mails (agendado (UTC): 7,37 * * * *). Chaves: GMAIL_SENHA_APP
+- assessorias-envio.yml: Assessorias - envio de e-mails (acionado sob demanda ou pelo cron-job.org). Chaves: GMAIL_SENHA_APP
 - comentarios.yml: Comente APP (acionado sob demanda ou pelo cron-job.org). Chaves: ANTHROPIC_API_KEY, FB_PAGE_ID, GITHUB_TOKEN, IG_USER_ID, META_PAGE_TOKEN
 - conexoes.yml: Atualizar conexões (agendado (UTC): 17 11 * * 1)
 - diagnostico-bing.yml: Diagnóstico do Bing (acionado sob demanda ou pelo cron-job.org)
@@ -49,7 +49,7 @@ A parte entre as marcas AUTOMATICO é refeita sozinha pelo robô conexoes.yml se
 - instagram-antigos.yml: Ligar posts antigos do Instagram às matérias (acionado sob demanda ou pelo cron-job.org). Chaves: IG_USER_ID, META_PAGE_TOKEN
 - legenda-teste.yml: Legenda (transcrever) (acionado sob demanda ou pelo cron-job.org)
 - metricas.yml: Resultados das redes (agendado (UTC): 0 10 * * *). Chaves: FB_PAGE_ID, IG_USER_ID, META_PAGE_TOKEN
-- redes.yml: Robô das redes (acionado sob demanda ou pelo cron-job.org). Chaves: ANTHROPIC_API_KEY, FB_PAGE_ID, IG_USER_ID, META_PAGE_TOKEN, YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN
+- redes.yml: Robô das redes (acionado sob demanda ou pelo cron-job.org). Chaves: ANTHROPIC_API_KEY, FB_PAGE_ID, GMAIL_SENHA_APP, IG_USER_ID, META_PAGE_TOKEN, YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN
 - reels-agora.yml: Publicar Reels agora (teste) (acionado sob demanda ou pelo cron-job.org). Chaves: ANTHROPIC_API_KEY, FB_PAGE_ID, IG_USER_ID, META_PAGE_TOKEN
 - robo.yml: Robô Áfricas (acionado sob demanda ou pelo cron-job.org). Chaves: ANTHROPIC_API_KEY, UNSPLASH_ACCESS_KEY
 - testar-fontes.yml: Testar fontes (acionado sob demanda ou pelo cron-job.org)
@@ -73,7 +73,7 @@ A parte entre as marcas AUTOMATICO é refeita sozinha pelo robô conexoes.yml se
 - CLOUDFLARE_API_TOKEN: formulario-publicar.yml
 - FB_PAGE_ID: comentarios.yml, metricas.yml, redes.yml, reels-agora.yml, teste-direct.yml, teste-meta.yml
 - GITHUB_TOKEN: ajuste-buscas.yml, alarme-repetidas.yml, comentarios.yml, grupos.yml
-- GMAIL_SENHA_APP: assessorias-envio.yml
+- GMAIL_SENHA_APP: assessorias-envio.yml, redes.yml
 - IG_USER_ID: comentarios.yml, instagram-antigos.yml, metricas.yml, redes.yml, reels-agora.yml, teste-direct.yml, teste-meta.yml
 - META_PAGE_TOKEN: comentarios.yml, instagram-antigos.yml, metricas.yml, redes.yml, reels-agora.yml, teste-contas-meta.yml, teste-direct.yml, teste-meta.yml
 - META_USER_TOKEN: teste-contas-meta.yml, teste-meta.yml
