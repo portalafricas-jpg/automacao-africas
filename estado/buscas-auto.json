@@ -118,5 +118,13 @@
   "busca": "\"Hariany Almeida\"",
   "grupo": 1,
   "auto": "2026-11-27"
+ },
+ {
+  "nome": "Busca - Alpha Blondy",
+  "categoria": "cultura",
+  "tipo": "busca",
+  "busca": "\"Alpha Blondy\"",
+  "grupo": 2,
+  "auto": "2026-11-27"
  }
 ]
