@@ -1,0 +1,30 @@
+name: Atualizar conexões
+
+# Refaz a lista automática de robôs e chaves no CONEXOES.md sempre que um robô muda (e uma vez por semana).
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [".github/workflows/**"]
+  schedule:
+    - cron: "17 11 * * 1"
+
+permissions:
+  contents: write
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - run: python gerar_conexoes.py
+      - name: Guardar
+        run: |
+          git config user.name "robo-africas"
+          git config user.email "robo-africas@users.noreply.github.com"
+          git add CONEXOES.md
+          git diff --cached --quiet && exit 0
+          git commit -m "Conexões: atualização automática"
+          for i in 1 2 3; do git pull --rebase && git push && exit 0; sleep 5; done
+          exit 1
