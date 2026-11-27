@@ -2660,5 +2660,38 @@
   "nota": 4,
   "destino": "nota baixa",
   "detalhe": "Formação de profissionais de saúde em Brasil e Portugal; relação Brasil-África e países de língua portuguesa, mas o resumo é protocolar e sem fato relevante."
+ },
+ {
+  "hora": "09:21",
+  "fonte": "Mundo Negro",
+  "titulo": "O STF precisa de uma ministra negra. E ainda é preciso explicar o óbvio",
+  "link": "https://mundonegro.inf.br/o-stf-precisa-de-uma-ministra-negra-e-ainda-e-preciso-explicar-o-obvio/",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "repetida",
+  "detalhe": "Opinião (coluna de Rodrigo França). Além disso, o tema já saiu no portal: 'Em carta, Lula é pressionado a indicar 1° mulher negra para o STF'. Conteúdo opinativo de outro veículo não entra."
+ },
+ {
+  "hora": "09:21",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "PCE do ABO distinguido pela ETOSSI Mining Angola",
+  "link": "https://www.giranoticias.com/economia/2026/11/32828-pce-do-abo-distinguido-pela-etossi-mining-angola.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 1,
+  "destino": "nota baixa",
+  "detalhe": "Notícia de Angola sobre distinção empresarial de mineração, sem interesse para o leitor brasileiro nem conexão com a temática racial; título confuso e sem conteúdo suficiente."
+ },
+ {
+  "hora": "09:21",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Carnaval 2027 mobiliza grupos e patrocinadores",
+  "link": "https://www.giranoticias.com/cultura/2026/11/32827-carnaval-2027-mobiliza-grupos-e-patrocinadores.html",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "Carnaval de Angola sobre mobilização de grupos e patrocinadores, sem personagem negro ou fato relevante para o público do Áfricas; material insuficiente."
  }
 ]
