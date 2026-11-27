@@ -438,5 +438,38 @@
   "nota": 7,
   "destino": "nota baixa",
   "detalhe": "evento local pequeno: Exposição Coisa de Preta com oficinas e apresentações, evento cultural negro, mas de porte local e sem personagem ou fato de destaque; sem repetição no portal."
+ },
+ {
+  "hora": "01:32",
+  "fonte": "Busca semanal - Alcione",
+  "titulo": "Leci Brandão recorda ajuda de Alcione para quitar apartamento: 'Vou perder'",
+  "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNemR0YTc5dEktNDdpSDBYN3NWTlM2Uk91RzJtcEN2ZUlsSzA4cnJHX3k2YkZ0eEdyWnN2NC1PMHM2S3lJUVczWXg3T3Y5Y3EwNEdHQ3B0Z1RmWVNSVnNWS0FwekRWeDJyb1BUeTA4SGVKVHQta3E0bmk2SDN4SDlyTUctYnFYODIzMmdmZ3NiQmdpbEVXTjgydTNuOHQycm5OU0ZiZ1FwM1M1NW5scl9RdnAzZGpPX3AyU0tVMERDTG40VFVfWUE?oc=5",
+  "categoria": "protagonista",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "01:33",
+  "fonte": "Busca - Arlindinho",
+  "titulo": "Arlindinho faz show gratuito no palco externo do Teatro Raul Cortez",
+  "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOXzEyclZ4U3FaX1FaMmR2MVc2czN2aUhCTkgyUGZfdVdvOXF5Y0VCWG81TkJUUUtPcUV6NDhEcnh0Y3p1UTd5eEhCa2dQWXlTcXRxT2NKNEk0UEZJVDVMUzRPbWlRRzB2eUdZUlhkajZFWnhJMG8yVXM4d3dNa2lzM2c2bFFoVG5kTG1SU3FhUEhTQUlQRDcybi1ySl9FNVVUM1hsVHBKTHpUc0toZWFtanYwdERVN1ZJT3FtedIBvAFBVV95cUxOXzEyclZ4U3FaX1FaMmR2MVc2czN2aUhCTkgyUGZfdVdvOXF5Y0VCWG81TkJUUUtPcUV6NDhEcnh0Y3p1UTd5eEhCa2dQWXlTcXRxT2NKNEk0UEZJVDVMUzRPbWlRRzB2eUdZUlhkajZFWnhJMG8yVXM4d3dNa2lzM2c2bFFoVG5kTG1SU3FhUEhTQUlQRDcybi1ySl9FNVVUM1hsVHBKTHpUc0toZWFtanYwdERVN1ZJT3FteQ?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "repetida",
+  "detalhe": "título quase igual a outra notícia"
+ },
+ {
+  "hora": "01:33",
+  "fonte": "Busca - Mart'nália",
+  "titulo": "Thiago Mocotó apresenta “Estradeiro”, single que celebra a liberdade, os encontros e a vida na estrada",
+  "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPWHd2MGItcTY4NFAyUjdlUlVRX1NVamtzckdZS3Y2dXFYLTI4TTJYNE8tT2twdmpFeWFGNWtRR2xVcDdocjZ4endWR0JHYzAzNWdzTlJBaTQ1RFdCeFVMdkpuMHdsZmt0OXYyb1NVRG1qSUp6bTRqTDlTWUdmV1RpWXNwdlk0QVR5dktCQ3J4UjNyOGtRX0VBS19Ud3BKbTlxMDdJV1FDSVdMcm1abmFka0lZOVFhbUpQTTVBb19MendzSGxqSUcwR1ZEb3UxMW9tbGs4SVlWMTEzdw?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Não há identificação de Thiago Mocotó como pessoa negra no material, nem conexão com a temática racial; o single não traz recorte racial. Fica fora da linha Gente e Música por falta de confirmação de raça e de relação com a pauta."
  }
 ]
