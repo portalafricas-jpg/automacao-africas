@@ -1,0 +1,13 @@
+name: Teste do protocolo anti-repetição (só leitura)
+on:
+  workflow_dispatch:
+jobs:
+  testar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Testar
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python teste_repetidas.py
