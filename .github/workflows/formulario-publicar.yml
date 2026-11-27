@@ -1,0 +1,38 @@
+name: Assessorias - publicar formulário
+
+# Publica o formulário das assessorias no Cloudflare Workers (grátis).
+# Acionado à mão, só depois do "sim" de Washington.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Publicar no Cloudflare
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: python cloudflare_publicar.py publicar
+
+      - name: Salvar o endereço
+        run: |
+          git config user.name "robo-africas"
+          git config user.email "robo-africas@users.noreply.github.com"
+          git add assessorias/formulario.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Assessorias: endereço do formulário"
+          for i in 1 2 3; do
+            git pull --rebase && git push && exit 0
+            sleep 5
+          done
+          exit 1
