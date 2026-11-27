@@ -1,0 +1,40 @@
+name: Ferramentas de vídeo (transcrição e máscara)
+
+# Roda quando entra um vídeo novo em video-ferramentas/entrada/ ou na mão.
+# Só lê os vídeos e grava os resultados em video-ferramentas/saida/. Não publica nada.
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "video-ferramentas/entrada/**"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ferramentas-video
+  cancel-in-progress: false
+
+jobs:
+  processar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Instalar ferramentas
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          pip install -q faster-whisper mediapipe opencv-python-headless numpy
+      - name: Processar vídeos
+        run: python video-ferramentas/processar.py
+      - name: Salvar resultados
+        run: |
+          git config user.name "Robô: ferramentas de vídeo"
+          git config user.email "actions@github.com"
+          git add video-ferramentas/saida
+          git diff --cached --quiet && exit 0
+          git commit -m "Ferramentas de vídeo: transcrição e máscara"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
