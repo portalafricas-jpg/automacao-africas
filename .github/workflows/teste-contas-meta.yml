@@ -1,0 +1,55 @@
+name: Teste das contas da Meta (só leitura)
+
+# Só lê informações. Não publica nada, não apaga nada, não altera nada.
+# Lista quais páginas do Facebook e quais Instagram a chave de usuário da Meta alcança.
+on:
+  workflow_dispatch:
+
+jobs:
+  teste:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Listar páginas, Instagram e permissões
+        env:
+          META_USER_TOKEN: ${{ secrets.META_USER_TOKEN }}
+          META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+        run: |
+          python3 - <<'FIM'
+          import json, os, urllib.parse, urllib.request, urllib.error
+          API = "https://graph.facebook.com/v26.0/"
+          def pede(caminho, params, token):
+              params = dict(params); params["access_token"] = token
+              url = API + caminho + "?" + urllib.parse.urlencode(params)
+              try:
+                  with urllib.request.urlopen(url, timeout=30) as r:
+                      return True, json.loads(r.read().decode())
+              except urllib.error.HTTPError as e:
+                  try: return False, json.loads(e.read().decode()).get("error", {}).get("message", str(e))
+                  except Exception: return False, str(e)
+          linhas = []
+          def diz(t=""):
+              print(t); linhas.append(t)
+          for nome, var in (("chave de usuário", "META_USER_TOKEN"), ("chave da página", "META_PAGE_TOKEN")):
+              tok = os.environ.get(var, "").strip()
+              diz(f"## {nome}")
+              if not tok:
+                  diz("- não configurada"); continue
+              ok, d = pede("me", {"fields": "id,name"}, tok)
+              diz(f"- quem é: {d.get('name') if ok else 'erro: ' + str(d)}")
+              ok, d = pede("me/accounts", {"fields": "name,instagram_business_account{username}", "limit": 50}, tok)
+              if ok:
+                  pags = d.get("data", [])
+                  diz(f"- páginas alcançadas: {len(pags)}")
+                  for p in pags:
+                      ig = (p.get("instagram_business_account") or {}).get("username")
+                      diz(f"  - página: {p.get('name')} | Instagram ligado: {('@' + ig) if ig else 'nenhum'}")
+              else:
+                  diz(f"- páginas: não deu para ler ({d})")
+              ok, d = pede("me/permissions", {}, tok)
+              if ok:
+                  conc = [x["permission"] for x in d.get("data", []) if x.get("status") == "granted"]
+                  diz(f"- permissões concedidas: {', '.join(conc) if conc else 'nenhuma lida'}")
+              diz()
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as f:
+              f.write("\n".join(linhas) + "\n")
+          FIM
