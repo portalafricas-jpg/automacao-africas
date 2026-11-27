@@ -5811,5 +5811,49 @@
   "nota": "",
   "destino": "repetida",
   "detalhe": "título quase igual a outra notícia"
+ },
+ {
+  "hora": "20:52",
+  "fonte": "Mundo Negro",
+  "titulo": "Bloco do Ne-Yo aparece na lista oficial do Carnaval 2027 em São Paulo",
+  "link": "https://mundonegro.inf.br/bloco-ne-yo-pre-aprovado-carnaval-sao-paulo-2027/",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Bloco de carnaval com Ne-Yo, cantor não confirmado; matéria é listagem sem fato sobre a população negra, e o tema é pouco relevante para a temática racial. Sem fato verificado sobre presença do artista."
+ },
+ {
+  "hora": "20:52",
+  "fonte": "Cultura Preta",
+  "titulo": "Nike e Tekken apresentam novos Air Max 1 inspirados no personagem King",
+  "link": "https://culturapreta.com/2026/11/27/nike-e-tekken-apresentam-novos-air-max-1-inspirados-no-personagem-king/",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Lançamento de tênis em colaboração Nike e Tekken é conteúdo publicitário/produto comercial, sem relação com a temática racial."
+ },
+ {
+  "hora": "20:52",
+  "fonte": "Africanize",
+  "titulo": "27/11/2026 Filmes e séries Filme com Lázaro Ramos, “Feito Pipa” entra na pré-lista do Globo de Ouro 2027 e representa o Brasil no Oscar Dirigido por Allan Deberton e protagonizado por Yuri Gomes, longa brasileiro aparece entre os elegíveis...",
+  "link": "https://africanizeoficial.com.br/filme-com-lazaro-ramos-feito-pipa-entra-na-pre-lista-do-globo-de-ouro-2027-e-representa-o-brasil-no-oscar",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 8,
+  "destino": "repetida",
+  "detalhe": "Filme com Lázaro Ramos e Yuri Gomes entrando na pré-lista do Globo de Ouro é fato novo, mas o portal já publicou 'Feito Pipa' em outras matérias recentes (conquista de prêmios na Espanha e inscrição em sete categorias do Globo de Ouro). Mesmo lançamento já publicado, portanto repetida."
+ },
+ {
+  "hora": "20:52",
+  "fonte": "Africanize",
+  "titulo": "27/11/2026 Carnaval Bloco com nome de Ne-Yo está previsto no Carnaval de rua de São Paulo em 2027 Agremiação aparece na programação preliminar da capital paulista, com desfile previsto para 8 de fevereiro,...",
+  "link": "https://africanizeoficial.com.br/bloco-com-nome-de-ne-yo-esta-previsto-no-carnaval-de-rua-de-sao-paulo-em-2027",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "repetida",
+  "detalhe": "Bloco com nome de Ne-Yo na programação preliminar do Carnaval de SP é o mesmo fato da notícia 1; sem presença confirmada do cantor e sem relação com a temática racial."
  }
 ]
