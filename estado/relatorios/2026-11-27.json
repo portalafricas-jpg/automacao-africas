@@ -900,5 +900,82 @@
   "nota": 7,
   "destino": "venceu na fila",
   "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "04:48",
+  "fonte": "Busca - Teatro negro",
+  "titulo": "Previsão do tempo em Manaus: 88% de chance de chuva com máxima de 32°C",
+  "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNMEpsbnpfRXp1c3A4bTEzRmhkNEt0XzJIU0sxZ1l0VzR2UnQ5T0wwYUtrTEdrYUxHLTlPODFCdnFTdVNkekwwd2EwVkhEUEJseV8tUWJCZ2Rlck16NHNzOUNWVGtWUXY2NmlJUXBDRGdnRld4V2d2a0dYbTZtUjdHamQ0WGticmlYR3VmUWFJaVF6XzZxNWJZQ19FYVhkYlFmXzBSazV5MDBFMEZxZkRB?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Previsão do tempo sem relação com a temática racial."
+ },
+ {
+  "hora": "04:48",
+  "fonte": "Busca semanal - Cabo Verde",
+  "titulo": "ONU-Habitat destaca avanço de países lusófonos diante de crise global de moradia",
+  "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1vSEVJR0FvOHRXcFcxUHJvVkFYUFJKTDF2ZUtOT3RWblhGakc0Q2wzYWpjeDZkNUFOdXp6aW5aaHc1Nk1RZkp4c1ljbHpIWWQxcDVhakJXdw?oc=5",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "Notícia de países lusófonos sobre moradia (ONU-Habitat), tema de interesse do leitor brasileiro e da diáspora; fonte africana, nota mínima 7."
+ },
+ {
+  "hora": "04:48",
+  "fonte": "Busca semanal - Cabo Verde",
+  "titulo": "Onde assistir à classificação da Fórmula 2 no Catar",
+  "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPdnNlNVJPNmp4VDM0STJaY0I3cXBEY1BDRnB3YXdwU0doUk1VNkJvQXFDMXM4Q09vSVdjWGZsWkFfSkFLVGRTenlKTTVnUEhUd21PMkZDQUNVQ2g4NVBKQWJ6YjEwLUtNYmVBWS1MN1RBQkd0NVhtelhGbUQ4X3NkMW1Gd3ZfMzVSVG1r?oc=5",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Automobilismo, sem relação com a temática racial nem com o interesse africano relevante; conteúdo de utilidade (onde assistir)."
+ },
+ {
+  "hora": "04:48",
+  "fonte": "Busca semanal - Cabo Verde",
+  "titulo": "Joana Rosa: «O voto não pode ser visto como uma mercadoria»",
+  "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNYlQwdnZvMTBOdllJZDBlTTZ3RkRZekk5czFmSUwybVdNWllHeEFWM1hQSG44Uk5mTUlzTDVWdERHcmJVUXVHMlAwU09JT1F0dzQtQ2t1UEpTZXQyYi1ZUTBZaVkyZ09IeWFsdjJHVXNVQzJPc0hZcVBrVFZOZzFWeGRVREJiYjMzZHNENXNQdnIyMXcwX3p3NDBGNS1jZkRpenVzMEZmQQ?oc=5",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Entrevista de opinião sobre voto, sem fato novo ligado à população negra; conteúdo de outro veículo."
+ },
+ {
+  "hora": "04:48",
+  "fonte": "Busca - injúria racial",
+  "titulo": "Número de negros cai conforme aumenta hierarquia em universidades, hospitais e Justiça de SP; veja levantamento do g1",
+  "link": "https://news.google.com/rss/articles/CBMihAJBVV95cUxPZG9IQ3h1Vm1ldHVySTlEUDNRb0czWnFDX21jSGI3SzNmRjdxVWxRMHROZzItSzdvUmprZXRmWWpac2dfbHQ4RnpTc2ZsWDctbzE4WWEzN19IdTBvWERzUlZrMHVpaFdrSGhKcG5zcFRpa3IyLXJpWlBDQnAzc25GdnhheFlaaW1CWFFKVHBnODNIOXoyUnZDU2JnY1VIY3FvYXdLNjJZMEVpOGpkMkc1aktsaGllVUZQdXhlU0dRSnJSd3NGQThjRFM2RUhIRm1uZ2VneXJlT3ZKbk9WMVZZTGFiWUVQcXBOeU9SSFNLT2xkaVNJbnZvZmt0V0FISmJXWEtFT9IBkwJBVV95cUxQdEZqYk41ZE1pa0E2TjE5XzkxdUl1VFdtTVNwaWdiUUpHYVpNcnhXQ1RoVjZuWXZPM1pLcjVVTHdicDFLRHlWSnd0R1AtaDdQNElwcXFaN2pXYV9vRTNpLTBlMFNyeEZVNkZGVzdNcUhUQUVnVk9XaXN6cFBDT0hjZFVKSUt4Q0Q1TWhmMUN4RzBSYm1YNUlqeWE3M01odDFaaXlqLW5kQmc2NW1NbXR0SE9aelFRQTNhNUF3U0tCUUdna1U5WVJ2M21iLU9oSHMyaWdxaVZkY1NYMnlHM0VaYVcyNzV0akdhdVRGUVh3Q0lsZ0IxYnh3LWx2UnFzUmxlc2JORkJkRmtYQzVfTnNXMEFfVQ?oc=5",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "Levantamento com dados sobre desigualdade racial no acesso a cargos de hierarquia; estudo com dados sobre racismo é notícia nota mínima 7. Fonte oficial ou vários veículos não confirmados, mas o levantamento é do g1 e trata de dados."
+ },
+ {
+  "hora": "04:48",
+  "fonte": "Busca - Sorriso Maroto",
+  "titulo": "Agenda cultural do fim de semana repleta de arte e ritmos em Pernambuco",
+  "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPVVoxZlNoaGFVTjZhRWl6ZUtXakVISDI1M240Z2UwbDZSd2p2Q1VxRU5pRS1XQXVNbE50RTRlQ2xNT3pmYlF1TlBfSDVyb0RQSWVUSzh6VzlBMnNUaGs3ZlFfYk1FNllHa1VYOWJzYzdnYnZLWU90Y2xGZUJYY1k2YzVsTlkxMF8wSlNyUHg1c0V0REo1eEptdw?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Agenda cultural genérica, sem recorte racial nem personagem negro específico."
+ },
+ {
+  "hora": "04:48",
+  "fonte": "Busca - injúria racial",
+  "titulo": "Justiça torna réu homem acusado de agredir motoboy e proferir ofensas raciais em BH",
+  "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPRFdCVlE4RHdnbGc0Uk5LSU9DTEZRNm5WU1BkOGpPY1lJcUw1YW5saHA0YTVvY3pNTU42Ni1zZGdIRGVTMmREZ2VWY0ZoTXYzWDYxbC1EWndvaVZ1WVdwbmJWY2VsT3VCSHEtSTA2cnhlZ2w0MXN3ckJMNE1mX0huc0hoUXFaYkp0TlRBS1ZmMmJhUUk3R3puSEs4U1BBeWlqUkRVX3FES2VOTDl3OXFDOENlRVlZQmNQM2c2SzNVZw?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 6,
+  "destino": "nota baixa",
+  "detalhe": "Caso de injúria racial com agressão, em que a Justiça torna réu o acusado; a questão racial é central, mas é fato de menor porte e sem decisão de grande impacto."
  }
 ]
