@@ -1,9 +1,11 @@
 name: Assessorias - envio de e-mails
 
 # Por enquanto: lê a caixa (só leitura) e envia o aviso de autor desconhecido para portalafricas@gmail.com (modelo 13).
-# Acionado à mão; depois vai para o cron-job.org nos horários aprovados.
+# Roda a cada 30 minutos pelo agendador do GitHub; os envios às assessorias terão os 4 horários aprovados.
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "7,37 * * * *"   # a cada 30 minutos (aprovado em 27/11/2026)
 
 permissions:
   contents: write
