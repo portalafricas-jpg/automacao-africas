@@ -1,6 +1,8 @@
 name: Teste de vozes gratuitas (só gera áudio)
 on:
   workflow_dispatch:
+permissions:
+  contents: write
 jobs:
   vozes:
     runs-on: ubuntu-latest
@@ -25,3 +27,9 @@ jobs:
         with:
           name: vozes
           path: saida/*.mp3
+      - name: Guardar os áudios num ramo separado (testes-voz)
+        run: |
+          git config user.name "Robô Áfricas"; git config user.email "robo@africas.com.br"
+          git checkout --orphan testes-voz
+          git rm -rq --cached . && mkdir -p vozes && cp saida/*.mp3 vozes/
+          git add vozes && git commit -qm "Áudios do teste de vozes" && git push -f origin testes-voz
