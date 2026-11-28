@@ -27,7 +27,7 @@ A parte entre as marcas AUTOMATICO é refeita sozinha pelo robô conexoes.yml se
 
 ## Falta conectar (foco atual: TikTok, Instagram pessoal, LinkedIn pessoal e LinkedIn da empresa)
 - TikTok @africasplay: conta de desenvolvedor criada (portalafricas@gmail.com), organização "Áfricas Play" e app "Áfricas Play" (tipo Outro, categoria News, plataforma Web) em rascunho. Falta: verificar o domínio africas.com.br (registro TXT no DNS), ícone 1024x1024, produtos (Login Kit + Content Posting API/Direct Post), guardar Client key/secret nos Secrets e enviar para auditoria. Antes: pedir permissão de postagem e passar pela auditoria (antes dela, posts saem privados). Hoje o dlvr.it posta.
-- Instagram pessoal do Washington: conta profissional; falta ligar a uma página do Facebook e à chave da Meta para postar pela API.
+- Instagram pessoal do Washington (@washington_andrade1): ligado em 28/11/2026 à página nova do Facebook "Washington Lúcio Andrade" (Jornalista, id 61597240101492). Falta: incluir essa página/Instagram na autorização da chave META_USER_TOKEN (integrações comerciais, no perfil pessoal do Facebook), gerar a chave da página nova e guardar nos Secrets (nomes sugeridos: META_PAGE_TOKEN_WASHINGTON, FB_PAGE_ID_WASHINGTON, IG_USER_ID_WASHINGTON). Pedido do Washington: postar no Instagram pessoal tudo o que vai para o @africasplay (mostrar como antes de ativar).
 - LinkedIn pessoal e LinkedIn do Áfricas: publicação por API exige aprovação da LinkedIn (Community Management API). Hoje: manual ou pelo Chrome.
 - Threads: ajustar a bio; ligar a publicação por API.
 - Flickr do Ministério da Igualdade Racial: falta a chave gratuita.
@@ -35,6 +35,7 @@ A parte entre as marcas AUTOMATICO é refeita sozinha pelo robô conexoes.yml se
 - X (Twitter): não será pago.
 
 ## Histórico de mudanças (a mais nova em cima)
+- 28/11/2026: criada a página do Facebook "Washington Lúcio Andrade" e ligada ao Instagram @washington_andrade1. Comente APP: avisos agora só por e-mail (não abre mais issue pública). Ícone do app em assets/marca/icone-app-1024.png. Termos também em https://aplicativo.africas.com.br/termos-de-uso-e-privacidade/.
 - 28/11/2026: TikTok: verificação do domínio pedida por Washington à Portal Administrável (DNS de africas.com.br: ns1/ns2.portaladministravel.com.br), resposta só na segunda. Valor TXT: tiktok-developers-site-verification=I8IyaG4rZ0NlhzkbqyAtCrCxSvp5ThZe. Alternativa testada: arquivo de assinatura e página de termos em aplicativo.africas.com.br (repositório aplicativo-africasplay); o TikTok recusou 3 vezes (não achou a assinatura). Rascunho do app ainda não salvo: preencher de novo categoria News, descrição, links dos termos e plataforma Web depois da verificação.
 - 28/11/2026: TikTok: conta de desenvolvedor, organização e app "Áfricas Play" criados (rascunho). O TikTok exige verificar o domínio dos termos: registro TXT pendente no DNS de africas.com.br.
 - 28/11/2026: política de privacidade e termos para as redes (TikTok, Meta, LinkedIn, Threads): usar https://www.africas.com.br/termos-de-uso-e-privacidade (item 17 novo, contato redacao@africas.com.br). As páginas no Cloudflare (cloudflare/paginas.js) ficam descartadas.
