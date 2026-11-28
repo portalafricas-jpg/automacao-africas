@@ -26,7 +26,7 @@ A parte entre as marcas AUTOMATICO é refeita sozinha pelo robô conexoes.yml se
 - Conectores do Claude na conta: Gmail, Google Agenda, Google Drive, Docs, Planilhas, Slides, Canva, Cloudflare, Claude Docs, memória. Claude in Chrome só com o computador do Washington ligado.
 
 ## Falta conectar (foco atual: TikTok, Instagram pessoal, LinkedIn pessoal e LinkedIn da empresa)
-- TikTok @africasplay: criar app de desenvolvedor, pedir permissão de postagem e passar pela auditoria (antes dela, posts saem privados). Hoje o dlvr.it posta.
+- TikTok @africasplay: conta de desenvolvedor criada (portalafricas@gmail.com), organização "Áfricas Play" e app "Áfricas Play" (tipo Outro, categoria News, plataforma Web) em rascunho. Falta: verificar o domínio africas.com.br (registro TXT no DNS), ícone 1024x1024, produtos (Login Kit + Content Posting API/Direct Post), guardar Client key/secret nos Secrets e enviar para auditoria. Antes: pedir permissão de postagem e passar pela auditoria (antes dela, posts saem privados). Hoje o dlvr.it posta.
 - Instagram pessoal do Washington: conta profissional; falta ligar a uma página do Facebook e à chave da Meta para postar pela API.
 - LinkedIn pessoal e LinkedIn do Áfricas: publicação por API exige aprovação da LinkedIn (Community Management API). Hoje: manual ou pelo Chrome.
 - Threads: ajustar a bio; ligar a publicação por API.
@@ -35,6 +35,7 @@ A parte entre as marcas AUTOMATICO é refeita sozinha pelo robô conexoes.yml se
 - X (Twitter): não será pago.
 
 ## Histórico de mudanças (a mais nova em cima)
+- 28/11/2026: TikTok: conta de desenvolvedor, organização e app "Áfricas Play" criados (rascunho). O TikTok exige verificar o domínio dos termos: registro TXT pendente no DNS de africas.com.br.
 - 28/11/2026: política de privacidade e termos para as redes (TikTok, Meta, LinkedIn, Threads): usar https://www.africas.com.br/termos-de-uso-e-privacidade (item 17 novo, contato redacao@africas.com.br). As páginas no Cloudflare (cloudflare/paginas.js) ficam descartadas.
 - 28/11/2026: TikTok: decidido seguir só pela postagem direta (robô 100% automático, depois da auditoria). Páginas de privacidade e termos prontas em cloudflare/paginas.js (robô paginas-publicar.yml), mas a publicação falhou porque a chave do Cloudflare está vazia no cofre. Alternativa: publicar em aplicativo.africas.com.br/privacidade/ e /termos/ (repositório aplicativo-africasplay).
 - 28/11/2026: voz padrão fixa: os robôs copiam a voz dos arquivos vozes-padrao/masculina.wav e feminina.wav (VoxCPM2 com prompt_wav_path + prompt_text + reference_wav_path). Sem isso, cada frase sai com uma voz diferente. Robôs do Calendário Afro: calendario-imagens, calendario-voz, calendario-voz-teste, calendario-voz-salvar. Artefatos do GitHub não baixam nesta sessão: guardar áudios em ramo (calendario-voz-teste, calendario-audio).
