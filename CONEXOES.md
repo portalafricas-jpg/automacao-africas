@@ -18,6 +18,7 @@ A parte entre as marcas AUTOMATICO é refeita sozinha pelo robô conexoes.yml se
 - Gmail dos robôs (envio e leitura dos e-mails das assessorias).
 - Cloudflare (formulário das assessorias).
 - Unsplash (fotos de reserva).
+- Voz gratuita (narração): VoxCPM2, motor de licença Apache-2.0 do VoiceStudio, roda no próprio GitHub sem chave e sem custo (workflow teste-voz.yml). Duas vozes aprovadas por Washington em 27/11/2026: masculina de locutor e feminina de apresentadora. Ainda não ligada aos robôs de vídeo.
 - Site africas.com.br: lê os 6 RSS do robô em feeds/ (politica, mundo, cotidiano, cultura, ancestralidade, protagonista). Publicar matéria = gravar no RSS da categoria.
 - cron-job.org (conta do Washington): aciona robô do portal (:02, :17, :32, :47), robô das redes e Comente APP.
 - Conectores do Claude na conta: Gmail, Google Agenda, Google Drive, Docs, Planilhas, Slides, Canva, Cloudflare, Claude Docs, memória. Claude in Chrome só com o computador do Washington ligado.
@@ -28,10 +29,11 @@ A parte entre as marcas AUTOMATICO é refeita sozinha pelo robô conexoes.yml se
 - LinkedIn pessoal e LinkedIn do Áfricas: publicação por API exige aprovação da LinkedIn (Community Management API). Hoje: manual ou pelo Chrome.
 - Threads: ajustar a bio; ligar a publicação por API.
 - Flickr do Ministério da Igualdade Racial: falta a chave gratuita.
-- ElevenLabs (voz clonada), OneSignal (push do app), Google Analytics e AdSense: não ligados aos robôs.
+- ElevenLabs: substituída pelo VoxCPM2 gratuito (voz clonada do Washington ainda não testada). OneSignal (push do app), Google Analytics e AdSense: não ligados aos robôs.
 - X (Twitter): não será pago.
 
 ## Histórico de mudanças (a mais nova em cima)
+- 27/11/2026: voz gratuita VoxCPM2 (do VoiceStudio) testada no GitHub e aprovada; substitui a ElevenLabs.
 - 27/11/2026: arquivo criado a partir da conversa de automação.
 
 <!-- AUTOMATICO:INICIO -->
