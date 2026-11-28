@@ -1,0 +1,44 @@
+name: Teste do Radar com HyperFrames (só gera vídeo, não publica)
+
+# Radar (5 notícias do dia) atual × novo com HyperFrames, pedido por Washington em 28/11/2026.
+# Gera os vídeos, confere (foto × nome, duração, som, -14 LUFS), guarda no galho midia e manda por e-mail.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: teste-radar-hyperframes
+  cancel-in-progress: false
+
+jobs:
+  teste:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Instalar ferramentas
+        run: |
+          pip install -q pillow requests
+          which ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
+          ffmpeg -version | head -1
+          node -v
+      - name: Montar e conferir os vídeos
+        env:
+          GMAIL_SENHA_APP: ${{ secrets.GMAIL_SENHA_APP }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python video-hyperframes/teste_radar_hyperframes.py
+      - name: Guardar no depósito de mídia (galho midia, apagado após 7 dias)
+        if: always()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ls ensaio/radar-hyperframes/*.mp4 >/dev/null 2>&1 || exit 0
+          bash guardar_midia.sh "Teste do Radar com HyperFrames" $(ls ensaio/radar-hyperframes/*.mp4 ensaio/radar-hyperframes/relatorio.txt 2>/dev/null)
