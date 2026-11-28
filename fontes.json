@@ -1516,5 +1516,40 @@
     "tipo": "pagina",
     "url": "https://www.gov.br/igualdaderacial/pt-br/assuntos/noticias",
     "criada": "2026-11-27"
+  },
+  {
+    "nome": "Disney Brasil - Cinema",
+    "categoria": "cultura",
+    "tipo": "pagina",
+    "url": "https://imprensa.disney.com.br/cinema",
+    "criada": "2026-11-27"
+  },
+  {
+    "nome": "Disney Brasil - Disney+",
+    "categoria": "cultura",
+    "tipo": "pagina",
+    "url": "https://imprensa.disney.com.br/noticias-disney-plus",
+    "criada": "2026-11-27"
+  },
+  {
+    "nome": "Netflix Brasil - Imprensa",
+    "categoria": "cultura",
+    "tipo": "pagina",
+    "url": "https://about.netflix.com/pt_br/newsroom",
+    "criada": "2026-11-27"
+  },
+  {
+    "nome": "Warner/HBO Max - Imprensa",
+    "categoria": "cultura",
+    "tipo": "pagina",
+    "url": "https://press.wbd.com/pt-br-br",
+    "criada": "2026-11-27"
+  },
+  {
+    "nome": "EPK.tv - Lançamentos",
+    "categoria": "cultura",
+    "tipo": "pagina",
+    "url": "https://www.epk.tv/",
+    "criada": "2026-11-27"
   }
 ]
