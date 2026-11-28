@@ -21,7 +21,7 @@ ARQ_CONFIG = os.path.join(PASTA, "pessoal-config.json")
 API_META = "https://graph.facebook.com/v26.0/"
 MODELO = "claude-haiku-5-5"
 INSTAGRAM = "washington_andrade1"  # Instagram ligado à página "Washington Lúcio Andrade"
-LIMITE = 700
+LIMITE = 800
 
 CHAMADA_PESSOAL = "👉🏿 A matéria completa está no @africasplay e no app Áfricas Play."
 
@@ -91,15 +91,25 @@ def corpo_da_legenda(legenda_ig):
     return "\n\n".join(corpo), resto
 
 
-MARCAS = ("publicamos", "contamos", "trouxemos", "trago", "fiz questão", "nós", "nosso", "nossa",
-          "eu ", "meu ", "minha ", "acompanhei", "acompanhamos", "destaco", "convido", "recomendo")
+PRIMEIRA = re.compile(r"\b(eu|meu|minha|meus|minhas|nós|nosso|nossa|nossos|nossas|trago|destaco|recomendo|convido|"
+                      r"\w+(amos|emos|imos))\b", re.IGNORECASE)
 
 
 def em_primeira_pessoa(texto, original):
-    t = (texto or "").lower()
-    if not t or t.strip() == (original or "").lower().strip():
+    t = (texto or "").strip()
+    if not t or t.lower() == (original or "").lower().strip():
         return False
-    return any(m in t for m in MARCAS)
+    primeira_frase = re.split(r"(?<=[.!?:])\s", t, maxsplit=1)[0]
+    return bool(PRIMEIRA.search(primeira_frase))
+
+
+def cortar(texto):
+    """Se passar do limite, corta no fim de uma frase (nunca no meio)."""
+    if len(texto) <= LIMITE:
+        return texto
+    trecho = texto[:LIMITE]
+    fim = max(trecho.rfind(". "), trecho.rfind(".\n"), trecho.rfind("! "), trecho.rfind("? "))
+    return trecho[:fim + 1].strip() if fim > 200 else trecho.rsplit(" ", 1)[0] + "..."
 
 
 def primeira_pessoa(corpo, tentativas=2):
@@ -125,9 +135,7 @@ def _primeira_pessoa(corpo):
     if not em_primeira_pessoa(texto, corpo):
         return ""
     texto = re.sub(r"#\S+", "", texto).strip()
-    if len(texto) > LIMITE:
-        texto = texto[:LIMITE].rsplit("\n\n", 1)[0]
-    return texto
+    return cortar(texto)
 
 
 def legenda_pessoal(legenda_ig):
