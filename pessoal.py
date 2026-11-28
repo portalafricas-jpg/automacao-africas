@@ -20,7 +20,7 @@ PASTA = os.path.dirname(os.path.abspath(__file__))
 ARQ_CONFIG = os.path.join(PASTA, "pessoal-config.json")
 API_META = "https://graph.facebook.com/v26.0/"
 MODELO = "claude-haiku-5-5"
-PAGINA_ID = "61597240101492"  # página do Facebook "Washington Lúcio Andrade"
+INSTAGRAM = "washington_andrade1"  # Instagram ligado à página "Washington Lúcio Andrade"
 LIMITE = 700
 
 CHAMADA_PESSOAL = "👉🏿 A matéria completa está no @africasplay e no app Áfricas Play."
@@ -29,8 +29,10 @@ INSTRUCAO = """Você reescreve legendas do Instagram do Áfricas Play para o Ins
 Washington Lúcio Andrade, jornalista, CEO e editor-chefe do Áfricas Play.
 
 Regras:
-- Escreva em primeira pessoa, como o próprio Washington comentando a notícia que o Áfricas publicou
-  (ex.: "Publicamos no Áfricas...", "No Áfricas Play, contamos...", "Vale ler a história de...").
+- OBRIGATÓRIO: a primeira frase já é em primeira pessoa, com a voz do Washington apresentando a notícia
+  que o Áfricas publicou (ex.: "Publicamos no Áfricas Play...", "Contamos no Áfricas...",
+  "Uma história que fiz questão de trazer para o Áfricas Play:"). Use "eu" ou "nós" (a equipe do Áfricas)
+  também em pelo menos mais um trecho. Não copie a legenda original: reescreva com as suas palavras.
 - NUNCA diga que ele esteve num lugar, conversou com alguém, viu algo ou participou de algo,
   a não ser que isso esteja escrito na legenda original. Não invente fato, nome, número nem opinião forte.
 - Mantenha os fatos, os nomes e o sentido da legenda original. Português do Brasil.
@@ -61,7 +63,7 @@ def contexto():
     try:
         r = requests.get(API_META + "me/accounts", timeout=60, params={
             "access_token": usuario, "limit": 100,
-            "fields": "id,name,access_token,instagram_business_account"}).json()
+            "fields": "id,name,access_token,instagram_business_account{id,username}"}).json()
     except Exception as e:
         log(f"Instagram pessoal: falha ao ler as páginas ({e.__class__.__name__}).")
         return None
@@ -69,10 +71,9 @@ def contexto():
         log(f"Instagram pessoal: a Meta recusou a leitura das páginas ({r['error'].get('message')}).")
         return None
     for p in r.get("data", []):
-        if p.get("id") == PAGINA_ID:
-            ig = (p.get("instagram_business_account") or {}).get("id")
-            if p.get("access_token") and ig:
-                return p["access_token"], ig
+        conta = p.get("instagram_business_account") or {}
+        if (conta.get("username") or "").lower() == INSTAGRAM and p.get("access_token") and conta.get("id"):
+            return p["access_token"], conta["id"]
     log("Instagram pessoal: a página Washington Lúcio Andrade ou o Instagram dela não apareceu para a chave.")
     return None
 
@@ -90,7 +91,27 @@ def corpo_da_legenda(legenda_ig):
     return "\n\n".join(corpo), resto
 
 
-def primeira_pessoa(corpo):
+MARCAS = ("publicamos", "contamos", "trouxemos", "trago", "fiz questão", "nós", "nosso", "nossa",
+          "eu ", "meu ", "minha ", "acompanhei", "acompanhamos", "destaco", "convido", "recomendo")
+
+
+def em_primeira_pessoa(texto, original):
+    t = (texto or "").lower()
+    if not t or t.strip() == (original or "").lower().strip():
+        return False
+    return any(m in t for m in MARCAS)
+
+
+def primeira_pessoa(corpo, tentativas=2):
+    for _ in range(tentativas):
+        texto = _primeira_pessoa(corpo)
+        if texto:
+            return texto
+    log("  Instagram pessoal: o Claude não entregou legenda em primeira pessoa; post pessoal fica de fora.")
+    return ""
+
+
+def _primeira_pessoa(corpo):
     chave = (os.environ.get("ANTHROPIC_API_KEY") or "").strip()
     if not chave or not corpo:
         return ""
@@ -101,6 +122,8 @@ def primeira_pessoa(corpo):
     with urllib.request.urlopen(req, timeout=90) as r:
         resp = json.loads(r.read().decode("utf-8"))
     texto = "".join(b.get("text", "") for b in resp.get("content", []) if b.get("type") == "text").strip()
+    if not em_primeira_pessoa(texto, corpo):
+        return ""
     texto = re.sub(r"#\S+", "", texto).strip()
     if len(texto) > LIMITE:
         texto = texto[:LIMITE].rsplit("\n\n", 1)[0]
@@ -110,7 +133,9 @@ def primeira_pessoa(corpo):
 def legenda_pessoal(legenda_ig):
     """Legenda em primeira pessoa + chamada para o Áfricas + créditos e hashtags da original."""
     corpo, resto = corpo_da_legenda(legenda_ig)
-    novo = primeira_pessoa(corpo) or corpo
+    novo = primeira_pessoa(corpo)
+    if not novo:
+        return ""
     creditos = [p for p in resto if p.strip().startswith(("Texto:", "📸"))]
     tags = [p for p in resto if p.strip().startswith("#")]
     return "\n\n".join(x for x in [novo, CHAMADA_PESSOAL] + creditos + tags if x)
@@ -126,7 +151,10 @@ def copiar_carrossel(enderecos, alts, legenda_ig):
             return None
         import redes
         token, ig = ctx
-        midia, link = redes.publicar_carrossel(enderecos, alts, legenda_pessoal(legenda_ig), token, ig)
+        legenda = legenda_pessoal(legenda_ig)
+        if not legenda:
+            return None
+        midia, link = redes.publicar_carrossel(enderecos, alts, legenda, token, ig)
         log(f"  Instagram pessoal: carrossel copiado {link}")
         return link
     except Exception as e:
@@ -165,7 +193,7 @@ def previa():
         textos = redes.gerar_textos(item)
         leg_ig, _ = redes.montar_legendas(item, textos)
         linhas += [f"## {item['titulo']}", "", "### No @africasplay", "", leg_ig, "",
-                   "### No seu Instagram (primeira pessoa)", "", legenda_pessoal(leg_ig), "", "---", ""]
+                   "### No seu Instagram (primeira pessoa)", "", legenda_pessoal(leg_ig) or "(sem legenda: não sairia no pessoal)", "", "---", ""]
     texto = "\n".join(linhas)
     os.makedirs(os.path.join(PASTA, "estado"), exist_ok=True)
     with open(os.path.join(PASTA, "estado", "previa-instagram-pessoal.md"), "w", encoding="utf-8") as f:
