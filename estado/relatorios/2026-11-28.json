@@ -1,0 +1,112 @@
+[
+ {
+  "hora": "00:03",
+  "fonte": "Busca - samba",
+  "titulo": "Antena 10 FM",
+  "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNdkpWM3FsTDFiWDV5UjQ4cF9XVVJ1NkYxVmhhOEFydzlxdGtaME4zblRUMk9rNThXX2VJOUpQRm0yMlo0OFN4M3NKYkhNS3ViSWxzcFY5bEZqYjJwb1o2UWU4YlZuT1RXTkJGbDYyU2otOGx3eFJzWElGU191YjUwZUNZdW1kaVVuazgza1FBVHk5WG5yRlhXX0lTTkluZm9VaEVPNENQZTRCajFUeHc0YUtQMDNIUW8?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "descartada pelo filtro",
+  "detalhe": "filtro: busca ampla sem sinal (artista, escola/bloco ou termo)"
+ },
+ {
+  "hora": "00:03",
+  "fonte": "Netflix Brasil - Imprensa",
+  "titulo": "Treta em família: episódio de reencontro de Sua Mãe Te Conhece? chega com revelações inéditas e climão garantido →",
+  "link": "https://about.netflix.com/pt_br/news/family-drama-mom-knows-best-reunion-episode-arrives-with-never-before-seen-revelations-and-guaranteed-tension",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "descartada pelo filtro",
+  "detalhe": "filtro: busca ampla sem sinal (artista, escola/bloco ou termo)"
+ },
+ {
+  "hora": "00:03",
+  "fonte": "Busca - samba",
+  "titulo": "Duda Freire aposta em fantasia com mais de 20 mil cristais para minidesfile da Vila Isabel",
+  "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOenBzZHllNi1GUEpkM1h0Rml0NTFtOThrMDhYdDRIdW8xRExqTHo0eWNmb25VN2NqVWJYZXlweG1fdDJFSFVwVllXTkhpTXkwV3VaNlU2V01pQlBqbHFQQW1rTDRTR3Z1NDdDUDVJTkJpNUlmX0xGRzlWeUN4Rms2VmJFOWdBVGtnN2ZsUi1KT0lIdG9tT2pEV3FpaElfQ0JyZUc0SXB4MmwzcTEtcmV2Ynh1Q3IzVjBqZ1dYZjg3a0xVWk1fM0NWVjJWaUpYOHA3SEZYUmo1ajJJemw0ekZKbTVZRXBfNjUw0gHoAUFVX3lxTE56cHNkeWU2LUZQSmQzWHRGaXQ1MW05OGswOFh0NEh1bzFETGpMejR5Y2ZvblU3Y2pVYlhleXB4bV90MkVIVXBWWVdOSGlNeTBXdVo2VTZXTWlCUGpscVBBbWtMNFNHdnU0N0NQNUlOQmk1SWZfTEZHOVZ5Q3hGazZWYkU5Z0FUa2c3ZmxSLUpPSUh0b21PakRXcWloSV9DQnJlRzRJcHgybDNxMS1yZXZieHVDcjNWMGpnV1hmODdrTFVaTV8zQ1ZWMlZpSlg4cDdIRlhSajVqMkl6bDR6RkptNVlFcF82NTA?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 8,
+  "destino": "repetida",
+  "detalhe": "Carnaval e desfile de escola de samba; mas o tema da fantasia e minidesfile já cobertos pelo portal em matérias recentes sobre minidesfiles e prévias do Carnaval 2027 (Dia do Samba). Sem fato novo além de notícia de fantasia já coberta. Marcada repetida por cobertura do mesmo evento de minidesfile."
+ },
+ {
+  "hora": "00:03",
+  "fonte": "Busca - Literatura negra",
+  "titulo": "O Meu Bairro também é deste País Episódio 36 - de 28 nov 2026",
+  "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9JNGZxLW05dHJfd3JzNlNRZVVSSmFsRWR0UDJCNGVoVk1TdnY3N2c3UHczQWZDYmIzVlFvdlV0eDNQdXVlZldYdDg0dXlVVzNCTV9xVjlCWElYZTh3Y3NWYUdoNUZXSC04WThPdUhhYnpSS1pUUEpTVm9Qbw?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Título e resumo sem relação com a temática racial; programa de TV portuguesa sem fato relevante para a população negra."
+ },
+ {
+  "hora": "00:03",
+  "fonte": "Busca - Belo cantor",
+  "titulo": "Belo quebra o silêncio após Gracyanne Barbosa revelar ameaças durante casamento",
+  "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPdkVjcFdRdlJva3RwTm1SVkloNEJWSl9wZF9memZsTFBhMEhqSHVIV2NObGdVS1RSOUh2TTFBemxvOFJrNVFMczNXVFlKcGtHWHh3T2ZZcWctbF9xajlSS29iY1p1ZzRpV0lqeE9xVGY1VjRiRHo0eEJkSnlnendmdENYRkp4T3RmQWFhYUpVN0J5OWRhdTRVd05kT0lpUUgwbWszMEg3WDdKOUpOaF9hZ0xHWktKRUQ1Y3FJRV9NVkcwdS1YbWJ4NERUSzM1UdIB0wFBVV95cUxOX0FxMFdaV1pnd0hsUGdINXRnTkF4VGt1cFdhNV9EQWd0bmlPRmF4enlkbzFCZ2ZsbU5NQkdiNnhrdHR5VUR5Z3luVlFuUjJtejh0bFBuT2Y0SnRWdUxNbnJCMF9ObUF1cVgzSGtKdGxPSlFRcl92YU1XdTNqc3otUUxDazVzRmV4M1lLWS1JeVJrOTdiY21QTVZIMkxJeTRoZ01IMmVWMmxwSDRSRl9kbW95Qm85bGd1amZYVVgxckNjQWlZcllmTTdfYmgyblZGNGxR?oc=5",
+  "categoria": "protagonista",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Fofoca: briga e polêmica pessoal entre famosos após casamento, sem trabalho ou agenda pública."
+ },
+ {
+  "hora": "00:03",
+  "fonte": "Busca semanal - Martinho da Vila",
+  "titulo": "Sabadinho Bom leva samba de raiz de Luizinho do Pagode ao Centro Histórico",
+  "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQT0ptMmV3bU9xQ0Q1dDJkYWI1OVgyQllPZDJxdVBUOGZSeGFzQl9sSjhNMXFCWVZUem1VamRUby1TWjREVm9KTmVtR0JWRHpHUmFRYzg4N2tudVVCUVZoU3hKY3pzSDVaU0JLMXhxa285OFJxaHNJb0NXNWhqUVV6NmJqQXprQng3aHJRRnBXUThDZjcwUW1oWV9WTXg5aTFUdlAxUlRyVTlVZVVm?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Show de samba de raiz de artista negro ligado ao pagode; agenda musical de artista negro, nota mínima 7 em Gente e Música. Fonte de release de baixa visibilidade, mas é agenda pública de artista."
+ },
+ {
+  "hora": "00:03",
+  "fonte": "Busca - samba",
+  "titulo": "Vanessa Lóes comemora 55 anos em roda de samba com o filho",
+  "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNeF9kVnl0TlM4QWxyVzFtaTZpbnROcG5lZDJVeFFJTTZnVV95NzZOeVNlN0MtQm0wb1kwM1RfRVM1OFF1aVFkX29GYUptbDUxSnR1clk5eDE3YU83XzFKTV80S0RlaTJCU1UwTHV4MFg3MkliR2hHZDRCWHlPRVUtNUN0MVRnemllRm1NcHg5akpfcDdWQ2NZbFhlZHlRVThFekN3NzZQdnhUQ0VGUFBoRHNtbV9Sdl9aanVtdVRvOXpMQQ?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Aniversário de pessoa em roda de samba com o filho: vida pessoal e celebração privada, sem trabalho ou fato relevante."
+ },
+ {
+  "hora": "00:03",
+  "fonte": "Busca - samba",
+  "titulo": "Samba de São Paulo deve muito a Santo André, diz Leandro Lehart | Diário do Grande ABC - Notícias e informações",
+  "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPZlFEUGlfUUlrVlc4SDV0U2NmSVNCU0JxU2x0MTlFdHRUdlIzNk95bUMxLWNvQXZyQkJTNXp5Vmd3aER2VkJGSXhPb0JaY3RoZjllM0dVdFlLa2ZtempPWHFvcU9IQWFONC1QNGp5dnpuTUhGQ0NaSWpLUkRsT2FjSGZ0T0R2Qm9nWnFhZlNYaWV3TnA2UHEwY2lUdXVWcU9RTEFJX2ln?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 6,
+  "destino": "nota baixa",
+  "detalhe": "Entrevista com fala pública de artista negro sobre a origem do samba paulista; é conteúdo de entrevista de outro veículo, com fala sem fato novo claro, então fica na faixa mediana."
+ },
+ {
+  "hora": "00:03",
+  "fonte": "Busca semanal - Manoel Soares",
+  "titulo": "Qymira fala com exclusividade ao Tô Na Fama e revela detalhes de parceria com Edílson Capetinha e Timbalada",
+  "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNMV9sSmNUeFFuVlk3QkdJTDVzSWVEMVpPYUFKU0tXMjRCQmNBdkNDYmJVT0FiaFpDd1B4N3Z2Ukt5bXRIcldVajB3VEYzQWRWbUd5TFE2MG42Qm5TZ2VvWkVOeEd0aElhU1B1MHkzU290cC1BWHl1X2VSMl92OGQwM25TbENhLUtLcThwWFhFY2RfMmtWUHV4WGVrd1NxYXhlVnZhRXVyanQzem5jTW92dEJWYmtDdUo0MldaSG5XR1ZaVUxucDhjcmtTb1k5UE5t?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Conteúdo exclusivo de outro veículo (entrevista exclusiva ao Tô Na Fama), não entra conforme a linha editorial."
+ },
+ {
+  "hora": "00:03",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Aristides Pereira foi Presidente de Cabo Verde",
+  "link": "https://www.giranoticias.com/blogs/personalidade-da-semana/2026/11/32756-aristides-pereira-foi-presidente-de-cabo-verde.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Notícia da África sem material suficiente: apenas título com a menção de ex-presidente, sem fato novo, desdobramento ou ligação com o Brasil no material recebido. Descartada por falta de informação suficiente para matéria honesta."
+ }
+]
