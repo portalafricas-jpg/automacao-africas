@@ -1054,5 +1054,60 @@
   "nota": 6,
   "destino": "nota baixa",
   "detalhe": "Debate sobre mobilização por mulher negra no STF; a questão racial é central, mas é uma opinião/fala de ministra sem fato novo claro, e a ligação com a indicação ao STF já foi tratada no portal."
+ },
+ {
+  "hora": "03:32",
+  "fonte": "Ministério da Cultura",
+  "titulo": "MinC divulga resultado preliminar da confirmação de autodeclaração de pessoas negras nas eleições do CNPC",
+  "link": "https://www.gov.br/cultura/pt-br/assuntos/noticias/minc-divulga-resultado-preliminar-da-confirmacao-de-autodeclaracao-de-pessoas-negras-nas-eleicoes-do-cnpc",
+  "categoria": "politica",
+  "prioridade": "alta",
+  "nota": 7,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "03:32",
+  "fonte": "Ministério da Cultura",
+  "titulo": "MinC participa de debate sobre educação, letramento racial e empregabilidade de jovens negros",
+  "link": "https://www.gov.br/cultura/pt-br/assuntos/noticias/minc-participa-de-debate-sobre-educacao-letramento-racial-e-empregabilidade-de-jovens-negros",
+  "categoria": "politica",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "03:32",
+  "fonte": "Ministério da Cultura",
+  "titulo": "Ministério da Cultura reforça presença em Minas Gerais com agendas junto ao samba, Hip-Hop, teatro e cultura popular",
+  "link": "https://www.gov.br/cultura/pt-br/assuntos/noticias/ministerio-da-cultura-reforca-presenca-em-minas-gerais-com-agendas-junto-ao-samba-hip-hop-teatro-e-cultura-popular",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 5,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "03:33",
+  "fonte": "Busca - SZA",
+  "titulo": "GTA 6 ocupa 10 posições no top 100 do Reino Unido uma semana após o lançamento",
+  "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQWThaeXpSNHNBUmY1Ukx2LWpHaTUtOWdIQ095a2x5eEdVRXh5dmg5dVBMYzdnakc3MGQtYmw1RFVDLXN3ejRsSjJ1Zl9fOUlyYmduMWdOdjRWdENqVjV5QXhhLVl4bFlFVHE3T0FBS3dBYUpjSlZlY0Faekg3SGZYZ2VWemVmZEFUNEdDZXAxWVRUTGVINTRFWngwajlWNWVGaHcydWRfYkowd0Ruazc0eURmaV8tcHBFU1Atc3M4bmdIZw?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "descartada pelo filtro",
+  "detalhe": "filtro: gta sem personagem ou artista negro"
+ },
+ {
+  "hora": "03:33",
+  "fonte": "Busca - Papatinho",
+  "titulo": "MC Kekel canta Claudinho e Buchecha: uma voz nova para uma obra que atravessa gerações",
+  "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOWmJtd1V4Yy1ROFdJdHRnSnBELUk2dlg3WHNUa1hTQ1E4SFN5S1UtTmtYZG13bFd2WDZBeGtyQjBLUTUzOWh3NjMzRmF3TzdBVEdTSXB5eVc5QVlkVldGRXpBYTZrVlZDWEdMQThhbjZ4M202SjVyWGlOaHFkNUdVbzhVb3JwaXNwakg3ZFExQTFXcGF6ZVgwMXlnSVpWdENSVU5VWE9YNGdWRUZ0RDgxT2JtNjFhYVpvUGIxeVZ6Ry1Oa3hfM2pDaUh3?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "repetida",
+  "detalhe": "título quase igual a outra notícia"
  }
 ]
