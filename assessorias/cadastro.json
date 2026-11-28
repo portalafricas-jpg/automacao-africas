@@ -1634,10 +1634,19 @@
    "tipo": "assessoria",
    "instagram": "",
    "empresa": "gmail.com",
-   "situacao": "parado",
+   "situacao": "ativo",
    "convite": "pendente",
    "origem": "lista do Drive (27/11/2026)",
-   "obs": ""
+   "obs": "",
+   "materias": [
+    {
+     "link": "https://www.africas.com.br/noticia/grupo-soulblack-celebra-dez-anos-com-identidade-musical-marcada-pela-cultura-negra",
+     "titulo": "Grupo soulblack celebra dez anos com identidade musical marcada pela cultura negra",
+     "quando": "2026-11-28T13:47:00-03:00"
+    }
+   ],
+   "ultima_materia": "2026-11-28T13:47:00-03:00",
+   "ativo_desde": "2026-11-28T17:22:31+00:00"
   },
   {
    "email": "patriciaferraz007@gmail.com",
