@@ -1109,5 +1109,49 @@
   "nota": "",
   "destino": "repetida",
   "detalhe": "título quase igual a outra notícia"
+ },
+ {
+  "hora": "03:47",
+  "fonte": "Busca - Cineasta negro",
+  "titulo": "Festival de animação no Recife exibe curtas africanos raros",
+  "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOZDNsZDdPbUpaWXVnS0lURmhJS0pQeXY4enVUVzRSNmQ0RDdRRmxreHdjNjZEcW1XbGk3SHpBbDBobktQRkNHUm5DV2U3WFk4QmpnbjFTS25Rck5QUmhpRlJUTjR6QV9OSVE0UFc1S2ZpR0dJTWZGMTlSSDFxY3dwQTcwNzY3eHUxbmRpOEZkN2drNndiU1dqWmVNT2ctQUZo?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "03:48",
+  "fonte": "Busca - Teatro negro",
+  "titulo": "Previsão do tempo em Manaus: 98% de chance de chuva e máxima de 29.9°C",
+  "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQZGVlamlwWkM5djdrSE5pR2I0eEpGOWtmeFVzWnZjMTJqcUc2cm1lQjNIazdGYm8yU1hWMkdPX19fdk1BV0VUcmRYaWFYbG1nOE1PZDdkdkJpRmo5YXJZWlFueGY5c0xISDV1MU5HQXRNOGJKT1RpR2g4Wjh4WHA1cDNXeVhadHg0WExDMlk4dkt3ZFN5bnMxTEE0QkxRNS14cmh6NUN6cFJvX0hkTl9F?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Previsão do tempo em Manaus, sem relação com a temática racial; conteúdo que não é notícia para o portal."
+ },
+ {
+  "hora": "03:48",
+  "fonte": "Busca - Beyoncé",
+  "titulo": "Nữ diễn viên có câu thoại viral \"bông đẹp quá kìa\" lên bìa tạp chí quốc tế",
+  "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPT2JxR2xTeHIwVHVzSWFzVFpvMlBTYTJkM1JGVG9xZTM4eGhFY1hMaVlhOGJuRTNYODJjd1IzcW5BNFlpdDk1alNDNE91eXYwSWpvYUxhNXdCbzlOYmpBXzZ4ZHRpYS1nVjZhVDJ4cDV4QTQ4STdFanZqMExfRkxsdFlOeHhTVW5WaUFTcVVuWm1sQmZ2cExrMDQ5Q3RMams?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Notícia em vietnamita sobre atriz e revista internacional, sem relação com a população negra nem com a Agenda Preta; fora do escopo do portal."
+ },
+ {
+  "hora": "03:48",
+  "fonte": "Busca - Ryan Coogler",
+  "titulo": "As datas de lançamento dos dois últimos filmes da saga 'Avatar' foram definidas.",
+  "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9tcG1IUmU2T0hSc3c3T2F3UU5aaEsyUTQwYWpLbDhUeXZXT3FVUjZJc1psTkxrVUdrNHoxZ3M0QjZlSnBTc0gzcHJKMktQZXhoekplY1ViaXI2NXBjQ3FOdnF2S3d6czM1MGtSS0NINkw?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Datas de lançamento de filmes de Avatar não têm relação com a temática racial nem com artista negro; fora do escopo do portal."
  }
 ]
