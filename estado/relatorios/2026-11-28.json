@@ -6945,5 +6945,170 @@
   "nota": 3,
   "destino": "nota baixa",
   "detalhe": "Matéria de comemoração de 30 anos de álbuns do Seal sem fato novo; trata-se de release de outro veículo com pouca ligação à temática racial no resumo."
+ },
+ {
+  "hora": "17:02",
+  "fonte": "SRzd - Carnaval",
+  "titulo": "Solange Almeida revela bastidores do convite para ser rainha de bateria",
+  "link": "https://srzd.com/blog/carnaval/sao-paulo/solange-almeida-revela-bastidores-convite-para-ser-rainha-de-bateria/",
+  "categoria": "protagonista",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "17:03",
+  "fonte": "Busca - samba",
+  "titulo": "Carnaval do Rio 2027 terá maior renovação de jurados após novo processo seletivo",
+  "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNVS02T3dnbDhJZHZ5VnpEYk9TVl9nM1BRbXlYcDJ3Y2VYWkZVV0VsTzloeDBlQnVwRWFrTjRPeV9tMUpRZDItbV9VNWM2XzdfZkpvQlF5OTVnTGtZZjZDZHBiSGJIaFFZOVBHRS1oNDFNQ0lHUDZfNFkxQXpWdlhiMUhkZHlHS1RqY1U5OUlia2NQMmFyWHdHMDlHUmVabFdDOVh3Z0dn?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "descartada pelo filtro",
+  "detalhe": "filtro: busca ampla sem sinal (artista, escola/bloco ou termo)"
+ },
+ {
+  "hora": "17:04",
+  "fonte": "Busca - samba",
+  "titulo": "Sabrina Sato desfila barrigão de nove meses da Cidade do Samba",
+  "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNc0NsMWZnSm5pU2lOdTFoejFJTjhyUGhCNlVyTXpRbWFUT3RibGxac0h5LWpZcGdVSGo2b0h2bUxMRnV3Qnd0SURsQ1lvVS1CQTZEcUwtZ2kzeGplWFktaUVqZ3lDd0xCamhrTjdsbmUwT2FjX3M5WktHZzZkb0xTYnFJRXNoTnlFVmVZQTNaMVk4WmY5cjNTU1ZfcEMyekl0V2otaWNacmEzR1g1Rm10cVM5Yw?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Sabrina Sato em ensaio e barrigão é vida pessoal e assunto de famosa, sem fato de cultura negra relevante; fofoca."
+ },
+ {
+  "hora": "17:04",
+  "fonte": "Busca - Intolerância religiosa",
+  "titulo": "Nova lei em Porto Alegre cria canais de denúncia e garante liberdade de culto em locais públicos",
+  "link": "https://news.google.com/rss/articles/CBMimwJBVV95cUxOZ2NUdjVBRDUyYTBzSU4xbHU1ckpfaU1xbDhsX3NOd0VvUDlwTEpvTVVPOTRQdm5hUTlPQ2xzZkJjVnRzaHRFRVdKRDdNUF9PZWdSWVhKbnhNV1dfSWU2T3JrR0VKZWhGYTN4RjFGYzZHV3NCM1FpSjdNdEg0cDRjUTlTVU5aRG1jUGRrMzloOTdCa3pwWjdoLVl5OFpocUJ2Nlp5R3ZsX1BMNGFLWWw0WWxvSGhmdFVaa2hPcWtiV2s2RHJKTHhCWmNkMWZpQ1l3cjFIS2s0NVM2dk9Td3Y5Tm1VVUlTNGRlNlVtOFFGdWxUdG10ZXdObDZOLTRSVUIxSlQxOVFIUEpadWZBMGR3NHZLeTNRYUtuQ1FB?oc=5",
+  "categoria": "ancestralidade",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "Lei municipal que garante liberdade de culto e cria canais de denúncia; liberdade religiosa de matrizes africanas, tema de pilar ancestral."
+ },
+ {
+  "hora": "17:04",
+  "fonte": "SRzd - Carnaval",
+  "titulo": "Prefeito detalha evento que irá abrir o Carnaval com megashow na Paulista",
+  "link": "https://srzd.com/blog/carnaval/sao-paulo/prefeito-detalha-evento-que-ira-abrir-o-carnaval-com-megashow-na-paulista/",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Evento de Carnaval de São Paulo sem recorte racial ou fato ligado à população negra."
+ },
+ {
+  "hora": "17:04",
+  "fonte": "Busca - samba",
+  "titulo": "Sabrina Sato desfila grávida pela Vila Isabel no Rio",
+  "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5RWjJxMkJ6MjhYbFMtTDlfdE1YUE5QZzYwX3hPNlJic3J2OURsZmhlV2k2QlBfREZielBfUWlwOGJaZThYek9ncHk5NXAyeU9sM2p6dDRUWVZFcEdwc2hHWG5lSkJXdVhKWWg2ZHBoVWh3akQ3SjYxX2VubTlmZw?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "repetida",
+  "detalhe": "Mesmo tema da notícia 1 (desfile de Sabrina Sato grávida); fofoca e repetida."
+ },
+ {
+  "hora": "17:04",
+  "fonte": "Busca semanal - Paulo Vieira",
+  "titulo": "Morre aos 84 anos Ciro Fernandes, mestre da xilogravura e da arte popular brasileira",
+  "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1abTZobnFsTEM4dHZMOUt3QUlsZ0lRYVNtVnZrMmdJenFBeEJuT05WV1NqRkJnNTQzYXVQZ1dsMXhlRHBYXzNtUFdRT04wWW9hY1htalFySTJ5U1dOTEJXajQyNDBjZk5zX3BlTmRmNVc?oc=5",
+  "categoria": "protagonista",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Morte de mestre da xilogravura e arte popular; falecimento de figura da cultura popular. Ciro Fernandes não é identificado como negro no texto, então sem regra de personalidade negra. Nota moderada."
+ },
+ {
+  "hora": "17:04",
+  "fonte": "Busca - União Africana",
+  "titulo": "José Maria Neves toma posse a 08 de Dezembro para segundo mandato como Presidente da República",
+  "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOX3FDbEhVNTA0Qk4xbS1xVFBXOG9DSUY1OUhDWVJQZXctMW9xcVBWamtXRzBuS0xHRnBLd0ppRmczNkw5WWlUMFlXNk94cElCYlBLX3VfaWwzd1B3ejlSSGYzTjJ5YUVzc2NQb2VWU2FsY0h5YkNXUVBRZEo0WnN3NHk4dDJnNWwyZ0ZkektsTllpejc2TFo5TnVRWlduaFIyY0tXOFFiTDkyNlB5dnA0LVBFSGtHbUtVbWxhSFVsZU85V2c?oc=5",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 6,
+  "destino": "nota baixa",
+  "detalhe": "Posse de presidente de Cabo Verde, ato protocolar de país de língua portuguesa; interesse brasileiro limitado, cerimônia de posse."
+ },
+ {
+  "hora": "17:04",
+  "fonte": "Busca - liberdade religiosa",
+  "titulo": "Caminhada para os Orixás, em Curitiba, celebra ancestralidade e liberdade religiosa",
+  "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOajVXMlN4SktWZ0tzZkZpNlVwb1d3TXNVREhSOTB0d3ppLVhJMFIxSFBMZW9oMGhlNF85MTE5S2hyQTVTUUZUVTk5UHZyYmlLa1FMWUlkT1NDWldTOTZWck9rSndPc21UNkE4eVp1WHBKWUc3WkpSLWxkMlJtTkFZY0tn0gGHAUFVX3lxTE1rQnJuVzhYUEE1bG04d29oT25DMjFWYmRzaUk1eUM5NmhpWi04SnQ1eERwLW80NWxSX0s4NkFHVUM4enVYbnI5ZzFZTmdCVkJ6RnJfaUFuNVQ2OWJIdzZuU2tKTTR3V0FxWnJhUFpJNUNMNUV1Q1hNVzBaX1h3Q1g3RVVVd0hFMA?oc=5",
+  "categoria": "ancestralidade",
+  "prioridade": "",
+  "nota": 8,
+  "destino": "nota baixa",
+  "detalhe": "evento local pequeno: Caminhada religiosa de matriz africana celebrando ancestralidade e liberdade religiosa; evento local em Curitiba com tema de terreiros."
+ },
+ {
+  "hora": "17:04",
+  "fonte": "Busca - Carnaval 2027",
+  "titulo": "Carnaval 2027: cinco escolas de samba pedem desligamento da Liga em Juiz de Fora",
+  "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNTEh0eDV1WDVJZ1g5RW9aMDVSZGNnRTNIOEJBM0ZrZUxXUVNkNkV4Nk5RZTMzQjJNVmFEY1Z1dUlzQU5lLUo1RnRVZURxSDE3XzRXQzg5bUY0NUJncjFjTkR2QkVvak1WckhDUmNDY195aVBoc2dJNE1TdFBJaXB1bGNoOUt0N2l2WkJZNjU0aklOTzJhYklBMWRYUzdvZGFBWnJILUFvaU5IbXhfWjQ0NmtHeklIWUVqWU1DWmk0c3JERmhZUXZiZy14N2xOUERoQnRvbXZuMUh3dw?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Carnaval e escolas de samba, disputa com a Liga em Juiz de Fora; cultura negra, nota mínima 7."
+ },
+ {
+  "hora": "17:04",
+  "fonte": "Busca - Intolerância religiosa",
+  "titulo": "Homem é condenado por discriminação religiosa e injúria qualificada contra mulheres islâmicas",
+  "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPNE9DTWJGRTlBTXhEZ2t5ZWc2SFNhU1Y4M05NM1RyNnBobWFUa2Z4NnlIbjlLX1dVR1lveERCZXdaOHBrT2g2TlI1eHFJeTBnQ0pjM1dZdmZ4dE0wZXRKVmptRW5mdExDX0NaRmd1V3ZQQVliMi1DS19kenBuemdEZFcyMDVhMkpCYWxVbjZWQm0taF9ueUFIR0VrdGVCUzJkT0FNaUtn?oc=5",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "Condenação por discriminação religiosa contra mulheres islâmicas; não trata de população negra nem de matriz africana."
+ },
+ {
+  "hora": "17:04",
+  "fonte": "Africanize",
+  "titulo": "Afri News Eliana Alves Cruz vence o Jabuti 2026 com romance sobre família negra e ascensão social 30/10/2026",
+  "link": "https://africanizeoficial.com.br/eliana-alves-cruz-vence-o-jabuti-2026-com-romance-sobre-familia-negra-e-ascensao-social",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "Notícia sem texto suficiente; título indica prêmio Jabuti de 2026 com data de 30/10/2026, fora da janela de 48 horas e sem conteúdo verificável."
+ },
+ {
+  "hora": "17:04",
+  "fonte": "Busca - escola de samba",
+  "titulo": "Kauã Elias marca presença em desfile de escola de samba e aparece ao lado de Duda Freire",
+  "link": "https://www.redetv.uol.com.br/tvfama/blog/celebridades/kaua-elias-marca-presenca-em-desfile-de-escola-de-samba-e-aparece-ao-lado-d",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "recusada pelo redator",
+  "detalhe": "Conteúdo de fofoca sobre a vida pessoal de um jogador (presença em eventos ao lado de influenciadora, suposto affair com Virginia Fonseca). Não é notícia de conquista, trabalho ou agenda pública ligada à temática racial. Além disso, o texto é do blog TV Fama, de entretenimento de fofoca, e não traz fato de relevância para a população negra. Descartado pelas regras de fofoca do portal."
+ },
+ {
+  "hora": "17:04",
+  "fonte": "Busca - samba",
+  "titulo": "Festival reúne gigantes do Samba em BH",
+  "link": "https://g1.globo.com/mg/minas-gerais/mg1/video/festival-reune-gigantes-do-samba-em-bh-15289818.ghtml",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "recusada pelo redator",
+  "detalhe": "Texto original é uma chamada de vídeo com menus e navegação do G1, sem informações suficientes para uma matéria honesta: não há data do evento, local completo, detalhes da programação, nem declarações. Só consta que Alcione, Jorge Aragão e Zeca Pagodinho se apresentam no Mineirão às 20h, o que é insuficiente para redigir matéria sem inventar fatos. Além disso, a data de publicação (28/11/2026) e a falta de contexto impedem qualquer desenvolvimento."
+ },
+ {
+  "hora": "17:04",
+  "fonte": "Busca semanal - Paulo Vieira",
+  "titulo": "Sem Pai Nem Mãe, filme com Alexandre Nero terá novas sessões gratuitas no YouTube após reunir 15 mil espectadores",
+  "link": "https://www.jwave.com.br/2026/11/sem-pai-nem-mae-filme-com-alexandre-nero-tera-novas-sessoes-gratuitas-no-youtube-apos-reunir-15-mil-espectadores/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "recusada pelo redator",
+  "detalhe": "Recusa: o texto é sobre a exibição gratuita de um filme com Alexandre Nero, sem recorte racial, sem fato de impacto para a população negra e sem relação com a Agenda Preta. Além disso, a matéria tem caráter de divulgação de sessões e programação de um lançamento, e não de notícia com relevância racial. Também não há informação de que o trabalho seja uma conquista de pessoa negra ou de lançamento de artista negro de forma destacada no texto. Não há elementos suficientes para uma matéria honesta dentro da linha editorial."
  }
 ]
