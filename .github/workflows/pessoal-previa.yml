@@ -1,0 +1,33 @@
+name: Instagram pessoal - prévia (não publica)
+
+# Só lê o site e escreve como as legendas sairiam no Instagram pessoal do Washington.
+# Não publica nada. Resultado em estado/previa-instagram-pessoal.md e no resumo da rodada.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  previa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow requests
+      - name: Montar a prévia
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          META_USER_TOKEN: ${{ secrets.META_USER_TOKEN }}
+        run: python pessoal.py
+      - name: Guardar a prévia
+        run: |
+          git config user.name "robo-africas"
+          git config user.email "robo@africas.com.br"
+          git add estado/previa-instagram-pessoal.md
+          git diff --cached --quiet && exit 0
+          git commit -m "Instagram pessoal: prévia"
+          for i in 1 2 3; do git pull --rebase --autostash -X theirs && git push && exit 0; sleep 5; done

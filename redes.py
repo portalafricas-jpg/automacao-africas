@@ -916,6 +916,11 @@ def publicar_materia(item, token, pagina, ig):
            ["Tela do Áfricas Play: comente APP e receba o link da matéria completa no direct."]
     midia, permalink = publicar_carrossel(enderecos, alts, legenda_ig, token, ig,
                                           EXPO_COLAB if eh_expo(item) else ())
+    try:  # cópia no Instagram pessoal do Washington (28/11/2026); só age se pessoal-config.json estiver ligado
+        import pessoal
+        pessoal.copiar_carrossel(enderecos, alts, legenda_ig)
+    except Exception as e:
+        log(f"  Instagram pessoal: {e}")
     return {"titulo": item["titulo"], "link": item["link"], "ig_media": midia, "ig_link": permalink,
             "fb_post": fb_post, "prioridade": item.get("prioridade"),
             "foto": item.get("foto", ""), "categoria": item.get("categoria", ""),
@@ -1067,6 +1072,11 @@ def main_publicar():
         if liberado and estado["stories_hoje"] < STORIES_MAXIMO_DIA:
             try:
                 publicar_story(s_["url"], token, ig)
+                try:  # cópia no Instagram pessoal (só age se estiver ligado)
+                    import pessoal
+                    pessoal.copiar_story(s_["url"])
+                except Exception as e:
+                    log(f"  Instagram pessoal: {e}")
                 estado["stories_hoje"] += 1
                 feitos += 1
                 log(f"STORY: {s_['titulo'][:70]}")
