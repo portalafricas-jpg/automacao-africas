@@ -1,0 +1,40 @@
+name: Calendário Afro - pesquisar imagens
+
+on:
+  workflow_dispatch:
+    inputs:
+      pasta:
+        description: "Pasta do episódio"
+        required: true
+        default: "calendario/2026-12/06-joao-candido"
+
+permissions:
+  contents: write
+
+jobs:
+  imagens:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Pegar os arquivos da pasta
+        uses: actions/checkout@v4
+
+      - name: Preparar o Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar o leitor da internet
+        run: pip install requests
+
+      - name: Pesquisar, conferir licenças e baixar só domínio público
+        run: python calendario_imagens.py "${{ github.event.inputs.pasta }}"
+
+      - name: Salvar imagens e relatório
+        run: |
+          git config user.name "robo-africas"
+          git config user.email "robo-africas@users.noreply.github.com"
+          git add "${{ github.event.inputs.pasta }}"
+          git diff --cached --quiet || git commit -m "Calendário Afro: imagens e relatório de licenças"
+          git pull --rebase
+          git push
