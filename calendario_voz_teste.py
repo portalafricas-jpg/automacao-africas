@@ -5,7 +5,6 @@
 import inspect
 import json
 import os
-import subprocess
 import sys
 
 import soundfile as sf
@@ -17,8 +16,7 @@ TEXTO_MODELO = ("As escolas de samba do Grupo Especial do Rio de Janeiro apresen
                 "na Zona Portuária. A entrada é solidária: basta levar um quilo de alimento não perecível. "
                 "É a festa do samba, patrimônio da cultura negra brasileira, aberta para todo mundo.")
 
-modelo_wav = os.path.join(saida, "modelo.wav")
-subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", f"vozes-padrao/{voz}.mp3", "-ac", "1", "-ar", "16000", modelo_wav], check=True)
+modelo_wav = os.path.abspath(f"vozes-padrao/{voz}.wav")
 
 modelo = VoxCPM.from_pretrained("openbmb/VoxCPM2", load_denoiser=False)
 taxa = getattr(getattr(modelo, "tts_model", None), "sample_rate", 48000)
