@@ -4,6 +4,10 @@ name: Assessorias - envio de e-mails
 # A leitura da caixa e os avisos rodam junto com o robô das redes (cron-job.org, a cada 15 min); o agendador do GitHub não disparou. Este arquivo fica para acionar à mão.
 on:
   workflow_dispatch:
+    inputs:
+      modo:
+        description: "tudo (caixa + avisos) ou teste (modelos 1 a 12 só para portalafricas@gmail.com)"
+        default: "tudo"
 
 permissions:
   contents: write
@@ -26,7 +30,8 @@ jobs:
       - name: Ler a caixa e enviar os avisos
         env:
           GMAIL_SENHA_APP: ${{ secrets.GMAIL_SENHA_APP }}
-        run: python envio_assessorias.py tudo
+          MODO_CLI: ${{ github.event.inputs.modo || 'tudo' }}
+        run: python envio_assessorias.py "$MODO_CLI"
 
       - name: Salvar o registro dos envios
         run: |

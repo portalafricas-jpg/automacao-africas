@@ -108,6 +108,52 @@ def enviar_avisos():
     _salvar(ARQ_ENVIADOS, enviados)
 
 
+# ---------------- Modo teste (27-28/11/2026): tudo vai só para portalafricas@gmail.com ----------------
+MODO_ENVIO = (os.environ.get("MODO_ENVIO") or "teste").strip().lower()
+
+
+def enviar_assessoria(smtp, para, assunto, texto, responder_a=None):
+    """Único caminho de envio para as assessorias. Enquanto o Washington não aprovar o teste,
+    qualquer e-mail é desviado para portalafricas@gmail.com e marcado [TESTE]."""
+    if MODO_ENVIO != "real":
+        texto = f"[TESTE — iria para: {para}]\n\n" + texto
+        para, assunto = AVISOS_PARA, "[TESTE] " + assunto
+    return enviar(smtp, para, assunto, texto, responder_a)
+
+
+def enviar_teste_completo():
+    """Manda os modelos 1 a 12 para portalafricas@gmail.com, com os lembretes na mesma conversa."""
+    import time
+    import modelos_email as me
+    form = _ler(os.path.join(PASTA, "formulario.json"), {}).get("endereco") or "(formulário ainda não publicado)"
+    ctx = dict(nome="Washington", assessoria="Assessoria Teste", email="teste@exemplo.com.br",
+               link="https://www.africas.com.br", link_formulario=form + "/?t=teste",
+               link_video="(link de envio do vídeo: próxima etapa)", link_recusa=form + "/recusar?t=teste",
+               artista="(nome do artista da matéria)", evento="(nome do evento)", data="(data do evento)",
+               local="(local do evento)", perguntas=["(pergunta 1 criada a partir da matéria)",
+               "(pergunta 2)", "(pergunta 3)"], versao="pauta", tem_video=True)
+    enviados = _ler(ARQ_ENVIADOS, [])
+    smtp = conectar()
+    fio = {}
+    try:
+        for n, pai in [(1, None), (2, 1), (3, 1), (4, None), (5, None), (6, None), (7, None),
+                       (8, None), (9, 8), (10, 8), (11, None), (12, 11)]:
+            c = dict(ctx)
+            if pai:
+                c["assunto_original"] = fio[pai]["assunto"]
+            r = me.montar(n, c)
+            mid = enviar_assessoria(smtp, "teste@exemplo.com.br", f"Modelo {n} — " + r["assunto"] if not pai else r["assunto"],
+                                    r["corpo"], fio[pai]["id"] if pai else None)
+            fio[n] = {"id": mid, "assunto": r["assunto"]}
+            enviados.append({"modelo": n, "para": AVISOS_PARA, "assunto": r["assunto"], "id": mid, "teste": True,
+                             "em": datetime.now(timezone.utc).isoformat(timespec="seconds")})
+            print(f"Teste enviado: modelo {n} ({r['assinante']})")
+            time.sleep(3)
+    finally:
+        smtp.quit()
+    _salvar(ARQ_ENVIADOS, enviados)
+
+
 # ---------------- Leitura da caixa (só lê; não apaga, não marca como lido, não responde) ----------------
 def _cab(msg, nome):
     try:
@@ -294,3 +340,5 @@ if __name__ == "__main__":
         ler_caixa()
     if modo in ("avisos", "tudo"):
         enviar_avisos()
+    if modo == "teste":
+        enviar_teste_completo()
