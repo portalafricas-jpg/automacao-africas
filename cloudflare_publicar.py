@@ -2,6 +2,7 @@
 
 O token fica só no cofre do GitHub (CLOUDFLARE_API_TOKEN). Uso:
   python cloudflare_publicar.py publicar   -> cria o KV (se faltar), publica o formulário e grava o endereço
+  python cloudflare_publicar.py paginas    -> publica a política de privacidade e os termos de uso
 Funções usadas pelo robô de envio: gravar_pagina(), ler_respostas(), apagar_resposta().
 """
 import json
@@ -133,6 +134,38 @@ def apagar_resposta(chave):
     api("DELETE", f"/accounts/{d['conta']}/storage/kv/namespaces/{d['kv']}/values/{urllib.parse.quote(chave, safe='')}")
 
 
+NOME_WORKER_PAGINAS = "paginas-africas"
+ARQ_PAGINAS = os.path.join(PASTA, "cloudflare", "paginas.json")
+
+
+def publicar_paginas():
+    """Publica a política de privacidade e os termos de uso (worker separado, sem KV)."""
+    cid = conta()
+    codigo = open(os.path.join(PASTA, "cloudflare", "paginas.js"), "rb").read()
+    meta = {"main_module": "paginas.js", "compatibility_date": "2024-11-01"}
+    fronteira = "----africas" + uuid.uuid4().hex
+    partes = [
+        f"--{fronteira}\r\nContent-Disposition: form-data; name=\"metadata\"\r\nContent-Type: application/json\r\n\r\n".encode()
+        + json.dumps(meta).encode() + b"\r\n",
+        f"--{fronteira}\r\nContent-Disposition: form-data; name=\"paginas.js\"; filename=\"paginas.js\"\r\n"
+        f"Content-Type: application/javascript+module\r\n\r\n".encode() + codigo + b"\r\n",
+        f"--{fronteira}--\r\n".encode(),
+    ]
+    api("PUT", f"/accounts/{cid}/workers/scripts/{NOME_WORKER_PAGINAS}", b"".join(partes),
+        {"Content-Type": f"multipart/form-data; boundary={fronteira}"})
+    sub = subdominio(cid)
+    api("POST", f"/accounts/{cid}/workers/scripts/{NOME_WORKER_PAGINAS}/subdomain", {"enabled": True})
+    base = f"https://{NOME_WORKER_PAGINAS}.{sub}.workers.dev"
+    with open(ARQ_PAGINAS, "w", encoding="utf-8") as f:
+        json.dump({"inicio": base, "privacidade": base + "/privacidade", "termos": base + "/termos"},
+                  f, ensure_ascii=False, indent=1)
+    print(f"Páginas publicadas: {base}/privacidade e {base}/termos")
+    return base
+
+
 if __name__ == "__main__":
-    if (sys.argv[1] if len(sys.argv) > 1 else "") == "publicar":
+    modo = sys.argv[1] if len(sys.argv) > 1 else ""
+    if modo == "publicar":
         publicar()
+    elif modo == "paginas":
+        publicar_paginas()
