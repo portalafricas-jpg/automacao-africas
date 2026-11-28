@@ -303,10 +303,24 @@ def enviar_email(arquivos, relatorio, escolhidas):
     log(f"E-mail enviado para {T.EMAIL}")
 
 
+def diagnostico_fotos(posts):
+    """Mostra no registro se o site africas.com.br está entregando as fotos (código e tamanho)."""
+    import urllib.request
+    for p in [q for q in posts if q.get("foto")][-3:]:
+        try:
+            req = urllib.request.Request(p["foto"], headers={"User-Agent": "Mozilla/5.0 (robo-africas-redes)"})
+            with urllib.request.urlopen(req, timeout=40) as r:
+                dados = r.read()
+                log(f"Diagnóstico foto: {r.status} {r.headers.get('Content-Type')} {len(dados)} bytes: {p['foto'][-60:]}")
+        except Exception as erro:
+            log(f"Diagnóstico foto: FALHOU ({erro}): {p['foto'][-60:]}")
+
+
 def main():
     os.makedirs(SAIDA, exist_ok=True)
     posts = R.ler_json(R.ARQ_POSTS, [])
     agora = R.agora_sp()
+    diagnostico_fotos(posts)
     escolhidas, atual = fazer_atual(posts, agora)
     novo, fotos, musica = fazer_novo(escolhidas)
     comp = lado_a_lado(atual, novo)
