@@ -1,0 +1,28 @@
+name: Calendário Afro - guardar áudios de um teste
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: "Número da rodada do teste de voz"
+        required: true
+permissions:
+  contents: write
+  actions: read
+jobs:
+  guardar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          run-id: ${{ github.event.inputs.run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path: /tmp/audios
+      - name: Guardar no ramo calendario-voz-teste
+        run: |
+          git config user.name "robo-africas"; git config user.email "robo-africas@users.noreply.github.com"
+          git checkout --orphan calendario-voz-teste
+          git rm -rq --cached . && rm -rf ./*
+          mkdir -p teste && find /tmp/audios -name "*.wav" -exec cp {} teste/ \;
+          git add teste && git commit -qm "Áudios do teste de voz" && git push -f origin calendario-voz-teste
