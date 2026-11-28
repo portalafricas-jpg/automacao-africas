@@ -2528,5 +2528,61 @@
   "nota": 6,
   "destino": "nota baixa",
   "detalhe": "Debate sobre racismo na esquerda; a questão racial é o centro, mas o material parece ser análise opinativa, sem fato novo claro, o que limita a nota."
+ },
+ {
+  "hora": "08:48",
+  "fonte": "Busca - escola de samba",
+  "titulo": "Apresentação musical: Bateria da escola de samba Filhos da Gaviões - 28/11/2026 - 17:00",
+  "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOV0FCYUxnbWRKNVZSanhJVHA1RGlQeGNScUE0azRGYkp1MWNkcC1jbF9Md3ZRTmViblJtbXd1TnVQR3duaVdGSnZqZjlRZ3MxYjR3TXNyMzFJQ3AwMkZWcU9scVdwV21BazdXUjBReFA3WFpfNDBFcThHOE9oTFcyRGtyeGREVEJ1VE5ZOEFLMUxxcHVxNzdyRk9hbktBU0pBc3NSelRNQ09kaEZYdEhUd2pyX25XVkQ0a0E?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Apresentação de bateria de escola de samba (Filhos da Gaviões), carnaval e samba, linha Gente e Música; sem matéria recente sobre o mesmo evento."
+ },
+ {
+  "hora": "08:48",
+  "fonte": "Busca - Beyoncé",
+  "titulo": "Ne-Yo é a nova confirmação do MEO Marés",
+  "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5zT0dHZGktTkVHc1FWQkRMWlNPeUlWSWplWndoLTJFSldUZWNyN1RwdU0zMkJBWGRyb21tUjA1eUg1QkdjU1U2cllSRENFUHJETG5FZ2dCQXFycHNENW9INFo0SV84OEF6UWJaWXR0SjBSamIzS0UzWnJZaGVmZw?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Anúncio de confirmação de festival de Portugal com artista que não é apresentado como negro no material; sem relação com a temática racial. Descartada."
+ },
+ {
+  "hora": "08:48",
+  "fonte": "Busca - injúria racial",
+  "titulo": "Polícia Civil indicia homem por injúria racial contra jornalista Ângela Bispo",
+  "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNc3FMRUpab09FNzM5bVFjZkxZWUphU1B0S2o5WjVtbjhKSVRHOXBVQlEyT3ZFcDhpSWZRZDZ3OWFQZnE0eDJ0WVk1T0pjenAxTkwzZFM4SVFoOTYtQ09YYmk5bFV0Y2FjSHE2R05CNnFUeTV0TENIdHNIRzdTc3FCYmdGRk9OLUxvNUEwYXVybG5lUjRic3RVSWdDeXZWYUt5ejdSejBaZkNNWFRzTzc0Y01sd01sdE13Z0xTR2k3b3VJZ0ladWo40gHMAUFVX3lxTFBlcy00cGVDY090bGVOZUtnblVJY3c1N2FNSTJNZGc3MGVybUNJM2pUWTZ3eU4wUHNaMGFTZi1FcGhRUElkSzJMdU4yZ2Z5eWI2aXlaSk1VU044aG45QUpzUTd3TmpBRTdnWVRPamlXQ3FCQ09VVEF5RUQ1clpGSTRKdWxKN3ZCTFZVaVNnRTBKenBwZ1ZGSHI2aGxLX2RzRGtKdmdLWG91NkNwcU9wUEt5NmRndDhURnpBQ3h0SUFmYkZEQTNYS2tDaUdxOQ?oc=5",
+  "categoria": "politica",
+  "prioridade": "alta",
+  "nota": 9,
+  "destino": "na fila",
+  "detalhe": "Indiciamento por injúria racial contra jornalista negra; combate ao racismo e decisão do sistema de Justiça. Não há matéria sobre o indiciamento no portal nos últimos 5 dias."
+ },
+ {
+  "hora": "08:48",
+  "fonte": "Busca - Racismo",
+  "titulo": "Racismo adoece e deixa marcas na saúde mental de mulheres",
+  "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFB3cFVNaC04Tk92MG1XTXlWc2ppdjU4TThMYWQxbUhCSGt4TlFSOTYxU05WRmJWWnpFQXBEekFVNFVQbDJEcEMtQUNLeDMzbWJZNjczMURURjVJWnpxZDlWN1BaWWNYdEl2VmpvLVhKM0hrYm5jS0JCTkhHNUU4OVU?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 6,
+  "destino": "nota baixa",
+  "detalhe": "Matéria sobre saúde mental e racismo, mas sem fato novo e sem o centro na população negra em forma de notícia concreta; material genérico e de menor porte."
+ },
+ {
+  "hora": "08:48",
+  "fonte": "Busca - injúria racial",
+  "titulo": "Polícia Civil indicia homem por injúria racial contra jornalista Ângela Bispo",
+  "link": "https://piauihoje.com/noticias/policia/policia-civil-indicia-homem-por-injuria-racial-contra-jornalista-angela-bispo-472589.html",
+  "categoria": "politica",
+  "prioridade": "alta",
+  "nota": 9,
+  "destino": "publicada",
+  "detalhe": "Homem é indiciado por injúria racial contra Ângela Bispo",
+  "foto": "TV Clube"
  }
 ]
