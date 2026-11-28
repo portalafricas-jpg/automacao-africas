@@ -1,4 +1,10 @@
 {
  "conferido": "2026-11-28",
- "faltas": []
+ "faltas": [],
+ "vespera_conferida": "2026-11-29",
+ "vespera_faltas": [
+  "Matéria da Expo do dia (pasta materias/)",
+  "Pasta da campanha do dia (campanhas/expo/2026-11-29/plano.json)"
+ ],
+ "vespera_email": "2026-11-28T18:08:56.834761-03:00"
 }
