@@ -126,8 +126,9 @@ def montar_html(escolhidas):
     t = 0.0
     # Gancho: igual ao aprovado (foto nítida em cima, preto leve, gancho grande, zoom leve), com mais movimento
     cenas.append(f"""
-    <div id="c-gancho" class="clip" data-start="0" data-duration="{T_GANCHO}" data-track-index="0">
-      <img id="capa" class="foto-topo" src="./assets/m0.jpg" style="object-position:50% 30%" />
+    <img id="capa" class="clip foto-topo" src="./assets/m0.jpg" data-start="0" data-duration="{T_GANCHO}" data-track-index="1" style="object-position:50% 30%; z-index:1" />""")
+    cenas.append(f"""
+    <div id="c-gancho" class="clip" style="z-index:2" data-start="0" data-duration="{T_GANCHO}" data-track-index="0">
       <div class="preto-leve"></div>
       <div class="barra"></div>
       <img class="logo" src="./assets/logo.png" alt="Áfricas Play" />
@@ -137,36 +138,32 @@ def montar_html(escolhidas):
         <div id="g3" class="l g3" style="font-size:90px">que você precisa saber</div>
       </div>
     </div>""")
-    tl += [f'tl.fromTo("#capa", {{scale: 1.0}}, {{scale: 1.07, duration: {T_GANCHO}, ease: "none"}}, 0);',
-           'tl.from("#g1", {x: -120, opacity: 0, duration: 0.5, ease: "power4.out"}, 0.25);',
-           'tl.from("#g2", {x: -120, opacity: 0, duration: 0.5, ease: "power4.out"}, 0.45);',
-           'tl.from("#g3", {y: 50, opacity: 0, duration: 0.5, ease: "power3.out"}, 0.75);']
+    tl += [f'tl.fromTo("#capa", {{scale: 1.0}}, {{scale: 1.06, duration: {T_GANCHO}, ease: "none"}}, 0);',
+           'tl.from("#g1", {y: 70, opacity: 0, duration: 0.55, ease: "power3.out"}, 0.35);',
+           'tl.from("#g2", {y: 70, opacity: 0, duration: 0.55, ease: "power3.out"}, 0.55);',
+           'tl.from("#g3", {y: 40, opacity: 0, duration: 0.5, ease: "power2.out"}, 0.9);']
     t += T_GANCHO
-    entradas = ["inset(0 0 0 100%)", "inset(100% 0 0 0)", "inset(0 100% 0 0)", "inset(0 0 100% 0)"]
     for i, p in enumerate(escolhidas):
         ini = round(t, 2)
         cat = (p.get("categoria") or "Notícia").upper()
         lins = "".join(f'<span class="lin"><span id="h{i}_{j}">{e(x)}</span></span>'
                        for j, x in enumerate(linhas_manchete(p.get("curta") or p["titulo"])))
         cenas.append(f"""
-    <div id="c-m{i}" class="clip" data-start="{ini}" data-duration="{T_MATERIA}" data-track-index="0">
-      <img id="f{i}" class="materia-foto" src="./assets/m{i}.jpg" alt="{e(p['titulo'])}" />
+    <img id="f{i}" class="clip materia-foto" src="./assets/m{i}.jpg" alt="{e(p['titulo'])}" data-start="{ini}" data-duration="{T_MATERIA}" data-track-index="1" style="z-index:1" />
+    <div id="c-m{i}" class="clip" data-start="{ini}" data-duration="{T_MATERIA}" data-track-index="0" style="z-index:2">
       <div class="fume"></div>
       <div class="barra"></div>
-      <div id="pg{i}" class="progresso"></div>
       <div class="bloco">
         <span id="s{i}" class="selo">{e(cat)}</span>
-        <div class="manchete">{lins}</div>
+        <div id="m{i}" class="manchete">{lins}</div>
       </div>
       <div class="rodape"><img src="./assets/logo.png" alt="Áfricas Play" /><span class="cont">RADAR  ·  {i + 1}/{total_m}</span></div>
     </div>""")
-        tl += [f'tl.fromTo("#c-m{i}", {{clipPath: "{entradas[i % 4]}"}}, {{clipPath: "inset(0 0 0 0)", '
-               f'duration: 0.5, ease: "power3.inOut"}}, {ini});',
-               f'tl.fromTo("#f{i}", {{scale: 1.10}}, {{scale: 1.0, duration: {T_MATERIA}, ease: "none"}}, {ini});',
-               f'tl.fromTo("#pg{i}", {{width: 0}}, {{width: 1080, duration: {T_MATERIA}, ease: "none"}}, {ini});',
-               f'tl.from("#s{i}", {{x: -80, opacity: 0, duration: 0.4, ease: "power3.out"}}, {ini + 0.45});',
-               f'tl.from("#c-m{i} .manchete .lin span", {{yPercent: 110, duration: 0.55, ease: "power4.out", '
-               f'stagger: 0.12}}, {ini + 0.55});']
+        tl += [f'tl.fromTo(["#c-m{i}", "#f{i}"], {{clipPath: "inset(0 0 0 100%)"}}, {{clipPath: "inset(0 0 0 0%)", '
+               f'duration: 0.45, ease: "power3.inOut"}}, {ini});',
+               f'tl.fromTo("#f{i}", {{scale: 1.08}}, {{scale: 1.0, duration: {T_MATERIA}, ease: "none"}}, {ini});',
+               f'tl.from("#s{i}", {{x: -60, opacity: 0, duration: 0.4, ease: "power3.out"}}, {ini + 0.4});',
+               f'tl.from("#m{i}", {{y: 60, opacity: 0, duration: 0.5, ease: "power3.out"}}, {ini + 0.5});']
         t += T_MATERIA
     # Tela final: Comente APP (o funil do Radar continua) e os selos das lojas em carrossel
     ini = round(t, 2)
@@ -176,10 +173,10 @@ def montar_html(escolhidas):
       <div class="barra"></div>
       <img id="fl" class="final-logo" src="./assets/logo.png" alt="Áfricas Play" />
       <div class="final-txt">
-        <div id="f1" class="f1">Quer ler as matérias completas?</div>
-        <div id="f2" class="f2">Comente</div>
-        <div id="f3" class="f3">APP</div>
-        <div id="f4" class="f4">Receba os links no direct.</div>
+        <div id="fa" class="f1">Quer ler as matérias completas?</div>
+        <div id="fb" class="f2">Comente</div>
+        <div id="fc" class="f3">APP</div>
+        <div id="fd" class="f4">Receba os links no direct.</div>
       </div>
       <div class="lojas-final">
         <div id="loja-g" class="loja"><span class="s1">DISPONÍVEL NO</span><span class="s2">Google Play</span></div>
@@ -188,10 +185,10 @@ def montar_html(escolhidas):
     </div>""")
     tl += [f'tl.fromTo("#c-final", {{opacity: 0}}, {{opacity: 1, duration: 0.4}}, {ini});',
            f'tl.from("#fl", {{y: -40, opacity: 0, duration: 0.4}}, {ini + 0.1});',
-           f'tl.from("#f1", {{y: 40, opacity: 0, duration: 0.45, ease: "power3.out"}}, {ini + 0.25});',
-           f'tl.from("#f2", {{x: -120, opacity: 0, duration: 0.45, ease: "power4.out"}}, {ini + 0.45});',
-           f'tl.from("#f3", {{scale: 0.5, opacity: 0, duration: 0.55, ease: "back.out(1.8)"}}, {ini + 0.6});',
-           f'tl.from("#f4", {{opacity: 0, duration: 0.4}}, {ini + 0.9});',
+           f'tl.from("#fa", {{y: 40, opacity: 0, duration: 0.45, ease: "power3.out"}}, {ini + 0.25});',
+           f'tl.from("#fb", {{x: -80, opacity: 0, duration: 0.4, ease: "power3.out"}}, {ini + 0.45});',
+           f'tl.from("#fc", {{x: -80, opacity: 0, duration: 0.4, ease: "power3.out"}}, {ini + 0.6});',
+           f'tl.from("#fd", {{opacity: 0, duration: 0.4}}, {ini + 0.9});',
            f'tl.fromTo("#loja-g", {{x: 900}}, {{x: 0, duration: 0.5, ease: "power3.out"}}, {ini + 0.8});',
            f'tl.fromTo("#loja-a", {{x: 900}}, {{x: 900, duration: 0.01}}, {ini});',
            f'tl.to("#loja-g", {{x: -900, duration: 0.5, ease: "power3.in"}}, {meio + 0.2});',
