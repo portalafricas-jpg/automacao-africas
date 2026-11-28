@@ -2440,5 +2440,93 @@
   "destino": "publicada",
   "detalhe": "Festival de cinema negro reúne 14 países em Salvador",
   "foto": "Divulgação"
+ },
+ {
+  "hora": "08:33",
+  "fonte": "Busca - Billboard Brasil",
+  "titulo": "Sandy e Junior: relembre como foi a turnê ‘Nossa História’, de 2019",
+  "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBiOFlzMUZWSG1lWXRIOVI0Slg4S29EMFhSVTc4ejYwUzl6RW1kMDVRWU9mMkk3STVVZUN4Xy1xTEF5Y3FrYzBDQ1pSUWxrTG1qb3NJblRIaEd0dDNLM1VMeg?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "descartada pelo filtro",
+  "detalhe": "filtro: busca ampla sem sinal (artista, escola/bloco ou termo)"
+ },
+ {
+  "hora": "08:33",
+  "fonte": "Busca - Chrigor",
+  "titulo": "Bola Doce Ilusão apresenta parceria especial com Chrigor em canção inédita",
+  "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQQXY5TlVkbEhUT2taS0ZlTS1PZ1gzWjExLW1JUVkyeWphOEUyMVFGYVZya0V3WmlVZFV5dVo0OUIyNnZzMDgyQlJxSlN3S2x0Z1VEZDA4V21NSXktUVpPaWF3THdpSW85WjE0WVFmVU9BUGd2M2lLMy16NVRoRUxYdml6Y200V3ltand5QURyZ3Zhd1MxX3NJdkwzOEtOMTFuXzVYczV1WlVMbnYxa2xmLWlla0FRSVNCR3JDT1pTV3U?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Título sem indicação clara de artista negro ou relação racial; Chrigor e Bola Doce Ilusão não são identificados como negros no material, e o conteúdo parece promocional."
+ },
+ {
+  "hora": "08:33",
+  "fonte": "Busca - rap nacional",
+  "titulo": "Arvo Festival reúne veteranos e novos nomes do rap",
+  "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNMEJhb3dWNWo0SkRxZEw0X1RuSGFqaDJlc3hBOWFkVFNmdjB2QWlsSmFfNDc3b0lDV1RjV1k0dzN1S3dUOGlWSXBJbmFfek0zU0lOZ0xkdWsydlpyWG1Jc2o4ejlpYzVlc0tENWJQeVN4MlgtazJtTXM5eGk1R1VmSk9INzJuZw?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Festival de rap sem recorte racial no material; conteúdo de agenda genérica, sem fato relevante para a temática negra."
+ },
+ {
+  "hora": "08:33",
+  "fonte": "Busca - Moda afro",
+  "titulo": "Metallica e Iron Maiden sondagens para shows na Fonte Nova em Salvador",
+  "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPQkRIZjJJa0RvbHU2S2RubkRudFQ2bEdROUM1LUxPVGF5dnFKRjA5Tk5tanY5NVBDdmhhUzRIdFg2U2VwNXBfalNpQUNXalBvcmxXcVdtaXVsa1dBbTFhSFdmbWdKa2laZG5xOUJOd3ZmMUplWnNZcHhGMXhHWkV1ZDlONDhiUXJsUnkwNjJpTmpBSzZtRjNqMkJ6VTdBMXNZM1BtOFdCUUNlU2ZOU0s2MlQ5U2x0bVhNQXIxNlBEaUN4NUVLNURSWU5R?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Sondagem de shows de bandas de rock sem relação com a população negra."
+ },
+ {
+  "hora": "08:33",
+  "fonte": "Busca - Cultura negra",
+  "titulo": "Evento “Raízes que nos conectam” celebra a cultura afro-brasileira em São Miguel das Matas",
+  "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQam05dktUZ1dGTkFjNUw4OFVMWXF6c09wNG13QlI5eXZpSzhOSnVHaW1QeXhHYnRZbno1SFA4Wk83LTJUOE5VUVB6MEh3Y2g1RWdhdFQ0NG5BSXQwS0p2VVlMZUJncDF2UUp0ZHlkNDZ1SEV5MElNR1hvQ2UxVnlMZ1lES2h5WEdGVXNLcC1lZ1U0dU9tVWFyVTFHVnhENDhyVThtUzl5eUNEYmJ3SldGTFRkd0VRb3dYbXVz?oc=5",
+  "categoria": "ancestralidade",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "evento local pequeno: Evento local de celebração da cultura afro-brasileira no interior, ligado à memória e às tradições negras; nota 7 por ser evento de cultura negra, mesmo pequeno."
+ },
+ {
+  "hora": "08:33",
+  "fonte": "Busca - Djamila Ribeiro",
+  "titulo": "Opinião - Ruy Castro: A Kim que continuará a crescer",
+  "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQdWQ3RXA1X1JaTEcwMHZxeGVQa0xCQ2RLZkVWVXpiMXdQSy05d0p6QmhFcXg0cVZKb05HS3lsd21SREd2SHVndHMtRDVOTG9oZWtYbU1wNTdkZHR6OEkzQTROa21mWXVwbGdsZGVxMzU1SHdOalMwa3hnRWJpSHJYMUZoRnktQWFUemZvUi0tWkE3V2lqcEJn?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Coluna opinativa de outro veículo; não é notícia."
+ },
+ {
+  "hora": "08:33",
+  "fonte": "Busca - racismo estrutural",
+  "titulo": "Opinião - Papo de Responsa: Quem decide os caminhos da inovação no Brasil?",
+  "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPMlY5T05KVmhFLXduSVJmYWlZNWVMY0F4cW5vZ2gxYmtnVFBzTms3Um52ZjRPX2lFVGFudmJtNFBuWnJzZFhpV2E3SlZiaDVNRkhsSXhYR0NqUVR2UWU1YzhHa25YamZNZmdXVDRtZzJIaFBONWY1M21rVXZ2WUMyb3RNWVR6dGU3S1cyQzYzOUFjYmF3QVBGdjczQmJBUXMxOXA5eDlfOGtWRHBkWXdtc3BENkI?oc=5",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Artigo de opinião de outro veículo, sem relação com a temática racial."
+ },
+ {
+  "hora": "08:33",
+  "fonte": "Busca - racismo estrutural",
+  "titulo": "Jones Manoel e o racismo estrutural na esquerda",
+  "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOT0FZVjFVMi1sV25yMzNRdUVkNXBWOXUycFVYdWk2NV9yN0dkNlQ1ZnNaOHpWQXBDQlYzWmZ6RmxXdkE5T3lXWVE1bVdIb0llYkx3OEprR1h6X3Y5QV9DbUxZa0FWXzlyN2phdGg2dF8xWUxHV3pCNlJXaXdoaERlOQ?oc=5",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 6,
+  "destino": "nota baixa",
+  "detalhe": "Debate sobre racismo na esquerda; a questão racial é o centro, mas o material parece ser análise opinativa, sem fato novo claro, o que limita a nota."
  }
 ]
