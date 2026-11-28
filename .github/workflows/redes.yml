@@ -25,9 +25,14 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Preparar o Node (HyperFrames do Radar)
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
       - name: Instalar o editor de imagens, o conector e o editor de vídeo
         run: |
-          pip install pillow requests
+          pip install -q pillow requests numpy opencv-contrib-python-headless
           which ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
 
       - name: Rodar o robô das redes
@@ -49,6 +54,7 @@ jobs:
           git config user.name "robo-africas"
           git config user.email "robo-africas@users.noreply.github.com"
           git add estado/redes.json estado/posts-redes.json feeds/instagram.json
+          git add estado/fotos-fracas.json 2>/dev/null || true
           git diff --cached --quiet && exit 0
           git commit -m "Robô das redes: rodada"
           for i in 1 2 3; do

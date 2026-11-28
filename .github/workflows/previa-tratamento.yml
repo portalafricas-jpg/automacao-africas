@@ -1,0 +1,43 @@
+name: Prévia do tratamento de foto e do Radar novo (não publica)
+
+# Antes × depois das fotos do Radar de hoje e o Radar novo com as fotos tratadas (28/11/2026). Não publica.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: previa-tratamento
+  cancel-in-progress: false
+
+jobs:
+  teste:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Instalar ferramentas
+        run: |
+          pip install -q pillow requests numpy opencv-contrib-python-headless
+          which ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
+          ffmpeg -version | head -1
+          node -v
+      - name: Montar e conferir os vídeos
+        env:
+          GMAIL_SENHA_APP: ${{ secrets.GMAIL_SENHA_APP }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: TRATAMENTO_FORCAR=1 python video-hyperframes/previa_tratamento.py
+      - name: Guardar no depósito de mídia (galho midia, apagado após 7 dias)
+        if: always()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ls ensaio/previa-tratamento/* >/dev/null 2>&1 || exit 0
+          bash guardar_midia.sh "Prévia do tratamento de foto" $(ls ensaio/previa-tratamento/*.mp4 ensaio/previa-tratamento/*.jpg 2>/dev/null)

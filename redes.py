@@ -193,20 +193,27 @@ def caber(desenho, texto, tipo, tamanho_max, largura_max, altura_max, entrelinha
 
 
 def melhorar_foto(img, leve=False):
-    """Regra de 25/11 (vale para tudo: vídeos, carrosséis, stories): foto pequena ou borrada ganha nitidez
-    e um pouco de contraste antes de entrar; foto boa recebe só um reforço leve."""
+    """Tratamento de foto (28/11/2026, vale para 100% das peças): padrão de qualidade do tratamento_foto.py.
+    leve=True é para as artes prontas do site (com texto): só um reforço de nitidez, sem mexer nas cores."""
     if img is None:
         return None
     img = img.convert("RGB")
-    pequena = img.width < 900 or img.height < 700
     if leve:
         return img.filter(ImageFilter.UnsharpMask(radius=1.5, percent=60, threshold=3))
+    import tratamento_foto
+    if tratamento_foto.ligado():
+        return tratamento_foto.tratar(img)
+    pequena = img.width < 900 or img.height < 700   # modelo antigo (enquanto a chave estiver desligada)
     img = img.filter(ImageFilter.UnsharpMask(radius=3 if pequena else 2, percent=140 if pequena else 90, threshold=2))
     return ImageEnhance.Contrast(img).enhance(1.06 if pequena else 1.03)
 
+
 def cobrir(foto, largura, altura):
-    """Recorta a foto para preencher o tamanho, sem distorcer."""
-    img = foto.convert("RGB")
+    """Recorta a foto para preencher o tamanho, sem distorcer, com o rosto centralizado (tratamento_foto.py)."""
+    import tratamento_foto
+    if tratamento_foto.ligado():
+        return tratamento_foto.recortar(foto, largura, altura)
+    img = foto.convert("RGB")                         # modelo antigo: recorte no meio
     escala = max(largura / img.width, altura / img.height)
     img = img.resize((int(img.width * escala) + 1, int(img.height * escala) + 1), Image.LANCZOS)
     x = (img.width - largura) // 2

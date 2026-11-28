@@ -97,6 +97,11 @@ def grao(img, forca=14):
 
 def preparar_foto(caminho, plano):
     img = Image.open(caminho).convert("RGB")
+    try:  # tratamento de foto (28/11/2026): qualidade e ampliação por IA; cor histórica preservada
+        import tratamento_foto
+        img = tratamento_foto.tratar(img, historica=True)
+    except Exception as e:
+        print(f"Tratamento de foto indisponível ({e})")
     if plano.get("recorte"):
         x0, y0, x1, y1 = plano["recorte"]
         img = img.crop((int(x0 * img.width), int(y0 * img.height), int(x1 * img.width), int(y1 * img.height)))

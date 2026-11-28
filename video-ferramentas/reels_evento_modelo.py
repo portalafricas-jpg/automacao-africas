@@ -73,8 +73,10 @@ strip=Image.open('/home/claude/trab/reels/lojas_strip.png').convert('RGBA')
 APP0,APP1=19.2,24.6
 handle=Image.open('/home/claude/trab/reels/handle.png').convert('RGBA')
 # ---- leitores de vídeo ----
+# tratamento de vídeo (28/11/2026): o mesmo padrão de qualidade do tratamento_foto.py, só no vídeo (não na máscara)
+FILTRO_VIDEO="hqdn3d=1.5:1.5:6:6,eq=contrast=1.05:saturation=1.05:gamma=1.02,unsharp=5:5:0.55:5:5:0.0"
 def reader(args,w,h,ch):
-    p=subprocess.Popen(["ffmpeg","-v","error"]+args+["-vf",f"scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h}","-r",str(FPS),"-f","rawvideo","-pix_fmt","rgb24" if ch==3 else "gray","-"],stdout=subprocess.PIPE)
+    p=subprocess.Popen(["ffmpeg","-v","error"]+args+["-vf",(FILTRO_VIDEO+"," if ch==3 else "")+f"scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h}","-r",str(FPS),"-f","rawvideo","-pix_fmt","rgb24" if ch==3 else "gray","-"],stdout=subprocess.PIPE)
     return p
 main=reader(["-ss",str(T0),"-t",str(DUR),"-i",U+"1001130913.mp4"],W,H,3)
 mask=reader(["-ss",str(T0),"-t",str(DUR),"-i","/home/claude/automacao-africas/video-ferramentas/saida/case_fala_selfie_mascara.mp4"],W,H,1)

@@ -10,7 +10,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: |
-          pip install pillow requests
+          pip install -q pillow requests numpy opencv-contrib-python-headless
           which ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
       - run: python teste_youtube.py
         env:

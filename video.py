@@ -117,8 +117,28 @@ def foto_similar(post):
 
 
 def foto_do_post(post):
-    """Foto da matéria. Se for escura, procura outra foto mais clara na própria matéria;
-    se não houver, clareia a melhor que tiver."""
+    """Foto da matéria (tratamento de 28/11/2026): entre a foto principal e as outras fotos declaradas da própria
+    matéria, fica a de melhor qualidade (nitidez, tamanho, brilho, sem print de rede social).
+    Não troca por foto achada pelo nome na Wikipédia: pode ser outra pessoa com o mesmo nome (regra foto × nome)."""
+    import tratamento_foto as TF
+    if not TF.ligado():
+        return foto_do_post_antigo(post)
+    principal = abrir(post["foto"]) if post.get("foto") else None
+    candidatas = [principal]
+    if principal is None or TF.fraca(principal) or brilho(principal) < BRILHO_MINIMO:
+        for url in fotos_da_pagina(post["link"])[:4]:
+            if url != post.get("foto"):
+                candidatas.append(abrir(url))
+    candidatas = [c for c in candidatas if c is not None and brilho(c) >= BRILHO_INUTIL]
+    if not candidatas:
+        log(f"Reels: sem foto legível; matéria fica fora do vídeo: {post['titulo'][:50]}")
+        TF.registrar_fraca(post["titulo"], 0)
+        return None
+    return TF.escolher(candidatas, post["titulo"])
+
+
+def foto_do_post_antigo(post):
+    """Modelo antigo (enquanto a chave do tratamento estiver desligada), sem a troca por nome na Wikipédia."""
     candidatas = [post["foto"]] if post.get("foto") else []
     melhor, melhor_brilho = None, -1
     for tentativa in range(2):
@@ -134,14 +154,9 @@ def foto_do_post(post):
         if tentativa == 0:
             candidatas = [u for u in fotos_da_pagina(post["link"]) if u not in candidatas]
     if melhor is None or melhor_brilho < BRILHO_INUTIL:
-        similar = foto_similar(post)
-        if similar is not None:
-            return similar if brilho(similar) >= BRILHO_MINIMO else \
-                ImageEnhance.Brightness(similar).enhance(min(1.9, (BRILHO_MINIMO + 20) / max(brilho(similar), 15)))
         log(f"Reels: sem foto legível; matéria fica fora do vídeo: {post['titulo'][:50]}")
         return None
     fator = min(1.9, (BRILHO_MINIMO + 20) / max(melhor_brilho, 15))
-    log(f"Reels: foto escura ({melhor_brilho:.0f}) clareada em {fator:.1f}x: {post['titulo'][:50]}")
     return ImageEnhance.Contrast(ImageEnhance.Brightness(melhor).enhance(fator)).enhance(1.08)
 
 
@@ -354,9 +369,20 @@ def montar_video(telas, musica, saida):
     cmd = (["ffmpeg", "-y", "-v", "error"] + entradas + ["-i", musica, "-filter_complex", ";".join(filtros),
            "-map", f"[{atual}]", "-map", "[a]", "-c:v", "libx264", "-preset", "veryfast", "-crf", "22",
            "-pix_fmt", "yuv420p", "-r", str(FPS), "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart",
-           "-t", f"{total:.2f}", saida])
+           "-t", f"{total:.2f}", saida + ".bruto.mp4"])
     subprocess.run(cmd, check=True)
+    import hyperframes_radar
+    hyperframes_radar.volume_14(saida + ".bruto.mp4", saida)   # -14 LUFS em todos os vídeos (28/11/2026)
+    os.remove(saida + ".bruto.mp4")
     return total
+
+
+def radar_hyperframes_ligado():
+    """Chave do visual novo do Radar (video-config.json). Só liga com o "sim" do Washington."""
+    try:
+        return bool(json.load(open(os.path.join(R.PASTA, "video-config.json"))).get("radar_hyperframes"))
+    except Exception:
+        return False
 
 
 def fazer_video(posts, semana, agora_sp, saida, excluir=(), turno="noite", saida_yt=None):
@@ -392,6 +418,22 @@ def fazer_video(posts, semana, agora_sp, saida, excluir=(), turno="noite", saida
     if not faixas:
         raise RuntimeError("nenhuma música na pasta musicas")
     musica = random.choice(faixas)
+    duracao = None
+    if radar_hyperframes_ligado():
+        try:
+            import hyperframes_radar
+            duracao = hyperframes_radar.gerar(escolhidas, fotos, musica, saida)
+            log("Reels: montado no HyperFrames (visual novo).")
+            if saida_yt:
+                try:
+                    hyperframes_radar.gerar(escolhidas, fotos, musica, saida_yt, youtube=True)
+                except Exception as e:
+                    log(f"Versão do YouTube no HyperFrames falhou ({e}); o YouTube usa o vídeo normal.")
+                    saida_yt = None
+            log(f"Reels montado: {len(escolhidas)} matérias, {duracao:.0f}s, música {os.path.basename(musica)}")
+            return escolhidas, duracao
+        except Exception as e:
+            log(f"Reels: HyperFrames falhou ({e}); usando o modelo antigo.")
     duracao = montar_video(telas, musica, saida)
     if saida_yt:
         try:
