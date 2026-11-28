@@ -1540,5 +1540,39 @@
   "nota": 7,
   "destino": "recusada pelo redator",
   "detalhe": "Recusada: o texto original é uma entrevista concedida ao sabado.pt (conteúdo exclusivo do veículo de origem, categoria \"entrevistas\"). Além disso, o material traz apenas uma chamada e trechos de apresentação, sem as falas completas do ator nem fatos novos suficientes para uma matéria honesta sobre os livros e a visita a Portugal. Não é possível reescrever sem se apropriar do trabalho do veículo."
+ },
+ {
+  "hora": "06:18",
+  "fonte": "Busca - Jeferson Tenório",
+  "titulo": "Nos 80 anos de Conceição Evaristo, seus herdeiros-leitores contam o que aprenderam com a escritora",
+  "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNRktrUlByZF83SDBVaGZvUGNFR3drZ2lUY05DT3J5V3J5Q1dqcGxpNDltTUt0Vk9MV3p5X2d5NTczemNpRVZoemFQTUEtekQ5dE85MWsySDl3bTR4T2dpN3cwcmFkc21ONHNYZWFFbDNmaWJXNTVLOFFXZlR5cnl3cEdGSTQzNl9XN0YyRGxBZ240aDFjWnNCS3lNekk4MmxrdjdVNXB0d002aER5QjRTT1NMd2hiQTNXU0hfbzU2RVV2azVyYUhEVVcxV1pYcFFPVXJGUmlCM1BDcG1H0gHiAUFVX3lxTE9JZG5va2NjZE9nWjd0M2NuSVBNRDVTbWVoNEhYRzVVTHZ5SndZN2c4S091cjJ0RFBUZ05KVnBJYldGeUkwRXo0SjlZd1dWN2tpQnlJUUdFSWhaTWQtYVpjMG03VGtRU3BBM0JuWENscVJTdFdIWjQ1aHpDUUlHaER0TkprTGNwTFNUTzE2YW16MEplNFpzM3RLaHNORGUxclVPR1RxUlM5TGloY0o2QXp5dU56VUswT1FQa1dvTmo2M09IMkxDSE9ROW40R2FTY19NTjFfY2k0a3NZcWoyTVpwTFE?oc=5",
+  "categoria": "protagonista",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "Matéria sobre os 80 anos de Conceição Evaristo, escritora negra referência, com relatos de leitores; data da memória negra não listada, mas trajetória de personalidade negra e literatura negra com fatos. Não há material repetido no portal nos últimos 5 dias."
+ },
+ {
+  "hora": "06:18",
+  "fonte": "Busca - samba",
+  "titulo": "União de Maricá mostrou força nos minidesfiles da Cidade do Samba nesta sexta-feira",
+  "link": "https://cn1brasil.com.br/uniao-de-marica-mostrou-forca-nos-minidesfiles-da-cidade-do-samba-nesta-sexta-feira/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "recusada pelo redator",
+  "detalhe": "Recusado: o texto original não traz informação suficiente para uma matéria honesta. Trata-se de uma nota curta sobre a apresentação da União de Maricá nos minidesfiles, sem detalhes sobre a apresentação em si (quesitos, fantasias, samba, participantes), sem falas e sem dados. Além disso, a data original é 28/11/2026 e o fato ocorreu em 27/11, e o conteúdo é apenas uma descrição de agenda, com pouca informação para uma matéria de cultura negra com substância."
+ },
+ {
+  "hora": "06:18",
+  "fonte": "Busca - samba",
+  "titulo": "Beija-Flor levou a força do Marajó para a primeira noite dos minidesfiles",
+  "link": "https://cn1brasil.com.br/beija-flor-levou-a-forca-do-marajo-para-a-primeira-noite-dos-minidesfiles/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "publicada",
+  "detalhe": "Beija-Flor leva força do Marajó aos minidesfiles",
+  "foto": "@amichavy/Divulgação"
  }
 ]
