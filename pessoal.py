@@ -188,7 +188,9 @@ def previa():
     linhas.append(f"- Conexão com o seu Instagram: {'OK' if ok else 'com problema (ver registro)'}")
     linhas.append(f"- Chave de liga/desliga: {'LIGADA' if ligado() else 'desligada (nada sai no pessoal)'}")
     linhas.append("")
-    itens = [i for i in redes.ler_rss_site() if i.get("arte_post")][:2]
+    itens = [i for i in redes.ler_rss_site() if i.get("texto")][:3]
+    if not itens:
+        linhas.append("(o site não devolveu matérias nesta rodada; rode de novo)")
     for item in itens:
         textos = redes.gerar_textos(item)
         leg_ig, _ = redes.montar_legendas(item, textos)
