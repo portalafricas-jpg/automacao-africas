@@ -1502,5 +1502,19 @@
     "tipo": "pagina",
     "url": "https://agenciagov.ebc.com.br/noticias/igualdade-racial",
     "criada": "2026-11-26"
+  },
+  {
+    "nome": "Agência Brasil - Últimas notícias",
+    "categoria": "cotidiano",
+    "tipo": "rss",
+    "url": "https://agenciabrasil.ebc.com.br/feed/ultimasnoticias/feed.xml",
+    "criada": "2026-11-27"
+  },
+  {
+    "nome": "Ministério da Igualdade Racial",
+    "categoria": "politica",
+    "tipo": "pagina",
+    "url": "https://www.gov.br/igualdaderacial/pt-br/assuntos/noticias",
+    "criada": "2026-11-27"
   }
 ]
