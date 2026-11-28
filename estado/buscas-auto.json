@@ -174,5 +174,13 @@
   "busca": "\"Solange Almeida\"",
   "grupo": 2,
   "auto": "2026-11-28"
+ },
+ {
+  "nome": "Busca - DENNIS",
+  "categoria": "cultura",
+  "tipo": "busca",
+  "busca": "\"DENNIS\"",
+  "grupo": 1,
+  "auto": "2026-11-28"
  }
 ]

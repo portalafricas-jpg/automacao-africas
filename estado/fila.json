@@ -1,26 +1,5 @@
 [
  {
-  "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQM0xpNFEyM2pmdGFlM2tIU1BzcTRoaWhWQjNyb1Y1SEdHbi1NSnY0cDI4ak1jc0M1a0x3aEpkTFctV29XUnpmNk4zelNjcmJxUk0wSkVvaElpRVpZWFpEOWRWYjAzRmhHNW1HVFN4bEFYeDJieUhHa1BJaHNKbnkwRnBIOGd3bExhcV90S1FuakVWWlRreWY2aWhxUmxHS3pDNHdDSG0teUo4a0w4TjFfZm5MVmhDbk5aV0E?oc=5",
-  "titulo_original": "Sabadinho Bom leva samba de raiz de Luizinho do Pagode ao Centro Histórico",
-  "descricao": "Sabadinho Bom leva samba de raiz de Luizinho do Pagode ao Centro Histórico    pb agora",
-  "imagem_rss": "",
-  "imagem_banco": false,
-  "imagem_trocar": false,
-  "fonte_nome": "Busca - pagode",
-  "fonte_africa": false,
-  "categoria": "cultura",
-  "prioridade": "media",
-  "nota": 7,
-  "motivo_nota": "Show de samba de raiz de artista negro (Luizinho do Pagode) no Centro Histórico, linha Gente e Música.",
-  "ministerio": false,
-  "excecao_nota7": false,
-  "gente": true,
-  "artista": "Luizinho do Pagode",
-  "data_original": "2026-11-28T14:23:36+00:00",
-  "criado_em": "2026-11-28T15:17:15.534306+00:00",
-  "valido_ate": ""
- },
- {
   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOcHI3QkFNeVhsVW1XZ292c2dYUWxpQzZXSUdyM3pzWlBRemxyT0xFOFA1N3ZTQlM1SGdBWEgtNDJ3RXc2V280NjNOa3RPM0VwM1NvVkduODg0RGpUd3ZjRFFnY1A1V3pZVzQ5VWhEa0JuZWg5bjFFT2VlWGswbzRtejFJQ2NwS3c5WGJGSTNDaGdnVnJjZXpkalZ5ZVZSbnlVOTZQdnpzbmlhQQ?oc=5",
   "titulo_original": "PECI transforma decepção amorosa em liberdade no novo single “iaiaia”",
   "descricao": "PECI transforma decepção amorosa em liberdade no novo single “iaiaia”    Prensa Mercosur",
@@ -354,6 +333,27 @@
   "artista": "",
   "data_original": "2026-11-28T18:00:00+00:00",
   "criado_em": "2026-11-28T18:17:16.291846+00:00",
+  "valido_ate": ""
+ },
+ {
+  "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE4teWN6TWlvTXc3LTdGY0taQTUyUEtDUmJ3eFhWZ0czeHlEN0NidlRPOVpBc1d1cHdIN3VhXy00bTdCT0dibXJKWGVYRVIzWHdxNXV2cmtlS3dZTlRLNVFaZTFyUUVYZ0ptTXg1Vw?oc=5",
+  "titulo_original": "DENNIS lança EP ‘BRABO’ com mistura de funk e música eletrônica",
+  "descricao": "DENNIS lança EP ‘BRABO’ com mistura de funk e música eletrônica    Billboard Brasil",
+  "imagem_rss": "",
+  "imagem_banco": false,
+  "imagem_trocar": false,
+  "fonte_nome": "Busca - Billboard Brasil",
+  "fonte_africa": false,
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "motivo_nota": "Lançamento de EP de artista negro (DENNIS), linha Gente e Música; lançamento de artista negro é notícia de nota mínima 7.",
+  "ministerio": false,
+  "excecao_nota7": true,
+  "gente": true,
+  "artista": "DENNIS",
+  "data_original": "2026-11-28T18:00:03+00:00",
+  "criado_em": "2026-11-28T18:32:15.010387+00:00",
   "valido_ate": ""
  }
 ]
