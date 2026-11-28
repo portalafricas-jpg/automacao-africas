@@ -4352,5 +4352,27 @@
   "nota": 4,
   "destino": "nota baixa",
   "detalhe": "evento local pequeno: Festival de cultura negra em Castro Alves, evento local com ancestralidade, mas a notícia é pouco detalhada e sem fato relevante; mesma cidade da nota 3."
+ },
+ {
+  "hora": "12:50",
+  "fonte": "Agência Brasil - Últimas notícias",
+  "titulo": "Decoração de Natal da cidade de São Paulo é alvo de críticas",
+  "link": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-11/iluminacao-de-natal-da-cidade-de-sao-paulo-e-alvo-de-criticas",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "descartada pelo filtro",
+  "detalhe": "filtro: busca ampla sem sinal (artista, escola/bloco ou termo)"
+ },
+ {
+  "hora": "12:51",
+  "fonte": "Cultura Preta",
+  "titulo": "Ferrugem revela capa de “Legado: Ferrugem Canta Alcione”, que chega às plataformas em 2 de dezembro",
+  "link": "https://culturapreta.com/2026/11/28/ferrugem-revela-capa-de-legado-ferrugem-canta-alcione-que-chega-as-plataformas-em-2-de-dezembro/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Lançamento de álbum de artista negro (Ferrugem, Legado: Ferrugem Canta Alcione), com data de chegada às plataformas; Gente e Música, nota mínima 7. Não há repetição no portal nos últimos 5 dias."
  }
 ]
