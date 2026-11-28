@@ -361,5 +361,93 @@
   "nota": 8,
   "destino": "na fila",
   "detalhe": "Educação antirracista no currículo escolar, defendida por historiadora e pesquisadora; é eixo de educação e ações afirmativas. Trata-se de fala de entrevista sem fato novo claro, então nota moderada."
+ },
+ {
+  "hora": "00:47",
+  "fonte": "Lista Preta",
+  "titulo": "Pin Up Casino Azərbaycan – oyunlar və imkanlar",
+  "link": "https://listapreta.com/pin-up-casino-az-rbaycan-oyunlar-v-imkanlar/",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "descartada pelo filtro",
+  "detalhe": "filtro: spam (pin up)"
+ },
+ {
+  "hora": "00:47",
+  "fonte": "Lista Preta",
+  "titulo": "Non-GamStop Casinos in the UK – Bonuses and Promotions",
+  "link": "https://listapreta.com/non-gamstop-casinos-in-the-uk-bonuses-and-promotions/",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "descartada pelo filtro",
+  "detalhe": "filtro: spam (free spins)"
+ },
+ {
+  "hora": "00:47",
+  "fonte": "Lista Preta",
+  "titulo": "1win — официальный сайт букмекерской конторы 1вин",
+  "link": "https://listapreta.com/1win-oficialnyy-sayt-bukmekerskoy-kontory-1vin-4/",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "descartada pelo filtro",
+  "detalhe": "filtro: título em outro alfabeto (spam)"
+ },
+ {
+  "hora": "00:47",
+  "fonte": "Lista Preta",
+  "titulo": "1win — официальный сайт букмекерской конторы 1вин",
+  "link": "https://listapreta.com/1win-oficialnyy-sayt-bukmekerskoy-kontory-1vin-3/",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "descartada pelo filtro",
+  "detalhe": "filtro: título em outro alfabeto (spam)"
+ },
+ {
+  "hora": "00:48",
+  "fonte": "Busca - Racismo",
+  "titulo": "Salvador reúne lideranças internacionais em seminário sobre racismo e reparações históricas",
+  "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQd3VUUXBIWF9yUmRxUFVaQllocXJPNURURThqSHg3UGRwXzJYNHZXeHZURGo5cW5jNUxOTG5VMkV0QkdGYWQyN2dlQWxOV1RNOUkxS05Ec3lxNTJLQW01eFh3Z3ctOVVJMG53UnRuTjVTTlJsNVZrMmF1WkVGTjA1TEFYQmhUeEJBei1zSTJhY0dJODZWaDBBY1pXU3VSeFdUTTljcGhqZkRBQXFLdEZkQ3VyR3BpZzYzX3BlZnNBUlMwWnNMQmZrM0s1OENUay1XeHludVZqQW5ycEFYSkE?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "repetida",
+  "detalhe": "título quase igual a outra notícia"
+ },
+ {
+  "hora": "00:48",
+  "fonte": "Busca - Racismo",
+  "titulo": "CRAS Santo Antônio promove atividades sobre cultura e história negra",
+  "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPbTNQZEh6ZElhUUgzZUxFYVlST2tKNnMtV0NxTi00bGlYdklZbXdBNGV1SlFaVTh0SDlaY1lrZ3l2QkI3M2ZDZ2JuWWM5Qm1WSVVYcUZrOURvVzdsejdoSEs4NG8wRWw0bDF3amh0RUN4Z2hUSlFjUGdHNEhEaU82YmJJNHNyQ1FJTVlONWJaYUotV0VWYTdpVEdQcWEzSnI3TGJFcjVKaVJldw?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "evento local pequeno: Atividades sobre cultura e história negra em CRAS; evento local pequeno, mas ligado à memória negra em novembro (Mês da Consciência Negra). Nota 7 pelo eixo cultura negra."
+ },
+ {
+  "hora": "00:48",
+  "fonte": "Busca - Quilombola",
+  "titulo": "Comitê da Baía da Ilha Grande promove ação de educação ambiental em escola quilombola de Paraty",
+  "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNdDF4M0RWRHl0R2U0M1ZGdFUwT2J2V05VWnV1R0poVG1TVE9jbFVZUll0VGE1eExacU00c09wRWE2eGYxZFFiX0ZxMlNtVkZDMk5QeUQ5bS1IZjZCRzVnU0EtZy1BdTdJUkU0d0tUbnZwV1dQU0ZSblVtOXEtS2pIOWc3dE5oLVd1a2lhSUJYYnRKSFluSDN5QVhTelJjWm1QZjl4TU5ETzBjeUxyVnVUakxzNFR1N3laX0hTRGRpVVUxNDhCS1B2Y2FSWGlELVV0d3pNQUNuaGd3Xzhwc0E?oc=5",
+  "categoria": "ancestralidade",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Ação de educação ambiental em escola quilombola: educação e território quilombola, eixo da Agenda Preta. Nota 8 por tratar de escola quilombola."
+ },
+ {
+  "hora": "00:48",
+  "fonte": "Lista Preta",
+  "titulo": "Kasyno online Vulkan Vegas – Kolekcja gier",
+  "link": "https://listapreta.com/kasyno-online-vulkan-vegas-kolekcja-gier/",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Publicidade de cassino online sem relação com a temática racial; conteúdo que não é notícia."
  }
 ]
