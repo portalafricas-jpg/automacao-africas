@@ -19,7 +19,7 @@ from urllib.parse import urljoin, urlparse
 
 from filtro import Filtro
 import revisao_filtro
-import mesmo_fato
+import mesmo_fato as anti_repeticao
 
 try:
     import trafilatura
@@ -1537,7 +1537,7 @@ def main():
             # Protocolo anti-repetição, trava 1 (27/11/2026): antes de gastar com o redator
             tres_dias = (agora - timedelta(days=3)).isoformat()
             ultimas = [m for m in publicadas if m.get("criado_em", "") >= tres_dias]
-            rep, antiga = mesmo_fato.repetida(materia_fila, ultimas)
+            rep, antiga = anti_repeticao.repetida(materia_fila, ultimas)
             if rep:
                 log(f"  Repetida (mesmo fato de \"{antiga.get('titulo', '')[:60]}\"): {materia_fila['titulo_original'][:70]}")
                 registrar(materia_fila, "repetida", f"mesmo fato já publicado: {antiga.get('titulo', '')}")
@@ -1568,7 +1568,7 @@ def main():
                 registrar(materia_fila, "recusada", "mesmo fato já publicado (título quase igual)")
                 continue
             # trava 1b: confere de novo com o título e a linha fina já escritos
-            rep, antiga = mesmo_fato.repetida(pronta, ultimas)
+            rep, antiga = anti_repeticao.repetida(pronta, ultimas)
             if rep is not False:
                 motivo = (f"mesmo fato já publicado: {antiga.get('titulo', '')}" if rep
                           else "suspeita de repetida sem conferência possível: não publicada por segurança")
