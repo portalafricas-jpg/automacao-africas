@@ -6606,5 +6606,71 @@
   "nota": 5,
   "destino": "recusada pelo redator",
   "detalhe": "Matéria sobre o Programa Cultura é Mais Saúde (saúde mental e cultura), sem recorte racial no texto original, sem nenhuma pessoa negra mencionada e sem relação com a Agenda Preta ou com os pilares do portal. Além disso, o fato ocorreu em 26/11/2026 e o material chegou com data de 27/11/2026, dentro do prazo, mas o tema não tem conexão com a população negra que justifique a publicação. Também é divulgação de ação institucional de caráter genérico, sem fato que dialogue com a temática racial."
+ },
+ {
+  "hora": "23:33",
+  "fonte": "Busca - Billboard Brasil",
+  "titulo": "melhores músicas de todos os tempos",
+  "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBiQU1iMHNJNlJZV0VVSUJhSkZpdnpZV2dNc3VTMUEyRVRpWHlaa0lONF9OVFdqaWRQTWVBU0xQdFNkV0YtOVh0azFVZDd3Z3REYWt1cjdIaE9CR2dXa2ZWaGF1dnlBNWhXMWxiRXhINGI3SEk?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "descartada pelo filtro",
+  "detalhe": "filtro: busca ampla sem sinal (artista, escola/bloco ou termo)"
+ },
+ {
+  "hora": "23:33",
+  "fonte": "Busca - Empreendedor negro",
+  "titulo": "Capacitação gratuita voltada para geração de renda com arte e cultura acontece neste sábado no Cabo",
+  "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQc0VwYWpUUFRBTUFjQnFvWXNTZFE2dklSX3lTVWNHcFdwSXpSQi1xYVZQR3dPMUl1WmFfY2dTYk5FZVM4YkZhcEpfMXNjZHBwRElScTlwUDhyVjg0NlFzTDVkWDhSZXBlaUoyb1FZTGd3OHEzX3FzVFFlbm9ZZ0pBMmpOdkNNZ3VpU2FMSXNpQ3ZwbUxNUDM0akRUZGgyZHlzd0duUEVfbXZWT3JnZ2pySWFPckFROHfSAbcBQVVfeXFMUHNFcGFqVFBUQU1BY0Jxb1lzU2RRNnZJUl95U1VjR3BXcEl6UkItcWFWUEd3TzFJdVphX2NnU2JORWVTOGJGYXBKXzFzY2RwcERJUnE5cFA4clY4NDZRc0w1ZFg4UmVwZWlKMm9RWUxndzhxM19xc1RRZW5vWWdKQTJqTnZDTWd1aVNhTElzaUN2cG1MTVAzNGpEVGRoMmR5c3dHblBFX212Vk9yZ2dqcklhT3JBUTh3?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 5,
+  "destino": "nota baixa",
+  "detalhe": "evento local pequeno: Capacitação local de geração de renda com arte e cultura; sem recorte racial explícito no resumo e sem fato relevante para a população negra."
+ },
+ {
+  "hora": "23:33",
+  "fonte": "Busca - Fundação Cultural Palmares",
+  "titulo": "Presidente Lula apresenta avanços na promoção da igualdade racial e na garantia dos direitos quilombolas",
+  "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOeWVuNEg1UnlGQVlBcEo4VlYxNGFEYzJtRXNzZW1rXzI5TDRYNjI0ekl0UEpGcFlGN05IM0hyRDR5MVphOFJxN1FPUVlkRVhZcHlkWG1laFNBR2pncHhBWTlvU0RWTU9RTzBMbVluUm1ZTXJkdi1qc3NYNzVxWTNjb1BmcU5tQmVVVUo1SWRLanJzUlNKR2NCWVdaREdXM3RqaUVNbTdLVU1GdTE5N3pHUDlyUUZxZHl1RVhtMlF5SXJya0xmSVZ2SmZJMlFtakkzNTVXbHNVdEJBNXROSEhxZUZn?oc=5",
+  "categoria": "politica",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Presidente Lula apresenta avanços em igualdade racial e direitos quilombolas, tema diretamente ligado à Agenda Preta (território e quilombos); não há notícia recente equivalente no portal."
+ },
+ {
+  "hora": "23:33",
+  "fonte": "Busca - Cultura negra",
+  "titulo": "Palestra sobre empreendedorismo e ancestralidade promove reflexão e valorização da cultura negra",
+  "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNQ2J6Yi1MTFFYMWNLOHZMZExiOFRVQURrV09mRVZ0aG9WZjlzbnlLQjdjQWVHeFlIelBSM09BdTdDOFJ3cDlCYVExVHdKVGhORHN5Y2o3Mmd3NU1ldk5aUThjejZ1TEFkaTdGcEdrdXlqYnQtS21ObXRCN0NvV1JFV1M5b1E5UnRqZmpfcVVhVG9NdDRXdFREZHJrSnotbjVtTUItNUFCUDNZdG9rQXFOWTlacV9HYV9mbWItSnZuWFpXci1tbWJEcTJB?oc=5",
+  "categoria": "ancestralidade",
+  "prioridade": "",
+  "nota": 4,
+  "destino": "nota baixa",
+  "detalhe": "evento local pequeno: Palestra local sem personagem ou fato relevante; evento pequeno, sem informações suficientes para matéria honesta."
+ },
+ {
+  "hora": "23:33",
+  "fonte": "Busca - Lauryn Hill",
+  "titulo": "Nômade Festival terá shows de Anitta e de BaianaSystem com Gilberto Gil; veja ingressos",
+  "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQTFZfVDJNZUh2TGxwR2pKRVpUNnpaOW01Tmtad2tpM2R2eW9TdEM4M1dEUmpXMzBUTEV0aXdwcVZxVWM3MjFJSUFGbllHbWNSa1oyXzI1TVZzNGIyUGFWbXlEUVZmU1NJQUNMZG1HZmlpVnkyZVdMX19rQUNKWVlKZDBfeDBOVVJuTDl4XzBPN29aX1ZCNmRiS0RVYUIyQnV2a2I1M0VYY05aVFZIRlFXRG1vd0lWTTFoS1E1UW5MNEkxeUJvTUM2d2RXZWIyQ2ZtVFE?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 4,
+  "destino": "nota baixa",
+  "detalhe": "Festival com Anitta e BaianaSystem é conteúdo de venda de ingressos (publicitário/guia), sem vínculo central com a temática racial."
+ },
+ {
+  "hora": "23:33",
+  "fonte": "Busca semanal - IZA cantora",
+  "titulo": "'Dona de Mim': Marina Ruy Barbosa tira roupa durante performance de IZA e fica só de biquíni; fotos e vídeo",
+  "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOWURNVWhUa1d3ek5PaUI4aElKZWdPVDBvb1c1a1VzYU1jT0ZFd1VHVWxXa0o4LW8yRFhRTDdGU0R3ZnktUkxwd3NKN2VMSElhN2lHemp6c3RzRTBpN1EwYWpmMkd0YTFnMDJ2c1BHSURHMUQ2ZGcwa2lFUnFVT2tYUWZpSzY3TW9uMXhqbDJSbDhkUzkwRFJoWE81WUVlem92QUhld1BONDZPWjRIUTJuMlp3SmVMUWhpM0xPRXQ5emlwTW1v0gHTAUFVX3lxTE5sZWpDS1dveXIxeHlYVU5vT2RRYjlqS1pTUnYycHpQQ1ZCVktWRVIxMXBuZTFTTDNYX0lSTTVXOUhrZVE5U3BYS3Btbi1MckpGRkJrQVVuZGxZd3M5YmsybVVtOWducU1mZ3VWWEE5Tkc3NGxyQjNpWGF4Y2dIUFRGS1dsbTctUTZzVUJ4bVJkS3RoalNFdWFjLTNzVEtuTzdSNkt5bk9pS3pZZzEzNElWRWpMdHdEbXV6VS1jQVVoZjRsdGNxTl90V2lzd0RQaGtMX00?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 1,
+  "destino": "nota baixa",
+  "detalhe": "Fofoca sobre atriz em performance com IZA, foco em roupa e biquíni, sem fato de trabalho relevante para a população negra."
  }
 ]
