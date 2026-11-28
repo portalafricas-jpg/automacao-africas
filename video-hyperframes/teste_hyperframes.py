@@ -46,7 +46,7 @@ PESSOAS = [
      "cargo": "Conselheiro de exportações da ZimTrade", "pais": "ZIMBÁBUE"},
 ]
 PASTA_FOTOS = os.path.join(RAIZ, "assets", "materias", "expo")
-CAPA = {"arquivo": "painel2-capa.jpg", "pessoa": "Perez Ochieng"}
+CAPA = {"arquivo": "perez-ochieng.jpg", "pessoa": "Perez Ochieng"}  # mesma foto da capa da matéria, sem o resto do cartaz
 
 # tempos do vídeo novo (segundos)
 T_GANCHO, T_PESSOA, T_PAINEL, T_FINAL = 5.0, 3.8, 3.6, 4.4
@@ -410,11 +410,11 @@ def enviar_email(arquivos, relatorio):
     msg["To"] = EMAIL
     msg["Subject"] = "Prévia para aprovação: Reels atual × Reels novo (HyperFrames)"
     anexados, fora, soma = [], [], 0
+    escolhidos = []
     for c in arquivos:
         tam = os.path.getsize(c)
         if soma + tam <= LIMITE_ANEXOS:
-            with open(c, "rb") as f:
-                msg.add_attachment(f.read(), maintype="video", subtype="mp4", filename=os.path.basename(c))
+            escolhidos.append(c)
             anexados.append(os.path.basename(c))
             soma += tam
         else:
@@ -440,6 +440,9 @@ def enviar_email(arquivos, relatorio):
         "Robô de vídeo do Áfricas Play",
     ]
     msg.set_content("\n".join(corpo))
+    for c in escolhidos:
+        with open(c, "rb") as f:
+            msg.add_attachment(f.read(), maintype="video", subtype="mp4", filename=os.path.basename(c))
     with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=ssl.create_default_context(), timeout=120) as smtp:
         smtp.login(EMAIL, senha)
         smtp.send_message(msg)
