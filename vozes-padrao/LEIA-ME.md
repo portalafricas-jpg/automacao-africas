@@ -17,3 +17,7 @@ As escolas de samba do Grupo Especial do Rio de Janeiro apresentam minidesfiles 
 Texto falado nos dois arquivos:
 
 Duzentas e cinquenta chibatadas. Esse foi o castigo que acendeu uma das maiores revoltas da história do Brasil. À frente dela estava um marinheiro negro: João Cândido. Fora da Marinha, sobreviveu vendendo peixe no Rio de Janeiro, sem o reconhecimento que merecia.
+
+## Uso aprovado (28/11/2026)
+- Calendário Afro: historiador nos vídeos do YouTube (2 min); locutor de FM nos Shorts e Reels (60 s).
+- Colunistas: as vozes de FM e de historiador narram as colunas até chegar o áudio de cada colunista.
