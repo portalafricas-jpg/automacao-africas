@@ -190,6 +190,9 @@ def recortar(img, largura, altura, topo=0.33):
     """Preenche o tamanho sem distorcer, com o rosto (ou o grupo) centralizado na parte de cima."""
     img = img.convert("RGB")
     caras = rostos(img)
+    if caras:   # o centro é o rosto principal (o maior); só entram junto rostos de tamanho parecido
+        maior = max(c[2] for c in caras)
+        caras = [c for c in caras if c[2] >= maior * 0.6]
     escala = max(largura / img.width, altura / img.height)
     nova = img.resize((int(img.width * escala) + 1, int(img.height * escala) + 1), Image.LANCZOS)
     if caras:
@@ -197,6 +200,9 @@ def recortar(img, largura, altura, topo=0.33):
         x1 = max(c[0] + c[2] for c in caras) * escala
         y0 = min(c[1] for c in caras) * escala
         y1 = max(c[1] + c[3] for c in caras) * escala
+        if x1 - x0 > largura * 0.9:   # grupo não cabe: fica o rosto principal no centro
+            c = max(caras, key=lambda c: c[2])
+            x0, x1, y0, y1 = c[0] * escala, (c[0] + c[2]) * escala, c[1] * escala, (c[1] + c[3]) * escala
         cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
         x = int(cx - largura / 2)
         y = int(cy - altura * topo)
