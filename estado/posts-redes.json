@@ -1160,5 +1160,34 @@
   "categoria": "Protagonistas",
   "publicado_em": "2026-11-28T14:23:05.894745+00:00",
   "resumo": "O cantor da dupla Os Primos foi baleado durante tentativa de assalto na Avenida Bosque da Saúde, na zona sul de São Paulo, e morreu no local. Os suspeitos ainda não foram identificados."
+ },
+ {
+  "tipo": "reels",
+  "titulo": "Radar do meio-dia 28/11",
+  "link": "https://www.africas.com.br",
+  "links": [
+   {
+    "titulo": "Jajá, referência do samba de Goiânia, morre aos 75",
+    "link": "https://www.africas.com.br/noticia/jaja-referencia-do-samba-de-goiania-morre-aos-75"
+   },
+   {
+    "titulo": "Cantor de pagode Pedro Guimarães é baleado e morre em SP",
+    "link": "https://www.africas.com.br/noticia/cantor-de-pagode-pedro-guimaraes-e-baleado-e-morre-em-sp"
+   },
+   {
+    "titulo": "Camilly Victória lança EP \"Fique Mais um Pouco\"",
+    "link": "https://www.africas.com.br/noticia/camilly-victoria-lanca-ep-fique-mais-um-pouco"
+   },
+   {
+    "titulo": "Beija-Flor leva força do Marajó aos minidesfiles",
+    "link": "https://www.africas.com.br/noticia/beija-flor-leva-forca-do-marajo-aos-minidesfiles"
+   }
+  ],
+  "ig_media": "18021955094957270",
+  "ig_link": "https://www.instagram.com/reel/DgSmEdSzSvf/",
+  "fb_post": "1660205305457776",
+  "yt_video": "2MlKN-Vi9H0",
+  "prioridade": "reels",
+  "publicado_em": "2026-11-28T15:38:55.753952+00:00"
  }
 ]
