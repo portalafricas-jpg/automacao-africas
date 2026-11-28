@@ -80,6 +80,7 @@ A parte entre as marcas AUTOMATICO é refeita sozinha pelo robô conexoes.yml se
 - teste-direct.yml: Teste do direct com botões (acionado sob demanda ou pelo cron-job.org). Chaves: FB_PAGE_ID, IG_USER_ID, META_PAGE_TOKEN
 - teste-hyperframes.yml: Teste do HyperFrames (só gera vídeo, não publica) (acionado sob demanda ou pelo cron-job.org). Chaves: GITHUB_TOKEN, GMAIL_SENHA_APP
 - teste-meta.yml: Teste da chave da Meta (acionado sob demanda ou pelo cron-job.org). Chaves: FB_PAGE_ID, IG_USER_ID, META_PAGE_TOKEN, META_USER_TOKEN
+- teste-radar-hyperframes.yml: Teste do Radar com HyperFrames (só gera vídeo, não publica) (acionado sob demanda ou pelo cron-job.org). Chaves: ANTHROPIC_API_KEY, GITHUB_TOKEN, GMAIL_SENHA_APP
 - teste-reels.yml: Teste do Reels (acionado sob demanda ou pelo cron-job.org). Chaves: ANTHROPIC_API_KEY, GITHUB_TOKEN
 - teste-repetidas.yml: Teste do protocolo anti-repetição (só leitura) (acionado sob demanda ou pelo cron-job.org). Chaves: ANTHROPIC_API_KEY
 - teste-voz.yml: Teste de vozes gratuitas (só gera áudio) (acionado sob demanda ou pelo cron-job.org)
@@ -95,11 +96,11 @@ A parte entre as marcas AUTOMATICO é refeita sozinha pelo robô conexoes.yml se
 - yt-privar.yml: Deixar vídeos privados no YouTube (acionado sob demanda ou pelo cron-job.org). Chaves: YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN
 
 ### Chaves guardadas nos Secrets do GitHub (só os nomes) e quem usa
-- ANTHROPIC_API_KEY: alarme-repetidas.yml, comentarios.yml, grupos.yml, pessoal-previa.yml, redes.yml, reels-agora.yml, robo.yml, teste-reels.yml, teste-repetidas.yml, teste-youtube.yml
+- ANTHROPIC_API_KEY: alarme-repetidas.yml, comentarios.yml, grupos.yml, pessoal-previa.yml, redes.yml, reels-agora.yml, robo.yml, teste-radar-hyperframes.yml, teste-reels.yml, teste-repetidas.yml, teste-youtube.yml
 - CLOUDFLARE_API_TOKEN: formulario-publicar.yml, paginas-publicar.yml
 - FB_PAGE_ID: comentarios.yml, metricas.yml, redes.yml, reels-agora.yml, teste-direct.yml, teste-meta.yml
-- GITHUB_TOKEN: ajuste-buscas.yml, alarme-repetidas.yml, calendario-voz-salvar.yml, ferramentas-video.yml, grupos.yml, limpa-midia.yml, teste-hyperframes.yml, teste-reels.yml, vigia-gastos.yml
-- GMAIL_SENHA_APP: assessorias-envio.yml, comentarios.yml, redes.yml, teste-hyperframes.yml
+- GITHUB_TOKEN: ajuste-buscas.yml, alarme-repetidas.yml, calendario-voz-salvar.yml, ferramentas-video.yml, grupos.yml, limpa-midia.yml, teste-hyperframes.yml, teste-radar-hyperframes.yml, teste-reels.yml, vigia-gastos.yml
+- GMAIL_SENHA_APP: assessorias-envio.yml, comentarios.yml, redes.yml, teste-hyperframes.yml, teste-radar-hyperframes.yml
 - IG_USER_ID: comentarios.yml, instagram-antigos.yml, metricas.yml, redes.yml, reels-agora.yml, teste-direct.yml, teste-meta.yml
 - META_PAGE_TOKEN: comentarios.yml, instagram-antigos.yml, metricas.yml, redes.yml, reels-agora.yml, teste-contas-meta.yml, teste-direct.yml, teste-meta.yml
 - META_USER_TOKEN: pessoal-previa.yml, redes.yml, teste-contas-meta.yml, teste-meta.yml
