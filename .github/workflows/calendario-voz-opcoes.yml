@@ -1,0 +1,32 @@
+name: Calendário Afro - opções de voz
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  voz:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        opcao: [1_grave_fm, 2_historiador, 3_feminina_documentario, 4_feminina_contadora]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Instalar motor de voz (CPU)
+        run: |
+          pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install "voxcpm>=2.0.3" soundfile
+      - name: Gerar a amostra
+        run: python calendario_voz_opcoes.py ${{ matrix.opcao }} saida
+      - name: Guardar no ramo voz-opcao-${{ matrix.opcao }}
+        run: |
+          git config user.name "robo-africas"; git config user.email "robo-africas@users.noreply.github.com"
+          cp saida/*.wav /tmp/
+          git checkout --orphan voz-opcao-${{ matrix.opcao }}
+          git rm -rq --cached . && rm -rf ./*
+          cp /tmp/${{ matrix.opcao }}.wav . && git add *.wav && git commit -qm "Amostra de voz ${{ matrix.opcao }}"
+          git push -f origin voz-opcao-${{ matrix.opcao }}
