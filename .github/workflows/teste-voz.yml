@@ -14,7 +14,7 @@ jobs:
         run: |
           pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu
           pip install "voxcpm>=2.0.3" soundfile
-          sudo apt-get install -y ffmpeg
+          which ffmpeg || (sudo apt-get update -q && sudo apt-get install -y -q ffmpeg)
       - name: Gerar vozes
         run: |
           mkdir -p saida
