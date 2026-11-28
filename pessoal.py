@@ -188,6 +188,30 @@ def copiar_story(url_arte):
         return None
 
 
+def itens_dos_feeds(n):
+    import html
+    import xml.etree.ElementTree as ET
+    ns = {"content": "http://purl.org/rss/1.0/modules/content/", "media": "http://search.yahoo.com/mrss/"}
+    import redes
+    itens = []
+    for nome in ("cultura", "cotidiano", "mundo", "politica", "ancestralidade", "protagonista"):
+        try:
+            raiz = ET.parse(os.path.join(PASTA, "feeds", nome + ".xml")).getroot()
+        except Exception:
+            continue
+        for it in raiz.iter("item"):
+            m = it.find("media:content", ns)
+            itens.append({"titulo": html.unescape(it.findtext("title", "")), "link": it.findtext("link", ""),
+                          "resumo": html.unescape(it.findtext("description", "")),
+                          "texto": redes.limpar_html(it.findtext("content:encoded", "", ns)),
+                          "credito": (m.findtext("media:description", "", ns) if m is not None else ""),
+                          "categoria": nome, "autor": "", "publicou": "", "foto": "", "quando": None})
+            break  # a mais nova de cada categoria
+        if len(itens) >= n:
+            break
+    return itens
+
+
 def previa():
     """Só lê e escreve: monta a legenda pessoal das últimas matérias do feed do @africasplay. Não publica nada."""
     import redes
@@ -197,7 +221,12 @@ def previa():
     linhas.append(f"- Conexão com o seu Instagram: {'OK' if ok else 'com problema (ver registro)'}")
     linhas.append(f"- Chave de liga/desliga: {'LIGADA' if ligado() else 'desligada (nada sai no pessoal)'}")
     linhas.append("")
-    itens = [i for i in redes.ler_rss_site() if i.get("texto")][:3]
+    try:
+        itens = [i for i in redes.ler_rss_site() if i.get("texto")][:3]
+    except Exception:
+        itens = []
+    if not itens:  # o site oscila: usa os RSS do próprio robô (feeds/)
+        itens = itens_dos_feeds(3)
     if not itens:
         linhas.append("(o site não devolveu matérias nesta rodada; rode de novo)")
     for item in itens:
