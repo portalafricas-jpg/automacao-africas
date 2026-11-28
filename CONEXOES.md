@@ -77,6 +77,7 @@ A parte entre as marcas AUTOMATICO é refeita sozinha pelo robô conexoes.yml se
 - testar-fontes.yml: Testar fontes (acionado sob demanda ou pelo cron-job.org)
 - teste-contas-meta.yml: Teste das contas da Meta (só leitura) (acionado sob demanda ou pelo cron-job.org). Chaves: META_PAGE_TOKEN, META_USER_TOKEN
 - teste-direct.yml: Teste do direct com botões (acionado sob demanda ou pelo cron-job.org). Chaves: FB_PAGE_ID, IG_USER_ID, META_PAGE_TOKEN
+- teste-hyperframes.yml: Teste do HyperFrames (só gera vídeo, não publica) (acionado sob demanda ou pelo cron-job.org). Chaves: GITHUB_TOKEN, GMAIL_SENHA_APP
 - teste-meta.yml: Teste da chave da Meta (acionado sob demanda ou pelo cron-job.org). Chaves: FB_PAGE_ID, IG_USER_ID, META_PAGE_TOKEN, META_USER_TOKEN
 - teste-reels.yml: Teste do Reels (acionado sob demanda ou pelo cron-job.org). Chaves: ANTHROPIC_API_KEY, GITHUB_TOKEN
 - teste-repetidas.yml: Teste do protocolo anti-repetição (só leitura) (acionado sob demanda ou pelo cron-job.org). Chaves: ANTHROPIC_API_KEY
@@ -96,8 +97,8 @@ A parte entre as marcas AUTOMATICO é refeita sozinha pelo robô conexoes.yml se
 - ANTHROPIC_API_KEY: alarme-repetidas.yml, comentarios.yml, grupos.yml, pessoal-previa.yml, redes.yml, reels-agora.yml, robo.yml, teste-reels.yml, teste-repetidas.yml, teste-youtube.yml
 - CLOUDFLARE_API_TOKEN: formulario-publicar.yml, paginas-publicar.yml
 - FB_PAGE_ID: comentarios.yml, metricas.yml, redes.yml, reels-agora.yml, teste-direct.yml, teste-meta.yml
-- GITHUB_TOKEN: ajuste-buscas.yml, alarme-repetidas.yml, calendario-voz-salvar.yml, ferramentas-video.yml, grupos.yml, limpa-midia.yml, teste-reels.yml, vigia-gastos.yml
-- GMAIL_SENHA_APP: assessorias-envio.yml, comentarios.yml, redes.yml
+- GITHUB_TOKEN: ajuste-buscas.yml, alarme-repetidas.yml, calendario-voz-salvar.yml, ferramentas-video.yml, grupos.yml, limpa-midia.yml, teste-hyperframes.yml, teste-reels.yml, vigia-gastos.yml
+- GMAIL_SENHA_APP: assessorias-envio.yml, comentarios.yml, redes.yml, teste-hyperframes.yml
 - IG_USER_ID: comentarios.yml, instagram-antigos.yml, metricas.yml, redes.yml, reels-agora.yml, teste-direct.yml, teste-meta.yml
 - META_PAGE_TOKEN: comentarios.yml, instagram-antigos.yml, metricas.yml, redes.yml, reels-agora.yml, teste-contas-meta.yml, teste-direct.yml, teste-meta.yml
 - META_USER_TOKEN: pessoal-previa.yml, redes.yml, teste-contas-meta.yml, teste-meta.yml
