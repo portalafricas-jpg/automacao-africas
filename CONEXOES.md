@@ -48,6 +48,7 @@ A parte entre as marcas AUTOMATICO é refeita sozinha pelo robô conexoes.yml se
 - alarme-repetidas.yml: Alarme de matérias repetidas (agendado (UTC): 30 10 * * *). Chaves: ANTHROPIC_API_KEY, GITHUB_TOKEN
 - assessorias-envio.yml: Assessorias - envio de e-mails (acionado sob demanda ou pelo cron-job.org). Chaves: GMAIL_SENHA_APP
 - calendario-imagens.yml: Calendário Afro - pesquisar imagens (acionado sob demanda ou pelo cron-job.org)
+- calendario-voz-opcoes.yml: Calendário Afro - opções de voz (acionado sob demanda ou pelo cron-job.org)
 - calendario-voz-salvar.yml: Calendário Afro - guardar áudios de um teste (acionado sob demanda ou pelo cron-job.org). Chaves: GITHUB_TOKEN
 - calendario-voz-teste.yml: Calendário Afro - teste da voz padrão (acionado sob demanda ou pelo cron-job.org)
 - calendario-voz.yml: Calendário Afro - gravar narração (acionado sob demanda ou pelo cron-job.org)
