@@ -51,13 +51,14 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -m "Robô das redes: rodada"
           for i in 1 2 3; do
-            git pull --rebase -X theirs && git push && exit 0
+            git pull --rebase --autostash -X theirs && git push && exit 0
             git rebase --abort 2>/dev/null || true
             sleep 5
           done
           exit 1
 
       - name: Assessorias - ler a caixa e mandar avisos (27/11/2026)
+        if: always()
         continue-on-error: true
         timeout-minutes: 5
         env:
@@ -71,7 +72,7 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -m "Assessorias: rodada"
           for i in 1 2 3; do
-            git pull --rebase -X theirs && git push && exit 0
+            git pull --rebase --autostash -X theirs && git push && exit 0
             git rebase --abort 2>/dev/null || true
             sleep 5
           done
