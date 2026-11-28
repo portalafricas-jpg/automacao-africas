@@ -35,6 +35,7 @@ A parte entre as marcas AUTOMATICO é refeita sozinha pelo robô conexoes.yml se
 - X (Twitter): não será pago.
 
 ## Histórico de mudanças (a mais nova em cima)
+- 28/11/2026: política de privacidade e termos para as redes (TikTok, Meta, LinkedIn, Threads): usar https://www.africas.com.br/termos-de-uso-e-privacidade (item 17 novo, contato redacao@africas.com.br). As páginas no Cloudflare (cloudflare/paginas.js) ficam descartadas.
 - 28/11/2026: TikTok: decidido seguir só pela postagem direta (robô 100% automático, depois da auditoria). Páginas de privacidade e termos prontas em cloudflare/paginas.js (robô paginas-publicar.yml), mas a publicação falhou porque a chave do Cloudflare está vazia no cofre. Alternativa: publicar em aplicativo.africas.com.br/privacidade/ e /termos/ (repositório aplicativo-africasplay).
 - 28/11/2026: voz padrão fixa: os robôs copiam a voz dos arquivos vozes-padrao/masculina.wav e feminina.wav (VoxCPM2 com prompt_wav_path + prompt_text + reference_wav_path). Sem isso, cada frase sai com uma voz diferente. Robôs do Calendário Afro: calendario-imagens, calendario-voz, calendario-voz-teste, calendario-voz-salvar. Artefatos do GitHub não baixam nesta sessão: guardar áudios em ramo (calendario-voz-teste, calendario-audio).
 - 28/11/2026: histórico do galho main limpo de todos os vídeos .mp4 (cerca de 124 MB); o main caiu para uns 70 MB. Robô do portal passou a tentar de novo ao gravar.
