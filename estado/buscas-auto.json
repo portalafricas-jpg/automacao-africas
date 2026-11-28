@@ -150,5 +150,13 @@
   "busca": "\"MC Kekel\"",
   "grupo": 0,
   "auto": "2026-11-28"
+ },
+ {
+  "nome": "Busca - Jajá",
+  "categoria": "protagonista",
+  "tipo": "busca",
+  "busca": "\"Jajá\"",
+  "grupo": 2,
+  "auto": "2026-11-28"
  }
 ]
