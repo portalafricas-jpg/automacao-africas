@@ -5,19 +5,22 @@ Nada foi publicado. Abaixo, a legenda do @africasplay e como ela sairia no seu I
 - Conexão com o seu Instagram: OK
 - Chave de liga/desliga: desligada (nada sai no pessoal)
 
-## Ferrugem revela capa de projeto com Alcione
+## Agro e indústria na rota Brasil-África na Expo África Brasil
 
 ### No @africasplay
 
-Ferrugem revela capa de "Legado: Ferrugem Canta Alcione", projeto com Alcione gravado no Rio
+Quênia, Moçambique, Zimbábue e o agro brasileiro se sentam à mesma mesa na Expo África Brasil para falar de negócios, máquinas e produção local.
 
-O projeto audiovisual chega às plataformas em 2 de dezembro, em celebração ao Dia Nacional do Samba. A arte, assinada pelo designer Renan Andrade com direção criativa de Jhei Oliveira, usa as letras das 13 canções para formar os rostos dos dois artistas.
+O Painel 2 reúne empresários e gestores públicos que discutem oportunidades concretas entre o Brasil e países africanos, da irrigação aos alimentos. A proposta é ir além da venda e pensar em industrialização dentro do próprio continente.
 
-A gravação aconteceu na Cidade das Artes, no Rio de Janeiro, com participação especial de Alcione. O repertório revisita clássicos da carreira de ambos e celebra uma relação musical que começou há mais de uma década.
+Para o pequeno industrial e o produtor brasileiro, a África aparece como mercado em crescimento. Para os países africanos, a parceria pode significar produzir mais em casa.
 
 👉🏿 Quer ler a matéria completa? Comente APP que a gente te manda o link no direct.
 
-#ÁfricasPlay #Ferrugem #Alcione #DiaNacionalDoSamba #LegadoFerrugemCantaAlcione
+Texto: Vitor Lúcio Andrade | Áfricas Play
+📸 Foto: Perez Ochieng, CEO da Sacoma Global Foods Innovation. Foto: Divulgação/Expo África Brasil
+
+#ÁfricasPlay #AgronegocioBrasilAfrica #IndustriaAfricana #ExpoAfricaBrasil2026
 
 ### No seu Instagram (primeira pessoa)
 
@@ -29,13 +32,14 @@ A gravação aconteceu na Cidade das Artes, no Rio de Janeiro, com participaçã
 
 ### No @africasplay
 
-MG debate saúde da população negra e quilombola em seminário em Belo Horizonte, com cerca de 350 gestores e profissionais de saúde reunidos na Cidade Administrativa.
+MG reúne cerca de 350 gestores e profissionais de saúde para debater a saúde da população negra e quilombola em Belo Horizonte. O III Seminário da Saúde da População Negra e Quilombola, promovido pela SES-MG, discutiu avanços e desafios no atendimento do SUS no estado.
 
-O III Seminário da Saúde da População Negra e Quilombola, promovido pela Secretaria de Estado de Saúde, discutiu avanços e desafios no atendimento do SUS a essas populações no estado. O encontro teve a participação de movimentos sociais e reuniu temas como a mortalidade infantil da população negra.
-
-O debate também avançou em metas até 2028 para a política estadual, com cobrança de resultados ao longo do caminho. Quem acompanha a saúde pública precisa entender o que muda na prática.
+O encontro foi realizado no Mês da Consciência Negra, em um momento em que o debate sobre racismo estrutural ganha centralidade. A pauta passa também pelas metas do Plano Operativo da política estadual até 2028, com cobrança de resultados ao longo do caminho.
 
 👉🏿 Quer ler a matéria completa? Comente APP que a gente te manda o link no direct.
+
+Texto: Washington Andrade | Áfricas Play
+📸 Foto: Foto ilustrativa: Francisco Venâncio/Unsplash
 
 #ÁfricasPlay #SaúdeDaPopulaçãoNegra #SaúdeQuilombola #SUSMinas
 
@@ -45,19 +49,22 @@ O debate também avançou em metas até 2028 para a política estadual, com cobr
 
 ---
 
-## Agro e indústria na rota Brasil-África na Expo África Brasil
+## Caminhada dos Terreiros chega à 19ª edição
 
 ### No @africasplay
 
-Painel da Expo África Brasil junta Brasil, Quênia, Moçambique e Zimbábue para discutir negócios em agro, indústria e máquinas.
+Caminhada dos Terreiros chega à 19ª edição no Paulista, em Pernambuco, com fé, cultura e cidadania no Mês da Consciência Negra.
 
-O debate reúne empresários e gestores públicos que querem aproximar quem produz no Brasil de mercados africanos que buscam alimentos, máquinas e tecnologia.
+O evento começou na Praça Agamenon Magalhães e terminou em caminhada até o Ecoparque das Paineiras. A organização trata a caminhada como ato de resistência do povo negro e culto à ancestralidade.
 
-A conversa também passa pela industrialização do continente, com transferência de tecnologia e produção local. Quem quer entender quais oportunidades saem do papel precisa ler a matéria completa no app.
+Terreiros do município também realizam ações sociais e culturais todos os dias, com foco em crianças e adolescentes. Leia a matéria completa no Áfricas.
 
 👉🏿 Quer ler a matéria completa? Comente APP que a gente te manda o link no direct.
 
-#ÁfricasPlay #AgronegocioBrasilAfrica #IndustriaAfricana #ExpoAfricaBrasil2026 #ProducaoLocal
+Texto: Thays Andrade | Áfricas Play
+📸 Foto: João Gonçalves/SEI e Fabiano Alves/Gabinete
+
+#ÁfricasPlay #CaminhadaDosTerreiros #Paulista #MarchaDeOxala #ConsciênciaNegra
 
 ### No seu Instagram (primeira pessoa)
 
