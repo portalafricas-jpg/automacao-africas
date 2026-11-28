@@ -2683,5 +2683,60 @@
   "nota": 7,
   "destino": "na fila",
   "detalhe": "Lançamento de longa-metragem sobre racismo e ancestralidade, exibido no Sesc São Gonçalo; lançamento de obra de cultura negra."
+ },
+ {
+  "hora": "09:33",
+  "fonte": "Busca - Billboard Brasil",
+  "titulo": "CMAT quer fazer o melhor show da carreira em São Paulo",
+  "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1vSWNEX0prdXh1MUU3dTlCRmFDdkJLaDBNa2VIcm4zTGNibzU2SkQ5Wk8wQk1CT0hwUzVmd2R3alJYYTFtcWRsNDRYYVd2UDNyZE50TGR6bVlDQ3NnaHJPaTVKT04tUWNVSkZFbXJn?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "descartada pelo filtro",
+  "detalhe": "filtro: busca ampla sem sinal (artista, escola/bloco ou termo)"
+ },
+ {
+  "hora": "09:33",
+  "fonte": "Busca - Saúde da população negra",
+  "titulo": "Quintal do Zé Gotinha terá samba, feira e roteiro pela Pequena África neste sábado no Rio",
+  "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQb0FLZDlrb3BGUjVRVmZIVWIyT1BCUl9mWDZqZHFKOEFPWGJjQkVGZUNJakdLb3BPSVVQNXNmN2xGNHF1RjRDOS1DYXRoYjdFM2NuUmVZOWl5WVhBeTZ5TXhKV01kUGJVYlZ1S0RLRW1TdkRONURUUC1UdkxuM2FnYnVBNF9XSVIxLXdWTTdHLVFSWkF3enBqekJhVmxMak91TlUzcUlxYnItWlNHMmZ6cXFQYnAwS1NzMUE?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 5,
+  "destino": "nota baixa",
+  "detalhe": "Evento de samba e roteiro pela Pequena África no Rio; ligado à cultura negra, mas é agenda de evento sem fato relevante. Nota baixa por ser agenda local sem marco histórico ou conquista."
+ },
+ {
+  "hora": "09:33",
+  "fonte": "Busca - Cultura negra",
+  "titulo": "Projeto GriôTeca leva literatura oral africana e afro-brasileira para crianças da rede municipal",
+  "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNM2N1eWd6RzFtODVHYkJzbkdiSkxBdHVfU0xZYlh6RWpjU3NpUEJfTGl4aXRlem9Hb01kZWtDQnVOT0g1N21fY2cwZDZ5YnB3aUlyZm56aWZOR0lyNkJKc0ZNanRfT0xkN2pYRFozeXlLNURKb3BxTm1uVGpaNmpHMkFVQzVSd3hGMHRzYzZMMHZJaGczZEtZdkZOZlZ6V0dpRjhKNG4yY25ld05CaHc5dWQ5UDB0V0JsV2p2U0oybDNJZw?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "Projeto de literatura oral africana e afro-brasileira em escolas municipais: educação e cultura negra, vinculado à Lei 10.639 na prática."
+ },
+ {
+  "hora": "09:33",
+  "fonte": "Alma Preta",
+  "titulo": "Guia internacional sobre regulação de drogas ganha edição inédita no Brasil",
+  "link": "https://almapreta.com.br/sessao/cotidiano/guia-internacional-regulacao-drogas-edicao-brasil/",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 6,
+  "destino": "nota baixa",
+  "detalhe": "Guia sobre regulação de drogas apoiado pela Iniciativa Negra; tema de política pública, mas a questão racial não é o centro do texto apresentado."
+ },
+ {
+  "hora": "09:33",
+  "fonte": "Busca - escola de samba",
+  "titulo": "Apresentação musical: Bateria da escola de samba Filhos da Gaviões - 28/11/2026 - 17:00",
+  "link": "https://www.sescpr.com.br/atividade/apresentacao-musical-bateria-da-escola-de-samba-filhos-da-gavioes-28-11-2026-1700/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "não abriu o texto",
+  "detalhe": "texto original curto ou bloqueado"
  }
 ]
