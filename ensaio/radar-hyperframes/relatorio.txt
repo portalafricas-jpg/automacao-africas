@@ -1,0 +1,9 @@
+- Fotos: cada notícia usa a foto da própria matéria, a mesma nos dois vídeos:
+  1. Jajá, do samba de Goiânia, morre aos 75: https://www.africas.com.br/uploads/images/2026/11/jaja-referencia-do-samba-de-goiania-morre-aos-751795861210.jpg
+  2. Pedro Guimarães, cantor de pagode, é baleado e morre em SP: https://www.africas.com.br/uploads/images/2026/11/cantor-de-pagode-pedro-guimaraes-e-baleado-e-morre-em-sp1795875615.jpg
+  3. Camilly Victória lança EP Fique Mais Um Pouco: https://www.africas.com.br/uploads/images/2026/11/camilly-victoria-lanca-ep-fique-mais-um-pouco1795832412.jpg
+  4. Beija-Flor leva força do Marajó aos minidesfiles: https://www.africas.com.br/uploads/images/2026/11/beija-flor-leva-forca-do-marajo-aos-minidesfiles1795857606.jpg
+  5. Vila Isabel leva Torto Arado ao Carnaval 2027: https://www.africas.com.br/uploads/images/2026/11/vila-isabel-leva-torto-arado-ao-carnaval-20271795861215.jpg
+- Música: afrobeat-2.mp3 (a mesma nos dois).
+- Radar atual: 30.4 s de imagem e 30.5 s de som, volume -14.0 LUFS. Tudo certo.
+- Radar novo: 33.4 s de imagem e 33.5 s de som, volume -14.0 LUFS. Tudo certo.
