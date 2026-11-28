@@ -2,7 +2,7 @@
 
 Cada dia da campanha é uma pasta em campanhas/<nome>/<AAAA-MM-DD>/ com as artes e um plano.json:
   {"carrossel": {"hora": "20:00", "imagens": ["c1.jpg", ...], "legenda": "...", "link": "https://..."},
-   "reels":     {"hora": "21:00", "arquivo": "reels.mp4", "legenda": "..."},
+   "reels":     {"hora": "21:00", "arquivo": "reels.mp4", "legenda": "..."},   (vídeos ficam no galho "midia": ver midia.py)
    "youtube":   {"hora": "21:00", "arquivo": "short.mp4", "titulo": "...", "descricao": "...", "tags": [...],
                  "playlist": "Expo"},
    "stories":   [{"hora": "10:00", "arquivo": "story1.jpg"}, ...],
@@ -12,6 +12,7 @@ O robô das redes chama rodar() a cada rodada; cada peça sai uma vez só, na ho
 import os, json
 from PIL import Image
 import redes as R
+import midia as deposito
 
 PASTA = os.path.join(R.PASTA, "campanhas")
 RAW = "https://raw.githubusercontent.com/portalafricas-jpg/automacao-africas/main/campanhas"
@@ -96,7 +97,7 @@ def rodar(token, pagina, ig, estado):
         if r and chave not in feitos and na_hora(r["hora"]):
             try:
                 import video
-                arq = os.path.join(dia, r["arquivo"])
+                arq = deposito.arquivo(f"campanhas/{nome}/{hoje}/{r['arquivo']}")
                 midia, link = _ig_com_colab(lambda cb: video.publicar_instagram(arq, r["legenda"], token, ig, cb), colab)
                 try:
                     video.publicar_facebook(arq, r["legenda"], token, pagina)
@@ -114,7 +115,7 @@ def rodar(token, pagina, ig, estado):
             try:
                 import youtube
                 if youtube.configurado():
-                    vid, priv = youtube.enviar_video(os.path.join(dia, y["arquivo"]), y["titulo"],
+                    vid, priv = youtube.enviar_video(deposito.arquivo(f"campanhas/{nome}/{hoje}/{y['arquivo']}"), y["titulo"],
                                                      y["descricao"] + "\n\n" + youtube.bloco_links(), y.get("tags", []))
                     if y.get("playlist"):
                         try:

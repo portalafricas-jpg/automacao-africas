@@ -1,12 +1,10 @@
 name: Ferramentas de vídeo (transcrição e máscara)
 
-# Roda quando entra um vídeo novo em video-ferramentas/entrada/ ou na mão.
-# Só lê os vídeos e grava os resultados em video-ferramentas/saida/. Não publica nada.
+# Roda na mão (a conversa aciona depois de guardar o vídeo no galho "midia").
+# Lê os vídeos de video-ferramentas/entrada/ do galho midia e guarda os resultados em
+# video-ferramentas/saida/ no mesmo galho (apagados após 7 dias). Não publica nada.
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - "video-ferramentas/entrada/**"
 
 permissions:
   contents: write
@@ -28,14 +26,16 @@ jobs:
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg libegl1 libgl1 libgles2
           pip install -q faster-whisper mediapipe opencv-python-headless numpy
+      - name: Trazer os vídeos de entrada do galho midia
+        run: |
+          git fetch -q --depth 1 origin midia && git checkout FETCH_HEAD -- video-ferramentas/entrada || echo "Sem entrada no galho midia."
+          git reset -q
       - name: Processar vídeos
         run: python video-ferramentas/processar.py
       - name: Salvar resultados
         if: always()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config user.name "Robô: ferramentas de vídeo"
-          git config user.email "actions@github.com"
-          git add video-ferramentas/saida
-          git diff --cached --quiet && exit 0
-          git commit -m "Ferramentas de vídeo: transcrição e máscara"
-          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
+          ls video-ferramentas/saida/* >/dev/null 2>&1 || exit 0
+          bash guardar_midia.sh "Ferramentas de vídeo: transcrição e máscara" $(cd video-ferramentas/saida && ls | sed 's#^#video-ferramentas/saida/#')

@@ -1,2 +1,5 @@
 __pycache__/
 cache/
+
+# Vídeos não entram no galho main: usar guardar_midia.sh (galho "midia", apagado após 7 dias)
+*.mp4

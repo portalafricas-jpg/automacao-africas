@@ -22,10 +22,7 @@ jobs:
       - run: python video.py
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-      - name: Guardar o vídeo de teste na pasta ensaio
-        run: |
-          git config user.name "robo-africas"
-          git config user.email "robo-africas@users.noreply.github.com"
-          git add -f ensaio/reels-teste.mp4
-          git commit -m "Teste do Reels (vídeo)" || exit 0
-          for i in 1 2 3; do git pull --rebase && git push && exit 0; sleep 5; done
+      - name: Guardar o vídeo de teste no depósito de mídia (galho midia, apagado após 7 dias)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: bash guardar_midia.sh "Teste do Reels (vídeo)" ensaio/reels-teste.mp4

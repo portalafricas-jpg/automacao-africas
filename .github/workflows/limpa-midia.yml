@@ -1,0 +1,41 @@
+name: Limpar depósito de mídia
+
+# Todo dia às 3h (Brasília) apaga do galho "midia" os vídeos com mais de 7 dias.
+# Os vídeos já publicados continuam no YouTube, Instagram e Facebook; aqui é só a cópia de trabalho.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: midia
+  cancel-in-progress: false
+
+jobs:
+  limpar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: principal
+      - name: Abrir o galho midia
+        run: |
+          git ls-remote --exit-code --heads "https://github.com/${{ github.repository }}" midia || { echo "Galho midia ainda não existe."; exit 0; }
+          git clone -q --branch midia "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" m
+      - name: Apagar o que tem mais de 7 dias
+        id: limpar
+        working-directory: m
+        run: |
+          [ -d . ] && [ -d .git ] || exit 0
+          git config user.name "robo-africas"
+          git config user.email "robo-africas@users.noreply.github.com"
+          TZ=America/Sao_Paulo python ../principal/limpar_midia.py
+      - name: Gravar o galho refeito
+        if: steps.limpar.outputs.refazer == '1'
+        working-directory: m
+        run: git push -q -f origin midia-nova:midia

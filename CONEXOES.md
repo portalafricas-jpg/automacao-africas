@@ -10,6 +10,8 @@ A parte entre as marcas AUTOMATICO é refeita sozinha pelo robô conexoes.yml se
 - Rodar um robô: gh api -X POST repos/portalafricas-jpg/automacao-africas/actions/workflows/ARQUIVO.yml/dispatches -f ref=main
 - Regra de ouro: se existe API ou robô, usar a API ou o robô. Chrome só quando não houver outro caminho. Não gastar (teto da API do Claude: US$ 10 por dia).
 - Nunca pedir chave nem print de chave ao Washington: as chaves ficam nos Secrets do GitHub.
+- VÍDEOS (.mp4) NUNCA vão para o galho main (o histórico engorda para sempre). Guardar com `bash guardar_midia.sh "mensagem" caminho/do/video.mp4` (vai para o galho "midia"); os robôs leem com midia.arquivo(). O robô limpa-midia.yml apaga o que tem mais de 7 dias. O .gitignore já barra .mp4 no main.
+- Gastos: o robô vigia-gastos.yml confere todo dia útil às 9h espaço do repositório, gasto do Claude e saúde dos robôs; relatório às segundas e alerta vermelho na hora, por e-mail (aviso do GitHub).
 
 ## Já conectado
 - Meta: Instagram @africasplay e Facebook da página Africas Play (publicar carrossel, story, Reels; ler comentários e métricas).
@@ -33,6 +35,7 @@ A parte entre as marcas AUTOMATICO é refeita sozinha pelo robô conexoes.yml se
 - X (Twitter): não será pago.
 
 ## Histórico de mudanças (a mais nova em cima)
+- 28/11/2026: vídeos saem do galho main e vão para o galho "midia" (apagados após 7 dias pelo limpa-midia.yml); vigia de gastos (vigia-gastos.yml) ligado, com relatório semanal e alerta vermelho por e-mail.
 - 27/11/2026: voz gratuita VoxCPM2 (do VoiceStudio) testada no GitHub e aprovada; substitui a ElevenLabs.
 - 27/11/2026: arquivo criado a partir da conversa de automação.
 
