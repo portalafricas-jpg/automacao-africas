@@ -1,6 +1,7 @@
 """Trava da campanha da Expo África Brasil (28/11/2026).
 
-Roda em toda rodada do robô das redes, mas confere só uma vez por dia, a partir das 9h.
+Roda em toda rodada do robô das redes. Confere o dia uma vez, a partir das 9h, e a véspera
+(o dia seguinte) uma vez, a partir das 18h.
 Até 2/12, confere se o dia tem: matéria da Expo agendada (materias/AAAA-MM-DD-*.json),
 pasta da campanha (campanhas/expo/AAAA-MM-DD/plano.json) com stories, carrossel, Reels e Short,
 e vídeo com áudio. Se faltar algo, manda e-mail para portalafricas@gmail.com na hora.
@@ -54,30 +55,44 @@ def faltas(hoje):
     return f
 
 
+def avisar(dia, f, quando):
+    import envio_assessorias as E
+    texto = ("Alerta da campanha da Expo África Brasil de %s (%s).\n\nFalta:\n- %s\n\n"
+             "Abra a conversa da Expo com o Claude e peça para repor agora." % (dia, quando, "\n- ".join(f)))
+    smtp = E.conectar()
+    E.enviar(smtp, PARA, f"⚠️ Expo: falta conteúdo {quando} ({dia})", texto)
+    smtp.quit()
+
+
 def main():
     agora = datetime.now(SP)
     hoje = agora.strftime("%Y-%m-%d")
-    if hoje > ULTIMO_DIA or agora.hour < 9:
-        return
+    amanha = (agora + timedelta(days=1)).strftime("%Y-%m-%d")
     try:
         estado = json.load(open(ARQ, encoding="utf-8"))
     except Exception:
         estado = {}
-    if estado.get("conferido") == hoje:
-        return
-    f = faltas(hoje)
-    estado["conferido"] = hoje
-    estado["faltas"] = f
-    if f:
-        import envio_assessorias as E
-        texto = ("Alerta da campanha da Expo África Brasil de %s.\n\nFalta:\n- %s\n\n"
-                 "Abra a conversa da Expo com o Claude e peça para repor agora." % (hoje, "\n- ".join(f)))
-        smtp = E.conectar()
-        E.enviar(smtp, PARA, f"⚠️ Expo: falta conteúdo hoje ({hoje})", texto)
-        smtp.quit()
-        estado["email"] = agora.isoformat()
-    json.dump(estado, open(ARQ, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    print("Trava da Expo:", f or "tudo programado")
+    mudou = False
+    # 1) O próprio dia, a partir das 9h
+    if hoje <= ULTIMO_DIA and agora.hour >= 9 and estado.get("conferido") != hoje:
+        f = faltas(hoje)
+        estado.update(conferido=hoje, faltas=f)
+        if f:
+            avisar(hoje, f, "hoje")
+            estado["email"] = agora.isoformat()
+        print("Trava da Expo (hoje):", f or "tudo programado")
+        mudou = True
+    # 2) Véspera: a partir das 18h, confere o dia seguinte (aprovado por Washington em 28/11/2026)
+    if amanha <= ULTIMO_DIA and agora.hour >= 18 and estado.get("vespera_conferida") != amanha:
+        f = faltas(amanha)
+        estado.update(vespera_conferida=amanha, vespera_faltas=f)
+        if f:
+            avisar(amanha, f, "amanhã")
+            estado["vespera_email"] = agora.isoformat()
+        print("Trava da Expo (amanhã):", f or "tudo programado")
+        mudou = True
+    if mudou:
+        json.dump(estado, open(ARQ, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
 
 if __name__ == "__main__":
