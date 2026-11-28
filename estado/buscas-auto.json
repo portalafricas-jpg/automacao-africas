@@ -166,5 +166,13 @@
   "busca": "\"Luizinho do Pagode\"",
   "grupo": 1,
   "auto": "2026-11-28"
+ },
+ {
+  "nome": "Busca - Solange Almeida",
+  "categoria": "protagonista",
+  "tipo": "busca",
+  "busca": "\"Solange Almeida\"",
+  "grupo": 2,
+  "auto": "2026-11-28"
  }
 ]
