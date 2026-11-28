@@ -57,6 +57,23 @@ jobs:
           done
           exit 1
 
+      - name: Trava da Expo - conferir o dia e avisar por e-mail (28/11/2026)
+        if: always()
+        continue-on-error: true
+        timeout-minutes: 3
+        env:
+          GMAIL_SENHA_APP: ${{ secrets.GMAIL_SENHA_APP }}
+        run: |
+          python trava_expo.py
+          git add estado/trava-expo.json 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -m "Trava da Expo: conferência do dia"
+          for i in 1 2 3; do
+            git pull --rebase --autostash -X theirs && git push && exit 0
+            git rebase --abort 2>/dev/null || true
+            sleep 5
+          done
+
       - name: Assessorias - ler a caixa e mandar avisos (27/11/2026)
         if: always()
         continue-on-error: true
