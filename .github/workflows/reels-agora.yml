@@ -20,7 +20,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
-      - run: pip install -q pillow requests numpy opencv-contrib-python-headless && sudo apt-get install -y -qq ffmpeg > /dev/null
+      - run: pip install -q pillow requests numpy "opencv-contrib-python-headless<5" && sudo apt-get install -y -qq ffmpeg > /dev/null
       - run: python reels_agora.py
         env:
           META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
