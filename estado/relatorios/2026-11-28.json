@@ -4275,5 +4275,82 @@
   "destino": "publicada",
   "detalhe": "Conceição Evaristo chega aos 80 anos com homenagens",
   "foto": "Divulgação"
+ },
+ {
+  "hora": "12:33",
+  "fonte": "Busca - Cultura negra",
+  "titulo": "Ilê Aiyê reabre Senzala do Barro Preto e anuncia Festival de Música Negra - ANF",
+  "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNblNwbjV6Ty02TlhSazBZY1NwX1FhanRKdmFRU002MVhLSEYzTjFEUElRcVp5OGV2cFJUeEFUcnNpZjR3X0ZScHBmYno0ZHl1WXBOU3lYTEVxSWVxck44bDJBLV93b05sMlJlNWNyRExxbjgzVndQTjFtWk80X3UyQVNYekhRdTFwNVdfcy1nYzZVN1pEMU80MlJ5SFowdw?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "repetida",
+  "detalhe": "título quase igual a outra notícia"
+ },
+ {
+  "hora": "12:33",
+  "fonte": "Busca - Léo Santana",
+  "titulo": "FIG 2027 terá shows de Xand, Nattan, Joelma e Lenine",
+  "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxObm13bmJZQk91TlVLQlktWUhMMEhzT1pTZU5oRGZ0QS1iY0hTM1M3UHJlcHJGU2s5Mi13dGI2amF4V3RxUG55UGh2N3R4ZUFCZkJoYXk1ZXZKc1VtcW1lOEMxMTdJSEFYdG9qUHdEZkNheHMwRTRUd2tpcTVLYWdhZHVieDc3YWNnRXfSAYoBQVVfeXFMTm5td25iWUJPdU5VS0JZLVlITDBIc09aU2VOaERmdEEtYmNIUzNTN1ByZXByRlNrOTItd3RiNmpheFd0cVBueVBodjd0eGVBQmZCaGF5NWV2SnNVbXFtZThDMTE3SUhBWHRvalB3RGZDYXhzMEU0VHdraXE1S2FnYWR1Yng3N2FjZ0V3?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Anúncio de shows de festival sem relação com a temática racial; artistas citados não são apresentados como o foco."
+ },
+ {
+  "hora": "12:33",
+  "fonte": "Agência Brasil - Últimas notícias",
+  "titulo": "Conceição Evaristo 80 anos: escrita literária como grito de liberdade",
+  "link": "https://agenciabrasil.ebc.com.br/cultura/noticia/2026-11/conceicao-evaristo-80-anos-escrita-literaria-como-grito-de-liberdade",
+  "categoria": "protagonista",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Conceição Evaristo, escritora negra, completa 80 anos; referência da literatura negra e trajetória de protagonismo, com data relevante."
+ },
+ {
+  "hora": "12:33",
+  "fonte": "Busca - Cultura negra",
+  "titulo": "Mesa Institucional fortalece o diálogo e a valorização da cultura negra em Castro Alves",
+  "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPR05QVFk1OW9MNmxiVTJKY3A0ZlhjZktVYzlpeGx3MDczODBuNE9MY0hpbGNFYmR6RmhycUhvbGUzRTR1bkRoR0hmaS1LR1pJOWxIN2tIMHFkcDVaaGlXWThjRDl4dFBFNFdsdmlBdHdoOEdjTFUxdG5FSU9odVRmODlXVjBoN0NpMVM3M0M0Q1BvSFFGV1hKNDg1ZnVvNWtqOGs4dXdrTEhkQWZodFUxQ2UwM2VZYzZYZEE?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "evento local pequeno: Mesa institucional local em Castro Alves; é mais release de evento sem fato relevante claro e cobertura de veículo local, pouco detalhe para matéria honesta."
+ },
+ {
+  "hora": "12:33",
+  "fonte": "Busca - Djamila Ribeiro",
+  "titulo": "Painel: Três Poderes: Trabuco é o vencedor da semana e Haddad, o perdedor",
+  "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOdXlYQWxkekVLWmVjV01KR1hobEhzTi1aZnNpeU9RUUxtdEdQaG4xZHBIUmdCanNWY3gwMjdpYXpjb0pSQlp1eVp5Skg3cHh3VkptdkNSREhGS1pvZjF4SXJUQ19tVGhIc0cwNWxFOFZLMk81R1R6STgyNFJQd1RrRVRGSzJ3M25RUGl0WmJWaFFISVhGdmE3UGV1QUZyeEowVWY3ZlBmTHcyajVubHlmd0hSQzdtRmV2N1pxb2prTQ?oc=5",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 1,
+  "destino": "nota baixa",
+  "detalhe": "Coluna de bastidores político sem relação com a população negra."
+ },
+ {
+  "hora": "12:33",
+  "fonte": "Busca - Billboard Brasil",
+  "titulo": "Djavan domina a MPB entre as músicas mais ouvidas no Brasil",
+  "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1BOFpNbUFUSEd6bkFaY1FRenppbEc3UThBdWlXTTV2Y1dhbVQ2eWExb0NzMlBNZEVERC04YV9rYm5XVW5fQks0dlhjZXBYbjY0QThIbG10U3FMbWpXd1E?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "Ranking de streaming de Djavan; não há fato racial central, e a relação com a Agenda Preta é fraca."
+ },
+ {
+  "hora": "12:33",
+  "fonte": "Busca - Cultura negra",
+  "titulo": "Som dos tambores celebra a ancestralidade no Festival de Cultura Negra em Castro Alves",
+  "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNSXY5TDRReml2UXV1V2ZfZDRnakQ5NWVLdTJrZUV4UWxnOElIY1ZNVVFWUnNJaFRsUEFkaUhjOFd5dUpIbktHOVhlWW94S0xSWlR1UDNIcnQ5NDVjTXdpMTI5QVkxaV9kQ1N6amU1NERya3oxOEl3MkJBUExfOUV4T2liS2RWcUYtVjdZbGQtZU9raXRkUnZDU2tiRU9obmN5VWZSZElaNDNnVlJKZjRhbThmc2xoUU9M?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 4,
+  "destino": "nota baixa",
+  "detalhe": "evento local pequeno: Festival de cultura negra em Castro Alves, evento local com ancestralidade, mas a notícia é pouco detalhada e sem fato relevante; mesma cidade da nota 3."
  }
 ]
