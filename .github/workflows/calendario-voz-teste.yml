@@ -1,0 +1,33 @@
+name: Calendário Afro - teste da voz padrão
+on:
+  workflow_dispatch:
+    inputs:
+      pasta:
+        description: "Pasta do episódio"
+        required: true
+        default: "calendario/2026-12/06-joao-candido"
+permissions:
+  contents: read
+jobs:
+  voz:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        voz: [masculina, feminina]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Instalar motor de voz (CPU)
+        run: |
+          pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install "voxcpm>=2.0.3" soundfile
+      - name: Gravar 3 trechos na voz padrão
+        run: python calendario_voz_teste.py ${{ matrix.voz }} "${{ github.event.inputs.pasta }}" saida
+      - uses: actions/upload-artifact@v4
+        with:
+          name: voz-${{ matrix.voz }}
+          path: saida/*.wav
