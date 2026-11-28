@@ -125,7 +125,7 @@ def _primeira_pessoa(corpo):
     chave = (os.environ.get("ANTHROPIC_API_KEY") or "").strip()
     if not chave or not corpo:
         return ""
-    dados = json.dumps({"model": MODELO, "max_tokens": 700, "system": INSTRUCAO,
+    dados = json.dumps({"model": MODELO, "max_tokens": 4000, "system": INSTRUCAO,
                         "messages": [{"role": "user", "content": "Legenda do Áfricas Play:\n\n" + corpo}]}).encode("utf-8")
     req = urllib.request.Request("https://api.anthropic.com/v1/messages", data=dados, headers={
         "x-api-key": chave, "anthropic-version": "2023-06-01", "content-type": "application/json"})
