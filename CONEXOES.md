@@ -15,6 +15,7 @@ A parte entre as marcas AUTOMATICO é refeita sozinha pelo robô conexoes.yml se
 
 ## Já conectado
 - Meta: Instagram @africasplay e Facebook da página Africas Play (publicar carrossel, story, Reels; ler comentários e métricas).
+- Meta, Instagram pessoal @washington_andrade1 (página "Washington Lúcio Andrade"): desde 28/11/2026 a chave META_USER_TOKEN (app AutoShareAfricas, id 3283028915244924) alcança essa página e esse Instagram, com permissão de publicar. As chaves de usuário e de página não vencem; o acesso aos dados vence em 20/02/2027 e se renova com o uso. O robô ainda NÃO posta no Instagram pessoal: falta o Washington aprovar como (ver "Falta conectar").
 - YouTube: canal @Africasplay (subir vídeos e Shorts, trocar capas, editar textos, playlists, privar).
 - API do Claude (robôs do portal, redes, comentários, grupos, assessorias).
 - Gmail dos robôs (envio e leitura dos e-mails das assessorias).
@@ -27,7 +28,7 @@ A parte entre as marcas AUTOMATICO é refeita sozinha pelo robô conexoes.yml se
 
 ## Falta conectar (foco atual: TikTok, Instagram pessoal, LinkedIn pessoal e LinkedIn da empresa)
 - TikTok @africasplay: conta de desenvolvedor criada (portalafricas@gmail.com), organização "Áfricas Play" e app "Áfricas Play" (tipo Outro, categoria News, plataforma Web) em rascunho. Falta: verificar o domínio africas.com.br (registro TXT no DNS), ícone 1024x1024, produtos (Login Kit + Content Posting API/Direct Post), guardar Client key/secret nos Secrets e enviar para auditoria. Antes: pedir permissão de postagem e passar pela auditoria (antes dela, posts saem privados). Hoje o dlvr.it posta.
-- Instagram pessoal do Washington (@washington_andrade1): ligado em 28/11/2026 à página nova do Facebook "Washington Lúcio Andrade" (Jornalista, id 61597240101492). Falta: incluir essa página/Instagram na autorização da chave META_USER_TOKEN (integrações comerciais, no perfil pessoal do Facebook), gerar a chave da página nova e guardar nos Secrets (nomes sugeridos: META_PAGE_TOKEN_WASHINGTON, FB_PAGE_ID_WASHINGTON, IG_USER_ID_WASHINGTON). Pedido do Washington: postar no Instagram pessoal tudo o que vai para o @africasplay (mostrar como antes de ativar).
+- Instagram pessoal do Washington (@washington_andrade1): autorização da Meta FEITA em 28/11/2026 (página e Instagram incluídos no app AutoShareAfricas, no perfil pessoal do Facebook). Esta sessão não grava Secrets (o GitHub bloqueia esse caminho), por isso a proposta é o robô tirar a chave da página nova na hora, a partir da META_USER_TOKEN, sem chave nova no cofre. Falta: Washington aprovar o jeito de postar (cópia do post ou collab) e só então ligar no redes.py.
 - LinkedIn pessoal e LinkedIn do Áfricas: publicação por API exige aprovação da LinkedIn (Community Management API). Hoje: manual ou pelo Chrome.
 - Threads: ajustar a bio; ligar a publicação por API.
 - Flickr do Ministério da Igualdade Racial: falta a chave gratuita.
@@ -35,6 +36,7 @@ A parte entre as marcas AUTOMATICO é refeita sozinha pelo robô conexoes.yml se
 - X (Twitter): não será pago.
 
 ## Histórico de mudanças (a mais nova em cima)
+- 28/11/2026: no perfil pessoal do Facebook, em Integrações comerciais > AutoShareAfricas, incluídos a página "Washington Lúcio Andrade" e o Instagram @washington_andrade1 (ver perfil, publicar, ler conteúdo e lista de páginas). Confirmado pelo robô teste-contas-meta.yml: a chave alcança 2 páginas. Esse robô agora também mostra o app que gerou a chave e a validade.
 - 28/11/2026: criada a página do Facebook "Washington Lúcio Andrade" e ligada ao Instagram @washington_andrade1. Comente APP: avisos agora só por e-mail (não abre mais issue pública). Ícone do app em assets/marca/icone-app-1024.png. Termos também em https://aplicativo.africas.com.br/termos-de-uso-e-privacidade/.
 - 28/11/2026: TikTok: verificação do domínio pedida por Washington à Portal Administrável (DNS de africas.com.br: ns1/ns2.portaladministravel.com.br), resposta só na segunda. Valor TXT: tiktok-developers-site-verification=I8IyaG4rZ0NlhzkbqyAtCrCxSvp5ThZe. Alternativa testada: arquivo de assinatura e página de termos em aplicativo.africas.com.br (repositório aplicativo-africasplay); o TikTok recusou 3 vezes (não achou a assinatura). Rascunho do app ainda não salvo: preencher de novo categoria News, descrição, links dos termos e plataforma Web depois da verificação.
 - 28/11/2026: TikTok: conta de desenvolvedor, organização e app "Áfricas Play" criados (rascunho). O TikTok exige verificar o domínio dos termos: registro TXT pendente no DNS de africas.com.br.
