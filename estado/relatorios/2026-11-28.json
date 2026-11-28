@@ -6713,5 +6713,127 @@
   "nota": 7,
   "destino": "não abriu o texto",
   "detalhe": "texto original curto ou bloqueado"
+ },
+ {
+  "hora": "16:32",
+  "fonte": "Busca - Billboard Brasil",
+  "titulo": "Conheça Beatriz Guimarães, nova aposta do gospel",
+  "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBnYVhpUUU5RFNoZW9yNmk3a0kwLTBhN09VcnpDUjh6cE80UWxlRXhwYzdsNFozOExyemV4MjU0LXU2aENOWXNhT0EtWldvWThnSEdGSWVVVURFakdnNUdOMDd2cTFlWHMxM0xGcFk4QnZhNHZl?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "descartada pelo filtro",
+  "detalhe": "filtro: busca ampla sem sinal (artista, escola/bloco ou termo)"
+ },
+ {
+  "hora": "16:32",
+  "fonte": "Busca - Billboard Brasil",
+  "titulo": "Primavera Sound São Paulo 2026: Danny L Harle fala sobre estreia no país",
+  "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9NalU2T2RYWi1mcThyRk5KZGk0TjFsNmtjMVVsU3UwXzREaWtkd3hmODEyUGJCTVZlZWRjei1nblo5YTlvOGtCdFNqZzhDN3BSMGFqRUpabkZyem9UeGlBS2VfczdXcG5peTNpVUxIdktUSDVxUUhhMkZGZw?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "descartada pelo filtro",
+  "detalhe": "filtro: busca ampla sem sinal (artista, escola/bloco ou termo)"
+ },
+ {
+  "hora": "16:33",
+  "fonte": "Busca semanal - Mumuzinho",
+  "titulo": "Natal Encantado de Barueri terá Jão e Fábio Júnior como atrações",
+  "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBMbVpJaWZmWm9abmhmZG1sUTA3cC1NcnRjRUFtVHR5Z2JCRjNGNjhNQW1ZZEhUazRCSU9rY0dDNnBrcmJYcXZGMFBpbXZLdHgxRWwtNVB3MEhWT2RVSlJPbUpXcGpObV9Od3BPRFJvcU53Y0VtMm9Ldw?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Programação de Natal de prefeitura com atrações sem relação com a temática racial; é conteúdo sem relação com o filtro do portal."
+ },
+ {
+  "hora": "16:33",
+  "fonte": "Busca - Djamila Ribeiro",
+  "titulo": "Painel: Kim propõe plebiscito para aumento de salário de deputados e senadores",
+  "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNSEdBTHpmR1lrOFhUU2JmM2pkUE9oeFZIdFBPQW4yUUp6SEtucGxDb0o0Sm5YbkJTRnNGRE1tOER0dklFbkdnNl9ObFFLTzJtZnYxWS1iUGpLT09CTURZMkJmbG9vd1BtRFFhbjNZc1FmbUlfczJqeFRyRmFlVVd3c2RXcUo0cTEtVGZvWDBKQ2dVMXhYUjFzRFo2aDYzR0NVTFktUzg3Q3pkQzFEamNhcXRMN09PNmdvQjV3TnBkRUl2eEJSckhBaw?oc=5",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 1,
+  "destino": "nota baixa",
+  "detalhe": "Proposta de plebiscito sobre salário de parlamentares, sem recorte racial nem impacto específico sobre a população negra; coluna de bastidores."
+ },
+ {
+  "hora": "16:33",
+  "fonte": "Busca semanal - Mumuzinho",
+  "titulo": "Trio pré-infantil do CETGYM fica entre os cinco melhores conjuntos do país no Brasileiro de Ginástica Rítmica",
+  "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOSm56dWdjT0FXNnVGeE1wLXpBNjdLd3QtWFVpVjk3R2o0N3RhZXpuM2gtdjRqRkgzekVPRXUxZ1JGaFZiSnk2eUJvSGJYVE8xYTc5dFg4MHk5WWFEVzNGUnBPZTFJTlIycGt2SXllVTBKcUw3czhIeFdqOTFuOENRak5uamoxUVRPblNTdXhRNWI3WXVxV0otaUNkMHBDVUhCNXFHU3ZmcVJwSjNPdzEtakpfWDZkQWh1WlQ4eXRhdUJGczB6VF9KeGhfdjU4NDJyMUU5SmR4aw?oc=5",
+  "categoria": "protagonista",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Resultado de ginástica rítmica sem relação com a temática racial."
+ },
+ {
+  "hora": "16:33",
+  "fonte": "Busca - Billboard Brasil",
+  "titulo": "GR6 lança \"Sessão da Tarde\", EP de funk com sete faixas",
+  "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE4wd190WnlQc0k3T1hBM1RfZ0prTk9UY0NoWlRBMWZaTlJDQkVGZXpVVG4tVGZXdGhqenMyODFMNUF2OWx0SmQxZG1WdE5mZ0lwOGNER2Ffb2M0X3Z0RDFHTmh0Zw?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Lançamento de EP de funk de artista negro (GR6), linha Gente e Música, nota mínima 7 por lançamento musical."
+ },
+ {
+  "hora": "16:33",
+  "fonte": "Busca semanal - Mumuzinho",
+  "titulo": "Marcos Mion defende Neymar ao vivo na Globo após colocar craque na fogueira",
+  "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOS2oxcjVLT0d1NzBDZjdOYnVBeU9Gdk1SYzFsUGE1LV9XZ1dQS3Fhei1wcFZxclZBN21IbGRfS2RmVjQ0OFU5VlVVSTd6MlkwY0V0bnIxbEVNTWZzRnp0VEhEMVRVcy1QTkRXMkNWbHBZanFyMlAweG9zMW9CNm0zTGFfdURyYy1NZEMzc2RQTFpPQVdFSk1URDNlaWp0eGlXeWhrTy1JZWN1VUNGYXBDNG03YU5iQmtMWW1WTHduZ0g2d3B0b0FGaEhMaFk?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 1,
+  "destino": "nota baixa",
+  "detalhe": "Polêmica de TV envolvendo jogador de futebol, sem recorte racial; assunto de bastidor e fofoca de televisão."
+ },
+ {
+  "hora": "16:33",
+  "fonte": "Africanize",
+  "titulo": "Prêmio Potências! Seu Jorge será homenageado pelo Prêmio Potências! na edição 2027 29/10/2026",
+  "link": "https://africanizeoficial.com.br/seu-jorge-sera-homenageado-pelo-premio-potencias-na-edicao-2027",
+  "categoria": "protagonista",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Homenagem a Seu Jorge em prêmio. Título e resumo incompletos, data de 29/10/2026 é de quase um mês atrás, fora do limite de 48 horas, e não há fato novo sobre a população negra."
+ },
+ {
+  "hora": "16:33",
+  "fonte": "Busca - Billboard Brasil",
+  "titulo": "GR6 lança \"Sessão da Tarde\", EP de funk com sete faixas",
+  "link": "https://billboard.com.br/gr6-ep-sessao-da-tarde-funk/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "recusada pelo redator",
+  "detalhe": "Matéria de lançamento de EP de funk com artistas, sem informação de relevância racial nem recorte negro declarado no texto; a regra de Gente e Música exige que a pessoa seja negra conforme o original, e o texto não informa raça/cor dos artistas. Além disso, a notícia é de lançamento comercial com tom promocional (inclui seção de tracklist e trechos de release), sem fato de interesse da Agenda Preta. Na dúvida, deixar de fora."
+ },
+ {
+  "hora": "16:33",
+  "fonte": "Busca - samba",
+  "titulo": "Dia Nacional do Samba: nova geração do pagode renova o gênero e amplia seu espaço no mercado musical",
+  "link": "https://sopacultural.com/dia-nacional-do-samba-nova-geracao-do-pagode-renova-o-genero-e-amplia-seu-espaco-no-mercado-musical/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "não abriu o texto",
+  "detalhe": "texto original curto ou bloqueado"
+ },
+ {
+  "hora": "16:33",
+  "fonte": "Busca - MC Kekel",
+  "titulo": "NGKS faz 10 anos e prepara show inédito com passinho dos Maloka",
+  "link": "https://billboard.com.br/ngks-10-anos-passinho-dos-maloka/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "publicada",
+  "detalhe": "NGKS faz 10 anos e prepara show com passinho",
+  "foto": "Rodrigo C Braga/Wikimedia Commons (Public domain)"
  }
 ]
