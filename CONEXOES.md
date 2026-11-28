@@ -70,7 +70,8 @@ A parte entre as marcas AUTOMATICO é refeita sozinha pelo robô conexoes.yml se
 - limpa-midia.yml: Limpar depósito de mídia (agendado (UTC): 0 6 * * *). Chaves: GITHUB_TOKEN
 - metricas.yml: Resultados das redes (agendado (UTC): 0 10 * * *). Chaves: FB_PAGE_ID, IG_USER_ID, META_PAGE_TOKEN
 - paginas-publicar.yml: Publicar páginas de privacidade e termos (acionado sob demanda ou pelo cron-job.org). Chaves: CLOUDFLARE_API_TOKEN
-- redes.yml: Robô das redes (acionado sob demanda ou pelo cron-job.org). Chaves: ANTHROPIC_API_KEY, FB_PAGE_ID, GMAIL_SENHA_APP, IG_USER_ID, META_PAGE_TOKEN, YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN
+- pessoal-previa.yml: Instagram pessoal - prévia (não publica) (acionado sob demanda ou pelo cron-job.org). Chaves: ANTHROPIC_API_KEY, META_USER_TOKEN
+- redes.yml: Robô das redes (acionado sob demanda ou pelo cron-job.org). Chaves: ANTHROPIC_API_KEY, FB_PAGE_ID, GMAIL_SENHA_APP, IG_USER_ID, META_PAGE_TOKEN, META_USER_TOKEN, YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN
 - reels-agora.yml: Publicar Reels agora (teste) (acionado sob demanda ou pelo cron-job.org). Chaves: ANTHROPIC_API_KEY, FB_PAGE_ID, IG_USER_ID, META_PAGE_TOKEN
 - robo.yml: Robô Áfricas (acionado sob demanda ou pelo cron-job.org). Chaves: ANTHROPIC_API_KEY, UNSPLASH_ACCESS_KEY
 - testar-fontes.yml: Testar fontes (acionado sob demanda ou pelo cron-job.org)
@@ -92,14 +93,14 @@ A parte entre as marcas AUTOMATICO é refeita sozinha pelo robô conexoes.yml se
 - yt-privar.yml: Deixar vídeos privados no YouTube (acionado sob demanda ou pelo cron-job.org). Chaves: YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN
 
 ### Chaves guardadas nos Secrets do GitHub (só os nomes) e quem usa
-- ANTHROPIC_API_KEY: alarme-repetidas.yml, comentarios.yml, grupos.yml, redes.yml, reels-agora.yml, robo.yml, teste-reels.yml, teste-repetidas.yml, teste-youtube.yml
+- ANTHROPIC_API_KEY: alarme-repetidas.yml, comentarios.yml, grupos.yml, pessoal-previa.yml, redes.yml, reels-agora.yml, robo.yml, teste-reels.yml, teste-repetidas.yml, teste-youtube.yml
 - CLOUDFLARE_API_TOKEN: formulario-publicar.yml, paginas-publicar.yml
 - FB_PAGE_ID: comentarios.yml, metricas.yml, redes.yml, reels-agora.yml, teste-direct.yml, teste-meta.yml
 - GITHUB_TOKEN: ajuste-buscas.yml, alarme-repetidas.yml, calendario-voz-salvar.yml, ferramentas-video.yml, grupos.yml, limpa-midia.yml, teste-reels.yml, vigia-gastos.yml
 - GMAIL_SENHA_APP: assessorias-envio.yml, comentarios.yml, redes.yml
 - IG_USER_ID: comentarios.yml, instagram-antigos.yml, metricas.yml, redes.yml, reels-agora.yml, teste-direct.yml, teste-meta.yml
 - META_PAGE_TOKEN: comentarios.yml, instagram-antigos.yml, metricas.yml, redes.yml, reels-agora.yml, teste-contas-meta.yml, teste-direct.yml, teste-meta.yml
-- META_USER_TOKEN: teste-contas-meta.yml, teste-meta.yml
+- META_USER_TOKEN: pessoal-previa.yml, redes.yml, teste-contas-meta.yml, teste-meta.yml
 - UNSPLASH_ACCESS_KEY: robo.yml
 - YT_CLIENT_ID: redes.yml, teste-youtube.yml, yt-canal.yml, yt-capas.yml, yt-criar-playlist.yml, yt-dados.yml, yt-diagnostico.yml, yt-editar.yml, yt-playlist.yml, yt-privar.yml
 - YT_CLIENT_SECRET: redes.yml, teste-youtube.yml, yt-canal.yml, yt-capas.yml, yt-criar-playlist.yml, yt-dados.yml, yt-diagnostico.yml, yt-editar.yml, yt-playlist.yml, yt-privar.yml
