@@ -36,7 +36,7 @@ Aprovado por Washington em 28/11/2026. Vale para todo vídeo do robô (Reels, Sh
 - Toda foto pequena ou borrada ganha nitidez e contraste antes de entrar.
 - Sem setas ou botões de "passar tela".
 - Tela final: caixa "BAIXE O APP" com os selos das lojas em carrossel, apontando para app.africas.com.br.
-- Animações de título e transições no HyperFrames (depois do teste aprovado).
+- Animações de título e transições no HyperFrames (teste aprovado por Washington em 28/11/2026: "sutil, mas muito melhor, com mais qualidade"). Modelo: video-hyperframes/teste_hyperframes.py.
 
 ## 6. Texto dentro do vídeo
 - Nada de data nem de "hoje", "desta manhã" dentro do vídeo. Tempo e data só na legenda de cada rede.
