@@ -132,6 +132,9 @@ def _primeira_pessoa(corpo):
     with urllib.request.urlopen(req, timeout=90) as r:
         resp = json.loads(r.read().decode("utf-8"))
     texto = "".join(b.get("text", "") for b in resp.get("content", []) if b.get("type") == "text").strip()
+    if not texto:
+        log(f"  Instagram pessoal: resposta sem texto (stop_reason={resp.get('stop_reason')}, "
+            f"blocos={[b.get('type') for b in resp.get('content', [])]})")
     if not em_primeira_pessoa(texto, corpo):
         log(f"  Instagram pessoal: legenda recusada (não começa em primeira pessoa): {texto[:160]!r}")
         return ""
