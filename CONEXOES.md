@@ -35,6 +35,7 @@ A parte entre as marcas AUTOMATICO é refeita sozinha pelo robô conexoes.yml se
 - X (Twitter): não será pago.
 
 ## Histórico de mudanças (a mais nova em cima)
+- 28/11/2026: voz padrão fixa: os robôs copiam a voz dos arquivos vozes-padrao/masculina.wav e feminina.wav (VoxCPM2 com prompt_wav_path + prompt_text + reference_wav_path). Sem isso, cada frase sai com uma voz diferente. Robôs do Calendário Afro: calendario-imagens, calendario-voz, calendario-voz-teste, calendario-voz-salvar. Artefatos do GitHub não baixam nesta sessão: guardar áudios em ramo (calendario-voz-teste, calendario-audio).
 - 28/11/2026: histórico do galho main limpo de todos os vídeos .mp4 (cerca de 124 MB); o main caiu para uns 70 MB. Robô do portal passou a tentar de novo ao gravar.
 - 28/11/2026: vídeos saem do galho main e vão para o galho "midia" (apagados após 7 dias pelo limpa-midia.yml); vigia de gastos (vigia-gastos.yml) ligado, com relatório semanal e alerta vermelho por e-mail.
 - 27/11/2026: voz gratuita VoxCPM2 (do VoiceStudio) testada no GitHub e aprovada; substitui a ElevenLabs.
