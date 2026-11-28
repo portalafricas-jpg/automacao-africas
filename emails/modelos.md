@@ -17,6 +17,11 @@ Campos entre colchetes são preenchidos pelo robô. Nada de data ou "hoje" dentr
 - Descrição de todo vídeo publicado: "Vídeo cedido e autorizado por [nome], [assessoria] (@assessoria)".
 - Clipes de música: Reels e Shorts sem o som original, só imagem e narração. O piloto fica para depois.
 - Anexo de enquadramento: imagem de celular em pé (vídeo-convite) e de celular deitado com a pessoa no centro (entrevista). Mostrar ao Washington antes de usar.
+- **Assinatura em rodízio (27/11/2026):** cada assessoria recebe de uma pessoa da equipe, sorteada entre todas: Thays Andrade, Maria Andrade, Washington Andrade, Larissa Mariano, Ricardo Martins e Vitor Lúcio Andrade. Formato: "[Nome] | Equipe Áfricas Play". Na mesma conversa (convite e lembretes), sempre o mesmo nome; o rodízio é entre assessorias.
+- **Textos variados (27/11/2026):** cada modelo terá 3 ou 4 versões com o mesmo conteúdo e palavras diferentes, aprovadas pelo Washington uma vez; o robô sorteia uma por envio (sem gastar API).
+- **Material pronto (27/11/2026):** além do vídeo-convite e da entrevista, pedir o que a assessoria já tem da campanha (teaser, clipe, making of). Formulário com campos "link do YouTube do artista" e "link do material pronto" (Drive/WeTransfer). O vídeo do YouTube do artista entra incorporado na matéria, depois do primeiro bloco (sem baixar).
+- **Fotos extras (próxima etapa):** envio de até 10 fotos pelo formulário (JPG/PNG, até 5 MB, mínimo 1080 px no lado menor, crédito obrigatório e autorização), guardadas no Cloudflare; uso em galeria na matéria e carrosséis do artista. Nas primeiras semanas, o Washington confere antes de usar.
+- **Pedido de entrevista pelas matérias publicadas (27/11/2026):** conforme cada matéria de assessoria entra no site, o robô avalia uma por uma; se for lançamento, projeto, livro ou artista (não evento que já passou), manda o pedido de entrevista com base na pauta. Sem esperar acumular.
 - Em aberto: a IA do site ("Gerar Texto com IA") entra ou não no material.
 
 ## Fluxo
