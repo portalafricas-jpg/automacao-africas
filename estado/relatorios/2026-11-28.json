@@ -1574,5 +1574,39 @@
   "destino": "publicada",
   "detalhe": "Beija-Flor leva força do Marajó aos minidesfiles",
   "foto": "@amichavy/Divulgação"
+ },
+ {
+  "hora": "06:33",
+  "fonte": "Busca semanal - Liniker",
+  "titulo": "Melly e Isa Marques - (reprise)",
+  "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPMG9Va1hwZS1LUXVDU3Nab1lCb045aHBwN0NGSzVncEpIalpCQXdMNUZLVnVOUF9ueGdoTUs4cTJ3dXlXLTlYX2hTbGVVR2hsTGhjajlyVEYtSEY2ZGtCTFE4REVkaW0xMGh5eXpHS2EtUU1qWGJpY1BLS0Q0OFctUGJWOA?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Título sem conteúdo informativo suficiente (reprise de nome de duas artistas, sem fato descrito); não é possível avaliar a notícia com segurança."
+ },
+ {
+  "hora": "06:33",
+  "fonte": "Busca - Cultura negra",
+  "titulo": "PMBA valoriza cultura afro-brasileira com a 1ª edição do Asè Azeviche",
+  "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQbm1BRkxWM2xXeDJQYzVSRVRtTXlsOERabU5wMkpVR294R1ZSQnAyTGJUaDNhQml6UzlGV3g5bE9yS0M5Tng4bXY3TXJ4NW1CczM2T3AtdXdWNmwyREFjTFp0Y0RqU0xpUWpWaXd6Wk9IMmNybjNIa1FSX0h2azlJYjlTZVplNnZteW41NU1hUl9VRDVOT2tCTC1uR3RPb05sOV9CS1lHdDUyNDVtdmc?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 5,
+  "destino": "nota baixa",
+  "detalhe": "evento local pequeno: Evento local de prefeitura do interior (Itamaraju) sobre cultura afro-brasileira; sem personagem conhecido ou fato relevante, a questão racial aparece mas não é o centro."
+ },
+ {
+  "hora": "06:33",
+  "fonte": "Busca - samba",
+  "titulo": "Paraíso do Tuiuti exaltou Tia Ciata na primeira noite dos minidesfiles",
+  "link": "https://cn1brasil.com.br/paraiso-do-tuiuti-exaltou-tia-ciata-na-primeira-noite-dos-minidesfiles/",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "publicada",
+  "detalhe": "Tuiuti exalta Tia Ciata em minidesfile no Rio",
+  "foto": "Magnific"
  }
 ]
