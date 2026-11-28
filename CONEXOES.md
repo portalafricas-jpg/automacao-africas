@@ -46,6 +46,7 @@ A parte entre as marcas AUTOMATICO é refeita sozinha pelo robô conexoes.yml se
 - alarme-repetidas.yml: Alarme de matérias repetidas (agendado (UTC): 30 10 * * *). Chaves: ANTHROPIC_API_KEY, GITHUB_TOKEN
 - assessorias-envio.yml: Assessorias - envio de e-mails (acionado sob demanda ou pelo cron-job.org). Chaves: GMAIL_SENHA_APP
 - calendario-imagens.yml: Calendário Afro - pesquisar imagens (acionado sob demanda ou pelo cron-job.org)
+- calendario-voz-salvar.yml: Calendário Afro - guardar áudios de um teste (acionado sob demanda ou pelo cron-job.org). Chaves: GITHUB_TOKEN
 - calendario-voz-teste.yml: Calendário Afro - teste da voz padrão (acionado sob demanda ou pelo cron-job.org)
 - calendario-voz.yml: Calendário Afro - gravar narração (acionado sob demanda ou pelo cron-job.org)
 - comentarios.yml: Comente APP (acionado sob demanda ou pelo cron-job.org). Chaves: ANTHROPIC_API_KEY, FB_PAGE_ID, GITHUB_TOKEN, IG_USER_ID, META_PAGE_TOKEN
@@ -83,7 +84,7 @@ A parte entre as marcas AUTOMATICO é refeita sozinha pelo robô conexoes.yml se
 - ANTHROPIC_API_KEY: alarme-repetidas.yml, comentarios.yml, grupos.yml, redes.yml, reels-agora.yml, robo.yml, teste-reels.yml, teste-repetidas.yml, teste-youtube.yml
 - CLOUDFLARE_API_TOKEN: formulario-publicar.yml
 - FB_PAGE_ID: comentarios.yml, metricas.yml, redes.yml, reels-agora.yml, teste-direct.yml, teste-meta.yml
-- GITHUB_TOKEN: ajuste-buscas.yml, alarme-repetidas.yml, comentarios.yml, ferramentas-video.yml, grupos.yml, limpa-midia.yml, teste-reels.yml, vigia-gastos.yml
+- GITHUB_TOKEN: ajuste-buscas.yml, alarme-repetidas.yml, calendario-voz-salvar.yml, comentarios.yml, ferramentas-video.yml, grupos.yml, limpa-midia.yml, teste-reels.yml, vigia-gastos.yml
 - GMAIL_SENHA_APP: assessorias-envio.yml, redes.yml
 - IG_USER_ID: comentarios.yml, instagram-antigos.yml, metricas.yml, redes.yml, reels-agora.yml, teste-direct.yml, teste-meta.yml
 - META_PAGE_TOKEN: comentarios.yml, instagram-antigos.yml, metricas.yml, redes.yml, reels-agora.yml, teste-contas-meta.yml, teste-direct.yml, teste-meta.yml
