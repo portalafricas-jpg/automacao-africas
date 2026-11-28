@@ -229,5 +229,137 @@
   "nota": 7,
   "destino": "nota baixa",
   "detalhe": "Encontro de servidores negros, indígenas e quilombolas numa universidade federal: educação e ações afirmativas, primeira edição."
+ },
+ {
+  "hora": "00:32",
+  "fonte": "Busca - Antirracista",
+  "titulo": "Museu de BH é reconhecido como antirracista em simpósio internacional: \"Muquifu é referência\"",
+  "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOWV9mUzhMLVU5cklKTS1SZTZOLWRaSE1DcTh0dzdQZWR6SDFKbnFiMXhiOTZaTFk4ZE9objVLcXAwb0JVd2ZqUnpuVE5ERlJVWnJyWmRmV0tFUC1TWF8yMVlPNFZYOFg5ZjlNNlh5bDRKbU1Bd3Bjc3o1Mkt5YVNPZFpOUVMyMTQ4SjkxSXRmeE1JejZwZ1AyOFNPU3VaNTNNbjhnVXNSdFRjaV96OHZIelI3M0ZMN2o1X3UyUlhucHVKcDNTZHFDeWhiejY4Rkgw?oc=5",
+  "categoria": "protagonista",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "00:32",
+  "fonte": "Busca - Cultura negra",
+  "titulo": "CCBB Educativo – Mediações em Movimento",
+  "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQTHI3ckJtTWN5Y2g1SzdpeUNKSjlYeURwcjhkMVp0NGtBLWpMNEVoLUh5SGlOSk44cEd0emVuNmdMSC1uUG5CSWp1cnJzWWQ2QTRSZWJoS2lMZnJ5VXJSbFhnOUt4ellPWElsVkhrWWFVbmk4SjZ2ZWs0SWhScjJjZXVZSE0teTQzSC1iYw?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "descartada pelo filtro",
+  "detalhe": "filtro: busca ampla sem sinal (artista, escola/bloco ou termo)"
+ },
+ {
+  "hora": "00:32",
+  "fonte": "Busca - Kendrick Lamar",
+  "titulo": "Castelos & Ruínas 10 Anos Tour",
+  "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPQ1BnMGN0eHVMUUxMcjdGcmp0d21GeElIUF9PYzhjTlllaXR0WDA3bldERkx5TjA1dG0tTTRTazRna1ZoMGlVdVFmMWYySW41cnlnTElyT0w5UTBhSU5Xbl9VRjFwekQ5bUUwRzY1Z3JyS0VVTjVVbWVhcjJmYm9RdA?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "repetida",
+  "detalhe": "título quase igual a outra notícia"
+ },
+ {
+  "hora": "00:32",
+  "fonte": "Busca - atriz negra",
+  "titulo": "Mulher-Gato pode ganhar um filme solo após The Batman",
+  "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNVUptRXctSHlPS2E0T3ZiaVNpN2RVSmJMVnZ4aGg3NTlMY3p5ZnBONHZaSmhIbWNEZEZXY2ZSTWVrRVRKNmlUNU1NVHF1QjRtZEdyT3RFSjNnOFRBVEpnYjduVUlUeXEyRGdta1R1dWV2UDZhQk41RTBRcnhGSmhQRDgyU1BnVm5VX3B2M3dlY09sOWxJMFVr0gGcAUFVX3lxTE5XaFlIV25sYWtYUDYzbG1FMERXMF9QMkZpcTBuamgtSjFMaHRvMzZvekw3STBQdGtVMUtNNjF1aUt5TGdRcmVSNXI1d3M4TGlyc1FGeDBLZ0g0YndTVldRZkZrZTdmLTBFblBIbGNyc2lyb2JZX1pXdEN3ZUh4Z3A1cXVEbm11d1hJZjZhN0N0aE5VR0RibkdvMkx4cg?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "descartada pelo filtro",
+  "detalhe": "filtro: batman sem personagem ou artista negro"
+ },
+ {
+  "hora": "00:32",
+  "fonte": "Busca - Billboard Brasil",
+  "titulo": "Mad Cool",
+  "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE8xQnZFclBGRnJkS2M1b3JpeGZOUjlEYmUxOGVxRFNRa3IwSkNFR0pXM25OVkE3dks0TEl6UjJRdmJQOWNUWEZSUEVXQVlORWc?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "descartada pelo filtro",
+  "detalhe": "filtro: busca ampla sem sinal (artista, escola/bloco ou termo)"
+ },
+ {
+  "hora": "00:32",
+  "fonte": "Busca - Billboard Brasil",
+  "titulo": "Yes - Billboard Brasil",
+  "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5SLXdEbXFtclpIbDZWbjNDcHFMWVAyOGU0Y2dJVTZKcVZzTUpXaEpsWVpUVzkyM2Q1SER6aW5wVzloQnRGc2c?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "descartada pelo filtro",
+  "detalhe": "filtro: busca ampla sem sinal (artista, escola/bloco ou termo)"
+ },
+ {
+  "hora": "00:33",
+  "fonte": "Busca - Katinguelê",
+  "titulo": "Katinguelê celebra 43 anos de carreira com o lançamento do álbum “Lei do Retorno”",
+  "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQRmtZcGZPSzhaR0R6SDFXYTNpaV9GUlpsc2lOMVZtZlRBdlJ5VHdCT3dMUE9iWml1RDdYZ2VPYlUyV2xCR1Jyc1NKU29NMVJzYVNXLWZRODBxLXVnNGNZMlNReDNzVjdtUlkwRGdUU1JfdXBjSGNIQXc5Q0RZS2U0dGw4OHA2bXNueVNFZl9xZDRUWGR6NDNHSDM4LXdKNUhSdlJVTHg5S1Y1NGZjWEl5dno2WmVRSUlLNlZlNUlWeWZjeWt4NEFJRElWU3RJMndVTkJ6dkxQWXNJRFBPMlZyRWVuZEFxaU94WmfSAe8BQVVfeXFMTndFazVKR1pWYzNZWGdEMVJFVzRaS0FFLThwS00xTUNQU2pvMDdzaEhVSGxZODJBdDZybUlIUjBpR2NfcDFSNm9JbDlzXzZpcFdQekpCSDlKVWc5dXRuZEowczNKTmgtX255cmdyMVFtVktRTmVYTFF6dVlMOWxhOUZWUEpfYUY1NVcyeWhRQUoyb1Z2dHFpSTZTSHQyUTJLeGVtMUJQa2xzczI4MWJjQzN4enBfZ2pacms4bTdCR3gyQTBzZ18zTGhSUWRreUVPSTFJcnlUd09ZVm1pSDZiTEN3X1VIdlVEQ3dGZDA1VVE?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "repetida",
+  "detalhe": "título quase igual a outra notícia"
+ },
+ {
+  "hora": "00:33",
+  "fonte": "Busca - Dona Onete",
+  "titulo": "Filhas da Noite ganha trailer oficial e celebra histórias de mulheres trans e travestis",
+  "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9qVFRya3pFY1FPOHJ0eDZMR1RBU1BFZHBjektlYXRBUVhBOGdRekVDMXp5LVFSOEhOOVpNMGFmbEF1ZzdlWm1URTM2NUlqTGN2alVZcV9JZ1d4SzZSSnhlTERQWDloT2xZUm9RYmlCcWxNZlFOMnlPR25FdTDSAYIBQVVfeXFMTTluWUdyZ1lnMmoyUDBFZFhvb2Z3ZTMtVEtyd0t2bUpGREtvWTZIM2NwZDE1ZEtjaVllTURoQjM3T0VmWDU3dEJHVnR6TWt6dTNxYVE3bmZ1UGZnYjVTM1RfVHlnbndVSlZzTjBqRWtyWm1VZF9BM05PeTRVbDZVS3JlUQ?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Trailer oficial de filme que celebra histórias de mulheres trans e travestis; lançamento de obra cultural ligada à população negra só se o recorte racial for claro, mas o tema é de cultura e diversidade. Sem repetição nas últimas matérias. Nota moderada por falta de recorte racial explícito."
+ },
+ {
+  "hora": "00:33",
+  "fonte": "Busca - Saúde da população negra",
+  "titulo": "Sesapi realiza roda de conversa com comunidades quilombolas sobre Saúde Digital",
+  "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcWFtd2oteGphZ21IdjFFVG10dkhvNm9iVzB3VjdGeFhLWDBFaWY1ZGt4SXdCUVJlX3ZxaEctU1NSTW5uWmtaS2Q1RnRWckFGN3RyWXA4bHRCdVBNMnV2bVRxSXZfYUZPVnI4a1VFVUVONFM5WjBkOFVzVmJfTmZobjFuZVU1a2MwWW5uRUxwMHBnM1BHcXRKdDZnamhIZDRzdXF4aG5HOU9oSFJIVzhucy1LazhRX0hFZGFzSzJabDBvZw?oc=5",
+  "categoria": "ancestralidade",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "evento local pequeno: Roda de conversa com comunidades quilombolas sobre Saúde Digital: território e quilombos ligados ao eixo de saúde da Agenda Preta. Ação local, mas ligada diretamente a pilar."
+ },
+ {
+  "hora": "00:33",
+  "fonte": "Busca - Empreendedor negro",
+  "titulo": "Prefeitura de Rio Branco disponibiliza 56 vagas para empreendedores na Vila Natalina 2026; Confira",
+  "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxORm5aT2l5WWNMWk1rZ1pCNmp0bktTNHhWc0dwWU1Wa2g1VDZwUURiV2tZcmRtY1FtTl82T0xHaG51TnQyWGpLM0w5QmhtWnJOZm9lRmZIeWNoWTg4Z2tzMGZJNWk2eENDSmdsWElxNVdyTUQ5THdQUEJ1NUJIOXBCQlZkS2hEZFhwR2hyeXV6R3FPWjVSY2ZjYmxDeUJybFRJWWEwelB3cTJ4TnJQelV2NTRKR1pUUEs2TGpnc20xdTlZUEgtWXpaMVRuTmlEY0VOeGc?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "evento local pequeno: Edital de vagas para empreendedores sem recorte racial no texto; não há conexão clara com a temática racial."
+ },
+ {
+  "hora": "00:33",
+  "fonte": "Busca - Papatinho",
+  "titulo": "MC Kekel canta Claudinho e Buchecha: uma voz nova para uma obra que atravessa gerações",
+  "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNZE4wMy1ieTduVXlJaXY0Ti03SWxuYWVkVmxyMGkwVmhMblljSGFMQlBjZURfaHppNnhreFc5dWt6SENULWFXR3FkSDdWR3l3MU9WQXdIZjJWdDlXUllKeGhrSmJXWnZsbTVKeFRIUXJBRnpVQ0ZFT1ZpaEFBSFFISXUtM1QyWElvQUN0ekUwa0gyWkZMbjBnV2JPcjVEQXRUaHV1Z3JUeVFsVDFmeGthOVZJd2RtN2FDa19QaEdFSGRSS3R1b0JQa2FveEVBUWdE?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Gente e Música: lançamento musical de artista ligado ao funk, regravação de Claudinho e Buchecha. Cor de MC Kekel não consta no material, então não é possível confirmar a pessoa negra; a nota fica no piso de música por segurança."
+ },
+ {
+  "hora": "00:33",
+  "fonte": "Busca - Cultura negra",
+  "titulo": "BRASIL. Educação antirracista deve integrar todo o currículo escolar, defende historiadora e pesquisadora",
+  "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOZndRaE81cFl1UjQxdExvRXZnY1lfRTh1bXM2SWx1T0RRbENCcWczdGtuWEpHQUk1MW93OFdNRExMajBobVBsN1gtUzRFa2xqTjhYNmUyZnByX0wyYVRiNjFfWl83MHpnN2pxRi1oTW5sX1hYX0tZZ1VlSE13YUgtN1h2U2h6OFBUaXo0bkRtbkNSbjFyTDZoRXhMX0FGb2xNblJOSmVnR2lXZkR3eHRJNGR2X1h5LUtVSHIwVEhsS2FEdjNXNktIMjNCUVRNUTRxTGN3T01qai14ZGdzc3p2dA?oc=5",
+  "categoria": "politica",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Educação antirracista no currículo escolar, defendida por historiadora e pesquisadora; é eixo de educação e ações afirmativas. Trata-se de fala de entrevista sem fato novo claro, então nota moderada."
  }
 ]
