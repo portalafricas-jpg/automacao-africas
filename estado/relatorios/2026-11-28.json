@@ -1996,5 +1996,60 @@
   "nota": 7,
   "destino": "recusada pelo redator",
   "detalhe": "O texto original é apenas uma galeria de fotos sem informação textual suficiente (sem declarações, dados, nomes de escolas ou fatos além do título e de manchetes relacionadas). Não há material para uma matéria honesta com o quê, quem, onde e quando além do título genérico. Além disso, é conteúdo de um veículo de carnaval com foco em galeria, e as manchetes relacionadas são de outras matérias."
+ },
+ {
+  "hora": "07:33",
+  "fonte": "Busca - Empreendedor negro",
+  "titulo": "Com aulas a partir de R$ 9,90, empresa ajuda mulheres negras a conquistar vagas em concursos e na OAB",
+  "link": "https://news.google.com/rss/articles/CBMikwJBVV95cUxQTUpQb0NmaHk1bGI1UW5saTVFMWlOTTAtUWlJVFNFS0tzNHJlb3FjMFNXUmdGcFBaa2wtd3poUWJsRUg4TGVzWXUwZ0d1Mm0xbkh3SjhiZHh1Sk9rS2dsdHV2bnlualRsYS1vbTlMc3k0UkdQRDZjWDczZ2lWSkpaODRWN2Y3M3BaVTluU3pSb2dGQm1vb0tVbUZ5bGVPQXRhRHN4RVpwdDZ6NXFUbGg3LWZUWE5zQlRRTFNNeExGenhwalRCZ0FiN0JSZUJRdU9XeUVuNnJFUmlFbUZzZ0EwWjFfMmhxWTZQQllCSWxqV1FwZm9mR1ktLVE3VDI0cGJSYlAzdnlNSU50VUNxbWdFQ1RLd9IBkwJBVV95cUxQTUpQb0NmaHk1bGI1UW5saTVFMWlOTTAtUWlJVFNFS0tzNHJlb3FjMFNXUmdGcFBaa2wtd3poUWJsRUg4TGVzWXUwZ0d1Mm0xbkh3SjhiZHh1Sk9rS2dsdHV2bnlualRsYS1vbTlMc3k0UkdQRDZjWDczZ2lWSkpaODRWN2Y3M3BaVTluU3pSb2dGQm1vb0tVbUZ5bGVPQXRhRHN4RVpwdDZ6NXFUbGg3LWZUWE5zQlRRTFNNeExGenhwalRCZ0FiN0JSZUJRdU9XeUVuNnJFUmlFbUZzZ0EwWjFfMmhxWTZQQllCSWxqV1FwZm9mR1ktLVE3VDI0cGJSYlAzdnlNSU50VUNxbWdFQ1RLdw?oc=5",
+  "categoria": "protagonista",
+  "prioridade": "",
+  "nota": 5,
+  "destino": "nota baixa",
+  "detalhe": "Empresa que vende cursos para mulheres negras; é conteúdo publicitário/comercial, sem fato relevante de política ou conquista coletiva. Filtro de publicidade."
+ },
+ {
+  "hora": "07:33",
+  "fonte": "Busca - Dona Onete",
+  "titulo": "Confira a agenda cultural do Amazonas neste sábado, 28 de novembro de 2026",
+  "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPcjZVT3NXeDlVRzR2a0FtV3RtWEpBdHdRRWM2RUZjUE9TdHRIVVkxcEFXemYyLU5MSjYtYmdSbjdwUnhHR0k4SHJtUnczdldCVnBuUkFMR3ZxemtrM2tGZDB3aVdwa0VpX3pMaVBfN0I1X0ZMVXVzZTJNemlQcXNCM0Q3bmpYeGlITEkzcUdYeF9BZHNkX2YxSXRBZTYyenU2Mk9uWXgxVTVpdXBxaVZDak9xYWR5aVZz?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 1,
+  "destino": "nota baixa",
+  "detalhe": "Agenda cultural genérica do Amazonas sem relação com a temática racial."
+ },
+ {
+  "hora": "07:33",
+  "fonte": "Busca - Saúde da população negra",
+  "titulo": "Tocantins amplia exames de visão no SUS em 57% e fica abaixo da média nacional, aponta CBO",
+  "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOTlVqdDl4clZneHN4TFZVbGxkTlNaU2NKQ0tjRHVZNklDZ1RUYWpjRjZNazNibFZ5aHFVTFFDODNERERTSEo1Tkl3ZWJvVEpDcldmWTJkeXNTYXgxYk1VVFBKN1lPcnY2bXR6elJVNnRKY3dnN0R5emFiNUJPdExiMG5rX3E5UG41emVWZ3duS3l6ZlFZQmdtd0RKWVhlcmFzNEZtN0g4bG1BSnZfSEdsTkNtTkdGQ1RqMVh6eVVGaUhDamoxZGpRbUQwX29INElBeENiMDNrbm13RU0?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "Dados de exames de visão no SUS por estado, sem recorte racial; não trata da população negra."
+ },
+ {
+  "hora": "07:33",
+  "fonte": "Busca - Billboard Brasil",
+  "titulo": "ARVO Festival 2027 promove encontro de gerações do rap",
+  "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOTDlVZ1p6akdla01UMmtuMjQ4eWQyazY4THlweE9FSmZLTUc2SUlqalBmTzdHUUJHMzRGNXBxckVJRFZ1bXZqRlJ6ZzVWc2p3MUhxWEpQTnM4a2ppX05mVDVfSGZGYi1rU0NlTU1PbUtXcnRLMlNKR0tVc21ENXVlWQ?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 1,
+  "destino": "nota baixa",
+  "detalhe": "Anúncio de festival de rap sem relação com a temática racial e sem artista negro identificado no resumo; não há dados suficientes."
+ },
+ {
+  "hora": "07:33",
+  "fonte": "Giranotícias (Angola)",
+  "titulo": "Instituto da Habitação esclarece processo sobre venda de casas no KK5800",
+  "link": "https://www.giranoticias.com/sociedade/2026/11/32845-instituto-da-habitacao-esclarece-processo-sobre-venda-de-casas-no-kk5800.html",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Notícia sem resumo e sem conteúdo suficiente para uma matéria honesta; processo de venda de casas do Instituto da Habitação não tem ligação clara com a temática racial no material recebido."
  }
 ]
