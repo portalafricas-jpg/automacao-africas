@@ -1,0 +1,51 @@
+{
+  "formato": "youtube",
+  "musica": "musicas/afrobeat-3.mp3",
+  "planos": [
+    {"frases": ["b1_0"], "arte": "numero", "texto": ["250", "CHIBATADAS"]},
+    {"frases": ["b1_1", "b1_2"], "foto": "20_Jo_o_C_ndido_1910.jpg", "mov": "in", "foco": [0.5, 0.3],
+     "rotulo": "João Cândido · 1910"},
+
+    {"frases": ["b2_0"], "arte": "ano", "ano": "1880", "texto": "Nasce em Encruzilhada do Sul (RS), filho de pais que tinham sido escravizados"},
+    {"frases": ["b2_1"], "arte": "ano", "ano": "1895", "texto": "Aos 14 anos, entra para a Marinha"},
+    {"frases": ["b2_2@0"], "foto": "25_Minas_Geraes_launch.jpg", "mov": "pan", "foco": [0.5, 0.5],
+     "rotulo": "Lançamento do encouraçado Minas Geraes · 1908"},
+    {"frases": ["b2_2@1"], "foto": "22_E_Minas_Geraes_1910.jpg", "mov": "out", "foco": [0.5, 0.5],
+     "rotulo": "Encouraçado Minas Geraes · 1910"},
+
+    {"frases": ["b3_0"], "foto": "07_Jornal_Correio_da_Manh_em_24_de_novembro_de_1910.jpg", "mov": "in", "foco": [0.5, 0.2],
+     "rotulo": "Correio da Manhã · 24 de novembro de 1910"},
+    {"frases": ["b3_1"], "arte": "baia"},
+    {"frases": ["b3_2"], "foto": "23_Brazilian_battleship_Minas_Geraes_firing_a_broadside.jpg", "mov": "in", "foco": [0.5, 0.5],
+     "rotulo": "Canhões do Minas Geraes em teste · 1909"},
+    {"frases": ["b3_3"], "foto": "01_Joao_Candido.jpg", "mov": "in", "foco": [0.40, 0.25], "destaque": [0.40, 0.14, 0.075],
+     "rotulo": "João Cândido (ao centro) no Minas Geraes · 26/11/1910"},
+
+    {"frases": ["b4_0"], "foto": "05_Jo_o_C_ndido_lendo_o_manifesto_da_Revolta_da_Chibata.jpg", "mov": "in", "foco": [0.68, 0.35],
+     "rotulo": "João Cândido (à direita) lê o manifesto · 1910"},
+    {"frases": ["b4_1"], "foto": "05_Jo_o_C_ndido_lendo_o_manifesto_da_Revolta_da_Chibata.jpg", "mov": "in2", "foco": [0.62, 0.32],
+     "rotulo": "João Cândido (à direita) lê o manifesto · 1910"},
+    {"frases": ["b4_2"], "arte": "frase", "texto": ["“A chibata avilta.”", "João Cândido ao jornal Correio da Manhã, 1910"]},
+    {"frases": ["b4_3"], "foto": "06_Jo_o_C_ndido_entrega_o_comando_do_Minas_Geraes_ao_capit_o_Pe.jpg", "mov": "in", "foco": [0.72, 0.4],
+     "rotulo": "João Cândido (batendo continência) entrega o comando · 1910"},
+
+    {"frases": ["b5_0", "b5_1"], "foto": "13_Revolta_Naval_vista_geral_do_Batalh_o_Naval_da_Ilha_das_Cobr.jpg", "mov": "pan", "foco": [0.5, 0.5], "escuro": true,
+     "rotulo": "Ilha das Cobras · dezembro de 1910"},
+    {"frases": ["b5_2"], "arte": "sobreviventes"},
+    {"frases": ["b5_3"], "foto": "02_Jo_o_Candido.png", "mov": "in", "foco": [0.5, 0.25],
+     "rotulo": "João Cândido · 1912"},
+    {"frases": ["b5_4"], "foto": "03_Gazeta_de_noticias_31-12-1912_01.jpg", "mov": "in", "foco": [0.5, 0.25],
+     "rotulo": "Gazeta de Notícias · 31 de dezembro de 1912"},
+
+    {"frases": ["b6_0"], "foto": "09_Jo_o_C_ndido_em_viagem_a_Porto_Alegre_a_fim_de_receber_pens_.jpg", "recorte": [0.12, 0.20, 0.49, 0.72], "mov": "in", "foco": [0.5, 0.3],
+     "rotulo": "João Cândido · anos 1960 · Arquivo Nacional"},
+    {"frases": ["b6_1"], "foto": "11_Jo_o_C_ndido_1963.jpg", "mov": "in", "foco": [0.45, 0.25],
+     "rotulo": "João Cândido · 1963 · Arquivo Nacional"},
+
+    {"frases": ["b7_0"], "arte": "lei"},
+    {"frases": ["b7_1"], "foto": "20_Jo_o_C_ndido_1910.jpg", "mov": "out", "foco": [0.5, 0.3],
+     "rotulo": "João Cândido, o Almirante Negro"},
+
+    {"frases": ["b8_0"], "arte": "final", "extra": 3.0}
+  ]
+}
