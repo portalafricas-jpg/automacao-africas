@@ -1,0 +1,27 @@
+name: Teste de vozes gratuitas (só gera áudio)
+on:
+  workflow_dispatch:
+jobs:
+  vozes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Instalar motor de voz (CPU)
+        run: |
+          pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install "voxcpm>=2.0.3" soundfile
+          sudo apt-get install -y ffmpeg
+      - name: Gerar vozes
+        run: |
+          mkdir -p saida
+          python testes/teste_voz.py
+          for f in saida/*.wav; do ffmpeg -loglevel error -y -i "$f" -b:a 128k "${f%.wav}.mp3"; done
+          ls -la saida
+      - uses: actions/upload-artifact@v4
+        with:
+          name: vozes
+          path: saida/*.mp3
