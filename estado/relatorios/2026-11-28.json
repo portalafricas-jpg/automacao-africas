@@ -5731,5 +5731,16 @@
   "nota": 6,
   "destino": "nota baixa",
   "detalhe": "Prestígio de Jorge Aragão a show de pagode; é agenda pública de artista negro, mas sem trabalho próprio ou conquista, nota intermediária."
+ },
+ {
+  "hora": "15:02",
+  "fonte": "Notícia Preta",
+  "titulo": "Revista americana elege musica de Milton Nascimento entre as 100 melhores da história",
+  "link": "https://noticiapreta.com.br/revista-americana-elege-musica-de-milton-nascimento-entre-as-100-melhores-da-historia/?utm_source=rss&utm_medium=rss&utm_campaign=revista-americana-elege-musica-de-milton-nascimento-entre-as-100-melhores-da-historia",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
  }
 ]
