@@ -134,5 +134,13 @@
   "busca": "\"Deu Samba\"",
   "grupo": 2,
   "auto": "2026-11-27"
+ },
+ {
+  "nome": "Busca - Chrigor",
+  "categoria": "cultura",
+  "tipo": "busca",
+  "busca": "\"Chrigor\"",
+  "grupo": 2,
+  "auto": "2026-11-28"
  }
 ]
