@@ -944,5 +944,38 @@
   "nota": 2,
   "destino": "nota baixa",
   "detalhe": "Reportagem sobre bandas nazistas que recrutam jovens; não tem relação direta com a temática racial da população negra nem com os pilares, e o foco é extremismo genérico, sem fato ligado à Agenda Preta."
+ },
+ {
+  "hora": "03:02",
+  "fonte": "Busca - samba",
+  "titulo": "'Pelo Telefone': Brasil celebra 110 anos de registro do primeiro samba",
+  "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPZzF0NWxlaFpEa3JGT0RET0c4THBWYlcxXzN0bXoyejdHMWxzdjU0ck5aZElBMUcyd0xNd1RhcVF5N3dodUVaMzRpM3VPbUJrWkhsb1A0bk5LZm43S1hCNDZsLXN0aENfblFldmE4MXZLNEJGWS1ybV9tb1BGMEw4U1VlMkxKY21oMEdSbVNlMUhhVl9OZWt4eTV3cUlDbVRWT1JtM1c1dDJLakMyb2FEdFNvcjZobE1fWHBkWmVoRVZub3Q0dEV2UdIB1wFBVV95cUxOSnZlSllrbDUzb1FuRWdGS01iZjdfMFFNajFSMmhCY1owTkFOczQ2Rm1VWXVqUG9fSGxuWmI2S3JvZEJfb1E5ZkpVZzllZkZnVGhRci1jUG1FcTBEUTlkekZwZW04b1dYa1pFWGJicmFwYjBGSDBRVUJiTU1fc2I1a0ZoaHJfMzBsZDhOeUZySFVKSUJjU1ItMXBLYlp5MzJSMjVOYWg0WDBYdERMbFJKZVJ1SFlPamtvcXQydGZZSkJnWmdabmIzcUZYVkI5a0pEQnZ2ektldw?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "03:03",
+  "fonte": "Busca - União Africana",
+  "titulo": "Ministério da Energia e Águas defende maior eficiência e sustentabilidade dos serviços",
+  "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOQm4wZDhMQXV1ckZXRzNuREdpcFRHcmpaTi1iWFBxaTVoZDF4UWlQckhyeTR2QTlsTU9JblBGVVdzRTYxLW94WU9HS25pdmJCdDctSl9ubXNoYy0tR212cnBvSmlfLXY2RG9Ha2x2VmJPWXUxc2hPeW9VRmFoZlZEc0djc2ZrQ3ZPSWVrdGtVbVR0cTJkbDZPTlFHVHpvZmpOWU02eDgzeU9NOTZwQlY0SU9vb3J4RHdUV1BhTHdRTDl0TmEwaGRFSFBBM3Rya0dEZnBGZmU2aUIxMmNxZzl6MnBtbFF1UXNOUDNYMjRNX3U0U3NfdXRv?oc=5",
+  "categoria": "mundo",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "[FONTE ÁFRICA] Nota institucional sobre serviços e eficiência do Ministério da Energia e Águas de Angola, sem fato racial, sem ligação com o Brasil e sem relevância para o leitor do Áfricas; é atualização burocrática."
+ },
+ {
+  "hora": "03:03",
+  "fonte": "Busca - samba",
+  "titulo": "‘Pelo Telefone’: a história do samba e a polêmica das duas versões",
+  "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxORGtJeHc1VldSaExLWF95UFQxZDZrSEh6RGYzeTVnT0NLUjF4V3NGQ1JoVUNYOUljS1J4cU9lcEZlU2FhbDJmUkc1Z0dyRy1Ic0p6NGk3UWw2RmNKMl9jZkQtbUZULTYyNjRPQnhOcmRsd0EySGxyN2ZnWFV2NnJkWHVjQmN6bFEwdXBXMkZzYzRaeUlkVDZGRWxYRndCdkJJWkVvcTB2RXBRVk5Xc2ctM0RHRjl5YVVZTjVxVUd4Y0ZxZmpBZEVZN1hEX2lpaEk1RDBESXc1UnBKMGFXLXlLQ0hmM2hXcVR6OUtodTBCSWFKUlk?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 6,
+  "destino": "nota baixa",
+  "detalhe": "Matéria histórica sobre o samba e a origem de 'Pelo Telefone', com a questão racial no contexto, mas sem fato novo nem conquista de pessoa negra; não é matéria de data da memória negra e a fonte é de outro veículo com texto que pode ser análise ou reportagem própria."
  }
 ]
