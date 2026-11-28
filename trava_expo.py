@@ -21,7 +21,7 @@ def tem_audio(video):
                               "stream=codec_type", "-of", "csv=p=0", video], capture_output=True, text=True).stdout
         return "audio" in out
     except Exception:
-        return True  # sem ffprobe não dá para conferir; não acusa falso
+        return False  # sem ffprobe não dá para garantir o áudio: avisa
 
 
 def faltas(hoje):
@@ -39,8 +39,18 @@ def faltas(hoje):
         if not plano.get(k):
             f.append(nome)
     r = plano.get("reels")
-    if r and not tem_audio(os.path.join(dia, r.get("arquivo", "reels.mp4"))):
-        f.append("O vídeo do Reels está sem áudio")
+    if r:
+        # O vídeo fica no galho "midia" (o .gitignore barra .mp4 no main): buscar por lá
+        rel = f"campanhas/expo/{hoje}/{r.get('arquivo', 'reels.mp4')}"
+        try:
+            import midia
+            video = midia.arquivo(rel)
+        except Exception:
+            video = None
+        if not video or not os.path.exists(video) or os.path.getsize(video) == 0:
+            f.append(f"O vídeo do Reels não está no depósito de mídia ({rel})")
+        elif not tem_audio(video):
+            f.append("O vídeo do Reels está sem áudio")
     return f
 
 
