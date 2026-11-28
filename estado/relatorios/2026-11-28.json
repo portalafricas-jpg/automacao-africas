@@ -2317,5 +2317,128 @@
   "destino": "publicada",
   "detalhe": "Terreiro bantu é tombado como patrimônio de SP",
   "foto": "Foto ilustrativa: Ondrej Bocek/Unsplash"
+ },
+ {
+  "hora": "08:18",
+  "fonte": "Busca - pagode",
+  "titulo": "Violência em São Paulo: cantor de pagode Pedro Guimarães é morto a tiros durante tentativa de assalto",
+  "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPR1BDSGF1MGxvSy1nV3VyM191S0JfdzhpMVF0VjFlRFNsalNKa2VfY3QwVEM0U1NUbXhfbFl3eF9sNk5BQk9WVVJvUHNhc1NTaG1ZZkVUenhFM3hYSF9iT2ZmTm5kV2lTYVQyRHBFRWdKdWQwRFMyNE1CdEtydnJyWEpteTZReGFMRU1WVEZCR1VINGI2a2pKb2ZjRzFGbXoxUktkYkNNbWpWeUotM3dPNVQyemV6a2U5WVA4UVFzT2FBaHlJcnc?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "repetida",
+  "detalhe": "título quase igual a outra notícia"
+ },
+ {
+  "hora": "08:18",
+  "fonte": "Agência Brasil - Últimas notícias",
+  "titulo": "Rádio Nacional transmite Palmeiras e Estudiantes de La Plata",
+  "link": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-11/radio-nacional-transmite-palmeiras-e-estudiantes-de-la-plata",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "descartada pelo filtro",
+  "detalhe": "filtro: busca ampla sem sinal (artista, escola/bloco ou termo)"
+ },
+ {
+  "hora": "08:18",
+  "fonte": "Busca - Jeferson Tenório",
+  "titulo": "Nos 80 anos de Conceição Evaristo, seus herdeiros-leitores contam o que aprenderam com a escritora",
+  "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPSWRub2tjY2RPZ1o3dDNjbklQTUQ1U21laDRIWEc1VUx2eUp3WTdnOEtPdXIydERQVGdOSlZwSWJXRnlJMEV6NEo5WXdXVjdraUJ5SVFHRUloWk1kLWFaYzBtN1RrUVNwQTNCblhDbHFSU3RXSFo0NWh6Q1FJR2hEdE5Ka0xjcExTVE8xNmFtejBKZTRaczN0S2hzTkRlMXJVT0dUcVJTOUxpaGNKNkF6eXVOelVLME9RUGtXb05qNjNPSDJMQ0hPUTluNEdhU2NfTU4xX2NpNGtzWXFqMk1acExR0gHiAUFVX3lxTE9JZG5va2NjZE9nWjd0M2NuSVBNRDVTbWVoNEhYRzVVTHZ5SndZN2c4S091cjJ0RFBUZ05KVnBJYldGeUkwRXo0SjlZd1dWN2tpQnlJUUdFSWhaTWQtYVpjMG03VGtRU3BBM0JuWENscVJTdFdIWjQ1aHpDUUlHaER0TkprTGNwTFNUTzE2YW16MEplNFpzM3RLaHNORGUxclVPR1RxUlM5TGloY0o2QXp5dU56VUswT1FQa1dvTmo2M09IMkxDSE9ROW40R2FTY19NTjFfY2k0a3NZcWoyTVpwTFE?oc=5",
+  "categoria": "protagonista",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Homenagem aos 80 anos de Conceição Evaristo, escritora negra referência; trajetória e legado de personalidade negra."
+ },
+ {
+  "hora": "08:18",
+  "fonte": "Busca - Lázaro Ramos",
+  "titulo": "Foto: Killmonger, vivido por Michael B. Jordan em 'Pantera Negra', usa cabelo semelhante ao de Lázaro Ramos no último capítulo de 'A Nobreza do Amor', da TV Globo",
+  "link": "https://news.google.com/rss/articles/CBMingJBVV95cUxPTTZDUk15bC1QT0ZQdkQ1Z0tESFhZRjRyZE83cm4tNWxsRHhpODRuNFhlMDVkd1hSQ1BYd1UyTEVyUm5JdjBIT2R5eFptTTNyNW9WOWR2S0p6Q1VoRHU3aGQwdWJqb0ZiNzk1ald3TXlndWstaUptUEpGSURPUTZjUmx2bUhjM0x3NTJRa1VWTkhCcW5LMkN2Ykd5emNXeXkyemptemhZZHBtWm1LdlA2LVJtWFB3Q3UxVEpwTE0zeGIwaE9tQ0h3RnVma2Izb3NjYU9UdFppeVNCT2pQSjByaWZZaXdTbnliT0tfZm1GQ2NIOXpZcWdhand0ME9zbE5fUUhWWFNPMWhZQ3F2S1JIMjVuWGNXX1piOW5XelRB?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 1,
+  "destino": "nota baixa",
+  "detalhe": "Fofoca e comparação de cabelo de personagens de novela; resumo de capítulo sem notícia relevante."
+ },
+ {
+  "hora": "08:18",
+  "fonte": "Busca - igualdade racial",
+  "titulo": "Estatuto da Igualdade Racial em Miúdos",
+  "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNZFM1MVB1OXAtU09RbkJwYjdNWUR3d25uOXc4NGpHUUozS1Z4THl2OUhOa1NqVjF6bHk3c084OUU1VlZUd3VzeDZfc2JvYzRMRko3RDRUVS1Ddi1DZWxjcHFndFVmMG56VG1TU3pheVd5bGlXR1I1R004SGR6ME16S1BnMjVrdE1JVWlZUmNLTlVsZnFfWVJQbzVoR00xUVJVQmlGUlJn?oc=5",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "evento local pequeno: Material explicativo de câmara municipal sobre estatuto já vigente desde 2010; sem fato novo."
+ },
+ {
+  "hora": "08:18",
+  "fonte": "Busca - Cineasta negro",
+  "titulo": "Festival de cinema negro reúne 14 países em Salvador",
+  "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNZ1FqZDRwZEU4YzFCeXB0SGlBbUJNVDRUT3ZNOU5XWFJtU0x5Z1pJblhjUFNYR256LXR6SkNybUt1QW5QUENiXzNucGM0TGVJVjNzZWNQeExNeTJkOWdFTTZNQlp2blNyQ2F0Tks4UXVubWtncGJJMXdyN2pRVm14a2JvbEQ1dEF3Ql95d3kzX0p2dnVLUFpCY9IBoAFBVV95cUxOMEZhWG5lRGZfeDZ4LTNhOVJpeE16LVoxMFUxWnB0Z2Y4WERlUlU4aEJORkRrd2tmajk2UktycFVDOWdwR3YxUjJNd0wySm56T2tPQkZTS3RyajhVQlAwRG9oUVo1RHNtalRoN05ybkVqclJYNU9xT2tHUVNVRjF0WUZIYmRpaGtTbWRYS05qdnZFR1NKY09BUHNXSDA5NzEw?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Festival de cinema negro com 14 países em Salvador; evento de cultura negra com alcance internacional."
+ },
+ {
+  "hora": "08:18",
+  "fonte": "Busca - pagode",
+  "titulo": "Cantor de pagode é morto a tiros enquanto retirava instrumentos de carro",
+  "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1BdU8zbjlRYUZJemlxWnF5c2lOSHc4d3BJYW1EMkMwSElfQi1tZHFVaE92ZmdEeVhGVm5Db2hxblBidWRjZVZKc0QwUWFseHFiZTBSUUx6NjhSQlZTazFkLU5GbVA?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Crime comum sem relevância racial; a notícia é sobre morte de cantor em tentativa de roubo, sem fato de Estado ou recorte racial no texto."
+ },
+ {
+  "hora": "08:18",
+  "fonte": "Busca - pagode",
+  "titulo": "Cantor de pagode de 39 anos morre baleado durante tentativa de assalto",
+  "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxON3VOSVhlcmZsM3FlQkktcWg3bTlJTFY3OW9VaHNiNmwycnU3N2pRaFVMN3N0cEtMWE52bFVrS1A3QWYwZnllaEc1ZEI3S3JxRG82aDJRa2dPdW9CMV90c1dHUjZWaUZuZGZqUmtsNVNzWGM5S05DSHpiZk1JLU52amdoMWhCZTRoclZDVTJnT3pBQWtvazgzQkI4VUtkSXB6d2tSVFlILXplX1VrUDgtYWlqMjl4ZTQ?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "repetida",
+  "detalhe": "Mesmo fato da notícia 5 (morte de cantor de pagode baleado); crime comum sem relevância racial."
+ },
+ {
+  "hora": "08:18",
+  "fonte": "Busca - Hariany Almeida",
+  "titulo": "Samba da ex-BBB Hariany Almeida divide opiniões na web: ‘’Nota dó’’",
+  "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPSTFVYWMtNXl3RlJBZmJnbWZ2eHFMRTJEaHlSVGU0XzFPUUpEZjMtS3FtWXZRb2EwRkE5d3AzQTRaLWtyVkF3NDA1SVFvbndQaFNxZTdBVVdad1oyTDJGbEJNMTJ2UFBhakNOVGlnMnhIU2NZUG5OdmJTSnhybVFjNWNsUEltOUQ4a2FWR2RiWkt5SnhHcWpKYm9GLVRiemM4aDBMTTIzeGlCZWxKUkFMdEtlVlR6TWxoZG95ekgxOWdDOTdX0gHEAUFVX3lxTE9JMVVhYy01eXdGUkFmYmdtZnZ4cUxFMkRoeVJUZTRfMU9RSkRmMy1LcW1ZdlFvYTBGQTl3cDNBNFota3JWQXc0MDVJUW9ud1BoU3FlN0FVV1p3WjJMMkZsQk0xMnZQUGFqQ05UaWcyeEhTY1lQbk52YlNKeHJtUWM1Y2xQSW05RDhrYVZHZGJaS3lKeEdxakpib0YtVGJ6YzhoMExNMjN4aUJlbEpSQUx0S2VWVHpNbGhkb3l6SDE5Z0M5N1c?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Repercussão de samba de ex-BBB nas redes; polêmica de rede social sem trabalho relevante, fica fora."
+ },
+ {
+  "hora": "08:18",
+  "fonte": "Busca - Jeferson Tenório",
+  "titulo": "Nos 80 anos de Conceição Evaristo, seus herdeiros-leitores contam o que aprenderam com a escritora",
+  "link": "https://www.estadao.com.br/amp/cultura/literatura/nos-80-anos-de-conceicao-evaristo-seus-herdeiros-leitores-contam-o-que-aprenderam-com-a-escritora/",
+  "categoria": "protagonista",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "publicada",
+  "detalhe": "Conceição Evaristo completa 80 anos; escritores celebram",
+  "foto": "Divulgação"
+ },
+ {
+  "hora": "08:19",
+  "fonte": "Busca - Cineasta negro",
+  "titulo": "Festival de cinema negro reúne 14 países em Salvador",
+  "link": "https://atarde.com.br/cineinsite/festival-de-cinema-negro-reune-14-paises-em-salvador-1410947",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "publicada",
+  "detalhe": "Festival de cinema negro reúne 14 países em Salvador",
+  "foto": "Divulgação"
  }
 ]
