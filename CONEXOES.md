@@ -18,7 +18,7 @@ A parte entre as marcas AUTOMATICO é refeita sozinha pelo robô conexoes.yml se
 - YouTube: canal @Africasplay (subir vídeos e Shorts, trocar capas, editar textos, playlists, privar).
 - API do Claude (robôs do portal, redes, comentários, grupos, assessorias).
 - Gmail dos robôs (envio e leitura dos e-mails das assessorias).
-- Cloudflare (formulário das assessorias).
+- Cloudflare: ATENÇÃO, em 28/11/2026 o robô achou a chave CLOUDFLARE_API_TOKEN vazia no cofre (o formulário das assessorias nunca chegou a ser publicado: não existe assessorias/formulario.json). Falta guardar a chave de novo.
 - Unsplash (fotos de reserva).
 - Voz gratuita (narração): VoxCPM2, motor de licença Apache-2.0 do VoiceStudio, roda no próprio GitHub sem chave e sem custo (workflow teste-voz.yml). Duas vozes aprovadas por Washington em 27/11/2026: masculina de locutor e feminina de apresentadora. Ainda não ligada aos robôs de vídeo.
 - Site africas.com.br: lê os 6 RSS do robô em feeds/ (politica, mundo, cotidiano, cultura, ancestralidade, protagonista). Publicar matéria = gravar no RSS da categoria.
@@ -35,6 +35,7 @@ A parte entre as marcas AUTOMATICO é refeita sozinha pelo robô conexoes.yml se
 - X (Twitter): não será pago.
 
 ## Histórico de mudanças (a mais nova em cima)
+- 28/11/2026: TikTok: decidido seguir só pela postagem direta (robô 100% automático, depois da auditoria). Páginas de privacidade e termos prontas em cloudflare/paginas.js (robô paginas-publicar.yml), mas a publicação falhou porque a chave do Cloudflare está vazia no cofre. Alternativa: publicar em aplicativo.africas.com.br/privacidade/ e /termos/ (repositório aplicativo-africasplay).
 - 28/11/2026: voz padrão fixa: os robôs copiam a voz dos arquivos vozes-padrao/masculina.wav e feminina.wav (VoxCPM2 com prompt_wav_path + prompt_text + reference_wav_path). Sem isso, cada frase sai com uma voz diferente. Robôs do Calendário Afro: calendario-imagens, calendario-voz, calendario-voz-teste, calendario-voz-salvar. Artefatos do GitHub não baixam nesta sessão: guardar áudios em ramo (calendario-voz-teste, calendario-audio).
 - 28/11/2026: histórico do galho main limpo de todos os vídeos .mp4 (cerca de 124 MB); o main caiu para uns 70 MB. Robô do portal passou a tentar de novo ao gravar.
 - 28/11/2026: vídeos saem do galho main e vão para o galho "midia" (apagados após 7 dias pelo limpa-midia.yml); vigia de gastos (vigia-gastos.yml) ligado, com relatório semanal e alerta vermelho por e-mail.
