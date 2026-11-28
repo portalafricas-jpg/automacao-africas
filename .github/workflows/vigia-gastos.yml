@@ -1,0 +1,40 @@
+name: Vigia de gastos
+
+# Todo dia útil às 9h (Brasília) confere espaço do repositório, gasto do Claude (API) e saúde dos robôs.
+# Segunda-feira: relatório semanal por e-mail (aviso do GitHub). Qualquer dia útil: alerta vermelho na hora.
+# Não usa o Claude: custo zero.
+on:
+  workflow_dispatch:
+    inputs:
+      forcar:
+        description: "Mandar o relatório mesmo sem ser segunda (1 = sim)"
+        default: "0"
+  schedule:
+    - cron: "0 12 * * 1-5"
+
+permissions:
+  contents: write
+  issues: write
+  actions: read
+
+jobs:
+  vigiar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install requests
+      - name: Conferir e avisar
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FORCAR_RELATORIO: ${{ github.event.inputs.forcar || '0' }}
+        run: python vigia_gastos.py
+      - name: Guardar o histórico
+        run: |
+          git config user.name "robo-africas"
+          git config user.email "robo-africas@users.noreply.github.com"
+          git add estado/gastos.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Vigia de gastos: histórico do dia"
+          for i in 1 2 3 4 5; do git pull --rebase && git push && exit 0; sleep 7; done
+          exit 1
