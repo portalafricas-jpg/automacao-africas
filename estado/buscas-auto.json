@@ -158,5 +158,13 @@
   "busca": "\"Jajá\"",
   "grupo": 2,
   "auto": "2026-11-28"
+ },
+ {
+  "nome": "Busca - Luizinho do Pagode",
+  "categoria": "cultura",
+  "tipo": "busca",
+  "busca": "\"Luizinho do Pagode\"",
+  "grupo": 1,
+  "auto": "2026-11-28"
  }
 ]
