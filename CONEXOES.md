@@ -50,11 +50,12 @@ A parte entre as marcas AUTOMATICO é refeita sozinha pelo robô conexoes.yml se
 - comentarios.yml: Comente APP (acionado sob demanda ou pelo cron-job.org). Chaves: ANTHROPIC_API_KEY, FB_PAGE_ID, GITHUB_TOKEN, IG_USER_ID, META_PAGE_TOKEN
 - conexoes.yml: Atualizar conexões (agendado (UTC): 17 11 * * 1)
 - diagnostico-bing.yml: Diagnóstico do Bing (acionado sob demanda ou pelo cron-job.org)
-- ferramentas-video.yml: Ferramentas de vídeo (transcrição e máscara) (acionado sob demanda ou pelo cron-job.org)
+- ferramentas-video.yml: Ferramentas de vídeo (transcrição e máscara) (acionado sob demanda ou pelo cron-job.org). Chaves: GITHUB_TOKEN
 - formulario-publicar.yml: Assessorias - publicar formulário (acionado sob demanda ou pelo cron-job.org). Chaves: CLOUDFLARE_API_TOKEN
 - grupos.yml: Links para os grupos do Facebook (agendado (UTC): 0 11 * * 1-5). Chaves: ANTHROPIC_API_KEY, GITHUB_TOKEN
 - instagram-antigos.yml: Ligar posts antigos do Instagram às matérias (acionado sob demanda ou pelo cron-job.org). Chaves: IG_USER_ID, META_PAGE_TOKEN
 - legenda-teste.yml: Legenda (transcrever) (acionado sob demanda ou pelo cron-job.org)
+- limpa-midia.yml: Limpar depósito de mídia (agendado (UTC): 0 6 * * *). Chaves: GITHUB_TOKEN
 - metricas.yml: Resultados das redes (agendado (UTC): 0 10 * * *). Chaves: FB_PAGE_ID, IG_USER_ID, META_PAGE_TOKEN
 - redes.yml: Robô das redes (acionado sob demanda ou pelo cron-job.org). Chaves: ANTHROPIC_API_KEY, FB_PAGE_ID, GMAIL_SENHA_APP, IG_USER_ID, META_PAGE_TOKEN, YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN
 - reels-agora.yml: Publicar Reels agora (teste) (acionado sob demanda ou pelo cron-job.org). Chaves: ANTHROPIC_API_KEY, FB_PAGE_ID, IG_USER_ID, META_PAGE_TOKEN
@@ -63,7 +64,7 @@ A parte entre as marcas AUTOMATICO é refeita sozinha pelo robô conexoes.yml se
 - teste-contas-meta.yml: Teste das contas da Meta (só leitura) (acionado sob demanda ou pelo cron-job.org). Chaves: META_PAGE_TOKEN, META_USER_TOKEN
 - teste-direct.yml: Teste do direct com botões (acionado sob demanda ou pelo cron-job.org). Chaves: FB_PAGE_ID, IG_USER_ID, META_PAGE_TOKEN
 - teste-meta.yml: Teste da chave da Meta (acionado sob demanda ou pelo cron-job.org). Chaves: FB_PAGE_ID, IG_USER_ID, META_PAGE_TOKEN, META_USER_TOKEN
-- teste-reels.yml: Teste do Reels (acionado sob demanda ou pelo cron-job.org). Chaves: ANTHROPIC_API_KEY
+- teste-reels.yml: Teste do Reels (acionado sob demanda ou pelo cron-job.org). Chaves: ANTHROPIC_API_KEY, GITHUB_TOKEN
 - teste-repetidas.yml: Teste do protocolo anti-repetição (só leitura) (acionado sob demanda ou pelo cron-job.org). Chaves: ANTHROPIC_API_KEY
 - teste-voz.yml: Teste de vozes gratuitas (só gera áudio) (acionado sob demanda ou pelo cron-job.org)
 - teste-youtube.yml: Teste do Radar no YouTube (acionado sob demanda ou pelo cron-job.org). Chaves: ANTHROPIC_API_KEY, YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN
@@ -81,7 +82,7 @@ A parte entre as marcas AUTOMATICO é refeita sozinha pelo robô conexoes.yml se
 - ANTHROPIC_API_KEY: alarme-repetidas.yml, comentarios.yml, grupos.yml, redes.yml, reels-agora.yml, robo.yml, teste-reels.yml, teste-repetidas.yml, teste-youtube.yml
 - CLOUDFLARE_API_TOKEN: formulario-publicar.yml
 - FB_PAGE_ID: comentarios.yml, metricas.yml, redes.yml, reels-agora.yml, teste-direct.yml, teste-meta.yml
-- GITHUB_TOKEN: ajuste-buscas.yml, alarme-repetidas.yml, comentarios.yml, grupos.yml, vigia-gastos.yml
+- GITHUB_TOKEN: ajuste-buscas.yml, alarme-repetidas.yml, comentarios.yml, ferramentas-video.yml, grupos.yml, limpa-midia.yml, teste-reels.yml, vigia-gastos.yml
 - GMAIL_SENHA_APP: assessorias-envio.yml, redes.yml
 - IG_USER_ID: comentarios.yml, instagram-antigos.yml, metricas.yml, redes.yml, reels-agora.yml, teste-direct.yml, teste-meta.yml
 - META_PAGE_TOKEN: comentarios.yml, instagram-antigos.yml, metricas.yml, redes.yml, reels-agora.yml, teste-contas-meta.yml, teste-direct.yml, teste-meta.yml
