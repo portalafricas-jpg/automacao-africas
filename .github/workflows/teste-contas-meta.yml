@@ -36,6 +36,8 @@ jobs:
                   diz("- não configurada"); continue
               ok, d = pede("me", {"fields": "id,name"}, tok)
               diz(f"- quem é: {d.get('name') if ok else 'erro: ' + str(d)}")
+              ok, d = pede("app", {"fields": "id,name"}, tok)
+              diz(f"- app da Meta que gerou a chave: {(d.get('name') + ' (id ' + d.get('id') + ')') if ok else 'erro: ' + str(d)}")
               ok, d = pede("me/accounts", {"fields": "name,instagram_business_account{username}", "limit": 50}, tok)
               if ok:
                   pags = d.get("data", [])
