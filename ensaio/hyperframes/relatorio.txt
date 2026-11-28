@@ -1,0 +1,3 @@
+- Foto × nome: conferido. Perez Ochieng = perez-ochieng.jpg; Fábio Guasti = fabio-guasti.jpg; Kupakwashe W. Midzi = kupakwashe-midzi.jpg.
+- Reels atual: 20.8 s de imagem e 20.9 s de som, volume -13.9 LUFS. Tudo certo.
+- Reels novo: 24.4 s de imagem e 24.5 s de som, volume -13.9 LUFS. Tudo certo.
