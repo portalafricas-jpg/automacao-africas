@@ -421,6 +421,8 @@ def decodificar(texto):
 
 
 PADRAO_CREDITO = re.compile(r"(?i:Foto|Fotos|Imagem|Crédito|Credito)\s*:\s*([^\n|]{3,90}?)(?=\s*(?:\n|\||$|\.\s))")
+# Crédito sem "Foto:" na legenda, como "(Reprodução/Instagram)" ou "Divulgação/Netflix" (28/11/2026: foto de Instagram pode ser usada)
+PADRAO_CREDITO_LIVRE = re.compile(r"(?i)((?:reprodu[cç][aã]o|divulga[cç][aã]o)(?:\s*[/|:-]\s*[^\n()\[\]|]{2,60})?)")
 
 
 def limpeza_mecanica(texto, titulo="", descricao=""):
@@ -487,6 +489,7 @@ def extrair_materia(link, titulo="", descricao=""):
         candidatos.append(decodificar(re.sub(r"<[^>]+>", " ", trecho)))
     for legenda in re.findall(r"<figcaption[^>]*>(.*?)</figcaption>", pagina, flags=re.S | re.I):
         candidatos.append(decodificar(re.sub(r"<[^>]+>", " ", legenda)))
+    legendas = list(candidatos)  # só campos de crédito e legendas (não o texto corrido)
     candidatos.append(resultado["texto"])
     for c in candidatos:
         c = re.sub(r"(?i)cr[ée]ditos?\s+da\s+(?:imagem|foto)\s*:", "Foto:", c or "")
@@ -495,6 +498,13 @@ def extrair_materia(link, titulo="", descricao=""):
             resultado["credito_foto"] = limpar_credito(m.group(1))
             if resultado["credito_foto"]:
                 break
+    if not resultado.get("credito_foto"):
+        for c in legendas:
+            m = PADRAO_CREDITO_LIVRE.search(c or "")
+            if m:
+                resultado["credito_foto"] = limpar_credito(m.group(1))
+                if resultado["credito_foto"]:
+                    break
 
     resultado["fotos_corpo"] = achar_fotos_corpo(pagina, resultado["imagem"])
     resultado["embeds"] = achar_embeds(pagina)
@@ -549,6 +559,11 @@ def achar_fotos_corpo(pagina, principal=""):
         if c:
             credito = limpar_credito(c.group(1))
             legenda = cap[:c.start()].strip(" –—-|,.")
+        else:
+            c = PADRAO_CREDITO_LIVRE.search(cap)  # "(Reprodução/Instagram)" sem "Foto:" (28/11/2026)
+            if c:
+                credito = limpar_credito(c.group(1))
+                legenda = (cap[:c.start()] + cap[c.end():]).strip(" –—-|,.()")
         fotos.append({"url": src, "legenda": legenda[:200], "credito": credito})
         if len(fotos) >= 6:
             break
