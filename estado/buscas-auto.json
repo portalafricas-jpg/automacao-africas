@@ -142,5 +142,13 @@
   "busca": "\"Chrigor\"",
   "grupo": 2,
   "auto": "2026-11-28"
+ },
+ {
+  "nome": "Busca - MC Kekel",
+  "categoria": "cultura",
+  "tipo": "busca",
+  "busca": "\"MC Kekel\"",
+  "grupo": 0,
+  "auto": "2026-11-28"
  }
 ]
