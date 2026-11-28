@@ -84,13 +84,29 @@ def fotos_da_pagina(link):
     return saida[:6]
 
 
+NAVEGADOR = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
+                         "Chrome/131.0 Safari/537.36", "Accept": "image/avif,image/webp,image/*,*/*;q=0.8",
+             "Referer": "https://www.africas.com.br/"}
+
+
 def abrir(url):
-    try:
-        img = Image.open(io.BytesIO(R.baixar(url))).convert("RGB")
-        return img if img.width >= 400 and img.height >= 250 else None
-    except Exception as e:
-        log(f"Foto não baixou ({str(e)[:120]}): {url[-70:]}")
-        return None
+    """Baixa a foto. Se o site devolver outra coisa (proteção contra muitos acessos), espera e tenta de novo
+    como navegador comum, até 3 vezes."""
+    ultimo = ""
+    for tentativa in range(3):
+        try:
+            if tentativa == 0:
+                dados = R.baixar(url)
+            else:
+                time.sleep(4 * tentativa)
+                with urllib.request.urlopen(urllib.request.Request(url, headers=NAVEGADOR), timeout=40) as r:
+                    dados = r.read()
+            img = Image.open(io.BytesIO(dados)).convert("RGB")
+            return img if img.width >= 400 and img.height >= 250 else None
+        except Exception as e:
+            ultimo = f"{str(e)[:80]}; começo da resposta: {dados[:60]!r}" if "dados" in locals() else str(e)[:120]
+    log(f"Foto não baixou ({ultimo}): {url[-70:]}")
+    return None
 
 
 def nomes_no_titulo(titulo):
