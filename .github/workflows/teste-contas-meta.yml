@@ -36,6 +36,15 @@ jobs:
                   diz("- não configurada"); continue
               ok, d = pede("me", {"fields": "id,name"}, tok)
               diz(f"- quem é: {d.get('name') if ok else 'erro: ' + str(d)}")
+              ok, dd = pede("debug_token", {"input_token": tok}, tok)
+              if ok:
+                  import datetime
+                  x = dd.get("data", {}).get("expires_at", None)
+                  dt = dd.get("data", {}).get("data_access_expires_at", None)
+                  fmt = lambda t: "nunca" if not t else datetime.datetime.utcfromtimestamp(t).strftime("%d/%m/%Y")
+                  diz(f"- validade da chave: {fmt(x)} | acesso aos dados vence em: {fmt(dt)}")
+              else:
+                  diz(f"- validade da chave: não deu para ler ({dd})")
               ok, d = pede("app", {"fields": "id,name"}, tok)
               diz(f"- app da Meta que gerou a chave: {(d.get('name') + ' (id ' + d.get('id') + ')') if ok else 'erro: ' + str(d)}")
               ok, d = pede("me/accounts", {"fields": "name,instagram_business_account{username}", "limit": 50}, tok)
