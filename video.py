@@ -88,7 +88,8 @@ def abrir(url):
     try:
         img = Image.open(io.BytesIO(R.baixar(url))).convert("RGB")
         return img if img.width >= 400 and img.height >= 250 else None
-    except Exception:
+    except Exception as e:
+        log(f"Foto não baixou ({str(e)[:120]}): {url[-70:]}")
         return None
 
 
