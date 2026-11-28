@@ -12,13 +12,17 @@
 import json
 import os
 import re
+import smtplib
+import ssl
 import time
 import unicodedata
 from datetime import datetime, timedelta, timezone
+from email.message import EmailMessage
 
 import requests
 
 API = "https://graph.facebook.com/v26.0/"
+EMAIL_AVISOS = "portalafricas@gmail.com"
 PASTA = os.path.dirname(os.path.abspath(__file__))
 ARQ_POSTS = os.path.join(PASTA, "estado", "posts-redes.json")
 HORAS_OLHANDO = 72          # olha os comentários dos posts dos últimos 3 dias
@@ -196,18 +200,23 @@ def classificar(comentario, post):
 
 
 def avisar(titulo, texto):
-    """Abre um aviso (issue) no GitHub; o GitHub manda por e-mail para o dono do repositório."""
-    if not GH_TOKEN:
-        log(f"  (sem GITHUB_TOKEN para avisar) {titulo}")
+    """Manda o aviso só por e-mail (Gmail dos robôs) para portalafricas@gmail.com.
+    Não abre mais aviso (issue) no GitHub: o repositório é público e o @ da pessoa ficaria exposto."""
+    senha = (os.environ.get("GMAIL_SENHA_APP") or "").replace(" ", "").strip()
+    if not senha:
+        log(f"  (sem GMAIL_SENHA_APP para avisar) {titulo}")
         return
     try:
-        r = requests.post(f"https://api.github.com/repos/{REPO}/issues", timeout=30,
-                          headers={"Authorization": f"Bearer {GH_TOKEN}", "Accept": "application/vnd.github+json"},
-                          json={"title": titulo, "body": texto, "labels": ["comentario"]})
-        if r.status_code >= 300:
-            log(f"  aviso não foi aberto: {r.status_code} {r.text[:150]}")
+        msg = EmailMessage()
+        msg["From"] = f"Comente APP · Áfricas Play <{EMAIL_AVISOS}>"
+        msg["To"] = EMAIL_AVISOS
+        msg["Subject"] = titulo
+        msg.set_content(texto)
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=ssl.create_default_context(), timeout=60) as smtp:
+            smtp.login(EMAIL_AVISOS, senha)
+            smtp.send_message(msg)
     except Exception as e:
-        log(f"  aviso não foi aberto: {e}")
+        log(f"  aviso por e-mail não foi enviado: {e}")
 
 
 def ler_vistos():
