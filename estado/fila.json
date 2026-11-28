@@ -21,27 +21,6 @@
   "valido_ate": ""
  },
  {
-  "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPNXJPcERMNURrY0ZrZkxkaGlVQTVIcS1UZkJuM2ttSXVvS2RDUHlvVjJyV2ZJczR3WkhRX1JNZEVZSktWM0FhcmxxTTNQNEx1bGJnX2pNWEc2QU9PRmt4SS0xYVJWRVpDZnBkd0g4SjhlNEJ3UGR1U1JxZXFLbVhXaDhLaDZCUXNEWHVmdTlfUG9BM3FhdDFBN2RRUW84cnFvRHViY2xLYjFNRVk0V2ZMR0w5Ui1NSUxVTzNF?oc=5",
-  "titulo_original": "Aeroporto de Salvador reúne exposição, ópera e debates sobre cultura afro-brasileira em novembro",
-  "descricao": "Aeroporto de Salvador reúne exposição, ópera e debates sobre cultura afro-brasileira em novembro    VOENEWS",
-  "imagem_rss": "",
-  "imagem_banco": false,
-  "imagem_trocar": false,
-  "fonte_nome": "Busca - Cultura negra",
-  "fonte_africa": false,
-  "categoria": "cultura",
-  "prioridade": "media",
-  "nota": 8,
-  "motivo_nota": "Programação de cultura afro-brasileira em novembro (exposição, ópera, debates), ligada ao Mês da Consciência Negra.",
-  "ministerio": false,
-  "excecao_nota7": false,
-  "gente": false,
-  "artista": "",
-  "data_original": "2026-11-28T12:46:37+00:00",
-  "criado_em": "2026-11-28T13:32:20.463348+00:00",
-  "valido_ate": ""
- },
- {
   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE4xLVpxRWZnRllCR0QyemNDcU5UWTJ0dk9XOHU5NEJhTm5tVDF2SFRRTjhjdmlGakJ5U1RpeFpyODNzbDlFU0FnOUdTd0QxVHZyZXI5bkRTUjFiYUxxRGVveHJvUWJtdnY1N1RmQ3l0S3Q4RXZWbUE?oc=5",
   "titulo_original": "Johnny Hooker antecipa o show no Primavera Sound SP: “As próprias canções são cinematográficas”",
   "descricao": "Johnny Hooker antecipa o show no Primavera Sound SP: “As próprias canções são cinematográficas”    POPLine",
@@ -354,6 +333,27 @@
   "artista": "NGKS",
   "data_original": "2026-11-28T16:00:08+00:00",
   "criado_em": "2026-11-28T16:02:16.786312+00:00",
+  "valido_ate": ""
+ },
+ {
+  "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxORkthOVpiM3JYTWlBQjRsU3pUVTZ3bkFxWnp0US0yQ0RuLXpUSkZPT1M0dHpNaVRwNlZHQTBMZFhDb25POWx3cXFUWkhyQzBiZDZRZ0l5TklJNW1KZC02S3U2RmlQUHo0bkdpRHNLOGtJY25QN2VZU0pkYzByZHlhRXVkSEtDdVFBM2FjbzVfaWNyVDZ4RmxtR0pUT2lReDZrR2lNbGlQTEtkZ3hNRVNsNVBEUWNXcGdnODVURW5qN1lkQm9Sa2VHM2prZzlxVTJFdEtiNFZPc9IB3AFBVV95cUxQWEFxNFhVN3lJYmVOTlZtUnVyaTVINXZJVExCV2F3V2RGYnhGMkt4b2tyMEZQNVMyOVlOWUhBcmRSZVVMV2N6YlN0X0x6dFpZakFUTGRER3MwUzh4Nlc0TElJLUVReWUwalotNXRRdXpRaENRZXhjR1dBcjc4bm9qeFctZVo4eDZUSGZkeUNyZG5ITjVmNXA4R2RlaDFGWHg2U3Y1WDhEbFpnR0VWV3o4Yldzd1RXTlJfUVVzekJpV0s1SS1BOVdjWjcwb1AzQ3JfR1FKLTRpbTlkSjRZ?oc=5",
+  "titulo_original": "Em carta a Lula, jogadora presa na Rússia denuncia trabalho forçado, racismo e perseguição",
+  "descricao": "Em carta a Lula, jogadora presa na Rússia denuncia trabalho forçado, racismo e perseguição    Portal Piauí Hoje",
+  "imagem_rss": "",
+  "imagem_banco": false,
+  "imagem_trocar": false,
+  "fonte_nome": "Busca - Racismo",
+  "fonte_africa": false,
+  "categoria": "mundo",
+  "prioridade": "alta",
+  "nota": 8,
+  "motivo_nota": "Carta de jogadora presa na Rússia denunciando trabalho forçado e racismo, dirigida a Lula; denúncia de violação de direitos com dimensão internacional e envolvimento do presidente.",
+  "ministerio": false,
+  "excecao_nota7": false,
+  "gente": false,
+  "artista": "",
+  "data_original": "2026-11-28T16:30:00+00:00",
+  "criado_em": "2026-11-28T16:47:14.698533+00:00",
   "valido_ate": ""
  }
 ]
