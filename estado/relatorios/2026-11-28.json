@@ -4627,5 +4627,149 @@
   "nota": 7,
   "destino": "não abriu o texto",
   "detalhe": "texto original curto ou bloqueado"
+ },
+ {
+  "hora": "13:17",
+  "fonte": "Busca - Cineasta negro",
+  "titulo": "Salvador recebe festival internacional de cinema negro com representantes de 14 países",
+  "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPRTdLRzl1WTYtRXRWeXNWNXJfOHFpU0EycndtaVVaeE5QWktlLUYwcXpubDd0a2JvU2N0OFJ0c2Q0dlpkTE1WRVRPM3k1LXE4UDRKTzRLcTM1Y3lsT3Y5Nmp1Qmh6dWNUdnFjeDJqNkZ5ZjlNVHJKUnRlbk5LeVFaRFgxVGxhaDVsTEE1ekR3T0pnNDh6cmM0YUVqa2xmUmFGVV9nYTEtOG50dDRYMG1iNVFzMG00cXAwOGxVandvRlo2VEZxZ0ZTQzZDNnhQOFRrYU5meUR1elZJUQ?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "repetida",
+  "detalhe": "título quase igual a outra notícia"
+ },
+ {
+  "hora": "13:18",
+  "fonte": "Agência Brasil - Últimas notícias",
+  "titulo": "STF marca para 11 de dezembro análise de súmula sobre pautas-bomba",
+  "link": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-11/stf-marca-para-11-de-dezembro-analise-de-sumula-sobre-pautas-bomba",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "descartada pelo filtro",
+  "detalhe": "filtro: busca ampla sem sinal (artista, escola/bloco ou termo)"
+ },
+ {
+  "hora": "13:18",
+  "fonte": "Busca - Grupo Revelação",
+  "titulo": "Legislativo de Maringá homenageia Grupo Saikyou e entrega Brasão do Município ao Departamento de Yosakoi Soran da ACEMA",
+  "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQVmRmaUVPNnU5bG8wc3lPRWVJR0pJVERoLWJpeXg1UDF5c3Bpenh4QUFnaGItTDhDaTZ4X2FXVU1nOTM2a3hBSW1vbkJYbzFUajBEcVRpckNMcW52TzFudUlfVVVxYWhaODBsel9uZldxV0J3cHRESVp6X0lwWTBCaFdCY3dWWkk2dktseHFNNXQ?oc=5",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Homenagem institucional local sem relação com a temática racial e sem fato relevante para a população negra."
+ },
+ {
+  "hora": "13:18",
+  "fonte": "Busca - mulheres negras",
+  "titulo": "Mobilização para indicação de mulher negra ao STF é legítima, diz ministra de Lula",
+  "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPcjJJajYzbDhRb3pzZ0hEaDBPX2paVUJSOEZWeVRHbW9aa0diZFRZNml6b2oxQV9WTDR6VVNoVEVMVDc0T19FVl9vNnBLb3plRm1SZGxhUTJJRTdrSXBDTVZ2dFJ6RXVlTTB4LWxwcEpTblV3dGNBZDRFN1UzSlpzN3RSQnhJZ1NGMm9rYWhQczhoREVLbE9mSVl1MWY2UHE4NlkxQ1FSaWZ4akVqVWMxNm42VExQZ3M3b1JZZF9R?oc=5",
+  "categoria": "politica",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "na fila",
+  "detalhe": "Fala de ministra de Lula sobre mobilização por mulher negra ao STF; tema de protagonismo e representatividade no Judiciário. Já houve matéria sobre carta pedindo indicação de mulher negra ao STF, mas esta traz declaração nova de ministra, então entra como desdobramento."
+ },
+ {
+  "hora": "13:18",
+  "fonte": "Busca - pagode",
+  "titulo": "Churrasquinho dos Menos é Mais estreia-se em Portugal em 2027",
+  "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNOEU1NzI2MEwzMWttMGJqUzllaTBnNFpOM3F0ZmRMeXJhOFYxVVZtTTRrZmJtRjR5eDRGZ3Q0aG1teGQ2S3BTMTh0TGY4YWJQN2VXenoyUnBsSXpjLU5qMU54bTF5QkZtSXRveTMwRFlfbTM3ZjdVSl9mSjhuV3BOcXhldw?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Estreia de programa de TV em Portugal sem relação com a temática racial e sem artista negro identificado."
+ },
+ {
+  "hora": "13:18",
+  "fonte": "Busca - pagode",
+  "titulo": "Justiça nega pedido de liberdade de gêmeos de grupo de pagode suspeitos de estupro em MG",
+  "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPVzVpSmZuM05zMlJyT2Job3JWc0R3amE0bzlBUk9yV2YzSGtiOW9lRWE3d0gzRjJxWGZ5NTVUdk0wNHB3QW96ZHlSY296U3l2cHdyMl9ibVBELTJJYmpFb2YtNndPUXFCOFVQNUlnVHJhM3JVVi1XT2RSWkE1R3J3a1hzR1h0ZDFad2MxdFR3N2pWWlJJRmpFX3JZTk53a3ZrWjF2TnM5VTNpLVMybDVFZl9fNUZzOEoxVjU5eVctZXE?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 4,
+  "destino": "nota baixa",
+  "detalhe": "Caso policial de suspeitos de estupro; sem relação direta com a temática racial e sem fato de violência de Estado."
+ },
+ {
+  "hora": "13:18",
+  "fonte": "Busca - Fundo de Quintal",
+  "titulo": "FliRui tem Ruy Castro, Nancy Morejón e sarau gratuito em Botafogo até domingo (29)",
+  "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOWXhQNTVnbnB3U1BTVC1Xc0tOV1JkelRWRVdBRkZuM3dnNXdIUXlmTzJxX2VNRkJkdjQ3ZFNsMnFjMF9uZDROX2k5Y1c2SlN6MGd2NHdCWHFNeE1Fa29Hb2VMb0dVenMwYndVWDFJWFY5TkZXdDM0TjZfakFFcUJJWWV5SVlrblQ4NzFXeFBRaGlhbV9aMk5HdEt1b1d1Q2lFWDBSMDhKaFp6OUVxMHc?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 5,
+  "destino": "nota baixa",
+  "detalhe": "Festa literária com Nancy Morejón, escritora negra cubana, mas a temática racial não é o centro da notícia; evento de agenda pública sem recorte racial claro."
+ },
+ {
+  "hora": "13:18",
+  "fonte": "Alma Preta",
+  "titulo": "Pós-COP31, organizações populares debatem justiça climática e trabalho digno em SP",
+  "link": "https://almapreta.com.br/sessao/cotidiano/organizacoes-populares-justica-climatica-trabalho-digno/",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 5,
+  "destino": "nota baixa",
+  "detalhe": "Encontro sobre justiça climática e trabalho digno; a questão racial não é o centro. Texto original truncado e sem detalhes suficientes."
+ },
+ {
+  "hora": "13:18",
+  "fonte": "Busca - igualdade racial",
+  "titulo": "Câmara vota projetos sobre alimentação, educação e igualdade racial - BNT",
+  "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQVHdsNE9SNWVKN2FST1Vpb01WUDdnU0N5cUZfTzZPU0pxNnk4MHlDaFlUYjNlblcxUktKaGowNDNnX21tc2tPRXFnVjBVaFJMcm1WbnVVTE5DX3M3TW5nTHBFMTUyYy1OVlhWaWNxOHlOV1ZEN0xRN3VDMGljT3Badk5IdEhfRnQ2Vmd0SEhQWl9uZHN3WXVN?oc=5",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 4,
+  "destino": "nota baixa",
+  "detalhe": "Pauta de votação genérica da Câmara; o título cita igualdade racial, mas sem detalhes do conteúdo no material recebido, insuficiente para matéria honesta."
+ },
+ {
+  "hora": "13:18",
+  "fonte": "Busca - igualdade racial",
+  "titulo": "Feira de Santana promove evento sobre igualdade racial em alusão ao Novembro Negro",
+  "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNNlFQczdYUE1HUFRFNjJibDlrOV9RWHFOX0N6cjVULVlCSlhqOVo4NGx3X3dWeXM1R0dQSDlCTkYyOGtrZzlYWXJPNlAyTDZqY3J5YkFGODRxaDhNRWRIX1k1dGhmWW5TXzlMODJTUlBNUF9kU1NYcXRIQ1JTcElrcllhTVgyNjE3UnhrSWVOR2xzbjJWSERHWjZRcUwxMFc5YlF1blpXSlQ?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 6,
+  "destino": "nota baixa",
+  "detalhe": "evento local pequeno: Evento local sobre igualdade racial em alusão ao Novembro Negro; sem personagem ou fato relevante, pequeno porte."
+ },
+ {
+  "hora": "13:18",
+  "fonte": "Busca - Literatura negra",
+  "titulo": "Conceição Evaristo completa 80 anos e reflete sobre sua trajetória literária",
+  "link": "https://gazetanewsguarulhos.com.br/conceicao-evaristo-completa-80-anos-e-reflete-sobre-sua-trajetoria-literaria/",
+  "categoria": "protagonista",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "não abriu o texto",
+  "detalhe": "texto original curto ou bloqueado"
+ },
+ {
+  "hora": "13:18",
+  "fonte": "Busca - mulheres negras",
+  "titulo": "Mobilização para indicação de mulher negra ao STF é legítima, diz ministra de Lula",
+  "link": "https://www.faroldabahia.com.br/noticia/mobilizacao-para-indicacao-de-mulher-negra-ao-stf-e-legitima-diz-ministra-de-lula",
+  "categoria": "politica",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "recusada pelo redator",
+  "detalhe": "Recusa por exclusividade e opinião: o texto é uma entrevista concedida ao veículo de origem (formato pergunta e resposta, com a ministra falando ao jornalista, com pergunta e resposta e raio-x próprio). Trata-se de conteúdo exclusivo do veículo, que o Áfricas não republica. Não há fato novo de fonte oficial que permita reescrita honesta sem reproduzir a entrevista."
+ },
+ {
+  "hora": "13:18",
+  "fonte": "Busca - Cultura negra",
+  "titulo": "Ilê Aiyê celebra reabertura da Senzala do Barro Preto e se prepara para o Festival de Música Negra",
+  "link": "https://portalumbu.com.br/ile-aiye-celebra-reabertura-da-senzala-do-barro-preto-e-se-prepara-para-o-festival-de-musica-negra/",
+  "categoria": "ancestralidade",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "publicada",
+  "detalhe": "Ilê Aiyê reabre Senzala do Barro Preto em Salvador",
+  "foto": "Betto Jr./ Secom PMS"
  }
 ]
