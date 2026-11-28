@@ -126,5 +126,13 @@
   "busca": "\"Alpha Blondy\"",
   "grupo": 2,
   "auto": "2026-11-27"
+ },
+ {
+  "nome": "Busca - Deu Samba",
+  "categoria": "cultura",
+  "tipo": "busca",
+  "busca": "\"Deu Samba\"",
+  "grupo": 2,
+  "auto": "2026-11-27"
  }
 ]
