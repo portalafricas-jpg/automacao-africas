@@ -42,3 +42,16 @@ Regra: narração em texto próprio, a partir destes fatos. Nada de "hoje" nem d
 ## E. Artes nossas (código, sem custo)
 Mapa animado da Baía de Guanabara; linha do tempo 1880 · 1895 · 1910 · 1912 · 1969 · 2008; tela "A chibata avilta"; tela "250"; tela da Lei 11.756/2008; tela final do app.
 Meta: 7 a 9 imagens reais + 6 a 8 artes ≈ 15 telas para 2 minutos.
+
+## F. Conferência foto × nome (28/11/2026, feita pelo Claude olhando cada imagem)
+- APROVADAS com João Cândido identificado:
+  - 01 — no convés do Minas Geraes, 26/11/1910 (é o homem alto no centro, de lenço no pescoço; usar com legenda "João Cândido, ao centro").
+  - 02 — retrato de corpo inteiro publicado em 1912, à época do julgamento.
+  - 05 — lendo o manifesto da revolta, 1910 (é o da DIREITA, segurando o papel; o jovem à esquerda NÃO é ele).
+  - 06 — entrega o comando do Minas Geraes ao capitão Pereira Leite, 1910 (é o marinheiro batendo continência, à direita do oficial).
+  - 20 — retrato de 1910, publicado na Illustração Brazileira (melhor imagem para o gancho).
+  - 09, 10, 11 — idoso, 1963, Arquivo Nacional / Fundo Correio da Manhã, marcadas como domínio público no Commons. Ele é sempre o senhor de óculos. Os jovens nas fotos 09 e 10 NÃO estão identificados: não dar nome a eles.
+- REMOVIDA: 21 — "João Cândido Ferreira", governador do Paraná. Outra pessoa, apenas com nome parecido.
+- Sem pessoa (uso livre com legenda certa): 03, 04, 08, 12 (Gazeta de Notícias, 1912); 07 (Correio da Manhã, 24/11/1910); 22, 23, 25 (encouraçado Minas Geraes, 1908-1910).
+- Só com legenda "Revolta do Batalhão Naval, dezembro de 1910" (NÃO é a Revolta da Chibata): 13 a 19.
+- Não usar: 24 (Minas Geraes nos anos 1940, fora da época).

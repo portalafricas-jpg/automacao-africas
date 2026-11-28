@@ -113,8 +113,11 @@ def main(pasta):
     for item in itens.values():
         if not item["mime"].startswith("image/") or "svg" in item["mime"]:
             continue
-        status = "não baixada (licença não é domínio público)"
         arquivo = ""
+        if not livre(item):
+            status = "não baixada (licença não é domínio público)"
+        elif baixadas >= MAX_BAIXAR:
+            status = "domínio público, não baixada (passou do limite de 25)"
         if livre(item) and baixadas < MAX_BAIXAR and item["url"]:
             arquivo = nome_arquivo(baixadas + 1, item["titulo"], item["mime"])
             try:
