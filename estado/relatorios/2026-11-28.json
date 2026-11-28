@@ -702,5 +702,49 @@
   "nota": "",
   "destino": "repetida",
   "detalhe": "título quase igual a outra notícia"
+ },
+ {
+  "hora": "01:47",
+  "fonte": "Busca - samba",
+  "titulo": "Primeiro samba registrado no Brasil completa 110 anos",
+  "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNLXhFdVpYandHQlk3bzF1TG0wcjUxa2RuY0t1TTUyOHcweTBITFVFdXlpOTY2b3VlRVg0ZW1vYUN3ZzF6cWh4R1BXUWE1cmEtMGcxbGU0VlVUZzRneENoNkVjRjVsVnpMa2ZKR0g0S1dYeDlTYzc5WTBSYjBNVFA0aW1GUUI2aktpVG4talZJWF91YmJMbUlxV1hxSlhZdWlpTjM4clNUVnhYWjZqdFIydDBSMzlYbTNmRFNFLV9ORdIBvwFBVV95cUxNLXhFdVpYandHQlk3bzF1TG0wcjUxa2RuY0t1TTUyOHcweTBITFVFdXlpOTY2b3VlRVg0ZW1vYUN3ZzF6cWh4R1BXUWE1cmEtMGcxbGU0VlVUZzRneENoNkVjRjVsVnpMa2ZKR0g0S1dYeDlTYzc5WTBSYjBNVFA0aW1GUUI2aktpVG4talZJWF91YmJMbUlxV1hxSlhZdWlpTjM4clNUVnhYWjZqdFIydDBSMzlYbTNmRFNFLV9ORQ?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 8,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "01:47",
+  "fonte": "Busca - Fundação Cultural Palmares",
+  "titulo": "Presidente Lula apresenta avanços na promoção da igualdade racial e na garantia dos direitos quilombolas",
+  "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOeWVuNEg1UnlGQVlBcEo4VlYxNGFEYzJtRXNzZW1rXzI5TDRYNjI0ekl0UEpGcFlGN05IM0hyRDR5MVphOFJxN1FPUVlkRVhZcHlkWG1laFNBR2pncHhBWTlvU0RWTU9RTzBMbVluUm1ZTXJkdi1qc3NYNzVxWTNjb1BmcU5tQmVVVUo1SWRLanJzUlNKR2NCWVdaREdXM3RqaUVNbTdLVU1GdTE5N3pHUDlyUUZxZHl1RVhtMlF5SXJya0xmSVZ2SmZJMlFtakkzNTVXbHNVdEJBNXROSEhxZUZn?oc=5",
+  "categoria": "politica",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "01:47",
+  "fonte": "Busca - injúria racial",
+  "titulo": "Homem é condenado a dois anos de reclusão por comentário racista no TikTok",
+  "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPWHUtakoxWHdQVGlyT3c5TmpkOFhEYmtnQ2cxYXlXQUxyaDV0NTdTYWh3T0JYa1J5T1ItWUdxLUxjLUNMM0s2dmdVeGFUeTZsWTBxVWdrVjVJckJwVXotZ3VZTHpscjNnLXJjQ0MtblBGdVNYZUtGZHlkcHpKXzJJMkpHdE9SOGVUeXR2eUZDMTR1QXB2UjJLTGlwbm5vb0hIYkRKcl9oUzR6TDFEemVQdGFOanF4cXBYWHVqNXJsdzRDTHlmZEdnMtIByAFBVV95cUxPWHUtakoxWHdQVGlyT3c5TmpkOFhEYmtnQ2cxYXlXQUxyaDV0NTdTYWh3T0JYa1J5T1ItWUdxLUxjLUNMM0s2dmdVeGFUeTZsWTBxVWdrVjVJckJwVXotZ3VZTHpscjNnLXJjQ0MtblBGdVNYZUtGZHlkcHpKXzJJMkpHdE9SOGVUeXR2eUZDMTR1QXB2UjJLTGlwbm5vb0hIYkRKcl9oUzR6TDFEemVQdGFOanF4cXBYWHVqNXJsdzRDTHlmZEdnMg?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "alta",
+  "nota": 8,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "01:48",
+  "fonte": "Busca - escola de samba",
+  "titulo": "Troféu Poetas da Vila homenageará compositores da escola em 2027",
+  "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQa09rQzBDZ2tVV1BvMDdvVE51Tko1V05VdFhnelNtUFhhMzdERDNkYU1rZlZSU0lCLWEzWUFndUhnV3dmT1VyRzVWdFdPdEJRaWpvckFxS0FiNEVuZG5SdWwyMjUtTzlBNXFpdlZiTWxBdWZ2ZUNPdURycm83MzNJQ0ppZzhLS0t4d1RNXzhmVDdwdw?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 3,
+  "destino": "nota baixa",
+  "detalhe": "Anúncio de homenagem de troféu de escola de samba para 2027; sem fato urgente ligado à agenda racial e sem relação clara com a população negra no texto; conteúdo de baixo peso, sem personagem ou fato relevante."
  }
 ]
