@@ -182,5 +182,13 @@
   "busca": "\"DENNIS\"",
   "grupo": 1,
   "auto": "2026-11-28"
+ },
+ {
+  "nome": "Busca - Ne-Yo",
+  "categoria": "cultura",
+  "tipo": "busca",
+  "busca": "\"Ne-Yo\"",
+  "grupo": 0,
+  "auto": "2026-11-28"
  }
 ]
