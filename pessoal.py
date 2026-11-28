@@ -133,6 +133,7 @@ def _primeira_pessoa(corpo):
         resp = json.loads(r.read().decode("utf-8"))
     texto = "".join(b.get("text", "") for b in resp.get("content", []) if b.get("type") == "text").strip()
     if not em_primeira_pessoa(texto, corpo):
+        log(f"  Instagram pessoal: legenda recusada (não começa em primeira pessoa): {texto[:160]!r}")
         return ""
     texto = re.sub(r"#\S+", "", texto).strip()
     return cortar(texto)
