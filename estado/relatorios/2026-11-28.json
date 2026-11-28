@@ -1406,5 +1406,27 @@
   "nota": 5,
   "destino": "nota baixa",
   "detalhe": "evento local pequeno: Vídeo de grupo afro em celebração local da Consciência Negra em Pedro Leopoldo; sem fato relevante além da apresentação, e o título indica conteúdo de vídeo sem texto informativo suficiente para matéria honesta."
+ },
+ {
+  "hora": "05:47",
+  "fonte": "Busca - pagode",
+  "titulo": "Bola Doce Ilusão apresenta parceria especial com Chrigor em canção inédita",
+  "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOSE5kblNTd3c4WVF3b0Y1OGpyWmVGQTdGZ2lZbXZNOGRPd1dlbFEzY3pQYVhmWkMyWW5FRnd3MjZHcHl3WmVEVWFfRFZuNUJoWXlEWW12cjJ4ZGk3eXp3WlVSR0FfRGxyREMzZDdtVExKX1h2RHNOdjJWZEo2V0lTVGlzZE1WVW5XWUl4OFE1N3d5Z1BuaFdWR1R4NVNrUE1NRFVueGhDdG9CdHlpM01NUUQ1azlUb3JURUZqVlpnZXNnMjU4NVhZ?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "venceu na fila",
+  "detalhe": "passou de 4 horas sem ser publicada"
+ },
+ {
+  "hora": "05:48",
+  "fonte": "Busca - Teatro negro",
+  "titulo": "Previsão do tempo em Manaus: 98% de chance de chuva e 29.9°C",
+  "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQQjdKOHRzS294Y2ZRX2RYVGFFSzhSU2FXNXNhWXlIeXBoMXhPekVvRHk1TjNjNnl2cHJFNTJpNjNsbGxuUVdmaHJrbmllQ1Vwc2RjdkctRVR5S2NsR3dKTXNBeFQ3eDZmUUdDRDh3TmpGT1BkaEF4ZnpfbFNmQ3F4THdHOE9sMGcwdVF5RlB3bjRtbFlwd1dsWElCb2FsWnVpMnc?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 0,
+  "destino": "nota baixa",
+  "detalhe": "Previsão do tempo sem nenhuma relação com a temática racial; conteúdo que não é notícia para o portal."
  }
 ]
