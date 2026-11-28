@@ -3854,5 +3854,127 @@
   "nota": 8,
   "destino": "na fila",
   "detalhe": "Bloco afro tradicional de Salvador celebra reabertura da Senzala do Barro Preto e preparação de festival de música negra; cultura negra e carnaval/bloco afro."
+ },
+ {
+  "hora": "11:47",
+  "fonte": "Lista Preta",
+  "titulo": "Mellstroy казино: способы оплаты, быстрый вывод средств и бонусные предложения",
+  "link": "https://listapreta.com/mellstroy-kazino-sposoby-oplaty-bystryy-vyvod-sredstv-i-bonusnye-predlozheniya/",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "descartada pelo filtro",
+  "detalhe": "filtro: título em outro alfabeto (spam)"
+ },
+ {
+  "hora": "11:48",
+  "fonte": "Busca - Emicida",
+  "titulo": "Emicida na Sala São Paulo com a Brasil Jazz Sinfônica: data e repertório",
+  "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE4xYThaZXptMzJtZVZlalhhRE5PRkV5RG0yRGJJVHlRWVBJclJzQjdDTi1BblZVRmVxQ2llTXNQQk5pN29NRlJvMC1ZR0dDaFljaEtYRFdYRFhNdlBiNGRkOE9JdE1sUm1jcEZWbzRrbDNXTnM4RzdhMg?oc=5",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "repetida",
+  "detalhe": "título quase igual a outra notícia"
+ },
+ {
+  "hora": "11:48",
+  "fonte": "Agência Brasil - Últimas notícias",
+  "titulo": "Mega-Sena sorteia prêmio de R$ 82 milhões neste domingo",
+  "link": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-11/mega-sena-sorteia-premio-de-r-82-milhoes-neste-domingo",
+  "categoria": "",
+  "prioridade": "",
+  "nota": "",
+  "destino": "descartada pelo filtro",
+  "detalhe": "filtro: busca ampla sem sinal (artista, escola/bloco ou termo)"
+ },
+ {
+  "hora": "11:48",
+  "fonte": "Busca - Criolo",
+  "titulo": "Criolo e NandaTsunami agitam o ARVO Festival em Florianópolis",
+  "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5hOEUzVnVCOGlVbjhoLXV5UFlYMkFrN3Q0cU1neHdYUVhGSnNrSlRiSkMteDNlcHN1R2dleWFoYlN5OG1SenJEVkw5dHlsSVhyN3NGSGU3UUVPaFBYcTV5NWpTV3ZMTXVOUG9SV2k0TkFMY1RycjBWU2NUWkxxNWc?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Festival com Criolo e NandaTsunami, mas sem fato sobre a temática racial nem agenda relevante; apenas show, não é notícia de conquista ou lançamento."
+ },
+ {
+  "hora": "11:48",
+  "fonte": "Busca - Dudu Nobre",
+  "titulo": "Maricá Promove Natal Brasilidade com Dudu Nobre, Thiago Martins e Orquestra Natalina no Centro",
+  "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQZ0tSWE9NNldLVXJrdGVZQkdONlFrMHhFTnFJM2lxZ3BGcUNkb1FuLTlZQ2NPcXNGcEFkMmgtblVRRGFrTm9kVWdQYTB6VVNTOHhlTndQUktnQ3hwMURCc2lJOHdiMXEwbmo1VGRMSV9BQkNscV9jZ0tLNUdSeUNKV1B6aWowcl8zTHR2b2JDU2pLT1lvSV9sZUdXN0JhRU5RbWxldWgyOHRTVEJZNG9BbFRtN1hCcmVIMUE?oc=5",
+  "categoria": "cultura",
+  "prioridade": "",
+  "nota": 2,
+  "destino": "nota baixa",
+  "detalhe": "Programação natalina de prefeitura com shows; sem relação com a temática racial."
+ },
+ {
+  "hora": "11:48",
+  "fonte": "Busca - escola de samba",
+  "titulo": "Com feijoada e muito samba, GRES Unidos da Vila Carvalho lança samba-enredo que celebra os 50 anos de MS",
+  "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNbjJLZDNYRjV0TXgxS1lHOGc0cUVacllZVTBFZDBRTnF5U2JTVlZ5S1JqRTdST0hmZDNRVzhfOXdhQzlFbTczOGJzNXhrX3Jad1Y5ZVE0UjZjOFdOQXBvUlVwaVh4VUhobDZ1T3B4ajh5dGZMcFpVT052LTU1djItUW1VeVRlcVZsU3FhZEFkeUFyZ3Y4aDNqMjlOd1hzVmdVOWxQcVJKUjZxbmxwZVVBaTRaZElTdWxhVFdTWDRSQ05NZw?oc=5",
+  "categoria": "cultura",
+  "prioridade": "media",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Lançamento de samba-enredo de escola de samba (carnaval), cultura negra, nota mínima 7."
+ },
+ {
+  "hora": "11:48",
+  "fonte": "Busca - Racismo",
+  "titulo": "Feira de Santana promove Feira da Igualdade Racial em alusão ao Novembro Negro",
+  "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNOWt2bnpwYnI3a1pkWktEQUsxZnVwVGRTMkVVR3VaX05LTi1nMWJFNGtWNXBGSDR0Qk5RcFhGcUlHeFhial9jbkZnZE1ydGQtTFllQzBXcXFITEw1UVhSamVzSjNjWjI0TVh2dHNpY29HbWFDSnhIVDdjR1VGZ2dzd3VJb2tzVXZ3UW1vcDI0ZV80VjVDMEkyS0Q3SnZ0Qk5TTFRsRzJKYmhSZHVBNDJqQWRjVEFpdGhGeE5EWUpR?oc=5",
+  "categoria": "politica",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "evento local pequeno: Evento local de Novembro Negro (Feira da Igualdade Racial) ligado à memória negra; ação de prefeitura do interior, nota 7 pela data."
+ },
+ {
+  "hora": "11:48",
+  "fonte": "Busca - Racismo",
+  "titulo": "Câmara Municipal de Amargosa promove palestra sobre educação antirracista durante programação do Novembro Negro",
+  "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOanR3OHVpNG9hQms4UFNROVJ0R3lxNklkclNna3VfNHVMOU1sU3I3aXQ4dzc2QW1EYmFBN3dFNEtPN3pkSEhId2dpSy1uTkxYWGF6OWJaQ1VBVTNWa0RrRTFPQll6djFTU2tCTTF5RGRyX3RNel8yMkY4VTQ5MnNnekc3QW9fRldUNUwtX04wcWxKUjFxWElaMlJrWWVXMzh3cTVRTTdCUGZ2VkxtdWVMYnZFSW5pa21NdVQ3cmlvQzZ4OS1VMHNicG90T1dLMFRhYVNwM2tGOS1UQQ?oc=5",
+  "categoria": "cotidiano",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "evento local pequeno: Palestra sobre educação antirracista em Novembro Negro, evento local de câmara municipal; ligado à educação e à data da memória negra."
+ },
+ {
+  "hora": "11:48",
+  "fonte": "Busca - Quilombola",
+  "titulo": "Governo entrega títulos e R$ 3,37 milhões para quilombolas no Planalto",
+  "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQeHRJSzdiUFNHQVQtb0NtSERZX2NEeTNjaW5rbnZCODlJV0FnM0ltY0pFVTNOcEEyVk1CRllrTU55aUZMclFWSFBQT1oxVUVfbG12Vm1OMjc5c0FFQTZsbWxxNXNMRDZPU1JfM3pvQWV4aXo0dnYwdEctR0t4dWFWeVdDWHQ5bENrTHN5UEUzVTM5MnFqRlhjdGRRRlg4WDB6QjVUM1dpS0NsNFYxaXY3b0Fn?oc=5",
+  "categoria": "politica",
+  "prioridade": "alta",
+  "nota": 7,
+  "destino": "na fila",
+  "detalhe": "Entrega de títulos e recursos do governo federal a quilombolas: território e quilombos, Agenda Preta."
+ },
+ {
+  "hora": "11:48",
+  "fonte": "Busca - Quilombola",
+  "titulo": "Quilombolas do Amapá aprendem a produzir cloradores de água",
+  "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOVE1lQlg5TjFPWURvQUN4dDVDNUJJMWo5ejNkV1hLSkpFam45R2dGV0RDbjg4WjFfVWlqMFdJN1kxWllILVVYbG1WT1lBM2lDd1BscWt0QjJUZlZndHdnc3h0SXJtTE1ORHJPWXUxcV8xNDNUOHI4SHd5emt2ajhCeHI0SVZaZzdfVnJlcUxkSXhCbWM2ME55aE5JSnBsdVNfb1JKRklqbmJxOXo1OXZz?oc=5",
+  "categoria": "ancestralidade",
+  "prioridade": "",
+  "nota": 7,
+  "destino": "nota baixa",
+  "detalhe": "Capacitação de quilombolas no Amapá em tecnologia de água, ligada a território e quilombos e saúde/saneamento."
+ },
+ {
+  "hora": "11:48",
+  "fonte": "Busca - Quilombola",
+  "titulo": "Governo entrega títulos e R$ 3,37 milhões para quilombolas no Planalto",
+  "link": "https://www.mthoje.com.br/geral/id-734796/governo_entrega_titulos_e_r__3_37_milhoes_para_quilombolas_no_planalto",
+  "categoria": "politica",
+  "prioridade": "alta",
+  "nota": 7,
+  "destino": "publicada",
+  "detalhe": "Governo entrega títulos a quilombolas no Planalto",
+  "foto": "Gastão guedes/Wikimedia Commons (CC BY-SA 4.0)"
  }
 ]
