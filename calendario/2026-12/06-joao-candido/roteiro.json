@@ -1,0 +1,47 @@
+{
+  "episodio": "João Cândido, o Almirante Negro",
+  "aprovado": "28/11/2026 por Washington",
+  "voz": "Homem brasileiro adulto, voz grave e calorosa de locutor de rádio, sotaque do Brasil, ritmo firme e pausado, tom de documentário",
+  "blocos": [
+    {"id": "b1", "frases": [
+      {"fala": "Duzentas e cinquenta chibatadas.", "legenda": "250 chibatadas."},
+      {"fala": "Esse foi o castigo que acendeu uma das maiores revoltas da história do Brasil.", "legenda": "Esse foi o castigo que acendeu uma das maiores revoltas da história do Brasil."},
+      {"fala": "À frente dela estava um marinheiro negro: João Cândido.", "legenda": "À frente dela estava um marinheiro negro: João Cândido."}
+    ]},
+    {"id": "b2", "frases": [
+      {"fala": "Filho de pais que tinham sido escravizados, João Cândido Felisberto nasceu em mil oitocentos e oitenta, em Encruzilhada do Sul, no Rio Grande do Sul.", "legenda": "Filho de pais que tinham sido escravizados, João Cândido Felisberto nasceu em 1880, em Encruzilhada do Sul (RS)."},
+      {"fala": "Aos catorze anos, entrou para a Marinha.", "legenda": "Aos 14 anos, entrou para a Marinha."},
+      {"fala": "Lá dentro, descobriu que a abolição não tinha chegado aos navios: os marinheiros, em sua maioria negros e pobres, ainda apanhavam de chibata.", "legenda": "Lá dentro, descobriu que a abolição não tinha chegado aos navios: os marinheiros, em sua maioria negros e pobres, ainda apanhavam de chibata."}
+    ]},
+    {"id": "b3", "frases": [
+      {"fala": "Em novembro de mil novecentos e dez, um marinheiro foi amarrado no convés do encouraçado Minas Gerais e açoitado diante de toda a tripulação.", "legenda": "Em novembro de 1910, um marinheiro foi amarrado no convés do encouraçado Minas Gerais e açoitado diante de toda a tripulação."},
+      {"fala": "Pouco depois, mais de dois mil e trezentos marinheiros tomaram os navios na Baía de Guanabara.", "legenda": "Pouco depois, mais de 2.300 marinheiros tomaram os navios na Baía de Guanabara."},
+      {"fala": "Os canhões ficaram apontados para a capital do país.", "legenda": "Os canhões ficaram apontados para a capital do país."},
+      {"fala": "O líder era João Cândido.", "legenda": "O líder era João Cândido."}
+    ]},
+    {"id": "b4", "frases": [
+      {"fala": "Eles não queriam o poder.", "legenda": "Eles não queriam o poder."},
+      {"fala": "Queriam o fim da chibata, comida digna e salário justo.", "legenda": "Queriam o fim da chibata, comida digna e salário justo."},
+      {"fala": "Ao jornal Correio da Manhã, João Cândido resumiu: a chibata avilta.", "legenda": "Ao jornal Correio da Manhã, João Cândido resumiu: \"A chibata avilta.\""},
+      {"fala": "Em cinco dias, o governo cedeu.", "legenda": "Em cinco dias, o governo cedeu."}
+    ]},
+    {"id": "b5", "frases": [
+      {"fala": "Mas a promessa durou pouco.", "legenda": "Mas a promessa durou pouco."},
+      {"fala": "Semanas depois, João Cândido foi preso e jogado numa cela da Ilha das Cobras, junto com outros dezessete homens.", "legenda": "Semanas depois, João Cândido foi preso e jogado numa cela da Ilha das Cobras, junto com outros 17 homens."},
+      {"fala": "Só dois saíram vivos, e ele foi um deles.", "legenda": "Só dois saíram vivos, e ele foi um deles."},
+      {"fala": "Ficou preso por dois anos.", "legenda": "Ficou preso por dois anos."},
+      {"fala": "Em mil novecentos e doze foi absolvido e, mesmo assim, perdeu a farda.", "legenda": "Em 1912 foi absolvido e, mesmo assim, perdeu a farda."}
+    ]},
+    {"id": "b6", "frases": [
+      {"fala": "Fora da Marinha, sobreviveu vendendo peixe no Rio de Janeiro.", "legenda": "Fora da Marinha, sobreviveu vendendo peixe no Rio de Janeiro."},
+      {"fala": "Morreu em dezembro de mil novecentos e sessenta e nove, aos oitenta e nove anos, sem o reconhecimento que merecia.", "legenda": "Morreu em dezembro de 1969, aos 89 anos, sem o reconhecimento que merecia."}
+    ]},
+    {"id": "b7", "frases": [
+      {"fala": "Só em dois mil e oito uma lei federal concedeu anistia a João Cândido e aos marinheiros da revolta, quase cem anos depois.", "legenda": "Só em 2008 uma lei federal concedeu anistia a João Cândido e aos marinheiros da revolta, quase cem anos depois."},
+      {"fala": "O Almirante Negro virou samba, estátua e símbolo: a luta por dignidade não se apaga.", "legenda": "O Almirante Negro virou samba, estátua e símbolo: a luta por dignidade não se apaga."}
+    ]},
+    {"id": "b8", "frases": [
+      {"fala": "Histórias como a de João Cândido estão todos os dias no Áfricas Play. Baixe o app.", "legenda": "Histórias como a de João Cândido estão todos os dias no Áfricas Play. Baixe o app."}
+    ]}
+  ]
+}

@@ -1,0 +1,33 @@
+name: Calendário Afro - gravar narração
+on:
+  workflow_dispatch:
+    inputs:
+      pasta:
+        description: "Pasta do episódio"
+        required: true
+        default: "calendario/2026-12/06-joao-candido"
+permissions:
+  contents: write
+jobs:
+  voz:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Instalar motor de voz (CPU)
+        run: |
+          pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install "voxcpm>=2.0.3" soundfile
+      - name: Gravar a narração, frase por frase
+        run: python calendario_voz.py "${{ github.event.inputs.pasta }}" saida_voz
+      - name: Guardar os áudios num ramo separado (calendario-audio)
+        run: |
+          git config user.name "robo-africas"; git config user.email "robo-africas@users.noreply.github.com"
+          mkdir -p /tmp/voz && cp saida_voz/*.wav /tmp/voz/
+          git checkout --orphan calendario-audio
+          git rm -rq --cached . && rm -rf ./*
+          mkdir -p voz && cp /tmp/voz/*.wav voz/
+          git add voz && git commit -qm "Narração do Calendário Afro" && git push -f origin calendario-audio
