@@ -232,14 +232,23 @@ def ler_caixa():
     desde = (datetime.now(timezone.utc) - timedelta(days=7)).strftime("%d-%b-%Y")
     contagem = {"lidos": 0, "avisos_respondidos": 0, "respostas": 0, "conferir": 0}
 
-    imap = imaplib.IMAP4_SSL("imap.gmail.com", 993)
+    imap = imaplib.IMAP4_SSL("imap.gmail.com", 993, timeout=60)
     imap.login(CONTA, senha)
     try:
         imap.select("INBOX", readonly=True)  # só leitura: nada muda na caixa
         _, dados = imap.search(None, f'(SINCE "{desde}")')
-        for num in dados[0].split():
-            _, partes = imap.fetch(num, "(BODY.PEEK[])")
-            msg = email.message_from_bytes(partes[0][1])
+        # 28/11/2026: primeiro baixa só a "etiqueta" (cabeçalho) de todos de uma vez;
+        # o e-mail inteiro só é aberto quando é resposta nova a um e-mail do robô.
+        nums = dados[0].split()
+        cabecalhos = []
+        if nums:
+            _, resp = imap.fetch(b",".join(nums),
+                                 "(BODY.PEEK[HEADER.FIELDS (MESSAGE-ID IN-REPLY-TO REFERENCES SUBJECT FROM)])")
+            for item in resp:
+                if isinstance(item, tuple):
+                    cabecalhos.append((item[0].split()[0], email.message_from_bytes(item[1])))
+        print(f"Caixa: {len(cabecalhos)} e-mails na semana")
+        for num, msg in cabecalhos:
             mid = (msg.get("Message-ID") or "").strip()
             if not mid or mid in feitos:
                 continue
@@ -256,6 +265,8 @@ def ler_caixa():
                 continue  # não é resposta a um e-mail do robô
             feitos.add(mid)
             contagem["lidos"] += 1
+            _, partes = imap.fetch(num, "(BODY.PEEK[])")
+            msg = email.message_from_bytes(partes[0][1])
             corpo = _corpo(msg)
 
             # a) Washington respondendo ao aviso de autor desconhecido

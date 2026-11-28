@@ -42,21 +42,37 @@ jobs:
           MODO_REDES: publicar
         run: python redes.py
 
+      - name: Salvar a fila e o registro das redes
+        if: always()
+        run: |
+          git config user.name "robo-africas"
+          git config user.email "robo-africas@users.noreply.github.com"
+          git add estado/redes.json estado/posts-redes.json feeds/instagram.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Robô das redes: rodada"
+          for i in 1 2 3; do
+            git pull --rebase -X theirs && git push && exit 0
+            git rebase --abort 2>/dev/null || true
+            sleep 5
+          done
+          exit 1
+
       - name: Assessorias - ler a caixa e mandar avisos (27/11/2026)
         continue-on-error: true
+        timeout-minutes: 5
         env:
           GMAIL_SENHA_APP: ${{ secrets.GMAIL_SENHA_APP }}
         run: python envio_assessorias.py tudo
 
-      - name: Salvar a fila e o registro
+      - name: Salvar o registro das assessorias
+        if: always()
         run: |
-          git config user.name "robo-africas"
-          git config user.email "robo-africas@users.noreply.github.com"
-          git add estado/redes.json estado/posts-redes.json feeds/instagram.json assessorias/
+          git add assessorias/
           git diff --cached --quiet && exit 0
-          git commit -m "Robô das redes: rodada"
+          git commit -m "Assessorias: rodada"
           for i in 1 2 3; do
-            git pull --rebase && git push && exit 0
+            git pull --rebase -X theirs && git push && exit 0
+            git rebase --abort 2>/dev/null || true
             sleep 5
           done
           exit 1
