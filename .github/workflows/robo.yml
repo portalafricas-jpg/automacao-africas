@@ -44,5 +44,5 @@ jobs:
           git add feeds estado
           git diff --cached --quiet || git commit -m "Robô: atualização dos RSS"
           # Se outro robô gravou ao mesmo tempo, espera e tenta de novo (até 5 vezes)
-          for i in 1 2 3 4 5; do git pull --rebase && git push && exit 0; sleep $((i * 4)); done
+          for i in 1 2 3 4 5; do git pull --rebase && git push && exit 0; git rebase --abort 2>/dev/null || true; sleep $((i * 4)); done
           exit 1
